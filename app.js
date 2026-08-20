@@ -129,7 +129,18 @@ document.addEventListener('DOMContentLoaded', async () => {
                     setTimeout(() => pin.style.transform = 'translateX(0)', 200);
                 } else {
                     if (navigator.vibrate) navigator.vibrate(25);
-                    console.log(`[模組加載] 正在載入 ${node.id}...`);
+                    
+                    // 自動切換到「生活實戰」視圖
+                    document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+                    document.getElementById('module-view').classList.add('active');
+                    
+                    // 更新導覽列狀態
+                    document.querySelectorAll('.nav-btn').forEach(b => {
+                        b.classList.remove('active');
+                        if (b.getAttribute('data-target') === 'module-view') {
+                            b.classList.add('active');
+                        }
+                    });
                 }
             });
 
