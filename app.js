@@ -277,7 +277,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     }
 
-    // === 渲染模組卡片 ===
+    // === 渲染生活實戰模組 ===
     function renderModules(citiesData) {
         if (!moduleGrid) return;
         
@@ -286,11 +286,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             ...(citiesData.surabaya?.modules || [])
         ];
         
-        const displayModules = allModules.slice(0, 3);
+        const displayModules = allModules;
         const images = [
             'assets/coffee_shop_illustration_1787210903184.jpg',
             'assets/surabaya_illustration_1787210917170.jpg',
-            ''
+            'assets/indo_hero_illustration_1787210889692.jpg'
         ];
         
         moduleGrid.innerHTML = '';
@@ -300,9 +300,12 @@ document.addEventListener('DOMContentLoaded', async () => {
             
             const zhTextPreview = mod.dialogue?.[0]?.zh_text || mod.dialogue_baku?.[0]?.zh_text || '挑戰全新的印尼語情境！';
             
-            if (images[idx]) {
+            // 循環使用圖片
+            const imgSrc = images[idx % images.length];
+            
+            if (imgSrc) {
                 card.innerHTML = `
-                    <img src="${images[idx]}" class="module-card-img" alt="Module Image">
+                    <img src="${imgSrc}" class="module-card-img" alt="Module Image">
                     <div class="module-card-content">
                         <h3>${mod.title}</h3>
                         <p>${zhTextPreview}</p>

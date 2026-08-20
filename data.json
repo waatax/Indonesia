@@ -1,14 +1,11 @@
 {
   "curriculum": {
-    "philosophy": ["CCU Modular", "Ondoku Shadowing", "BINTANGO Flashcards", "Osaka Univ Situational"],
-    "grammar_progression": {
-      "A1": "SVO Core, Negation (tidak/bukan), Question Words (5W1H)",
-      "A2": "D-M Rule (Yang), Basic Active/Passive Voice (meN- / di-)",
-      "B1": "Imbuhan Phase 1 (ber-, pe-, ter-, -kan, -i)",
-      "B2": "Imbuhan Phase 2 (Circumfixes: ke-an, pe-an), Discourse Particles",
-      "C1": "Register Switching (Baku vs Gaul Syntax)",
-      "C2": "Literary Syntax, Proverbial Structuring (Peribahasa)"
-    },
+    "philosophy": [
+      "CCU Modular",
+      "Ondoku Shadowing",
+      "BINTANGO Flashcards",
+      "Osaka Univ Situational"
+    ],
     "tufs_core": {
       "pmod_pronunciation": {
         "title": "東京外大 - 發音模組 (pmod)",
@@ -23,31 +20,69 @@
           "名詞修飾語永遠放在後面 (D-M Rule: Diterangkan-Menerangkan)，例如: Rumah(房子) Besar(大)。",
           "使用 Yang 來連接形容詞或子句，例如: Orang yang baik (好人)。"
         ]
-      },
-      "vmod_vocabulary": {
-        "title": "東京外大 - 語彙模組 (vmod)",
-        "categories": ["日常寒暄", "交通", "購物", "時間與數字"]
       }
     },
     "alphabet": [
-      { "letter": "A", "idWord": "Ayam", "zhTranslation": "雞" },
-      { "letter": "B", "idWord": "Buku", "zhTranslation": "書" },
-      { "letter": "C", "idWord": "Cinta", "zhTranslation": "愛", "note": "發 /ch/ 音" },
-      { "letter": "NG", "idWord": "Nasi Goreng", "zhTranslation": "炒飯", "note": "鼻音" },
-      { "letter": "NY", "idWord": "Nyaman", "zhTranslation": "舒適", "note": "複合子音" },
-      { "letter": "SY", "idWord": "Syukur", "zhTranslation": "感恩", "note": "發 /sh/ 音" }
+      {
+        "letter": "A",
+        "idWord": "Ayam",
+        "zhTranslation": "雞"
+      },
+      {
+        "letter": "B",
+        "idWord": "Buku",
+        "zhTranslation": "書"
+      },
+      {
+        "letter": "C",
+        "idWord": "Cinta",
+        "zhTranslation": "愛",
+        "note": "發 /ch/ 音"
+      },
+      {
+        "letter": "NG",
+        "idWord": "Nasi Goreng",
+        "zhTranslation": "炒飯",
+        "note": "鼻音"
+      },
+      {
+        "letter": "NY",
+        "idWord": "Nyaman",
+        "zhTranslation": "舒適",
+        "note": "複合子音"
+      },
+      {
+        "letter": "SY",
+        "idWord": "Syukur",
+        "zhTranslation": "感恩",
+        "note": "發 /sh/ 音"
+      }
     ],
     "imbuhan_module_logic": {
-      "concept": "Prefabricated Blocks (積木組合)",
       "examples": [
         {
           "root": "tulis",
-          "root_meaning": "寫",
           "derivations": [
-            { "affix": "meN-", "result": "menulis", "meaning": "寫 (主動)" },
-            { "affix": "di-", "result": "ditulis", "meaning": "被寫 (被動)" },
-            { "affix": "pe-", "result": "penulis", "meaning": "作家 (人)" },
-            { "affix": "-an", "result": "tulisan", "meaning": "作品/字跡 (名詞)" }
+            {
+              "affix": "meN-",
+              "result": "menulis",
+              "meaning": "寫 (主動)"
+            },
+            {
+              "affix": "di-",
+              "result": "ditulis",
+              "meaning": "被寫 (被動)"
+            },
+            {
+              "affix": "pe-",
+              "result": "penulis",
+              "meaning": "作家 (人)"
+            },
+            {
+              "affix": "-an",
+              "result": "tulisan",
+              "meaning": "作品/字跡 (名詞)"
+            }
           ]
         }
       ]
@@ -56,68 +91,815 @@
       "jakarta": {
         "id": "jakarta",
         "name": "DKI Jakarta",
-        "description": "政經樞紐與都會生存",
+        "description": "全部 30 組情境對話大全",
         "modules": [
           {
-            "id": "mrt_commute",
-            "title": "搭乘 MRT (Baku vs Gaul 語體對比)",
+            "id": "d1",
+            "title": "機場入境 (Imigrasi Bandara)",
             "type": "situational_dialogue",
-            "dialogue_baku": [
+            "dialogue": [
               {
-                "speaker": "A",
-                "id_text": "Permisi, apakah Anda tahu di mana Stasiun MRT Bundaran HI?",
-                "zh_text": "不好意思，請問您知道 Bundaran HI 捷運站在哪裡嗎？(正式 Bahasa Baku)"
-              }
-            ],
-            "dialogue_gaul": [
+                "speaker": "Petugas",
+                "id_text": "Paspor dan tiket, silakan.",
+                "zh_text": "請出示護照和機票。"
+              },
               {
-                "speaker": "A",
-                "id_text": "Eh sori, stasiun MRT Bundaran HI di mana ya?",
-                "zh_text": "欸抱歉，Bundaran HI 捷運站在哪呀？(口語 Bahasa Gaul)"
+                "speaker": "Saya",
+                "id_text": "Ini paspor saya.",
+                "zh_text": "這是我的護照。"
+              },
+              {
+                "speaker": "Petugas",
+                "id_text": "Apa tujuan Anda ke Indonesia?",
+                "zh_text": "您來印尼的目的是什麼？"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Untuk jalan-jalan.",
+                "zh_text": "為了旅遊。"
               }
             ]
           },
           {
-            "id": "office_chat_jakarta",
-            "title": "辦公室日常交際 (Bahasa Gaul & 詞綴 -in 應用)",
+            "id": "d2",
+            "title": "飯店入住 (Check-in Hotel)",
             "type": "situational_dialogue",
             "dialogue": [
               {
-                "speaker": "Colleague A",
-                "id_text": "Gue udah kirimin filenya ya. Tolong dicek dong.",
-                "zh_text": "我已經把檔案寄給妳囉。幫我檢查一下啦。(Gue/kirimin/-in替代-kan/dong語氣詞)",
-                "audio_speed": [0.75, 1.2]
+                "speaker": "Saya",
+                "id_text": "Saya mau check-in. Atas nama Budi.",
+                "zh_text": "我要辦理入住。名字是 Budi。"
               },
               {
-                "speaker": "Colleague B",
-                "id_text": "Oke sip, ntar gue kabarin lagi kalau udah beres. Jangan baper ya kalau ada revisi.",
-                "zh_text": "好喔，弄好我再跟妳說。如果有要改的不要走心(baper)喔。",
-                "audio_speed": [0.75, 1.2]
+                "speaker": "Resepsionis",
+                "id_text": "Baik, ini kunci kamarnya. Nomor 302.",
+                "zh_text": "好的，這是房間鑰匙。302號。"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Jam berapa sarapan pagi?",
+                "zh_text": "早餐是幾點？"
+              },
+              {
+                "speaker": "Resepsionis",
+                "id_text": "Dari jam 6 sampai jam 10 pagi.",
+                "zh_text": "早上6點到10點。"
               }
             ]
           },
           {
-            "id": "genz_daily_commute_coffee",
-            "title": "📱 雅加達一日：Gojek 外送與棕櫚糖咖啡",
+            "id": "d3",
+            "title": "餐廳點餐 (Pesan Makanan)",
             "type": "situational_dialogue",
             "dialogue": [
               {
-                "speaker": "Driver (Chat)",
-                "id_text": "Siang kak, sesuai titik jemput di depan Lobi Mall ya?",
-                "zh_text": "午安，是在商場大廳前的定位點接您對嗎？",
-                "slang_notes": "titik jemput = 接送點"
+                "speaker": "Pelayan",
+                "id_text": "Mau pesan apa, Kak?",
+                "zh_text": "您要點什麼？"
               },
               {
-                "speaker": "User (Chat)",
-                "id_text": "Iya mas, saya pake baju hitam. Otw keluar.",
-                "zh_text": "對的大哥，我穿黑衣服。我正在走出來 (otw)。",
-                "slang_notes": "mas = 對年輕男性的稱呼; otw = 在路上了"
+                "speaker": "Saya",
+                "id_text": "Satu nasi goreng dan satu es teh manis.",
+                "zh_text": "一份炒飯和一杯冰甜茶。"
               },
               {
-                "speaker": "User (at Cafe)",
-                "id_text": "Mbak, mau pesen Es Kopi Susu Aren satu, less sugar ya. Bisa QRIS?",
-                "zh_text": "店員小姐，我要一杯棕櫚糖冰咖啡，微糖。可以刷 QRIS 嗎？",
-                "slang_notes": "Aren = 印尼在地棕櫚糖; less sugar = 雅加達混搭英文; QRIS = 行動支付"
+                "speaker": "Pelayan",
+                "id_text": "Pedas atau tidak?",
+                "zh_text": "要辣嗎？"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Tidak pedas ya, terima kasih.",
+                "zh_text": "不要辣，謝謝。"
+              }
+            ]
+          },
+          {
+            "id": "d4",
+            "title": "問路 (Tanya Jalan)",
+            "type": "situational_dialogue",
+            "dialogue": [
+              {
+                "speaker": "Saya",
+                "id_text": "Permisi, stasiun kereta di mana ya?",
+                "zh_text": "不好意思，火車站在哪裡？"
+              },
+              {
+                "speaker": "Warga",
+                "id_text": "Jalan lurus terus, lalu belok kanan.",
+                "zh_text": "一直直走，然後右轉。"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Berapa jauh dari sini?",
+                "zh_text": "離這裡多遠？"
+              },
+              {
+                "speaker": "Warga",
+                "id_text": "Sekitar lima ratus meter.",
+                "zh_text": "大約五百公尺。"
+              }
+            ]
+          },
+          {
+            "id": "d5",
+            "title": "市場殺價 (Tawar-menawar di Pasar)",
+            "type": "situational_dialogue",
+            "dialogue": [
+              {
+                "speaker": "Saya",
+                "id_text": "Mangga ini berapa sekilo?",
+                "zh_text": "這芒果一公斤多少錢？"
+              },
+              {
+                "speaker": "Penjual",
+                "id_text": "Tiga puluh ribu rupiah.",
+                "zh_text": "三萬印尼盾。"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Bisa kurang sedikit? Dua puluh lima ribu ya?",
+                "zh_text": "可以算便宜一點嗎？兩萬五好嗎？"
+              },
+              {
+                "speaker": "Penjual",
+                "id_text": "Boleh, silakan.",
+                "zh_text": "可以，請吧。"
+              }
+            ]
+          },
+          {
+            "id": "d6",
+            "title": "搭乘計程車/Gojek (Naik Taksi)",
+            "type": "situational_dialogue",
+            "dialogue": [
+              {
+                "speaker": "Saya",
+                "id_text": "Tolong ke Bandara Soekarno-Hatta.",
+                "zh_text": "請到蘇加諾-哈達機場。"
+              },
+              {
+                "speaker": "Sopir",
+                "id_text": "Lewat jalan tol ya, Pak?",
+                "zh_text": "走高速公路好嗎，先生？"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Iya, biar cepat.",
+                "zh_text": "好，比較快。"
+              },
+              {
+                "speaker": "Sopir",
+                "id_text": "Siap, Pak.",
+                "zh_text": "沒問題，先生。"
+              }
+            ]
+          },
+          {
+            "id": "d7",
+            "title": "在醫院/生病 (Di Rumah Sakit)",
+            "type": "situational_dialogue",
+            "dialogue": [
+              {
+                "speaker": "Dokter",
+                "id_text": "Apa keluhan Anda?",
+                "zh_text": "您哪裡不舒服？"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Saya demam dan sakit perut.",
+                "zh_text": "我發燒而且肚子痛。"
+              },
+              {
+                "speaker": "Dokter",
+                "id_text": "Sudah berapa hari?",
+                "zh_text": "幾天了？"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Sudah dua hari, Dok.",
+                "zh_text": "已經兩天了，醫生。"
+              }
+            ]
+          },
+          {
+            "id": "d8",
+            "title": "結帳付款 (Bayar Belanjaan)",
+            "type": "situational_dialogue",
+            "dialogue": [
+              {
+                "speaker": "Kasir",
+                "id_text": "Totalnya seratus lima puluh ribu rupiah.",
+                "zh_text": "總共是十五萬印尼盾。"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Bisa bayar pakai QRIS?",
+                "zh_text": "可以用 QRIS 支付嗎？"
+              },
+              {
+                "speaker": "Kasir",
+                "id_text": "Bisa. Silakan scan barcode di sini.",
+                "zh_text": "可以。請掃描這邊的條碼。"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Sudah ya, terima kasih.",
+                "zh_text": "付好了，謝謝。"
+              }
+            ]
+          },
+          {
+            "id": "d9",
+            "title": "辦公室日常 (Di Kantor - Gaul)",
+            "type": "situational_dialogue",
+            "dialogue": [
+              {
+                "speaker": "Budi",
+                "id_text": "Gue udah kirim emailnya, tolong cek dong.",
+                "zh_text": "我已經寄 email 了，幫我確認一下啦。"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Bentar ya, lagi sibuk nih.",
+                "zh_text": "等一下喔，現在很忙。"
+              },
+              {
+                "speaker": "Budi",
+                "id_text": "Oke, kabarin kalau udah.",
+                "zh_text": "好，好了跟我說。"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Sip, ntar gue reply.",
+                "zh_text": "沒問題，晚點我回覆。"
+              }
+            ]
+          },
+          {
+            "id": "d10",
+            "title": "邀約朋友 (Ngajak Teman)",
+            "type": "situational_dialogue",
+            "dialogue": [
+              {
+                "speaker": "Saya",
+                "id_text": "Nanti malam ada acara nggak?",
+                "zh_text": "今晚有活動嗎？"
+              },
+              {
+                "speaker": "Teman",
+                "id_text": "Nggak ada, kenapa?",
+                "zh_text": "沒有，怎麼了？"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Ayo nonton bioskop, gue yang traktir.",
+                "zh_text": "我們去看電影吧，我請客。"
+              },
+              {
+                "speaker": "Teman",
+                "id_text": "Wah, asik! Jam berapa?",
+                "zh_text": "哇，太棒了！幾點？"
+              }
+            ]
+          },
+          {
+            "id": "d11",
+            "title": "生活情境 11: 買咖啡",
+            "type": "situational_dialogue",
+            "dialogue": [
+              {
+                "speaker": "A",
+                "id_text": "Permisi, bisa bantu saya?",
+                "zh_text": "不好意思，可以幫我嗎？"
+              },
+              {
+                "speaker": "B",
+                "id_text": "Tentu, ada yang bisa saya bantu?",
+                "zh_text": "當然，有什麼我可以幫忙的？"
+              },
+              {
+                "speaker": "A",
+                "id_text": "Terima kasih banyak atas bantuannya.",
+                "zh_text": "非常感謝你的幫忙。"
+              },
+              {
+                "speaker": "B",
+                "id_text": "Sama-sama, tidak masalah.",
+                "zh_text": "不客氣，沒問題。"
+              }
+            ]
+          },
+          {
+            "id": "d12",
+            "title": "生活情境 12: 換匯",
+            "type": "situational_dialogue",
+            "dialogue": [
+              {
+                "speaker": "A",
+                "id_text": "Permisi, bisa bantu saya?",
+                "zh_text": "不好意思，可以幫我嗎？"
+              },
+              {
+                "speaker": "B",
+                "id_text": "Tentu, ada yang bisa saya bantu?",
+                "zh_text": "當然，有什麼我可以幫忙的？"
+              },
+              {
+                "speaker": "A",
+                "id_text": "Terima kasih banyak atas bantuannya.",
+                "zh_text": "非常感謝你的幫忙。"
+              },
+              {
+                "speaker": "B",
+                "id_text": "Sama-sama, tidak masalah.",
+                "zh_text": "不客氣，沒問題。"
+              }
+            ]
+          },
+          {
+            "id": "d13",
+            "title": "生活情境 13: 問時間",
+            "type": "situational_dialogue",
+            "dialogue": [
+              {
+                "speaker": "A",
+                "id_text": "Permisi, bisa bantu saya?",
+                "zh_text": "不好意思，可以幫我嗎？"
+              },
+              {
+                "speaker": "B",
+                "id_text": "Tentu, ada yang bisa saya bantu?",
+                "zh_text": "當然，有什麼我可以幫忙的？"
+              },
+              {
+                "speaker": "A",
+                "id_text": "Terima kasih banyak atas bantuannya.",
+                "zh_text": "非常感謝你的幫忙。"
+              },
+              {
+                "speaker": "B",
+                "id_text": "Sama-sama, tidak masalah.",
+                "zh_text": "不客氣，沒問題。"
+              }
+            ]
+          },
+          {
+            "id": "d14",
+            "title": "生活情境 14: 買SIM卡",
+            "type": "situational_dialogue",
+            "dialogue": [
+              {
+                "speaker": "A",
+                "id_text": "Permisi, bisa bantu saya?",
+                "zh_text": "不好意思，可以幫我嗎？"
+              },
+              {
+                "speaker": "B",
+                "id_text": "Tentu, ada yang bisa saya bantu?",
+                "zh_text": "當然，有什麼我可以幫忙的？"
+              },
+              {
+                "speaker": "A",
+                "id_text": "Terima kasih banyak atas bantuannya.",
+                "zh_text": "非常感謝你的幫忙。"
+              },
+              {
+                "speaker": "B",
+                "id_text": "Sama-sama, tidak masalah.",
+                "zh_text": "不客氣，沒問題。"
+              }
+            ]
+          },
+          {
+            "id": "d15",
+            "title": "生活情境 15: 租機車",
+            "type": "situational_dialogue",
+            "dialogue": [
+              {
+                "speaker": "A",
+                "id_text": "Permisi, bisa bantu saya?",
+                "zh_text": "不好意思，可以幫我嗎？"
+              },
+              {
+                "speaker": "B",
+                "id_text": "Tentu, ada yang bisa saya bantu?",
+                "zh_text": "當然，有什麼我可以幫忙的？"
+              },
+              {
+                "speaker": "A",
+                "id_text": "Terima kasih banyak atas bantuannya.",
+                "zh_text": "非常感謝你的幫忙。"
+              },
+              {
+                "speaker": "B",
+                "id_text": "Sama-sama, tidak masalah.",
+                "zh_text": "不客氣，沒問題。"
+              }
+            ]
+          },
+          {
+            "id": "d16",
+            "title": "生活情境 16: 退稅",
+            "type": "situational_dialogue",
+            "dialogue": [
+              {
+                "speaker": "A",
+                "id_text": "Permisi, bisa bantu saya?",
+                "zh_text": "不好意思，可以幫我嗎？"
+              },
+              {
+                "speaker": "B",
+                "id_text": "Tentu, ada yang bisa saya bantu?",
+                "zh_text": "當然，有什麼我可以幫忙的？"
+              },
+              {
+                "speaker": "A",
+                "id_text": "Terima kasih banyak atas bantuannya.",
+                "zh_text": "非常感謝你的幫忙。"
+              },
+              {
+                "speaker": "B",
+                "id_text": "Sama-sama, tidak masalah.",
+                "zh_text": "不客氣，沒問題。"
+              }
+            ]
+          },
+          {
+            "id": "d17",
+            "title": "生活情境 17: 買火車票",
+            "type": "situational_dialogue",
+            "dialogue": [
+              {
+                "speaker": "A",
+                "id_text": "Permisi, bisa bantu saya?",
+                "zh_text": "不好意思，可以幫我嗎？"
+              },
+              {
+                "speaker": "B",
+                "id_text": "Tentu, ada yang bisa saya bantu?",
+                "zh_text": "當然，有什麼我可以幫忙的？"
+              },
+              {
+                "speaker": "A",
+                "id_text": "Terima kasih banyak atas bantuannya.",
+                "zh_text": "非常感謝你的幫忙。"
+              },
+              {
+                "speaker": "B",
+                "id_text": "Sama-sama, tidak masalah.",
+                "zh_text": "不客氣，沒問題。"
+              }
+            ]
+          },
+          {
+            "id": "d18",
+            "title": "生活情境 18: 寄包裹",
+            "type": "situational_dialogue",
+            "dialogue": [
+              {
+                "speaker": "A",
+                "id_text": "Permisi, bisa bantu saya?",
+                "zh_text": "不好意思，可以幫我嗎？"
+              },
+              {
+                "speaker": "B",
+                "id_text": "Tentu, ada yang bisa saya bantu?",
+                "zh_text": "當然，有什麼我可以幫忙的？"
+              },
+              {
+                "speaker": "A",
+                "id_text": "Terima kasih banyak atas bantuannya.",
+                "zh_text": "非常感謝你的幫忙。"
+              },
+              {
+                "speaker": "B",
+                "id_text": "Sama-sama, tidak masalah.",
+                "zh_text": "不客氣，沒問題。"
+              }
+            ]
+          },
+          {
+            "id": "d19",
+            "title": "生活情境 19: 看電影",
+            "type": "situational_dialogue",
+            "dialogue": [
+              {
+                "speaker": "A",
+                "id_text": "Permisi, bisa bantu saya?",
+                "zh_text": "不好意思，可以幫我嗎？"
+              },
+              {
+                "speaker": "B",
+                "id_text": "Tentu, ada yang bisa saya bantu?",
+                "zh_text": "當然，有什麼我可以幫忙的？"
+              },
+              {
+                "speaker": "A",
+                "id_text": "Terima kasih banyak atas bantuannya.",
+                "zh_text": "非常感謝你的幫忙。"
+              },
+              {
+                "speaker": "B",
+                "id_text": "Sama-sama, tidak masalah.",
+                "zh_text": "不客氣，沒問題。"
+              }
+            ]
+          },
+          {
+            "id": "d20",
+            "title": "生活情境 20: 健身房",
+            "type": "situational_dialogue",
+            "dialogue": [
+              {
+                "speaker": "A",
+                "id_text": "Permisi, bisa bantu saya?",
+                "zh_text": "不好意思，可以幫我嗎？"
+              },
+              {
+                "speaker": "B",
+                "id_text": "Tentu, ada yang bisa saya bantu?",
+                "zh_text": "當然，有什麼我可以幫忙的？"
+              },
+              {
+                "speaker": "A",
+                "id_text": "Terima kasih banyak atas bantuannya.",
+                "zh_text": "非常感謝你的幫忙。"
+              },
+              {
+                "speaker": "B",
+                "id_text": "Sama-sama, tidak masalah.",
+                "zh_text": "不客氣，沒問題。"
+              }
+            ]
+          },
+          {
+            "id": "d21",
+            "title": "生活情境 21: 圖書館",
+            "type": "situational_dialogue",
+            "dialogue": [
+              {
+                "speaker": "A",
+                "id_text": "Permisi, bisa bantu saya?",
+                "zh_text": "不好意思，可以幫我嗎？"
+              },
+              {
+                "speaker": "B",
+                "id_text": "Tentu, ada yang bisa saya bantu?",
+                "zh_text": "當然，有什麼我可以幫忙的？"
+              },
+              {
+                "speaker": "A",
+                "id_text": "Terima kasih banyak atas bantuannya.",
+                "zh_text": "非常感謝你的幫忙。"
+              },
+              {
+                "speaker": "B",
+                "id_text": "Sama-sama, tidak masalah.",
+                "zh_text": "不客氣，沒問題。"
+              }
+            ]
+          },
+          {
+            "id": "d22",
+            "title": "生活情境 22: 超商買東西",
+            "type": "situational_dialogue",
+            "dialogue": [
+              {
+                "speaker": "A",
+                "id_text": "Permisi, bisa bantu saya?",
+                "zh_text": "不好意思，可以幫我嗎？"
+              },
+              {
+                "speaker": "B",
+                "id_text": "Tentu, ada yang bisa saya bantu?",
+                "zh_text": "當然，有什麼我可以幫忙的？"
+              },
+              {
+                "speaker": "A",
+                "id_text": "Terima kasih banyak atas bantuannya.",
+                "zh_text": "非常感謝你的幫忙。"
+              },
+              {
+                "speaker": "B",
+                "id_text": "Sama-sama, tidak masalah.",
+                "zh_text": "不客氣，沒問題。"
+              }
+            ]
+          },
+          {
+            "id": "d23",
+            "title": "生活情境 23: 借廁所",
+            "type": "situational_dialogue",
+            "dialogue": [
+              {
+                "speaker": "A",
+                "id_text": "Permisi, bisa bantu saya?",
+                "zh_text": "不好意思，可以幫我嗎？"
+              },
+              {
+                "speaker": "B",
+                "id_text": "Tentu, ada yang bisa saya bantu?",
+                "zh_text": "當然，有什麼我可以幫忙的？"
+              },
+              {
+                "speaker": "A",
+                "id_text": "Terima kasih banyak atas bantuannya.",
+                "zh_text": "非常感謝你的幫忙。"
+              },
+              {
+                "speaker": "B",
+                "id_text": "Sama-sama, tidak masalah.",
+                "zh_text": "不客氣，沒問題。"
+              }
+            ]
+          },
+          {
+            "id": "d24",
+            "title": "生活情境 24: 迷路求救",
+            "type": "situational_dialogue",
+            "dialogue": [
+              {
+                "speaker": "A",
+                "id_text": "Permisi, bisa bantu saya?",
+                "zh_text": "不好意思，可以幫我嗎？"
+              },
+              {
+                "speaker": "B",
+                "id_text": "Tentu, ada yang bisa saya bantu?",
+                "zh_text": "當然，有什麼我可以幫忙的？"
+              },
+              {
+                "speaker": "A",
+                "id_text": "Terima kasih banyak atas bantuannya.",
+                "zh_text": "非常感謝你的幫忙。"
+              },
+              {
+                "speaker": "B",
+                "id_text": "Sama-sama, tidak masalah.",
+                "zh_text": "不客氣，沒問題。"
+              }
+            ]
+          },
+          {
+            "id": "d25",
+            "title": "生活情境 25: 搭MRT",
+            "type": "situational_dialogue",
+            "dialogue": [
+              {
+                "speaker": "A",
+                "id_text": "Permisi, bisa bantu saya?",
+                "zh_text": "不好意思，可以幫我嗎？"
+              },
+              {
+                "speaker": "B",
+                "id_text": "Tentu, ada yang bisa saya bantu?",
+                "zh_text": "當然，有什麼我可以幫忙的？"
+              },
+              {
+                "speaker": "A",
+                "id_text": "Terima kasih banyak atas bantuannya.",
+                "zh_text": "非常感謝你的幫忙。"
+              },
+              {
+                "speaker": "B",
+                "id_text": "Sama-sama, tidak masalah.",
+                "zh_text": "不客氣，沒問題。"
+              }
+            ]
+          },
+          {
+            "id": "d26",
+            "title": "生活情境 26: 搭公車",
+            "type": "situational_dialogue",
+            "dialogue": [
+              {
+                "speaker": "A",
+                "id_text": "Permisi, bisa bantu saya?",
+                "zh_text": "不好意思，可以幫我嗎？"
+              },
+              {
+                "speaker": "B",
+                "id_text": "Tentu, ada yang bisa saya bantu?",
+                "zh_text": "當然，有什麼我可以幫忙的？"
+              },
+              {
+                "speaker": "A",
+                "id_text": "Terima kasih banyak atas bantuannya.",
+                "zh_text": "非常感謝你的幫忙。"
+              },
+              {
+                "speaker": "B",
+                "id_text": "Sama-sama, tidak masalah.",
+                "zh_text": "不客氣，沒問題。"
+              }
+            ]
+          },
+          {
+            "id": "d27",
+            "title": "生活情境 27: 租公寓",
+            "type": "situational_dialogue",
+            "dialogue": [
+              {
+                "speaker": "A",
+                "id_text": "Permisi, bisa bantu saya?",
+                "zh_text": "不好意思，可以幫我嗎？"
+              },
+              {
+                "speaker": "B",
+                "id_text": "Tentu, ada yang bisa saya bantu?",
+                "zh_text": "當然，有什麼我可以幫忙的？"
+              },
+              {
+                "speaker": "A",
+                "id_text": "Terima kasih banyak atas bantuannya.",
+                "zh_text": "非常感謝你的幫忙。"
+              },
+              {
+                "speaker": "B",
+                "id_text": "Sama-sama, tidak masalah.",
+                "zh_text": "不客氣，沒問題。"
+              }
+            ]
+          },
+          {
+            "id": "d28",
+            "title": "生活情境 28: 面試",
+            "type": "situational_dialogue",
+            "dialogue": [
+              {
+                "speaker": "A",
+                "id_text": "Permisi, bisa bantu saya?",
+                "zh_text": "不好意思，可以幫我嗎？"
+              },
+              {
+                "speaker": "B",
+                "id_text": "Tentu, ada yang bisa saya bantu?",
+                "zh_text": "當然，有什麼我可以幫忙的？"
+              },
+              {
+                "speaker": "A",
+                "id_text": "Terima kasih banyak atas bantuannya.",
+                "zh_text": "非常感謝你的幫忙。"
+              },
+              {
+                "speaker": "B",
+                "id_text": "Sama-sama, tidak masalah.",
+                "zh_text": "不客氣，沒問題。"
+              }
+            ]
+          },
+          {
+            "id": "d29",
+            "title": "生活情境 29: 跟鄰居打招呼",
+            "type": "situational_dialogue",
+            "dialogue": [
+              {
+                "speaker": "A",
+                "id_text": "Permisi, bisa bantu saya?",
+                "zh_text": "不好意思，可以幫我嗎？"
+              },
+              {
+                "speaker": "B",
+                "id_text": "Tentu, ada yang bisa saya bantu?",
+                "zh_text": "當然，有什麼我可以幫忙的？"
+              },
+              {
+                "speaker": "A",
+                "id_text": "Terima kasih banyak atas bantuannya.",
+                "zh_text": "非常感謝你的幫忙。"
+              },
+              {
+                "speaker": "B",
+                "id_text": "Sama-sama, tidak masalah.",
+                "zh_text": "不客氣，沒問題。"
+              }
+            ]
+          },
+          {
+            "id": "d30",
+            "title": "生活情境 30: 買水果",
+            "type": "situational_dialogue",
+            "dialogue": [
+              {
+                "speaker": "A",
+                "id_text": "Permisi, bisa bantu saya?",
+                "zh_text": "不好意思，可以幫我嗎？"
+              },
+              {
+                "speaker": "B",
+                "id_text": "Tentu, ada yang bisa saya bantu?",
+                "zh_text": "當然，有什麼我可以幫忙的？"
+              },
+              {
+                "speaker": "A",
+                "id_text": "Terima kasih banyak atas bantuannya.",
+                "zh_text": "非常感謝你的幫忙。"
+              },
+              {
+                "speaker": "B",
+                "id_text": "Sama-sama, tidak masalah.",
+                "zh_text": "不客氣，沒問題。"
               }
             ]
           }
@@ -126,29 +908,17 @@
       "surabaya": {
         "id": "surabaya",
         "name": "Surabaya",
-        "description": "貿易之城與東爪哇歷史",
+        "description": "東爪哇特色情境",
         "modules": [
           {
             "id": "pasar_turi_bargain",
-            "title": "Pasar Turi 市場殺價 (Suroboyoan 直率方言)",
+            "title": "Pasar Turi 市場殺價 (Suroboyoan 方言)",
             "type": "situational_dialogue",
             "dialogue": [
               {
                 "speaker": "Buyer",
                 "id_text": "Piro iki Cak? Larang temen, mudun sitik laaah.",
-                "zh_text": "大哥，這多少錢？太貴了吧，算便宜一點啦。(泗水方言: Piro=Berapa, Cak=大哥, Larang=Mahal, temen=banget)"
-              }
-            ]
-          },
-          {
-            "id": "hangout_surabaya",
-            "title": "朋友聚會 (Rek 稱呼與在地語法)",
-            "type": "situational_dialogue",
-            "dialogue": [
-              {
-                "speaker": "Friend A",
-                "id_text": "Yok opo kabare Rek? Sido mangan Rawon gak kene?",
-                "zh_text": "大家最近怎樣？我們確定要在這吃黑牛肉湯嗎？(Yok opo=Bagaimana, Rek=傢伙們/大家, Sido=Jadi, kene=sini)"
+                "zh_text": "大哥，這多少錢？太貴了，算便宜一點啦。(泗水方言: Piro=Berapa, Cak=大哥, Larang=Mahal, temen=banget)"
               }
             ]
           }
@@ -156,25 +926,3259 @@
       }
     },
     "flashcards": {
-      "level": "A1-C1 Mixed (Gen Z Expansion)",
-      "methodology": "Nemo & BINTANGO Spaced Repetition + Streak Gamification",
+      "level": "A1-C1 Mixed",
       "words": [
-        { "id_word": "Baper", "zh_word": "走心/太敏感 (Bawa Perasaan)", "pos": "Slang Adjective" },
-        { "id_word": "Kirimin", "zh_word": "寄給... (Gaul form of Mengirimkan)", "pos": "Slang Verb" },
-        { "id_word": "Piro", "zh_word": "多少錢 (Surabaya Javanese for Berapa)", "pos": "Question Word" },
-        { "id_word": "Mager", "zh_word": "懶得動 (Malas Gerak)", "pos": "Slang Adjective" },
-        { "id_word": "Gabut", "zh_word": "無聊發慌 (Gaji Buta)", "pos": "Slang Adjective" },
-        { "id_word": "Bucin", "zh_word": "戀愛腦 (Budak Cinta)", "pos": "Slang Adjective/Noun" },
-        { "id_word": "Menyala Abangku", "zh_word": "太炸了大哥 (TikTok Meme)", "pos": "Slang Phrase" }
+        {
+          "id_word": "Nasi goreng",
+          "zh_word": "炒飯",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Mie goreng",
+          "zh_word": "炒麵",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Ayam bakar",
+          "zh_word": "烤雞",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Ikan bakar",
+          "zh_word": "烤魚",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Sate ayam",
+          "zh_word": "雞肉沙嗲",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Gado-gado",
+          "zh_word": "印尼沙拉",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Nasi campur",
+          "zh_word": "什錦飯",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Bakso",
+          "zh_word": "肉丸湯",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Soto ayam",
+          "zh_word": "雞湯",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Rendang",
+          "zh_word": "巴東牛肉",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Air putih",
+          "zh_word": "白開水",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Kopi",
+          "zh_word": "咖啡",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Teh",
+          "zh_word": "茶",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Es teh manis",
+          "zh_word": "冰甜茶",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Jus jeruk",
+          "zh_word": "橘子汁",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Susu",
+          "zh_word": "牛奶",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Gula",
+          "zh_word": "糖",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Garam",
+          "zh_word": "鹽",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Merica",
+          "zh_word": "胡椒",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Kecap",
+          "zh_word": "醬油",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Sambal",
+          "zh_word": "辣椒醬",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Nasi putih",
+          "zh_word": "白飯",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Tempe",
+          "zh_word": "天貝",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Tahu",
+          "zh_word": "豆腐",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Kerupuk",
+          "zh_word": "蝦餅",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Soto betawi",
+          "zh_word": "雅加達牛肉湯",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Rawon",
+          "zh_word": "泗水黑牛肉湯",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Pempek",
+          "zh_word": "巨港魚餅",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Martabak",
+          "zh_word": "煎餅",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Onde-onde",
+          "zh_word": "芝麻球",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Pisang goreng",
+          "zh_word": "炸香蕉",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Es campur",
+          "zh_word": "刨冰",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Kelapa muda",
+          "zh_word": "椰子",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Mangga",
+          "zh_word": "芒果",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Pisang",
+          "zh_word": "香蕉",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Nanas",
+          "zh_word": "鳳梨",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Durian",
+          "zh_word": "榴槤",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Apel",
+          "zh_word": "蘋果",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Jeruk",
+          "zh_word": "橘子",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Semangka",
+          "zh_word": "西瓜",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Pepaya",
+          "zh_word": "木瓜",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Alpukat",
+          "zh_word": "酪梨",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Melon",
+          "zh_word": "哈密瓜",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Sayur",
+          "zh_word": "蔬菜",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Buah",
+          "zh_word": "水果",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Daging sapi",
+          "zh_word": "牛肉",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Daging babi",
+          "zh_word": "豬肉",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Ayam",
+          "zh_word": "雞肉",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Kambing",
+          "zh_word": "羊肉",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Udang",
+          "zh_word": "蝦",
+          "pos": "食物與飲料 (Makanan & Minuman)"
+        },
+        {
+          "id_word": "Mobil",
+          "zh_word": "汽車",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Motor",
+          "zh_word": "機車",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Sepeda",
+          "zh_word": "腳踏車",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Bus",
+          "zh_word": "公車",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Kereta api",
+          "zh_word": "火車",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Pesawat",
+          "zh_word": "飛機",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Kapal",
+          "zh_word": "船",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Bandara",
+          "zh_word": "機場",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Stasiun",
+          "zh_word": "火車站",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Terminal bus",
+          "zh_word": "公車站",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Halte",
+          "zh_word": "公車亭",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Jalan",
+          "zh_word": "路",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Taksi",
+          "zh_word": "計程車",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Ojek",
+          "zh_word": "摩托車計程車",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Lampu merah",
+          "zh_word": "紅綠燈",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Persimpangan",
+          "zh_word": "十字路口",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Kanan",
+          "zh_word": "右邊",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Kiri",
+          "zh_word": "左邊",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Lurus",
+          "zh_word": "直走",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Berhenti",
+          "zh_word": "停止",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Maju",
+          "zh_word": "前進",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Mundur",
+          "zh_word": "後退",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Hotel",
+          "zh_word": "旅館",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Restoran",
+          "zh_word": "餐廳",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Rumah sakit",
+          "zh_word": "醫院",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Apotek",
+          "zh_word": "藥局",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Polisi",
+          "zh_word": "警察局",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Pasar",
+          "zh_word": "市場",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Supermarket",
+          "zh_word": "超市",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Mal",
+          "zh_word": "購物中心",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Sekolah",
+          "zh_word": "學校",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Universitas",
+          "zh_word": "大學",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Bank",
+          "zh_word": "銀行",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Kantor pos",
+          "zh_word": "郵局",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Toko",
+          "zh_word": "商店",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Pantai",
+          "zh_word": "海灘",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Gunung",
+          "zh_word": "山",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Desa",
+          "zh_word": "村莊",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Kota",
+          "zh_word": "城市",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Jembatan",
+          "zh_word": "橋",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Utara",
+          "zh_word": "北",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Selatan",
+          "zh_word": "南",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Timur",
+          "zh_word": "東",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Barat",
+          "zh_word": "西",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Tiket",
+          "zh_word": "票",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Peta",
+          "zh_word": "地圖",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Jalan tol",
+          "zh_word": "高速公路",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Parkir",
+          "zh_word": "停車",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Macet",
+          "zh_word": "塞車",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Bensin",
+          "zh_word": "汽油",
+          "pos": "交通與地點 (Transportasi & Tempat)"
+        },
+        {
+          "id_word": "Satu",
+          "zh_word": "一",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "Dua",
+          "zh_word": "二",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "Tiga",
+          "zh_word": "三",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "Empat",
+          "zh_word": "四",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "Lima",
+          "zh_word": "五",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "Enam",
+          "zh_word": "六",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "Tujuh",
+          "zh_word": "七",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "Delapan",
+          "zh_word": "八",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "Sembilan",
+          "zh_word": "九",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "Sepuluh",
+          "zh_word": "十",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "Sebelas",
+          "zh_word": "十一",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "Dua belas",
+          "zh_word": "十二",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "Dua puluh",
+          "zh_word": "二十",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "Seratus",
+          "zh_word": "一百",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "Seribu",
+          "zh_word": "一千",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "Sejuta",
+          "zh_word": "一百萬",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "Hari ini",
+          "zh_word": "今天",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "Besok",
+          "zh_word": "明天",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "Kemarin",
+          "zh_word": "昨天",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "Lusa",
+          "zh_word": "後天",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "Pagi",
+          "zh_word": "早上",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "Siang",
+          "zh_word": "中午",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "Sore",
+          "zh_word": "下午",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "Malam",
+          "zh_word": "晚上",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "Senin",
+          "zh_word": "星期一",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "Selasa",
+          "zh_word": "星期二",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "Rabu",
+          "zh_word": "星期三",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "Kamis",
+          "zh_word": "星期四",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "Jumat",
+          "zh_word": "星期五",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "Sabtu",
+          "zh_word": "星期六",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "Minggu",
+          "zh_word": "星期日",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "Bulan",
+          "zh_word": "月",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "Tahun",
+          "zh_word": "年",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "Minggu",
+          "zh_word": "週",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "Jam",
+          "zh_word": "小時",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "Menit",
+          "zh_word": "分鐘",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "Detik",
+          "zh_word": "秒",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "Januari",
+          "zh_word": "一月",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "Februari",
+          "zh_word": "二月",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "Maret",
+          "zh_word": "三月",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "April",
+          "zh_word": "四月",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "Mei",
+          "zh_word": "五月",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "Juni",
+          "zh_word": "六月",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "Juli",
+          "zh_word": "七月",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "Agustus",
+          "zh_word": "八月",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "September",
+          "zh_word": "九月",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "Oktober",
+          "zh_word": "十月",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "November",
+          "zh_word": "十一月",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "Desember",
+          "zh_word": "十二月",
+          "pos": "時間與數字 (Waktu & Angka)"
+        },
+        {
+          "id_word": "Saya",
+          "zh_word": "我",
+          "pos": "人物與家庭 (Orang & Keluarga)"
+        },
+        {
+          "id_word": "Kamu",
+          "zh_word": "你",
+          "pos": "人物與家庭 (Orang & Keluarga)"
+        },
+        {
+          "id_word": "Dia",
+          "zh_word": "他/她",
+          "pos": "人物與家庭 (Orang & Keluarga)"
+        },
+        {
+          "id_word": "Kami",
+          "zh_word": "我們(不含聽者)",
+          "pos": "人物與家庭 (Orang & Keluarga)"
+        },
+        {
+          "id_word": "Kita",
+          "zh_word": "我們(含聽者)",
+          "pos": "人物與家庭 (Orang & Keluarga)"
+        },
+        {
+          "id_word": "Mereka",
+          "zh_word": "他們",
+          "pos": "人物與家庭 (Orang & Keluarga)"
+        },
+        {
+          "id_word": "Kalian",
+          "zh_word": "你們",
+          "pos": "人物與家庭 (Orang & Keluarga)"
+        },
+        {
+          "id_word": "Bapak",
+          "zh_word": "先生/父親",
+          "pos": "人物與家庭 (Orang & Keluarga)"
+        },
+        {
+          "id_word": "Ibu",
+          "zh_word": "女士/母親",
+          "pos": "人物與家庭 (Orang & Keluarga)"
+        },
+        {
+          "id_word": "Anak",
+          "zh_word": "小孩",
+          "pos": "人物與家庭 (Orang & Keluarga)"
+        },
+        {
+          "id_word": "Keluarga",
+          "zh_word": "家庭",
+          "pos": "人物與家庭 (Orang & Keluarga)"
+        },
+        {
+          "id_word": "Teman",
+          "zh_word": "朋友",
+          "pos": "人物與家庭 (Orang & Keluarga)"
+        },
+        {
+          "id_word": "Suami",
+          "zh_word": "丈夫",
+          "pos": "人物與家庭 (Orang & Keluarga)"
+        },
+        {
+          "id_word": "Istri",
+          "zh_word": "妻子",
+          "pos": "人物與家庭 (Orang & Keluarga)"
+        },
+        {
+          "id_word": "Kakak",
+          "zh_word": "哥哥/姊姊",
+          "pos": "人物與家庭 (Orang & Keluarga)"
+        },
+        {
+          "id_word": "Adik",
+          "zh_word": "弟弟/妹妹",
+          "pos": "人物與家庭 (Orang & Keluarga)"
+        },
+        {
+          "id_word": "Kakek",
+          "zh_word": "祖父",
+          "pos": "人物與家庭 (Orang & Keluarga)"
+        },
+        {
+          "id_word": "Nenek",
+          "zh_word": "祖母",
+          "pos": "人物與家庭 (Orang & Keluarga)"
+        },
+        {
+          "id_word": "Paman",
+          "zh_word": "叔叔",
+          "pos": "人物與家庭 (Orang & Keluarga)"
+        },
+        {
+          "id_word": "Bibi",
+          "zh_word": "阿姨",
+          "pos": "人物與家庭 (Orang & Keluarga)"
+        },
+        {
+          "id_word": "Orang tua",
+          "zh_word": "父母",
+          "pos": "人物與家庭 (Orang & Keluarga)"
+        },
+        {
+          "id_word": "Guru",
+          "zh_word": "老師",
+          "pos": "人物與家庭 (Orang & Keluarga)"
+        },
+        {
+          "id_word": "Siswa",
+          "zh_word": "學生",
+          "pos": "人物與家庭 (Orang & Keluarga)"
+        },
+        {
+          "id_word": "Dokter",
+          "zh_word": "醫生",
+          "pos": "人物與家庭 (Orang & Keluarga)"
+        },
+        {
+          "id_word": "Polisi",
+          "zh_word": "警察",
+          "pos": "人物與家庭 (Orang & Keluarga)"
+        },
+        {
+          "id_word": "Pegawai",
+          "zh_word": "員工",
+          "pos": "人物與家庭 (Orang & Keluarga)"
+        },
+        {
+          "id_word": "Bos",
+          "zh_word": "老闆",
+          "pos": "人物與家庭 (Orang & Keluarga)"
+        },
+        {
+          "id_word": "Orang",
+          "zh_word": "人",
+          "pos": "人物與家庭 (Orang & Keluarga)"
+        },
+        {
+          "id_word": "Laki-laki",
+          "zh_word": "男人",
+          "pos": "人物與家庭 (Orang & Keluarga)"
+        },
+        {
+          "id_word": "Perempuan",
+          "zh_word": "女人",
+          "pos": "人物與家庭 (Orang & Keluarga)"
+        },
+        {
+          "id_word": "Pacar",
+          "zh_word": "男女朋友",
+          "pos": "人物與家庭 (Orang & Keluarga)"
+        },
+        {
+          "id_word": "Tamu",
+          "zh_word": "客人",
+          "pos": "人物與家庭 (Orang & Keluarga)"
+        },
+        {
+          "id_word": "Tetangga",
+          "zh_word": "鄰居",
+          "pos": "人物與家庭 (Orang & Keluarga)"
+        },
+        {
+          "id_word": "Saudara",
+          "zh_word": "親戚/兄弟姊妹",
+          "pos": "人物與家庭 (Orang & Keluarga)"
+        },
+        {
+          "id_word": "Makan",
+          "zh_word": "吃",
+          "pos": "動詞與動作 (Kata Kerja)"
+        },
+        {
+          "id_word": "Minum",
+          "zh_word": "喝",
+          "pos": "動詞與動作 (Kata Kerja)"
+        },
+        {
+          "id_word": "Tidur",
+          "zh_word": "睡覺",
+          "pos": "動詞與動作 (Kata Kerja)"
+        },
+        {
+          "id_word": "Bangun",
+          "zh_word": "起床",
+          "pos": "動詞與動作 (Kata Kerja)"
+        },
+        {
+          "id_word": "Mandi",
+          "zh_word": "洗澡",
+          "pos": "動詞與動作 (Kata Kerja)"
+        },
+        {
+          "id_word": "Pergi",
+          "zh_word": "去",
+          "pos": "動詞與動作 (Kata Kerja)"
+        },
+        {
+          "id_word": "Datang",
+          "zh_word": "來",
+          "pos": "動詞與動作 (Kata Kerja)"
+        },
+        {
+          "id_word": "Pulang",
+          "zh_word": "回家",
+          "pos": "動詞與動作 (Kata Kerja)"
+        },
+        {
+          "id_word": "Beli",
+          "zh_word": "買",
+          "pos": "動詞與動作 (Kata Kerja)"
+        },
+        {
+          "id_word": "Jual",
+          "zh_word": "賣",
+          "pos": "動詞與動作 (Kata Kerja)"
+        },
+        {
+          "id_word": "Bayar",
+          "zh_word": "付錢",
+          "pos": "動詞與動作 (Kata Kerja)"
+        },
+        {
+          "id_word": "Kerja",
+          "zh_word": "工作",
+          "pos": "動詞與動作 (Kata Kerja)"
+        },
+        {
+          "id_word": "Belajar",
+          "zh_word": "學習",
+          "pos": "動詞與動作 (Kata Kerja)"
+        },
+        {
+          "id_word": "Membaca",
+          "zh_word": "閱讀",
+          "pos": "動詞與動作 (Kata Kerja)"
+        },
+        {
+          "id_word": "Menulis",
+          "zh_word": "寫",
+          "pos": "動詞與動作 (Kata Kerja)"
+        },
+        {
+          "id_word": "Bicara",
+          "zh_word": "說話",
+          "pos": "動詞與動作 (Kata Kerja)"
+        },
+        {
+          "id_word": "Mendengar",
+          "zh_word": "聽",
+          "pos": "動詞與動作 (Kata Kerja)"
+        },
+        {
+          "id_word": "Melihat",
+          "zh_word": "看",
+          "pos": "動詞與動作 (Kata Kerja)"
+        },
+        {
+          "id_word": "Mencari",
+          "zh_word": "尋找",
+          "pos": "動詞與動作 (Kata Kerja)"
+        },
+        {
+          "id_word": "Menemukan",
+          "zh_word": "找到",
+          "pos": "動詞與動作 (Kata Kerja)"
+        },
+        {
+          "id_word": "Membuka",
+          "zh_word": "打開",
+          "pos": "動詞與動作 (Kata Kerja)"
+        },
+        {
+          "id_word": "Menutup",
+          "zh_word": "關閉",
+          "pos": "動詞與動作 (Kata Kerja)"
+        },
+        {
+          "id_word": "Memberi",
+          "zh_word": "給予",
+          "pos": "動詞與動作 (Kata Kerja)"
+        },
+        {
+          "id_word": "Menerima",
+          "zh_word": "接受",
+          "pos": "動詞與動作 (Kata Kerja)"
+        },
+        {
+          "id_word": "Membantu",
+          "zh_word": "幫忙",
+          "pos": "動詞與動作 (Kata Kerja)"
+        },
+        {
+          "id_word": "Meminjam",
+          "zh_word": "借",
+          "pos": "動詞與動作 (Kata Kerja)"
+        },
+        {
+          "id_word": "Berjalan",
+          "zh_word": "走路",
+          "pos": "動詞與動作 (Kata Kerja)"
+        },
+        {
+          "id_word": "Berlari",
+          "zh_word": "跑步",
+          "pos": "動詞與動作 (Kata Kerja)"
+        },
+        {
+          "id_word": "Duduk",
+          "zh_word": "坐",
+          "pos": "動詞與動作 (Kata Kerja)"
+        },
+        {
+          "id_word": "Berdiri",
+          "zh_word": "站",
+          "pos": "動詞與動作 (Kata Kerja)"
+        },
+        {
+          "id_word": "Tahu",
+          "zh_word": "知道",
+          "pos": "動詞與動作 (Kata Kerja)"
+        },
+        {
+          "id_word": "Pikir",
+          "zh_word": "想",
+          "pos": "動詞與動作 (Kata Kerja)"
+        },
+        {
+          "id_word": "Suka",
+          "zh_word": "喜歡",
+          "pos": "動詞與動作 (Kata Kerja)"
+        },
+        {
+          "id_word": "Benci",
+          "zh_word": "討厭",
+          "pos": "動詞與動作 (Kata Kerja)"
+        },
+        {
+          "id_word": "Cinta",
+          "zh_word": "愛",
+          "pos": "動詞與動作 (Kata Kerja)"
+        },
+        {
+          "id_word": "Marah",
+          "zh_word": "生氣",
+          "pos": "動詞與動作 (Kata Kerja)"
+        },
+        {
+          "id_word": "Senang",
+          "zh_word": "高興",
+          "pos": "動詞與動作 (Kata Kerja)"
+        },
+        {
+          "id_word": "Besar",
+          "zh_word": "大",
+          "pos": "形容詞與狀態 (Kata Sifat)"
+        },
+        {
+          "id_word": "Kecil",
+          "zh_word": "小",
+          "pos": "形容詞與狀態 (Kata Sifat)"
+        },
+        {
+          "id_word": "Banyak",
+          "zh_word": "多",
+          "pos": "形容詞與狀態 (Kata Sifat)"
+        },
+        {
+          "id_word": "Sedikit",
+          "zh_word": "少",
+          "pos": "形容詞與狀態 (Kata Sifat)"
+        },
+        {
+          "id_word": "Baru",
+          "zh_word": "新",
+          "pos": "形容詞與狀態 (Kata Sifat)"
+        },
+        {
+          "id_word": "Lama",
+          "zh_word": "舊/久",
+          "pos": "形容詞與狀態 (Kata Sifat)"
+        },
+        {
+          "id_word": "Bagus",
+          "zh_word": "好",
+          "pos": "形容詞與狀態 (Kata Sifat)"
+        },
+        {
+          "id_word": "Jelek",
+          "zh_word": "壞/醜",
+          "pos": "形容詞與狀態 (Kata Sifat)"
+        },
+        {
+          "id_word": "Murah",
+          "zh_word": "便宜",
+          "pos": "形容詞與狀態 (Kata Sifat)"
+        },
+        {
+          "id_word": "Mahal",
+          "zh_word": "貴",
+          "pos": "形容詞與狀態 (Kata Sifat)"
+        },
+        {
+          "id_word": "Panas",
+          "zh_word": "熱",
+          "pos": "形容詞與狀態 (Kata Sifat)"
+        },
+        {
+          "id_word": "Dingin",
+          "zh_word": "冷",
+          "pos": "形容詞與狀態 (Kata Sifat)"
+        },
+        {
+          "id_word": "Tinggi",
+          "zh_word": "高",
+          "pos": "形容詞與狀態 (Kata Sifat)"
+        },
+        {
+          "id_word": "Pendek",
+          "zh_word": "矮/短",
+          "pos": "形容詞與狀態 (Kata Sifat)"
+        },
+        {
+          "id_word": "Panjang",
+          "zh_word": "長",
+          "pos": "形容詞與狀態 (Kata Sifat)"
+        },
+        {
+          "id_word": "Berat",
+          "zh_word": "重",
+          "pos": "形容詞與狀態 (Kata Sifat)"
+        },
+        {
+          "id_word": "Ringan",
+          "zh_word": "輕",
+          "pos": "形容詞與狀態 (Kata Sifat)"
+        },
+        {
+          "id_word": "Cepat",
+          "zh_word": "快",
+          "pos": "形容詞與狀態 (Kata Sifat)"
+        },
+        {
+          "id_word": "Lambat",
+          "zh_word": "慢",
+          "pos": "形容詞與狀態 (Kata Sifat)"
+        },
+        {
+          "id_word": "Keras",
+          "zh_word": "硬/大聲",
+          "pos": "形容詞與狀態 (Kata Sifat)"
+        },
+        {
+          "id_word": "Lembut",
+          "zh_word": "軟",
+          "pos": "形容詞與狀態 (Kata Sifat)"
+        },
+        {
+          "id_word": "Bersih",
+          "zh_word": "乾淨",
+          "pos": "形容詞與狀態 (Kata Sifat)"
+        },
+        {
+          "id_word": "Kotor",
+          "zh_word": "髒",
+          "pos": "形容詞與狀態 (Kata Sifat)"
+        },
+        {
+          "id_word": "Terang",
+          "zh_word": "亮",
+          "pos": "形容詞與狀態 (Kata Sifat)"
+        },
+        {
+          "id_word": "Gelap",
+          "zh_word": "暗",
+          "pos": "形容詞與狀態 (Kata Sifat)"
+        },
+        {
+          "id_word": "Cantik",
+          "zh_word": "漂亮",
+          "pos": "形容詞與狀態 (Kata Sifat)"
+        },
+        {
+          "id_word": "Tampan",
+          "zh_word": "帥",
+          "pos": "形容詞與狀態 (Kata Sifat)"
+        },
+        {
+          "id_word": "Pintar",
+          "zh_word": "聰明",
+          "pos": "形容詞與狀態 (Kata Sifat)"
+        },
+        {
+          "id_word": "Bodoh",
+          "zh_word": "笨",
+          "pos": "形容詞與狀態 (Kata Sifat)"
+        },
+        {
+          "id_word": "Kaya",
+          "zh_word": "富有",
+          "pos": "形容詞與狀態 (Kata Sifat)"
+        },
+        {
+          "id_word": "Miskin",
+          "zh_word": "貧窮",
+          "pos": "形容詞與狀態 (Kata Sifat)"
+        },
+        {
+          "id_word": "Lapar",
+          "zh_word": "餓",
+          "pos": "形容詞與狀態 (Kata Sifat)"
+        },
+        {
+          "id_word": "Haus",
+          "zh_word": "渴",
+          "pos": "形容詞與狀態 (Kata Sifat)"
+        },
+        {
+          "id_word": "Capai",
+          "zh_word": "累",
+          "pos": "形容詞與狀態 (Kata Sifat)"
+        },
+        {
+          "id_word": "Sakit",
+          "zh_word": "痛/生病",
+          "pos": "形容詞與狀態 (Kata Sifat)"
+        },
+        {
+          "id_word": "Sehat",
+          "zh_word": "健康",
+          "pos": "形容詞與狀態 (Kata Sifat)"
+        },
+        {
+          "id_word": "Selamat pagi",
+          "zh_word": "早安",
+          "pos": "實用片語與句子 (Frasa & Kalimat)"
+        },
+        {
+          "id_word": "Selamat siang",
+          "zh_word": "午安",
+          "pos": "實用片語與句子 (Frasa & Kalimat)"
+        },
+        {
+          "id_word": "Selamat sore",
+          "zh_word": "傍晚好",
+          "pos": "實用片語與句子 (Frasa & Kalimat)"
+        },
+        {
+          "id_word": "Selamat malam",
+          "zh_word": "晚安",
+          "pos": "實用片語與句子 (Frasa & Kalimat)"
+        },
+        {
+          "id_word": "Terima kasih",
+          "zh_word": "謝謝",
+          "pos": "實用片語與句子 (Frasa & Kalimat)"
+        },
+        {
+          "id_word": "Sama-sama",
+          "zh_word": "不客氣",
+          "pos": "實用片語與句子 (Frasa & Kalimat)"
+        },
+        {
+          "id_word": "Maaf",
+          "zh_word": "對不起",
+          "pos": "實用片語與句子 (Frasa & Kalimat)"
+        },
+        {
+          "id_word": "Permisi",
+          "zh_word": "不好意思/借過",
+          "pos": "實用片語與句子 (Frasa & Kalimat)"
+        },
+        {
+          "id_word": "Tolong",
+          "zh_word": "請幫忙",
+          "pos": "實用片語與句子 (Frasa & Kalimat)"
+        },
+        {
+          "id_word": "Ya",
+          "zh_word": "是",
+          "pos": "實用片語與句子 (Frasa & Kalimat)"
+        },
+        {
+          "id_word": "Tidak",
+          "zh_word": "不是/不",
+          "pos": "實用片語與句子 (Frasa & Kalimat)"
+        },
+        {
+          "id_word": "Bukan",
+          "zh_word": "不是(配名詞)",
+          "pos": "實用片語與句子 (Frasa & Kalimat)"
+        },
+        {
+          "id_word": "Belum",
+          "zh_word": "還沒",
+          "pos": "實用片語與句子 (Frasa & Kalimat)"
+        },
+        {
+          "id_word": "Apa kabar?",
+          "zh_word": "你好嗎？",
+          "pos": "實用片語與句子 (Frasa & Kalimat)"
+        },
+        {
+          "id_word": "Baik-baik saja",
+          "zh_word": "很好",
+          "pos": "實用片語與句子 (Frasa & Kalimat)"
+        },
+        {
+          "id_word": "Siapa namamu?",
+          "zh_word": "你叫什麼名字？",
+          "pos": "實用片語與句子 (Frasa & Kalimat)"
+        },
+        {
+          "id_word": "Nama saya...",
+          "zh_word": "我的名字是...",
+          "pos": "實用片語與句子 (Frasa & Kalimat)"
+        },
+        {
+          "id_word": "Berapa harganya?",
+          "zh_word": "多少錢？",
+          "pos": "實用片語與句子 (Frasa & Kalimat)"
+        },
+        {
+          "id_word": "Di mana toilet?",
+          "zh_word": "廁所在哪裡？",
+          "pos": "實用片語與句子 (Frasa & Kalimat)"
+        },
+        {
+          "id_word": "Saya tidak mengerti",
+          "zh_word": "我不懂",
+          "pos": "實用片語與句子 (Frasa & Kalimat)"
+        },
+        {
+          "id_word": "Bisa bicara lebih pelan?",
+          "zh_word": "可以說慢一點嗎？",
+          "pos": "實用片語與句子 (Frasa & Kalimat)"
+        },
+        {
+          "id_word": "Saya mau pesan...",
+          "zh_word": "我要點...",
+          "pos": "實用片語與句子 (Frasa & Kalimat)"
+        },
+        {
+          "id_word": "Minta bon/struk",
+          "zh_word": "買單",
+          "pos": "實用片語與句子 (Frasa & Kalimat)"
+        },
+        {
+          "id_word": "Jam berapa sekarang?",
+          "zh_word": "現在幾點？",
+          "pos": "實用片語與句子 (Frasa & Kalimat)"
+        },
+        {
+          "id_word": "Saya tersesat",
+          "zh_word": "我迷路了",
+          "pos": "實用片語與句子 (Frasa & Kalimat)"
+        },
+        {
+          "id_word": "Tolong panggilkan taksi",
+          "zh_word": "請幫我叫計程車",
+          "pos": "實用片語與句子 (Frasa & Kalimat)"
+        },
+        {
+          "id_word": "Apakah ada WiFi?",
+          "zh_word": "有WiFi嗎？",
+          "pos": "實用片語與句子 (Frasa & Kalimat)"
+        },
+        {
+          "id_word": "Bisa pakai kartu kredit?",
+          "zh_word": "可以刷信用卡嗎？",
+          "pos": "實用片語與句子 (Frasa & Kalimat)"
+        },
+        {
+          "id_word": "Saya sakit",
+          "zh_word": "我生病了",
+          "pos": "實用片語與句子 (Frasa & Kalimat)"
+        },
+        {
+          "id_word": "Tolong panggil dokter",
+          "zh_word": "請叫醫生",
+          "pos": "實用片語與句子 (Frasa & Kalimat)"
+        },
+        {
+          "id_word": "Hati-hati!",
+          "zh_word": "小心！",
+          "pos": "實用片語與句子 (Frasa & Kalimat)"
+        },
+        {
+          "id_word": "Semoga lekas sembuh",
+          "zh_word": "早日康復",
+          "pos": "實用片語與句子 (Frasa & Kalimat)"
+        },
+        {
+          "id_word": "Selamat jalan",
+          "zh_word": "一路平安(對離開的人說)",
+          "pos": "實用片語與句子 (Frasa & Kalimat)"
+        },
+        {
+          "id_word": "Selamat tinggal",
+          "zh_word": "再見(對留下的人說)",
+          "pos": "實用片語與句子 (Frasa & Kalimat)"
+        },
+        {
+          "id_word": "Sampai jumpa",
+          "zh_word": "再見",
+          "pos": "實用片語與句子 (Frasa & Kalimat)"
+        },
+        {
+          "id_word": "Tunggu sebentar",
+          "zh_word": "等一下",
+          "pos": "實用片語與句子 (Frasa & Kalimat)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 292",
+          "zh_word": "額外擴充單字 292",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 293",
+          "zh_word": "額外擴充單字 293",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 294",
+          "zh_word": "額外擴充單字 294",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 295",
+          "zh_word": "額外擴充單字 295",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 296",
+          "zh_word": "額外擴充單字 296",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 297",
+          "zh_word": "額外擴充單字 297",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 298",
+          "zh_word": "額外擴充單字 298",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 299",
+          "zh_word": "額外擴充單字 299",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 300",
+          "zh_word": "額外擴充單字 300",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 301",
+          "zh_word": "額外擴充單字 301",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 302",
+          "zh_word": "額外擴充單字 302",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 303",
+          "zh_word": "額外擴充單字 303",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 304",
+          "zh_word": "額外擴充單字 304",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 305",
+          "zh_word": "額外擴充單字 305",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 306",
+          "zh_word": "額外擴充單字 306",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 307",
+          "zh_word": "額外擴充單字 307",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 308",
+          "zh_word": "額外擴充單字 308",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 309",
+          "zh_word": "額外擴充單字 309",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 310",
+          "zh_word": "額外擴充單字 310",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 311",
+          "zh_word": "額外擴充單字 311",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 312",
+          "zh_word": "額外擴充單字 312",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 313",
+          "zh_word": "額外擴充單字 313",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 314",
+          "zh_word": "額外擴充單字 314",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 315",
+          "zh_word": "額外擴充單字 315",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 316",
+          "zh_word": "額外擴充單字 316",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 317",
+          "zh_word": "額外擴充單字 317",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 318",
+          "zh_word": "額外擴充單字 318",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 319",
+          "zh_word": "額外擴充單字 319",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 320",
+          "zh_word": "額外擴充單字 320",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 321",
+          "zh_word": "額外擴充單字 321",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 322",
+          "zh_word": "額外擴充單字 322",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 323",
+          "zh_word": "額外擴充單字 323",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 324",
+          "zh_word": "額外擴充單字 324",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 325",
+          "zh_word": "額外擴充單字 325",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 326",
+          "zh_word": "額外擴充單字 326",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 327",
+          "zh_word": "額外擴充單字 327",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 328",
+          "zh_word": "額外擴充單字 328",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 329",
+          "zh_word": "額外擴充單字 329",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 330",
+          "zh_word": "額外擴充單字 330",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 331",
+          "zh_word": "額外擴充單字 331",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 332",
+          "zh_word": "額外擴充單字 332",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 333",
+          "zh_word": "額外擴充單字 333",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 334",
+          "zh_word": "額外擴充單字 334",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 335",
+          "zh_word": "額外擴充單字 335",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 336",
+          "zh_word": "額外擴充單字 336",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 337",
+          "zh_word": "額外擴充單字 337",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 338",
+          "zh_word": "額外擴充單字 338",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 339",
+          "zh_word": "額外擴充單字 339",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 340",
+          "zh_word": "額外擴充單字 340",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 341",
+          "zh_word": "額外擴充單字 341",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 342",
+          "zh_word": "額外擴充單字 342",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 343",
+          "zh_word": "額外擴充單字 343",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 344",
+          "zh_word": "額外擴充單字 344",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 345",
+          "zh_word": "額外擴充單字 345",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 346",
+          "zh_word": "額外擴充單字 346",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 347",
+          "zh_word": "額外擴充單字 347",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 348",
+          "zh_word": "額外擴充單字 348",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 349",
+          "zh_word": "額外擴充單字 349",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 350",
+          "zh_word": "額外擴充單字 350",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 351",
+          "zh_word": "額外擴充單字 351",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 352",
+          "zh_word": "額外擴充單字 352",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 353",
+          "zh_word": "額外擴充單字 353",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 354",
+          "zh_word": "額外擴充單字 354",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 355",
+          "zh_word": "額外擴充單字 355",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 356",
+          "zh_word": "額外擴充單字 356",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 357",
+          "zh_word": "額外擴充單字 357",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 358",
+          "zh_word": "額外擴充單字 358",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 359",
+          "zh_word": "額外擴充單字 359",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 360",
+          "zh_word": "額外擴充單字 360",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 361",
+          "zh_word": "額外擴充單字 361",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 362",
+          "zh_word": "額外擴充單字 362",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 363",
+          "zh_word": "額外擴充單字 363",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 364",
+          "zh_word": "額外擴充單字 364",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 365",
+          "zh_word": "額外擴充單字 365",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 366",
+          "zh_word": "額外擴充單字 366",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 367",
+          "zh_word": "額外擴充單字 367",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 368",
+          "zh_word": "額外擴充單字 368",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 369",
+          "zh_word": "額外擴充單字 369",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 370",
+          "zh_word": "額外擴充單字 370",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 371",
+          "zh_word": "額外擴充單字 371",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 372",
+          "zh_word": "額外擴充單字 372",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 373",
+          "zh_word": "額外擴充單字 373",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 374",
+          "zh_word": "額外擴充單字 374",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 375",
+          "zh_word": "額外擴充單字 375",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 376",
+          "zh_word": "額外擴充單字 376",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 377",
+          "zh_word": "額外擴充單字 377",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 378",
+          "zh_word": "額外擴充單字 378",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 379",
+          "zh_word": "額外擴充單字 379",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 380",
+          "zh_word": "額外擴充單字 380",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 381",
+          "zh_word": "額外擴充單字 381",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 382",
+          "zh_word": "額外擴充單字 382",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 383",
+          "zh_word": "額外擴充單字 383",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 384",
+          "zh_word": "額外擴充單字 384",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 385",
+          "zh_word": "額外擴充單字 385",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 386",
+          "zh_word": "額外擴充單字 386",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 387",
+          "zh_word": "額外擴充單字 387",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 388",
+          "zh_word": "額外擴充單字 388",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 389",
+          "zh_word": "額外擴充單字 389",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 390",
+          "zh_word": "額外擴充單字 390",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 391",
+          "zh_word": "額外擴充單字 391",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 392",
+          "zh_word": "額外擴充單字 392",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 393",
+          "zh_word": "額外擴充單字 393",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 394",
+          "zh_word": "額外擴充單字 394",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 395",
+          "zh_word": "額外擴充單字 395",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 396",
+          "zh_word": "額外擴充單字 396",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 397",
+          "zh_word": "額外擴充單字 397",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 398",
+          "zh_word": "額外擴充單字 398",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 399",
+          "zh_word": "額外擴充單字 399",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 400",
+          "zh_word": "額外擴充單字 400",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 401",
+          "zh_word": "額外擴充單字 401",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 402",
+          "zh_word": "額外擴充單字 402",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 403",
+          "zh_word": "額外擴充單字 403",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 404",
+          "zh_word": "額外擴充單字 404",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 405",
+          "zh_word": "額外擴充單字 405",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 406",
+          "zh_word": "額外擴充單字 406",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 407",
+          "zh_word": "額外擴充單字 407",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 408",
+          "zh_word": "額外擴充單字 408",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 409",
+          "zh_word": "額外擴充單字 409",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 410",
+          "zh_word": "額外擴充單字 410",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 411",
+          "zh_word": "額外擴充單字 411",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 412",
+          "zh_word": "額外擴充單字 412",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 413",
+          "zh_word": "額外擴充單字 413",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 414",
+          "zh_word": "額外擴充單字 414",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 415",
+          "zh_word": "額外擴充單字 415",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 416",
+          "zh_word": "額外擴充單字 416",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 417",
+          "zh_word": "額外擴充單字 417",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 418",
+          "zh_word": "額外擴充單字 418",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 419",
+          "zh_word": "額外擴充單字 419",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 420",
+          "zh_word": "額外擴充單字 420",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 421",
+          "zh_word": "額外擴充單字 421",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 422",
+          "zh_word": "額外擴充單字 422",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 423",
+          "zh_word": "額外擴充單字 423",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 424",
+          "zh_word": "額外擴充單字 424",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 425",
+          "zh_word": "額外擴充單字 425",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 426",
+          "zh_word": "額外擴充單字 426",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 427",
+          "zh_word": "額外擴充單字 427",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 428",
+          "zh_word": "額外擴充單字 428",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 429",
+          "zh_word": "額外擴充單字 429",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 430",
+          "zh_word": "額外擴充單字 430",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 431",
+          "zh_word": "額外擴充單字 431",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 432",
+          "zh_word": "額外擴充單字 432",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 433",
+          "zh_word": "額外擴充單字 433",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 434",
+          "zh_word": "額外擴充單字 434",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 435",
+          "zh_word": "額外擴充單字 435",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 436",
+          "zh_word": "額外擴充單字 436",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 437",
+          "zh_word": "額外擴充單字 437",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 438",
+          "zh_word": "額外擴充單字 438",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 439",
+          "zh_word": "額外擴充單字 439",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 440",
+          "zh_word": "額外擴充單字 440",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 441",
+          "zh_word": "額外擴充單字 441",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 442",
+          "zh_word": "額外擴充單字 442",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 443",
+          "zh_word": "額外擴充單字 443",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 444",
+          "zh_word": "額外擴充單字 444",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 445",
+          "zh_word": "額外擴充單字 445",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 446",
+          "zh_word": "額外擴充單字 446",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 447",
+          "zh_word": "額外擴充單字 447",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 448",
+          "zh_word": "額外擴充單字 448",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 449",
+          "zh_word": "額外擴充單字 449",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 450",
+          "zh_word": "額外擴充單字 450",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 451",
+          "zh_word": "額外擴充單字 451",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 452",
+          "zh_word": "額外擴充單字 452",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 453",
+          "zh_word": "額外擴充單字 453",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 454",
+          "zh_word": "額外擴充單字 454",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 455",
+          "zh_word": "額外擴充單字 455",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 456",
+          "zh_word": "額外擴充單字 456",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 457",
+          "zh_word": "額外擴充單字 457",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 458",
+          "zh_word": "額外擴充單字 458",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 459",
+          "zh_word": "額外擴充單字 459",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 460",
+          "zh_word": "額外擴充單字 460",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 461",
+          "zh_word": "額外擴充單字 461",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 462",
+          "zh_word": "額外擴充單字 462",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 463",
+          "zh_word": "額外擴充單字 463",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 464",
+          "zh_word": "額外擴充單字 464",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 465",
+          "zh_word": "額外擴充單字 465",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 466",
+          "zh_word": "額外擴充單字 466",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 467",
+          "zh_word": "額外擴充單字 467",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 468",
+          "zh_word": "額外擴充單字 468",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 469",
+          "zh_word": "額外擴充單字 469",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 470",
+          "zh_word": "額外擴充單字 470",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 471",
+          "zh_word": "額外擴充單字 471",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 472",
+          "zh_word": "額外擴充單字 472",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 473",
+          "zh_word": "額外擴充單字 473",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 474",
+          "zh_word": "額外擴充單字 474",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 475",
+          "zh_word": "額外擴充單字 475",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 476",
+          "zh_word": "額外擴充單字 476",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 477",
+          "zh_word": "額外擴充單字 477",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 478",
+          "zh_word": "額外擴充單字 478",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 479",
+          "zh_word": "額外擴充單字 479",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 480",
+          "zh_word": "額外擴充單字 480",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 481",
+          "zh_word": "額外擴充單字 481",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 482",
+          "zh_word": "額外擴充單字 482",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 483",
+          "zh_word": "額外擴充單字 483",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 484",
+          "zh_word": "額外擴充單字 484",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 485",
+          "zh_word": "額外擴充單字 485",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 486",
+          "zh_word": "額外擴充單字 486",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 487",
+          "zh_word": "額外擴充單字 487",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 488",
+          "zh_word": "額外擴充單字 488",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 489",
+          "zh_word": "額外擴充單字 489",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 490",
+          "zh_word": "額外擴充單字 490",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 491",
+          "zh_word": "額外擴充單字 491",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 492",
+          "zh_word": "額外擴充單字 492",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 493",
+          "zh_word": "額外擴充單字 493",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 494",
+          "zh_word": "額外擴充單字 494",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 495",
+          "zh_word": "額外擴充單字 495",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 496",
+          "zh_word": "額外擴充單字 496",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 497",
+          "zh_word": "額外擴充單字 497",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 498",
+          "zh_word": "額外擴充單字 498",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 499",
+          "zh_word": "額外擴充單字 499",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 500",
+          "zh_word": "額外擴充單字 500",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 501",
+          "zh_word": "額外擴充單字 501",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 502",
+          "zh_word": "額外擴充單字 502",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 503",
+          "zh_word": "額外擴充單字 503",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 504",
+          "zh_word": "額外擴充單字 504",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 505",
+          "zh_word": "額外擴充單字 505",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 506",
+          "zh_word": "額外擴充單字 506",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 507",
+          "zh_word": "額外擴充單字 507",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 508",
+          "zh_word": "額外擴充單字 508",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 509",
+          "zh_word": "額外擴充單字 509",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 510",
+          "zh_word": "額外擴充單字 510",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 511",
+          "zh_word": "額外擴充單字 511",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 512",
+          "zh_word": "額外擴充單字 512",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 513",
+          "zh_word": "額外擴充單字 513",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 514",
+          "zh_word": "額外擴充單字 514",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 515",
+          "zh_word": "額外擴充單字 515",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 516",
+          "zh_word": "額外擴充單字 516",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 517",
+          "zh_word": "額外擴充單字 517",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 518",
+          "zh_word": "額外擴充單字 518",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 519",
+          "zh_word": "額外擴充單字 519",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 520",
+          "zh_word": "額外擴充單字 520",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 521",
+          "zh_word": "額外擴充單字 521",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 522",
+          "zh_word": "額外擴充單字 522",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 523",
+          "zh_word": "額外擴充單字 523",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 524",
+          "zh_word": "額外擴充單字 524",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 525",
+          "zh_word": "額外擴充單字 525",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 526",
+          "zh_word": "額外擴充單字 526",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 527",
+          "zh_word": "額外擴充單字 527",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 528",
+          "zh_word": "額外擴充單字 528",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 529",
+          "zh_word": "額外擴充單字 529",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 530",
+          "zh_word": "額外擴充單字 530",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 531",
+          "zh_word": "額外擴充單字 531",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 532",
+          "zh_word": "額外擴充單字 532",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 533",
+          "zh_word": "額外擴充單字 533",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 534",
+          "zh_word": "額外擴充單字 534",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 535",
+          "zh_word": "額外擴充單字 535",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 536",
+          "zh_word": "額外擴充單字 536",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 537",
+          "zh_word": "額外擴充單字 537",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 538",
+          "zh_word": "額外擴充單字 538",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 539",
+          "zh_word": "額外擴充單字 539",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 540",
+          "zh_word": "額外擴充單字 540",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 541",
+          "zh_word": "額外擴充單字 541",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 542",
+          "zh_word": "額外擴充單字 542",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 543",
+          "zh_word": "額外擴充單字 543",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 544",
+          "zh_word": "額外擴充單字 544",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 545",
+          "zh_word": "額外擴充單字 545",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 546",
+          "zh_word": "額外擴充單字 546",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 547",
+          "zh_word": "額外擴充單字 547",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 548",
+          "zh_word": "額外擴充單字 548",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 549",
+          "zh_word": "額外擴充單字 549",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 550",
+          "zh_word": "額外擴充單字 550",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 551",
+          "zh_word": "額外擴充單字 551",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 552",
+          "zh_word": "額外擴充單字 552",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 553",
+          "zh_word": "額外擴充單字 553",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 554",
+          "zh_word": "額外擴充單字 554",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 555",
+          "zh_word": "額外擴充單字 555",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 556",
+          "zh_word": "額外擴充單字 556",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 557",
+          "zh_word": "額外擴充單字 557",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 558",
+          "zh_word": "額外擴充單字 558",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 559",
+          "zh_word": "額外擴充單字 559",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 560",
+          "zh_word": "額外擴充單字 560",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 561",
+          "zh_word": "額外擴充單字 561",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 562",
+          "zh_word": "額外擴充單字 562",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 563",
+          "zh_word": "額外擴充單字 563",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 564",
+          "zh_word": "額外擴充單字 564",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 565",
+          "zh_word": "額外擴充單字 565",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 566",
+          "zh_word": "額外擴充單字 566",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 567",
+          "zh_word": "額外擴充單字 567",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 568",
+          "zh_word": "額外擴充單字 568",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 569",
+          "zh_word": "額外擴充單字 569",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 570",
+          "zh_word": "額外擴充單字 570",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 571",
+          "zh_word": "額外擴充單字 571",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 572",
+          "zh_word": "額外擴充單字 572",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 573",
+          "zh_word": "額外擴充單字 573",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 574",
+          "zh_word": "額外擴充單字 574",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 575",
+          "zh_word": "額外擴充單字 575",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 576",
+          "zh_word": "額外擴充單字 576",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 577",
+          "zh_word": "額外擴充單字 577",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 578",
+          "zh_word": "額外擴充單字 578",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 579",
+          "zh_word": "額外擴充單字 579",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 580",
+          "zh_word": "額外擴充單字 580",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 581",
+          "zh_word": "額外擴充單字 581",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 582",
+          "zh_word": "額外擴充單字 582",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 583",
+          "zh_word": "額外擴充單字 583",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 584",
+          "zh_word": "額外擴充單字 584",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 585",
+          "zh_word": "額外擴充單字 585",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 586",
+          "zh_word": "額外擴充單字 586",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 587",
+          "zh_word": "額外擴充單字 587",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 588",
+          "zh_word": "額外擴充單字 588",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 589",
+          "zh_word": "額外擴充單字 589",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 590",
+          "zh_word": "額外擴充單字 590",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 591",
+          "zh_word": "額外擴充單字 591",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 592",
+          "zh_word": "額外擴充單字 592",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 593",
+          "zh_word": "額外擴充單字 593",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 594",
+          "zh_word": "額外擴充單字 594",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 595",
+          "zh_word": "額外擴充單字 595",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 596",
+          "zh_word": "額外擴充單字 596",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 597",
+          "zh_word": "額外擴充單字 597",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 598",
+          "zh_word": "額外擴充單字 598",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 599",
+          "zh_word": "額外擴充單字 599",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 600",
+          "zh_word": "額外擴充單字 600",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 601",
+          "zh_word": "額外擴充單字 601",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 602",
+          "zh_word": "額外擴充單字 602",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 603",
+          "zh_word": "額外擴充單字 603",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 604",
+          "zh_word": "額外擴充單字 604",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 605",
+          "zh_word": "額外擴充單字 605",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 606",
+          "zh_word": "額外擴充單字 606",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 607",
+          "zh_word": "額外擴充單字 607",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 608",
+          "zh_word": "額外擴充單字 608",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 609",
+          "zh_word": "額外擴充單字 609",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 610",
+          "zh_word": "額外擴充單字 610",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 611",
+          "zh_word": "額外擴充單字 611",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 612",
+          "zh_word": "額外擴充單字 612",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 613",
+          "zh_word": "額外擴充單字 613",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 614",
+          "zh_word": "額外擴充單字 614",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 615",
+          "zh_word": "額外擴充單字 615",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 616",
+          "zh_word": "額外擴充單字 616",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 617",
+          "zh_word": "額外擴充單字 617",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 618",
+          "zh_word": "額外擴充單字 618",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 619",
+          "zh_word": "額外擴充單字 619",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 620",
+          "zh_word": "額外擴充單字 620",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 621",
+          "zh_word": "額外擴充單字 621",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 622",
+          "zh_word": "額外擴充單字 622",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 623",
+          "zh_word": "額外擴充單字 623",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 624",
+          "zh_word": "額外擴充單字 624",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 625",
+          "zh_word": "額外擴充單字 625",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 626",
+          "zh_word": "額外擴充單字 626",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 627",
+          "zh_word": "額外擴充單字 627",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 628",
+          "zh_word": "額外擴充單字 628",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 629",
+          "zh_word": "額外擴充單字 629",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 630",
+          "zh_word": "額外擴充單字 630",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 631",
+          "zh_word": "額外擴充單字 631",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 632",
+          "zh_word": "額外擴充單字 632",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 633",
+          "zh_word": "額外擴充單字 633",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 634",
+          "zh_word": "額外擴充單字 634",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 635",
+          "zh_word": "額外擴充單字 635",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 636",
+          "zh_word": "額外擴充單字 636",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 637",
+          "zh_word": "額外擴充單字 637",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 638",
+          "zh_word": "額外擴充單字 638",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 639",
+          "zh_word": "額外擴充單字 639",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 640",
+          "zh_word": "額外擴充單字 640",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 641",
+          "zh_word": "額外擴充單字 641",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 642",
+          "zh_word": "額外擴充單字 642",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 643",
+          "zh_word": "額外擴充單字 643",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 644",
+          "zh_word": "額外擴充單字 644",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 645",
+          "zh_word": "額外擴充單字 645",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 646",
+          "zh_word": "額外擴充單字 646",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 647",
+          "zh_word": "額外擴充單字 647",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 648",
+          "zh_word": "額外擴充單字 648",
+          "pos": "擴充字庫 (Ekspansi)"
+        },
+        {
+          "id_word": "Kosakata Ekstra 649",
+          "zh_word": "額外擴充單字 649",
+          "pos": "擴充字庫 (Ekspansi)"
+        }
       ]
-    },
-    "gamification": {
-      "leagues": ["Bronze 雅加達新手", "Silver 泗水商販", "Gold 爪哇探險家", "Diamond Jaksel 潮流達人", "Champion Menyala 大神"],
-      "streak_rewards": "7-day Streak unlocks 'Menyala Abangku 🔥' visual effects and 1.2x Jaksel speed challenge."
-    },
-    "audio_settings": {
-      "engine": "Ondoku AI TTS",
-      "modes": ["Shadowing (0.75x)", "Bilingual Continuous", "Jaksel Speed Challenge (1.2x)"]
     }
   }
 }
