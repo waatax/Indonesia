@@ -9,6 +9,26 @@
       "C1": "Register Switching (Baku vs Gaul Syntax)",
       "C2": "Literary Syntax, Proverbial Structuring (Peribahasa)"
     },
+    "tufs_core": {
+      "pmod_pronunciation": {
+        "title": "東京外大 - 發音模組 (pmod)",
+        "rules": [
+          "印尼語標準音 (Standard Indonesian) 幾乎沒有聲調，重音固定在倒數第二個音節。",
+          "r 是彈舌音 (Trill)，e 的發音有 /e/ (如 bebek) 和 /ə/ (如 empat) 兩種。"
+        ]
+      },
+      "gmod_grammar": {
+        "title": "東京外大 - 文法模組 (gmod)",
+        "rules": [
+          "名詞修飾語永遠放在後面 (D-M Rule: Diterangkan-Menerangkan)，例如: Rumah(房子) Besar(大)。",
+          "使用 Yang 來連接形容詞或子句，例如: Orang yang baik (好人)。"
+        ]
+      },
+      "vmod_vocabulary": {
+        "title": "東京外大 - 語彙模組 (vmod)",
+        "categories": ["日常寒暄", "交通", "購物", "時間與數字"]
+      }
+    },
     "alphabet": [
       { "letter": "A", "idWord": "Ayam", "zhTranslation": "雞" },
       { "letter": "B", "idWord": "Buku", "zhTranslation": "書" },

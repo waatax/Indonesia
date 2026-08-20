@@ -3,11 +3,19 @@
 > **Deployment Target:** `waatax.github.io/Indonesia`
 > **Iteration Status:** Iteration #12 (Final Fusion: BIPA Linguist x Gen Z Learner x UI/UX Aesthetics Master)
 
+## 1. 專案目標與對標參考
+- **目標平台**: `waatax.github.io/Indonesia`
+- **對標專案**: 嚴格對齊並超越 `Viet` 專案。
+- **核心教學理論 (跨國頂尖學術融合)**:
+  - **東京外國語大學 (TUFS) 言語模組 (www.coelang.tufs.ac.jp)**: 發音 (pmod)、會話 (dmod)、文法 (gmod)、語彙 (vmod) 四大標準化模組架構。
+  - **中正大學 (indo.ccu.edu.tw)**: 在地連結與雙城方言對比 (雅加達 vs 泗水)。
+  - **沉浸式學習法**: Ondoku 影子跟讀法 (Shadowing)、圖像字卡間隔重複 (Spaced Repetition)。
+
 ---
 
 ## 👥 0. 專家團隊建制與 70x7 迭代開發法 (Expert Team & 70x7 Iteration Protocol)
 
-在最終輪的瘋狂迭代中，三位虛擬專家（BIPA 教學大師、Gen Z 自學者、UI/UX 美學工程師）進行了激烈的內部辯論與優化。我們徹底揚棄了「傳統死板的教科書」，將課程升級為具備 **Apple 級減壓美學、Duolingo 成癮機制、以及印尼 TikTok 迷因**的超現代語言引擎！
+在最終輪的瘋狂迭代中，三位虛擬專家（BIPA 教學大師、Gen Z 自學者、UI/UX 美學工程師）進行了激烈的內部辯論與優化。我們徹底揚棄了「傳統死板的教科書」，將課程升級為具備 **Apple 級減壓美學、Duolingo 成癮機制、以及印尼 TikTok 迷因的超現代語言引擎！**
 
 ---
 

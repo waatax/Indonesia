@@ -48,6 +48,25 @@ document.addEventListener('DOMContentLoaded', async () => {
                     });
                     alphabetGrid.appendChild(card);
                 });
+
+                // 渲染 TUFS 發音模組
+                if (data.curriculum.tufs_core && data.curriculum.tufs_core.pmod_pronunciation) {
+                    const tufs = data.curriculum.tufs_core.pmod_pronunciation;
+                    const tufsBlock = document.createElement('div');
+                    tufsBlock.style.gridColumn = '1 / -1'; // 跨越所有列
+                    tufsBlock.style.background = 'var(--bg)';
+                    tufsBlock.style.padding = '1.5rem';
+                    tufsBlock.style.borderRadius = '12px';
+                    tufsBlock.style.marginTop = '1rem';
+                    tufsBlock.style.borderLeft = '4px solid var(--accent)';
+                    
+                    let rulesHtml = tufs.rules.map(r => `<li style="margin-bottom: 0.5rem;">${r}</li>`).join('');
+                    tufsBlock.innerHTML = `
+                        <h3 style="margin-bottom: 1rem; color: var(--text-main);"><i class="fa-solid fa-graduation-cap"></i> ${tufs.title}</h3>
+                        <ul style="color: var(--text-muted); padding-left: 1.5rem;">${rulesHtml}</ul>
+                    `;
+                    alphabetGrid.appendChild(tufsBlock);
+                }
             }
         }
 
@@ -105,6 +124,25 @@ document.addEventListener('DOMContentLoaded', async () => {
                     `;
                     phrasesGrid.appendChild(block);
                 });
+
+                // 渲染 TUFS 文法模組
+                if (data.curriculum.tufs_core && data.curriculum.tufs_core.gmod_grammar) {
+                    const tufs = data.curriculum.tufs_core.gmod_grammar;
+                    const tufsHeader = document.createElement('h3');
+                    tufsHeader.style.marginTop = '2rem';
+                    tufsHeader.textContent = tufs.title;
+                    phrasesGrid.appendChild(tufsHeader);
+
+                    tufs.rules.forEach(rule => {
+                        const ruleBlock = document.createElement('div');
+                        ruleBlock.className = 'module-card';
+                        ruleBlock.style.background = 'var(--bg)';
+                        ruleBlock.style.padding = '1rem';
+                        ruleBlock.style.borderLeft = '4px solid var(--primary)';
+                        ruleBlock.textContent = rule;
+                        phrasesGrid.appendChild(ruleBlock);
+                    });
+                }
             }
         }
         
