@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     <div class="module-card-content">
                         <h3>${mod.title}</h3>
                         <p>${zhTextPreview}</p>
-                        <button class="action-btn">挑戰任務</button>
+                        <button class="action-btn start-lesson-btn" data-mod-id="${mod.id}">進入實境</button>
                     </div>
                 `;
             } else {
@@ -181,13 +181,92 @@ document.addEventListener('DOMContentLoaded', async () => {
                         <i class="fa-brands fa-tiktok" style="font-size: 4rem; color: var(--text-main); margin-bottom: 1rem;"></i>
                         <h3>${mod.title}</h3>
                         <p>${zhTextPreview}</p>
-                        <button class="action-btn" style="background: var(--accent); box-shadow: 0 4px 0 #005bb5;">解鎖彩蛋</button>
+                        <button class="action-btn start-lesson-btn" style="background: var(--accent); box-shadow: 0 4px 0 #005bb5;" data-mod-id="${mod.id}">解鎖彩蛋</button>
                     </div>
                 `;
             }
             moduleGrid.appendChild(card);
         });
+
+        // 綁定「進入實境」按鈕事件
+        const startBtns = document.querySelectorAll('.start-lesson-btn');
+        startBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const modId = e.currentTarget.getAttribute('data-mod-id');
+                const selectedMod = displayModules.find(m => m.id === modId);
+                if (selectedMod) {
+                    openLesson(selectedMod);
+                }
+            });
+        });
     }
+
+    // === 開啟實境教學畫面 (Lesson View) ===
+    function openLesson(mod) {
+        if (navigator.vibrate) navigator.vibrate(20);
+        
+        // 切換視圖
+        document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+        document.getElementById('lesson-view').classList.add('active');
+        document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+
+        // 渲染標題
+        document.getElementById('lesson-title').textContent = mod.title;
+        
+        // 渲染對話
+        const contentDiv = document.getElementById('lesson-content');
+        contentDiv.innerHTML = '';
+        
+        // 取出對話陣列 (處理 baku/gaul 分支)
+        let dialogues = mod.dialogue || mod.dialogue_gaul || mod.dialogue_baku || [];
+        
+        dialogues.forEach((line, index) => {
+            // 簡單判斷說話者來決定泡泡在左邊或右邊 (User = 右, 其他 = 左)
+            const isRight = line.speaker.toLowerCase().includes('user') || line.speaker === 'A' || index % 2 !== 0;
+            const alignClass = isRight ? 'right' : 'left';
+            
+            const wrapper = document.createElement('div');
+            wrapper.className = `chat-bubble-wrapper ${alignClass}`;
+            
+            let notesHtml = line.slang_notes ? `<span class="chat-notes">${line.slang_notes}</span>` : '';
+            
+            wrapper.innerHTML = `
+                <span class="speaker-name">${line.speaker}</span>
+                <div class="chat-bubble">
+                    <div class="chat-id">${line.id_text}</div>
+                    <div class="chat-zh">${line.zh_text}</div>
+                    ${notesHtml}
+                    <button class="chat-audio-btn" data-text="${line.id_text}"><i class="fa-solid fa-volume-high"></i> 播放語音</button>
+                </div>
+            `;
+            
+            contentDiv.appendChild(wrapper);
+        });
+
+        // 綁定對話內語音按鈕
+        const chatAudioBtns = document.querySelectorAll('.chat-audio-btn');
+        chatAudioBtns.forEach(btn => {
+            btn.addEventListener('click', async (e) => {
+                const text = e.currentTarget.getAttribute('data-text');
+                const icon = e.currentTarget.innerHTML;
+                e.currentTarget.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> 播放中`;
+                await playAudio(text, 1.0);
+                e.currentTarget.innerHTML = icon;
+            });
+        });
+    }
+
+    // === 返回按鈕 ===
+    document.getElementById('back-to-modules').addEventListener('click', () => {
+        if (navigator.vibrate) navigator.vibrate(10);
+        document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+        document.getElementById('module-view').classList.add('active');
+        
+        // 恢復 Nav 狀態
+        document.querySelectorAll('.nav-btn').forEach(b => {
+            if(b.getAttribute('data-target') === 'module-view') b.classList.add('active');
+        });
+    });
 
     // === 4. 全局設定: 暗色/亮色模式切換 ===
     const themeToggleBtn = document.getElementById('theme-toggle');
