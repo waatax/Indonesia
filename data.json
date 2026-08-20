@@ -1,0 +1,152 @@
+{
+  "curriculum": {
+    "philosophy": ["CCU Modular", "Ondoku Shadowing", "BINTANGO Flashcards", "Osaka Univ Situational"],
+    "grammar_progression": {
+      "A1": "SVO Core, Negation (tidak/bukan), Question Words (5W1H)",
+      "A2": "D-M Rule (Yang), Basic Active/Passive Voice (meN- / di-)",
+      "B1": "Imbuhan Phase 1 (ber-, pe-, ter-, -kan, -i)",
+      "B2": "Imbuhan Phase 2 (Circumfixes: ke-an, pe-an), Discourse Particles",
+      "C1": "Register Switching (Baku vs Gaul Syntax)",
+      "C2": "Literary Syntax, Proverbial Structuring (Peribahasa)"
+    },
+    "imbuhan_module_logic": {
+      "concept": "Prefabricated Blocks (積木組合)",
+      "examples": [
+        {
+          "root": "tulis",
+          "root_meaning": "寫",
+          "derivations": [
+            { "affix": "meN-", "result": "menulis", "meaning": "寫 (主動)" },
+            { "affix": "di-", "result": "ditulis", "meaning": "被寫 (被動)" },
+            { "affix": "pe-", "result": "penulis", "meaning": "作家 (人)" },
+            { "affix": "-an", "result": "tulisan", "meaning": "作品/字跡 (名詞)" }
+          ]
+        }
+      ]
+    },
+    "cities": {
+      "jakarta": {
+        "id": "jakarta",
+        "name": "DKI Jakarta",
+        "description": "政經樞紐與都會生存",
+        "modules": [
+          {
+            "id": "mrt_commute",
+            "title": "搭乘 MRT (Baku vs Gaul 語體對比)",
+            "type": "situational_dialogue",
+            "dialogue_baku": [
+              {
+                "speaker": "A",
+                "id_text": "Permisi, apakah Anda tahu di mana Stasiun MRT Bundaran HI?",
+                "zh_text": "不好意思，請問您知道 Bundaran HI 捷運站在哪裡嗎？(正式 Bahasa Baku)"
+              }
+            ],
+            "dialogue_gaul": [
+              {
+                "speaker": "A",
+                "id_text": "Eh sori, stasiun MRT Bundaran HI di mana ya?",
+                "zh_text": "欸抱歉，Bundaran HI 捷運站在哪呀？(口語 Bahasa Gaul)"
+              }
+            ]
+          },
+          {
+            "id": "office_chat_jakarta",
+            "title": "辦公室日常交際 (Bahasa Gaul & 詞綴 -in 應用)",
+            "type": "situational_dialogue",
+            "dialogue": [
+              {
+                "speaker": "Colleague A",
+                "id_text": "Gue udah kirimin filenya ya. Tolong dicek dong.",
+                "zh_text": "我已經把檔案寄給妳囉。幫我檢查一下啦。(Gue/kirimin/-in替代-kan/dong語氣詞)",
+                "audio_speed": [0.75, 1.2]
+              },
+              {
+                "speaker": "Colleague B",
+                "id_text": "Oke sip, ntar gue kabarin lagi kalau udah beres. Jangan baper ya kalau ada revisi.",
+                "zh_text": "好喔，弄好我再跟妳說。如果有要改的不要走心(baper)喔。",
+                "audio_speed": [0.75, 1.2]
+              }
+            ]
+          },
+          {
+            "id": "genz_daily_commute_coffee",
+            "title": "📱 雅加達一日：Gojek 外送與棕櫚糖咖啡",
+            "type": "situational_dialogue",
+            "dialogue": [
+              {
+                "speaker": "Driver (Chat)",
+                "id_text": "Siang kak, sesuai titik jemput di depan Lobi Mall ya?",
+                "zh_text": "午安，是在商場大廳前的定位點接您對嗎？",
+                "slang_notes": "titik jemput = 接送點"
+              },
+              {
+                "speaker": "User (Chat)",
+                "id_text": "Iya mas, saya pake baju hitam. Otw keluar.",
+                "zh_text": "對的大哥，我穿黑衣服。我正在走出來 (otw)。",
+                "slang_notes": "mas = 對年輕男性的稱呼; otw = 在路上了"
+              },
+              {
+                "speaker": "User (at Cafe)",
+                "id_text": "Mbak, mau pesen Es Kopi Susu Aren satu, less sugar ya. Bisa QRIS?",
+                "zh_text": "店員小姐，我要一杯棕櫚糖冰咖啡，微糖。可以刷 QRIS 嗎？",
+                "slang_notes": "Aren = 印尼在地棕櫚糖; less sugar = 雅加達混搭英文; QRIS = 行動支付"
+              }
+            ]
+          }
+        ]
+      },
+      "surabaya": {
+        "id": "surabaya",
+        "name": "Surabaya",
+        "description": "貿易之城與東爪哇歷史",
+        "modules": [
+          {
+            "id": "pasar_turi_bargain",
+            "title": "Pasar Turi 市場殺價 (Suroboyoan 直率方言)",
+            "type": "situational_dialogue",
+            "dialogue": [
+              {
+                "speaker": "Buyer",
+                "id_text": "Piro iki Cak? Larang temen, mudun sitik laaah.",
+                "zh_text": "大哥，這多少錢？太貴了吧，算便宜一點啦。(泗水方言: Piro=Berapa, Cak=大哥, Larang=Mahal, temen=banget)"
+              }
+            ]
+          },
+          {
+            "id": "hangout_surabaya",
+            "title": "朋友聚會 (Rek 稱呼與在地語法)",
+            "type": "situational_dialogue",
+            "dialogue": [
+              {
+                "speaker": "Friend A",
+                "id_text": "Yok opo kabare Rek? Sido mangan Rawon gak kene?",
+                "zh_text": "大家最近怎樣？我們確定要在這吃黑牛肉湯嗎？(Yok opo=Bagaimana, Rek=傢伙們/大家, Sido=Jadi, kene=sini)"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "flashcards": {
+      "level": "A1-C1 Mixed (Gen Z Expansion)",
+      "methodology": "Nemo & BINTANGO Spaced Repetition + Streak Gamification",
+      "words": [
+        { "id_word": "Baper", "zh_word": "走心/太敏感 (Bawa Perasaan)", "pos": "Slang Adjective" },
+        { "id_word": "Kirimin", "zh_word": "寄給... (Gaul form of Mengirimkan)", "pos": "Slang Verb" },
+        { "id_word": "Piro", "zh_word": "多少錢 (Surabaya Javanese for Berapa)", "pos": "Question Word" },
+        { "id_word": "Mager", "zh_word": "懶得動 (Malas Gerak)", "pos": "Slang Adjective" },
+        { "id_word": "Gabut", "zh_word": "無聊發慌 (Gaji Buta)", "pos": "Slang Adjective" },
+        { "id_word": "Bucin", "zh_word": "戀愛腦 (Budak Cinta)", "pos": "Slang Adjective/Noun" },
+        { "id_word": "Menyala Abangku", "zh_word": "太炸了大哥 (TikTok Meme)", "pos": "Slang Phrase" }
+      ]
+    },
+    "gamification": {
+      "leagues": ["Bronze 雅加達新手", "Silver 泗水商販", "Gold 爪哇探險家", "Diamond Jaksel 潮流達人", "Champion Menyala 大神"],
+      "streak_rewards": "7-day Streak unlocks 'Menyala Abangku 🔥' visual effects and 1.2x Jaksel speed challenge."
+    },
+    "audio_settings": {
+      "engine": "Ondoku AI TTS",
+      "modes": ["Shadowing (0.75x)", "Bilingual Continuous", "Jaksel Speed Challenge (1.2x)"]
+    }
+  }
+}

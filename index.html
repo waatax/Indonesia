@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="light" data-font-size="normal">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indo Learning Hub - 雅加達與泗水雙城歷險記</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="app">
+        <!-- 導覽列 -->
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-earth-asia"></i>
+                <h1>Indo Hub</h1>
+            </div>
+            <div class="header-controls">
+                <nav>
+                    <button class="nav-btn active" data-target="map-view"><i class="fa-solid fa-map"></i> 雙城地圖</button>
+                    <button class="nav-btn" data-target="module-view"><i class="fa-solid fa-layer-group"></i> 生活實戰</button>
+                    <button class="nav-btn" data-target="audio-view"><i class="fa-solid fa-headphones"></i> 盲聽跟讀</button>
+                </nav>
+                <div class="theme-font-controls">
+                    <button class="settings-btn" id="font-decrease" title="縮小字體"><i class="fa-solid fa-a"></i>-</button>
+                    <button class="settings-btn" id="font-increase" title="放大字體"><i class="fa-solid fa-a"></i>+</button>
+                    <button class="settings-btn" id="theme-toggle" title="切換深淺色"><i class="fa-solid fa-moon"></i></button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- 視圖 1: 遊戲化地圖探險 -->
+            <section id="map-view" class="view active">
+                <div class="map-container">
+                    <div class="hero-image-container">
+                        <img src="assets/indo_hero_illustration_1787210889692.jpg" alt="雅加達 MRT 與 民族紀念碑 - 日系質感插圖">
+                    </div>
+                    <h2>印尼雙城歷險記</h2>
+                    <p class="subtitle">結合 Apple 質感與 Duolingo 遊戲化的極致體驗</p>
+                    
+                    <div class="city-nodes">
+                        <div class="node unlocked" data-city="taipei">
+                            <div class="pin"><i class="fa-solid fa-location-dot"></i></div>
+                            <span class="label">A1 新手村<br><small>基礎問候與字母</small></span>
+                        </div>
+                        <div class="path active"></div>
+                        <div class="node unlocked" data-city="jakarta">
+                            <div class="pin"><i class="fa-solid fa-building"></i></div>
+                            <span class="label">DKI Jakarta<br><small>Gojek / QRIS / Gaul</small></span>
+                        </div>
+                        <div class="path locked"></div>
+                        <div class="node locked" data-city="surabaya">
+                            <div class="pin"><i class="fa-solid fa-ship"></i></div>
+                            <span class="label">Surabaya<br><small>Pasar Turi / Suroboyoan</small></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 視圖 2: 生活實戰模組 (Gen Z 改造版) -->
+            <section id="module-view" class="view">
+                <h2>Gen Z 當代生活實戰</h2>
+                <div class="module-grid">
+                    <div class="module-card">
+                        <img src="assets/coffee_shop_illustration_1787210903184.jpg" class="module-card-img" alt="印尼咖啡廳點餐插圖">
+                        <div class="module-card-content">
+                            <h3>☕ 咖啡廳與數位遊民</h3>
+                            <p>學習點一杯 Es Kopi Susu Aren，並熟練使用 QRIS 掃碼結帳。融入 Nongkrong 文化！</p>
+                            <button class="action-btn">挑戰任務</button>
+                        </div>
+                    </div>
+                    <div class="module-card">
+                        <img src="assets/surabaya_illustration_1787210917170.jpg" class="module-card-img" alt="泗水傳統美食攤位插圖">
+                        <div class="module-card-content">
+                            <h3>🍛 泗水美食探險</h3>
+                            <p>向 Kaki Lima 路邊攤阿姨點一碗熱騰騰的 Rawon (黑牛肉湯)，並嘗試使用道地泗水方言殺價。</p>
+                            <button class="action-btn">挑戰任務</button>
+                        </div>
+                    </div>
+                    <div class="module-card">
+                        <div class="module-card-content" style="justify-content: center; text-align: center;">
+                            <i class="fa-brands fa-tiktok" style="font-size: 4rem; color: var(--text-main); margin-bottom: 1rem;"></i>
+                            <h3>🔥 TikTok 迷因語錄</h3>
+                            <p>Menyala Abangku! 學習最潮的印尼網民用語，從 Bucin 到 Salting，瞬間拉近社交距離。</p>
+                            <button class="action-btn" style="background: var(--accent); box-shadow: 0 4px 0 #005bb5;">解鎖彩蛋</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 視圖 3: 減壓雙語音盲聽系統 -->
+            <section id="audio-view" class="view">
+                <h2>Ondoku 智能跟讀卡片 (Shadowing)</h2>
+                <p class="subtitle" style="text-align: center;">搭配觸覺震動與聲波視覺，將印尼語烙印在神經裡</p>
+                <div class="audio-player-container">
+                    <div class="flashcard">
+                        <div class="id-text">Menyala Abangku!</div>
+                        <div class="zh-text">太炸了大哥！🔥</div>
+                    </div>
+                    <div class="controls">
+                        <button class="ctrl-btn" title="慢速跟讀 0.75x"><i class="fa-solid fa-turtle"></i> 0.75x 盲聽</button>
+                        <button class="ctrl-btn primary" title=" Jaksel 語速挑戰"><i class="fa-solid fa-bolt"></i> 1.2x 極速挑戰</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
