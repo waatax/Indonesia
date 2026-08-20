@@ -22,6 +22,91 @@ document.addEventListener('DOMContentLoaded', async () => {
         // 初始化盲聽字庫
         flashcardsData = data.curriculum.flashcards.words;
         updateFlashcard();
+        // 渲染字母
+        if (data.curriculum.alphabet) {
+            const alphabetGrid = document.getElementById('alphabet-grid');
+            if (alphabetGrid) {
+                alphabetGrid.innerHTML = '';
+                data.curriculum.alphabet.forEach(item => {
+                    const card = document.createElement('div');
+                    card.className = 'module-card';
+                    card.style.textAlign = 'center';
+                    card.style.cursor = 'pointer';
+                    let noteHtml = item.note ? `<div style="font-size: 0.8rem; background: #fff3cd; color: #856404; padding: 2px 5px; border-radius: 4px; display: inline-block; margin-top: 5px;">${item.note}</div>` : '';
+                    card.innerHTML = `
+                        <div style="font-size: 3rem; font-weight: 800; color: var(--primary);">${item.letter}</div>
+                        <div style="font-size: 1.2rem; font-weight: bold; margin-top: 10px;">${item.idWord}</div>
+                        <div style="color: var(--text-muted);">${item.zhTranslation}</div>
+                        ${noteHtml}
+                        <div style="margin-top: 15px; color: var(--accent);"><i class="fa-solid fa-volume-high"></i></div>
+                    `;
+                    card.addEventListener('click', () => {
+                        playAudio(item.letter, 1.0);
+                        if (navigator.vibrate) navigator.vibrate(10);
+                        card.style.transform = 'scale(0.95)';
+                        setTimeout(() => card.style.transform = 'scale(1)', 150);
+                    });
+                    alphabetGrid.appendChild(card);
+                });
+            }
+        }
+
+        // 初始化核心單字庫 (Vocab View)
+        if (data.curriculum.flashcards && data.curriculum.flashcards.words) {
+            let vocabIndex = 0;
+            const words = data.curriculum.flashcards.words;
+            const vocabIdEl = document.getElementById('vocab-id');
+            const vocabZhEl = document.getElementById('vocab-zh');
+            
+            const renderVocab = () => {
+                vocabIdEl.textContent = words[vocabIndex].id_word;
+                vocabZhEl.textContent = words[vocabIndex].zh_word;
+            };
+            renderVocab();
+
+            document.getElementById('vocab-prev')?.addEventListener('click', () => {
+                vocabIndex = (vocabIndex - 1 + words.length) % words.length;
+                renderVocab();
+                if (navigator.vibrate) navigator.vibrate(10);
+            });
+            document.getElementById('vocab-next')?.addEventListener('click', () => {
+                vocabIndex = (vocabIndex + 1) % words.length;
+                renderVocab();
+                if (navigator.vibrate) navigator.vibrate(10);
+            });
+            document.getElementById('vocab-play')?.addEventListener('click', () => {
+                playAudio(words[vocabIndex].id_word, 1.0);
+                if (navigator.vibrate) navigator.vibrate([20, 30]);
+            });
+        }
+
+        // 初始化語法積木 (Phrases View)
+        if (data.curriculum.imbuhan_module_logic && data.curriculum.imbuhan_module_logic.examples) {
+            const phrasesGrid = document.getElementById('phrases-grid');
+            if (phrasesGrid) {
+                phrasesGrid.innerHTML = '';
+                const example = data.curriculum.imbuhan_module_logic.examples[0];
+                example.derivations.forEach(deriv => {
+                    const block = document.createElement('div');
+                    block.className = 'module-card';
+                    block.style.display = 'flex';
+                    block.style.alignItems = 'center';
+                    block.style.gap = '1rem';
+                    block.innerHTML = `
+                        <div style="background: var(--bg); padding: 10px 15px; border-radius: 8px; font-weight: bold; color: var(--text-main);">${example.root}</div>
+                        <div style="color: var(--text-muted); font-weight: bold;">+</div>
+                        <div style="background: rgba(255, 69, 58, 0.1); padding: 10px 15px; border-radius: 8px; font-weight: bold; color: var(--primary);">${deriv.affix}</div>
+                        <div style="color: var(--text-muted); font-weight: bold;">=</div>
+                        <div style="flex: 1;">
+                            <div style="font-size: 1.2rem; font-weight: 900; color: var(--text-main);">${deriv.result}</div>
+                            <div style="font-size: 0.9rem; color: var(--text-muted);">${deriv.meaning}</div>
+                        </div>
+                        <button class="action-btn secondary" onclick="window.speechSynthesis.cancel(); let u = new SpeechSynthesisUtterance('${deriv.result}'); u.lang='id-ID'; window.speechSynthesis.speak(u);"><i class="fa-solid fa-volume-high"></i></button>
+                    `;
+                    phrasesGrid.appendChild(block);
+                });
+            }
+        }
         
     } catch (error) {
         console.error('Failed to load data.json:', error);

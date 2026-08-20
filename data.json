@@ -9,6 +9,14 @@
       "C1": "Register Switching (Baku vs Gaul Syntax)",
       "C2": "Literary Syntax, Proverbial Structuring (Peribahasa)"
     },
+    "alphabet": [
+      { "letter": "A", "idWord": "Ayam", "zhTranslation": "雞" },
+      { "letter": "B", "idWord": "Buku", "zhTranslation": "書" },
+      { "letter": "C", "idWord": "Cinta", "zhTranslation": "愛", "note": "發 /ch/ 音" },
+      { "letter": "NG", "idWord": "Nasi Goreng", "zhTranslation": "炒飯", "note": "鼻音" },
+      { "letter": "NY", "idWord": "Nyaman", "zhTranslation": "舒適", "note": "複合子音" },
+      { "letter": "SY", "idWord": "Syukur", "zhTranslation": "感恩", "note": "發 /sh/ 音" }
+    ],
     "imbuhan_module_logic": {
       "concept": "Prefabricated Blocks (積木組合)",
       "examples": [

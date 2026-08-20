@@ -17,9 +17,12 @@
                 <h1>Indo Hub</h1>
             </div>
             <div class="header-controls">
-                <nav>
+                <nav style="overflow-x: auto; white-space: nowrap;">
                     <button class="nav-btn active" data-target="map-view"><i class="fa-solid fa-map"></i> 雙城地圖</button>
-                    <button class="nav-btn" data-target="module-view"><i class="fa-solid fa-layer-group"></i> 生活實戰</button>
+                    <button class="nav-btn" data-target="alphabet-view"><i class="fa-solid fa-a"></i> 字母發音</button>
+                    <button class="nav-btn" data-target="flashcard-view"><i class="fa-solid fa-book-open"></i> 核心單字</button>
+                    <button class="nav-btn" data-target="phrases-view"><i class="fa-solid fa-puzzle-piece"></i> 實用片語</button>
+                    <button class="nav-btn" data-target="module-view"><i class="fa-solid fa-layer-group"></i> 實境會話</button>
                     <button class="nav-btn" data-target="audio-view"><i class="fa-solid fa-headphones"></i> 盲聽跟讀</button>
                 </nav>
                 <div class="theme-font-controls">
@@ -59,7 +62,42 @@
                 </div>
             </section>
 
-            <!-- 視圖 2: 生活實戰模組 (Gen Z 改造版) -->
+            <!-- 視圖: 字母與發音 -->
+            <section id="alphabet-view" class="view">
+                <h2>字母與發音 (Alfabet)</h2>
+                <p class="subtitle">點擊卡片聆聽標準印尼語發音。注意 C 與複合子音的特殊唸法。</p>
+                <div class="module-grid" id="alphabet-grid">
+                    <!-- 動態生成字母卡片 -->
+                </div>
+            </section>
+
+            <!-- 視圖: 核心單字庫 -->
+            <section id="flashcard-view" class="view">
+                <h2>核心單字 (Vocab Builder)</h2>
+                <p class="subtitle">BINTANGO 圖像記憶法，快速掌握常用生活詞彙。</p>
+                <div class="audio-player-container" style="max-width: 400px; padding: 2rem;">
+                    <div class="flashcard" id="vocab-flashcard" style="margin-bottom: 2rem;">
+                        <div class="id-text" id="vocab-id" style="font-size: 2.5rem;">Memuat...</div>
+                        <div class="zh-text" id="vocab-zh" style="font-size: 1.2rem;">載入中...</div>
+                    </div>
+                    <div class="controls" style="display: flex; gap: 0.5rem; justify-content: center;">
+                        <button class="action-btn secondary" id="vocab-prev"><i class="fa-solid fa-arrow-left"></i></button>
+                        <button class="action-btn" id="vocab-play" style="background: var(--accent); box-shadow: 0 4px 0 #005bb5;"><i class="fa-solid fa-volume-high"></i></button>
+                        <button class="action-btn secondary" id="vocab-next"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 視圖: 實用片語與語法積木 -->
+            <section id="phrases-view" class="view">
+                <h2>實用片語與語法積木</h2>
+                <p class="subtitle">學習印尼文最重要的「詞綴 (Imbuhan)」，了解字根如何像積木一樣改變詞性。</p>
+                <div class="module-grid" id="phrases-grid" style="display: flex; flex-direction: column; gap: 1rem;">
+                    <!-- 動態生成片語積木 -->
+                </div>
+            </section>
+
+            <!-- 視圖: 生活實戰模組 (Gen Z 改造版) -->
             <section id="module-view" class="view">
                 <h2>Gen Z 當代生活實戰</h2>
                 <div class="module-grid">
