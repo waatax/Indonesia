@@ -5032,237 +5032,566 @@
     ],
     "shadowing_phrases": [
       {
-        "id": "sh_01",
-        "category": "生活打招呼",
-        "id_text": "Selamat pagi! Apa kabar?",
-        "zh_text": "早安！你好嗎？",
-        "phonetic_tip": "注意 pagi 重音在 pa-，kabar 的 r 輕輕彈舌。"
+        "category": "日常問候",
+        "id_text": "Selamat pagi! Apa kabar Anda hari ini?",
+        "zh_text": "早安！您今天過得好嗎？",
+        "tip": "重音在 pa-gi，kabar 結尾 r 輕彈舌。"
       },
       {
-        "id": "sh_02",
+        "category": "出行叫車",
+        "id_text": "Halo Mas Gojek, saya tunggu di depan lobi utama ya.",
+        "zh_text": "哈囉司機大哥，我在大廳正門口前面等您喔。",
+        "tip": "Gojek 讀作 Go-jek (字尾 k 閉氣停頓)。"
+      },
+      {
         "category": "咖啡廳點餐",
-        "id_text": "Saya mau pesan es kopi susu aren satu, less sugar ya.",
-        "zh_text": "我要點一杯冰棕櫚糖拿鐵，少糖喔。",
-        "phonetic_tip": "aren 發音為 a-ren，less sugar 是印尼咖啡廳通用語。"
+        "id_text": "Minta satu es kopi susu aren, less sugar ya.",
+        "zh_text": "請給我一杯冰棕櫚糖拿鐵，微糖少糖。",
+        "tip": "aren 讀作 /aren/ (強讀 E)。"
       },
       {
-        "id": "sh_03",
-        "category": "叫車溝通",
-        "id_text": "Penjemputan sesuai titik di depan lobi ya, Pak.",
-        "zh_text": "接送地點照大廳前面定位點喔，司機大哥。",
-        "phonetic_tip": "titik 字尾 k 是喉塞音，短促乾脆不噴氣。"
-      },
-      {
-        "id": "sh_04",
-        "category": "市集殺價",
-        "id_text": "Harganya agak mahal Bu, boleh kurang sedikit nggak?",
-        "zh_text": "價格有點貴耶老闆娘，可以稍微算便宜點嗎？",
-        "phonetic_tip": "nggak 讀作 /nggak/，是印尼最常用的口語「不/嗎」。"
-      },
-      {
-        "id": "sh_05",
         "category": "餐廳客製",
-        "id_text": "Tolong sambalnya dipisah, jangan terlalu pedas.",
-        "zh_text": "請把辣椒醬另外放，不要太辣。",
-        "phonetic_tip": "dipisah 重音在 pi-，pedas 重音在 pe-。"
+        "id_text": "Tolong nasi gorengnya jangan terlalu pedas ya.",
+        "zh_text": "請炒飯不要做得太辣喔。",
+        "tip": "pedas 弱讀 E pepet (/pədas/)。"
       },
       {
-        "id": "sh_06",
-        "category": "社交結交",
-        "id_text": "Senang bertemu denganmu! Saya dari Taiwan.",
-        "zh_text": "很高興遇見你！我來自台灣。",
-        "phonetic_tip": "denganmu 的 ng 是鼻音，mu 輕聲結尾。"
+        "category": "購物殺價",
+        "id_text": "Berapa harga baju batik ini? Bisa kurang sedikit?",
+        "zh_text": "這件蠟染衣多少錢？可以算便宜一點嗎？",
+        "tip": "Bisa kurang 是市場必備神句。"
       },
       {
-        "id": "sh_07",
-        "category": "超商結帳",
-        "id_text": "Saya mau isi pulsa Telkomsel dan bayar pakai QRIS.",
-        "zh_text": "我要儲值 Telkomsel 話費並用 QRIS 掃碼付款。",
-        "phonetic_tip": "QRIS 在印尼讀作 /kris/。"
-      },
-      {
-        "id": "sh_08",
         "category": "飯店入住",
-        "id_text": "Jam berapa sarapan pagi dan di mana restorannya?",
-        "zh_text": "請問早餐是幾點？餐廳在哪裡呢？",
-        "phonetic_tip": "sarapan pagi 表示早餐，restoran 重音在 -to-。"
+        "id_text": "Saya mau check-in atas nama David untuk dua malam.",
+        "zh_text": "我要以 David 的名字辦理兩晚入住。",
+        "tip": "malam 雙唇閉合 m 尾音。"
       },
       {
-        "id": "sh_09",
-        "category": "TikTok 流行語",
-        "id_text": "Penampilanmu hari ini menyala abangku!",
-        "zh_text": "你今天的表現太炸了大哥！🔥",
-        "phonetic_tip": "menyala 讀作 me-nya-la，ny 是硬顎鼻音。"
+        "category": "付款結帳",
+        "id_text": "Apakah di sini bisa bayar pakai scan QRIS?",
+        "zh_text": "請問這裡可以用 QRIS 掃碼付款嗎？",
+        "tip": "QRIS 印尼發音讀作 /kris/。"
       },
       {
-        "id": "sh_10",
-        "category": "謙遜俗諺",
-        "id_text": "Selalu rendah hati dan tetap ilmu padi.",
-        "zh_text": "永遠謙遜，稻穗越飽滿越低頭。🌾",
-        "phonetic_tip": "rendah hati = 謙遜，padi = 稻穀。"
+        "category": "請求協助",
+        "id_text": "Permisi, boleh tolong tunjukkan jalan ke stasiun MRT?",
+        "zh_text": "不好意思，可以幫我指一下去捷運站的路嗎？",
+        "tip": "Permisi 和 Tolong 展現十足禮貌。"
+      },
+      {
+        "category": "社交寒暄",
+        "id_text": "Senang sekali bisa berkenalan dengan Anda.",
+        "zh_text": "非常高興能與您相識結緣。",
+        "tip": "berkenalan 詞綴 ber-ke-...-an 自然流暢連讀。"
+      },
+      {
+        "category": "表達喜愛",
+        "id_text": "Masakan Padang ini rasanya sungguh luar biasa enak!",
+        "zh_text": "這道巴東料理的味道真的太驚艷美味了！",
+        "tip": "luar biasa 意為非同凡響。"
+      },
+      {
+        "category": "日常交通",
+        "id_text": "Di depan tolong belok kanan setelah lampu merah.",
+        "zh_text": "前面過了紅綠燈後請幫我右轉。",
+        "tip": "kanan (右) vs kiri (左) 聽音辨位。"
+      },
+      {
+        "category": "詢問時間",
+        "id_text": "Permisi Pak, kereta Whoosh ke Bandung berangkat jam berapa?",
+        "zh_text": "不好意思請問先生，去萬隆的高鐵幾點發車？",
+        "tip": "Whoosh 雅萬高鐵專用名詞。"
+      },
+      {
+        "category": "租屋諮詢",
+        "id_text": "Berapa biaya sewa kost ini per bulan sudah termasuk listrik?",
+        "zh_text": "請問這間套房每月租金多少，有包含水電費嗎？",
+        "tip": "kost 是印尼租房最關鍵字彙。"
+      },
+      {
+        "category": "維修報修",
+        "id_text": "AC di kamar saya tidak dingin dan mengeluarkan air.",
+        "zh_text": "我房間裡的冷氣不冷而且一直在漏水。",
+        "tip": "mengeluarkan 為 keluar 的 meN-...-kan 衍生詞。"
+      },
+      {
+        "category": "傳統市場",
+        "id_text": "Mangga harum manis ini satu kilo berapa rupiah?",
+        "zh_text": "這個甜香芒果一公斤多少印尼盾？",
+        "tip": "mangga harum manis 為印尼最著名芒果品種。"
+      },
+      {
+        "category": "觀光景點",
+        "id_text": "Berapa harga tiket masuk ke Candi Borobudur untuk wisatawan?",
+        "zh_text": "觀光客進入婆羅浮屠寺廟的門票是多少錢？",
+        "tip": "Candi 讀作 /tʃandi/ (字母 C 發音)。"
+      },
+      {
+        "category": "海灘度假",
+        "id_text": "Pemandangan matahari terbenam di pantai Kuta sangat indah.",
+        "zh_text": "庫塔海灘的日落夕陽景色非常美麗。",
+        "tip": "matahari terbenam (太陽沉落 -> 夕陽)。"
+      },
+      {
+        "category": "商務寒暄",
+        "id_text": "Selamat datang di kantor kami, silakan duduk di ruang rapat.",
+        "zh_text": "歡迎光臨我們辦公室，請至會議室就坐。",
+        "tip": "silakan (請) 展現東道主熱情。"
+      },
+      {
+        "category": "專案合作",
+        "id_text": "Kami sangat berharap bisa bekerja sama dalam proyek ini.",
+        "zh_text": "我們非常期待能在這個專案中攜手合作。",
+        "tip": "bekerja sama (合作攜手)。"
+      },
+      {
+        "category": "藥局買藥",
+        "id_text": "Saya merasa demam dan pusing, ada obat parasetamol?",
+        "zh_text": "我覺得發燒而且頭暈，請問有普拿疼止痛藥嗎？",
+        "tip": "demam (發燒), pusing (頭暈)。"
+      },
+      {
+        "category": "就醫描述",
+        "id_text": "Perut saya sakit melilit sejak kemarin malam setelah makan pedas.",
+        "zh_text": "昨晚吃辣之後，我的肚子就一直絞痛到現在。",
+        "tip": "sakit melilit (肚子絞痛)。"
+      },
+      {
+        "category": "警局報案",
+        "id_text": "Tolong Pak, dompet dan paspor saya tertinggal di taksi.",
+        "zh_text": "警察先生請幫幫我，我的皮夾與護照落在計程車上了。",
+        "tip": "tertinggal (ter- 無意遺留)。"
+      },
+      {
+        "category": "口語閒聊",
+        "id_text": "Gue lagi mager banget nih, nongkrong di kafe Jaksel yuk!",
+        "zh_text": "我現在超懶得動的啦，走去南雅加達咖啡廳泡著聊天吧！",
+        "tip": "雅加達道地青年流行語。"
+      },
+      {
+        "category": "道別祝福",
+        "id_text": "Selamat jalan kawan, semoga perjalananmu selalu aman dan lancar.",
+        "zh_text": "祝一路順風兄弟，願你的旅途一路平安順遂。",
+        "tip": "Selamat jalan 專門對即將出發啟程者說。"
+      },
+      {
+        "category": "文化感謝",
+        "id_text": "Terima kasih banyak atas keramahan dan kebaikan keluarga Anda.",
+        "zh_text": "非常感謝您一家人的熱情款待與善良友好。",
+        "tip": "keramahan (親切熱情) 為印尼民族之魂。"
+      },
+      {
+        "category": "點甜點",
+        "id_text": "Minta martabak manis rasa keju cokelat kacang spesial satu porsi.",
+        "zh_text": "請給我一份特製起司巧克力花生口味的甜煎餅。",
+        "tip": "martabak manis 是印尼國民甜點首選。"
+      },
+      {
+        "category": "手機通訊",
+        "id_text": "Saya butuh paket data internet kuota 30 GB untuk satu bulan.",
+        "zh_text": "我需要一張一個月 30GB 上網流量的網路 SIM 卡。",
+        "tip": "kuota (上網流量配額)。"
+      },
+      {
+        "category": "浮潛活動",
+        "id_text": "Apakah harga sewa kapal ini sudah termasuk alat snorkeling?",
+        "zh_text": "請問租船包船的費用已經包含浮潛裝備了嗎？",
+        "tip": "alat snorkeling (浮潛面鏡呼吸管)。"
+      },
+      {
+        "category": "問候長輩",
+        "id_text": "Selamat sore Ibu, apa kabar keluarga di rumah?",
+        "zh_text": "女士傍晚好，家裡的家人們近來都好嗎？",
+        "tip": "對年長女性尊稱 Ibu / Bu。"
+      },
+      {
+        "category": "道地口頭禪",
+        "id_text": "Keren parah! Menyala Abangku, tetap ilmu padi selalu ya!",
+        "zh_text": "帥炸了！太頂了大哥，隨時保持謙遜低調喔！",
+        "tip": "印尼當前社群最火紅金句。"
       }
     ],
     "affix_system": {
-      "introduction": "詞綴 (Imbuhan) 是印尼語進階的核心積木！透過給字根加上前綴、後綴或雙綴，就能衍生出主動、被動、名詞或動作狀態。",
+      "overview": {
+        "title": "印尼語詞綴構詞百寶箱 (Sistem Imbuhan Bahasa Indonesia)",
+        "desc": "印尼語是典型的「詞綴衍生語言 (Agglutinative Language)」。在一個簡單字根 (Kata Dasar) 上加上前綴 (Awalan)、後綴 (Akhiran) 或前後綴 (Konfiks)，就能衍生出動詞、名詞、被動式、使役等豐富多變的詞義！"
+      },
       "roots": [
         {
           "root": "Tulis",
-          "meaning": "寫 (基礎字根)",
+          "root_zh": "寫 (字根)",
           "derivations": [
             {
-              "affix": "meN-",
-              "word": "menulis",
-              "pos": "動詞 (主動)",
-              "explanation": "寫作 / 正在寫字",
-              "example": "Saya sedang menulis surat. (我正在寫信。)"
+              "word": "Menulis",
+              "type": "動詞 (meN- 主動及物)",
+              "meaning": "寫作 / 書寫",
+              "example": "Saya sedang menulis email bisnis.",
+              "example_zh": "我正在寫一封商務電子郵件。"
             },
             {
-              "affix": "di-",
-              "word": "ditulis",
-              "pos": "動詞 (被動)",
-              "explanation": "被寫下",
-              "example": "Buku ini ditulis oleh Budi. (這本書是 Budi 寫的。)"
+              "word": "Ditulis",
+              "type": "動詞 (di- 被動式)",
+              "meaning": "被寫 / 記載",
+              "example": "Surat ini ditulis dalam bahasa Indonesia.",
+              "example_zh": "這封信是用印尼語寫的。"
             },
             {
-              "affix": "peN-",
-              "word": "penulis",
-              "pos": "名詞 (人/職位)",
-              "explanation": "作家 / 作者",
-              "example": "Dia penulis terkenal. (他是知名作家。)"
+              "word": "Penulis",
+              "type": "名詞 (peN- 行為者)",
+              "meaning": "作家 / 作者",
+              "example": "Dia penulis novel terkenal di Jakarta.",
+              "example_zh": "他是雅加達著名的小說家。"
             },
             {
-              "affix": "-an",
-              "word": "tulisan",
-              "pos": "名詞 (結果/產物)",
-              "explanation": "筆跡 / 文章作品",
-              "example": "Tulisannya sangat rapi. (他的字跡非常工整。)"
+              "word": "Tulisan",
+              "type": "名詞 (-an 結果物)",
+              "meaning": "筆跡 / 文章 / 著作",
+              "example": "Tulisannya sangat rapi dan jelas.",
+              "example_zh": "他的字跡非常工整清晰。"
+            },
+            {
+              "word": "Menuliskan",
+              "type": "動詞 (meN-...-kan 使役/為他人)",
+              "meaning": "替...寫下 / 記錄",
+              "example": "Tolong tuliskan alamat hotel ini ya.",
+              "example_zh": "請幫我把這間飯店的地址寫下來。"
             }
           ]
         },
         {
           "root": "Ajar",
-          "meaning": "教 / 學 (基礎字根)",
+          "root_zh": "教導 (字根)",
           "derivations": [
             {
-              "affix": "ber-",
-              "word": "belajar",
-              "pos": "動詞 (自身狀態)",
-              "explanation": "學習",
-              "example": "Kita belajar Bahasa Indonesia. (我們學習印尼語。)"
+              "word": "Belajar",
+              "type": "動詞 (ber- 自身行為)",
+              "meaning": "學習",
+              "example": "Saya belajar bahasa Indonesia setiap hari.",
+              "example_zh": "我每天都在學習印尼語。"
             },
             {
-              "affix": "meN-",
-              "word": "mengajar",
-              "pos": "動詞 (施加動作)",
-              "explanation": "教授 / 教導別人",
-              "example": "Ibu guru mengajar di kelas. (老師在班上教學。)"
+              "word": "Mengajar",
+              "type": "動詞 (meN- 主動及物)",
+              "meaning": "教授 / 教導他人",
+              "example": "Ibu guru mengajar matematika di sekolah.",
+              "example_zh": "老師在學校教數學。"
             },
             {
-              "affix": "peN-",
-              "word": "pelajar",
-              "pos": "名詞 (學生)",
-              "explanation": "學生 / 學習者",
-              "example": "Saya seorang pelajar. (我是一名學生。)"
+              "word": "Pelajar",
+              "type": "名詞 (pe- 學習者)",
+              "meaning": "學生 / 學子",
+              "example": "Banyak pelajar asing tinggal di Jogja.",
+              "example_zh": "很多外國學生住在日惹。"
             },
             {
-              "affix": "peN- ... -an",
-              "word": "pelajaran",
-              "pos": "名詞 (課程/教訓)",
-              "explanation": "課程 / 學課",
-              "example": "Pelajaran hari ini sangat menarik. (今天的課程很有趣。)"
+              "word": "Pengajar",
+              "type": "名詞 (peN- 教導者)",
+              "meaning": "教師 / 講師",
+              "example": "Pengajar kursus ini sangat sabar.",
+              "example_zh": "這門培訓課的講師非常耐心。"
+            },
+            {
+              "word": "Pelajaran",
+              "type": "名詞 (pe-...-an 抽象事物)",
+              "meaning": "課程 / 課文 / 教訓",
+              "example": "Pelajaran hari ini sangat menarik.",
+              "example_zh": "今天的課堂非常有趣。"
             }
           ]
         },
         {
           "root": "Beli",
-          "meaning": "買 (基礎字根)",
+          "root_zh": "買 (字根)",
           "derivations": [
             {
-              "affix": "meN-",
-              "word": "membeli",
-              "pos": "動詞 (主動購買)",
-              "explanation": "購買",
-              "example": "Ibu membeli buah di pasar. (媽媽在市場買水果。)"
+              "word": "Membeli",
+              "type": "動詞 (meN- 主動及物)",
+              "meaning": "購買",
+              "example": "Saya mau membeli oleh-oleh khas Bali.",
+              "example_zh": "我想要買峇里島特色伴手禮。"
             },
             {
-              "affix": "di-",
-              "word": "dibeli",
-              "pos": "動詞 (被動被買)",
-              "explanation": "被買走",
-              "example": "Barang ini sudah dibeli orang. (這件物品已經被人買走了。)"
+              "word": "Dibeli",
+              "type": "動詞 (di- 被動式)",
+              "meaning": "被買下",
+              "example": "Mobil ini dibeli bulan lalu.",
+              "example_zh": "這輛車是上個月買的。"
             },
             {
-              "affix": "peN-",
-              "word": "pembeli",
-              "pos": "名詞 (買方/顧客)",
-              "explanation": "顧客 / 買家",
-              "example": "Ada banyak pembeli di toko. (店裡有很多顧客。)"
+              "word": "Pembeli",
+              "type": "名詞 (peN- 行為者)",
+              "meaning": "買家 / 顧客",
+              "example": "Toko ini selalu ramai pembeli.",
+              "example_zh": "這家店總是擠滿顧客。"
+            },
+            {
+              "word": "Belanja",
+              "type": "動詞 (ber- 複合行為)",
+              "meaning": "購物 / 逛街買東西",
+              "example": "Ayo kita belanja di Grand Indonesia.",
+              "example_zh": "走吧，我們去 Grand Indonesia 購物。"
+            },
+            {
+              "word": "Membelikan",
+              "type": "動詞 (meN-...-kan 為他人買)",
+              "meaning": "為...購買",
+              "example": "Ayah membelikan saya laptop baru.",
+              "example_zh": "爸爸買了一台新筆電給我。"
             }
           ]
         },
         {
           "root": "Jalan",
-          "meaning": "走 / 道路 (基礎字根)",
+          "root_zh": "路 / 走 (字根)",
           "derivations": [
             {
-              "affix": "ber-",
-              "word": "berjalan",
-              "pos": "動詞 (行走)",
-              "explanation": "走路 / 進行",
-              "example": "Saya berjalan kaki setiap pagi. (我每天早上走路。)"
+              "word": "Berjalan",
+              "type": "動詞 (ber- 不及物)",
+              "meaning": "走路 / 步行",
+              "example": "Kami berjalan santai di tepi pantai.",
+              "example_zh": "我們在海灘邊悠閒散步。"
             },
             {
-              "affix": "jalan-jalan",
-              "word": "jalan-jalan",
-              "pos": "動詞 (重疊詞)",
-              "explanation": "散步 / 觀光閒逛",
-              "example": "Ayo kita jalan-jalan di mall! (我們去商場逛逛吧！)"
+              "word": "Jalan-jalan",
+              "type": "動詞 (重疊詞 悠閒)",
+              "meaning": "逛街 / 散步 / 旅遊",
+              "example": "Malam minggu asyik jalan-jalan di mall.",
+              "example_zh": "週六晚上很適合去商場逛逛。"
             },
             {
-              "affix": "peN- ... -an",
-              "word": "perjalanan",
-              "pos": "名詞 (旅程)",
-              "explanation": "旅途 / 旅程",
-              "example": "Selamat menikmati perjalanan! (祝享受旅途愉快！)"
+              "word": "Menjalankan",
+              "type": "動詞 (meN-...-kan 運作)",
+              "meaning": "執行 / 運轉 / 駕駛",
+              "example": "Dia menjalankan bisnis kedai kopi.",
+              "example_zh": "他經營運轉著一家咖啡館生意。"
+            },
+            {
+              "word": "Perjalanan",
+              "type": "名詞 (per-...-an 歷程)",
+              "meaning": "旅程 / 車程",
+              "example": "Semoga perjalananmu menyenangkan!",
+              "example_zh": "祝你的旅途愉快！"
+            }
+          ]
+        },
+        {
+          "root": "Baca",
+          "root_zh": "讀 (字根)",
+          "derivations": [
+            {
+              "word": "Membaca",
+              "type": "動詞 (meN- 主動及物)",
+              "meaning": "閱讀 / 朗讀",
+              "example": "Saya suka membaca berita online.",
+              "example_zh": "我喜歡閱讀線上新聞。"
+            },
+            {
+              "word": "Dibaca",
+              "type": "動詞 (di- 被動式)",
+              "meaning": "被閱讀",
+              "example": "Buku ini sudah dibaca jutaan orang.",
+              "example_zh": "這本書已被數百萬人閱讀過。"
+            },
+            {
+              "word": "Pembaca",
+              "type": "名詞 (peN- 行為者)",
+              "meaning": "讀者",
+              "example": "Banyak pembaca menyukai artikel ini.",
+              "example_zh": "許多讀者喜愛這篇文章。"
+            },
+            {
+              "word": "Bacaan",
+              "type": "名詞 (-an 結果物)",
+              "meaning": "讀物 / 閱讀材料",
+              "example": "Bawa buku bacaan untuk di pesawat.",
+              "example_zh": "帶本讀物在飛機上閱讀。"
+            }
+          ]
+        },
+        {
+          "root": "Makan",
+          "root_zh": "吃 (字根)",
+          "derivations": [
+            {
+              "word": "Memakan",
+              "type": "動詞 (meN- 主動強調)",
+              "meaning": "吞食 / 消耗",
+              "example": "Proses ini memakan waktu lama.",
+              "example_zh": "這個過程耗費很長時間。"
+            },
+            {
+              "word": "Dimakan",
+              "type": "動詞 (di- 被動式)",
+              "meaning": "被吃掉",
+              "example": "Kuenya sudah dimakan adik.",
+              "example_zh": "蛋糕已經被弟弟吃掉了。"
+            },
+            {
+              "word": "Makanan",
+              "type": "名詞 (-an 結果/總稱)",
+              "meaning": "食物 / 餐點",
+              "example": "Makanan Indonesia sangat kaya rasa.",
+              "example_zh": "印尼料理風味層次非常豐富。"
+            },
+            {
+              "word": "Pemakan",
+              "type": "名詞 (peN- 行為者)",
+              "meaning": "肉食者/素食者 (愛吃者)",
+              "example": "Dia bukan pemakan daging (vegetarian).",
+              "example_zh": "他是不吃肉者（素食主義者）。"
+            }
+          ]
+        },
+        {
+          "root": "Buka",
+          "root_zh": "開 (字根)",
+          "derivations": [
+            {
+              "word": "Membuka",
+              "type": "動詞 (meN- 主動及物)",
+              "meaning": "打開 / 開創",
+              "example": "Tolong buka pintunya sekarang.",
+              "example_zh": "請現在打開門。"
+            },
+            {
+              "word": "Dibuka",
+              "type": "動詞 (di- 被動式)",
+              "meaning": "被開啟 / 開幕",
+              "example": "Pameran ini dibuka oleh menteri.",
+              "example_zh": "這場展覽由部長揭幕開啟。"
+            },
+            {
+              "word": "Terbuka",
+              "type": "形容詞 (ter- 狀態/自然發生)",
+              "meaning": "敞開的 / 開放的",
+              "example": "Pintu utama masih terbuka lebar.",
+              "example_zh": "大門仍然大敞著。"
+            },
+            {
+              "word": "Pembukaan",
+              "type": "名詞 (pe-...-an 過程事件)",
+              "meaning": "開幕式 / 開端",
+              "example": "Acara pembukaan dimulai jam 9.",
+              "example_zh": "開幕典禮於上午九點開始。"
+            }
+          ]
+        },
+        {
+          "root": "Pakai",
+          "root_zh": "用 / 穿 (字根)",
+          "derivations": [
+            {
+              "word": "Memakai",
+              "type": "動詞 (meN- 穿著/使用)",
+              "meaning": "穿戴 / 使用",
+              "example": "Dia memakai baju batik yang indah.",
+              "example_zh": "她穿著一件美麗的蠟染衣。"
+            },
+            {
+              "word": "Dipakai",
+              "type": "動詞 (di- 被動式)",
+              "meaning": "被使用 / 被穿",
+              "example": "Ruang rapat ini sedang dipakai bos.",
+              "example_zh": "這間會議室目前老闆正在使用中。"
+            },
+            {
+              "word": "Pakaian",
+              "type": "名詞 (-an 物品名詞)",
+              "meaning": "衣服 / 服裝",
+              "example": "Bawa pakaian santai untuk liburan.",
+              "example_zh": "攜帶休閒服裝去度假。"
+            },
+            {
+              "word": "Pemakai",
+              "type": "名詞 (peN- 使用者)",
+              "meaning": "使用者 / 用戶",
+              "example": "Aplikasi ini punya jutaan pemakai aktif.",
+              "example_zh": "這款 App 擁有數百萬活躍用戶。"
             }
           ]
         }
       ],
       "nasal_rules": [
         {
-          "letter": "K -> ng",
-          "rule": "字根開頭為 K，前綴 meN- 變成 meng- 且 K 脫落 (如 kirim -> mengirim 寄送)"
+          "prefix": "K -> meng-",
+          "drop": "字首 K 脫落",
+          "rule": "meN- + K = meng-",
+          "example": "Kirim -> Mengirim (寄)",
+          "desc": "字首字母 K 脫落，替換為鼻音 meng-"
         },
         {
-          "letter": "P -> m",
-          "rule": "字根開頭為 P，前綴 meN- 變成 mem- 且 P 脫落 (如 pakai -> memakai 使用)"
+          "prefix": "P -> mem-",
+          "drop": "字首 P 脫落",
+          "rule": "meN- + P = mem-",
+          "example": "Pukul -> Memukul (打/擊)",
+          "desc": "字首字母 P 脫落，替換為雙唇鼻音 mem-"
         },
         {
-          "letter": "T -> n",
-          "rule": "字根開頭為 T，前綴 meN- 變成 men- 且 T 脫落 (如 tolong -> menolong 幫助)"
+          "prefix": "T -> men-",
+          "drop": "字首 T 脫落",
+          "rule": "meN- + T = men-",
+          "example": "Tulis -> Menulis (寫)",
+          "desc": "字首字母 T 脫落，替換為齒齦鼻音 men-"
         },
         {
-          "letter": "S -> ny",
-          "rule": "字根開頭為 S，前綴 meN- 變成 meny- 且 S 脫落 (如 sapu -> menyapu 掃地)"
+          "prefix": "S -> meny-",
+          "drop": "字首 S 脫落",
+          "rule": "meN- + S = meny-",
+          "example": "Sapu -> Menyapu (掃地)",
+          "desc": "字首字母 S 脫落，替換為硬顎鼻音 meny-"
+        },
+        {
+          "prefix": "母音 (A/I/U/E/O) -> meng-",
+          "drop": "不脫落",
+          "rule": "meN- + 母音 = meng-",
+          "example": "Ambil -> Mengambil (拿)",
+          "desc": "直接加 meng-，字首母音完整保留"
+        },
+        {
+          "prefix": "單音節字 -> menge-",
+          "drop": "加 e",
+          "rule": "meN- + 單音節 = menge-",
+          "example": "Cat -> Mengecat (刷油漆)",
+          "desc": "單音節單字前綴一律變為 menge-"
         }
       ]
     },
     "gaul_module": {
+      "overview": {
+        "title": "雅加達現代潮流口語與社群迷因密碼庫 (Bahasa Gaul & Decoder)",
+        "desc": "在雅加達街頭、TikTok 短影音或 WhatsApp 群組中，印尼年輕人大量使用口語縮寫與俚語。掌握這套密碼，瞬間聽懂印尼朋友圈！"
+      },
       "baku_vs_gaul": [
         {
-          "baku": "Saya",
-          "gaul": "Gue / Gua",
-          "zh": "我 (同輩/年輕人口語)"
+          "baku": "Saya / Aku",
+          "gaul": "Gue / Gw",
+          "zh": "我 (雅加達青年專屬自稱)"
         },
         {
-          "baku": "Kamu / Anda",
-          "gaul": "Lu / Elu",
-          "zh": "你 (同輩口語)"
+          "baku": "Anda / Kamu",
+          "gaul": "Lu / Elu / Lo",
+          "zh": "你 (熟人間常用，不可對長輩)"
         },
         {
           "baku": "Tidak / Bukan",
-          "gaul": "Nggak / Gak",
-          "zh": "不 / 不是"
+          "gaul": "Gak / Gak usah / Nggak",
+          "zh": "不 / 沒 / 不需要"
+        },
+        {
+          "baku": "Sangat / Sekali",
+          "gaul": "Banget / Bgt",
+          "zh": "非常 / 超級"
+        },
+        {
+          "baku": "Bagaimana",
+          "gaul": "Gimana",
+          "zh": "如何 / 怎麼樣"
+        },
+        {
+          "baku": "Mengapa / Kenapa",
+          "gaul": "Kenapa / Nape",
+          "zh": "為什麼"
         },
         {
           "baku": "Sudah",
@@ -5275,205 +5604,611 @@
           "zh": "還沒"
         },
         {
-          "baku": "Sangat / Sekali",
-          "gaul": "Banget",
-          "zh": "超級 / 非常 (放在詞後，如 enak banget)"
-        },
-        {
           "baku": "Hanya / Saja",
-          "gaul": "Cuma / Aja",
-          "zh": "只有 / ...就好"
-        },
-        {
-          "baku": "Bagaimana",
-          "gaul": "Gimana",
-          "zh": "如何 / 怎樣"
-        },
-        {
-          "baku": "Kenapa / Mengapa",
-          "gaul": "Kenapa",
-          "zh": "為什麼"
-        },
-        {
-          "baku": "Sedang",
-          "gaul": "Lagi",
-          "zh": "正在 (如 lagi makan 正在吃)"
+          "gaul": "Aja / Cuma",
+          "zh": "就 / 只有 / 只是"
         },
         {
           "baku": "Bisa",
-          "gaul": "Bisa",
-          "zh": "可以 / 會"
+          "gaul": "Bisa / Bs",
+          "zh": "可以 / 能夠"
         },
         {
-          "baku": "Benarkah?",
-          "gaul": "Beneran?",
-          "zh": "真的假的？"
+          "baku": "Tempat nongkrong",
+          "gaul": "Tongkrongan",
+          "zh": "聚會泡咖啡廳的地盤"
+        },
+        {
+          "baku": "Bekerja malas",
+          "gaul": "Mager (Malas gerak)",
+          "zh": "懶得動 / 耍廢"
+        },
+        {
+          "baku": "Tidak ada kerjaan",
+          "gaul": "Gabut (Gaji buta)",
+          "zh": "無聊沒事做"
+        },
+        {
+          "baku": "Budak cinta",
+          "gaul": "Bucin",
+          "zh": "戀愛腦 / 愛情的奴隸"
+        },
+        {
+          "baku": "Salah tingkah",
+          "gaul": "Salting",
+          "zh": "害羞小鹿亂撞不知所措"
+        },
+        {
+          "baku": "Curahan hati",
+          "gaul": "Curhat",
+          "zh": "傾訴心事 / 吐苦水"
+        },
+        {
+          "baku": "Hebat sekali",
+          "gaul": "Menyala Abangku 🔥",
+          "zh": "太頂太炸了大哥！(TikTok當紅)"
+        },
+        {
+          "baku": "Rendah hati",
+          "gaul": "Tetap ilmu padi 🌾",
+          "zh": "保持謙遜低調 (如飽滿稻穗)"
+        },
+        {
+          "baku": "Tertawa santai",
+          "gaul": "Wkwkwk",
+          "zh": "哈哈哈哈 (印尼魔性笑聲)"
+        },
+        {
+          "baku": "Ayo berangkat",
+          "gaul": "Gaskeun!",
+          "zh": "衝一波！/ 幹就完了！"
+        },
+        {
+          "baku": "Sedang di jalan",
+          "gaul": "Otw (On the way)",
+          "zh": "在路上了啦"
+        },
+        {
+          "baku": "Tidak apa-apa",
+          "gaul": "Gpp (Gak papa)",
+          "zh": "沒事 / 沒關係"
+        },
+        {
+          "baku": "Santai",
+          "gaul": "Santuy",
+          "zh": "放鬆悠哉"
+        },
+        {
+          "baku": "Keren sekali",
+          "gaul": "Kece badai",
+          "zh": "帥到起飛 / 酷炫"
+        }
+      ],
+      "chat_abbreviations": [
+        {
+          "abbr": "yg",
+          "full": "yang",
+          "zh": "那...的 (關聯詞)"
+        },
+        {
+          "abbr": "dmn",
+          "full": "di mana",
+          "zh": "在哪裡"
+        },
+        {
+          "abbr": "bgt",
+          "full": "banget",
+          "zh": "非常 / 超級"
+        },
+        {
+          "abbr": "km",
+          "full": "kamu",
+          "zh": "你"
+        },
+        {
+          "abbr": "sy",
+          "full": "saya",
+          "zh": "我"
+        },
+        {
+          "abbr": "bs",
+          "full": "bisa",
+          "zh": "可以"
+        },
+        {
+          "abbr": "tdk",
+          "full": "tidak",
+          "zh": "不"
+        },
+        {
+          "abbr": "gpp",
+          "full": "gak apa-apa",
+          "zh": "沒關係 / 沒事"
+        },
+        {
+          "abbr": "otw",
+          "full": "on the way",
+          "zh": "在路上了"
+        },
+        {
+          "abbr": "mksh / tq",
+          "full": "makasih / terima kasih",
+          "zh": "謝謝"
+        },
+        {
+          "abbr": "sdh / udh",
+          "full": "sudah",
+          "zh": "已經"
+        },
+        {
+          "abbr": "blm",
+          "full": "belum",
+          "zh": "還沒"
+        },
+        {
+          "abbr": "knp",
+          "full": "kenapa",
+          "zh": "為什麼"
+        },
+        {
+          "abbr": "gmn",
+          "full": "gimana",
+          "zh": "怎麼樣"
+        },
+        {
+          "abbr": "bnr",
+          "full": "benar",
+          "zh": "對 / 真的"
+        },
+        {
+          "abbr": "skrg",
+          "full": "sekarang",
+          "zh": "現在"
+        },
+        {
+          "abbr": "sm",
+          "full": "sama",
+          "zh": "和 / 跟 / 一起"
+        },
+        {
+          "abbr": "lg",
+          "full": "lagi",
+          "zh": "正在 / 又"
+        }
+      ],
+      "decoder_samples": [
+        {
+          "chat_raw": "Lu dmn skrg bro? Gue udh otw nih, macet bgt di Sudirman wkwk.",
+          "baku_id": "Anda di mana sekarang kawan? Saya sudah di jalan ini, macet sekali di Sudirman (tertawa).",
+          "zh": "兄弟你現在在哪裡？我已經在路上了，蘇迪曼大道超級大塞車哈哈哈哈。"
+        },
+        {
+          "chat_raw": "Gpp santuy aja, gue lg nongkrong sm pacar di kafe Jaksel.",
+          "baku_id": "Tidak apa-apa santai saja, saya sedang berkumpul bersama pacar di kafe Jakarta Selatan.",
+          "zh": "沒事放輕鬆慢慢來，我正跟女友在南雅加達咖啡廳喝咖啡。"
+        },
+        {
+          "chat_raw": "Keren bgt proyek barumu! Menyala Abangku 🔥 Tetap ilmu padi ya.",
+          "baku_id": "Sangat hebat proyek barumu! Sangat mengagumkan! Tetap rendah hati ya.",
+          "zh": "你的新專案太強了！太炸了大哥 🔥 還是要保持低調謙遜喔！"
+        },
+        {
+          "chat_raw": "Mager bgt keluar rumah, pesen GoFood ayam geprek aja yuk.",
+          "baku_id": "Sangat malas gerak keluar rumah, mari memesan GoFood ayam geprek saja.",
+          "zh": "超懶得走出門的，叫 GoFood 外送碎辣椒炸雞吃就好啦。"
         }
       ],
       "particles": [
         {
-          "particle": "deh",
-          "usage": "表示確定、妥協或無奈建議",
-          "example": "Beli yang ini aja deh. (那就買這個吧！)"
+          "part": "Dong",
+          "usage": "撒嬌、肯定或加重語氣（當然囉 / 嘛）",
+          "example": "Bantu aku dong! (幫幫我嘛！)"
         },
         {
-          "particle": "dong",
-          "usage": "表示理所當然、撒嬌請求或強調",
-          "example": "Bantu aku dong! (幫我一下啦！)"
+          "part": "Sih",
+          "usage": "疑惑、好奇或轉折語氣（究竟 / 呢）",
+          "example": "Siapa sih dia? (他到底是誰呀？)"
         },
         {
-          "particle": "kok",
-          "usage": "表示困惑驚訝（怎麼會...）或反駁",
-          "example": "Kok mahal banget? (怎麼會這麼貴？)"
+          "part": "Deh",
+          "usage": "感嘆、確認或無奈接受（啦 / 算了）",
+          "example": "Iya deh, aku ikut. (好啦好啦，我跟去。)"
         },
         {
-          "particle": "sih",
-          "usage": "表達疑問語氣加重或好奇",
-          "example": "Ada apa sih? (到底發生什麼事了？)"
+          "part": "Nih",
+          "usage": "強調眼前的此時此刻（這兒 / 現在看）",
+          "example": "Makanan sudah datang nih! (餐點送來了喔！)"
         },
         {
-          "particle": "nih / tuh",
-          "usage": "指近處 (nih 這裡/這個) 或遠處 (tuh 那裡/那個)",
-          "example": "Ini kopi buat kamu nih. (這是給你的咖啡喔。)"
-        }
-      ],
-      "chat_slang": [
-        {
-          "slang": "wkwkwk / xixixi",
-          "full": "Tertawa online",
-          "zh": "哈哈哈哈 (印尼專屬網民魔性笑聲)"
+          "part": "Tuh",
+          "usage": "指出遠處或過去已提及的事物（那邊 / 看那）",
+          "example": "Taksi kamu tuh di depan! (你看你的計程車在前面！)"
         },
         {
-          "slang": "gpp",
-          "full": "Gak apa-apa",
-          "zh": "沒事 / 沒關係"
-        },
-        {
-          "slang": "otw",
-          "full": "On the way",
-          "zh": "在路上了 / 快到了"
-        },
-        {
-          "slang": "bgt",
-          "full": "Banget",
-          "zh": "非常 / 超級"
-        },
-        {
-          "slang": "yoi / yo",
-          "full": "Iya betul",
-          "zh": "對啊 / 沒錯"
-        },
-        {
-          "slang": "kuy",
-          "full": "Yuk (倒著拼)",
-          "zh": "走吧 / 來去"
-        },
-        {
-          "slang": "mantul",
-          "full": "Mantap betul",
-          "zh": "太給力了 / 絕絕子"
-        },
-        {
-          "slang": "santuy",
-          "full": "Santai",
-          "zh": "放輕鬆 / 慢活"
+          "part": "Kan",
+          "usage": "求證反問「不是嗎 / 果然吧」",
+          "example": "Enak kan rendangnya? (巴東牛肉很好吃對吧？)"
         }
       ]
     },
     "sentence_puzzles": [
       {
-        "id": "puz_1",
-        "target_zh": "我正在喝冰咖啡。",
+        "target_zh": "我正在喝一杯熱咖啡。",
         "correct_order": [
           "Saya",
           "sedang",
           "minum",
+          "secangkir",
           "kopi",
-          "dingin"
+          "panas."
         ],
-        "options": [
+        "scrambled": [
+          "kopi",
           "Saya",
-          "minum",
-          "kopi",
+          "panas.",
+          "secangkir",
           "sedang",
-          "dingin",
-          "teh",
-          "kamu"
-        ]
+          "minum"
+        ],
+        "category": "SVO 進行式"
       },
       {
-        "id": "puz_2",
-        "target_zh": "這個炒飯非常好吃！",
+        "target_zh": "這家店賣很好吃的印尼炒飯。",
         "correct_order": [
-          "Nasi",
-          "goreng",
+          "Toko",
           "ini",
-          "sangat",
-          "enak"
-        ],
-        "options": [
-          "Nasi",
-          "ini",
+          "menjual",
+          "nasi",
           "goreng",
+          "yang",
           "sangat",
-          "enak",
-          "mahal",
-          "tidak"
-        ]
+          "enak."
+        ],
+        "scrambled": [
+          "nasi",
+          "sangat",
+          "ini",
+          "enak.",
+          "menjual",
+          "Toko",
+          "goreng",
+          "yang"
+        ],
+        "category": "D-M 修飾後置"
       },
       {
-        "id": "puz_3",
-        "target_zh": "請問洗手間在哪裡？",
+        "target_zh": "他明天要去峇里島度假。",
         "correct_order": [
-          "Permisi",
-          "di mana",
-          "toilet"
+          "Dia",
+          "besok",
+          "akan",
+          "pergi",
+          "berlibur",
+          "ke",
+          "Bali."
         ],
-        "options": [
-          "Permisi",
-          "toilet",
-          "di mana",
-          "siapa",
-          "kapan"
-        ]
+        "scrambled": [
+          "ke",
+          "pergi",
+          "Dia",
+          "berlibur",
+          "Bali.",
+          "besok",
+          "akan"
+        ],
+        "category": "時間與方向"
       },
       {
-        "id": "puz_4",
-        "target_zh": "這不是我的書。",
+        "target_zh": "請問這件美麗的蠟染衣多少錢？",
         "correct_order": [
-          "Ini",
-          "bukan",
-          "buku",
-          "saya"
+          "Berapa",
+          "harga",
+          "baju",
+          "batik",
+          "yang",
+          "indah",
+          "ini?"
         ],
-        "options": [
-          "Ini",
-          "buku",
-          "bukan",
-          "saya",
+        "scrambled": [
+          "ini?",
+          "harga",
+          "batik",
+          "Berapa",
+          "indah",
+          "baju",
+          "yang"
+        ],
+        "category": "疑問句與名詞修飾"
+      },
+      {
+        "target_zh": "我們不喝啤酒，我們喝白開水。",
+        "correct_order": [
+          "Kami",
           "tidak",
-          "mereka"
-        ]
+          "minum",
+          "bir,",
+          "kami",
+          "minum",
+          "air",
+          "putih."
+        ],
+        "scrambled": [
+          "minum",
+          "air",
+          "putih.",
+          "bir,",
+          "tidak",
+          "Kami",
+          "kami",
+          "minum"
+        ],
+        "category": "否定句 Tidak"
       },
       {
-        "id": "puz_5",
-        "target_zh": "明天我們一起去峇里島。",
+        "target_zh": "這本書是由著名作家寫的。",
         "correct_order": [
-          "Besok",
-          "kita",
-          "pergi",
-          "ke",
-          "Bali"
+          "Buku",
+          "ini",
+          "ditulis",
+          "oleh",
+          "penulis",
+          "terkenal."
         ],
-        "options": [
-          "Besok",
-          "pergi",
-          "kita",
-          "ke",
-          "Bali",
-          "kemarin",
-          "dari"
-        ]
+        "scrambled": [
+          "penulis",
+          "ditulis",
+          "ini",
+          "terkenal.",
+          "Buku",
+          "oleh"
+        ],
+        "category": "被動句 Ditulis"
+      },
+      {
+        "target_zh": "司機大哥，前面十字路口請向左轉。",
+        "correct_order": [
+          "Pak",
+          "supir,",
+          "di",
+          "depan",
+          "perempatan",
+          "tolong",
+          "belok",
+          "kiri."
+        ],
+        "scrambled": [
+          "kiri.",
+          "depan",
+          "tolong",
+          "Pak",
+          "perempatan",
+          "supir,",
+          "belok",
+          "di"
+        ],
+        "category": "交通指路"
+      },
+      {
+        "target_zh": "我在南雅加達的辦公室工作。",
+        "correct_order": [
+          "Saya",
+          "bekerja",
+          "di",
+          "kantor",
+          "Jakarta",
+          "Selatan."
+        ],
+        "scrambled": [
+          "Jakarta",
+          "Saya",
+          "Selatan.",
+          "di",
+          "kantor",
+          "bekerja"
+        ],
+        "category": "介系詞 Di"
+      },
+      {
+        "target_zh": "你吃過道地的巴東牛肉了嗎？",
+        "correct_order": [
+          "Apakah",
+          "kamu",
+          "sudah",
+          "makan",
+          "rendang",
+          "khas",
+          "Padang?"
+        ],
+        "scrambled": [
+          "Padang?",
+          "sudah",
+          "makan",
+          "kamu",
+          "Apakah",
+          "khas",
+          "rendang"
+        ],
+        "category": "疑問句 5W1H"
+      },
+      {
+        "target_zh": "我的護照和皮夾不見了。",
+        "correct_order": [
+          "Paspor",
+          "dan",
+          "dompet",
+          "saya",
+          "hilang."
+        ],
+        "scrambled": [
+          "hilang.",
+          "saya",
+          "dompet",
+          "Paspor",
+          "dan"
+        ],
+        "category": "緊急應急句"
+      }
+    ],
+    "culture_survival_module": {
+      "overview": {
+        "title": "印尼生活風土人情與安全生存必備手冊 (Panduan Budaya & Darurat)",
+        "desc": "深入了解印尼多元群島文化、伊斯蘭與峇里印度教禮俗，掌握緊急應急呼救與旅行防坑指南！"
+      },
+      "cultural_rules": [
+        {
+          "title": "右手神聖原則 (Tangan Kanan)",
+          "icon": "fa-hand",
+          "desc": "印尼文化中左手被視為不潔（用於個人衛生洗滌）。握手、付錢、遞交名片或食物時，務必使用「右手」以示尊重；若雙手拿物，可用右手並以左手輕托右手手肘。"
+        },
+        {
+          "title": "摸頭大忌 (Jangan Pegang Kepala)",
+          "icon": "fa-head-side",
+          "desc": "頭部在印尼傳統文化中被視為靈魂居住的最高神聖部位。切勿隨意觸摸成年人或孩童的頭部，否則會被視為極度失禮。"
+        },
+        {
+          "title": "清真飲食規範 (Konsep Halal & Alkohol)",
+          "icon": "fa-drumstick-bite",
+          "desc": "印尼近 90% 人口信奉伊斯蘭教，禁食豬肉與酒精。一般 Warung 及餐廳多為清真 (Halal)。如在峇里島等印度教區域則普遍提供豬肉 (Babi Guling 烤豬飯)。"
+        },
+        {
+          "title": "進屋脫鞋禮儀 (Lepas Sepatu)",
+          "icon": "fa-shoe-prints",
+          "desc": "進入印尼人家中、清真寺或部分特定傳統場所時，門口皆需脫鞋整齊擺放。"
+        },
+        {
+          "title": "殺價微笑哲學 (Tawar-menawar)",
+          "icon": "fa-face-smile",
+          "desc": "在傳統市場或觀光小攤殺價時（*Bisa kurang?*），保持幽默微笑與友善態度，切勿動怒，通常可從 6-7 折開始談。"
+        },
+        {
+          "title": "週五禮拜與齋戒月 (Jumat & Ramadan)",
+          "icon": "fa-mosque",
+          "desc": "週五中午 11:30 - 13:00 為穆斯林主麻聚禮時間，許多公家機關與穆斯林商店會短暫休息；齋戒月期間白天在公共場合應避免大肆飲食。"
+        }
+      ],
+      "emergency_contacts": [
+        {
+          "name": "警察局報案 (Polisi)",
+          "num": "110",
+          "icon": "fa-shield-halved",
+          "tip": "遇竊、交通事故或緊急治安求助"
+        },
+        {
+          "name": "救護車與急診 (Ambulans)",
+          "num": "118 / 119",
+          "icon": "fa-truck-medical",
+          "tip": "突發急性疾病或重傷送醫"
+        },
+        {
+          "name": "消防局 (Pemadam Kebakaran)",
+          "num": "113",
+          "icon": "fa-fire-extinguisher",
+          "tip": "火警火災事故"
+        },
+        {
+          "name": "國家搜救中心 (BASARNAS)",
+          "num": "115",
+          "icon": "fa-life-ring",
+          "tip": "海難、山難與天災搜救"
+        }
+      ],
+      "emergency_phrases": [
+        {
+          "id": "Tolong! Ada keadaan darurat di sini!",
+          "zh": "救命！這裡發生緊急狀況！"
+        },
+        {
+          "id": "Tolong segera panggilkan ambulans!",
+          "zh": "請立刻幫我叫救護車！"
+        },
+        {
+          "id": "Di mana rumah sakit terdekat?",
+          "zh": "最近的醫院在哪裡？"
+        },
+        {
+          "id": "Dompet dan paspor saya dicuri orang.",
+          "zh": "我的皮夾和護照被人偷走了。"
+        },
+        {
+          "id": "Tolong antarkan saya ke kantor polisi.",
+          "zh": "請載我到警察局去。"
+        },
+        {
+          "id": "Saya tersesat, tolong tunjukkan jalan.",
+          "zh": "我迷路了，請幫我指引方向。"
+        }
+      ]
+    },
+    "phonetics_lab_module": {
+      "overview": {
+        "title": "印尼語語音調音實驗室與彈舌音 R 訓練營 (Laboratorium Fonetik & Latihan R)",
+        "desc": "針對中文母語者的發音難點，提供循序漸進的肌肉記憶引導訓練與聽辨耳力診斷！"
+      },
+      "trill_r_steps": [
+        {
+          "step": "階段 1: 舌位定位 (D-R 爆破引導法)",
+          "desc": "放鬆舌尖，輕觸上齒齦後方。連續快速唸「得-樂-得-樂 (D-L-D-L)」或「特-勒 (T-L)」，讓舌尖適應氣流通過的微小間隙。",
+          "audio_drill": "da-ra... da-ra... da-ra"
+        },
+        {
+          "step": "階段 2: 雙子音氣流衝擊 (Trill Resonance)",
+          "desc": "利用清塞音 T/D 的爆破氣流帶動舌尖產生 1-2 次彈動。發出「Tra, Tri, Tru, Tre, Tro」音節。",
+          "audio_drill": "tra... tri... tru... tre... tro"
+        },
+        {
+          "step": "階段 3: 單字發音實戰",
+          "desc": "將彈舌音帶入印尼語常用單字中練習：Rendang, Rumah, Rasa, Murah, Terima kasih。",
+          "audio_drill": "Rendang... Rumah... Rasa... Murah"
+        },
+        {
+          "step": "階段 4: 印尼經典繞口令挑戰 (Ular Melingkar)",
+          "desc": "挑戰印尼全民最著名的繞口令，鍛鍊舌尖極致靈活性！",
+          "audio_drill": "Ular melingkar-lingkar di atas pagar bundar."
+        }
+      ]
+    },
+    "gamification_badges": [
+      {
+        "level": 1,
+        "xp": 0,
+        "title": "Pemula (入門小白)",
+        "icon": "🌱",
+        "desc": "剛踏入印尼語世界的探索者"
+      },
+      {
+        "level": 2,
+        "xp": 150,
+        "title": "Penjelajah (雅加達探索者)",
+        "icon": "🛵",
+        "desc": "掌握基本稱謂、數字與交通叫車"
+      },
+      {
+        "level": 3,
+        "xp": 350,
+        "title": "Petualang (群島冒險家)",
+        "icon": "🏖️",
+        "desc": "流暢進行美食點餐、飯店入住與購物殺價"
+      },
+      {
+        "level": 4,
+        "xp": 600,
+        "title": "Pembicara (社交對話達人)",
+        "icon": "💬",
+        "desc": "精通 30 組實境生活會話與人際禮俗"
+      },
+      {
+        "level": 5,
+        "xp": 950,
+        "title": "Ahli Bahasa (印尼語精通大師)",
+        "icon": "🎓",
+        "desc": "掌握 meN- 構詞衍生與複雜商務溝通"
+      },
+      {
+        "level": 6,
+        "xp": 1400,
+        "title": "Sultan Gaul (雅加達潮流之王)",
+        "icon": "👑",
+        "desc": "完全解碼 TikTok 迷因、街頭俚語與聽力盲聽"
       }
     ]
   }

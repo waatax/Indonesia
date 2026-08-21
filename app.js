@@ -258,6 +258,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         initSituationalModule(curriculumData.situational_modules);
         initShadowingModule(curriculumData.shadowing_phrases);
         initAffixAndGaulModule(curriculumData.affix_system, curriculumData.gaul_module);
+        initCultureModule(curriculumData.culture_survival_module);
+        initPhoneticsLabModule(curriculumData.phonetics_lab_module);
         initSentencePuzzleModule(curriculumData.sentence_puzzles);
         initDictionaryModal(curriculumData);
         initHeaderControls();
@@ -1782,8 +1784,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     // ==========================================================================
-    // 11. Affixes & Bahasa Gaul Module
-    // ==========================================
+    // 11. Affixes & Bahasa Gaul Module (8 Roots & Interactive Gaul Decoder)
+    // ==========================================================================
     function initAffixAndGaulModule(affixSys, gaulMod) {
         if (affixSys) {
             const rootContainer = document.getElementById('root-buttons-container');
@@ -1795,11 +1797,12 @@ document.addEventListener('DOMContentLoaded', async () => {
                 affixSys.roots.forEach((item, idx) => {
                     const btn = document.createElement('button');
                     btn.className = `root-btn ${idx === 0 ? 'active' : ''}`;
-                    btn.textContent = `${item.root} (${item.meaning.split(' (')[0]})`;
+                    btn.textContent = `${item.root} (${item.root_zh || item.root})`;
                     btn.addEventListener('click', () => {
                         document.querySelectorAll('.root-btn').forEach(b => b.classList.remove('active'));
                         btn.classList.add('active');
                         renderDerivations(item);
+                        if (navigator.vibrate) navigator.vibrate(10);
                     });
                     rootContainer.appendChild(btn);
                 });
@@ -1811,14 +1814,16 @@ document.addEventListener('DOMContentLoaded', async () => {
                         const card = document.createElement('div');
                         card.className = 'deriv-card';
                         card.innerHTML = `
-                            <span class="deriv-affix">+ ${d.affix}</span>
-                            <div class="deriv-word">${d.word}</div>
-                            <span class="deriv-pos">${d.pos}</span>
-                            <div class="deriv-meaning">${d.explanation}</div>
-                            <div class="deriv-example">${d.example}</div>
+                            <span class="deriv-affix">${d.type || '+ 衍生詞綴'}</span>
+                            <div class="deriv-word"><i class="fa-solid fa-volume-high" style="color: var(--accent); margin-right: 0.3rem;"></i>${d.word}</div>
+                            <div class="deriv-meaning">${d.meaning}</div>
+                            <div class="deriv-example" style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-muted);">
+                                <div><strong>例句：</strong>${d.example}</div>
+                                <div style="color: var(--text-light); font-size: 0.8rem;">${d.example_zh || ''}</div>
+                            </div>
                         `;
                         card.addEventListener('click', () => {
-                            audioEngine.speakBilingual(d.word, d.explanation);
+                            audioEngine.speakBilingual(d.word, `${d.word}，${d.meaning}`);
                         });
                         derivContainer.appendChild(card);
                     });
@@ -1831,7 +1836,15 @@ document.addEventListener('DOMContentLoaded', async () => {
                 affixSys.nasal_rules.forEach(r => {
                     const pill = document.createElement('div');
                     pill.className = 'rule-pill';
-                    pill.innerHTML = `<strong>${r.letter}:</strong> ${r.rule}`;
+                    pill.innerHTML = `
+                        <div style="font-weight: 800; color: var(--primary); font-size: 1rem;">${r.prefix || r.rule}</div>
+                        <div style="font-size: 0.88rem; color: var(--text-main); margin: 0.2rem 0;">${r.desc || r.rule}</div>
+                        <div style="font-size: 0.8rem; color: var(--accent);"><i class="fa-solid fa-volume-high"></i> 例：${r.example}</div>
+                    `;
+                    pill.addEventListener('click', () => {
+                        const cleanWord = r.example.split(' -> ')[1] || r.example;
+                        audioEngine.speak(cleanWord.split(' (')[0], { lang: 'id' });
+                    });
                     nasalContainer.appendChild(pill);
                 });
             }
@@ -1845,12 +1858,13 @@ document.addEventListener('DOMContentLoaded', async () => {
                     const card = document.createElement('div');
                     card.className = 'gaul-card';
                     card.innerHTML = `
-                        <div class="gaul-baku">正式: ${item.baku}</div>
-                        <div class="gaul-word">${item.gaul}</div>
+                        <div class="gaul-baku">正式 (Baku): ${item.baku}</div>
+                        <div class="gaul-word"><i class="fa-solid fa-volume-high" style="color: var(--accent); margin-right: 0.3rem;"></i>${item.gaul}</div>
                         <div class="gaul-zh">${item.zh}</div>
                     `;
                     card.addEventListener('click', () => {
-                        audioEngine.speakBilingual(item.gaul.split(' / ')[0], item.zh);
+                        const cleanGaul = item.gaul.split(' / ')[0].split(' (')[0].replace('🔥', '').replace('🌾', '').trim();
+                        audioEngine.speakBilingual(cleanGaul, item.zh);
                     });
                     gaulTableContainer.appendChild(card);
                 });
@@ -1863,34 +1877,165 @@ document.addEventListener('DOMContentLoaded', async () => {
                     const div = document.createElement('div');
                     div.className = 'particle-item';
                     div.innerHTML = `
-                        <div style="font-size: 1.1rem; font-weight: 800; color: var(--primary);">${p.particle}</div>
+                        <div style="font-size: 1.1rem; font-weight: 800; color: var(--primary);">${p.part || p.particle}</div>
                         <div style="font-size: 0.88rem; color: var(--text-main); margin: 0.2rem 0;">${p.usage}</div>
-                        <div style="font-size: 0.8rem; color: var(--accent); cursor: pointer;" onclick="window.indoSpeakBilingual('${p.example.replace(/'/g, "\\'")}', '${p.usage.replace(/'/g, "\\'")}')"><i class="fa-solid fa-volume-high"></i> ${p.example}</div>
+                        <div style="font-size: 0.8rem; color: var(--accent); cursor: pointer;"><i class="fa-solid fa-volume-high"></i> ${p.example}</div>
                     `;
+                    div.addEventListener('click', () => {
+                        audioEngine.speakBilingual(p.example, p.usage);
+                    });
                     particlesContainer.appendChild(div);
                 });
             }
 
             const chatSlangContainer = document.getElementById('chat-slang-container');
-            if (chatSlangContainer && gaulMod.chat_slang) {
+            const chatList = gaulMod.chat_abbreviations || gaulMod.chat_slang;
+            if (chatSlangContainer && chatList) {
                 chatSlangContainer.innerHTML = '';
-                gaulMod.chat_slang.forEach(s => {
+                chatList.forEach(s => {
                     const div = document.createElement('div');
                     div.className = 'chat-slang-item';
                     div.innerHTML = `
-                        <div style="font-size: 1.1rem; font-weight: 800; color: var(--accent);">${s.slang}</div>
+                        <div style="font-size: 1.1rem; font-weight: 800; color: var(--accent);">${s.abbr || s.slang}</div>
                         <div style="font-size: 0.85rem; color: var(--text-muted);">${s.full}</div>
                         <div style="font-size: 0.9rem; font-weight: 600;">${s.zh}</div>
                     `;
+                    div.addEventListener('click', () => {
+                        audioEngine.speakBilingual(s.full, s.zh);
+                    });
                     chatSlangContainer.appendChild(div);
+                });
+            }
+
+            // Interactive Gaul Decoder
+            const decoderContainer = document.getElementById('decoder-samples-container');
+            if (decoderContainer && gaulMod.decoder_samples) {
+                decoderContainer.innerHTML = '';
+                gaulMod.decoder_samples.forEach(sample => {
+                    const card = document.createElement('div');
+                    card.className = 'decoder-card';
+                    card.innerHTML = `
+                        <div class="decoder-bubble-raw">
+                            <i class="fa-brands fa-whatsapp"></i> <span>"${sample.chat_raw}"</span>
+                        </div>
+                        <div class="decoder-bubble-baku">
+                            <strong style="color: var(--primary);">標準語 (Baku)：</strong>${sample.baku_id}
+                        </div>
+                        <div class="decoder-zh">
+                            <strong>中文解析：</strong>${sample.zh}
+                        </div>
+                        <div style="margin-top: 0.6rem;">
+                            <button class="action-btn small play-decoder-btn"><i class="fa-solid fa-volume-high"></i> 播放解析</button>
+                        </div>
+                    `;
+                    card.querySelector('.play-decoder-btn').addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        audioEngine.speakBilingual(sample.baku_id, sample.zh);
+                    });
+                    card.addEventListener('click', () => {
+                        audioEngine.speakBilingual(sample.baku_id, sample.zh);
+                    });
+                    decoderContainer.appendChild(card);
                 });
             }
         }
     }
 
     // ==========================================================================
-    // 12. Sentence Puzzle Game
-    // ==========================================
+    // 12. Culture & Survival Guide Module
+    // ==========================================================================
+    function initCultureModule(cultureData) {
+        if (!cultureData) return;
+
+        const rulesContainer = document.getElementById('culture-rules-container');
+        const hotlinesContainer = document.getElementById('emergency-hotlines-container');
+        const phrasesContainer = document.getElementById('emergency-phrases-container');
+
+        if (rulesContainer && cultureData.cultural_rules) {
+            rulesContainer.innerHTML = '';
+            cultureData.cultural_rules.forEach(rule => {
+                const card = document.createElement('div');
+                card.className = 'culture-rule-card';
+                card.innerHTML = `
+                    <div class="culture-rule-icon"><i class="fa-solid ${rule.icon}"></i></div>
+                    <div class="culture-rule-body">
+                        <h4>${rule.title}</h4>
+                        <p>${rule.desc}</p>
+                    </div>
+                `;
+                rulesContainer.appendChild(card);
+            });
+        }
+
+        if (hotlinesContainer && cultureData.emergency_contacts) {
+            hotlinesContainer.innerHTML = '';
+            cultureData.emergency_contacts.forEach(contact => {
+                const card = document.createElement('div');
+                card.className = 'emergency-hotline-card';
+                card.innerHTML = `
+                    <i class="fa-solid ${contact.icon}" style="font-size: 1.8rem; color: var(--primary);"></i>
+                    <div class="hotline-num">${contact.num}</div>
+                    <strong style="font-size: 0.95rem; color: var(--text-main);">${contact.name}</strong>
+                    <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.3rem;">${contact.tip}</div>
+                `;
+                hotlinesContainer.appendChild(card);
+            });
+        }
+
+        if (phrasesContainer && cultureData.emergency_phrases) {
+            phrasesContainer.innerHTML = '';
+            cultureData.emergency_phrases.forEach(phrase => {
+                const card = document.createElement('div');
+                card.className = 'emergency-phrase-card';
+                card.innerHTML = `
+                    <div>
+                        <strong style="font-size: 1.05rem; color: var(--primary);"><i class="fa-solid fa-triangle-exclamation" style="margin-right: 0.4rem;"></i>${phrase.id}</strong>
+                        <div style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.2rem;">${phrase.zh}</div>
+                    </div>
+                    <button class="action-btn small" style="background: var(--primary); flex-shrink: 0;"><i class="fa-solid fa-volume-high"></i> 呼救發音</button>
+                `;
+                card.addEventListener('click', () => {
+                    audioEngine.speak(phrase.id, { lang: 'id' });
+                });
+                phrasesContainer.appendChild(card);
+            });
+        }
+    }
+
+    // ==========================================================================
+    // 13. Phonetics Lab & Trill R Workout Module
+    // ==========================================================================
+    function initPhoneticsLabModule(phoneticsData) {
+        if (!phoneticsData) return;
+
+        const trillStepsContainer = document.getElementById('trill-steps-container');
+        if (trillStepsContainer && phoneticsData.trill_r_steps) {
+            trillStepsContainer.innerHTML = '';
+            phoneticsData.trill_r_steps.forEach(step => {
+                const card = document.createElement('div');
+                card.className = 'trill-step-card';
+                card.innerHTML = `
+                    <div>
+                        <div class="trill-step-title">${step.step}</div>
+                        <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5;">${step.desc}</p>
+                    </div>
+                    <button class="action-btn small trill-drill-btn"><i class="fa-solid fa-volume-high"></i> 聽示範 (${step.audio_drill.split('...')[0]})</button>
+                `;
+                card.querySelector('.trill-drill-btn').addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    audioEngine.speak(step.audio_drill, { lang: 'id' });
+                });
+                card.addEventListener('click', () => {
+                    audioEngine.speak(step.audio_drill, { lang: 'id' });
+                });
+                trillStepsContainer.appendChild(card);
+            });
+        }
+    }
+
+    // ==========================================================================
+    // 14. Sentence Puzzle Game Lab
+    // ==========================================================================
     function initSentencePuzzleModule(puzzles) {
         if (!puzzles || puzzles.length === 0) return;
 
@@ -1913,7 +2058,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             feedbackEl.style.display = 'none';
             nextBtn.style.display = 'none';
             checkBtn.style.display = 'inline-flex';
-            badgeEl.textContent = `挑戰第 ${currentPuzzleIdx + 1} 題 / 共 ${puzzles.length} 題`;
+            badgeEl.textContent = `挑戰第 ${currentPuzzleIdx + 1} 題 / 共 ${puzzles.length} 題 (${p.category || '句型實戰'})`;
             promptEl.textContent = p.target_zh;
             progressFill.style.width = `${((currentPuzzleIdx + 1) / puzzles.length) * 100}%`;
 
@@ -1938,8 +2083,12 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
 
             poolEl.innerHTML = '';
-            p.options.forEach((optWord) => {
-                const isUsed = selectedWords.includes(optWord);
+            const poolOptions = p.scrambled || p.options || p.correct_order;
+            poolOptions.forEach((optWord) => {
+                const countInSelected = selectedWords.filter(w => w === optWord).length;
+                const countInPool = poolOptions.filter(w => w === optWord).length;
+                const isUsed = countInSelected >= countInPool;
+
                 const block = document.createElement('button');
                 block.className = `word-block ${isUsed ? 'used' : ''}`;
                 block.textContent = optWord;
@@ -1969,7 +2118,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const assembledSentence = selectedWords.join(' ');
                 feedbackEl.style.background = 'var(--success-light)';
                 feedbackEl.style.color = 'var(--success)';
-                feedbackEl.innerHTML = `🎉 <strong>答對了！恭喜！</strong> (+10 分)<br><small style="color: var(--text-main); font-size: 1.1rem; font-weight: 800; cursor: pointer;" onclick="window.indoSpeakBilingual('${assembledSentence.replace(/'/g, "\\'")}', '${p.target_zh.replace(/'/g, "\\'")}')"><i class="fa-solid fa-volume-high"></i> ${assembledSentence}</small>`;
+                feedbackEl.innerHTML = `🎉 <strong>答對了！恭喜！</strong> (+10 XP)<br><small style="color: var(--text-main); font-size: 1.1rem; font-weight: 800; cursor: pointer;" onclick="window.indoSpeakBilingual('${assembledSentence.replace(/'/g, "\\'")}', '${p.target_zh.replace(/'/g, "\\'")}')"><i class="fa-solid fa-volume-high"></i> ${assembledSentence}</small>`;
                 audioEngine.speakBilingual(assembledSentence, p.target_zh);
                 checkBtn.style.display = 'none';
                 nextBtn.style.display = 'inline-flex';

@@ -33,6 +33,8 @@
                 <button class="nav-btn" data-target="module-view"><i class="fa-solid fa-comments"></i> 實境會話</button>
                 <button class="nav-btn" data-target="shadowing-view"><i class="fa-solid fa-microphone-lines"></i> 智能跟讀評分</button>
                 <button class="nav-btn" data-target="affix-view"><i class="fa-solid fa-cubes"></i> 詞綴與口語</button>
+                <button class="nav-btn" data-target="culture-view"><i class="fa-solid fa-earth-asia"></i> 風土與生存</button>
+                <button class="nav-btn" data-target="phonetics-lab-view"><i class="fa-solid fa-microphone"></i> 彈舌調音室</button>
                 <button class="nav-btn" data-target="quiz-view"><i class="fa-solid fa-puzzle-piece"></i> 拼圖測驗</button>
             </nav>
 
@@ -684,21 +686,76 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- 互動式印尼社交簡訊解碼器 (Indonesian Chat & Gaul Decoder) -->
+                <div class="decoder-section" style="margin-top: 2rem;">
+                    <div class="section-header">
+                        <h3><i class="fa-solid fa-wand-magic-sparkles"></i> 實用印尼社交聊天簡訊即時解碼器 (Gaul Decoder)</h3>
+                        <p class="subtitle">點選以下常見印尼年輕人或外送/司機聊天範例，立即解碼為標準印尼文 (Baku) 與中文解析：</p>
+                    </div>
+                    <div class="decoder-grid" id="decoder-samples-container">
+                        <!-- JS 動態生成 -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- 視圖: 風土人情與生活生存手冊 (Culture & Survival Guide) -->
+            <section id="culture-view" class="view">
+                <div class="section-header">
+                    <h2><i class="fa-solid fa-earth-asia"></i> 印尼風土人情與生活生存必備手冊 (Budaya & Darurat)</h2>
+                    <p class="subtitle">全面掌握印尼群島宗教禮俗、飲食文化禁忌、殺價心理學與緊急呼救求生專線！</p>
+                </div>
+
+                <!-- 6 大核心文化禮儀指南 -->
+                <h3 class="sub-heading"><i class="fa-solid fa-hand-holding-heart"></i> 必知 6 大文化禮俗與生活禁忌</h3>
+                <div class="culture-rules-grid" id="culture-rules-container">
+                    <!-- JS 動態生成 -->
+                </div>
+
+                <!-- 緊急專線電話與呼救卡 -->
+                <h3 class="sub-heading" style="margin-top: 2.5rem;"><i class="fa-solid fa-phone-volume"></i> 官方緊急求救電話 (印尼全境通用)</h3>
+                <div class="emergency-hotlines-grid" id="emergency-hotlines-container">
+                    <!-- JS 動態生成 -->
+                </div>
+
+                <!-- 一鍵緊急印尼語呼救卡 -->
+                <h3 class="sub-heading" style="margin-top: 2rem;"><i class="fa-solid fa-triangle-exclamation"></i> 一鍵緊急印尼語呼救句 (點擊直接高音量朗讀)</h3>
+                <div class="emergency-phrases-grid" id="emergency-phrases-container">
+                    <!-- JS 動態生成 -->
+                </div>
+            </section>
+
+            <!-- 視圖: 語音調音實驗室與彈舌音 R 訓練營 (Phonetics Lab & Trill R Workout) -->
+            <section id="phonetics-lab-view" class="view">
+                <div class="section-header">
+                    <h2><i class="fa-solid fa-microphone"></i> 印尼語調音實驗室與彈舌音 R 專項訓練營 (Laboratorium Fonetik)</h2>
+                    <p class="subtitle">打破中文母語者發音瓶頸！透過四階段肌肉記憶漸進法、D-R 爆破連讀與經典繞口令突破舌尖顫音！</p>
+                </div>
+
+                <div class="trill-r-workout-card">
+                    <div class="workout-header">
+                        <h3><i class="fa-solid fa-music"></i> 舌尖顫音 R (Trill) 四階段突破訓練營</h3>
+                        <p>依照順序進行肌肉引導訓練，每一步驟均提供真人錄製示範音頻：</p>
+                    </div>
+                    <div class="trill-steps-grid" id="trill-steps-container">
+                        <!-- JS 動態生成 -->
+                    </div>
+                </div>
             </section>
 
             <!-- 視圖 9: 句型重組拼圖測驗 (Quiz View) -->
             <section id="quiz-view" class="view">
                 <div class="section-header">
-                    <h2><i class="fa-solid fa-puzzle-piece"></i> 句型重組拼圖測驗 (Sentence Builder)</h2>
-                    <p class="subtitle">依據中文提示，點選單字積木拼出正確的印尼文語序，強化 SVO 與修飾後置結構！</p>
+                    <h2><i class="fa-solid fa-puzzle-piece"></i> 句型重組積木實驗室 (Sentence Builder Lab)</h2>
+                    <p class="subtitle">依據中文提示，點選彩色單字積木拼出正確的印尼文語序，涵蓋 SVO、疑問句、介系詞與被動式！</p>
                 </div>
 
                 <div class="puzzle-game-container">
                     <div class="puzzle-progress-bar">
-                        <div class="progress-fill" id="puzzle-progress-fill" style="width: 20%;"></div>
+                        <div class="progress-fill" id="puzzle-progress-fill" style="width: 10%;"></div>
                     </div>
                     <div class="puzzle-card">
-                        <span class="puzzle-badge" id="puzzle-badge">挑戰第 1 題 / 共 5 題</span>
+                        <span class="puzzle-badge" id="puzzle-badge">挑戰第 1 題 / 共 10 題</span>
                         <div class="puzzle-prompt" id="puzzle-target-zh">載入題目中...</div>
 
                         <!-- 學員組裝的句子槽 -->

@@ -2827,6 +2827,192 @@ footer {
     box-shadow: 0 4px 12px rgba(29, 53, 87, 0.25);
 }
 
+/* ==========================================================================
+   Culture & Survival Guide Module
+   ========================================================================== */
+.culture-rules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+}
+.culture-rule-card {
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    gap: 1rem;
+    transition: all var(--transition-fast);
+}
+.culture-rule-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+.culture-rule-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--accent-light);
+    color: var(--accent);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+.culture-rule-body h4 {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 0.4rem;
+}
+.culture-rule-body p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.emergency-hotlines-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+.emergency-hotline-card {
+    background: var(--surface);
+    border: 1px solid rgba(230, 57, 70, 0.3);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-fast);
+}
+.emergency-hotline-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-3px);
+}
+.hotline-num {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--primary);
+    margin: 0.3rem 0;
+}
+
+.emergency-phrases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+.emergency-phrase-card {
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+.emergency-phrase-card:hover {
+    border-color: var(--primary);
+    background: var(--primary-light);
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   Phonetics Lab & Trill R Workout
+   ========================================================================== */
+.trill-r-workout-card {
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 2rem;
+}
+.trill-steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+}
+.trill-step-card {
+    background: var(--background);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all var(--transition-fast);
+}
+.trill-step-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-3px);
+}
+.trill-step-title {
+    font-weight: 800;
+    color: var(--primary);
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
+}
+.trill-drill-btn {
+    margin-top: 1rem;
+    align-self: flex-start;
+}
+
+/* ==========================================================================
+   Gaul Decoder Module
+   ========================================================================== */
+.decoder-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.25rem;
+}
+.decoder-card {
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+.decoder-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+.decoder-bubble-raw {
+    background: #dcf8c6;
+    color: #075e54;
+    padding: 0.65rem 0.9rem;
+    border-radius: var(--radius-sm);
+    font-weight: 700;
+    font-size: 0.92rem;
+    margin-bottom: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+[data-theme="dark"] .decoder-bubble-raw {
+    background: #054740;
+    color: #25d366;
+}
+.decoder-bubble-baku {
+    font-size: 0.88rem;
+    color: var(--text-main);
+    margin-bottom: 0.3rem;
+}
+.decoder-zh {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}
+
 /* Responsive Adaptations */
 @media (max-width: 768px) {
     header {
