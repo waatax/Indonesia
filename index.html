@@ -3,158 +3,602 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indo Learning Hub - 雅加達與泗水雙城歷險記</title>
+    <title>Indo Learning Hub - 印尼文學習網 (從小白到日常會話)</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
     <div id="app">
-        <!-- 導覽列 -->
+        <!-- 頂部導覽列 -->
         <header>
-            <div class="logo">
-                <i class="fa-solid fa-earth-asia"></i>
-                <h1>Indo Hub</h1>
+            <div class="logo-area" title="返回學習地圖">
+                <div class="logo-icon">🇮🇩</div>
+                <div class="logo-text">
+                    <h1>Indo Hub</h1>
+                    <span class="tagline">BIPA 標準 · 中印雙語學習引擎</span>
+                </div>
             </div>
+
+            <!-- 主導覽按鈕區 (橫向滾動) -->
+            <nav class="main-nav">
+                <button class="nav-btn active" data-target="map-view"><i class="fa-solid fa-route"></i> 學習地圖</button>
+                <button class="nav-btn" data-target="alphabet-view"><i class="fa-solid fa-font"></i> 字母發音</button>
+                <button class="nav-btn" data-target="pronoun-view"><i class="fa-solid fa-users-viewfinder"></i> 稱謂計算器</button>
+                <button class="nav-btn" data-target="grammar-view"><i class="fa-solid fa-book-bookmark"></i> 核心語法</button>
+                <button class="nav-btn" data-target="numbers-view"><i class="fa-solid fa-coins"></i> 數字時間</button>
+                <button class="nav-btn" data-target="flashcard-view"><i class="fa-solid fa-layer-group"></i> 智能字卡</button>
+                <button class="nav-btn" data-target="module-view"><i class="fa-solid fa-comments"></i> 實境會話</button>
+                <button class="nav-btn" data-target="shadowing-view"><i class="fa-solid fa-microphone-lines"></i> 智能跟讀評分</button>
+                <button class="nav-btn" data-target="affix-view"><i class="fa-solid fa-cubes"></i> 詞綴與口語</button>
+                <button class="nav-btn" data-target="quiz-view"><i class="fa-solid fa-puzzle-piece"></i> 拼圖測驗</button>
+            </nav>
+
+            <!-- 頂部控制項 (字典、語速、字級、主題、積分) -->
             <div class="header-controls">
-                <nav style="overflow-x: auto; white-space: nowrap;">
-                    <button class="nav-btn active" data-target="map-view"><i class="fa-solid fa-map"></i> 雙城地圖</button>
-                    <button class="nav-btn" data-target="alphabet-view"><i class="fa-solid fa-a"></i> 字母發音</button>
-                    <button class="nav-btn" data-target="flashcard-view"><i class="fa-solid fa-book-open"></i> 核心單字</button>
-                    <button class="nav-btn" data-target="phrases-view"><i class="fa-solid fa-puzzle-piece"></i> 實用片語</button>
-                    <button class="nav-btn" data-target="module-view"><i class="fa-solid fa-layer-group"></i> 實境會話</button>
-                    <button class="nav-btn" data-target="audio-view"><i class="fa-solid fa-headphones"></i> 盲聽跟讀</button>
-                </nav>
-                <div class="theme-font-controls">
-                    <button class="settings-btn" id="font-decrease" title="縮小字體"><i class="fa-solid fa-a"></i>-</button>
-                    <button class="settings-btn" id="font-increase" title="放大字體"><i class="fa-solid fa-a"></i>+</button>
-                    <button class="settings-btn" id="theme-toggle" title="切換深淺色"><i class="fa-solid fa-moon"></i></button>
+                <button class="icon-action-btn" id="open-dict-btn" title="中印雙向速查字典"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="speed-toggle-btn" id="speed-toggle-btn" title="切換語速">
+                    <span class="speed-label">1.0x 標準</span>
+                </button>
+                <div class="font-controls">
+                    <button class="icon-action-btn font-btn" id="font-decrease" title="縮小字體"><i class="fa-solid fa-minus"></i></button>
+                    <button class="icon-action-btn font-btn" id="font-increase" title="放大字體"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <button class="icon-action-btn" id="theme-toggle" title="切換深淺色主題"><i class="fa-solid fa-moon"></i></button>
+                <div class="streak-badge" title="連續打卡天數與學習積分">
+                    <span class="flame-icon">🔥</span>
+                    <span id="streak-count">1</span> 天
+                    <span class="points-pill"><i class="fa-solid fa-star"></i> <span id="user-points">50</span> XP</span>
                 </div>
             </div>
         </header>
 
+        <!-- 主內容區 -->
         <main>
-            <!-- 視圖 1: 遊戲化地圖探險 -->
+            <!-- 視圖 1: 學習地圖 (Learning Journey Map) -->
             <section id="map-view" class="view active">
-                <div class="map-container">
-                    <div class="hero-image-container">
-                        <img src="assets/indo_hero_illustration_1787210889692.jpg" alt="雅加達 MRT 與 民族紀念碑 - 日系質感插圖">
+                <div class="hero-banner">
+                    <div class="hero-content">
+                        <span class="hero-badge">BIPA 標準 x Viet 專案深度對標</span>
+                        <h2>印尼語雙城生活實戰旅程</h2>
+                        <p>告別傳統死板教科書！全面導入<strong>中+印雙語播放輔助機制</strong>、稱謂關係計算器、3D 字卡與智能麥克風跟讀打分，從零基礎小白直通日常流利對話！</p>
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <span class="stat-num" id="stat-words-mastered">0</span>
+                                <span class="stat-label">已掌握單字</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-num" id="stat-lessons-completed">0</span>
+                                <span class="stat-label">完成會話關卡</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-num" id="stat-quiz-score">0</span>
+                                <span class="stat-label">測驗總積分</span>
+                            </div>
+                        </div>
                     </div>
-                    <h2>印尼雙城歷險記</h2>
-                    <p class="subtitle">結合 Apple 質感與 Duolingo 遊戲化的極致體驗</p>
-                    
-                    <div class="city-nodes">
-                        <div class="node unlocked" data-city="taipei">
-                            <div class="pin"><i class="fa-solid fa-location-dot"></i></div>
-                            <span class="label">A1 新手村<br><small>基礎問候與字母</small></span>
+                    <div class="hero-image-wrap">
+                        <img src="assets/indo_hero_illustration_1787210889692.jpg" alt="印尼現代生活風格插圖">
+                    </div>
+                </div>
+
+                <!-- 漸進式 5 階學習關卡地圖 -->
+                <div class="learning-path-container">
+                    <h3 class="section-title"><i class="fa-solid fa-map-location-dot"></i> 5 階漸進式闖關地圖</h3>
+                    <div class="level-stages">
+                        <!-- Stage 0 -->
+                        <div class="stage-card" data-nav="alphabet-view">
+                            <div class="stage-num">00</div>
+                            <div class="stage-info">
+                                <h4>Level 0: 零基礎發音與拼讀 (Alfabet)</h4>
+                                <p>26 字母、C/J/R/K 關鍵音、雙母音與倒數第二音節重音原則。</p>
+                            </div>
+                            <span class="stage-status"><i class="fa-solid fa-play"></i> 立即學習</span>
                         </div>
-                        <div class="path active"></div>
-                        <div class="node unlocked" data-city="jakarta">
-                            <div class="pin"><i class="fa-solid fa-building"></i></div>
-                            <span class="label">DKI Jakarta<br><small>Gojek / QRIS / Gaul</small></span>
+
+                        <!-- Stage 1 -->
+                        <div class="stage-card" data-nav="pronoun-view">
+                            <div class="stage-num">01</div>
+                            <div class="stage-info">
+                                <h4>Level 1: 稱謂社交計算器與核心語法</h4>
+                                <p>長幼尊卑 (Mas/Mbak/Pak/Bu)、SVO 語序、兩大否定詞 (Tidak vs Bukan)。</p>
+                            </div>
+                            <span class="stage-status"><i class="fa-solid fa-arrow-right"></i> 探索</span>
                         </div>
-                        <div class="path locked"></div>
-                        <div class="node locked" data-city="surabaya">
-                            <div class="pin"><i class="fa-solid fa-ship"></i></div>
-                            <span class="label">Surabaya<br><small>Pasar Turi / Suroboyoan</small></span>
+
+                        <!-- Stage 2 -->
+                        <div class="stage-card" data-nav="numbers-view">
+                            <div class="stage-num">02</div>
+                            <div class="stage-info">
+                                <h4>Level 2: 數字時間與印尼盾轉換</h4>
+                                <p>0 到百萬計數、Rp 貨幣讀音換算器、星期日期與時間生活表達。</p>
+                            </div>
+                            <span class="stage-status"><i class="fa-solid fa-arrow-right"></i> 探索</span>
+                        </div>
+
+                        <!-- Stage 3 -->
+                        <div class="stage-card" data-nav="module-view">
+                            <div class="stage-num">03</div>
+                            <div class="stage-info">
+                                <h4>Level 3: 10 大實戰會話 (中印雙語朗讀)</h4>
+                                <p>叫車 Gojek、咖啡廳 QRIS、餐廳客製辣度、飯店入住與角色扮演測驗。</p>
+                            </div>
+                            <span class="stage-status"><i class="fa-solid fa-arrow-right"></i> 探索</span>
+                        </div>
+
+                        <!-- Stage 4 -->
+                        <div class="stage-card" data-nav="shadowing-view">
+                            <div class="stage-num">04</div>
+                            <div class="stage-info">
+                                <h4>Level 4: 智能跟讀打分與 Bahasa Gaul 口語</h4>
+                                <p>麥克風即時語音比對評分、meN- 詞綴積木與 TikTok 網民迷因密碼庫。</p>
+                            </div>
+                            <span class="stage-status"><i class="fa-solid fa-arrow-right"></i> 探索</span>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- 視圖: 字母與發音 -->
+            <!-- 視圖 2: 字母與發音 (Alphabet View) -->
             <section id="alphabet-view" class="view">
-                <h2>字母與發音 (Alfabet)</h2>
-                <p class="subtitle">點擊卡片聆聽標準印尼語發音。注意 C 與複合子音的特殊唸法。</p>
-                <div class="module-grid" id="alphabet-grid">
-                    <!-- 動態生成字母卡片 -->
+                <div class="section-header">
+                    <h2><i class="fa-solid fa-font"></i> 印尼語字母與發音系統 (Alfabet & Fonetik)</h2>
+                    <p class="subtitle">印尼語使用 26 個拉丁字母，無聲調，重音普遍在倒數第二個音節。點擊卡片聆聽標準真人發音！</p>
+                </div>
+
+                <!-- 核心發音重點提醒 -->
+                <div class="tips-grid">
+                    <div class="tip-card highlight-box">
+                        <div class="tip-icon"><i class="fa-solid fa-circle-exclamation"></i></div>
+                        <div>
+                            <strong>字母 C 永遠發 /ch/</strong>
+                            <p>例如 <em>Cinta</em> 唸成 "Chin-ta"（愛），千萬不要唸成 /k/ 或 /s/！</p>
+                        </div>
+                    </div>
+                    <div class="tip-card highlight-box">
+                        <div class="tip-icon"><i class="fa-solid fa-music"></i></div>
+                        <div>
+                            <strong>字母 R 舌尖彈舌顫音</strong>
+                            <p>如 <em>Rendang</em>。初學者若彈不出來，可先以清晰的「ㄌ/ㄦ」過渡。</p>
+                        </div>
+                    </div>
+                    <div class="tip-card highlight-box">
+                        <div class="tip-icon"><i class="fa-solid fa-hand-fist"></i></div>
+                        <div>
+                            <strong>字尾 K 為喉塞音</strong>
+                            <p>在字尾如 <em>Tidak</em> (Ti-da') 聲帶迅速關閉，不噴氣，乾脆短促。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 26 字母網格 -->
+                <h3 class="sub-heading">26 字母發音庫 (點擊試聽)</h3>
+                <div class="alphabet-grid" id="alphabet-grid-container">
+                    <!-- JS 動態生成 -->
+                </div>
+
+                <!-- 複合子音與雙母音 -->
+                <h3 class="sub-heading" style="margin-top: 2rem;">複合子音與雙母音 (Digraf & Diftong)</h3>
+                <div class="digraphs-grid" id="digraphs-grid-container">
+                    <!-- JS 動態生成 -->
                 </div>
             </section>
 
-            <!-- 視圖: 核心單字庫 -->
+            <!-- 視圖: 人稱稱謂與社交關係計算器 (Pronoun Module - 深度對標 Viet) -->
+            <section id="pronoun-view" class="view">
+                <div class="section-header">
+                    <h2><i class="fa-solid fa-users-viewfinder"></i> 印尼語人稱稱謂計算器 (Kalkulator Sapaan)</h2>
+                    <p class="subtitle">印尼文化中稱謂至關重要！選對稱謂能拉近彼此距離，避免失禮。點選情境立即獲取稱呼與中印雙語範例！</p>
+                </div>
+
+                <div class="pronoun-calc-container">
+                    <!-- 情境選擇標籤 -->
+                    <div class="pronoun-scenario-tabs" id="pronoun-tabs-container">
+                        <!-- JS 動態生成 -->
+                    </div>
+
+                    <!-- 計算結果展示卡片 -->
+                    <div class="pronoun-result-card" id="pronoun-result-display">
+                        <div class="result-columns">
+                            <div class="pronoun-col">
+                                <span class="col-label">您稱呼對方 (You)</span>
+                                <div class="pronoun-highlight" id="calc-you-pronoun">Bapak / Pak</div>
+                                <div class="pronoun-desc" id="calc-you-desc">先生 / 父親輩尊稱</div>
+                            </div>
+                            <div class="pronoun-col">
+                                <span class="col-label">您自稱 (Me / I)</span>
+                                <div class="pronoun-highlight" id="calc-me-pronoun">Saya</div>
+                                <div class="pronoun-desc" id="calc-me-desc">我 (正式禮貌)</div>
+                            </div>
+                        </div>
+
+                        <!-- 示範對話與中+印雙語播放 -->
+                        <div class="pronoun-sample-box">
+                            <div class="sample-title"><i class="fa-solid fa-comments"></i> 實境稱謂對話示範：</div>
+                            <div class="sample-id" id="calc-sample-id">Selamat pagi Bapak. Ada yang bisa saya bantu?</div>
+                            <div class="sample-zh" id="calc-sample-zh">先生早安。有什麼我可以協助您的嗎？</div>
+                            <div class="sample-actions">
+                                <button class="action-btn" id="play-calc-bilingual-btn"><i class="fa-solid fa-volume-high"></i> 中+印 雙語朗讀</button>
+                                <button class="action-btn secondary" id="play-calc-id-btn"><i class="fa-solid fa-play"></i> 純印尼語</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 視圖 3: 核心語法與句型 (Grammar View) -->
+            <section id="grammar-view" class="view">
+                <div class="section-header">
+                    <h2><i class="fa-solid fa-book-bookmark"></i> 核心語法與句型 (Tata Bahasa Inti)</h2>
+                    <p class="subtitle">印尼語沒有動詞時態變化、無性別單複數曲折，語序與中文極為相似！</p>
+                </div>
+
+                <div class="grammar-accordion" id="grammar-modules-container">
+                    <!-- JS 動態生成 5 大語法模組 (SVO、人稱、否定詞、5W1H、D-M修飾後置) -->
+                </div>
+            </section>
+
+            <!-- 視圖 4: 數字、時間與金錢系統 (Numbers View) -->
+            <section id="numbers-view" class="view">
+                <div class="section-header">
+                    <h2><i class="fa-solid fa-coins"></i> 數字、時間與金錢交易 (Angka & Waktu)</h2>
+                    <p class="subtitle">掌握數字與印尼盾 (Rupiah) 計價，出門購物搭車暢行無阻！</p>
+                </div>
+
+                <!-- 印尼盾金額即時換算與發音生成器 -->
+                <div class="converter-box">
+                    <div class="converter-header">
+                        <h3><i class="fa-solid fa-calculator"></i> 印尼盾 (Rupiah) 即時讀音生成器</h3>
+                        <p>輸入任何金額，立即查看印尼語標準讀法並點擊聽發音！</p>
+                    </div>
+                    <div class="converter-input-wrap">
+                        <span class="currency-prefix">Rp</span>
+                        <input type="number" id="rupiah-input" placeholder="例如：25000" value="25000" min="0" step="1000">
+                        <button class="action-btn" id="convert-rupiah-btn"><i class="fa-solid fa-wand-magic-sparkles"></i> 轉換讀音</button>
+                    </div>
+                    <div class="converter-result" id="converter-result">
+                        <div class="result-id" id="rupiah-id-text">Dua puluh lima ribu rupiah</div>
+                        <div class="result-zh" id="rupiah-zh-text">兩萬五千印尼盾 (約 NT$ 50)</div>
+                        <button class="action-btn secondary" id="play-rupiah-btn"><i class="fa-solid fa-volume-high"></i> 播放讀音</button>
+                    </div>
+                </div>
+
+                <!-- 基礎數字與時間日曆網格 -->
+                <div class="numbers-content-grid">
+                    <!-- 數字列表 -->
+                    <div class="num-card-block">
+                        <h3><i class="fa-solid fa-list-ol"></i> 基礎數詞 (0 - 1,000,000)</h3>
+                        <div class="num-pills-wrap" id="num-units-container">
+                            <!-- JS 動態生成 -->
+                        </div>
+                    </div>
+
+                    <!-- 星期與時間概念 -->
+                    <div class="num-card-block">
+                        <h3><i class="fa-solid fa-calendar-days"></i> 星期與常用時間副詞</h3>
+                        <div class="num-pills-wrap" id="time-calendar-container">
+                            <!-- JS 動態生成 -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 視圖 5: 智能字卡與間隔複習 (Flashcard View) -->
             <section id="flashcard-view" class="view">
-                <h2>核心單字 (Vocab Builder)</h2>
-                <p class="subtitle">BINTANGO 圖像記憶法，快速掌握常用生活詞彙。</p>
-                <div class="audio-player-container" style="max-width: 400px; padding: 2rem;">
-                    <div class="flashcard" id="vocab-flashcard" style="margin-bottom: 2rem;">
-                        <div class="id-text" id="vocab-id" style="font-size: 2.5rem;">Memuat...</div>
-                        <div class="zh-text" id="vocab-zh" style="font-size: 1.2rem;">載入中...</div>
+                <div class="section-header">
+                    <h2><i class="fa-solid fa-layer-group"></i> 核心單字庫與智能翻轉字卡 (Vocab Flashcards)</h2>
+                    <p class="subtitle">精選 200+ 個高頻生活必備詞彙，支援主題分類、3D 翻轉記憶、中印雙語朗讀與慢速/標準發音。</p>
+                </div>
+
+                <!-- 分類過濾標籤列 -->
+                <div class="category-filters" id="vocab-category-filters">
+                    <!-- JS 動態生成分類按鈕 -->
+                </div>
+
+                <!-- 翻轉字卡容器 -->
+                <div class="flashcard-deck-wrap">
+                    <div class="flashcard-3d" id="main-flashcard">
+                        <!-- 正面: 印尼語 + 詞性 + 語音 -->
+                        <div class="card-face card-front">
+                            <span class="card-category-tag" id="card-cat-tag">美食與餐飲</span>
+                            <div class="card-word-id" id="card-word-id">Nasi Goreng</div>
+                            <div class="card-hint"><i class="fa-solid fa-rotate"></i> 點擊卡片翻面查看中文與例句</div>
+                            <div class="card-front-btns">
+                                <button class="card-audio-btn" id="card-play-audio-btn" title="聽印尼語發音"><i class="fa-solid fa-volume-high"></i></button>
+                                <button class="card-audio-btn small" id="card-play-bilingual-btn" title="中+印 雙語朗讀"><i class="fa-solid fa-language"></i> 雙語</button>
+                            </div>
+                        </div>
+                        <!-- 背面: 中文 + 例句 -->
+                        <div class="card-face card-back">
+                            <div class="card-word-zh" id="card-word-zh">印尼炒飯</div>
+                            <div class="card-example-box">
+                                <div class="ex-id" id="card-ex-id">Nasi goreng spesial pedas.</div>
+                                <div class="ex-zh" id="card-ex-zh">特製大辣炒飯。</div>
+                            </div>
+                            <div class="card-back-actions">
+                                <button class="card-audio-btn small" id="card-play-ex-btn" title="聽例句"><i class="fa-solid fa-volume-high"></i> 聽例句</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="controls" style="display: flex; gap: 0.5rem; justify-content: center;">
-                        <button class="action-btn secondary" id="vocab-prev"><i class="fa-solid fa-arrow-left"></i></button>
-                        <button class="action-btn" id="vocab-play" style="background: var(--accent); box-shadow: 0 4px 0 #005bb5;"><i class="fa-solid fa-volume-high"></i></button>
-                        <button class="action-btn secondary" id="vocab-next"><i class="fa-solid fa-arrow-right"></i></button>
+
+                    <!-- 字卡控制項 (上一張、掌握、下一張、隨機) -->
+                    <div class="deck-controls">
+                        <button class="deck-btn" id="card-prev-btn" title="上一張"><i class="fa-solid fa-chevron-left"></i> 上一張</button>
+                        <button class="deck-btn success" id="card-master-btn" title="標記為已掌握"><i class="fa-solid fa-check"></i> 標記已掌握</button>
+                        <button class="deck-btn" id="card-flip-btn" title="翻面"><i class="fa-solid fa-rotate"></i> 翻轉</button>
+                        <button class="deck-btn primary" id="card-next-btn" title="下一張">下一張 <i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+
+                    <div class="deck-indicator">
+                        <span id="card-index-indicator">1 / 20</span>
+                        <span class="shuffle-btn" id="card-shuffle-btn"><i class="fa-solid fa-shuffle"></i> 隨機洗牌</span>
+                    </div>
+                </div>
+
+                <!-- 單字清單快速瀏覽模式切換 -->
+                <div class="vocab-list-section">
+                    <div class="list-section-header">
+                        <h3><i class="fa-solid fa-table-list"></i> 當前分類單字全覽清單</h3>
+                        <span id="vocab-count-badge" class="count-badge">22 個單字</span>
+                    </div>
+                    <div class="vocab-table-container" id="vocab-table-container">
+                        <!-- JS 動態生成表格 -->
                     </div>
                 </div>
             </section>
 
-            <!-- 視圖: 實用片語與語法積木 -->
-            <section id="phrases-view" class="view">
-                <h2>實用片語與語法積木</h2>
-                <p class="subtitle">學習印尼文最重要的「詞綴 (Imbuhan)」，了解字根如何像積木一樣改變詞性。</p>
-                <div class="module-grid" id="phrases-grid" style="display: flex; flex-direction: column; gap: 1rem;">
-                    <!-- 動態生成片語積木 -->
-                </div>
-            </section>
-
-            <!-- 視圖: 生活實戰模組 (Gen Z 改造版) -->
+            <!-- 視圖 6: 10 大實境情境會話 (Module View) -->
             <section id="module-view" class="view">
-                <h2>Gen Z 當代生活實戰</h2>
-                <div class="module-grid">
-                    <div class="module-card">
-                        <img src="assets/coffee_shop_illustration_1787210903184.jpg" class="module-card-img" alt="印尼咖啡廳點餐插圖">
-                        <div class="module-card-content">
-                            <h3>☕ 咖啡廳與數位遊民</h3>
-                            <p>學習點一杯 Es Kopi Susu Aren，並熟練使用 QRIS 掃碼結帳。融入 Nongkrong 文化！</p>
-                            <button class="action-btn">挑戰任務</button>
-                        </div>
+                <div class="section-header">
+                    <h2><i class="fa-solid fa-comments"></i> 10 大現代實戰情境會話 (Situational Conversations)</h2>
+                    <p class="subtitle">結合雅加達與峇里島生活情境，具備「中+印雙語播放」、「純印尼語朗讀」與「聽力盲聽模式」，並內建角色扮演模擬測驗！</p>
+                </div>
+
+                <!-- 會話情境卡片網格 -->
+                <div class="situational-grid" id="situational-grid-container">
+                    <!-- JS 動態生成 10 大模組卡片 -->
+                </div>
+            </section>
+
+            <!-- 視圖 7: 實境對話詳細體驗 (Lesson Detail View - 深度對標 Viet DialoguePlayer) -->
+            <section id="lesson-view" class="view">
+                <div class="lesson-top-bar">
+                    <button class="action-btn secondary" id="back-to-modules-btn"><i class="fa-solid fa-arrow-left"></i> 返回情境列表</button>
+                    <div class="lesson-title-wrap">
+                        <h2 id="current-lesson-title">咖啡廳點餐與數位遊民</h2>
+                        <span class="lesson-loc-tag" id="current-lesson-loc"><i class="fa-solid fa-location-dot"></i> 雅加達南部</span>
                     </div>
-                    <div class="module-card">
-                        <img src="assets/surabaya_illustration_1787210917170.jpg" class="module-card-img" alt="泗水傳統美食攤位插圖">
-                        <div class="module-card-content">
-                            <h3>🍛 泗水美食探險</h3>
-                            <p>向 Kaki Lima 路邊攤阿姨點一碗熱騰騰的 Rawon (黑牛肉湯)，並嘗試使用道地泗水方言殺價。</p>
-                            <button class="action-btn">挑戰任務</button>
-                        </div>
+                </div>
+
+                <!-- 對話分段選擇標籤 (對話一：標準實況 / 對話二：潮流口語) -->
+                <div class="dialogue-section-tabs" id="dialogue-sections-tab-bar">
+                    <!-- JS 動態生成 -->
+                </div>
+
+                <!-- 文化提示框 -->
+                <div class="culture-tip-card" id="lesson-culture-tip">
+                    <div class="culture-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                    <div class="culture-text">
+                        <strong>在地文化與實戰秘笈 (Culture Tip)</strong>
+                        <p id="culture-tip-content">載入中...</p>
                     </div>
-                    <div class="module-card">
-                        <div class="module-card-content" style="justify-content: center; text-align: center;">
-                            <i class="fa-brands fa-tiktok" style="font-size: 4rem; color: var(--text-main); margin-bottom: 1rem;"></i>
-                            <h3>🔥 TikTok 迷因語錄</h3>
-                            <p>Menyala Abangku! 學習最潮的印尼網民用語，從 Bucin 到 Salting，瞬間拉近社交距離。</p>
-                            <button class="action-btn" style="background: var(--accent); box-shadow: 0 4px 0 #005bb5;">解鎖彩蛋</button>
+                </div>
+
+                <!-- 播放控制工具列 (中+印雙語 / 純印尼語 / 聽力盲聽) -->
+                <div class="dialogue-toolbar">
+                    <div class="toolbar-left">
+                        <button class="control-btn play-bilingual-btn" id="play-dialogue-bilingual-btn">
+                            <i class="fa-solid fa-play"></i> <span>中+印 雙語播放 (+20 XP)</span>
+                        </button>
+                        <button class="control-btn play-id-btn" id="play-dialogue-id-btn">
+                            <i class="fa-solid fa-play"></i> <span>純印尼語朗讀</span>
+                        </button>
+                    </div>
+                    <div class="toolbar-right">
+                        <button class="control-btn toggle-trans-btn" id="toggle-dialogue-trans-btn">
+                            <i class="fa-solid fa-eye-slash"></i> <span>隱藏中文翻譯 (聽力模式)</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 對話泡泡區域 -->
+                <div class="dialogue-chat-container" id="dialogue-bubbles-container">
+                    <!-- JS 動態生成對話泡泡 -->
+                </div>
+
+                <!-- 實境角色扮演測驗區 -->
+                <div class="roleplay-quiz-card" id="lesson-roleplay-card">
+                    <div class="roleplay-header">
+                        <h3><i class="fa-solid fa-gamepad"></i> 實境角色扮演測驗 (Role-play Quiz)</h3>
+                        <p id="roleplay-question">載入題目中...</p>
+                    </div>
+                    <div class="roleplay-options" id="roleplay-options-container">
+                        <!-- JS 動態生成選項 -->
+                    </div>
+                    <div class="roleplay-feedback" id="roleplay-feedback" style="display: none;"></div>
+                </div>
+            </section>
+
+            <!-- 視圖: 智能跟讀與發音評分 (Shadowing & Voice Evaluator) -->
+            <section id="shadowing-view" class="view">
+                <div class="section-header">
+                    <h2><i class="fa-solid fa-microphone-lines"></i> 智能跟讀與發音評分系統 (Shadowing Engine)</h2>
+                    <p class="subtitle">支援麥克風即時語音辨識（Web Speech API），對標真實印尼語發音，即時計算相似度打分並獎勵經驗值！</p>
+                </div>
+
+                <div class="shadowing-container">
+                    <!-- 跟讀句子卡片 -->
+                    <div class="shadowing-card">
+                        <div class="shadowing-badge" id="shadowing-category">生活打招呼</div>
+                        
+                        <div class="shadowing-text-wrap">
+                            <div class="shadowing-id-text" id="shadowing-target-id">Selamat pagi! Apa kabar?</div>
+                            <div class="shadowing-zh-text" id="shadowing-target-zh">早安！你好嗎？</div>
+                            <div class="shadowing-tip" id="shadowing-phonetic-tip">💡 注意 pagi 重音在 pa-，kabar 的 r 輕輕彈舌。</div>
+                        </div>
+
+                        <!-- 語音示範播放列 -->
+                        <div class="shadowing-audio-bar">
+                            <button class="action-btn" id="shadowing-play-bilingual-btn"><i class="fa-solid fa-volume-high"></i> 中+印 雙語示範</button>
+                            <button class="action-btn secondary" id="shadowing-play-slow-btn"><i class="fa-solid fa-turtle"></i> 0.75x 慢速跟讀</button>
+                        </div>
+
+                        <!-- 麥克風錄音辨識區 -->
+                        <div class="mic-recorder-zone">
+                            <button class="mic-record-btn" id="mic-record-btn" title="點擊開始錄音說印尼語">
+                                <i class="fa-solid fa-microphone"></i>
+                            </button>
+                            <div class="mic-status" id="mic-status-text">點擊麥克風開始錄音跟讀...</div>
+                            
+                            <!-- 即時辨識出的語音文字 -->
+                            <div class="transcript-box" id="transcript-box" style="display: none;">
+                                <span class="transcript-label">您說出的內容：</span>
+                                <div class="transcript-text" id="transcript-text">...</div>
+                            </div>
+
+                            <!-- 相似度評分進度條與反饋 -->
+                            <div class="accuracy-result" id="accuracy-result-box" style="display: none;">
+                                <div class="score-header">
+                                    <span>發音相似度得分：</span>
+                                    <strong class="score-num" id="accuracy-score-num">95%</strong>
+                                </div>
+                                <div class="score-bar-wrap">
+                                    <div class="score-bar-fill" id="score-bar-fill" style="width: 95%;"></div>
+                                </div>
+                                <div class="score-feedback-msg" id="score-feedback-msg">🎉 發音非常標準！太炸了大哥！(+15 XP)</div>
+                            </div>
+                        </div>
+
+                        <!-- 切換下一句按鈕 -->
+                        <div class="shadowing-footer-actions">
+                            <button class="deck-btn" id="shadowing-prev-btn"><i class="fa-solid fa-chevron-left"></i> 上一句</button>
+                            <span id="shadowing-index-indicator">1 / 7</span>
+                            <button class="deck-btn primary" id="shadowing-next-btn">下一句 <i class="fa-solid fa-chevron-right"></i></button>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- 視圖 3: 減壓雙語音盲聽系統 -->
-            <section id="audio-view" class="view">
-                <h2>Ondoku 智能跟讀卡片 (Shadowing)</h2>
-                <p class="subtitle" style="text-align: center;">搭配觸覺震動與聲波視覺，將印尼語烙印在神經裡</p>
-                <div class="audio-player-container">
-                    <div class="flashcard">
-                        <div class="id-text">Menyala Abangku!</div>
-                        <div class="zh-text">太炸了大哥！🔥</div>
+            <!-- 視圖 8: 詞綴積木與口語解碼 (Affix & Gaul View) -->
+            <section id="affix-view" class="view">
+                <div class="section-header">
+                    <h2><i class="fa-solid fa-cubes"></i> 詞綴積木系統與現代口語 (Imbuhan & Bahasa Gaul)</h2>
+                    <p class="subtitle">掌握印尼語的核心秘密「字根衍生」，並解碼 TikTok 網民迷因與 WhatsApp 縮寫！</p>
+                </div>
+
+                <!-- 詞綴積木動態可視化生成器 -->
+                <div class="affix-builder-card">
+                    <div class="builder-header">
+                        <h3><i class="fa-solid fa-cube"></i> 字根積木可視化 (Imbuhan Visualizer)</h3>
+                        <p>選擇一個基礎字根 (Kata Dasar)，觀察加上前綴、後綴如何衍生出豐富詞義：</p>
                     </div>
-                    <div class="controls">
-                        <button class="ctrl-btn" title="慢速跟讀 0.75x"><i class="fa-solid fa-turtle"></i> 0.75x 盲聽</button>
-                        <button class="ctrl-btn primary" title=" Jaksel 語速挑戰"><i class="fa-solid fa-bolt"></i> 1.2x 極速挑戰</button>
+                    <div class="root-selector" id="root-buttons-container">
+                        <!-- JS 生成字根按鈕 (Tulis, Ajar, Beli, Jalan) -->
+                    </div>
+                    <div class="affix-derivations-grid" id="affix-derivations-container">
+                        <!-- JS 動態生成衍生詞卡片 -->
+                    </div>
+                </div>
+
+                <!-- 鼻音變音規則表 -->
+                <div class="nasal-rules-box">
+                    <h3><i class="fa-solid fa-wand-magic"></i> meN- 前綴四大鼻音變音法則 (K/P/T/S 脫落)</h3>
+                    <div class="rules-grid" id="nasal-rules-container">
+                        <!-- JS 動態生成 -->
+                    </div>
+                </div>
+
+                <!-- 正式語 (Baku) vs 現代口語 (Gaul) 對照 -->
+                <div class="gaul-section">
+                    <h3 class="sub-heading" style="margin-top: 2rem;"><i class="fa-brands fa-tiktok"></i> 正式語 (Baku) vs 雅加達口語 (Gaul) 對照</h3>
+                    <div class="gaul-grid" id="gaul-table-container">
+                        <!-- JS 動態生成 -->
+                    </div>
+                </div>
+
+                <!-- 語氣助詞與簡訊縮寫密碼庫 -->
+                <div class="slang-chat-section">
+                    <div class="slang-col">
+                        <h3><i class="fa-solid fa-comment-dots"></i> 常用語氣助詞 (Partikel)</h3>
+                        <div class="particles-list" id="particles-container">
+                            <!-- JS 動態生成 -->
+                        </div>
+                    </div>
+                    <div class="slang-col">
+                        <h3><i class="fa-brands fa-whatsapp"></i> WhatsApp / 社群縮寫解碼庫</h3>
+                        <div class="chat-slang-list" id="chat-slang-container">
+                            <!-- JS 動態生成 -->
+                        </div>
                     </div>
                 </div>
             </section>
-            <!-- 視圖 4: 實境對話教學區 (Lesson View) -->
-            <section id="lesson-view" class="view">
-                <div class="lesson-header">
-                    <button class="action-btn secondary" id="back-to-modules"><i class="fa-solid fa-arrow-left"></i> 返回</button>
-                    <h2 id="lesson-title">載入中...</h2>
+
+            <!-- 視圖 9: 句型重組拼圖測驗 (Quiz View) -->
+            <section id="quiz-view" class="view">
+                <div class="section-header">
+                    <h2><i class="fa-solid fa-puzzle-piece"></i> 句型重組拼圖測驗 (Sentence Builder)</h2>
+                    <p class="subtitle">依據中文提示，點選單字積木拼出正確的印尼文語序，強化 SVO 與修飾後置結構！</p>
                 </div>
-                <div class="lesson-container" id="lesson-content">
-                    <!-- 對話內容將透過 JS 動態生成 -->
+
+                <div class="puzzle-game-container">
+                    <div class="puzzle-progress-bar">
+                        <div class="progress-fill" id="puzzle-progress-fill" style="width: 20%;"></div>
+                    </div>
+                    <div class="puzzle-card">
+                        <span class="puzzle-badge" id="puzzle-badge">挑戰第 1 題 / 共 5 題</span>
+                        <div class="puzzle-prompt" id="puzzle-target-zh">載入題目中...</div>
+
+                        <!-- 學員組裝的句子槽 -->
+                        <div class="puzzle-answer-slot" id="puzzle-answer-slot">
+                            <span class="slot-placeholder">點擊下方詞塊放入這裡...</span>
+                        </div>
+
+                        <!-- 候選單字詞塊池 -->
+                        <div class="puzzle-pool" id="puzzle-word-pool">
+                            <!-- JS 動態生成詞塊 -->
+                        </div>
+
+                        <!-- 操作與反饋按鈕 -->
+                        <div class="puzzle-actions">
+                            <button class="action-btn secondary" id="puzzle-clear-btn"><i class="fa-solid fa-rotate-left"></i> 重置清空</button>
+                            <button class="action-btn" id="puzzle-check-btn"><i class="fa-solid fa-check"></i> 檢查答案</button>
+                            <button class="action-btn success" id="puzzle-next-btn" style="display: none;">下一題 <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                        <div class="puzzle-feedback" id="puzzle-feedback" style="display: none;"></div>
+                    </div>
                 </div>
             </section>
         </main>
+
+        <!-- 即時中印速查字典彈窗 (Instant Search Modal) -->
+        <div class="modal-overlay" id="dict-modal">
+            <div class="modal-card">
+                <div class="modal-header">
+                    <h3><i class="fa-solid fa-magnifying-glass"></i> 中印雙向速查字典</h3>
+                    <button class="close-modal-btn" id="close-dict-btn"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div class="modal-search-wrap">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="dict-search-input" placeholder="輸入印尼文或中文搜尋 (例如: Kopi, 炒飯, 謝謝)...">
+                </div>
+                <div class="modal-results-list" id="dict-results-container">
+                    <p class="search-empty">請在上方輸入關鍵字開始檢索...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 頁尾 -->
+        <footer>
+            <div class="footer-content">
+                <p>🇮🇩 <strong>Indo Hub</strong> · 印尼文自主學習網 · 專為中文母語者打造的沉浸式學習系統</p>
+                <p><small>對標 BIPA 外語教學標準與 Viet 專案架構 · 中印雙語朗讀輔助 · 離線本地儲存進度</small></p>
+            </div>
+        </footer>
     </div>
+
+    <!-- 載入應用核心腳本 -->
     <script src="app.js"></script>
 </body>
 </html>
