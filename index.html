@@ -122,8 +122,8 @@
                         <div class="stage-card" data-nav="module-view">
                             <div class="stage-num">03</div>
                             <div class="stage-info">
-                                <h4>Level 3: 10 大實戰會話 (中印雙語朗讀)</h4>
-                                <p>叫車 Gojek、咖啡廳 QRIS、餐廳客製辣度、飯店入住與角色扮演測驗。</p>
+                                <h4>Level 3: 30 大實戰會話 (8 大生活情境分類 x 中印雙語朗讀)</h4>
+                                <p>交通、美食、住宿、購物、社交、旅遊、商務、醫療應急全情境涵蓋，支援雙語循序播放與盲聽測驗。</p>
                             </div>
                             <span class="stage-status"><i class="fa-solid fa-arrow-right"></i> 探索</span>
                         </div>
@@ -144,45 +144,102 @@
             <!-- 視圖 2: 字母與發音 (Alphabet View) -->
             <section id="alphabet-view" class="view">
                 <div class="section-header">
-                    <h2><i class="fa-solid fa-font"></i> 印尼語字母與發音系統 (Alfabet & Fonetik)</h2>
-                    <p class="subtitle">印尼語使用 26 個拉丁字母，無聲調，重音普遍在倒數第二個音節。點擊卡片聆聽標準真人發音！</p>
+                    <h2><i class="fa-solid fa-font"></i> 印尼語字母與發音完整系統 (Alfabet & Fonetik)</h2>
+                    <p class="subtitle">印尼語使用 26 個拉丁字母，無聲調，重音普遍在倒數第二音節。點選子標籤探索母音辨析、關鍵子音、音節拼讀矩陣與發音規則！</p>
+                </div>
+
+                <!-- 字母發音模組子導覽標籤 -->
+                <div class="alphabet-sub-nav" id="alphabet-sub-nav">
+                    <button class="sub-nav-btn active" data-sub="all"><i class="fa-solid fa-table-cells"></i> 26 字母總覽</button>
+                    <button class="sub-nav-btn" data-sub="vowels"><i class="fa-solid fa-gem"></i> 母音與 E 辨析</button>
+                    <button class="sub-nav-btn" data-sub="consonants"><i class="fa-solid fa-bolt"></i> 關鍵子音陷阱</button>
+                    <button class="sub-nav-btn" data-sub="digraphs"><i class="fa-solid fa-link"></i> 複合子音 & 雙母音</button>
+                    <button class="sub-nav-btn" data-sub="syllables"><i class="fa-solid fa-cubes-stacked"></i> 音節拼讀矩陣</button>
+                    <button class="sub-nav-btn" data-sub="stress"><i class="fa-solid fa-music"></i> 重音與拼讀規律</button>
                 </div>
 
                 <!-- 核心發音重點提醒 -->
-                <div class="tips-grid">
+                <div class="tips-grid" id="alphabet-quick-tips">
                     <div class="tip-card highlight-box">
                         <div class="tip-icon"><i class="fa-solid fa-circle-exclamation"></i></div>
                         <div>
-                            <strong>字母 C 永遠發 /ch/</strong>
-                            <p>例如 <em>Cinta</em> 唸成 "Chin-ta"（愛），千萬不要唸成 /k/ 或 /s/！</p>
+                            <strong>字母 C 永遠發 /tʃ/ (吃/七)</strong>
+                            <p>例如 <em>Cinta</em> 唸成 "Chin-ta"（愛），<em>Cuci</em> (Chu-chi 洗)，絕不發 /k/ 或 /s/！</p>
                         </div>
                     </div>
                     <div class="tip-card highlight-box">
                         <div class="tip-icon"><i class="fa-solid fa-music"></i></div>
                         <div>
                             <strong>字母 R 舌尖彈舌顫音</strong>
-                            <p>如 <em>Rendang</em>。初學者若彈不出來，可先以清晰的「ㄌ/ㄦ」過渡。</p>
+                            <p>如 <em>Rendang</em>, <em>Rumah</em>。初學者若彈不出來，可先以清晰的「ㄌ/ㄦ」過渡。</p>
                         </div>
                     </div>
                     <div class="tip-card highlight-box">
                         <div class="tip-icon"><i class="fa-solid fa-hand-fist"></i></div>
                         <div>
-                            <strong>字尾 K 為喉塞音</strong>
-                            <p>在字尾如 <em>Tidak</em> (Ti-da') 聲帶迅速關閉，不噴氣，乾脆短促。</p>
+                            <strong>字尾 K 為喉塞音 /ʔ/</strong>
+                            <p>在字尾如 <em>Tidak</em> (Ti-da'), <em>Bapak</em> (Ba-pa') 聲帶迅速關閉，不噴氣，乾脆短促。</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- 26 字母網格 -->
-                <h3 class="sub-heading">26 字母發音庫 (點擊試聽)</h3>
-                <div class="alphabet-grid" id="alphabet-grid-container">
-                    <!-- JS 動態生成 -->
+                <!-- 子視圖 1: 26 字母網格 -->
+                <div class="alpha-sub-section" id="alpha-sec-all">
+                    <h3 class="sub-heading">26 字母發音庫 (點擊直接試聽)</h3>
+                    <div class="alphabet-grid" id="alphabet-grid-container">
+                        <!-- JS 動態生成 -->
+                    </div>
                 </div>
 
-                <!-- 複合子音與雙母音 -->
-                <h3 class="sub-heading" style="margin-top: 2rem;">複合子音與雙母音 (Digraf & Diftong)</h3>
-                <div class="digraphs-grid" id="digraphs-grid-container">
-                    <!-- JS 動態生成 -->
+                <!-- 子視圖 2: 母音系統與 E 雙音辨析 -->
+                <div class="alpha-sub-section" id="alpha-sec-vowels" style="display: none;">
+                    <h3 class="sub-heading"><i class="fa-solid fa-gem"></i> 母音系統與 E 的發音對比</h3>
+                    <div class="vowels-detail-container" id="vowels-detail-container">
+                        <!-- JS 動態生成 -->
+                    </div>
+
+                    <h3 class="sub-heading" style="margin-top: 2rem;"><i class="fa-solid fa-scale-balanced"></i> 易混淆最小對比詞組 (Minimal Pairs)</h3>
+                    <div class="minimal-pairs-grid" id="minimal-pairs-container">
+                        <!-- JS 動態生成 -->
+                    </div>
+                </div>
+
+                <!-- 子視圖 3: 關鍵子音與發音陷阱 -->
+                <div class="alpha-sub-section" id="alpha-sec-consonants" style="display: none;">
+                    <h3 class="sub-heading"><i class="fa-solid fa-bolt"></i> 關鍵子音發音技巧 (C / J / R / K / H)</h3>
+                    <div class="key-consonants-grid" id="key-consonants-container">
+                        <!-- JS 動態生成 -->
+                    </div>
+                </div>
+
+                <!-- 子視圖 4: 複合子音與雙母音 -->
+                <div class="alpha-sub-section" id="alpha-sec-digraphs" style="display: none;">
+                    <h3 class="sub-heading"><i class="fa-solid fa-link"></i> 複合子音 (Digraf: NG / NY / SY / KH)</h3>
+                    <div class="digraphs-grid" id="digraphs-grid-container">
+                        <!-- JS 動態生成 -->
+                    </div>
+
+                    <h3 class="sub-heading" style="margin-top: 2rem;"><i class="fa-solid fa-layer-group"></i> 雙母音 / 複母音 (Diftong: AI / AU / OI / EI)</h3>
+                    <div class="digraphs-grid" id="diphthongs-grid-container">
+                        <!-- JS 動態生成 -->
+                    </div>
+                </div>
+
+                <!-- 子視圖 5: 音節拼讀矩陣 -->
+                <div class="alpha-sub-section" id="alpha-sec-syllables" style="display: none;">
+                    <h3 class="sub-heading"><i class="fa-solid fa-cubes-stacked"></i> 音節拼讀矩陣練習 (點擊任一音節聆聽拼讀)</h3>
+                    <p class="subtitle" style="margin-bottom: 1.5rem;">掌握「子音 + 母音」的自然拼讀規律，看字即可精準直讀！</p>
+                    <div class="syllable-matrix-wrap" id="syllable-matrix-container">
+                        <!-- JS 動態生成 -->
+                    </div>
+                </div>
+
+                <!-- 子視圖 6: 重音與拼讀規律 -->
+                <div class="alpha-sub-section" id="alpha-sec-stress" style="display: none;">
+                    <h3 class="sub-heading"><i class="fa-solid fa-music"></i> 重音與音節拆解原則 (Aksen & Struktur Suku Kata)</h3>
+                    <div class="stress-rules-container" id="stress-rules-container">
+                        <!-- JS 動態生成 -->
+                    </div>
                 </div>
             </section>
 
@@ -285,11 +342,19 @@
                 </div>
             </section>
 
-            <!-- 視圖 5: 智能字卡與間隔複習 (Flashcard View) -->
+            <!-- 視圖 5: 智能字卡與多學習模式 (Flashcard View) -->
             <section id="flashcard-view" class="view">
                 <div class="section-header">
-                    <h2><i class="fa-solid fa-layer-group"></i> 核心單字庫與智能翻轉字卡 (Vocab Flashcards)</h2>
-                    <p class="subtitle">精選 200+ 個高頻生活必備詞彙，支援主題分類、3D 翻轉記憶、中印雙語朗讀與慢速/標準發音。</p>
+                    <h2><i class="fa-solid fa-layer-group"></i> 核心單字庫與多維度學習記憶系統 (Vocab Flashcards)</h2>
+                    <p class="subtitle">精選 12 大生活分類、260+ 個高頻必備詞彙，支援「3D 翻轉字卡」、「記憶抽查測驗」、「單字自動連播」與「清單全覽」！</p>
+                </div>
+
+                <!-- 學習模式切換導覽列 -->
+                <div class="vocab-mode-tabs" id="vocab-mode-tabs">
+                    <button class="vocab-mode-btn active" data-mode="flip"><i class="fa-solid fa-clone"></i> 3D 翻轉字卡</button>
+                    <button class="vocab-mode-btn" data-mode="quiz"><i class="fa-solid fa-brain"></i> 記憶抽查測驗</button>
+                    <button class="vocab-mode-btn" data-mode="autoplay"><i class="fa-solid fa-headphones"></i> 單字自動連播</button>
+                    <button class="vocab-mode-btn" data-mode="table"><i class="fa-solid fa-table-list"></i> 單字清單全覽</button>
                 </div>
 
                 <!-- 分類過濾標籤列 -->
@@ -297,68 +362,145 @@
                     <!-- JS 動態生成分類按鈕 -->
                 </div>
 
-                <!-- 翻轉字卡容器 -->
-                <div class="flashcard-deck-wrap">
-                    <div class="flashcard-3d" id="main-flashcard">
-                        <!-- 正面: 印尼語 + 詞性 + 語音 -->
-                        <div class="card-face card-front">
-                            <span class="card-category-tag" id="card-cat-tag">美食與餐飲</span>
-                            <div class="card-word-id" id="card-word-id">Nasi Goreng</div>
-                            <div class="card-hint"><i class="fa-solid fa-rotate"></i> 點擊卡片翻面查看中文與例句</div>
-                            <div class="card-front-btns">
-                                <button class="card-audio-btn" id="card-play-audio-btn" title="聽印尼語發音"><i class="fa-solid fa-volume-high"></i></button>
-                                <button class="card-audio-btn small" id="card-play-bilingual-btn" title="中+印 雙語朗讀"><i class="fa-solid fa-language"></i> 雙語</button>
+                <!-- 模式 1: 3D 翻轉字卡容器 -->
+                <div class="vocab-mode-container" id="mode-flip-container">
+                    <div class="flashcard-deck-wrap">
+                        <div class="flashcard-3d" id="main-flashcard">
+                            <!-- 正面: 印尼語 + 詞性 + 語音 -->
+                            <div class="card-face card-front">
+                                <span class="card-category-tag" id="card-cat-tag">美食與餐飲</span>
+                                <div class="card-word-id" id="card-word-id">Nasi Goreng</div>
+                                <div class="card-hint"><i class="fa-solid fa-rotate"></i> 點擊卡片翻面查看中文與例句</div>
+                                <div class="card-front-btns">
+                                    <button class="card-audio-btn" id="card-play-audio-btn" title="聽印尼語發音"><i class="fa-solid fa-volume-high"></i></button>
+                                    <button class="card-audio-btn small" id="card-play-bilingual-btn" title="中+印 雙語朗讀"><i class="fa-solid fa-language"></i> 雙語朗讀</button>
+                                </div>
+                            </div>
+                            <!-- 背面: 中文 + 例句 -->
+                            <div class="card-face card-back">
+                                <div class="card-word-zh" id="card-word-zh">印尼炒飯</div>
+                                <div class="card-example-box">
+                                    <div class="ex-id" id="card-ex-id">Nasi goreng spesial pedas.</div>
+                                    <div class="ex-zh" id="card-ex-zh">特製大辣炒飯。</div>
+                                </div>
+                                <div class="card-back-actions">
+                                    <button class="card-audio-btn small" id="card-play-ex-btn" title="聽例句"><i class="fa-solid fa-volume-high"></i> 聽例句</button>
+                                </div>
                             </div>
                         </div>
-                        <!-- 背面: 中文 + 例句 -->
-                        <div class="card-face card-back">
-                            <div class="card-word-zh" id="card-word-zh">印尼炒飯</div>
-                            <div class="card-example-box">
-                                <div class="ex-id" id="card-ex-id">Nasi goreng spesial pedas.</div>
-                                <div class="ex-zh" id="card-ex-zh">特製大辣炒飯。</div>
-                            </div>
-                            <div class="card-back-actions">
-                                <button class="card-audio-btn small" id="card-play-ex-btn" title="聽例句"><i class="fa-solid fa-volume-high"></i> 聽例句</button>
-                            </div>
+
+                        <!-- 字卡控制項 (上一張、掌握、翻轉、下一張) -->
+                        <div class="deck-controls">
+                            <button class="deck-btn" id="card-prev-btn" title="上一張"><i class="fa-solid fa-chevron-left"></i> 上一張</button>
+                            <button class="deck-btn success" id="card-master-btn" title="標記為已掌握"><i class="fa-solid fa-check"></i> 標記已掌握</button>
+                            <button class="deck-btn" id="card-flip-btn" title="翻面"><i class="fa-solid fa-rotate"></i> 翻轉</button>
+                            <button class="deck-btn primary" id="card-next-btn" title="下一張">下一張 <i class="fa-solid fa-chevron-right"></i></button>
                         </div>
-                    </div>
 
-                    <!-- 字卡控制項 (上一張、掌握、下一張、隨機) -->
-                    <div class="deck-controls">
-                        <button class="deck-btn" id="card-prev-btn" title="上一張"><i class="fa-solid fa-chevron-left"></i> 上一張</button>
-                        <button class="deck-btn success" id="card-master-btn" title="標記為已掌握"><i class="fa-solid fa-check"></i> 標記已掌握</button>
-                        <button class="deck-btn" id="card-flip-btn" title="翻面"><i class="fa-solid fa-rotate"></i> 翻轉</button>
-                        <button class="deck-btn primary" id="card-next-btn" title="下一張">下一張 <i class="fa-solid fa-chevron-right"></i></button>
-                    </div>
-
-                    <div class="deck-indicator">
-                        <span id="card-index-indicator">1 / 20</span>
-                        <span class="shuffle-btn" id="card-shuffle-btn"><i class="fa-solid fa-shuffle"></i> 隨機洗牌</span>
+                        <div class="deck-indicator">
+                            <span id="card-index-indicator">1 / 25</span>
+                            <span class="shuffle-btn" id="card-shuffle-btn"><i class="fa-solid fa-shuffle"></i> 隨機洗牌</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- 單字清單快速瀏覽模式切換 -->
-                <div class="vocab-list-section">
-                    <div class="list-section-header">
-                        <h3><i class="fa-solid fa-table-list"></i> 當前分類單字全覽清單</h3>
-                        <span id="vocab-count-badge" class="count-badge">22 個單字</span>
+                <!-- 模式 2: 記憶抽查測驗容器 (Active Recall Quiz) -->
+                <div class="vocab-mode-container" id="mode-quiz-container" style="display: none;">
+                    <div class="recall-quiz-card">
+                        <div class="quiz-status-header">
+                            <span class="badge-pill" id="recall-quiz-cat">美食與餐飲</span>
+                            <span class="quiz-score-pill"><i class="fa-solid fa-trophy"></i> 答對率：<span id="recall-accuracy">100%</span></span>
+                        </div>
+                        <div class="recall-prompt-box">
+                            <div class="recall-word-id" id="recall-word-id">Nasi Goreng</div>
+                            <button class="action-btn small" id="recall-listen-btn"><i class="fa-solid fa-volume-high"></i> 聽發音</button>
+                        </div>
+                        <div class="recall-options-grid" id="recall-options-grid">
+                            <!-- JS 動態生成 4 個中文選項 -->
+                        </div>
+                        <div class="recall-feedback" id="recall-feedback" style="display: none;"></div>
+                        <div class="recall-footer-actions">
+                            <button class="deck-btn primary" id="recall-next-btn" style="display: none;">下一題 <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
                     </div>
-                    <div class="vocab-table-container" id="vocab-table-container">
-                        <!-- JS 動態生成表格 -->
+                </div>
+
+                <!-- 模式 3: 單字自動連續朗讀容器 (Continuous Auto-Play) -->
+                <div class="vocab-mode-container" id="mode-autoplay-container" style="display: none;">
+                    <div class="autoplay-dashboard">
+                        <div class="autoplay-controls-bar">
+                            <button class="action-btn primary large-play-btn" id="autoplay-toggle-btn">
+                                <i class="fa-solid fa-play"></i> <span>開始自動連續播放</span>
+                            </button>
+                            <div class="autoplay-settings">
+                                <div class="setting-item">
+                                    <label>播放模式：</label>
+                                    <select id="autoplay-mode-select" class="form-select">
+                                        <option value="bilingual">中+印 雙語播放 (先中文後印尼語)</option>
+                                        <option value="id-only">純印尼語朗讀</option>
+                                    </select>
+                                </div>
+                                <div class="setting-item">
+                                    <label>單字間隔：</label>
+                                    <select id="autoplay-interval-select" class="form-select">
+                                        <option value="1500">1.5 秒 (快速)</option>
+                                        <option value="2500" selected>2.5 秒 (標準)</option>
+                                        <option value="4000">4.0 秒 (跟讀留白)</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="autoplay-now-playing" id="autoplay-now-card">
+                            <span class="now-label">🎧 正在連續播放：</span>
+                            <div class="now-id" id="autoplay-current-id">準備就緒</div>
+                            <div class="now-zh" id="autoplay-current-zh">點擊上方按鈕開始沉浸式聽力記憶</div>
+                            <div class="autoplay-progress-bar">
+                                <div class="autoplay-progress-fill" id="autoplay-progress-fill" style="width: 0%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 模式 4: 當前分類單字全覽清單模式 -->
+                <div class="vocab-mode-container" id="mode-table-container" style="display: none;">
+                    <div class="vocab-list-section">
+                        <div class="list-section-header">
+                            <h3><i class="fa-solid fa-table-list"></i> 當前分類單字全覽清單</h3>
+                            <div class="table-actions">
+                                <button class="action-btn small" id="play-all-table-btn"><i class="fa-solid fa-headphones"></i> 從頭朗讀本類別</button>
+                                <span id="vocab-count-badge" class="count-badge">25 個單字</span>
+                            </div>
+                        </div>
+                        <div class="vocab-table-container" id="vocab-table-container">
+                            <!-- JS 動態生成表格 -->
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <!-- 視圖 6: 10 大實境情境會話 (Module View) -->
+            <!-- 視圖 6: 30 大實境情境會話 (Module View) -->
             <section id="module-view" class="view">
                 <div class="section-header">
-                    <h2><i class="fa-solid fa-comments"></i> 10 大現代實戰情境會話 (Situational Conversations)</h2>
-                    <p class="subtitle">結合雅加達與峇里島生活情境，具備「中+印雙語播放」、「純印尼語朗讀」與「聽力盲聽模式」，並內建角色扮演模擬測驗！</p>
+                    <h2><i class="fa-solid fa-comments"></i> 30 大現代實戰情境會話 (30 Situational Conversations)</h2>
+                    <p class="subtitle">依 8 大日常情境分類（交通、美食、住宿、購物、社交、觀光、商務、醫療），支援中印雙語朗讀、純印尼語播放、聽力盲聽模式與角色扮演測驗！</p>
                 </div>
 
-                <!-- 會話情境卡片網格 -->
+                <!-- 8 大情境分類過濾標籤列 -->
+                <div class="situational-category-tabs" id="situational-category-tabs">
+                    <button class="sit-cat-btn active" data-cat="all"><i class="fa-solid fa-border-all"></i> 全部情境 (30)</button>
+                    <button class="sit-cat-btn" data-cat="transport"><i class="fa-solid fa-motorcycle"></i> 交通與出行 (4)</button>
+                    <button class="sit-cat-btn" data-cat="culinary"><i class="fa-solid fa-utensils"></i> 美食與餐飲 (4)</button>
+                    <button class="sit-cat-btn" data-cat="accommodation"><i class="fa-solid fa-hotel"></i> 住宿與生活 (4)</button>
+                    <button class="sit-cat-btn" data-cat="shopping"><i class="fa-solid fa-cart-shopping"></i> 購物與超市 (4)</button>
+                    <button class="sit-cat-btn" data-cat="social"><i class="fa-solid fa-handshake"></i> 社交與文化 (4)</button>
+                    <button class="sit-cat-btn" data-cat="travel"><i class="fa-solid fa-umbrella-beach"></i> 觀光旅遊 (4)</button>
+                    <button class="sit-cat-btn" data-cat="business"><i class="fa-solid fa-briefcase"></i> 商務職場 (3)</button>
+                    <button class="sit-cat-btn" data-cat="health"><i class="fa-solid fa-kit-medical"></i> 醫療與應急 (3)</button>
+                </div>
+
+                <!-- 會話情境卡片網格 (30 組) -->
                 <div class="situational-grid" id="situational-grid-container">
-                    <!-- JS 動態生成 10 大模組卡片 -->
+                    <!-- JS 動態生成 30 組模組卡片 -->
                 </div>
             </section>
 

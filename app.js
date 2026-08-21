@@ -310,6 +310,39 @@ document.addEventListener('DOMContentLoaded', async () => {
     function initAlphabetModule(alphaModule) {
         if (!alphaModule) return;
 
+        // 1. Sub-navigation tabs switching
+        const subNavButtons = document.querySelectorAll('.alphabet-sub-nav .sub-nav-btn');
+        const subSections = {
+            'all': document.getElementById('alpha-sec-all'),
+            'vowels': document.getElementById('alpha-sec-vowels'),
+            'consonants': document.getElementById('alpha-sec-consonants'),
+            'digraphs': document.getElementById('alpha-sec-digraphs'),
+            'syllables': document.getElementById('alpha-sec-syllables'),
+            'stress': document.getElementById('alpha-sec-stress')
+        };
+        const quickTips = document.getElementById('alphabet-quick-tips');
+
+        subNavButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                subNavButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const targetSub = btn.getAttribute('data-sub');
+
+                Object.keys(subSections).forEach(k => {
+                    if (subSections[k]) {
+                        subSections[k].style.display = (k === targetSub) ? 'block' : 'none';
+                    }
+                });
+
+                if (quickTips) {
+                    quickTips.style.display = (targetSub === 'all' || targetSub === 'consonants') ? 'grid' : 'none';
+                }
+
+                if (navigator.vibrate) navigator.vibrate(10);
+            });
+        });
+
+        // 2. Render 26 Letters
         const alphabetContainer = document.getElementById('alphabet-grid-container');
         if (alphabetContainer && alphaModule.letters) {
             alphabetContainer.innerHTML = '';
@@ -330,7 +363,101 @@ document.addEventListener('DOMContentLoaded', async () => {
             });
         }
 
+        // 3. Render Vowels Detail & Minimal Pairs
+        const vowelsContainer = document.getElementById('vowels-detail-container');
+        const minimalPairsContainer = document.getElementById('minimal-pairs-container');
+
+        if (vowelsContainer && alphaModule.vowels_detail && alphaModule.vowels_detail.items) {
+            vowelsContainer.innerHTML = '';
+            alphaModule.vowels_detail.items.forEach(v => {
+                const card = document.createElement('div');
+                card.className = 'vowel-card';
+                card.innerHTML = `
+                    <div class="vowel-header">
+                        <span class="vowel-symbol">${v.vowel}</span>
+                        <span class="letter-ipa">${v.ipa}</span>
+                    </div>
+                    <div class="vowel-desc">${v.desc}</div>
+                    <div class="vowel-ex-list">
+                        ${v.examples.map(ex => `<span class="vowel-ex-pill" data-word="${ex.id}" data-zh="${ex.zh}">${ex.id} (${ex.zh})</span>`).join('')}
+                    </div>
+                `;
+                card.querySelectorAll('.vowel-ex-pill').forEach(pill => {
+                    pill.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        const word = pill.getAttribute('data-word');
+                        const zh = pill.getAttribute('data-zh');
+                        audioEngine.speakBilingual(word, zh);
+                    });
+                });
+                vowelsContainer.appendChild(card);
+            });
+        }
+
+        if (minimalPairsContainer && alphaModule.vowels_detail && alphaModule.vowels_detail.minimal_pairs) {
+            minimalPairsContainer.innerHTML = '';
+            alphaModule.vowels_detail.minimal_pairs.forEach(pair => {
+                const card = document.createElement('div');
+                card.className = 'minimal-pair-card';
+                card.innerHTML = `
+                    <div class="pair-row pair-1">
+                        <strong>${pair.word1}</strong>
+                        <span style="color: var(--text-muted);">${pair.meaning1}</span>
+                    </div>
+                    <div class="pair-row pair-2">
+                        <strong>${pair.word2}</strong>
+                        <span style="color: var(--text-muted);">${pair.meaning2}</span>
+                    </div>
+                    <div class="pair-tip"><i class="fa-solid fa-lightbulb"></i> ${pair.tip}</div>
+                `;
+                card.querySelector('.pair-1').addEventListener('click', () => {
+                    const cleanWord = pair.word1.split(' (')[0];
+                    audioEngine.speakBilingual(cleanWord, pair.meaning1);
+                });
+                card.querySelector('.pair-2').addEventListener('click', () => {
+                    const cleanWord = pair.word2.split(' (')[0];
+                    audioEngine.speakBilingual(cleanWord, pair.meaning2);
+                });
+                minimalPairsContainer.appendChild(card);
+            });
+        }
+
+        // 4. Render Key Consonants
+        const consonantsContainer = document.getElementById('key-consonants-container');
+        if (consonantsContainer && alphaModule.key_consonants) {
+            consonantsContainer.innerHTML = '';
+            alphaModule.key_consonants.forEach(c => {
+                const card = document.createElement('div');
+                card.className = 'key-consonant-card';
+                card.innerHTML = `
+                    <div class="consonant-top">
+                        <div class="consonant-badge">${c.combo}</div>
+                        <div>
+                            <h4 style="font-size: 1.1rem; font-weight: 800; color: var(--text-main);">${c.title}</h4>
+                            <span class="letter-ipa">${c.ipa}</span>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">${c.desc}</p>
+                    <div style="font-weight: 700; font-size: 0.85rem; color: var(--accent); margin-bottom: 0.5rem;">示範例詞 (點擊試聽)：</div>
+                    <div class="vowel-ex-list">
+                        ${c.examples.map(ex => `<span class="vowel-ex-pill" data-word="${ex.id}" data-zh="${ex.zh}">${ex.id} (${ex.zh})</span>`).join('')}
+                    </div>
+                `;
+                card.querySelectorAll('.vowel-ex-pill').forEach(pill => {
+                    pill.addEventListener('click', () => {
+                        const word = pill.getAttribute('data-word');
+                        const zh = pill.getAttribute('data-zh');
+                        audioEngine.speakBilingual(word, zh);
+                    });
+                });
+                consonantsContainer.appendChild(card);
+            });
+        }
+
+        // 5. Render Digraphs & Diphthongs
         const digraphsContainer = document.getElementById('digraphs-grid-container');
+        const diphthongsContainer = document.getElementById('diphthongs-grid-container');
+
         if (digraphsContainer && alphaModule.digraphs) {
             digraphsContainer.innerHTML = '';
             alphaModule.digraphs.forEach(item => {
@@ -345,29 +472,86 @@ document.addEventListener('DOMContentLoaded', async () => {
                     <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.3rem;">${item.note}</div>
                 `;
                 card.addEventListener('click', () => {
-                    audioEngine.speakBilingual(item.example, item.zh);
+                    audioEngine.speakBilingual(item.example, `${item.combo}，${item.zh}`);
                 });
                 digraphsContainer.appendChild(card);
             });
+        }
 
-            if (alphaModule.diphthongs) {
-                alphaModule.diphthongs.forEach(item => {
-                    const card = document.createElement('div');
-                    card.className = 'digraph-card';
-                    card.innerHTML = `
-                        <div class="digraph-top">
-                            <span class="digraph-combo">${item.combo}</span>
-                            <span style="font-size: 0.8rem; background: var(--accent-light); color: var(--accent); padding: 0.1rem 0.5rem; border-radius: 4px;">雙母音</span>
-                        </div>
-                        <div style="font-weight: 700; color: var(--text-main); font-size: 1.05rem;">${item.example} (${item.zh})</div>
-                        <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.3rem;">${item.note}</div>
-                    `;
-                    card.addEventListener('click', () => {
-                        audioEngine.speakBilingual(item.example, item.zh);
-                    });
-                    digraphsContainer.appendChild(card);
+        if (diphthongsContainer && alphaModule.diphthongs) {
+            diphthongsContainer.innerHTML = '';
+            alphaModule.diphthongs.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'digraph-card';
+                card.innerHTML = `
+                    <div class="digraph-top">
+                        <span class="digraph-combo">${item.combo}</span>
+                        <span style="font-size: 0.8rem; background: var(--accent-light); color: var(--accent); padding: 0.1rem 0.5rem; border-radius: 4px;">雙母音</span>
+                    </div>
+                    <div style="font-weight: 700; color: var(--text-main); font-size: 1.05rem;">${item.example} (${item.zh})</div>
+                    <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.3rem;">${item.note}</div>
+                `;
+                card.addEventListener('click', () => {
+                    audioEngine.speakBilingual(item.example, `${item.combo}，${item.zh}`);
                 });
-            }
+                diphthongsContainer.appendChild(card);
+            });
+        }
+
+        // 6. Render Syllable Matrix
+        const syllableContainer = document.getElementById('syllable-matrix-container');
+        if (syllableContainer && alphaModule.syllable_matrix) {
+            syllableContainer.innerHTML = '';
+            alphaModule.syllable_matrix.forEach(row => {
+                const rowEl = document.createElement('div');
+                rowEl.className = 'syllable-row';
+                rowEl.innerHTML = `
+                    <span class="syllable-consonant-tag">${row.consonant}</span>
+                    <div class="syllable-pills-list">
+                        ${row.syllables.map((syl, sIdx) => `
+                            <button class="syllable-btn" data-syl="${syl}" data-ex="${row.examples[sIdx]}">
+                                <strong>${syl}</strong> <small style="color: var(--text-muted); font-size: 0.75rem;">(${row.examples[sIdx]})</small>
+                            </button>
+                        `).join('')}
+                    </div>
+                `;
+                rowEl.querySelectorAll('.syllable-btn').forEach(sBtn => {
+                    sBtn.addEventListener('click', () => {
+                        const syl = sBtn.getAttribute('data-syl');
+                        const ex = sBtn.getAttribute('data-ex');
+                        audioEngine.speak(`${syl}... ${ex}`, { lang: 'id' });
+                    });
+                });
+                syllableContainer.appendChild(rowEl);
+            });
+        }
+
+        // 7. Render Stress Rules
+        const stressContainer = document.getElementById('stress-rules-container');
+        if (stressContainer && alphaModule.syllable_patterns) {
+            stressContainer.innerHTML = `
+                <div class="tip-card highlight-box" style="margin-bottom: 1.5rem;">
+                    <div class="tip-icon"><i class="fa-solid fa-music"></i></div>
+                    <div>
+                        <strong>倒數第二音節重音原則 (Penultimate Syllable Stress)</strong>
+                        <p>印尼語的重音非常規律，絕大多數單字的重音落在「倒數第二個音節」上。例如：<em>sa-YA</em> (我), <em>ma-KAN</em> (吃), <em>be-LA-jar</em> (學習), <em>In-do-NE-sia</em> (印尼)。當加上後綴詞綴時，重音會自然向後順移，如 <em>ma-kan</em> (吃) -> <em>ma-kan-AN</em> (食物)。</p>
+                    </div>
+                </div>
+                <div style="background: var(--surface); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 1.5rem; box-shadow: var(--shadow-sm);">
+                    <h4 style="font-size: 1.1rem; font-weight: 800; margin-bottom: 1rem;"><i class="fa-solid fa-list-check"></i> 常見 6 大音節拼讀結構模式：</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem;">
+                        ${alphaModule.syllable_patterns.patterns.map(p => `
+                            <div style="background: var(--background); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1rem;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.3rem;">
+                                    <strong style="color: var(--primary); font-size: 1.1rem;">${p.pattern}</strong>
+                                    <span style="font-size: 0.8rem; color: var(--text-muted);">${p.desc}</span>
+                                </div>
+                                <div style="font-size: 0.88rem; color: var(--text-main); font-weight: 600;">例詞：${p.example}</div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
         }
     }
 
@@ -648,14 +832,35 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     // ==========================================================================
-    // 8. 3D Flashcards & Vocab Module
-    // ==========================================
+    // 8. 3D Flashcards & Vocab Module (4 Study Modes: Flip, Quiz, Auto-Play, Table)
+    // ==========================================================================
     function initFlashcardModule(categories) {
         if (!categories || categories.length === 0) return;
 
         let currentCatIndex = 0;
         let currentCardIndex = 0;
         let currentWords = categories[0].words || [];
+        let currentMode = 'flip'; // 'flip' | 'quiz' | 'autoplay' | 'table'
+
+        // Auto-play state
+        let isAutoPlaying = false;
+        let autoPlayTimer = null;
+        let autoPlayWordIndex = 0;
+
+        // Quiz state
+        let quizWord = null;
+        let quizCorrectIndex = 0;
+        let quizTotalAnswered = 0;
+        let quizTotalCorrect = 0;
+
+        // UI Elements
+        const modeButtons = document.querySelectorAll('.vocab-mode-btn');
+        const modeContainers = {
+            'flip': document.getElementById('mode-flip-container'),
+            'quiz': document.getElementById('mode-quiz-container'),
+            'autoplay': document.getElementById('mode-autoplay-container'),
+            'table': document.getElementById('mode-table-container')
+        };
 
         const catFiltersContainer = document.getElementById('vocab-category-filters');
         const flashcard3d = document.getElementById('main-flashcard');
@@ -668,25 +873,65 @@ document.addEventListener('DOMContentLoaded', async () => {
         const vocabTableContainer = document.getElementById('vocab-table-container');
         const vocabCountBadge = document.getElementById('vocab-count-badge');
 
+        // Mode Switching
+        modeButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                modeButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentMode = btn.getAttribute('data-mode');
+
+                // Stop auto-play when switching out
+                if (currentMode !== 'autoplay' && isAutoPlaying) {
+                    stopAutoPlay();
+                }
+
+                Object.keys(modeContainers).forEach(m => {
+                    if (modeContainers[m]) {
+                        modeContainers[m].style.display = (m === currentMode) ? 'block' : 'none';
+                    }
+                });
+
+                if (currentMode === 'quiz') {
+                    loadQuizQuestion();
+                } else if (currentMode === 'table') {
+                    renderVocabTable();
+                } else if (currentMode === 'autoplay') {
+                    updateAutoPlayUIReady();
+                }
+
+                if (navigator.vibrate) navigator.vibrate(10);
+            });
+        });
+
+        // Render Category Filter Pills
         if (catFiltersContainer) {
             catFiltersContainer.innerHTML = '';
             categories.forEach((cat, idx) => {
                 const btn = document.createElement('button');
                 btn.className = `cat-filter-btn ${idx === 0 ? 'active' : ''}`;
-                btn.innerHTML = `<i class="fa-solid ${cat.icon || 'fa-tag'}"></i> ${cat.name}`;
+                btn.innerHTML = `<i class="fa-solid ${cat.icon || 'fa-tag'}"></i> ${cat.name} (${cat.words ? cat.words.length : 0})`;
                 btn.addEventListener('click', () => {
                     document.querySelectorAll('.cat-filter-btn').forEach(b => b.classList.remove('active'));
                     btn.classList.add('active');
                     currentCatIndex = idx;
                     currentWords = categories[idx].words || [];
                     currentCardIndex = 0;
+                    autoPlayWordIndex = 0;
+
+                    if (isAutoPlaying) {
+                        stopAutoPlay();
+                    }
+
                     updateCardUI();
                     renderVocabTable();
+                    if (currentMode === 'quiz') loadQuizQuestion();
+                    if (currentMode === 'autoplay') updateAutoPlayUIReady();
                 });
                 catFiltersContainer.appendChild(btn);
             });
         }
 
+        // ================= Mode 1: 3D Flip Card Logic =================
         function updateCardUI() {
             if (currentWords.length === 0) return;
             const w = currentWords[currentCardIndex];
@@ -705,28 +950,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                     ? `<i class="fa-solid fa-check-double"></i> 已掌握 (+5 XP)`
                     : `<i class="fa-solid fa-check"></i> 標記已掌握`;
             }
-        }
-
-        function renderVocabTable() {
-            if (!vocabTableContainer) return;
-            vocabTableContainer.innerHTML = '';
-            vocabCountBadge.textContent = `${currentWords.length} 個單字`;
-
-            currentWords.forEach(w => {
-                const row = document.createElement('div');
-                row.className = 'vocab-list-row';
-                row.innerHTML = `
-                    <div>
-                        <strong style="color: var(--text-main); font-size: 1rem;">${w.id_word}</strong>
-                        <div style="font-size: 0.85rem; color: var(--text-muted);">${w.zh_word}</div>
-                    </div>
-                    <button class="icon-action-btn" style="width: 32px; height: 32px;"><i class="fa-solid fa-volume-high"></i></button>
-                `;
-                row.addEventListener('click', () => {
-                    audioEngine.speakBilingual(w.id_word, w.zh_word);
-                });
-                vocabTableContainer.appendChild(row);
-            });
         }
 
         flashcard3d?.addEventListener('click', (e) => {
@@ -790,44 +1013,266 @@ document.addEventListener('DOMContentLoaded', async () => {
             updateCardUI();
         });
 
+        // ================= Mode 2: Active Recall Quiz Logic =================
+        const recallCatEl = document.getElementById('recall-quiz-cat');
+        const recallAccuracyEl = document.getElementById('recall-accuracy');
+        const recallWordIdEl = document.getElementById('recall-word-id');
+        const recallListenBtn = document.getElementById('recall-listen-btn');
+        const recallOptionsGrid = document.getElementById('recall-options-grid');
+        const recallFeedbackEl = document.getElementById('recall-feedback');
+        const recallNextBtn = document.getElementById('recall-next-btn');
+
+        function loadQuizQuestion() {
+            if (currentWords.length === 0) return;
+            recallCatEl.textContent = categories[currentCatIndex].name.split(' (')[0];
+            recallFeedbackEl.style.display = 'none';
+            recallNextBtn.style.display = 'none';
+
+            // Pick a word
+            const randIdx = Math.floor(Math.random() * currentWords.length);
+            quizWord = currentWords[randIdx];
+            recallWordIdEl.textContent = quizWord.id_word;
+
+            // Pick 3 distractors from all categories
+            const allWords = categories.flatMap(c => c.words || []).filter(w => w.zh_word !== quizWord.zh_word);
+            const distractors = [];
+            while (distractors.length < 3 && allWords.length > 0) {
+                const d = allWords[Math.floor(Math.random() * allWords.length)];
+                if (!distractors.includes(d.zh_word)) {
+                    distractors.push(d.zh_word);
+                }
+            }
+
+            const options = [...distractors, quizWord.zh_word].sort(() => Math.random() - 0.5);
+            quizCorrectIndex = options.indexOf(quizWord.zh_word);
+
+            recallOptionsGrid.innerHTML = '';
+            options.forEach((optZh, oIdx) => {
+                const optBtn = document.createElement('button');
+                optBtn.className = 'recall-opt-btn';
+                optBtn.textContent = `${String.fromCharCode(65 + oIdx)}. ${optZh}`;
+                optBtn.addEventListener('click', () => {
+                    handleQuizAnswer(oIdx, optBtn);
+                });
+                recallOptionsGrid.appendChild(optBtn);
+            });
+        }
+
+        function handleQuizAnswer(selectedIdx, btnEl) {
+            quizTotalAnswered++;
+            const isCorrect = (selectedIdx === quizCorrectIndex);
+
+            recallOptionsGrid.querySelectorAll('.recall-opt-btn').forEach((b, idx) => {
+                b.disabled = true;
+                if (idx === quizCorrectIndex) b.classList.add('correct');
+                else if (idx === selectedIdx && !isCorrect) b.classList.add('wrong');
+            });
+
+            if (isCorrect) {
+                quizTotalCorrect++;
+                addPoints(10);
+                recallFeedbackEl.className = 'recall-feedback success';
+                recallFeedbackEl.innerHTML = `🎉 <strong>答對了！(+10 XP)</strong> ${quizWord.id_word} = ${quizWord.zh_word}`;
+            } else {
+                recallFeedbackEl.className = 'recall-feedback error';
+                recallFeedbackEl.innerHTML = `💡 <strong>記住了喔：</strong> ${quizWord.id_word} 的意思是「${quizWord.zh_word}」`;
+            }
+
+            recallFeedbackEl.style.display = 'block';
+            recallNextBtn.style.display = 'inline-flex';
+
+            const accRate = Math.round((quizTotalCorrect / quizTotalAnswered) * 100);
+            recallAccuracyEl.textContent = `${accRate}% (${quizTotalCorrect}/${quizTotalAnswered})`;
+
+            // Audio confirmation
+            audioEngine.speakBilingual(quizWord.id_word, quizWord.zh_word);
+        }
+
+        recallListenBtn?.addEventListener('click', () => {
+            if (quizWord) {
+                audioEngine.speak(quizWord.id_word, { lang: 'id' });
+            }
+        });
+
+        recallNextBtn?.addEventListener('click', () => {
+            loadQuizQuestion();
+        });
+
+        // ================= Mode 3: Continuous Auto-Play Logic =================
+        const autoplayToggleBtn = document.getElementById('autoplay-toggle-btn');
+        const autoplayModeSelect = document.getElementById('autoplay-mode-select');
+        const autoplayIntervalSelect = document.getElementById('autoplay-interval-select');
+        const autoplayCurrentId = document.getElementById('autoplay-current-id');
+        const autoplayCurrentZh = document.getElementById('autoplay-current-zh');
+        const autoplayProgressFill = document.getElementById('autoplay-progress-fill');
+
+        function updateAutoPlayUIReady() {
+            if (currentWords.length > 0) {
+                const w = currentWords[autoPlayWordIndex % currentWords.length];
+                autoplayCurrentId.textContent = w.id_word;
+                autoplayCurrentZh.textContent = w.zh_word;
+                const progressPct = Math.round(((autoPlayWordIndex + 1) / currentWords.length) * 100);
+                autoplayProgressFill.style.width = `${progressPct}%`;
+            }
+        }
+
+        function stopAutoPlay() {
+            isAutoPlaying = false;
+            if (autoPlayTimer) clearTimeout(autoPlayTimer);
+            audioEngine.stop();
+            if (autoplayToggleBtn) {
+                autoplayToggleBtn.classList.remove('playing');
+                autoplayToggleBtn.innerHTML = `<i class="fa-solid fa-play"></i> <span>開始自動連續播放</span>`;
+            }
+        }
+
+        async function stepAutoPlay() {
+            if (!isAutoPlaying || currentWords.length === 0) return;
+
+            const w = currentWords[autoPlayWordIndex];
+            autoplayCurrentId.textContent = w.id_word;
+            autoplayCurrentZh.textContent = w.zh_word;
+            const progressPct = Math.round(((autoPlayWordIndex + 1) / currentWords.length) * 100);
+            autoplayProgressFill.style.width = `${progressPct}%`;
+
+            const playMode = autoplayModeSelect ? autoplayModeSelect.value : 'bilingual';
+            const intervalMs = autoplayIntervalSelect ? parseInt(autoplayIntervalSelect.value, 10) : 2500;
+
+            if (playMode === 'bilingual') {
+                await audioEngine.speakBilingual(w.id_word, w.zh_word);
+            } else {
+                await audioEngine.speak(w.id_word, { lang: 'id' });
+            }
+
+            if (!isAutoPlaying) return;
+
+            autoPlayTimer = setTimeout(() => {
+                if (isAutoPlaying) {
+                    autoPlayWordIndex = (autoPlayWordIndex + 1) % currentWords.length;
+                    if (autoPlayWordIndex === 0) {
+                        addPoints(15); // Bonus for finishing a full category
+                    }
+                    stepAutoPlay();
+                }
+            }, intervalMs);
+        }
+
+        autoplayToggleBtn?.addEventListener('click', () => {
+            if (isAutoPlaying) {
+                stopAutoPlay();
+            } else {
+                isAutoPlaying = true;
+                autoplayToggleBtn.classList.add('playing');
+                autoplayToggleBtn.innerHTML = `<i class="fa-solid fa-pause"></i> <span>暫停連續播放</span>`;
+                stepAutoPlay();
+            }
+        });
+
+        // ================= Mode 4: Table View Logic =================
+        function renderVocabTable() {
+            if (!vocabTableContainer) return;
+            vocabTableContainer.innerHTML = '';
+            vocabCountBadge.textContent = `${currentWords.length} 個單字`;
+
+            currentWords.forEach(w => {
+                const row = document.createElement('div');
+                row.className = 'vocab-list-row';
+                row.innerHTML = `
+                    <div>
+                        <strong style="color: var(--text-main); font-size: 1rem;">${w.id_word}</strong>
+                        <div style="font-size: 0.85rem; color: var(--text-muted);">${w.zh_word}</div>
+                    </div>
+                    <div style="display: flex; gap: 0.4rem;">
+                        <button class="icon-action-btn bilingual-btn" title="中+印 雙語"><i class="fa-solid fa-language"></i></button>
+                        <button class="icon-action-btn id-btn" title="純印尼語"><i class="fa-solid fa-volume-high"></i></button>
+                    </div>
+                `;
+                row.querySelector('.bilingual-btn').addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    audioEngine.speakBilingual(w.id_word, w.zh_word);
+                });
+                row.querySelector('.id-btn').addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    audioEngine.speak(w.id_word, { lang: 'id' });
+                });
+                row.addEventListener('click', () => {
+                    audioEngine.speakBilingual(w.id_word, w.zh_word);
+                });
+                vocabTableContainer.appendChild(row);
+            });
+        }
+
+        document.getElementById('play-all-table-btn')?.addEventListener('click', () => {
+            // Switch to autoplay mode
+            document.querySelector('.vocab-mode-btn[data-mode="autoplay"]')?.click();
+            autoPlayWordIndex = 0;
+            if (!isAutoPlaying) {
+                autoplayToggleBtn?.click();
+            }
+        });
+
         updateCardUI();
         renderVocabTable();
     }
 
     // ==========================================================================
-    // 9. 10 Situational Modules & Dialogue Player (Viet-inspired Architecture)
+    // 9. 30 Situational Modules & Dialogue Player (8 Category Filter Tabs)
     // ==========================================================================
     function initSituationalModule(modules) {
         if (!modules || modules.length === 0) return;
 
+        let activeCategory = 'all';
         const gridContainer = document.getElementById('situational-grid-container');
-        if (!gridContainer) return;
+        const categoryTabs = document.querySelectorAll('.situational-category-tabs .sit-cat-btn');
 
-        gridContainer.innerHTML = '';
-        modules.forEach(mod => {
-            const card = document.createElement('div');
-            card.className = 'module-card';
-            card.innerHTML = `
-                <img src="${mod.image || 'assets/indo_hero_illustration_1787210889692.jpg'}" class="module-card-img" alt="${mod.title}">
-                <div class="module-card-content">
-                    <span class="module-loc-tag"><i class="fa-solid fa-location-dot"></i> ${mod.location || '印尼生活實境'}</span>
-                    <h3>${mod.title}</h3>
-                    <p>${mod.subtitle}</p>
-                    <button class="action-btn start-lesson-btn" data-mod-id="${mod.id}"><i class="fa-solid fa-play"></i> 進入實境</button>
-                </div>
-            `;
-            gridContainer.appendChild(card);
-        });
+        function renderModulesGrid() {
+            if (!gridContainer) return;
+            gridContainer.innerHTML = '';
 
-        document.querySelectorAll('.start-lesson-btn').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                const modId = e.currentTarget.getAttribute('data-mod-id');
-                const selectedMod = modules.find(m => m.id === modId);
-                if (selectedMod) {
-                    openLesson(selectedMod);
-                }
+            const filteredModules = (activeCategory === 'all')
+                ? modules
+                : modules.filter(m => m.category === activeCategory);
+
+            filteredModules.forEach(mod => {
+                const card = document.createElement('div');
+                card.className = 'module-card';
+                card.innerHTML = `
+                    <img src="${mod.image || 'assets/indo_hero_illustration_1787210889692.jpg'}" class="module-card-img" alt="${mod.title}">
+                    <div class="module-card-content">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.3rem;">
+                            <span class="module-loc-tag"><i class="fa-solid fa-location-dot"></i> ${mod.location || '印尼生活實境'}</span>
+                            <span class="badge-pill" style="font-size: 0.72rem;">${mod.category ? mod.category.toUpperCase() : 'SITUASI'}</span>
+                        </div>
+                        <h3>${mod.title}</h3>
+                        <p>${mod.subtitle}</p>
+                        <button class="action-btn start-lesson-btn" data-mod-id="${mod.id}"><i class="fa-solid fa-play"></i> 進入實境</button>
+                    </div>
+                `;
+                gridContainer.appendChild(card);
+            });
+
+            gridContainer.querySelectorAll('.start-lesson-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const modId = e.currentTarget.getAttribute('data-mod-id');
+                    const selectedMod = modules.find(m => m.id === modId);
+                    if (selectedMod) {
+                        openLesson(selectedMod);
+                    }
+                });
+            });
+        }
+
+        categoryTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                categoryTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                activeCategory = tab.getAttribute('data-cat');
+                renderModulesGrid();
+                if (navigator.vibrate) navigator.vibrate(10);
             });
         });
+
+        renderModulesGrid();
 
         function openLesson(mod) {
             audioEngine.stop();

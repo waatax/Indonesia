@@ -1,18 +1,21 @@
 {
   "curriculum": {
     "meta": {
-      "title": "Indo Learning Hub - 從零基礎到日常會話 (BIPA 標準 x Viet 專案深度對標)",
-      "description": "遵循 BIPA 標準與 TUFS 語言模組，融合雅加達/泗水雙城方言、中印雙語朗讀、人稱稱謂計算器與智能跟讀評分系統",
-      "version": "3.2.0"
+      "title": "Indo Learning Hub - 30 大實境會話 x 全發音系統 x 智能字卡雙學習模式",
+      "description": "全方位的印尼語學習系統：深入 26 字母與母子音音標、12 大生活分類 260+ 單字片語、8 大類 30 組實境會話、中印雙語朗讀與智能閃卡記憶測驗。",
+      "version": "4.0.0"
     },
     "alphabet_module": {
       "overview": {
-        "title": "印尼語字母與發音特點 (Alfabet Bahasa Indonesia)",
-        "description": "印尼語使用 26 個拉丁字母，基本上「怎麼寫就怎麼唸」，沒有複雜的拼寫陷阱，且沒有聲調！",
+        "title": "印尼語字母與發音完整系統 (Sistem Alfabet & Fonetik Bahasa Indonesia)",
+        "description": "印尼語使用 26 個拉丁字母，無聲調，重音普遍在倒數第二個音節。拼寫與讀音高度對應，掌握基本規則即可見字讀音！",
         "tips": [
-          "重音原則：絕大多數印尼語單字的重音落在「倒數第二個音節」 (Penultimate syllable)，例如：sa-ya, ma-kan, be-la-jar。",
-          "無聲調：不像中文或越南文有四聲六調，音調平穩自然即可。",
-          "拼讀規則：以子音+母音為基礎拼讀，看到字母即可直讀。"
+          "重音原則：絕大多數印尼語單字重音在「倒數第二個音節」 (Penultimate syllable)，例如：sa-ya, ma-kan, be-la-jar。",
+          "無聲調：不像中文有四聲或越南語有六調，音調平穩自然流暢即可。",
+          "母音 E 雙音：E 有弱讀 pepet (/ə/ 如 empat) 與強讀 taling (/e/ 如 bebek) 兩種發音。",
+          "子音 C 與 J：字母 C 永遠發 /tʃ/ (如中文「七/吃」)，字母 J 發 /dʒ/ (如英文 'jump')。",
+          "舌尖彈舌 R：字母 R 為顫音 (Trill)，初學者可先以清晰的「ㄌ/ㄦ」過渡。",
+          "字尾 K 喉塞音：K 在字尾時聲帶快速閉合不送氣 (Glottal stop /ʔ/)，如 tidak 讀作 'ti-da''。"
         ]
       },
       "letters": [
@@ -20,217 +23,520 @@
           "letter": "A",
           "name": "a",
           "ipa": "/a/",
+          "type": "vowel",
           "example": "Ada",
           "zh": "有 / 存在",
-          "note": "發音如中文「啊」"
+          "note": "發音如中文「啊」，口型放鬆張開。"
         },
         {
           "letter": "B",
           "name": "be",
           "ipa": "/b/",
+          "type": "consonant",
           "example": "Buku",
           "zh": "書本",
-          "note": "雙唇爆破音，如「ㄅ」"
+          "note": "雙唇濁爆破音，如漢語拼音「b」。"
         },
         {
           "letter": "C",
           "name": "ce",
           "ipa": "/tʃ/",
+          "type": "consonant",
           "example": "Cinta",
-          "zh": "愛",
-          "note": "⚠️ 特別注意！發音如「七/吃」(ch)，絕不發 /k/ 或 /s/"
+          "zh": "愛 / 喜愛",
+          "note": "⚠️ 特別注意！永遠發「七/吃」(ch)，絕不發 /k/ 或 /s/！"
         },
         {
           "letter": "D",
           "name": "de",
           "ipa": "/d/",
+          "type": "consonant",
           "example": "Dan",
           "zh": "和 / 與",
-          "note": "舌尖齒齦音，如「ㄉ」"
+          "note": "舌尖抵上齒齦濁爆破音，如拼音「d」。"
         },
         {
           "letter": "E (pepet)",
           "name": "e",
           "ipa": "/ə/",
+          "type": "vowel",
           "example": "Empat",
           "zh": "四",
-          "note": "弱讀音，發音如英文 'ago' 的 a 或中文輕聲「ㄜ」"
+          "note": "弱讀音，發音如英文 'ago' 的 a 或中文輕聲「ㄜ」。"
         },
         {
           "letter": "E (taling)",
           "name": "e",
           "ipa": "/e/",
+          "type": "vowel",
           "example": "Bebek",
           "zh": "鴨子",
-          "note": "清晰強音，發音如中文注音「ㄝ」"
+          "note": "清晰強音，口型扁平，發音如注音「ㄝ」或英文 'bed'。"
         },
         {
           "letter": "F",
           "name": "ef",
           "ipa": "/f/",
+          "type": "consonant",
           "example": "Foto",
           "zh": "照片",
-          "note": "外來語常見，發音如「ㄈ」"
+          "note": "上齒輕觸下唇清擦音，發音如「ㄈ」。"
         },
         {
           "letter": "G",
           "name": "ge",
           "ipa": "/ɡ/",
+          "type": "consonant",
           "example": "Gula",
           "zh": "糖",
-          "note": "硬顎濁音，永遠發「ㄍ」，不發 /dʒ/"
+          "note": "硬顎濁音，永遠發硬音「ㄍ」，不發 /dʒ/。"
         },
         {
           "letter": "H",
           "name": "ha",
           "ipa": "/h/",
+          "type": "consonant",
           "example": "Hari",
           "zh": "日子 / 天",
-          "note": "微弱氣音，在字尾也要輕輕送氣，如 Rumah"
+          "note": "清喉擦音，微弱氣音；在字尾也要輕輕送氣，如 Rumah。"
         },
         {
           "letter": "I",
           "name": "i",
           "ipa": "/i/",
+          "type": "vowel",
           "example": "Ibu",
           "zh": "母親 / 女士",
-          "note": "發音如中文「一」"
+          "note": "高前母音，發音如中文「一」，嘴角向兩側拉開。"
         },
         {
           "letter": "J",
           "name": "je",
           "ipa": "/dʒ/",
+          "type": "consonant",
           "example": "Jalan",
           "zh": "道路 / 走",
-          "note": "發音如中文「ㄐ/ㄓ」，如英文 'jump'"
+          "note": "舌面硬顎濁塞擦音，發音如「ㄐ/ㄓ」，如英文 'jump'。"
         },
         {
           "letter": "K",
           "name": "ka",
-          "ipa": "/k/",
+          "ipa": "/k/ ~/ʔ/",
+          "type": "consonant",
           "example": "Kopi",
           "zh": "咖啡",
-          "note": "⚠️ 字首/字中發「ㄎ/ㄍ」；在字尾是「喉塞音」，聲帶迅速關閉不送氣，如 Tidak (發音類似 Ti-da')"
+          "note": "⚠️ 字首/字中發「ㄎ/ㄍ」；字尾是「喉塞音」，聲帶迅速關閉不送氣，如 Tidak (Ti-da')。"
         },
         {
           "letter": "L",
           "name": "el",
           "ipa": "/l/",
+          "type": "consonant",
           "example": "Lima",
           "zh": "五",
-          "note": "舌尖抵上齒齦，發音如「ㄌ」"
+          "note": "舌尖抵上齒齦邊音，發音如「ㄌ」。"
         },
         {
           "letter": "M",
           "name": "em",
           "ipa": "/m/",
+          "type": "consonant",
           "example": "Makan",
           "zh": "吃",
-          "note": "雙唇鼻音，發音如「ㄇ」"
+          "note": "雙唇鼻音，發音如「ㄇ」。"
         },
         {
           "letter": "N",
           "name": "en",
           "ipa": "/n/",
+          "type": "consonant",
           "example": "Nama",
           "zh": "名字",
-          "note": "齒齦鼻音，發音如「ㄋ」"
+          "note": "齒齦鼻音，發音如「ㄋ」。"
         },
         {
           "letter": "O",
           "name": "o",
           "ipa": "/o/",
+          "type": "vowel",
           "example": "Orang",
           "zh": "人",
-          "note": "圓唇音，發音如「ㄛ」"
+          "note": "圓唇半高後母音，發音如中文「ㄛ」。"
         },
         {
           "letter": "P",
           "name": "pe",
           "ipa": "/p/",
+          "type": "consonant",
           "example": "Pagi",
           "zh": "早上",
-          "note": "雙唇清爆破音，發音如「ㄆ/ㄅ」"
+          "note": "雙唇清爆破音，送氣微弱，發音如「ㄆ/ㄅ」。"
         },
         {
           "letter": "Q",
           "name": "ki",
           "ipa": "/k/",
+          "type": "consonant",
           "example": "Quran",
-          "zh": "可蘭經",
-          "note": "多用於阿拉伯語借詞"
+          "zh": "古蘭經",
+          "note": "多用於阿拉伯語借詞，發音同 K。"
         },
         {
           "letter": "R",
           "name": "er",
           "ipa": "/r/",
+          "type": "consonant",
           "example": "Rendang",
           "zh": "巴東牛肉",
-          "note": "⚠️ 舌尖彈舌顫音 (Trill)。若初學者彈不出來，可先發清晰的「ㄌ/ㄦ」過渡"
+          "note": "⚠️ 舌尖彈舌顫音 (Trill)。若彈舌有困難，可先以清晰的「ㄌ/ㄦ」過渡。"
         },
         {
           "letter": "S",
           "name": "es",
           "ipa": "/s/",
+          "type": "consonant",
           "example": "Satu",
           "zh": "一",
-          "note": "齒齦清擦音，發音如「ㄙ」"
+          "note": "齒齦清擦音，發音如「ㄙ」。"
         },
         {
           "letter": "T",
           "name": "te",
           "ipa": "/t/",
+          "type": "consonant",
           "example": "Terima",
           "zh": "接受",
-          "note": "不送氣或微送氣，發音如「ㄊ/ㄉ」"
+          "note": "舌尖齒齦清塞音，微送氣，發音如「ㄊ/ㄉ」。"
         },
         {
           "letter": "U",
           "name": "u",
           "ipa": "/u/",
+          "type": "vowel",
           "example": "Uang",
           "zh": "錢",
-          "note": "圓唇高母音，發音如「ㄨ」"
+          "note": "高後圓唇母音，發音如中文「ㄨ」。"
         },
         {
           "letter": "V",
           "name": "fe",
           "ipa": "/v/~/f/",
+          "type": "consonant",
           "example": "Video",
           "zh": "影片",
-          "note": "外來語借詞"
+          "note": "外來語常見，口語常讀作 /f/。"
         },
         {
           "letter": "W",
           "name": "we",
           "ipa": "/w/",
+          "type": "consonant",
           "example": "Waktu",
           "zh": "時間",
-          "note": "半母音，發音如「ㄨ」"
+          "note": "唇軟顎半母音，發音如「ㄨ」。"
         },
         {
           "letter": "X",
           "name": "eks",
           "ipa": "/ks/",
+          "type": "consonant",
           "example": "X-ray",
           "zh": "X光",
-          "note": "外來語專用"
+          "note": "外來語專用字母。"
         },
         {
           "letter": "Y",
           "name": "ye",
           "ipa": "/j/",
+          "type": "consonant",
           "example": "Yang",
-          "zh": "那...的(關聯詞)",
-          "note": "半母音，發音如「ㄧ」"
+          "zh": "那...的 (關聯詞)",
+          "note": "硬顎半母音，發音如中文「ㄧ」。"
         },
         {
           "letter": "Z",
           "name": "zet",
           "ipa": "/z/",
+          "type": "consonant",
           "example": "Zaman",
           "zh": "時代",
-          "note": "舌齒濁擦音，發音如「ㄗ」"
+          "note": "齒齦濁擦音，發音如「ㄗ/日」。"
+        }
+      ],
+      "vowels_detail": {
+        "title": "母音系統深度辨析 (Sistem Vokal & Perbedaan E)",
+        "description": "印尼語有 5 個母音字母、6 個母音音素。其中 E 擁有弱讀 /ə/ 與強讀 /e/ 兩種發音，需特別留心！",
+        "items": [
+          {
+            "vowel": "A",
+            "ipa": "/a/",
+            "desc": "口張大自然發音",
+            "examples": [
+              {
+                "id": "Apa",
+                "zh": "什麼"
+              },
+              {
+                "id": "Saya",
+                "zh": "我"
+              },
+              {
+                "id": "Makan",
+                "zh": "吃"
+              }
+            ]
+          },
+          {
+            "vowel": "I",
+            "ipa": "/i/",
+            "desc": "嘴角拉平如中文「一」",
+            "examples": [
+              {
+                "id": "Ini",
+                "zh": "這"
+              },
+              {
+                "id": "Minum",
+                "zh": "喝"
+              },
+              {
+                "id": "Pagi",
+                "zh": "早晨"
+              }
+            ]
+          },
+          {
+            "vowel": "U",
+            "ipa": "/u/",
+            "desc": "雙唇向前攏圓如「屋」",
+            "examples": [
+              {
+                "id": "Itu",
+                "zh": "那"
+              },
+              {
+                "id": "Buku",
+                "zh": "書"
+              },
+              {
+                "id": "Susu",
+                "zh": "牛奶"
+              }
+            ]
+          },
+          {
+            "vowel": "E (pepet)",
+            "ipa": "/ə/",
+            "desc": "弱音，舌位居中微張如「ㄜ」",
+            "examples": [
+              {
+                "id": "Empat",
+                "zh": "四"
+              },
+              {
+                "id": "Senang",
+                "zh": "高興"
+              },
+              {
+                "id": "Belajar",
+                "zh": "學習"
+              }
+            ]
+          },
+          {
+            "vowel": "E (taling)",
+            "ipa": "/e/",
+            "desc": "強音，口型扁如「ㄝ」",
+            "examples": [
+              {
+                "id": "Bebek",
+                "zh": "鴨子"
+              },
+              {
+                "id": "Meja",
+                "zh": "桌子"
+              },
+              {
+                "id": "Sore",
+                "zh": "下午"
+              },
+              {
+                "id": "Kafe",
+                "zh": "咖啡廳"
+              }
+            ]
+          },
+          {
+            "vowel": "O",
+            "ipa": "/o/",
+            "desc": "圓唇半高後母音如「歐」",
+            "examples": [
+              {
+                "id": "Orang",
+                "zh": "人"
+              },
+              {
+                "id": "Toko",
+                "zh": "商店"
+              },
+              {
+                "id": "Kopi",
+                "zh": "咖啡"
+              }
+            ]
+          }
+        ],
+        "minimal_pairs": [
+          {
+            "word1": "Apel (/apəl/)",
+            "meaning1": "集合 / 點名",
+            "word2": "Apel (/apel/)",
+            "meaning2": "蘋果 (水果)",
+            "tip": "前者發弱讀 pepet /ə/，後者發強讀 taling /e/。"
+          },
+          {
+            "word1": "Perang (/pəraŋ/)",
+            "meaning1": "戰爭",
+            "word2": "Perang (/peraŋ/)",
+            "meaning2": "紅褐色 / 金褐色",
+            "tip": "字尾均有後鼻音 ng，但 E 的發音強弱決定完全不同的字義！"
+          },
+          {
+            "word1": "Serang (/səraŋ/)",
+            "meaning1": "攻擊 / 萬丹省西冷市",
+            "word2": "Serang (/seraŋ/)",
+            "meaning2": "水手長",
+            "tip": "弱讀 /ə/ 為動詞「攻擊」，強讀 /e/ 為名詞。"
+          },
+          {
+            "word1": "Tahu",
+            "meaning1": "知道 / 了解",
+            "word2": "Tahu",
+            "meaning2": "豆腐",
+            "tip": "拼寫相同，讀音相同，依上下文語境區分動詞與食物！"
+          }
+        ]
+      },
+      "key_consonants": [
+        {
+          "combo": "C",
+          "ipa": "/tʃ/",
+          "title": "字母 C 永遠發 /tʃ/ (注音 ㄔ/ㄑ)",
+          "desc": "絕不可讀作英文的 /k/ (Cat) 或 /s/ (City)。印尼語的 C 永遠都是「吃/七」的音。",
+          "examples": [
+            {
+              "id": "Cinta",
+              "zh": "愛 (Chin-ta)"
+            },
+            {
+              "id": "Cari",
+              "zh": "尋找 (Cha-ri)"
+            },
+            {
+              "id": "Cuci",
+              "zh": "清洗 (Chu-chi)"
+            },
+            {
+              "id": "Cepat",
+              "zh": "快 (Che-pat)"
+            }
+          ]
+        },
+        {
+          "combo": "R",
+          "ipa": "/r/",
+          "title": "字母 R 舌尖彈舌顫音 (Trill)",
+          "desc": "氣流衝擊放鬆的舌尖在上齒齦處產生連續彈動。若剛開始彈不出來，可先讀清晰的「ㄌ/ㄦ」替代。",
+          "examples": [
+            {
+              "id": "Rendang",
+              "zh": "巴東燉牛肉"
+            },
+            {
+              "id": "Rumah",
+              "zh": "家 / 房子"
+            },
+            {
+              "id": "Rasa",
+              "zh": "味道 / 感覺"
+            },
+            {
+              "id": "Murah",
+              "zh": "便宜"
+            }
+          ]
+        },
+        {
+          "combo": "K (字尾)",
+          "ipa": "/ʔ/",
+          "title": "字尾 K 喉塞音 (Glottal Stop)",
+          "desc": "在字首或字中時讀 /k/；但在音節結尾時，聲帶瞬間緊閉阻斷氣流，不爆破不噴氣。",
+          "examples": [
+            {
+              "id": "Tidak",
+              "zh": "不 (Ti-da')"
+            },
+            {
+              "id": "Bapak",
+              "zh": "先生/父親 (Ba-pa')"
+            },
+            {
+              "id": "Kakak",
+              "zh": "哥哥/姐姐 (Ka-ka')"
+            },
+            {
+              "id": "Enak",
+              "zh": "美味好吃的 (E-na')"
+            }
+          ]
+        },
+        {
+          "combo": "J",
+          "ipa": "/dʒ/",
+          "title": "字母 J 濁塞擦音 (ㄐ/ㄓ)",
+          "desc": "聲帶振動，發音如英文 'jump', 'juice'，不發 /j/ (y) 音。",
+          "examples": [
+            {
+              "id": "Jalan",
+              "zh": "道路 / 走"
+            },
+            {
+              "id": "Jam",
+              "zh": "小時 / 鐘錶"
+            },
+            {
+              "id": "Jangan",
+              "zh": "別 / 不要"
+            },
+            {
+              "id": "Jajan",
+              "zh": "吃零食"
+            }
+          ]
+        },
+        {
+          "combo": "H",
+          "ipa": "/h/",
+          "title": "字母 H 輕氣音",
+          "desc": "字首與母音間輕吐氣；若在字尾（如 Rumah, Murah, Sudah）也要帶有微弱的呼氣尾音。",
+          "examples": [
+            {
+              "id": "Hari",
+              "zh": "日子"
+            },
+            {
+              "id": "Tahu",
+              "zh": "知道 / 豆腐"
+            },
+            {
+              "id": "Rumah",
+              "zh": "房子"
+            },
+            {
+              "id": "Sudah",
+              "zh": "已經"
+            }
+          ]
         }
       ],
       "digraphs": [
@@ -239,48 +545,351 @@
           "ipa": "/ŋ/",
           "example": "Nasi Goreng",
           "zh": "炒飯",
-          "note": "後鼻音，如中文「昂/英」的字尾鼻音"
+          "note": "後鼻音，如中文「昂/英」的字尾鼻音。字首時如 Ngantuk (想睡)。"
         },
         {
           "combo": "NY",
           "ipa": "/ɲ/",
           "example": "Nyaman",
           "zh": "舒服 / 愜意",
-          "note": "硬顎鼻音，發音類似「捏/娘」的鼻化音"
+          "note": "硬顎鼻音，發音類似「捏/娘」的鼻化音，如 Nyanyi (唱歌)。"
         },
         {
           "combo": "SY",
           "ipa": "/ʃ/",
           "example": "Syukur",
           "zh": "感恩 / 感謝",
-          "note": "清顎齦擦音，發音如中文「詩/西」(sh)"
+          "note": "清顎齦擦音，發音如中文「詩/西」(sh)，如 Syarat (條件)。"
         },
         {
           "combo": "KH",
           "ipa": "/x/",
           "example": "Khusus",
           "zh": "特別 / 專用",
-          "note": "清軟顎擦音，喉嚨後部輕摩擦出氣"
+          "note": "清軟顎擦音，喉嚨後部輕摩擦出氣，如 Akhir (最後)。"
         }
       ],
       "diphthongs": [
         {
           "combo": "AI",
-          "example": "Pakai",
-          "zh": "使用 / 穿",
-          "note": "發音為 /aj/，滑向 i"
+          "ipa": "/aj/",
+          "example": "Santai",
+          "zh": "放鬆悠閒",
+          "note": "由 a 滑向 i，發音如中文「哀」，如 Pakai (用/穿), Cabai (辣椒)。"
         },
         {
           "combo": "AU",
-          "example": "Mau",
-          "zh": "想要",
-          "note": "發音為 /aw/，滑向 u"
+          "ipa": "/aw/",
+          "example": "Kalau",
+          "zh": "如果",
+          "note": "由 a 滑向 u，發音如中文「熬」，如 Mau (想要), Kerbau (水牛)。"
         },
         {
           "combo": "OI",
+          "ipa": "/oj/",
           "example": "Amboi",
-          "zh": "哎呀(感嘆詞)",
-          "note": "發音為 /oj/"
+          "zh": "哎呀 (感嘆詞)",
+          "note": "由 o 滑向 i，發音如英文 'boy'，如 Koboi (牛仔)。"
+        },
+        {
+          "combo": "EI",
+          "ipa": "/ej/",
+          "example": "Survei",
+          "zh": "調查",
+          "note": "由 e 滑向 i，發音如英文 'say' 的母音，多見於外來語。"
+        }
+      ],
+      "syllable_patterns": {
+        "title": "音節拼讀結構 (Pola Struktur Suku Kata)",
+        "desc": "印尼語單字由規律的音節構成，常見 6 種結構模式：",
+        "patterns": [
+          {
+            "pattern": "V",
+            "desc": "單母音",
+            "example": "a-ir (水), u-ang (錢)"
+          },
+          {
+            "pattern": "VK",
+            "desc": "母音 + 子音",
+            "example": "am-bil (拿), em-pat (四)"
+          },
+          {
+            "pattern": "KV",
+            "desc": "子音 + 母音 (最常見)",
+            "example": "sa-ya (我), bu-ku (書), ma-kan (吃)"
+          },
+          {
+            "pattern": "KVK",
+            "desc": "子音 + 母音 + 子音",
+            "example": "tem-pat (地方), pin-tu (門), ban-tu (幫忙)"
+          },
+          {
+            "pattern": "KKV",
+            "desc": "雙子音 + 母音",
+            "example": "prak-tis (實用), tra-vel (旅行)"
+          },
+          {
+            "pattern": "KKVK",
+            "desc": "雙子音 + 母音 + 子音",
+            "example": "struk-tur (結構), trak-tor (拖拉機)"
+          }
+        ]
+      },
+      "syllable_matrix": [
+        {
+          "consonant": "B",
+          "syllables": [
+            "Ba",
+            "Bi",
+            "Bu",
+            "Be",
+            "Bo"
+          ],
+          "examples": [
+            "Batu",
+            "Bisa",
+            "Buka",
+            "Beli",
+            "Bola"
+          ]
+        },
+        {
+          "consonant": "C",
+          "syllables": [
+            "Ca",
+            "Ci",
+            "Cu",
+            "Ce",
+            "Co"
+          ],
+          "examples": [
+            "Cari",
+            "Cinta",
+            "Cuci",
+            "Cepat",
+            "Coba"
+          ]
+        },
+        {
+          "consonant": "D",
+          "syllables": [
+            "Da",
+            "Di",
+            "Du",
+            "De",
+            "Do"
+          ],
+          "examples": [
+            "Dan",
+            "Di",
+            "Dua",
+            "Depan",
+            "Donor"
+          ]
+        },
+        {
+          "consonant": "G",
+          "syllables": [
+            "Ga",
+            "Gi",
+            "Gu",
+            "Ge",
+            "Go"
+          ],
+          "examples": [
+            "Gajah",
+            "Gigi",
+            "Gula",
+            "Gelas",
+            "Goreng"
+          ]
+        },
+        {
+          "consonant": "J",
+          "syllables": [
+            "Ja",
+            "Ji",
+            "Ju",
+            "Je",
+            "Jo"
+          ],
+          "examples": [
+            "Jalan",
+            "Jika",
+            "Juga",
+            "Jelas",
+            "Jodoh"
+          ]
+        },
+        {
+          "consonant": "K",
+          "syllables": [
+            "Ka",
+            "Ki",
+            "Ku",
+            "Ke",
+            "Ko"
+          ],
+          "examples": [
+            "Kamu",
+            "Kiri",
+            "Kuda",
+            "Kera",
+            "Kopi"
+          ]
+        },
+        {
+          "consonant": "L",
+          "syllables": [
+            "La",
+            "Li",
+            "Lu",
+            "Le",
+            "Lo"
+          ],
+          "examples": [
+            "Lapar",
+            "Lima",
+            "Lupa",
+            "Lebih",
+            "Lokal"
+          ]
+        },
+        {
+          "consonant": "M",
+          "syllables": [
+            "Ma",
+            "Mi",
+            "Mu",
+            "Me",
+            "Mo"
+          ],
+          "examples": [
+            "Makan",
+            "Minum",
+            "Murah",
+            "Meja",
+            "Mobil"
+          ]
+        },
+        {
+          "consonant": "N",
+          "syllables": [
+            "Na",
+            "Ni",
+            "Nu",
+            "Ne",
+            "No"
+          ],
+          "examples": [
+            "Nama",
+            "Nilai",
+            "Nusa",
+            "Nenek",
+            "Nomor"
+          ]
+        },
+        {
+          "consonant": "P",
+          "syllables": [
+            "Pa",
+            "Pi",
+            "Pu",
+            "Pe",
+            "Po"
+          ],
+          "examples": [
+            "Pagi",
+            "Pintu",
+            "Putih",
+            "Peta",
+            "Polisi"
+          ]
+        },
+        {
+          "consonant": "R",
+          "syllables": [
+            "Ra",
+            "Ri",
+            "Ru",
+            "Re",
+            "Ro"
+          ],
+          "examples": [
+            "Rasa",
+            "Rindu",
+            "Rumah",
+            "Rendang",
+            "Roti"
+          ]
+        },
+        {
+          "consonant": "S",
+          "syllables": [
+            "Sa",
+            "Si",
+            "Su",
+            "Se",
+            "So"
+          ],
+          "examples": [
+            "Satu",
+            "Siapa",
+            "Suka",
+            "Sedap",
+            "Sore"
+          ]
+        },
+        {
+          "consonant": "T",
+          "syllables": [
+            "Ta",
+            "Ti",
+            "Tu",
+            "Te",
+            "To"
+          ],
+          "examples": [
+            "Tahu",
+            "Tidur",
+            "Tutup",
+            "Teman",
+            "Toko"
+          ]
+        },
+        {
+          "consonant": "NG",
+          "syllables": [
+            "Nga",
+            "Ngi",
+            "Ngu",
+            "Nge",
+            "Ngo"
+          ],
+          "examples": [
+            "Ngantuk",
+            "Nginap",
+            "Ngumpul",
+            "Ngeri",
+            "Ngobrol"
+          ]
+        },
+        {
+          "consonant": "NY",
+          "syllables": [
+            "Nya",
+            "Nyi",
+            "Nyu",
+            "Nye",
+            "Nyo"
+          ],
+          "examples": [
+            "Nyaman",
+            "Nyanyi",
+            "Nyamuk",
+            "Nyeri",
+            "Nyolong"
+          ]
         }
       ]
     },
@@ -747,134 +1356,152 @@
           {
             "id_word": "Nasi putih",
             "zh_word": "白飯",
-            "example": "Minta nasi putih satu porsi.",
+            "example": "Minta nasi putih satu porsi ya.",
             "example_zh": "請給我一份白飯。"
           },
           {
             "id_word": "Nasi goreng",
             "zh_word": "印尼炒飯",
-            "example": "Nasi goreng spesial pedas.",
-            "example_zh": "特製大辣炒飯。"
+            "example": "Nasi goreng spesial pedas sedang.",
+            "example_zh": "特製印尼炒飯，中辣。"
           },
           {
             "id_word": "Mie goreng",
-            "zh_word": "炒麵",
-            "example": "Mie goreng dengan telur.",
-            "example_zh": "加蛋的炒麵。"
+            "zh_word": "印尼炒麵",
+            "example": "Mie goreng dengan telur mata sapi.",
+            "example_zh": "加荷包蛋的印尼炒麵。"
           },
           {
             "id_word": "Ayam goreng",
-            "zh_word": "炸雞",
-            "example": "Ayam goreng kremes enak.",
-            "example_zh": "酥脆炸雞很好吃。"
+            "zh_word": "印尼炸雞",
+            "example": "Ayam goreng kremes renyah sekali.",
+            "example_zh": "酥脆炸雞非常好吃。"
           },
           {
             "id_word": "Ayam bakar",
             "zh_word": "烤雞",
-            "example": "Saya mau pesan ayam bakar.",
-            "example_zh": "我要點烤雞。"
+            "example": "Saya mau pesan ayam bakar bumbu kecap.",
+            "example_zh": "我要點甜醬烤雞。"
           },
           {
             "id_word": "Sate ayam",
             "zh_word": "雞肉沙嗲",
-            "example": "Sate ayam bumbu kacang.",
-            "example_zh": "花生醬雞肉沙嗲。"
+            "example": "Sate ayam bumbu kacang 10 tusuk.",
+            "example_zh": "花生醬雞肉沙嗲十串。"
           },
           {
             "id_word": "Rendang",
             "zh_word": "巴東燉牛肉",
-            "example": "Rendang daging sapi khas Padang.",
-            "example_zh": "道地巴東風味牛肉。"
+            "example": "Rendang sapi khas Padang sangat lezat.",
+            "example_zh": "道地巴東風味牛肉非常美味。"
           },
           {
             "id_word": "Bakso",
-            "zh_word": "肉丸湯麵",
-            "example": "Bakso sapi kuah hangat.",
-            "example_zh": "熱騰騰的牛肉丸湯。"
+            "zh_word": "印尼牛肉丸湯",
+            "example": "Semangkok bakso hangat enak dimakan saat hujan.",
+            "example_zh": "下雨天吃一碗熱呼呼的肉丸湯超棒。"
           },
           {
             "id_word": "Soto ayam",
             "zh_word": "黃薑雞湯",
-            "example": "Soto ayam pakai jeruk nipis.",
-            "example_zh": "加檸檬汁的薑黃雞湯。"
+            "example": "Soto ayam pakai kuah bening.",
+            "example_zh": "清湯底的黃薑雞湯。"
           },
           {
             "id_word": "Gado-gado",
-            "zh_word": "印尼花生醬溫沙拉",
-            "example": "Gado-gado tanpa cabai.",
-            "example_zh": "不加辣椒的溫沙拉。"
+            "zh_word": "花生醬溫沙拉",
+            "example": "Gado-gado tanpa cabai ya.",
+            "example_zh": "花生醬溫沙拉不要加辣椒喔。"
           },
           {
-            "id_word": "Tempe",
-            "zh_word": "天貝 (發酵黃豆餅)",
-            "example": "Tempe goreng renyah.",
-            "example_zh": "酥脆炸天貝。"
+            "id_word": "Es teh manis",
+            "zh_word": "甜冰茶 (國民飲料)",
+            "example": "Minta es teh manis satu gelas.",
+            "example_zh": "請給我一杯甜冰茶。"
           },
           {
-            "id_word": "Tahu",
-            "zh_word": "豆腐",
-            "example": "Tahu isi sayur.",
-            "example_zh": "蔬菜鑲豆腐。"
+            "id_word": "Es kopi susu aren",
+            "zh_word": "冰棕櫚糖拿鐵",
+            "example": "Es kopi susu aren less sugar.",
+            "example_zh": "冰棕櫚糖拿鐵，微糖/少糖。"
+          },
+          {
+            "id_word": "Jus alpukat",
+            "zh_word": "酪梨巧克力果汁",
+            "example": "Jus alpukat pakai cokelat kental manis.",
+            "example_zh": "加巧克力煉乳的酪梨果汁。"
+          },
+          {
+            "id_word": "Air mineral",
+            "zh_word": "礦泉水",
+            "example": "Air mineral dingin satu botol.",
+            "example_zh": "一瓶冰礦泉水。"
+          },
+          {
+            "id_word": "Air kelapa muda",
+            "zh_word": "新鮮椰子水",
+            "example": "Minum air kelapa muda saat cuaca panas.",
+            "example_zh": "天氣熱時喝新鮮椰子水解暑。"
           },
           {
             "id_word": "Sambal",
             "zh_word": "辣椒醬",
-            "example": "Sambal dipisah ya, Kak.",
-            "example_zh": "辣椒醬幫我另外放喔。"
+            "example": "Sambal terasi ini pedas mantap!",
+            "example_zh": "這款蝦醬辣椒醬辣得很過癮！"
           },
           {
-            "id_word": "Air putih",
-            "zh_word": "白開水/礦泉水",
-            "example": "Minta air putih dingin.",
-            "example_zh": "請給我冰開水。"
+            "id_word": "Kerupuk",
+            "zh_word": "蝦餅 / 脆餅",
+            "example": "Makan nasi goreng lebih enak pakai kerupuk.",
+            "example_zh": "吃炒飯配蝦餅更對味。"
           },
           {
-            "id_word": "Kopi susu",
-            "zh_word": "牛奶咖啡",
-            "example": "Es kopi susu aren satu.",
-            "example_zh": "一杯冰棕櫚糖拿鐵。"
+            "id_word": "Pisang goreng",
+            "zh_word": "炸香蕉",
+            "example": "Pisang goreng keju cokelat hangat.",
+            "example_zh": "熱騰騰的起司巧克力炸香蕉。"
           },
           {
-            "id_word": "Teh manis",
-            "zh_word": "甜茶",
-            "example": "Es teh manis hangat / dingin.",
-            "example_zh": "熱甜茶 / 冰甜茶。"
+            "id_word": "Martabak manis",
+            "zh_word": "印尼甜煎餅 (曼煎粿)",
+            "example": "Martabak manis keju kacang spesial.",
+            "example_zh": "特製起司花生甜煎餅。"
           },
           {
-            "id_word": "Teh tawar",
-            "zh_word": "無糖茶",
-            "example": "Saya mau es teh tawar.",
-            "example_zh": "我要冰無糖茶。"
+            "id_word": "Tempe goreng",
+            "zh_word": "炸天貝 (印尼國寶黃豆發酵餅)",
+            "example": "Tempe goreng hangat gurih sekali.",
+            "example_zh": "熱騰騰的炸天貝香氣十足。"
           },
           {
-            "id_word": "Jus alpukat",
-            "zh_word": "酪梨汁(常加巧克力醬)",
-            "example": "Jus alpukat tanpa gula.",
-            "example_zh": "酪梨汁不要加糖。"
+            "id_word": "Tahu goreng",
+            "zh_word": "炸豆腐",
+            "example": "Tahu isi sayuran renyah.",
+            "example_zh": "酥脆的蔬菜餡炸豆腐。"
           },
           {
-            "id_word": "Pedas",
+            "id_word": "Pedes / Pedas",
             "zh_word": "辣的",
-            "example": "Jangan terlalu pedas.",
-            "example_zh": "不要太辣。"
+            "example": "Jangan terlalu pedas ya Mas.",
+            "example_zh": "小哥，請不要做得太辣喔。"
           },
           {
             "id_word": "Manis",
             "zh_word": "甜的",
-            "example": "Kurang manis (less sugar).",
-            "example_zh": "微糖/少糖。"
+            "example": "Kopinya agak kemanisan.",
+            "example_zh": "這杯咖啡稍微太甜了點。"
+          },
+          {
+            "id_word": "Asin",
+            "zh_word": "鹹的",
+            "example": "Kuahnya pas, tidak terlalu asin.",
+            "example_zh": "湯頭剛好，不會太鹹。"
           },
           {
             "id_word": "Enak",
-            "zh_word": "好吃的",
-            "example": "Makanan ini sangat enak!",
-            "example_zh": "這道菜非常好吃！"
-          },
-          {
-            "id_word": "Kenyang",
-            "zh_word": "飽的",
-            "example": "Saya sudah kenyang.",
-            "example_zh": "我已經吃飽了。"
+            "zh_word": "好吃 / 美味的",
+            "example": "Masakan ini enak sekali!",
+            "example_zh": "這道料理超級美味！"
           }
         ]
       },
@@ -884,355 +1511,958 @@
         "icon": "fa-motorcycle",
         "words": [
           {
+            "id_word": "Ojek online (Ojol)",
+            "zh_word": "手機叫車 (機車)",
+            "example": "Saya mau pesan ojol ke stasiun.",
+            "example_zh": "我要叫機車去火車站。"
+          },
+          {
+            "id_word": "Taksi",
+            "zh_word": "計程車 (如 Bluebird)",
+            "example": "Naik taksi Bluebird lebih aman.",
+            "example_zh": "搭 Bluebird 計程車比較安全。"
+          },
+          {
+            "id_word": "Stasiun MRT",
+            "zh_word": "捷運站",
+            "example": "Turun di stasiun MRT Bundaran HI.",
+            "example_zh": "在圓環 HI 捷運站下車。"
+          },
+          {
+            "id_word": "Bandara",
+            "zh_word": "機場",
+            "example": "Berapa lama perjalanan ke bandara?",
+            "example_zh": "去機場車程要多久？"
+          },
+          {
+            "id_word": "Terminal bus",
+            "zh_word": "公車總站",
+            "example": "Bus ke Bandung berangkat dari terminal.",
+            "example_zh": "往萬隆的巴士從總站出發。"
+          },
+          {
+            "id_word": "Halte busway",
+            "zh_word": "快捷公車站 (TransJakarta)",
+            "example": "Tunggu bus di halte busway terdekat.",
+            "example_zh": "在最近的公車專用道月台等車。"
+          },
+          {
             "id_word": "Mobil",
             "zh_word": "汽車",
-            "example": "Pesan mobil GrabCar.",
-            "example_zh": "叫一輛 GrabCar 汽車。"
+            "example": "Sewa mobil seharian berapa harganya?",
+            "example_zh": "包車租汽車一天多少錢？"
           },
           {
             "id_word": "Motor",
-            "zh_word": "機車",
-            "example": "Naik motor Gojek cepat.",
-            "example_zh": "搭 Gojek 機車很快。"
+            "zh_word": "摩托車 / 機車",
+            "example": "Di Bali lebih asyik sewa motor.",
+            "example_zh": "在峇里島租機車更好玩。"
           },
           {
-            "id_word": "Kereta api / MRT",
-            "zh_word": "火車 / 捷運",
-            "example": "Stasiun MRT Bundaran HI.",
-            "example_zh": "HI 圓環捷運站。"
-          },
-          {
-            "id_word": "Pesawat",
-            "zh_word": "飛機",
-            "example": "Bandara Soekarno-Hatta.",
-            "example_zh": "蘇加諾-哈達機場。"
-          },
-          {
-            "id_word": "Jalan",
-            "zh_word": "道路 / 走路",
-            "example": "Jalan kaki ke stasiun.",
-            "example_zh": "走路去車站。"
+            "id_word": "Helm",
+            "zh_word": "安全帽",
+            "example": "Pak, minta helmnya ya.",
+            "example_zh": "司機大哥，請借我安全帽。"
           },
           {
             "id_word": "Macet",
-            "zh_word": "塞車",
-            "example": "Jakarta macet sekali hari ini.",
-            "example_zh": "今天雅加達非常塞車。"
+            "zh_word": "塞車 (雅加達日常)",
+            "example": "Jalan Sudirman lagi macet parah.",
+            "example_zh": "蘇迪曼大道現在大塞車。"
           },
           {
-            "id_word": "Kanan",
-            "zh_word": "右邊",
-            "example": "Belok kanan di depan.",
-            "example_zh": "在前方右轉。"
-          },
-          {
-            "id_word": "Kiri",
-            "zh_word": "左邊",
+            "id_word": "Lampu merah",
+            "zh_word": "紅綠燈 / 紅燈",
             "example": "Belok kiri setelah lampu merah.",
-            "example_zh": "過了紅綠燈後左轉。"
+            "example_zh": "過了紅綠燈後向左轉。"
           },
           {
-            "id_word": "Lurus",
-            "zh_word": "直走",
-            "example": "Jalan lurus terus saja.",
-            "example_zh": "一直直走就可以了。"
+            "id_word": "Belok kanan",
+            "zh_word": "右轉",
+            "example": "Di depan tolong belok kanan ya.",
+            "example_zh": "前面請幫我右轉喔。"
           },
           {
-            "id_word": "Berhenti",
-            "zh_word": "停下",
-            "example": "Berhenti di sini saja, Pak.",
-            "example_zh": "司機先生，停在這裡就可以。"
+            "id_word": "Belok kiri",
+            "zh_word": "左轉",
+            "example": "Nanti di perempatan belok kiri.",
+            "example_zh": "等下在十字路口向左轉。"
+          },
+          {
+            "id_word": "Lurus terus",
+            "zh_word": "直直走",
+            "example": "Lurus terus sampai ketemu pom bensin.",
+            "example_zh": "一直直走直到看見加油站。"
+          },
+          {
+            "id_word": "Putar balik",
+            "zh_word": "迴轉 / U-turn",
+            "example": "Bisa putar balik di depan mall?",
+            "example_zh": "可以在商場前面迴轉嗎？"
           },
           {
             "id_word": "Depan",
             "zh_word": "前面",
-            "example": "Saya tunggu di depan lobi.",
-            "example_zh": "我在大廳前面等。"
+            "example": "Berhenti di depan lobi hotel ya.",
+            "example_zh": "請停在飯店大廳前面。"
           },
           {
             "id_word": "Belakang",
             "zh_word": "後面",
-            "example": "Di belakang gedung.",
-            "example_zh": "在大樓後面。"
+            "example": "Rumah saya di belakang mall.",
+            "example_zh": "我家在購物中心後面。"
+          },
+          {
+            "id_word": "Sebelah",
+            "zh_word": "旁邊 / 隔壁",
+            "example": "Kafe itu di sebelah minimarket.",
+            "example_zh": "那家咖啡廳在便利店隔壁。"
           },
           {
             "id_word": "Dekat",
-            "zh_word": "靠近 / 近",
-            "example": "Sangat dekat dari sini.",
-            "example_zh": "離這裡非常近。"
+            "zh_word": "近的",
+            "example": "Jaraknya dekat, jalan kaki saja.",
+            "example_zh": "距離很近，走路過去就好。"
           },
           {
             "id_word": "Jauh",
-            "zh_word": "遙遠 / 遠",
-            "example": "Apakah masih jauh?",
-            "example_zh": "還很遠嗎？"
+            "zh_word": "遠的",
+            "example": "Dari sini ke pantai agak jauh.",
+            "example_zh": "從這裡去海灘有點遠。"
           },
           {
-            "id_word": "Tersesat",
-            "zh_word": "迷路",
-            "example": "Maaf, saya tersesat.",
-            "example_zh": "抱歉，我迷路了。"
+            "id_word": "Jalan kaki",
+            "zh_word": "走路 / 步行",
+            "example": "Jalan kaki hanya butuh 5 menit.",
+            "example_zh": "走路過去只要五分鐘。"
           },
           {
-            "id_word": "Titik jemput",
-            "zh_word": "接送上車點",
-            "example": "Sesuai titik jemput di aplikasi.",
-            "example_zh": "照 App 上的定位點。"
+            "id_word": "Parkir",
+            "zh_word": "停車",
+            "example": "Di mana area parkir motor?",
+            "example_zh": "機車停車區在哪裡？"
           }
         ]
       },
       {
         "id": "daily_shopping",
-        "name": "生活與購物 (Belanja & Sehari-hari)",
-        "icon": "fa-bag-shopping",
+        "name": "生活購物與日常 (Belanja & Sehari-hari)",
+        "icon": "fa-cart-shopping",
         "words": [
           {
-            "id_word": "Beli",
-            "zh_word": "買",
-            "example": "Saya mau beli ini.",
-            "example_zh": "我要買這個。"
+            "id_word": "Berapa harganya?",
+            "zh_word": "多少錢？",
+            "example": "Berapa harganya baju batik ini?",
+            "example_zh": "這件蠟染衣多少錢？"
           },
           {
-            "id_word": "Harga",
-            "zh_word": "價格",
-            "example": "Berapa harganya?",
-            "example_zh": "價格是多少？"
+            "id_word": "Bisa kurang?",
+            "zh_word": "可以算便宜點嗎？(殺價神句)",
+            "example": "Bisa kurang sedikit harganya, Pak?",
+            "example_zh": "老闆，價格可以算便宜一點嗎？"
           },
           {
             "id_word": "Mahal",
-            "zh_word": "昂貴",
-            "example": "Terlalu mahal, bisa kurang?",
-            "example_zh": "太貴了，可以算便宜點嗎？"
+            "zh_word": "貴的",
+            "example": "Terlalu mahal, Rp 50.000 boleh?",
+            "example_zh": "太貴了啦，五萬盾可以嗎？"
           },
           {
             "id_word": "Murah",
-            "zh_word": "便宜",
-            "example": "Harganya sangat murah.",
-            "example_zh": "價格非常便宜。"
-          },
-          {
-            "id_word": "Diskon",
-            "zh_word": "打折 / 折扣",
-            "example": "Apakah ada diskon?",
-            "example_zh": "有打折嗎？"
-          },
-          {
-            "id_word": "Bayar",
-            "zh_word": "付錢",
-            "example": "Mau bayar pakai apa?",
-            "example_zh": "想用什麼方式付款？"
-          },
-          {
-            "id_word": "Tunai",
-            "zh_word": "現金",
-            "example": "Bayar pakai uang tunai.",
-            "example_zh": "用現金付款。"
-          },
-          {
-            "id_word": "QRIS",
-            "zh_word": "印尼統一條碼支付",
-            "example": "Bisa bayar pakai QRIS?",
-            "example_zh": "可以用 QRIS 掃碼支付嗎？"
-          },
-          {
-            "id_word": "Struk / Bon",
-            "zh_word": "收據 / 帳單",
-            "example": "Minta struk pembayarannya.",
-            "example_zh": "請給我收據。"
+            "zh_word": "便宜的",
+            "example": "Barang di pasar ini murah-murah.",
+            "example_zh": "這市場裡的東西都很便宜。"
           },
           {
             "id_word": "Kantong plastik",
             "zh_word": "塑膠袋",
-            "example": "Tidak usah pakai kantong plastik.",
-            "example_zh": "不用塑膠袋。"
+            "example": "Tidak usah pakai kantong plastik ya.",
+            "example_zh": "不用使用塑膠袋喔。"
           },
           {
-            "id_word": "Buka",
-            "zh_word": "營業 / 開門",
-            "example": "Jam berapa toko buka?",
-            "example_zh": "商店幾點開門？"
+            "id_word": "Struk belanja",
+            "zh_word": "收據 / 發票",
+            "example": "Ini struk dan uang kembaliannya.",
+            "example_zh": "這是您的收據和找零。"
           },
           {
-            "id_word": "Tutup",
-            "zh_word": "打烊 / 關門",
-            "example": "Sudah tutup sekarang.",
-            "example_zh": "現在已經打烊了。"
+            "id_word": "Uang pas",
+            "zh_word": "剛好的零錢",
+            "example": "Ada uang pas Rp 10.000?",
+            "example_zh": "請問有一萬盾剛好的零錢嗎？"
           },
           {
-            "id_word": "Pulsa",
-            "zh_word": "手機通話餘額/網路加值",
-            "example": "Mau isi pulsa Rp 50.000.",
-            "example_zh": "要儲值 5 萬印尼盾話費。"
+            "id_word": "Kembalian",
+            "zh_word": "找零",
+            "example": "Kembaliannya sepuluh ribu rupiah.",
+            "example_zh": "找您一萬印尼盾。"
+          },
+          {
+            "id_word": "Diskon",
+            "zh_word": "打折 / 折扣",
+            "example": "Hari ini ada diskon 20 persen.",
+            "example_zh": "今天有打八折（20%折扣）。"
+          },
+          {
+            "id_word": "Beli",
+            "zh_word": "買",
+            "example": "Saya mau beli kartu perdana SIM.",
+            "example_zh": "我想要買一張手機 SIM 卡。"
+          },
+          {
+            "id_word": "Jual",
+            "zh_word": "賣",
+            "example": "Toko ini jual oleh-oleh khas Bali.",
+            "example_zh": "這家店販售峇里島特色伴手禮。"
+          },
+          {
+            "id_word": "Pasar tradisional",
+            "zh_word": "傳統市場",
+            "example": "Pagi-pagi belanja buah di pasar.",
+            "example_zh": "大清早去市場採買水果。"
+          },
+          {
+            "id_word": "Minimarket",
+            "zh_word": "便利商店 (Indomaret/Alfamart)",
+            "example": "Beli air minum di minimarket terdekat.",
+            "example_zh": "在附近的便利商店買水。"
+          },
+          {
+            "id_word": "Ukuran",
+            "zh_word": "尺寸 / Size",
+            "example": "Ada ukuran yang lebih besar (L)?",
+            "example_zh": "有大一點 (L) 的尺寸嗎？"
+          },
+          {
+            "id_word": "Warna",
+            "zh_word": "顏色",
+            "example": "Saya mau lihat warna biru dong.",
+            "example_zh": "我想看一下藍色的款式。"
+          },
+          {
+            "id_word": "Baju",
+            "zh_word": "衣服",
+            "example": "Baju batik ini cocok untuk pesta.",
+            "example_zh": "這件蠟染衣很適合宴會穿。"
+          },
+          {
+            "id_word": "Celana",
+            "zh_word": "褲子",
+            "example": "Celana pendek untuk jalan-jalan di pantai.",
+            "example_zh": "去海灘散步穿的短褲。"
+          },
+          {
+            "id_word": "Sepatu",
+            "zh_word": "鞋子",
+            "example": "Lepas sepatu sebelum masuk rumah.",
+            "example_zh": "進屋前請先脫鞋。"
+          },
+          {
+            "id_word": "Tas",
+            "zh_word": "包包 / 袋子",
+            "example": "Tas ransel ini sangat praktis.",
+            "example_zh": "這個後背包非常實用。"
+          },
+          {
+            "id_word": "Barang",
+            "zh_word": "物品 / 商品",
+            "example": "Barang ini kualitasnya bagus sekali.",
+            "example_zh": "這件商品的品質非常好。"
+          },
+          {
+            "id_word": "Toko",
+            "zh_word": "商店 / 店面",
+            "example": "Toko ini buka jam berapa?",
+            "example_zh": "這家店幾點開門營業？"
+          },
+          {
+            "id_word": "Kasir",
+            "zh_word": "收銀檯 / 結帳員",
+            "example": "Silakan bayar di kasir depan.",
+            "example_zh": "請在前面的收銀台付款。"
+          }
+        ]
+      },
+      {
+        "id": "hotel_housing",
+        "name": "住宿與飯店 (Hotel & Penginapan)",
+        "icon": "fa-hotel",
+        "words": [
+          {
+            "id_word": "Kamar",
+            "zh_word": "房間",
+            "example": "Kamar nomor 302 di lantai 3.",
+            "example_zh": "302 號房在三樓。"
+          },
+          {
+            "id_word": "Kunci kamar",
+            "zh_word": "房間鑰匙 / 房卡",
+            "example": "Ini kartu kunci kamar Anda.",
+            "example_zh": "這是您的房間房卡。"
+          },
+          {
+            "id_word": "Check-in",
+            "zh_word": "登記入住",
+            "example": "Saya mau check-in atas nama David.",
+            "example_zh": "我要以 David 的名字辦理入住。"
+          },
+          {
+            "id_word": "Check-out",
+            "zh_word": "退房",
+            "example": "Jam berapa batas waktu check-out?",
+            "example_zh": "退房截止時間是幾點？"
+          },
+          {
+            "id_word": "Sarapan",
+            "zh_word": "早餐",
+            "example": "Apakah sudah termasuk sarapan?",
+            "example_zh": "請問有包含早餐嗎？"
+          },
+          {
+            "id_word": "AC (Air Conditioner)",
+            "zh_word": "冷氣空調",
+            "example": "AC di kamar kurang dingin.",
+            "example_zh": "房間裡的冷氣不太冷。"
+          },
+          {
+            "id_word": "Air panas",
+            "zh_word": "熱水 (洗澡/飲用)",
+            "example": "Air panas di shower tidak keluar.",
+            "example_zh": "淋浴間沒有熱水流出來。"
+          },
+          {
+            "id_word": "Handuk",
+            "zh_word": "毛巾",
+            "example": "Bisa minta handuk bersih tambahan?",
+            "example_zh": "可以多要一條乾淨的毛巾嗎？"
+          },
+          {
+            "id_word": "Selimut",
+            "zh_word": "被子 / 毛毯",
+            "example": "Malam hari dingin, butuh selimut tebal.",
+            "example_zh": "晚上很冷，需要厚被子。"
+          },
+          {
+            "id_word": "Bantal",
+            "zh_word": "枕頭",
+            "example": "Bantalnya empuk dan nyaman.",
+            "example_zh": "枕頭很軟很舒服。"
+          },
+          {
+            "id_word": "WiFi gratis",
+            "zh_word": "免費 WiFi",
+            "example": "Password WiFi-nya apa ya?",
+            "example_zh": "請問 WiFi 密碼是什麼呢？"
+          },
+          {
+            "id_word": "Sewa kost",
+            "zh_word": "租學生宿舍 / 套房 (Kost)",
+            "example": "Berapa harga sewa kost per bulan?",
+            "example_zh": "套房每個月租金多少錢？"
+          },
+          {
+            "id_word": "Listrik",
+            "zh_word": "電力 / 電費",
+            "example": "Harga sewa sudah termasuk listrik?",
+            "example_zh": "房租有包含電費嗎？"
+          },
+          {
+            "id_word": "Air galon",
+            "zh_word": "大桶裝飲用水",
+            "example": "Pesan air galon isi ulang.",
+            "example_zh": "訂購大桶補充飲用水。"
+          },
+          {
+            "id_word": "Kolam renang",
+            "zh_word": "游泳池",
+            "example": "Kolam renang buka sampai jam 9 malam.",
+            "example_zh": "游泳池開放到晚上九點。"
+          },
+          {
+            "id_word": "Lobi hotel",
+            "zh_word": "飯店大廳",
+            "example": "Tunggu supir jemput di lobi hotel.",
+            "example_zh": "在飯店大廳等司機接送。"
+          },
+          {
+            "id_word": "Lift",
+            "zh_word": "電梯",
+            "example": "Naik lift ke lantai lima.",
+            "example_zh": "搭乘電梯到五樓。"
+          },
+          {
+            "id_word": "Tangga",
+            "zh_word": "樓梯",
+            "example": "Tangga darurat ada di sebelah kiri.",
+            "example_zh": "緊急逃生梯在左手邊。"
+          },
+          {
+            "id_word": "Resepsionis",
+            "zh_word": "接待櫃檯",
+            "example": "Tanya informasi wisata ke resepsionis.",
+            "example_zh": "向接待櫃檯詢問旅遊資訊。"
+          },
+          {
+            "id_word": "Deposit",
+            "zh_word": "押金 / 保證金",
+            "example": "Deposit uang tunai Rp 100.000.",
+            "example_zh": "現金押金十萬印尼盾。"
+          }
+        ]
+      },
+      {
+        "id": "social_manners",
+        "name": "社交問候與禮貌 (Sapaan & Tata Krama)",
+        "icon": "fa-handshake",
+        "words": [
+          {
+            "id_word": "Halo / Hai",
+            "zh_word": "哈囉 / 你好",
+            "example": "Halo, selamat pagi semuanya!",
+            "example_zh": "哈囉，大家早安！"
+          },
+          {
+            "id_word": "Selamat pagi",
+            "zh_word": "早安 (約 05:00 - 11:00)",
+            "example": "Selamat pagi Pak Guru.",
+            "example_zh": "老師早安。"
+          },
+          {
+            "id_word": "Selamat siang",
+            "zh_word": "午安 (約 11:00 - 15:00)",
+            "example": "Selamat siang, mau makan apa?",
+            "example_zh": "午安，想吃些什麼？"
+          },
+          {
+            "id_word": "Selamat sore",
+            "zh_word": "傍晚好 (約 15:00 - 18:30)",
+            "example": "Selamat sore teman-teman.",
+            "example_zh": "各位朋友傍晚好。"
+          },
+          {
+            "id_word": "Selamat malam",
+            "zh_word": "晚安 / 晚上好 (18:30 以後)",
+            "example": "Selamat malam, selamat tidur.",
+            "example_zh": "晚安，祝好夢好眠。"
+          },
+          {
+            "id_word": "Selamat jalan",
+            "zh_word": "祝一路順風 (向出發者說)",
+            "example": "Selamat jalan, semoga selamat sampai tujuan.",
+            "example_zh": "一路順風，祝平安抵達目的地。"
+          },
+          {
+            "id_word": "Selamat tinggal",
+            "zh_word": "再見 (向留守者說)",
+            "example": "Selamat tinggal teman-teman di Jakarta.",
+            "example_zh": "再見了雅加達的朋友們。"
+          },
+          {
+            "id_word": "Selamat datang",
+            "zh_word": "歡迎光臨 / 歡迎來到",
+            "example": "Selamat datang di Indonesia!",
+            "example_zh": "歡迎來到印尼！"
+          },
+          {
+            "id_word": "Apa kabar?",
+            "zh_word": "你好嗎？/ 近來如何？",
+            "example": "Apa kabar? Baik-baik saja!",
+            "example_zh": "你好嗎？很好沒問題！"
+          },
+          {
+            "id_word": "Kabar baik",
+            "zh_word": "我很好 / 一切很好",
+            "example": "Kabar baik, terima kasih banyak.",
+            "example_zh": "很好，非常感謝你。"
+          },
+          {
+            "id_word": "Terima kasih",
+            "zh_word": "謝謝 (非常核心！)",
+            "example": "Terima kasih banyak atas bantuannya.",
+            "example_zh": "非常感謝您的協助。"
+          },
+          {
+            "id_word": "Sama-sama",
+            "zh_word": "不客氣 / 彼此彼此",
+            "example": "Terima kasih! - Sama-sama!",
+            "example_zh": "謝謝！—— 不客氣！"
+          },
+          {
+            "id_word": "Maaf",
+            "zh_word": "對不起 / 抱歉",
+            "example": "Maaf, saya terlambat datang.",
+            "example_zh": "抱歉，我遲到了。"
+          },
+          {
+            "id_word": "Permisi",
+            "zh_word": "借過 / 打擾一下",
+            "example": "Permisi, numpang tanya jalan.",
+            "example_zh": "不好意思，借問一下路。"
+          },
+          {
+            "id_word": "Tolong",
+            "zh_word": "請幫忙 / 救命",
+            "example": "Tolong bantu saya bawa koper ini.",
+            "example_zh": "請幫我提一下這個行李箱。"
+          },
+          {
+            "id_word": "Silakan",
+            "zh_word": "請 (邀請/請進/請用)",
+            "example": "Silakan masuk dan duduk di sini.",
+            "example_zh": "請進並請坐在這裡。"
+          },
+          {
+            "id_word": "Hati-hati",
+            "zh_word": "小心 / 保重 / 路上小心",
+            "example": "Hati-hati di jalan ya!",
+            "example_zh": "路上小心慢走喔！"
+          },
+          {
+            "id_word": "Sampai jumpa",
+            "zh_word": "再見 / 下次見",
+            "example": "Sampai jumpa lagi besok!",
+            "example_zh": "明天再見囉！"
+          },
+          {
+            "id_word": "Bagus",
+            "zh_word": "太棒了 / 很好",
+            "example": "Bagus sekali hasil belajarmu!",
+            "example_zh": "你的學習成果太棒了！"
+          },
+          {
+            "id_word": "Mantap",
+            "zh_word": "給力 / 讚！",
+            "example": "Kopinya mantap jiwa!",
+            "example_zh": "這咖啡太頂太讚了！"
+          },
+          {
+            "id_word": "Siap",
+            "zh_word": "沒問題 / 遵命！",
+            "example": "Siap laksanakan!",
+            "example_zh": "遵命立即執行！"
+          },
+          {
+            "id_word": "Boleh",
+            "zh_word": "可以 / 允許",
+            "example": "Boleh saya foto di sini?",
+            "example_zh": "我可以留在這裡拍照嗎？"
+          }
+        ]
+      },
+      {
+        "id": "numbers_time_freq",
+        "name": "數字、時間與頻率 (Angka, Waktu & Frekuensi)",
+        "icon": "fa-clock",
+        "words": [
+          {
+            "id_word": "Nol / Kosong",
+            "zh_word": "0",
+            "example": "Nomor telepon diawali angka nol.",
+            "example_zh": "電話號碼以數字零開頭。"
+          },
+          {
+            "id_word": "Satu",
+            "zh_word": "1",
+            "example": "Satu cangkir kopi panas.",
+            "example_zh": "一杯熱咖啡。"
+          },
+          {
+            "id_word": "Dua",
+            "zh_word": "2",
+            "example": "Dua orang dewasa.",
+            "example_zh": "兩位成人。"
+          },
+          {
+            "id_word": "Tiga",
+            "zh_word": "3",
+            "example": "Tiga hari lagi saya pulang.",
+            "example_zh": "再過三天我就回去了。"
+          },
+          {
+            "id_word": "Empat",
+            "zh_word": "4",
+            "example": "Empat porsi nasi goreng.",
+            "example_zh": "四份印尼炒飯。"
+          },
+          {
+            "id_word": "Lima",
+            "zh_word": "5",
+            "example": "Lima menit lagi sampai.",
+            "example_zh": "再過五分鐘就到了。"
+          },
+          {
+            "id_word": "Sepuluh",
+            "zh_word": "10",
+            "example": "Sepuluh ribu rupiah.",
+            "example_zh": "一萬印尼盾。"
+          },
+          {
+            "id_word": "Seratus",
+            "zh_word": "100",
+            "example": "Seratus ribu rupiah (Rp 100.000).",
+            "example_zh": "十萬印尼盾。"
+          },
+          {
+            "id_word": "Seribu",
+            "zh_word": "1,000",
+            "example": "Dua puluh lima ribu (25.000).",
+            "example_zh": "兩萬五千。"
+          },
+          {
+            "id_word": "Sejuta",
+            "zh_word": "1,000,000 (百萬)",
+            "example": "Satu juta lima ratus ribu rupiah.",
+            "example_zh": "一百五十萬印尼盾。"
+          },
+          {
+            "id_word": "Sekarang",
+            "zh_word": "現在",
+            "example": "Sekarang jam berapa ya?",
+            "example_zh": "請問現在幾點鐘？"
+          },
+          {
+            "id_word": "Hari ini",
+            "zh_word": "今天",
+            "example": "Hari ini cuacanya panas sekali.",
+            "example_zh": "今天天氣非常炎熱。"
+          },
+          {
+            "id_word": "Besok",
+            "zh_word": "明天",
+            "example": "Besok kita pergi ke pantai.",
+            "example_zh": "明天我們去海灘。"
+          },
+          {
+            "id_word": "Kemarin",
+            "zh_word": "昨天",
+            "example": "Kemarin saya makan rendang.",
+            "example_zh": "昨天我吃了巴東牛肉。"
+          },
+          {
+            "id_word": "Nanti",
+            "zh_word": "稍後 / 等一下",
+            "example": "Nanti sore kita ketemu di kafe.",
+            "example_zh": "等下傍晚我們在咖啡廳見面。"
+          },
+          {
+            "id_word": "Pagi",
+            "zh_word": "早上",
+            "example": "Pagi hari udara sangat segar.",
+            "example_zh": "早晨的空氣很清新。"
+          },
+          {
+            "id_word": "Siang",
+            "zh_word": "中午 / 白天",
+            "example": "Makan siang bersama rekan kerja.",
+            "example_zh": "和同事一起吃午餐。"
+          },
+          {
+            "id_word": "Malam",
+            "zh_word": "晚上",
+            "example": "Nongkrong sampai larut malam.",
+            "example_zh": "泡咖啡廳閒聊到深夜。"
+          },
+          {
+            "id_word": "Selalu",
+            "zh_word": "總是 / 一直",
+            "example": "Dia selalu bangun pagi-pagi.",
+            "example_zh": "他總是很早就起床。"
+          },
+          {
+            "id_word": "Sering",
+            "zh_word": "常常 / 經常",
+            "example": "Saya sering pesan makanan lewat Gojek.",
+            "example_zh": "我常常用 Gojek 叫外送。"
+          },
+          {
+            "id_word": "Kadang-kadang",
+            "zh_word": "有時候",
+            "example": "Kadang-kadang hujan di sore hari.",
+            "example_zh": "有時候傍晚會下雨。"
+          },
+          {
+            "id_word": "Tidak pernah",
+            "zh_word": "從未 / 從不",
+            "example": "Saya tidak pernah ke Surabaya.",
+            "example_zh": "我從未去過泗水。"
           }
         ]
       },
       {
         "id": "daily_verbs",
-        "name": "高頻日常動詞 (Kata Kerja Sehari-hari)",
+        "name": "高頻日常動詞 (Kata Kerja Penting)",
         "icon": "fa-person-walking",
         "words": [
           {
             "id_word": "Makan",
             "zh_word": "吃",
-            "example": "Sudah makan belum?",
-            "example_zh": "你吃飽了嗎？"
+            "example": "Sudah makan siang belum?",
+            "example_zh": "吃過午餐了沒？"
           },
           {
             "id_word": "Minum",
             "zh_word": "喝",
-            "example": "Minum air banyak-banyak.",
-            "example_zh": "多喝水。"
+            "example": "Jangan lupa minum air putih banyak.",
+            "example_zh": "別忘了多喝白開水。"
           },
           {
             "id_word": "Tidur",
             "zh_word": "睡覺",
-            "example": "Saya mau tidur sekarang.",
-            "example_zh": "我現在要去睡覺了。"
+            "example": "Saya mengantuk dan mau tidur.",
+            "example_zh": "我好睏，想要睡覺了。"
           },
           {
             "id_word": "Bangun",
             "zh_word": "起床 / 醒來",
-            "example": "Bangun jam 6 pagi.",
-            "example_zh": "早上 6 點起床。"
-          },
-          {
-            "id_word": "Mandi",
-            "zh_word": "洗澡",
-            "example": "Mandi dulu ya.",
-            "example_zh": "先去洗澡喔。"
+            "example": "Besok harus bangun jam 6 pagi.",
+            "example_zh": "明天必須早上六點起床。"
           },
           {
             "id_word": "Pergi",
-            "zh_word": "去",
-            "example": "Mau pergi ke mana?",
-            "example_zh": "要去哪裡？"
+            "zh_word": "去 / 出發",
+            "example": "Mau pergi ke mana hari ini?",
+            "example_zh": "今天想要去哪裡呢？"
           },
           {
             "id_word": "Datang",
             "zh_word": "來 / 到達",
-            "example": "Dia baru saja datang.",
-            "example_zh": "他剛剛才到。"
+            "example": "Kapan Anda datang ke Jakarta?",
+            "example_zh": "您什麼時候來到雅加達？"
           },
           {
             "id_word": "Pulang",
-            "zh_word": "回家",
-            "example": "Ayo kita pulang.",
-            "example_zh": "我們回家吧。"
+            "zh_word": "回家 / 返回",
+            "example": "Ayo kita pulang sekarang.",
+            "example_zh": "走吧，我們現在回家。"
           },
           {
-            "id_word": "Kerja",
-            "zh_word": "工作",
-            "example": "Kerja di kantor.",
-            "example_zh": "在辦公室工作。"
+            "id_word": "Melihat / Lihat",
+            "zh_word": "看 / 看見",
+            "example": "Bisa saya lihat menunya?",
+            "example_zh": "我可以看一下菜單嗎？"
+          },
+          {
+            "id_word": "Mendengar / Dengar",
+            "zh_word": "聽 / 聽見",
+            "example": "Dengarkan pengucapan kata ini.",
+            "example_zh": "聽聽這個單字的發音。"
+          },
+          {
+            "id_word": "Bicara / Ngomong",
+            "zh_word": "說 / 講話",
+            "example": "Bisa bicara bahasa Inggris?",
+            "example_zh": "會說英文嗎？"
           },
           {
             "id_word": "Belajar",
             "zh_word": "學習",
-            "example": "Belajar Bahasa Indonesia.",
-            "example_zh": "學習印尼語。"
+            "example": "Saya sedang belajar bahasa Indonesia.",
+            "example_zh": "我正在學習印尼語。"
           },
           {
-            "id_word": "Tahu",
-            "zh_word": "知道",
-            "example": "Saya tidak tahu.",
-            "example_zh": "我不知道。"
+            "id_word": "Bekerja / Kerja",
+            "zh_word": "工作",
+            "example": "Dia bekerja di kantor Jaksel.",
+            "example_zh": "他在雅加達南部的辦公室上班。"
           },
           {
-            "id_word": "Mengerti",
-            "zh_word": "理解 / 明白",
-            "example": "Apakah Anda mengerti?",
-            "example_zh": "您明白了嗎？"
+            "id_word": "Membeli / Beli",
+            "zh_word": "買",
+            "example": "Saya mau beli oleh-oleh untuk keluarga.",
+            "example_zh": "我要買伴手禮給家人。"
           },
           {
-            "id_word": "Tolong / Bantu",
-            "zh_word": "幫忙",
-            "example": "Bisa tolong bantu saya?",
-            "example_zh": "可以請您幫幫我嗎？"
+            "id_word": "Membayar / Bayar",
+            "zh_word": "付錢 / 結帳",
+            "example": "Bisa bayar pakai kartu kredit?",
+            "example_zh": "可以用信用卡結帳嗎？"
           },
           {
-            "id_word": "Cari",
+            "id_word": "Tinggal",
+            "zh_word": "居住 / 留下",
+            "example": "Anda tinggal di mana sekarang?",
+            "example_zh": "您現在住在哪裡？"
+          },
+          {
+            "id_word": "Mandi",
+            "zh_word": "洗澡",
+            "example": "Saya mau mandi air hangat.",
+            "example_zh": "我想去洗個熱水澡。"
+          },
+          {
+            "id_word": "Menunggu / Tunggu",
+            "zh_word": "等待",
+            "example": "Tolong tunggu sebentar ya.",
+            "example_zh": "請稍微等一下喔。"
+          },
+          {
+            "id_word": "Mencari / Cari",
             "zh_word": "尋找",
-            "example": "Lagi cari apa?",
-            "example_zh": "正在找什麼？"
+            "example": "Saya sedang cari ATM terdekat.",
+            "example_zh": "我正在找最近的自動提款機。"
           },
           {
-            "id_word": "Tunggu",
-            "zh_word": "等候",
-            "example": "Tunggu sebentar ya.",
-            "example_zh": "請稍等一下喔。"
+            "id_word": "Membawa / Bawa",
+            "zh_word": "攜帶 / 帶走",
+            "example": "Jangan lupa bawa paspor Anda.",
+            "example_zh": "別忘了攜帶您的護照。"
+          },
+          {
+            "id_word": "Membuka / Buka",
+            "zh_word": "打開 / 開門",
+            "example": "Toko buka jam 9 pagi.",
+            "example_zh": "商店早上九點開門。"
+          },
+          {
+            "id_word": "Menutup / Tutup",
+            "zh_word": "關閉 / 打烊",
+            "example": "Restoran tutup jam 10 malam.",
+            "example_zh": "餐廳晚上十點打烊。"
+          },
+          {
+            "id_word": "Membantu / Bantu",
+            "zh_word": "幫助 / 協助",
+            "example": "Ada yang bisa saya bantu?",
+            "example_zh": "有什麼我可以幫忙的嗎？"
           }
         ]
       },
       {
         "id": "adjectives_states",
-        "name": "常用形容詞與感受 (Kata Sifat & Perasaan)",
+        "name": "常用形容詞與心情 (Kata Sifat & Perasaan)",
         "icon": "fa-face-smile",
         "words": [
           {
             "id_word": "Bagus",
-            "zh_word": "棒 / 好",
-            "example": "Bagus sekali!",
-            "example_zh": "太棒了！"
+            "zh_word": "好的 / 棒的",
+            "example": "Pemandangan di sini sangat bagus!",
+            "example_zh": "這裡的風景超級棒！"
           },
           {
             "id_word": "Cantik",
-            "zh_word": "美麗 / 漂亮",
-            "example": "Pemandangan yang cantik.",
-            "example_zh": "美麗的風景。"
+            "zh_word": "美麗的 / 漂亮的",
+            "example": "Baju batik ini cantik sekali.",
+            "example_zh": "這件蠟染衣好漂亮。"
           },
           {
-            "id_word": "Ganteng / Tampan",
-            "zh_word": "帥氣",
-            "example": "Cowok itu sangat ganteng.",
-            "example_zh": "那個男生好帥。"
-          },
-          {
-            "id_word": "Panas",
-            "zh_word": "熱",
-            "example": "Cuaca hari ini panas banget.",
-            "example_zh": "今天天氣超級熱。"
-          },
-          {
-            "id_word": "Dingin",
-            "zh_word": "冷 / 冰",
-            "example": "AC-nya terlalu dingin.",
-            "example_zh": "冷氣太冷了。"
-          },
-          {
-            "id_word": "Capek / Lelah",
-            "zh_word": "累 / 疲倦",
-            "example": "Saya capek sekali hari ini.",
-            "example_zh": "我今天好累。"
+            "id_word": "Ganteng",
+            "zh_word": "帥氣的",
+            "example": "Abang ojeknya ganteng dan ramah.",
+            "example_zh": "外送司機小哥又帥又親切。"
           },
           {
             "id_word": "Senang",
-            "zh_word": "開心 / 高興",
-            "example": "Senang bertemu dengan Anda.",
-            "example_zh": "很高興遇見您。"
+            "zh_word": "開心的 / 高興的",
+            "example": "Saya sangat senang bertemu Anda.",
+            "example_zh": "我非常高興認識您。"
+          },
+          {
+            "id_word": "Capek / Lelah",
+            "zh_word": "累的 / 疲倦的",
+            "example": "Badan capek setelah jalan seharian.",
+            "example_zh": "逛了一整天身體好累。"
+          },
+          {
+            "id_word": "Lapar",
+            "zh_word": "飢餓的 / 肚子餓",
+            "example": "Perut saya sudah lapar banget.",
+            "example_zh": "我肚子已經超級餓了。"
+          },
+          {
+            "id_word": "Haus",
+            "zh_word": "口渴的",
+            "example": "Saya haus, mau minum es kelapa.",
+            "example_zh": "我口渴了，想喝椰子冰水。"
+          },
+          {
+            "id_word": "Panas",
+            "zh_word": "熱的 / 燙的",
+            "example": "Cuaca hari ini panas terik.",
+            "example_zh": "今天天氣烈日炎炎好熱。"
+          },
+          {
+            "id_word": "Dingin",
+            "zh_word": "冷的 / 冰涼的",
+            "example": "Minta air putih dingin satu ya.",
+            "example_zh": "請給我一杯冰開水。"
+          },
+          {
+            "id_word": "Besar",
+            "zh_word": "大的",
+            "example": "Kamar hotelnya sangat besar dan bersih.",
+            "example_zh": "飯店房間很大而且很乾淨。"
+          },
+          {
+            "id_word": "Kecil",
+            "zh_word": "小的",
+            "example": "Porsi makanannya agak kecil.",
+            "example_zh": "這份餐點的份量稍微小了點。"
           },
           {
             "id_word": "Bersih",
-            "zh_word": "乾淨",
-            "example": "Kamarnya sangat bersih.",
-            "example_zh": "房間非常乾淨。"
+            "zh_word": "乾淨的",
+            "example": "Toilet di kafe ini sangat bersih.",
+            "example_zh": "這家咖啡廳的洗手間非常乾淨。"
           },
           {
             "id_word": "Kotor",
-            "zh_word": "骯髒",
-            "example": "Jangan duduk di tempat kotor.",
-            "example_zh": "不要坐在髒的地方。"
+            "zh_word": "髒的",
+            "example": "Baju ini kotor terkena lumpur.",
+            "example_zh": "這件衣服沾到泥巴弄髒了。"
+          },
+          {
+            "id_word": "Ramah",
+            "zh_word": "熱情親切的 (印尼人特色)",
+            "example": "Orang Indonesia terkenal sangat ramah.",
+            "example_zh": "印尼人以熱情友善聞名。"
+          },
+          {
+            "id_word": "Sibuk",
+            "zh_word": "忙碌的",
+            "example": "Minggu ini bos sangat sibuk.",
+            "example_zh": "這週老闆非常忙碌。"
           },
           {
             "id_word": "Cepat",
-            "zh_word": "快速",
-            "example": "Internetnya cepat sekali.",
-            "example_zh": "網路速度非常快。"
+            "zh_word": "快的 / 迅速的",
+            "example": "Kereta cepat Jakarta-Bandung (Whoosh).",
+            "example_zh": "雅萬高鐵 (Whoosh)。"
           },
           {
-            "id_word": "Pelan-pelan",
-            "zh_word": "慢一點 / 慢慢來",
-            "example": "Bicara pelan-pelan saja.",
-            "example_zh": "慢慢說就可以了。"
+            "id_word": "Lambat / Pelan",
+            "zh_word": "慢的",
+            "example": "Bicara lebih pelan-pelan ya.",
+            "example_zh": "請講得稍微慢一點點。"
+          },
+          {
+            "id_word": "Mudah / Gampang",
+            "zh_word": "容易的 / 簡單的",
+            "example": "Bahasa Indonesia mudah dipelajari.",
+            "example_zh": "印尼語很容易學。"
+          },
+          {
+            "id_word": "Sulit / Susah",
+            "zh_word": "困難的 / 難的",
+            "example": "Mengucapkan huruf R agak susah.",
+            "example_zh": "發字母 R 的彈舌顫音稍微有點難。"
+          },
+          {
+            "id_word": "Mahal",
+            "zh_word": "昂貴的",
+            "example": "Harga tiket pesawat mahal.",
+            "example_zh": "機票價格很貴。"
+          },
+          {
+            "id_word": "Murah",
+            "zh_word": "平價便宜的",
+            "example": "Makanan di warung murah dan enak.",
+            "example_zh": "小吃攤的食物便宜又好吃。"
+          },
+          {
+            "id_word": "Penting",
+            "zh_word": "重要的",
+            "example": "Ini dokumen paspor yang sangat penting.",
+            "example_zh": "這是非常重要的護照文件。"
           }
         ]
       },
@@ -1243,215 +2473,841 @@
         "words": [
           {
             "id_word": "Sakit",
-            "zh_word": "生病 / 痛",
-            "example": "Saya sakit kepala.",
-            "example_zh": "我頭痛。"
+            "zh_word": "生病 / 痛的",
+            "example": "Perut saya sakit setelah makan pedas.",
+            "example_zh": "吃辣後我肚子好痛。"
           },
           {
-            "id_word": "Masuk angin",
-            "zh_word": "著涼 / 脹氣 (印尼國民概念)",
-            "example": "Minum Tolak Angin kalau masuk angin.",
-            "example_zh": "著涼時喝 Tolak Angin 草本包。"
+            "id_word": "Sakit kepala",
+            "zh_word": "頭痛",
+            "example": "Saya sakit kepala, butuh obat parasetamol.",
+            "example_zh": "我頭痛，需要普拿疼止痛藥。"
+          },
+          {
+            "id_word": "Sakit perut / Diare",
+            "zh_word": "拉肚子 / 腹瀉 (常見水土不服)",
+            "example": "Ada obat diare yang manjur?",
+            "example_zh": "有見效的止瀉藥嗎？"
           },
           {
             "id_word": "Demam",
             "zh_word": "發燒",
-            "example": "Badan saya terasa demam.",
-            "example_zh": "我身體覺得在發燒。"
+            "example": "Badan saya panas dan demam.",
+            "example_zh": "我身體發燙發燒了。"
           },
           {
             "id_word": "Batuk",
             "zh_word": "咳嗽",
-            "example": "Ada obat batuk?",
-            "example_zh": "有止咳藥嗎？"
+            "example": "Batuk kering sejak kemarin malam.",
+            "example_zh": "從昨晚開始一直乾咳。"
+          },
+          {
+            "id_word": "Flu / Pilek",
+            "zh_word": "流鼻水 / 感冒",
+            "example": "Hidung tersumbat karena flu.",
+            "example_zh": "因為感冒而鼻塞。"
+          },
+          {
+            "id_word": "Mual",
+            "zh_word": "噁心 / 想吐",
+            "example": "Merasa mual karena mabuk perjalanan.",
+            "example_zh": "因為暈車而感到噁心想吐。"
           },
           {
             "id_word": "Obat",
-            "zh_word": "藥",
-            "example": "Minum obat setelah makan.",
-            "example_zh": "飯後服藥。"
+            "zh_word": "藥物",
+            "example": "Minum obat ini 3 kali sehari setelah makan.",
+            "example_zh": "這個藥一天吃三次，飯後服用。"
+          },
+          {
+            "id_word": "Apotek",
+            "zh_word": "藥局 (如 Kimia Farma / Guardian)",
+            "example": "Cari apotek 24 jam terdekat.",
+            "example_zh": "找附近 24 小時營業的藥局。"
           },
           {
             "id_word": "Rumah sakit",
             "zh_word": "醫院",
-            "example": "Di mana rumah sakit terdekat?",
-            "example_zh": "最近的醫院在哪裡？"
-          },
-          {
-            "id_word": "Apotek",
-            "zh_word": "藥局",
-            "example": "Cari apotek 24 jam.",
-            "example_zh": "找 24 小時藥局。"
+            "example": "Tolong antarkan saya ke rumah sakit.",
+            "example_zh": "請送我到醫院去。"
           },
           {
             "id_word": "Dokter",
             "zh_word": "醫生",
-            "example": "Mau periksa ke dokter.",
-            "example_zh": "想去看醫生檢查。"
+            "example": "Saya mau periksa ke dokter umum.",
+            "example_zh": "我想找普通科醫生看診。"
           },
           {
-            "id_word": "Tolong!",
-            "zh_word": "救命 / 求救！",
-            "example": "Tolong! Ada pencuri!",
-            "example_zh": "救命！有小偷！"
+            "id_word": "Ambulans",
+            "zh_word": "救護車",
+            "example": "Segera panggil ambulans darurat!",
+            "example_zh": "快點叫緊急救護車！"
           },
           {
-            "id_word": "Hilang",
-            "zh_word": "遺失 / 不見",
-            "example": "Dompet saya hilang.",
-            "example_zh": "我的錢包不見了。"
+            "id_word": "Minyak kayu putih",
+            "zh_word": "白樹油 (印尼萬用神油)",
+            "example": "Oleskan minyak kayu putih di perut.",
+            "example_zh": "在肚子上擦一點白樹油。"
+          },
+          {
+            "id_word": "Tolak Angin",
+            "zh_word": "防著涼感冒草藥飲 (印尼國民神藥)",
+            "example": "Minum Tolak Angin saat badan meriang.",
+            "example_zh": "身體發冷快感冒時喝包 Tolak Angin。"
+          },
+          {
+            "id_word": "Obat nyamuk (Autan)",
+            "zh_word": "防蚊液",
+            "example": "Pakai lotion anti nyamuk sebelum tidur.",
+            "example_zh": "睡前擦一點防蚊乳液。"
           },
           {
             "id_word": "Polisi",
             "zh_word": "警察",
-            "example": "Laporkan ke kantor polisi.",
-            "example_zh": "去警察局報案。"
+            "example": "Saya mau lapor kehilangan ke kantor polisi.",
+            "example_zh": "我想去警察局報案遺失物品。"
+          },
+          {
+            "id_word": "Tolong! (Darurat)",
+            "zh_word": "救命！(緊急呼救)",
+            "example": "Tolong! Dompet saya dicuri orang!",
+            "example_zh": "救命！我的皮夾被人偷了！"
+          },
+          {
+            "id_word": "Kebakaran",
+            "zh_word": "火災 / 失火",
+            "example": "Ada kebakaran di gedung seberang.",
+            "example_zh": "對面大樓發生火警。"
+          },
+          {
+            "id_word": "Hilang",
+            "zh_word": "遺失 / 不見了",
+            "example": "Paspor dan dompet saya hilang.",
+            "example_zh": "我的護照和皮夾不見了。"
+          },
+          {
+            "id_word": "Bahaya",
+            "zh_word": "危險",
+            "example": "Awas ombak besar sangat berbahaya!",
+            "example_zh": "注意大浪非常危險！"
           }
         ]
       },
       {
-        "id": "social_manners",
-        "name": "社交與禮貌用語 (Tata Krama & Sosial)",
-        "icon": "fa-hands-clapping",
+        "id": "business_digital",
+        "name": "商務、職場與數位 (Bisnis & Digital)",
+        "icon": "fa-briefcase",
         "words": [
           {
-            "id_word": "Selamat pagi",
-            "zh_word": "早安",
-            "example": "Selamat pagi semuanya!",
-            "example_zh": "大家早安！"
+            "id_word": "Kantor",
+            "zh_word": "辦公室",
+            "example": "Kantor pusat kami ada di Jakarta.",
+            "example_zh": "我們的總公司在雅加達。"
           },
           {
-            "id_word": "Selamat siang",
-            "zh_word": "午安 (11:00-15:00)",
-            "example": "Selamat siang, Pak.",
-            "example_zh": "先生午安。"
+            "id_word": "Rapat / Meeting",
+            "zh_word": "會議",
+            "example": "Rapat dimulai jam 10 pagi tepat.",
+            "example_zh": "會議在上午十點準時開始。"
           },
           {
-            "id_word": "Selamat sore",
-            "zh_word": "傍晚好 (15:00-18:00)",
-            "example": "Selamat sore teman-teman.",
-            "example_zh": "朋友們傍晚好。"
+            "id_word": "Klien / Nasabah",
+            "zh_word": "客戶",
+            "example": "Sore ini ada janji bertemu klien.",
+            "example_zh": "今天傍晚和客戶有約會見面。"
           },
           {
-            "id_word": "Selamat malam",
-            "zh_word": "晚安",
-            "example": "Selamat malam, selamat beristirahat.",
-            "example_zh": "晚安，祝好好休息。"
+            "id_word": "Kontrak",
+            "zh_word": "合約",
+            "example": "Tanda tangan kontrak kerja sama.",
+            "example_zh": "簽署商務合作合約。"
           },
           {
-            "id_word": "Terima kasih",
-            "zh_word": "謝謝",
-            "example": "Terima kasih banyak!",
-            "example_zh": "非常感謝！"
+            "id_word": "Kartu nama",
+            "zh_word": "名片",
+            "example": "Ini kartu nama saya, silakan disimpan.",
+            "example_zh": "這是我的名片，請收下。"
           },
           {
-            "id_word": "Sama-sama",
-            "zh_word": "不客氣",
-            "example": "Sama-sama, kembali.",
-            "example_zh": "不客氣。"
+            "id_word": "Transfer bank",
+            "zh_word": "銀行轉帳",
+            "example": "Bisa transfer lewat BCA atau Mandiri.",
+            "example_zh": "可以透過 BCA 或 Mandiri 銀行轉帳。"
           },
           {
-            "id_word": "Maaf",
-            "zh_word": "對不起 / 抱歉",
-            "example": "Maaf merepotkan Anda.",
-            "example_zh": "抱歉麻煩您了。"
+            "id_word": "QRIS",
+            "zh_word": "印尼國家通用掃碼支付",
+            "example": "Semua toko di sini menerima QRIS.",
+            "example_zh": "這裡所有店家都接受 QRIS 掃碼付款。"
           },
           {
-            "id_word": "Permisi",
-            "zh_word": "借過 / 打擾一下",
-            "example": "Permisi, numpang tanya.",
-            "example_zh": "不好意思，請問一下。"
+            "id_word": "Password WiFi",
+            "zh_word": "WiFi 密碼",
+            "example": "Apa password WiFi untuk ruang rapat?",
+            "example_zh": "會議室的 WiFi 密碼是多少？"
           },
           {
-            "id_word": "Sampai jumpa",
-            "zh_word": "再見 / 下次見",
-            "example": "Sampai jumpa lagi besok!",
-            "example_zh": "明天再見！"
+            "id_word": "Stopkontak",
+            "zh_word": "電源插座",
+            "example": "Boleh pinjam stopkontak untuk cas laptop?",
+            "example_zh": "可以借用插座給筆電充電嗎？"
           },
           {
-            "id_word": "Hati-hati",
-            "zh_word": "小心 / 保重",
-            "example": "Hati-hati di jalan ya.",
-            "example_zh": "路上小心喔。"
+            "id_word": "Email / Surel",
+            "zh_word": "電子郵件",
+            "example": "Saya sudah kirim dokumen lewat email.",
+            "example_zh": "我已經透過電子郵件寄出文件了。"
+          },
+          {
+            "id_word": "Dokumen",
+            "zh_word": "文件 / 檔案",
+            "example": "Cetak dokumen laporan keuangan.",
+            "example_zh": "列印財務報告文件。"
+          },
+          {
+            "id_word": "Gaji",
+            "zh_word": "薪水 / 工資",
+            "example": "Tanggal gajian setiap akhir bulan.",
+            "example_zh": "發薪日是每個月底。"
+          },
+          {
+            "id_word": "Kerja lembur",
+            "zh_word": "加班",
+            "example": "Hari ini lembur sampai jam 8 malam.",
+            "example_zh": "今天加班到晚上八點。"
+          },
+          {
+            "id_word": "Izin cuti",
+            "zh_word": "請假",
+            "example": "Saya mau minta izin cuti dua hari.",
+            "example_zh": "我想要請兩天休假。"
+          },
+          {
+            "id_word": "Bos / Pimpinan",
+            "zh_word": "老闆 / 主管",
+            "example": "Bos sedang dinas ke luar kota.",
+            "example_zh": "老闆正在出差外縣市。"
+          },
+          {
+            "id_word": "Rekan kerja",
+            "zh_word": "同事 / 工作夥伴",
+            "example": "Rekan kerja di kantor sangat kooperatif.",
+            "example_zh": "辦公室的同事都非常配合協助。"
+          },
+          {
+            "id_word": "Proyek",
+            "zh_word": "專案 / 項目",
+            "example": "Proyek sistem digitalisasi selesai bulan depan.",
+            "example_zh": "數位化系統專案下個月完工。"
+          },
+          {
+            "id_word": "Diskon khusus",
+            "zh_word": "特別折扣",
+            "example": "Dapatkan diskon khusus untuk pembelian grosir.",
+            "example_zh": "大宗採購可獲得特別折扣。"
+          },
+          {
+            "id_word": "Faktur / Invoice",
+            "zh_word": "發票請款單",
+            "example": "Kirim invoice ke bagian akuntansi.",
+            "example_zh": "將請款單寄給會計部門。"
+          },
+          {
+            "id_word": "Presentasi",
+            "zh_word": "簡報 / 發表",
+            "example": "Materi presentasi sudah disiapkan.",
+            "example_zh": "簡報內容資料已經準備完畢。"
+          }
+        ]
+      },
+      {
+        "id": "travel_leisure",
+        "name": "觀光旅遊與休閒 (Wisata & Hiburan)",
+        "icon": "fa-umbrella-beach",
+        "words": [
+          {
+            "id_word": "Pantai",
+            "zh_word": "海灘 / 沙灘",
+            "example": "Pantai Kuta di Bali ramai wisatawan.",
+            "example_zh": "峇里島庫塔海灘遊客很多。"
+          },
+          {
+            "id_word": "Gunung",
+            "zh_word": "山 / 火山",
+            "example": "Gunung Bromo pemandangannya sangat megah.",
+            "example_zh": "婆羅摩火山的景色非常壯麗。"
+          },
+          {
+            "id_word": "Candi",
+            "zh_word": "佛寺 / 印度教神廟 (如 Borobudur)",
+            "example": "Candi Borobudur warisan budaya dunia.",
+            "example_zh": "婆羅浮屠是世界文化遺產。"
+          },
+          {
+            "id_word": "Tiket masuk",
+            "zh_word": "門票 / 入場券",
+            "example": "Berapa harga tiket masuk untuk turis?",
+            "example_zh": "觀光客的門票多少錢？"
+          },
+          {
+            "id_word": "Pemandu wisata",
+            "zh_word": "導遊",
+            "example": "Kami menyewa pemandu wisata lokal.",
+            "example_zh": "我們聘請了一位在地導遊。"
+          },
+          {
+            "id_word": "Foto-foto",
+            "zh_word": "拍照拍照",
+            "example": "Tempat ini sangat bagus untuk foto-foto.",
+            "example_zh": "這個地方非常適合打卡拍照。"
+          },
+          {
+            "id_word": "Boleh tolong fotoin?",
+            "zh_word": "可以幫我們拍張照嗎？",
+            "example": "Permisi, boleh tolong fotoin kami sebentar?",
+            "example_zh": "不好意思，可以幫我們拍張合照嗎？"
+          },
+          {
+            "id_word": "Snorkeling",
+            "zh_word": "浮潛",
+            "example": "Snorkeling melihat penyu di pulau Gili.",
+            "example_zh": "在吉利群島浮潛看海龜。"
+          },
+          {
+            "id_word": "Surfing / Selancar",
+            "zh_word": "衝浪",
+            "example": "Belajar surfing di pantai Canggu.",
+            "example_zh": "在 Canggu 海灘學習衝浪。"
+          },
+          {
+            "id_word": "Pijat / Spa",
+            "zh_word": "按摩 / 水療 (Massage)",
+            "example": "Pijat tradisional Bali sangat bikin rileks.",
+            "example_zh": "傳統峇里島按摩讓人非常放鬆。"
+          },
+          {
+            "id_word": "Oleh-oleh",
+            "zh_word": "伴手禮 / 紀念品",
+            "example": "Beli kopi Luwak dan kain batik buat oleh-oleh.",
+            "example_zh": "買麝香貓咖啡和蠟染布當伴手禮。"
+          },
+          {
+            "id_word": "Air terjun",
+            "zh_word": "瀑布",
+            "example": "Air terjun Tegenungan sangat indah.",
+            "example_zh": "Tegenungan 瀑布非常美麗。"
+          },
+          {
+            "id_word": "Danau",
+            "zh_word": "湖泊",
+            "example": "Danau Toba danau vulkanik terbesar.",
+            "example_zh": "多巴湖是最大的火山湖。"
+          },
+          {
+            "id_word": "Pulau",
+            "zh_word": "島嶼",
+            "example": "Indonesia negara kepulauan terbesar.",
+            "example_zh": "印尼是世界上最大的群島國家。"
+          },
+          {
+            "id_word": "Taman nasional",
+            "zh_word": "國家公園",
+            "example": "Taman Nasional Komodo habitat kadal raksasa.",
+            "example_zh": "科莫多國家公園是巨蜥的棲息地。"
+          },
+          {
+            "id_word": "Sewa perahu",
+            "zh_word": "租木船 / 包船",
+            "example": "Sewa perahu kayu keliling pulau kecil.",
+            "example_zh": "租木船遊覽環繞小島。"
+          },
+          {
+            "id_word": "Kamera",
+            "zh_word": "相機",
+            "example": "Bawa kamera untuk rekam momen liburan.",
+            "example_zh": "帶相機記錄度假時光。"
+          },
+          {
+            "id_word": "Pemandangan",
+            "zh_word": "風景 / 景觀",
+            "example": "Pemandangan matahari terbenam (sunset) memukau.",
+            "example_zh": "落日夕陽的景色令人陶醉。"
+          },
+          {
+            "id_word": "Museum",
+            "zh_word": "博物館",
+            "example": "Kunjungi Museum Nasional di Jakarta Pusat.",
+            "example_zh": "參觀位於中雅加達的國家博物館。"
+          },
+          {
+            "id_word": "Kebun binatang",
+            "zh_word": "動物園",
+            "example": "Lihat gajah dan orangutan di kebun binatang.",
+            "example_zh": "在動物園觀賞大象與紅毛猩猩。"
           }
         ]
       },
       {
         "id": "gaul_slang_words",
-        "name": "TikTok 迷因與潮流口語 (Bahasa Gaul & Tren)",
+        "name": "雅加達口語與迷因 (Bahasa Gaul & Tren)",
         "icon": "fa-fire",
         "words": [
           {
-            "id_word": "Menyala Abangku 🔥",
-            "zh_word": "太炸了大哥！(極致讚嘆)",
-            "example": "Penampilanmu hari ini menyala abangku!",
-            "example_zh": "你今天的表現太炸了大哥！"
+            "id_word": "Gue / Gw",
+            "zh_word": "我 (雅加達青年口語)",
+            "example": "Gue lagi di jalan nih.",
+            "example_zh": "我正在路上了啦。"
           },
           {
-            "id_word": "Tetap Ilmu Padi 🌾",
-            "zh_word": "保持低調謙遜 (越有實力越低調)",
-            "example": "Selalu rendah hati, tetap ilmu padi.",
-            "example_zh": "永遠謙遜，稻穗越飽滿越低頭。"
+            "id_word": "Lu / Elu",
+            "zh_word": "你 (雅加達青年口語)",
+            "example": "Lu mau ikut nongkrong gak?",
+            "example_zh": "你要一起去喝咖啡聚聚嗎？"
           },
           {
-            "id_word": "Bucin",
-            "zh_word": "戀愛腦 (Budak Cinta)",
-            "example": "Dia bucin banget sama pacarnya.",
-            "example_zh": "他對另一半超級戀愛腦。"
+            "id_word": "Gak / Nggak",
+            "zh_word": "不 / 沒 (口語 tidak)",
+            "example": "Gue nggak tahu soal itu.",
+            "example_zh": "我不知道那件事耶。"
           },
           {
-            "id_word": "Mager",
-            "zh_word": "懶得動 (Malas Gerak)",
-            "example": "Lagi mager mau keluar rumah.",
-            "example_zh": "現在超懶得踏出家門。"
-          },
-          {
-            "id_word": "Gabut",
-            "zh_word": "閒到發慌 (Gaji Buta)",
-            "example": "Lagi gabut nih, jalan-jalan yuk!",
-            "example_zh": "現在閒得沒事做，去晃晃吧！"
-          },
-          {
-            "id_word": "Salting",
-            "zh_word": "小鹿亂撞不知所措 (Salah Tingkah)",
-            "example": "Dia bikin aku salting terus.",
-            "example_zh": "他搞得我一直小鹿亂撞超害羞。"
-          },
-          {
-            "id_word": "Kepo",
-            "zh_word": "八卦 / 愛管閒事",
-            "example": "Jangan kepo deh!",
-            "example_zh": "別那麼八卦管閒事啦！"
-          },
-          {
-            "id_word": "Curhat",
-            "zh_word": "訴苦 / 吐露心聲 (Curahan Hati)",
-            "example": "Mau curhat sebentar boleh?",
-            "example_zh": "可以跟你吐吐苦水一下嗎？"
+            "id_word": "Banget / Bgt",
+            "zh_word": "超級 / 非常 (口語 sekali)",
+            "example": "Kopinya enak banget!",
+            "example_zh": "這咖啡超級好喝！"
           },
           {
             "id_word": "Nongkrong",
-            "zh_word": "聚會泡咖啡廳閒聊",
-            "example": "Yuk kita nongkrong di kafe!",
-            "example_zh": "走，我們去咖啡廳混聚會！"
+            "zh_word": "聚會泡咖啡廳聊天 (印尼青年靈魂)",
+            "example": "Malam minggu asyik nongkrong di Jaksel.",
+            "example_zh": "週六晚上在南雅加達喝咖啡聚會超愜意。"
           },
           {
-            "id_word": "Mantap",
-            "zh_word": "給力 / 讚 / 絕了",
-            "example": "Rasanya mantap jiwa!",
-            "example_zh": "味道簡直絕了！"
+            "id_word": "Mager (Malas gerak)",
+            "zh_word": "懶得動 / 懶散",
+            "example": "Lagi mager keluar, pesan GoFood aja ya.",
+            "example_zh": "現在懶得出門，叫 GoFood 外送就好啦。"
+          },
+          {
+            "id_word": "Gabut (Gaji buta)",
+            "zh_word": "無聊沒事做",
+            "example": "Lagi gabut nih, main game yuk.",
+            "example_zh": "現在好無聊喔，來打遊戲吧。"
+          },
+          {
+            "id_word": "Bucin (Budak cinta)",
+            "zh_word": "戀愛腦 / 愛情的奴隸",
+            "example": "Dia bucin banget sama pacarnya.",
+            "example_zh": "他對他另一半超級戀愛腦。"
+          },
+          {
+            "id_word": "Kepo",
+            "zh_word": "愛八卦 / 愛管閒事",
+            "example": "Jangan kepo deh urusan orang lain!",
+            "example_zh": "別那麼八卦別人的事啦！"
+          },
+          {
+            "id_word": "Salting (Salah tingkah)",
+            "zh_word": "害羞不知所措",
+            "example": "Bikin salting disenyumin gebetan.",
+            "example_zh": "被暗戀對象微笑看一眼瞬間害羞不知所措。"
+          },
+          {
+            "id_word": "Curhat (Curahan hati)",
+            "zh_word": "吐苦水 / 傾訴心事",
+            "example": "Malam ini mau curhat panjang sama sahabat.",
+            "example_zh": "今晚想和閨蜜好好吐苦水傾訴心聲。"
+          },
+          {
+            "id_word": "Menyala Abangku 🔥",
+            "zh_word": "太炸了大哥！(TikTok 當紅讚嘆語)",
+            "example": "Keren parah! Menyala Abangku 🔥",
+            "example_zh": "太帥了！太炸了大哥 🔥！"
+          },
+          {
+            "id_word": "Tetap ilmu padi 🌾",
+            "zh_word": "保持低調謙遜 (如飽滿稻穗般下垂)",
+            "example": "Jangan sombong, tetap ilmu padi ya.",
+            "example_zh": "別驕傲自大，要保持低調謙遜喔。"
+          },
+          {
+            "id_word": "Wkwkwk",
+            "zh_word": "哈哈哈哈 (印尼專屬笑聲魔性狀聲詞)",
+            "example": "Lucu banget wkwkwk!",
+            "example_zh": "超搞笑的啦哈哈哈哈！"
+          },
+          {
+            "id_word": "Gaskeun!",
+            "zh_word": "衝一波！/ 幹就完了！",
+            "example": "Mau liburan ke Bali? Gaskeun!",
+            "example_zh": "要去峇里島度假？衝一波！"
+          },
+          {
+            "id_word": "Otw (On the way)",
+            "zh_word": "在路上了 (常為剛出門準備中)",
+            "example": "Tenang, gue udah otw kok!",
+            "example_zh": "放心啦，我已經在路上了！"
+          },
+          {
+            "id_word": "Gpp (Gak papa)",
+            "zh_word": "沒關係 / 沒事",
+            "example": "Gpp, santai aja bro.",
+            "example_zh": "沒事啦，放輕鬆兄弟。"
+          },
+          {
+            "id_word": "Santuy / Santai",
+            "zh_word": "放鬆放空 / 慢慢來",
+            "example": "Hidup dibikin santuy aja.",
+            "example_zh": "人生過得放鬆悠哉就好。"
+          },
+          {
+            "id_word": "Anjir / Anjay",
+            "zh_word": "我的天！(驚嘆口頭禪)",
+            "example": "Anjir, keren banget mobil barunya!",
+            "example_zh": "我的天，他的新車也太帥了吧！"
+          },
+          {
+            "id_word": "Cuan",
+            "zh_word": "賺錢 / 發財 (閩南語借詞)",
+            "example": "Bisnis kopi ini cuan banget!",
+            "example_zh": "這門咖啡生意超級賺錢！"
           }
         ]
       }
     ],
     "situational_modules": [
       {
-        "id": "sit_01_coffee",
-        "title": "1. 咖啡廳點餐與數位遊民 (Kafe & Nongkrong)",
+        "id": "sit_01_gojek",
+        "category": "transport",
+        "categoryName": "🛵 交通與出行",
+        "title": "1. Gojek / Grab 叫車與外送 (Naik Ojek Online)",
+        "subtitle": "與機車/汽車司機在 App 內精準溝通上車點",
+        "location": "雅加達市區 MRT 站外",
+        "icon": "fa-motorcycle",
+        "culture_tip": "印尼的綠色機車大軍 (Ojol) 是破解雅加達塞車 (Macet) 的最大神器。在 App 內傳訊時，司機常用縮寫如 *sesuai titik ya* (在定位點等嗎) 或 *otw* (on the way 在路上了)。",
+        "dialogueSections": [
+          {
+            "id": "d1",
+            "title": "標準叫車溝通 (Standard Ojol)",
+            "dialogue": [
+              {
+                "speaker": "Driver",
+                "id_text": "Halo Kak, penjemputan sesuai titik ya?",
+                "zh_text": "哈囉乘客您好，上車點依照地圖定位點對嗎？"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Iya Pak, saya tunggu di depan lobi stasiun MRT pintu B.",
+                "zh_text": "是的司機大哥，我在 MRT 車站 B 出口的大廳前面等您。"
+              },
+              {
+                "speaker": "Driver",
+                "id_text": "Baik Kak, saya pakai jaket hijau helm hitam, plat nomor B 1234 XYZ.",
+                "zh_text": "好的，我穿綠色外套戴黑安全帽，車牌號碼是 B 1234 XYZ。"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Oke Pak, saya pakai baju putih dan bawa ransel hitam.",
+                "zh_text": "好的司機大哥，我穿白衣服、背黑色後背包。"
+              },
+              {
+                "speaker": "Driver",
+                "id_text": "Sudah sampai di depan lobi ya Kak.",
+                "zh_text": "我已經抵達大廳前面囉。"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Baik, saya langsung keluar sekarang.",
+                "zh_text": "好的，我現在馬上走出去。"
+              }
+            ]
+          },
+          {
+            "id": "d2",
+            "title": "App 快速訊息與口語 (Chat Gaul)",
+            "dialogue": [
+              {
+                "speaker": "Driver",
+                "id_text": "Sesuai titik ya Kak? Otw meluncur.",
+                "zh_text": "照定位點對嗎？我正在飛奔過去囉。"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Siap Pak, ditunggu santai aja ya.",
+                "zh_text": "好的大哥，慢慢騎注意安全喔。"
+              },
+              {
+                "speaker": "Driver",
+                "id_text": "Sudah di titik ya Kak, lampu hazard nyala.",
+                "zh_text": "已經在點上了喔，我開著雙黃警示燈。"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Oke Pak, otw keluar!",
+                "zh_text": "OK 大哥，我正要出來！"
+              }
+            ]
+          }
+        ],
+        "interactive_quiz": {
+          "question": "當司機在 App 內發送訊息：'Penjemputan sesuai titik ya, Kak?' 是什麼意思？",
+          "options": [
+            {
+              "text": "上車點依照地圖定位點對嗎？",
+              "correct": true,
+              "feedback": "答對了！Titik 是「點/定位點」的意思。"
+            },
+            {
+              "text": "您要付多少現金？",
+              "correct": false,
+              "feedback": "這是問車資，不是問定位點喔。"
+            },
+            {
+              "text": "車子已經拋錨故障了。",
+              "correct": false,
+              "feedback": "Titik 是定位點，不是故障喔。"
+            }
+          ]
+        }
+      },
+      {
+        "id": "sit_02_mrt",
+        "category": "transport",
+        "categoryName": "🛵 交通與出行",
+        "title": "2. 搭乘雅加達 MRT / 捷運與買卡加值 (Naik MRT & Top up Kartu)",
+        "subtitle": "在車站購買多用途交通卡 (Flazz / e-money) 並查詢路線",
+        "location": "雅加達 Bundaran HI 捷運站",
+        "icon": "fa-train-subway",
+        "culture_tip": "雅加達 MRT 是非常現代化且乾淨的交通工具。搭乘可以使用電子票證（如 BCA Flazz, Mandiri e-money）或手機 App 掃碼乘車。",
+        "dialogueSections": [
+          {
+            "id": "d1",
+            "title": "站務櫃台詢問與買卡",
+            "dialogue": [
+              {
+                "speaker": "Saya",
+                "id_text": "Permisi Mbak, saya mau beli kartu transportasi.",
+                "zh_text": "不好意思小姐，我想購買一張交通卡。"
+              },
+              {
+                "speaker": "Petugas",
+                "id_text": "Bisa Kak. Kartu ini harganya Rp 50.000, sudah ada saldo Rp 30.000.",
+                "zh_text": "可以的。這張卡售價五萬盾，裡面已有三萬盾餘額。"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Saya mau sekalian top-up saldo Rp 50.000 lagi ya.",
+                "zh_text": "我想順便再加值五萬盾餘額。"
+              },
+              {
+                "speaker": "Petugas",
+                "id_text": "Baik, totalnya jadi Rp 100.000. Mau bayar tunai atau QRIS?",
+                "zh_text": "好的，總共是十萬盾。想付現金還是刷 QRIS？"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Pakai QRIS saja ya. Kereta ke arah Lebak Bulus di peron berapa?",
+                "zh_text": "用 QRIS 吧。請問往 Lebak Bulus 方向的列車在幾號月台？"
+              },
+              {
+                "speaker": "Petugas",
+                "id_text": "Di peron 2 di lantai bawah ya Kak. Silakan tap di gerbang masuk.",
+                "zh_text": "在樓下的 2 號月台喔。請在閘門感應進站。"
+              }
+            ]
+          }
+        ],
+        "interactive_quiz": {
+          "question": "如果想在車站加值交通卡，印尼語關鍵字通常是什麼？",
+          "options": [
+            {
+              "text": "Top-up saldo / Isi ulang",
+              "correct": true,
+              "feedback": "答對了！Saldo 是餘額，Isi ulang / Top-up 是加值充值！"
+            },
+            {
+              "text": "Batal tiket",
+              "correct": false,
+              "feedback": "這是取消退票的意思喔。"
+            },
+            {
+              "text": "Makan di kereta",
+              "correct": false,
+              "feedback": "這是火車上吃東西的意思喔。"
+            }
+          ]
+        }
+      },
+      {
+        "id": "sit_03_airport_customs",
+        "category": "transport",
+        "categoryName": "🛵 交通與出行",
+        "title": "3. 機場入境海關與計程車接送 (Di Bandara & Imigrasi)",
+        "subtitle": "在雅加達蘇加諾-哈達機場通過海關並搭乘正規計程車",
+        "location": "雅加達 Soekarno-Hatta (CGK) 機場 3 號航廈",
+        "icon": "fa-plane-arrival",
+        "culture_tip": "入境印尼需填寫電子報關單 (ECD)。在機場出境大廳，建議直接找正規的 Bluebird / Silverbird 櫃檯搭車，避免搭乘路邊拉客黑車。",
+        "dialogueSections": [
+          {
+            "id": "d1",
+            "title": "海關檢查與計程車詢問",
+            "dialogue": [
+              {
+                "speaker": "Petugas",
+                "id_text": "Selamat siang. Boleh lihat paspor dan kode QR e-customs Anda?",
+                "zh_text": "午安。可以看一下您的護照與電子海關申報 QR 碼嗎？"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Selamat siang Pak. Ini paspor dan kode QR saya.",
+                "zh_text": "午安長官。這是我的護照與 QR 碼。"
+              },
+              {
+                "speaker": "Petugas",
+                "id_text": "Berapa lama rencana Anda tinggal di Indonesia?",
+                "zh_text": "您預計在印尼停留多久時間？"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Kira-kira dua minggu untuk liburan dan wisata.",
+                "zh_text": "大約兩個星期，過來度假旅遊。"
+              },
+              {
+                "speaker": "Petugas",
+                "id_text": "Baik, semua lengkap. Selamat datang di Indonesia!",
+                "zh_text": "好的，手續齊全。歡迎來到印尼！"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Terima kasih banyak Pak! Di mana loket taksi Bluebird?",
+                "zh_text": "非常感謝長官！請問 Bluebird 計程車櫃台在哪裡？"
+              },
+              {
+                "speaker": "Petugas",
+                "id_text": "Lurus terus lalu belok kanan di pintu keluar utama.",
+                "zh_text": "一直往前走，在主要出口處右轉就是了。"
+              }
+            ]
+          }
+        ],
+        "interactive_quiz": {
+          "question": "當海關官員詢問 'Berapa lama rencana Anda tinggal di Indonesia?' 你該如何回答？",
+          "options": [
+            {
+              "text": "Kira-kira dua minggu untuk liburan.",
+              "correct": true,
+              "feedback": "答對了！回答停留時間與旅遊目的。"
+            },
+            {
+              "text": "Saya mau makan nasi goreng.",
+              "correct": false,
+              "feedback": "這是在回答想吃炒飯，不合邏輯喔。"
+            },
+            {
+              "text": "Harga taksi mahal.",
+              "correct": false,
+              "feedback": "這是計程車很貴的意思喔。"
+            }
+          ]
+        }
+      },
+      {
+        "id": "sit_04_rental_gas",
+        "category": "transport",
+        "categoryName": "🛵 交通與出行",
+        "title": "4. 租機車/汽車與加油站加油 (Sewa Motor & Isi Bensin)",
+        "subtitle": "在觀光景點租賃機車並前往 Pertamina 加油站加油",
+        "location": "峇里島庫塔 (Kuta) 租車行與加油站",
+        "icon": "fa-gas-pump",
+        "culture_tip": "在印尼加油站 (SPBU Pertamina)，常用汽油種類為 Pertalite (90無鉛) 或 Pertamax (92無鉛)。加油時常說 *Penuh ya, Mas* (加滿喔小哥)。",
+        "dialogueSections": [
+          {
+            "id": "d1",
+            "title": "租借機車與確認配備",
+            "dialogue": [
+              {
+                "speaker": "Rental",
+                "id_text": "Halo Bli! Mau sewa motor matic berapa hari?",
+                "zh_text": "哈囉朋友！想要租幾天的自排速克達機車呢？"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Saya mau sewa 3 hari. Berapa biaya per harinya?",
+                "zh_text": "我要租 3 天。請問一天的租金是多少？"
+              },
+              {
+                "speaker": "Rental",
+                "id_text": "Rp 80.000 per hari, sudah termasuk dua helm dan jas hujan.",
+                "zh_text": "每天八萬盾，已經包含兩頂安全帽與一件雨衣。"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Bagus. Motor ini pakai bensin apa ya?",
+                "zh_text": "太好了。這輛機車加什麼汽油呢？"
+              },
+              {
+                "speaker": "Rental",
+                "id_text": "Bisa pakai Pertamax atau Pertalite di pom bensin Pertamina.",
+                "zh_text": "在 Pertamina 加油站加 Pertamax 或 Pertalite 都可以喔。"
+              }
+            ]
+          },
+          {
+            "id": "d2",
+            "title": "加油站加油對話 (Di Pom Bensin)",
+            "dialogue": [
+              {
+                "speaker": "Petugas",
+                "id_text": "Selamat pagi Kak, mau isi bensin apa dan berapa?",
+                "zh_text": "早安，要加什麼油？加多少錢？"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Pertamax isi penuh ya Mas.",
+                "zh_text": "Pertamax 加滿喔小哥。"
+              },
+              {
+                "speaker": "Petugas",
+                "id_text": "Mulai dari nol ya Kak. Totalnya Rp 35.000.",
+                "zh_text": "表從零開始起算喔。總共是三萬五千印尼盾。"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Ini uangnya pas Rp 35.000. Terima kasih Mas!",
+                "zh_text": "這是剛好三萬五千盾。謝謝小哥！"
+              }
+            ]
+          }
+        ],
+        "interactive_quiz": {
+          "question": "在加油站想要跟店員說「請幫我加滿」，印尼語該怎麼說？",
+          "options": [
+            {
+              "text": "Isi penuh ya, Mas.",
+              "correct": true,
+              "feedback": "答對了！Penuh 就是「滿」的意思！"
+            },
+            {
+              "text": "Saya mau beli helm.",
+              "correct": false,
+              "feedback": "這是「我想買安全帽」的意思。"
+            },
+            {
+              "text": "Motor saya rusak.",
+              "correct": false,
+              "feedback": "這是「我的機車壞掉了」的意思。"
+            }
+          ]
+        }
+      },
+      {
+        "id": "sit_05_coffee",
+        "category": "culinary",
+        "categoryName": "🍜 美食與餐飲",
+        "title": "5. Jaksel 咖啡廳點餐與 QRIS 拆帳 (Kafe & Nongkrong Jaksel)",
         "subtitle": "點一杯道地的棕櫚糖拿鐵，並使用 QRIS 掃碼結帳",
         "location": "雅加達南部 (Jaksel) 文青咖啡廳",
         "icon": "fa-mug-hot",
-        "image": "assets/coffee_shop_illustration_1787210903184.jpg",
         "culture_tip": "印尼的「Nongkrong」（泡咖啡廳社交閒聊）是當代青年文化的精髓。最暢銷的國民飲品是 **Es Kopi Susu Aren**（加了椰糖/棕櫚糖的濃醇冰拿鐵）。",
         "dialogueSections": [
           {
@@ -1544,838 +3400,1631 @@
         }
       },
       {
-        "id": "sit_02_gojek",
-        "title": "2. Gojek / Grab 叫車與外送 (Naik Ojek Online)",
-        "subtitle": "與機車/汽車司機在 App 內精準溝通上車點",
-        "location": "雅加達市區 MRT 站外",
-        "icon": "fa-motorcycle",
-        "image": "assets/indo_hero_illustration_1787210889692.jpg",
-        "culture_tip": "印尼塞車嚴重，摩的 (Ojek) 是最高效的出行神器。司機接單後常會傳訊確認：**'Sesuai titik ya, Kak?'**（按照 App 定位點嗎？）",
-        "dialogueSections": [
-          {
-            "id": "d1",
-            "title": "摩的定位接送 (Ojek Pickup)",
-            "dialogue": [
-              {
-                "speaker": "Driver (Chat)",
-                "id_text": "Sore Kak, penjemputan sesuai titik di aplikasi ya?",
-                "zh_text": "您好，接送地點是照 App 上的定位點嗎？"
-              },
-              {
-                "speaker": "Saya (Chat)",
-                "id_text": "Iya Pak, saya pakai baju hitam di depan pintu lobi stasiun MRT.",
-                "zh_text": "是的司機大哥，我穿黑色衣服，在 MRT 站大廳門口前面。"
-              },
-              {
-                "speaker": "Driver (Chat)",
-                "id_text": "Baik Kak, otw (on the way) ke sana, sekitar 3 menit lagi sampai.",
-                "zh_text": "好的，正在趕過去路上，大約 3 分鐘後抵達。"
-              },
-              {
-                "speaker": "Saya",
-                "id_text": "Pak Budi ya? Plat B 1234 XYZ?",
-                "zh_text": "請問是 Budi 司機嗎？車牌 B 1234 XYZ？"
-              },
-              {
-                "speaker": "Driver",
-                "id_text": "Betul Kak, ini helmnya. Mau lewat jalan tol atau jalan biasa?",
-                "zh_text": "沒錯就是我，這是給您的安全帽。要走高速公路還是走一般道路？"
-              },
-              {
-                "speaker": "Saya",
-                "id_text": "Jalan biasa saja Pak, yang penting cepat dan aman.",
-                "zh_text": "走一般道路就可以了大哥，快又安全最重要。"
-              }
-            ]
-          },
-          {
-            "id": "d2",
-            "title": "汽車 GrabCar 塞車應變",
-            "dialogue": [
-              {
-                "speaker": "Driver",
-                "id_text": "Siang Kak, jalanan depan lagi macet parah nih karena ada proyek.",
-                "zh_text": "午安，前面那條路因為有工程現在塞車超級嚴重。"
-              },
-              {
-                "speaker": "Saya",
-                "id_text": "Waduh, kira-kira bisa lewat jalan pintas nggak Pak?",
-                "zh_text": "哎呀，司機大哥請問大概能走小路捷徑嗎？"
-              },
-              {
-                "speaker": "Driver",
-                "id_text": "Bisa Kak, kita lewat jalan tikus ya biar gak kena macet.",
-                "zh_text": "可以的，我們鑽巷弄小路走，避開大塞車喔。"
-              },
-              {
-                "speaker": "Saya",
-                "id_text": "Siap Pak, terima kasih banyak ya.",
-                "zh_text": "沒問題司機大哥，非常感謝您。"
-              }
-            ]
-          }
-        ],
-        "interactive_quiz": {
-          "question": "當司機在 App 內傳訊 'Sesuai titik ya, Kak?'，最道地的確認回覆是什麼？",
-          "options": [
-            {
-              "text": "Iya Pak, sesuai titik ya.",
-              "correct": true,
-              "feedback": "完美！表示確認照 App 上的圖釘定位點等車。"
-            },
-            {
-              "text": "Saya mau bayar tunai.",
-              "correct": false,
-              "feedback": "這是「我要付現金」的意思。"
-            },
-            {
-              "text": "Bukan, saya tidak tahu.",
-              "correct": false,
-              "feedback": "這樣司機會不知道該去哪裡接你喔。"
-            }
-          ]
-        }
-      },
-      {
-        "id": "sit_03_restaurant",
-        "title": "3. 餐廳點餐與辣度定制 (Makan di Restoran / Warung)",
-        "subtitle": "點選道地炒飯、沙嗲，並客製化調整辣椒醬",
-        "location": "泗水美食街 / Padang 餐廳",
+        "id": "sit_06_warung",
+        "category": "culinary",
+        "categoryName": "🍜 美食與餐飲",
+        "title": "6. 印尼在地小吃攤點餐與客製辣度 (Makan di Warung Kaki Lima)",
+        "subtitle": "在街頭小吃攤點炒飯炒麵，客製不辣或微辣",
+        "location": "泗水路邊傳統 Warung 小吃攤",
         "icon": "fa-bowl-rice",
-        "image": "assets/surabaya_illustration_1787210917170.jpg",
-        "culture_tip": "印尼料理無辣不歡，如果不擅長吃辣，務必學會說 **'Sambal dipisah'**（辣椒分開放）或 **'Jangan pedas'**（不要辣）！",
+        "culture_tip": "路邊小吃攤 (Warung / Kaki Lima) 滋味最道地。印尼辣椒極具後勁，如果不習慣吃太辣，一定要在點餐時立刻說 *tidak pedas* (不辣) 或 *pedas manis* (甜辣微辣)。",
         "dialogueSections": [
           {
             "id": "d1",
-            "title": "標準點餐與結帳 (Pesan Makanan & Bon)",
-            "dialogue": [
-              {
-                "speaker": "Pelayan",
-                "id_text": "Selamat siang! Silakan duduk, ini menunya.",
-                "zh_text": "午安！請坐，這是菜單。"
-              },
-              {
-                "speaker": "Saya",
-                "id_text": "Saya mau pesan Nasi Goreng Spesial satu, dan Sate Ayam 10 tusuk.",
-                "zh_text": "我要點一份特製炒飯，以及 10 串雞肉沙嗲。"
-              },
-              {
-                "speaker": "Pelayan",
-                "id_text": "Nasi gorengnya mau pedas atau sedang?",
-                "zh_text": "炒飯要大辣還是中辣？"
-              },
-              {
-                "speaker": "Saya",
-                "id_text": "Tidak terlalu pedas ya, tolong sambalnya dipisah saja.",
-                "zh_text": "不要太辣喔，請把辣椒醬另外放就可以了。"
-              },
-              {
-                "speaker": "Pelayan",
-                "id_text": "Minumnya mau apa Kak?",
-                "zh_text": "飲料想要喝什麼呢？"
-              },
-              {
-                "speaker": "Saya",
-                "id_text": "Es teh manis satu dan air mineral satu.",
-                "zh_text": "一杯冰甜茶和一瓶礦泉水。"
-              },
-              {
-                "speaker": "Saya",
-                "id_text": "Mas, minta bon / struknya ya, mau bayar.",
-                "zh_text": "服務生，麻煩請給我帳單，我要買單了。"
-              }
-            ]
-          },
-          {
-            "id": "d2",
-            "title": "泗水黑牛肉湯小吃攤 (Rawon Surabaya)",
+            "title": "街頭攤販點餐與客製辣度",
             "dialogue": [
               {
                 "speaker": "Penjual",
-                "id_text": "Makan di sini atau dibungkus, Mas?",
-                "zh_text": "小哥，要在這裡吃還是外帶包走？"
+                "id_text": "Malam Mas! Mau makan di sini atau dibungkus?",
+                "zh_text": "晚上好老闆！要在這裡吃還是外帶包走？"
               },
               {
                 "speaker": "Saya",
-                "id_text": "Makan di sini Cak. Minta Rawon daging satu sama telur asin ya.",
-                "zh_text": "大哥，在這裡吃。請給我一碗黑牛肉湯配一顆鹹蛋。"
+                "id_text": "Makan di sini Mas. Nasi goreng spesial satu ya.",
+                "zh_text": "在這裡內用。我要一份特製印尼炒飯。"
               },
               {
                 "speaker": "Penjual",
-                "id_text": "Pakai kerupuk udang sama sambal terasi?",
-                "zh_text": "要加蝦餅和特製蝦醬辣醬嗎？"
+                "id_text": "Mau pedas, sedang, atau tidak pedas sama sekali?",
+                "zh_text": "要大辣、中辣、還是完全不辣？"
               },
               {
                 "speaker": "Saya",
-                "id_text": "Pakai Cak, kuahnya tolong yang panas ya!",
-                "zh_text": "要的的大哥，湯頭麻煩要熱騰騰的喔！"
+                "id_text": "Sedang saja ya Mas, jangan terlalu banyak cabai.",
+                "zh_text": "中辣就好小哥，辣椒不要放太多。"
+              },
+              {
+                "speaker": "Penjual",
+                "id_text": "Siap! Telurnya mau ceplok atau dadar?",
+                "zh_text": "好的！蛋要太陽荷包蛋還是煎蛋捲？"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Telur ceplok setengah matang ya. Minumnya es teh tawar satu.",
+                "zh_text": "半熟太陽蛋。飲料要一杯無糖冰茶。"
               }
             ]
           }
         ],
         "interactive_quiz": {
-          "question": "如果你不想讓整盤炒飯被辣椒炒進去，希望辣椒醬另外裝在小碟子裡，該怎麼說？",
+          "question": "外帶食物打包帶走的印尼文常用詞彙是什麼？",
           "options": [
             {
-              "text": "Tolong sambalnya dipisah ya.",
+              "text": "Dibungkus / Bawa pulang",
               "correct": true,
-              "feedback": "太棒了！'dipisah' (被分開) 是最實用道地的點餐神句！"
+              "feedback": "答對了！Bungkus 是「打包/包裹」的意思！"
             },
             {
-              "text": "Saya mau sambal banyak.",
+              "text": "Makan di sini",
               "correct": false,
-              "feedback": "這是「我要很多辣椒醬」的意思，會超級辣喔！"
+              "feedback": "這是內用喔。"
             },
             {
-              "text": "Minta nasi putih lagi.",
+              "text": "Kurang manis",
               "correct": false,
-              "feedback": "這是「再要一碗白飯」的意思。"
+              "feedback": "這是少糖喔。"
             }
           ]
         }
       },
       {
-        "id": "sit_04_hotel",
-        "title": "4. 飯店入住與詢問服務 (Check-in Hotel)",
-        "subtitle": "辦理飯店入住手續、詢問早餐時間與設施",
-        "location": "峇里島度假飯店大廳",
+        "id": "sit_07_padang",
+        "category": "culinary",
+        "categoryName": "🍜 美食與餐飲",
+        "title": "7. 巴東菜餐廳自選手抓飯體驗 (Makan di Restoran Padang)",
+        "subtitle": "體驗壯觀的擺滿桌 Hidang 式巴東餐與手抓飯洗指盆 (Kobokan)",
+        "location": "雅加達 Sederhana 巴東名店",
+        "icon": "fa-plate-wheat",
+        "culture_tip": "走進巴東餐廳 (Rumah Makan Padang)，店員會瞬間在桌上擺滿二三十道小碟子 (稱為 Hidang)。**只算你動過吃掉的碟子錢**，沒碰過的會收回去。桌上的水碗是洗手盆 (Kobokan)，千萬別喝掉！",
+        "dialogueSections": [
+          {
+            "id": "d1",
+            "title": "巴東餐廳選菜與結帳體驗",
+            "dialogue": [
+              {
+                "speaker": "Pelayan",
+                "id_text": "Selamat siang Kak, silakan duduk. Mau sistem hidang atau pilih di etalase?",
+                "zh_text": "午安請坐。要擺滿桌選吃，還是在櫥窗前直接點選？"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Saya pilih di etalase saja ya. Mau nasi pakai rendang sapi satu.",
+                "zh_text": "我在櫥窗前點就好。我要白飯配一份巴東牛肉。"
+              },
+              {
+                "speaker": "Pelayan",
+                "id_text": "Mau sayur nangka dan daun singkong juga?",
+                "zh_text": "要加菠蘿蜜菜和樹薯葉配菜嗎？"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Mau sayur nangka dan sambal hijau ya Mas.",
+                "zh_text": "要菠蘿蜜菜跟綠辣椒醬喔小哥。"
+              },
+              {
+                "speaker": "Pelayan",
+                "id_text": "Ini kobokan untuk cuci tangan ya Kak sebelum makan pakai tangan.",
+                "zh_text": "這是給您洗手的水碗喔，方便您用手抓飯吃。"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Terima kasih Mas! Semuanya kelihatan lezat sekali.",
+                "zh_text": "謝謝小哥！每道菜看起來都好美味。"
+              }
+            ]
+          }
+        ],
+        "interactive_quiz": {
+          "question": "巴東餐廳桌上附有檸檬片的小水碗 (Kobokan) 正確用途是什麼？",
+          "options": [
+            {
+              "text": "用餐前後洗手的洗手盆",
+              "correct": true,
+              "feedback": "答對了！Kobokan 是洗手用的，不是拿來喝的檸檬水喔！"
+            },
+            {
+              "text": "餐前開胃檸檬飲品",
+              "correct": false,
+              "feedback": "小心！那是洗手水，不能喝喔！"
+            },
+            {
+              "text": "泡辣椒醬的小碟子",
+              "correct": false,
+              "feedback": "那是洗手洗指專用的小碗喔。"
+            }
+          ]
+        }
+      },
+      {
+        "id": "sit_08_gofood",
+        "category": "culinary",
+        "categoryName": "🍜 美食與餐飲",
+        "title": "8. 叫外送 GoFood 備註餐點與聯絡外送員 (Pesan Makanan Online)",
+        "subtitle": "在 App 上訂購晚餐，備註無餐具並通知警衛室代收",
+        "location": "雅加達住宅公寓客廳",
+        "icon": "fa-burger",
+        "culture_tip": "印尼外送 App (GoFood/GrabFood) 極其發達。點餐時可於 Notes 備註辣度。外送員抵達公寓時，常傳訊 *Titip di lobi satpam ya Kak* (幫您寄放大廳警衛室囉)。",
+        "dialogueSections": [
+          {
+            "id": "d1",
+            "title": "外送員抵達聯絡與寄放",
+            "dialogue": [
+              {
+                "speaker": "Driver",
+                "id_text": "Sore Kak, pesanan martabak sudah dibeli dan otw antar ya.",
+                "zh_text": "傍晚好，甜煎餅已經買好了，正在送過去的路上喔。"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Baik Pak, tolong nanti titip di meja satpam lobi tower A ya.",
+                "zh_text": "好的司機大哥，等下請幫我寄放在 A 棟大廳警衛桌上喔。"
+              },
+              {
+                "speaker": "Driver",
+                "id_text": "Siap Kak, saya sudah sampai di lobi. Makanan sudah dititipkan.",
+                "zh_text": "好的，我已經到大廳了。餐點已幫您寄放在警衛那了。"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Terima kasih banyak Pak! Saya sudah kasih tip di aplikasi ya.",
+                "zh_text": "非常感謝大哥！我已經在 App 裡給您小費囉。"
+              },
+              {
+                "speaker": "Driver",
+                "id_text": "Sama-sama Kak! Terima kasih banyak tipnya, sehat selalu!",
+                "zh_text": "不客氣！非常謝謝您的小費，祝您身體健康！"
+              }
+            ]
+          }
+        ],
+        "interactive_quiz": {
+          "question": "外送時想請司機「寄放在警衛室/大廳」，最常用的印尼語單字是？",
+          "options": [
+            {
+              "text": "Titip di satpam / lobi",
+              "correct": true,
+              "feedback": "答對了！Titip 是「寄託/寄放」，Satpam 是「保全警衛」！"
+            },
+            {
+              "text": "Bawa pulang",
+              "correct": false,
+              "feedback": "這是外帶的意思喔。"
+            },
+            {
+              "text": "Tolak makanan",
+              "correct": false,
+              "feedback": "這是拒收餐點的意思喔。"
+            }
+          ]
+        }
+      },
+      {
+        "id": "sit_09_hotel_checkin",
+        "category": "accommodation",
+        "categoryName": "🏨 住宿與生活",
+        "title": "9. 飯店辦理入住與特殊需求 (Check-in Hotel & Fasilitas)",
+        "subtitle": "在櫃檯核對預訂資訊、要求安靜高樓層與禁菸房",
+        "location": "峇里島海景度假酒店前台",
         "icon": "fa-hotel",
-        "image": "assets/indo_hero_illustration_1787210889692.jpg",
-        "culture_tip": "在印尼辦理入住時，通常需要提供護照登記並可能需要少量押金 (Deposit)。早餐 (Sarapan) 時間通常是清晨 06:00 到 10:00。",
+        "culture_tip": "辦理飯店 Check-in 時需出示護照，通常會收取一筆押金 (Deposit)。若需要高樓層可說 *lantai tinggi*，禁菸房則是 *kamar bebas asap rokok*。",
         "dialogueSections": [
           {
             "id": "d1",
-            "title": "飯店櫃檯入住 (Standard Check-in)",
+            "title": "櫃檯辦理入住手續",
             "dialogue": [
               {
                 "speaker": "Resepsionis",
-                "id_text": "Selamat sore, selamat datang di Hotel Grand Bali. Ada yang bisa dibantu?",
-                "zh_text": "傍晚好，歡迎光臨峇里島大飯店。有什麼我可以協助您的嗎？"
+                "id_text": "Selamat sore, selamat datang di Hotel Grand Bali. Ada yang bisa kami bantu?",
+                "zh_text": "傍晚好，歡迎蒞臨 Grand Bali 酒店。有什麼能為您服務的嗎？"
               },
               {
                 "speaker": "Saya",
-                "id_text": "Selamat sore. Saya mau check-in, sudah pesan atas nama David.",
-                "zh_text": "傍晚好。我要辦理入住，已經用 David 的名字預約了。"
+                "id_text": "Selamat sore. Saya mau check-in, sudah pesan kamar atas nama David.",
+                "zh_text": "傍晚好。我要辦理入住，已用 David 的名字預訂房間。"
               },
               {
                 "speaker": "Resepsionis",
-                "id_text": "Boleh saya pinjam paspor Anda untuk verifikasi?",
-                "zh_text": "可以借看一下您的護照進行身份驗證嗎？"
+                "id_text": "Baik Pak David, boleh pinjam paspor Anda untuk verifikasi data?",
+                "zh_text": "好的 David 先生，可以借您的護照核對資料嗎？"
               },
               {
                 "speaker": "Saya",
-                "id_text": "Ini paspor saya.",
-                "zh_text": "這是我的護照。"
+                "id_text": "Ini paspor saya. Kalau bisa, saya minta kamar di lantai tinggi dan bebas rokok ya.",
+                "zh_text": "這是我的護照。如果可以的話，我希望在高樓層且是禁菸房。"
               },
               {
                 "speaker": "Resepsionis",
-                "id_text": "Baik, kamar Anda di lantai 5 nomor 508. Ini kunci kartunya.",
-                "zh_text": "好的，您的房間在 5 樓 508 號。這是您的房卡。"
+                "id_text": "Tentu, kamar 808 di lantai 8 dengan pemandangan laut. Sarapan mulai jam 6 sampai jam 10 pagi.",
+                "zh_text": "沒問題，安排在 8 樓 808 號海景房。早餐從早上 6 點到 10 點供應。"
               },
               {
                 "speaker": "Saya",
-                "id_text": "Jam berapa sarapan pagi dan di mana restorannya?",
-                "zh_text": "請問早餐是幾點？餐廳在哪裡呢？"
-              },
-              {
-                "speaker": "Resepsionis",
-                "id_text": "Sarapan dari jam 6 sampai jam 10 pagi di restoran lantai 1 dekat kolam renang.",
-                "zh_text": "早餐從早上 6 點到 10 點，在 1 樓泳池旁的餐廳。"
-              }
-            ]
-          },
-          {
-            "id": "d2",
-            "title": "峇里島別墅租車與延後退房",
-            "dialogue": [
-              {
-                "speaker": "Saya",
-                "id_text": "Bli, apakah di sini bisa bantu sewa motor matic untuk 3 hari?",
-                "zh_text": "大哥，請問這裡能幫忙租 3 天的自排機車嗎？"
-              },
-              {
-                "speaker": "Staff Villa",
-                "id_text": "Bisa Kak, harganya Rp 75.000 per hari sudah termasuk 2 helm.",
-                "zh_text": "可以的，一天七萬五印尼盾，已經包含兩頂安全帽。"
-              },
-              {
-                "speaker": "Saya",
-                "id_text": "Sama mau tanya, apakah besok bisa late check-out jam 2 siang?",
-                "zh_text": "另外想請問，明天可以延後到下午兩點退房嗎？"
-              },
-              {
-                "speaker": "Staff Villa",
-                "id_text": "Bisa Kak, khusus untuk Kakak gratis late check-out ya.",
-                "zh_text": "可以的，特別為您免費延後退房喔。"
+                "id_text": "Terima kasih banyak atas bantuannya!",
+                "zh_text": "非常感謝您的協助！"
               }
             ]
           }
         ],
         "interactive_quiz": {
-          "question": "詢問櫃檯人員「早餐是幾點？」的正確印尼語是？",
+          "question": "在飯店想要向櫃台提出「禁菸房」的需求，應該怎麼說？",
           "options": [
             {
-              "text": "Jam berapa sarapan pagi?",
+              "text": "Kamar bebas rokok / Non-smoking room",
               "correct": true,
-              "feedback": "正確！Jam berapa = 幾點，sarapan pagi = 早餐。"
+              "feedback": "答對了！Bebas rokok 就是無菸/禁菸的意思！"
             },
             {
-              "text": "Di mana toilet?",
+              "text": "Kamar banyak rokok",
               "correct": false,
-              "feedback": "這是問廁所在哪裡。"
+              "feedback": "這會變成很多菸的房間喔。"
             },
             {
-              "text": "Berapa nomor kamar saya?",
+              "text": "Minta rokok gratis",
               "correct": false,
-              "feedback": "這是問「我的房號是多少？」。"
+              "feedback": "這是要免費香菸的意思喔。"
             }
           ]
         }
       },
       {
-        "id": "sit_05_minimarket",
-        "title": "5. 便利店購物與電話儲值 (Belanja di Indomaret / Alfamart)",
-        "subtitle": "在印尼街頭最常見的便利店買日用品與儲值手機網路",
-        "location": "Indomaret / Alfamart 門市",
+        "id": "sit_10_apartment_kost",
+        "category": "accommodation",
+        "categoryName": "🏨 住宿與生活",
+        "title": "10. 租雅加達公寓與寄宿 Kost (Sewa Apartemen & Kost)",
+        "subtitle": "詢問每期租金、水電瓦斯與押金規定",
+        "location": "雅加達市中心優質 Kost 招租處",
+        "icon": "fa-building",
+        "culture_tip": "印尼獨特的租屋形式叫 **Kost**（單人獨立套房/公寓房間），分為 Kost Putri (限女性)、Kost Putra (限男性) 與 Kost Campur (男女混合)。",
+        "dialogueSections": [
+          {
+            "id": "d1",
+            "title": "看房與詢問租金細節",
+            "dialogue": [
+              {
+                "speaker": "Saya",
+                "id_text": "Permisi Ibu, apakah masih ada kamar kost yang kosong?",
+                "zh_text": "不好意思房東太太，請問還有空的套房可以出租嗎？"
+              },
+              {
+                "speaker": "Pemilik",
+                "id_text": "Ada Mas, ada satu kamar AC di lantai 2. Fasilitasnya lengkap kamar mandi dalam.",
+                "zh_text": "有的，2 樓還有一間冷氣房。配備齊全且有獨立衛浴。"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Berapa biaya sewa per bulannya Bu? Sudah termasuk listrik dan WiFi?",
+                "zh_text": "請問每個月租金是多少呢？已經包含電費和 WiFi 嗎？"
+              },
+              {
+                "speaker": "Pemilik",
+                "id_text": "Sewa Rp 2.200.000 per bulan, WiFi dan air gratis, tapi listrik pakai token sendiri.",
+                "zh_text": "月租兩百二十萬盾，WiFi 和水費免費，但電費使用預付電表 (Token)。"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Boleh saya lihat kondisi kamarnya sekarang?",
+                "zh_text": "我可以現在進去看看房間的狀況嗎？"
+              },
+              {
+                "speaker": "Pemilik",
+                "id_text": "Tentu boleh, mari silakan ikut saya ke atas.",
+                "zh_text": "當然可以，請跟我一起上樓來。"
+              }
+            ]
+          }
+        ],
+        "interactive_quiz": {
+          "question": "印尼租屋中常說的 'Kamar mandi dalam' 代表什麼意思？",
+          "options": [
+            {
+              "text": "房間內有獨立專用衛浴 (套房)",
+              "correct": true,
+              "feedback": "答對了！Dalam 是內部，即套房獨立衛浴！"
+            },
+            {
+              "text": "公共走廊共用衛浴 (雅房)",
+              "correct": false,
+              "feedback": "那是 Kamar mandi luar 喔。"
+            },
+            {
+              "text": "房間沒有洗澡的地方",
+              "correct": false,
+              "feedback": "這不正確喔。"
+            }
+          ]
+        }
+      },
+      {
+        "id": "sit_11_hotel_service_repair",
+        "category": "accommodation",
+        "categoryName": "🏨 住宿與生活",
+        "title": "11. 飯店房務清潔與冷氣報修 (Layanan Kamar & Komplain AC Rusak)",
+        "subtitle": "向總機投訴冷氣不冷、水壓不足並要求更換乾淨毛巾",
+        "location": "飯店客房內打電話給總機",
+        "icon": "fa-wrench",
+        "culture_tip": "若房間設備故障，撥打客房服務 (Housekeeping / Front Desk) 說明問題。冷氣不冷說 *AC kurang dingin*，水龍頭壞了說 *keran air rusak*。",
+        "dialogueSections": [
+          {
+            "id": "d1",
+            "title": "房務投訴與修繕溝通",
+            "dialogue": [
+              {
+                "speaker": "Front Desk",
+                "id_text": "Front desk di sini, ada yang bisa kami bantu Bapak?",
+                "zh_text": "櫃檯總機您好，有什麼能為先生服務的嗎？"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Halo, saya tamu kamar 504. AC di kamar saya tidak dingin dan air shower kecil sekali.",
+                "zh_text": "你好，我是 504 號房的房客。我房間的冷氣不冷，而且蓮蓬頭水壓非常小。"
+              },
+              {
+                "speaker": "Front Desk",
+                "id_text": "Mohon maaf sekali atas ketidaknyamanannya. Kami segera kirim teknisi ke kamar Bapak.",
+                "zh_text": "非常抱歉給您帶來不便。我們立即派維修技師前往您的房間。"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Tolong sekalian bawakan dua handuk mandi bersih ya.",
+                "zh_text": "請順便幫我送兩條乾淨的浴巾過來喔。"
+              },
+              {
+                "speaker": "Front Desk",
+                "id_text": "Baik Bapak, teknisi dan staf housekeeping akan tiba dalam 10 menit.",
+                "zh_text": "好的先生，技師與房務人員將在 10 分鐘內抵達。"
+              }
+            ]
+          }
+        ],
+        "interactive_quiz": {
+          "question": "冷氣故障或不冷時，印尼語最地道的表達方式是？",
+          "options": [
+            {
+              "text": "AC-nya rusak / kurang dingin.",
+              "correct": true,
+              "feedback": "答對了！Rusak 是損壞，Kurang dingin 是不夠冷！"
+            },
+            {
+              "text": "AC-nya sangat dingin sekali.",
+              "correct": false,
+              "feedback": "這是非常冷的意思喔。"
+            },
+            {
+              "text": "Saya mau beli AC baru.",
+              "correct": false,
+              "feedback": "這是我想買新冷氣的意思。"
+            }
+          ]
+        }
+      },
+      {
+        "id": "sit_12_laundry",
+        "category": "accommodation",
+        "categoryName": "🏨 住宿與生活",
+        "title": "12. 秤重洗衣店與乾洗收送 (Laundry Kiloan & Cuci Kering)",
+        "subtitle": "將旅行換洗衣物送至平價秤重洗衣店並約定取件時間",
+        "location": "峇里島巷弄內的 Laundry Kiloan 洗衣店",
+        "icon": "fa-soap",
+        "culture_tip": "印尼到處都有超便宜的 **Laundry Kiloan**（按公斤計價洗衣店），洗加烘加熨燙只要約 Rp 8.000 - 15.000 / kg，一兩天即可取件，非常適合自由行旅客！",
+        "dialogueSections": [
+          {
+            "id": "d1",
+            "title": "送洗秤重與確認費用",
+            "dialogue": [
+              {
+                "speaker": "Saya",
+                "id_text": "Halo Mbak, saya mau cuci baju kiloan.",
+                "zh_text": "哈囉小姐，我想要送洗秤重衣服。"
+              },
+              {
+                "speaker": "Petugas",
+                "id_text": "Bisa Kak. Mau cuci kering setrika atau cuci lipat saja?",
+                "zh_text": "可以的。要洗烘加熨燙，還是洗烘折疊就好？"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Cuci kering dan setrika ya. Ini totalnya berapa kilo?",
+                "zh_text": "洗烘加熨燙。請問這裡總共幾公斤？"
+              },
+              {
+                "speaker": "Petugas",
+                "id_text": "Ditimbang dulu ya Kak. Totalnya 3,5 kg, jadi Rp 35.000. Selesai besok sore ya.",
+                "zh_text": "先秤重一下喔。總共 3.5 公斤，算三萬五千盾。明天傍晚可以洗好取件喔。"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Ada layanan antar ke hotel saya besok?",
+                "zh_text": "明天有提供送回我飯店的服務嗎？"
+              },
+              {
+                "speaker": "Petugas",
+                "id_text": "Ada Kak, gratis antar untuk area sekitar sini. Minta nomor kamar dan nama hotelnya ya.",
+                "zh_text": "有的，附近區域免費外送。請給我您的房號與飯店名稱喔。"
+              }
+            ]
+          }
+        ],
+        "interactive_quiz": {
+          "question": "印尼街頭最常見且實惠的「按公斤計價洗衣」招牌關鍵字是？",
+          "options": [
+            {
+              "text": "Laundry Kiloan",
+              "correct": true,
+              "feedback": "答對了！Kiloan 就是秤重按公斤算的意思！"
+            },
+            {
+              "text": "Toko Baju",
+              "correct": false,
+              "feedback": "這是服飾店喔。"
+            },
+            {
+              "text": "Salon Rambut",
+              "correct": false,
+              "feedback": "這是美髮沙龍喔。"
+            }
+          ]
+        }
+      },
+      {
+        "id": "sit_13_minimarket",
+        "category": "shopping",
+        "categoryName": "🛍️ 購物與超市",
+        "title": "13. 便利商店 (Indomaret/Alfamart) 結帳加值 (Belanja di Minimarket)",
+        "subtitle": "購買生活雜貨、防蚊液並為手機門號充值電話卡 (Pulsa)",
+        "location": "街角 Indomaret 連鎖便利商店",
         "icon": "fa-store",
-        "image": "assets/coffee_shop_illustration_1787210903184.jpg",
-        "culture_tip": "Indomaret 和 Alfamart 是印尼隨處可見的便利店超商，除了買零食，大家最常去那裡加值手機通話費與網路流量 (Isi Pulsa / Paket Data)。",
+        "culture_tip": "印尼兩大便利店巨頭是 **Indomaret** 與 **Alfamart**。結帳時店員常問：*Mau sekalian isi pulsa?* (要順便加值話費嗎？) 以及 *Ada kartu member?* (有會員卡嗎？)。",
         "dialogueSections": [
           {
             "id": "d1",
-            "title": "超商加值話費與結帳",
+            "title": "結帳、買防蚊液與儲值話費",
             "dialogue": [
               {
                 "speaker": "Kasir",
-                "id_text": "Selamat siang, selamat belanja di Indomaret!",
-                "zh_text": "午安，歡迎光臨 Indomaret！"
+                "id_text": "Selamat sore Kak, ada kartu member Indomaret?",
+                "zh_text": "傍晚好，請問有 Indomaret 會員卡嗎？"
               },
               {
                 "speaker": "Saya",
-                "id_text": "Mbak, saya mau isi pulsa Telkomsel Rp 50.000.",
-                "zh_text": "小姐，我要儲值 Telkomsel 電信 5 萬印尼盾話費。"
+                "id_text": "Tidak ada Mbak. Saya mau beli obat nyamuk Autan dan air mineral ini.",
+                "zh_text": "沒有喔小姐。我要買這瓶 Autan 防蚊液和這瓶礦泉水。"
               },
               {
                 "speaker": "Kasir",
-                "id_text": "Boleh sebutkan nomor HP-nya, Kak?",
-                "zh_text": "可以麻煩報一下您的手機號碼嗎？"
+                "id_text": "Mau sekalian isi pulsa atau paket data Telkomsel?",
+                "zh_text": "想要順便加值 Telkomsel 話費或上網流量包嗎？"
               },
               {
                 "speaker": "Saya",
-                "id_text": "Kosong delapan satu dua, tiga empat lima enam...",
-                "zh_text": "0812-3456..."
+                "id_text": "Boleh, saya mau isi pulsa Rp 50.000 ke nomor ini ya.",
+                "zh_text": "可以，我想幫這個號碼儲值五萬盾話費。"
               },
               {
                 "speaker": "Kasir",
-                "id_text": "Mau pakai kantong plastik atau tas sendiri?",
-                "zh_text": "需要買塑膠袋還是用自己的袋子呢？"
+                "id_text": "Total semuanya Rp 75.000. Mau pakai kantong plastik?",
+                "zh_text": "全部總共是七萬五千盾。需要塑膠袋嗎？"
               },
               {
                 "speaker": "Saya",
-                "id_text": "Pakai tas sendiri saja, tidak usah plastik.",
-                "zh_text": "用我自己的袋子就好，不用塑膠袋。"
-              },
-              {
-                "speaker": "Kasir",
-                "id_text": "Ada kartu member-nya, Kak?",
-                "zh_text": "請問有會員卡嗎？"
-              },
-              {
-                "speaker": "Saya",
-                "id_text": "Tidak ada. Bayar pakai QRIS ya.",
-                "zh_text": "沒有。用 QRIS 掃碼付款喔。"
-              }
-            ]
-          },
-          {
-            "id": "d2",
-            "title": "買零食飲料與詢問微波加熱",
-            "dialogue": [
-              {
-                "speaker": "Saya",
-                "id_text": "Mas, roti ini bisa tolong dipanaskan di microwave?",
-                "zh_text": "小哥，這個麵包可以麻煩幫我在微波爐加熱一下嗎？"
-              },
-              {
-                "speaker": "Kasir",
-                "id_text": "Bisa Kak, tunggu 1 menit ya. Mau tambah air mineral dingin sekalian?",
-                "zh_text": "可以的，請等一分鐘喔。要順便加一瓶冰礦泉水嗎？"
-              },
-              {
-                "speaker": "Saya",
-                "id_text": "Boleh Mas, air mineral ukuran 600ml satu ya.",
-                "zh_text": "好啊，給我一瓶 600ml 的冰礦泉水。"
+                "id_text": "Tidak usah kantong plastik, saya bawa tas belanja sendiri. Ini uangnya.",
+                "zh_text": "不用塑膠袋，我自己有帶購物袋。這是給您的錢。"
               }
             ]
           }
         ],
         "interactive_quiz": {
-          "question": "當店員問你 'Ada kartu member-nya, Kak?' 如果你沒有會員卡，應該說什麼？",
+          "question": "在印尼便利店結帳時，'Isi pulsa' 代表什麼意思？",
           "options": [
             {
-              "text": "Tidak ada.",
+              "text": "加值手機電話話費 / 流量",
               "correct": true,
-              "feedback": "沒錯！'Tidak ada' = 沒有。"
+              "feedback": "答對了！Pulsa 是手機話費/儲值金！"
             },
             {
-              "text": "Saya mau makan.",
+              "text": "借用雨傘",
               "correct": false,
-              "feedback": "這是「我要吃」的意思。"
+              "feedback": "這不是借傘喔。"
             },
             {
-              "text": "Bukan saya.",
+              "text": "買冰淇淋",
               "correct": false,
-              "feedback": "這是「不是我」的意思。"
+              "feedback": "這是買 Es krim 喔。"
             }
           ]
         }
       },
       {
-        "id": "sit_06_kenalan",
-        "title": "6. 自我介紹與結交新朋友 (Berkenalan & Ngobrol)",
-        "subtitle": "破冰開場、介紹名字、來自哪裡以及在印尼的日常",
-        "location": "青年旅館交誼廳 / 聚會活動",
+        "id": "sit_14_market_bargain",
+        "category": "shopping",
+        "categoryName": "🛍️ 購物與超市",
+        "title": "14. 傳統市場殺價與挑選熱帶水果 (Nawar di Pasar Tradisional)",
+        "subtitle": "在傳統早市採買山竹、紅毛丹並練習殺價技巧",
+        "location": "日惹 Beringharjo 傳統市場",
+        "icon": "fa-carrot",
+        "culture_tip": "在傳統市場 (Pasar) 殺價時要保持微笑禮貌，常用的殺價神句是 *Bisa kurang sedikit?* (可以少一點嗎) 或 *Kalau ambil 2 kilo berapa harganya?* (買兩公斤算多少)。",
+        "dialogueSections": [
+          {
+            "id": "d1",
+            "title": "水果攤挑選與殺價對話",
+            "dialogue": [
+              {
+                "speaker": "Penjual",
+                "id_text": "Mari Kak, buah manggis dan rambutan manis segar baru datang!",
+                "zh_text": "來看看喔！新鮮剛到的甜山竹和紅毛丹喔！"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Berapa satu kilo buah manggis ini Ibu?",
+                "zh_text": "老闆娘，這一公斤山竹賣多少錢？"
+              },
+              {
+                "speaker": "Penjual",
+                "id_text": "Satu kilo Rp 35.000 saja Kak, dijamin manis-manis.",
+                "zh_text": "一公斤只要三萬五千盾，保證顆顆清甜。"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Kalau saya ambil dua kilo, bisa dapat Rp 60.000?",
+                "zh_text": "如果我直接買兩公斤，可以算我六萬盾嗎？"
+              },
+              {
+                "speaker": "Penjual",
+                "id_text": "Bolehlah buat penglaris pagi ini! Mau sekalian tambah pepaya?",
+                "zh_text": "行啦！當作今早開市討個吉利！要順便帶顆木瓜嗎？"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Manggis dua kilo saja dulu ya Bu. Terima kasih banyak!",
+                "zh_text": "先兩公斤山竹就好喔老闆娘。非常謝謝您！"
+              }
+            ]
+          }
+        ],
+        "interactive_quiz": {
+          "question": "在印尼市場殺價時，最經典禮貌的詢問句型是？",
+          "options": [
+            {
+              "text": "Bisa kurang sedikit harganya, Bu?",
+              "correct": true,
+              "feedback": "答對了！Bisa kurang 就是「能算便宜一點嗎」！"
+            },
+            {
+              "text": "Ini gratis ya?",
+              "correct": false,
+              "feedback": "這是「這個免費嗎」的意思。"
+            },
+            {
+              "text": "Saya tidak mau beli barang ini.",
+              "correct": false,
+              "feedback": "這是「我不想買這個東西」的意思。"
+            }
+          ]
+        }
+      },
+      {
+        "id": "sit_15_mall_simcard",
+        "category": "shopping",
+        "categoryName": "🛍️ 購物與超市",
+        "title": "15. 大型購物中心買 SIM 卡與電信方案 (Beli SIM Card di Mall)",
+        "subtitle": "在電信專賣店 (Telkomsel GraPARI) 實名註冊辦理旅遊上網網卡",
+        "location": "雅加達 Grand Indonesia 購物中心 GraPARI 門市",
+        "icon": "fa-sim-card",
+        "culture_tip": "外國人在印尼購買實體 SIM 卡或註冊手機 IMEI，需攜帶護照至官方門市（如 Telkomsel GraPARI 或 Indosat）進行實名登記。",
+        "dialogueSections": [
+          {
+            "id": "d1",
+            "title": "辦理 Tourist SIM 卡與選購流量",
+            "dialogue": [
+              {
+                "speaker": "Customer Service",
+                "id_text": "Selamat siang Kak, ada yang bisa kami bantu di GraPARI?",
+                "zh_text": "午安您好，在 GraPARI 門市有什麼能協助您的嗎？"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Saya turis asing, mau beli kartu perdana SIM untuk internet 30 hari.",
+                "zh_text": "我是外國觀光客，想買一張 30 天上網用的預付 SIM 卡。"
+              },
+              {
+                "speaker": "Customer Service",
+                "id_text": "Ada paket Tourist SIM 25 GB seharga Rp 150.000. Boleh pinjam paspor Anda untuk registrasi?",
+                "zh_text": "有 25 GB 的觀光客方案，售價十五萬盾。可以借您的護照進行登記嗎？"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Ini paspor saya. Berapa lama kartunya aktif setelah dipasang?",
+                "zh_text": "這是我的護照。裝入手機後大概多久能啟用通網？"
+              },
+              {
+                "speaker": "Customer Service",
+                "id_text": "Langsung aktif sekarang juga Kak, kami bantu pasang dan setting di ponsel Anda ya.",
+                "zh_text": "現在立刻就能開通啟用，我們幫您安裝並設定在您的手機上喔。"
+              }
+            ]
+          }
+        ],
+        "interactive_quiz": {
+          "question": "外國人在印尼申辦手機 SIM 預付卡 (Kartu Perdana) 必備的證件是？",
+          "options": [
+            {
+              "text": "Paspor asli (護照正本)",
+              "correct": true,
+              "feedback": "答對了！實名註冊規定需出示外國護照！"
+            },
+            {
+              "text": "Kartu perpustakaan (借書證)",
+              "correct": false,
+              "feedback": "借書證無法申辦門號喔。"
+            },
+            {
+              "text": "Tiket bioskop (電影票)",
+              "correct": false,
+              "feedback": "這完全無效喔。"
+            }
+          ]
+        }
+      },
+      {
+        "id": "sit_16_batik_souvenir",
+        "category": "shopping",
+        "categoryName": "🛍️ 購物與超市",
+        "title": "16. 手工藝品店購買蠟染衫 (Batik) 與伴手禮 (Beli Batik & Oleh-oleh)",
+        "subtitle": "挑選正統手工手繪蠟染 (Batik Tulis) 與特色木雕紀念品",
+        "location": "日惹 Malioboro 街藝術工藝禮品店",
+        "icon": "fa-shirt",
+        "culture_tip": "蠟染 (Batik) 是印尼國粹，被列入聯合國非物質文化遺產。每週五是印尼的「Batik Day」，上班族與學生都會穿著 Batik 上班上課。",
+        "dialogueSections": [
+          {
+            "id": "d1",
+            "title": "挑選蠟染與試穿尺寸",
+            "dialogue": [
+              {
+                "speaker": "Penjual",
+                "id_text": "Selamat datang Kak! Cari kemeja batik pria atau wanita?",
+                "zh_text": "歡迎光臨！想找男士還是女士的蠟染襯衫呢？"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Saya cari kemeja batik pria lengan pendek ukuran L.",
+                "zh_text": "我想找男款短袖蠟染襯衫，L 尺寸。"
+              },
+              {
+                "speaker": "Penjual",
+                "id_text": "Ini ada motif parang khas Jogja, bahannya katun halus dan adem.",
+                "zh_text": "這款是日惹傳統 Parang 刀形紋飾，材質是細緻透氣的純棉。"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Bagus sekali coraknya. Boleh saya coba fitting dulu?",
+                "zh_text": "花紋好漂亮。我可以先試穿看看嗎？"
+              },
+              {
+                "speaker": "Penjual",
+                "id_text": "Silakan, kamar pas ada di sebelah kanan ya Kak.",
+                "zh_text": "請，試衣間在右手邊喔。"
+              }
+            ]
+          }
+        ],
+        "interactive_quiz": {
+          "question": "在印尼買衣服想要找試衣間試穿，應該說什麼？",
+          "options": [
+            {
+              "text": "Boleh saya coba dulu? / Di mana kamar pas?",
+              "correct": true,
+              "feedback": "答對了！Kamar pas 是試衣間，Coba 是試穿試用！"
+            },
+            {
+              "text": "Saya mau cuci baju di sini.",
+              "correct": false,
+              "feedback": "這是在這裡洗衣服的意思。"
+            },
+            {
+              "text": "Baju ini rusak.",
+              "correct": false,
+              "feedback": "這是衣服壞了的意思。"
+            }
+          ]
+        }
+      },
+      {
+        "id": "sit_17_kenalan",
+        "category": "social",
+        "categoryName": "🤝 社交與文化",
+        "title": "17. 初次見面自介與破冰聊天 (Berkenalan & Ice Breaking)",
+        "subtitle": "向新朋友自我介紹國籍、職業與學印尼語的動機",
+        "location": "雅加達語言交流咖啡聚會",
         "icon": "fa-user-group",
-        "image": "assets/indo_hero_illustration_1787210889692.jpg",
-        "culture_tip": "印尼人非常熱情好客 (Ramah)，認識新朋友時常會關心你的家鄉、工作或甚至婚姻狀態。回應時保持微笑即可！",
+        "culture_tip": "印尼人性格熱情好客，初次見面常會親切問及名字、來自哪裡 (Dari mana?)。握手時右手輕握後，常會將手放回自己左胸前以示尊重真心。",
         "dialogueSections": [
           {
             "id": "d1",
-            "title": "破冰認識與交換聯絡方式",
+            "title": "互相自我介紹與問候",
             "dialogue": [
               {
-                "speaker": "Rian",
-                "id_text": "Halo! Kenalkan, nama saya Rian. Siapa nama Anda?",
-                "zh_text": "哈囉！認識一下，我叫 Rian。請問你叫什麼名字？"
+                "speaker": "Teman",
+                "id_text": "Halo! Boleh kenalan? Nama saya Budi, kamu siapa namanya?",
+                "zh_text": "哈囉！可以認識一下嗎？我叫 Budi，你的名字是？"
               },
               {
                 "speaker": "Saya",
-                "id_text": "Halo Rian, saya David. Senang bertemu denganmu!",
-                "zh_text": "哈囉 Rian，我是 David。很高興認識你！"
+                "id_text": "Halo Mas Budi! Nama saya David. Senang berkenalan dengan Anda.",
+                "zh_text": "哈囉 Budi 兄！我叫 David。很高興認識你。"
               },
               {
-                "speaker": "Rian",
-                "id_text": "David dari mana asalnya? Sudah berapa lama di Indonesia?",
-                "zh_text": "David 你來自哪裡呢？在印尼待了多久呀？"
-              },
-              {
-                "speaker": "Saya",
-                "id_text": "Saya dari Taiwan. Saya baru satu bulan di Jakarta untuk belajar dan jalan-jalan.",
-                "zh_text": "我來自台灣。我才剛在雅加達待了一個月，來學習和旅遊。"
-              },
-              {
-                "speaker": "Rian",
-                "id_text": "Wah keren! Bahasa Indonesia kamu sudah lancar banget!",
-                "zh_text": "哇太酷了！你的印尼語已經講得超流利了！"
+                "speaker": "Teman",
+                "id_text": "Senang kenal kamu juga! Asalnya dari mana David?",
+                "zh_text": "我也很高興認識你！David 你來自哪裡呢？"
               },
               {
                 "speaker": "Saya",
-                "id_text": "Terima kasih, masih belajar pelan-pelan kok. Minta nomor WhatsApp kamu dong.",
-                "zh_text": "謝謝誇獎，我還在慢慢學習中啦。給我你的 WhatsApp 號碼吧！"
-              }
-            ]
-          },
-          {
-            "id": "d2",
-            "title": "青年旅館聊旅遊與興趣",
-            "dialogue": [
+                "id_text": "Saya dari Taiwan. Saya baru belajar bahasa Indonesia satu bulan.",
+                "zh_text": "我來自台灣。我才剛學印尼語一個月左右。"
+              },
               {
-                "speaker": "Sari",
-                "id_text": "Hai David! Besok rencananya mau jalan-jalan ke mana?",
-                "zh_text": "嗨 David！明天計畫要去哪裡玩呀？"
+                "speaker": "Teman",
+                "id_text": "Wah, bahasa Indonesia kamu sudah hebat dan lancar banget!",
+                "zh_text": "哇，你的印尼語已經說得很棒很流利了耶！"
               },
               {
                 "speaker": "Saya",
-                "id_text": "Saya mau ke Kota Tua dan Monas. Katanya di sana seru banget ya?",
-                "zh_text": "我想去老城區 (Kota Tua) 和國家紀念碑 (Monas)。聽說那裡很有趣對吧？"
-              },
-              {
-                "speaker": "Sari",
-                "id_text": "Iya seru banget, banyak spot foto vintage dan kuliner enak!",
-                "zh_text": "對啊超好玩的，有很多復古拍照景點和好吃的美食！"
+                "id_text": "Terima kasih banyak atas pujiannya Mas!",
+                "zh_text": "非常謝謝你的讚美！"
               }
             ]
           }
         ],
         "interactive_quiz": {
-          "question": "回答自己來自台灣的標準句型是什麼？",
+          "question": "初次見面想禮貌詢問對方「你的名字是什麼？」，印尼語該怎麼問？",
           "options": [
             {
-              "text": "Saya dari Taiwan.",
+              "text": "Siapa nama Anda? / Siapa namanya?",
               "correct": true,
-              "feedback": "Bingo！Saya dari... = 我來自..."
+              "feedback": "答對了！Siapa 是「誰」，問名字專用 Siapa nama Anda！"
             },
             {
-              "text": "Saya mau ke Taiwan.",
+              "text": "Apa nama Anda?",
               "correct": false,
-              "feedback": "這是「我要去台灣」的意思。"
+              "feedback": "問人名要用 Siapa，不能用 Apa (事物) 喔！"
             },
             {
-              "text": "Nama saya Taiwan.",
+              "text": "Berapa nama Anda?",
               "correct": false,
-              "feedback": "這是「我的名字是台灣」的意思。"
+              "feedback": "Berapa 是問數量/價格，不能用來問人名喔。"
             }
           ]
         }
       },
       {
-        "id": "sit_07_market_bargain",
-        "title": "7. 傳統市集與手作工藝殺價 (Nawar di Pasar)",
-        "subtitle": "在傳統市場與店家親切殺價、買到實惠紀念品",
-        "location": "日惹 Malioboro 大街 / 峇里島烏布市集",
-        "icon": "fa-tag",
-        "image": "assets/surabaya_illustration_1787210917170.jpg",
-        "culture_tip": "在傳統觀光市集，標價往往包含討價還價的空間。殺價時面帶微笑、態度親切，稱呼店家 'Bude / Ibu / Mas'，更容易獲得友情價！",
+        "id": "sit_18_bertamu",
+        "category": "social",
+        "categoryName": "🤝 社交與文化",
+        "title": "18. 受邀到印尼朋友家作客與禮儀 (Bertamu ke Rumah Teman)",
+        "subtitle": "進門脫鞋、打招呼並品嚐主人招待的傳統點心茶水",
+        "location": "萬隆印尼友人家中客廳",
+        "icon": "fa-house-chimney-user",
+        "culture_tip": "到印尼家庭作客，進門前必須**脫鞋**。主人端出茶水點心時，通常等主人說 *Silakan diminum* (請喝) 後再開動，且接遞食物一定要用**右手**！",
         "dialogueSections": [
           {
             "id": "d1",
-            "title": "市集討價還價實戰",
+            "title": "拜訪朋友家禮貌互動",
             "dialogue": [
               {
-                "speaker": "Saya",
-                "id_text": "Permisi Bu, baju batik ini harganya berapa ya?",
-                "zh_text": "不好意思老闆娘，這件蠟染 Batik 衣服多少錢呢？"
-              },
-              {
-                "speaker": "Penjual",
-                "id_text": "Yang ini harganya Rp 150.000, bahannya katun halus, Mas.",
-                "zh_text": "這件十五萬印尼盾，材質是高級純棉喔小哥。"
+                "speaker": "Tuan Rumah",
+                "id_text": "Halo David! Selamat datang di rumah kami, silakan masuk!",
+                "zh_text": "哈囉 David！歡迎來到我們家，請進請進！"
               },
               {
                 "speaker": "Saya",
-                "id_text": "Wah, agak mahal ya Bu. Boleh kurang nggak?",
-                "zh_text": "哇，有點貴耶老闆娘。可以算便宜一點嗎？"
+                "id_text": "Halo Pak/Bu! Terima kasih atas undangannya. Sepatunya dilepas di luar ya?",
+                "zh_text": "哈囉！謝謝您的熱情邀請。鞋子脫在外面對嗎？"
               },
               {
-                "speaker": "Penjual",
-                "id_text": "Mau tawar berapa, Mas?",
-                "zh_text": "那小哥你想出多少呢？"
-              },
-              {
-                "speaker": "Saya",
-                "id_text": "Kalau Rp 100.000 boleh nggak? Saya ambil dua deh.",
-                "zh_text": "如果一件算十萬可以嗎？那我直接拿兩件！"
-              },
-              {
-                "speaker": "Penjual",
-                "id_text": "Ya sudah boleh deh khusus buat Mas. Bungkus dua ya!",
-                "zh_text": "好啦好啦，專門優惠給小哥你。幫你包兩件喔！"
-              }
-            ]
-          },
-          {
-            "id": "d2",
-            "title": "批發多件優惠與水果市集",
-            "dialogue": [
-              {
-                "speaker": "Saya",
-                "id_text": "Pak, mangga harum manis ini sekilo berapa?",
-                "zh_text": "老闆，這個甜芒果一公斤多少錢？"
-              },
-              {
-                "speaker": "Penjual",
-                "id_text": "Sekilo Rp 25.000 Mas, manis banget kayak gula!",
-                "zh_text": "一公斤兩萬五印尼盾小哥，甜得像糖一樣！"
+                "speaker": "Tuan Rumah",
+                "id_text": "Iya, taruh di rak sepatu ya. Silakan duduk santai di ruang tamu.",
+                "zh_text": "是的，放在鞋架上就好。請在客廳放鬆坐坐。"
               },
               {
                 "speaker": "Saya",
-                "id_text": "Kalau saya beli 3 kilo, bisa dapat Rp 60.000 gak Pak?",
-                "zh_text": "如果我買 3 公斤，算我六萬印尼盾可以嗎老闆？"
+                "id_text": "Ini ada sedikit buah tangan / oleh-oleh untuk keluarga.",
+                "zh_text": "這裡準備了一點小伴手禮給全家人，不成敬意。"
               },
               {
-                "speaker": "Penjual",
-                "id_text": "Boleh Mas, saya pilihin yang paling matang dan manis ya!",
-                "zh_text": "可以的小哥，我幫你挑最熟最甜的喔！"
+                "speaker": "Tuan Rumah",
+                "id_text": "Aduh repot-repot sekali, terima kasih banyak ya! Ayo silakan diminum tehnya.",
+                "zh_text": "哎呀太客氣太破費了，非常謝謝你！來，請喝茶用點心。"
               }
             ]
           }
         ],
         "interactive_quiz": {
-          "question": "殺價時最常用且禮貌的詢問「可以算便宜點嗎？」是哪一句？",
+          "question": "在印尼拜訪當地人家中作客時，以下哪一項是重要的文化禮節？",
           "options": [
             {
-              "text": "Boleh kurang nggak?",
+              "text": "進屋前主動脫鞋，並用右手接遞物品與飲品",
               "correct": true,
-              "feedback": "答對了！'Boleh kurang nggak?' 或 'Bisa diskon?' 都是殺價神句！"
+              "feedback": "答對了！脫鞋與使用右手是印尼非常核心的尊重禮儀！"
             },
             {
-              "text": "Saya tidak mau beli.",
+              "text": "穿著沾滿泥巴的鞋子直接踩進地毯",
               "correct": false,
-              "feedback": "這是「我不想買」的意思。"
+              "feedback": "這在印尼是非常失禮的行為喔！"
             },
             {
-              "text": "Ini sangat murah.",
+              "text": "只用左手把食物扔給主人",
               "correct": false,
-              "feedback": "說很便宜老闆就不會給你降價啦！"
+              "feedback": "左手在傳統文化中被視為不潔，不能用於遞送物品喔！"
             }
           ]
         }
       },
       {
-        "id": "sit_08_pharmacy",
-        "title": "8. 藥局買藥與身體不適求助 (Di Apotek / Klinik)",
-        "subtitle": "向藥師清楚描述頭痛、發燒、拉肚子與著涼症狀",
-        "location": "Guardian / Kimia Farma 藥局",
+        "id": "sit_19_weekend_hangout",
+        "category": "social",
+        "categoryName": "🤝 社交與文化",
+        "title": "19. 週末休閒約定與聚會逛街 (Rencana Akhir Pekan & Hangout)",
+        "subtitle": "與印尼朋友討論週六去哪裡看電影、吃美食與逛街",
+        "location": "WhatsApp 聊天群組與電話通話",
+        "icon": "fa-calendar-check",
+        "culture_tip": "印尼年輕人愛說 **Malam Minggu**（週六晚上），因為隔天週日放假，週六晚是全印尼最熱門的約會逛街日！",
+        "dialogueSections": [
+          {
+            "id": "d1",
+            "title": "討論週末活動安排",
+            "dialogue": [
+              {
+                "speaker": "Teman",
+                "id_text": "David, akhir pekan ini ada acara gak? Malam Minggu nongkrong yuk!",
+                "zh_text": "David，這週末有安排活動嗎？週六晚上一起去聚會喝咖啡吧！"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Belum ada rencana nih. Kamu mau pergi ke mana?",
+                "zh_text": "還沒有計畫耶。你想去哪裡？"
+              },
+              {
+                "speaker": "Teman",
+                "id_text": "Gimana kalau kita nonton bioskop di mall terus makan sate kambing?",
+                "zh_text": "不如我們去購物中心看電影，然後去吃烤羊肉沙嗲怎麼樣？"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Ide bagus banget! Jam berapa dan kumpul di mana?",
+                "zh_text": "好點子！幾點鐘？在哪裡集合碰面？"
+              },
+              {
+                "speaker": "Teman",
+                "id_text": "Ketemu jam 5 sore di lobi utama ya. Nanti gue jemput naik motor.",
+                "zh_text": "下午 5 點在大廳門口見。等下我騎機車去接你。"
+              }
+            ]
+          }
+        ],
+        "interactive_quiz": {
+          "question": "印尼語中的 'Malam Minggu' 指的是哪一個時間點？",
+          "options": [
+            {
+              "text": "星期六的晚上 (週休二日前夕黃金夜)",
+              "correct": true,
+              "feedback": "答對了！印尼語習慣把週六晚上稱為 Malam Minggu（週日的前一夜）！"
+            },
+            {
+              "text": "星期一的清晨",
+              "correct": false,
+              "feedback": "不是星期一喔。"
+            },
+            {
+              "text": "星期天的深夜",
+              "correct": false,
+              "feedback": "那是 Malam Senin 喔。"
+            }
+          ]
+        }
+      },
+      {
+        "id": "sit_20_cultural_show",
+        "category": "social",
+        "categoryName": "🤝 社交與文化",
+        "title": "20. 觀賞傳統皮影戲與甘美朗音樂 (Pertunjukan Wayang & Gamelan)",
+        "subtitle": "在文化中心欣賞爪哇傳統皮影戲 (Wayang Kulit) 與傳統樂器",
+        "location": "日惹蘇丹王宮文化展演廳",
+        "icon": "fa-masks-theater",
+        "culture_tip": "**Wayang Kulit**（皮影戲）是印尼代表性傳統藝術，操偶大師 (Dalang) 一邊操控皮偶一邊吟唱，並由傳統打擊樂隊甘美朗 (Gamelan) 伴奏整夜。",
+        "dialogueSections": [
+          {
+            "id": "d1",
+            "title": "詢問文化表演時間與票務",
+            "dialogue": [
+              {
+                "speaker": "Saya",
+                "id_text": "Permisi, jam berapa pertunjukan wayang kulit dimulai?",
+                "zh_text": "不好意思，請問皮影戲表演幾點開始？"
+              },
+              {
+                "speaker": "Petugas",
+                "id_text": "Mulai jam 8 malam Kak, durasinya sekitar dua jam dengan iringan gamelan.",
+                "zh_text": "晚上 8 點開始喔，時間大約兩小時，伴隨甘美朗樂隊現場伴奏。"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Apakah saya boleh mengambil foto selama pertunjukan berlangsung?",
+                "zh_text": "請問演出進行期間我可以拍照嗎？"
+              },
+              {
+                "speaker": "Petugas",
+                "id_text": "Boleh Kak, asalkan jangan menggunakan lampu flash ya.",
+                "zh_text": "可以的，只要不要使用閃光燈就可以喔。"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Baik, saya beli tiket untuk dua orang ya. Terima kasih!",
+                "zh_text": "好的，我買兩張票。謝謝您！"
+              }
+            ]
+          }
+        ],
+        "interactive_quiz": {
+          "question": "印尼爪哇傳統文化中，操縱皮影偶的大師被稱作什麼？",
+          "options": [
+            {
+              "text": "Dalang (操偶兼說唱大師)",
+              "correct": true,
+              "feedback": "答對了！Dalang 是傳統皮影戲靈魂人物大師！"
+            },
+            {
+              "text": "Barista",
+              "correct": false,
+              "feedback": "這是咖啡師喔。"
+            },
+            {
+              "text": "Driver",
+              "correct": false,
+              "feedback": "這是司機喔。"
+            }
+          ]
+        }
+      },
+      {
+        "id": "sit_21_bali_surf_driver",
+        "category": "travel",
+        "categoryName": "🏖️ 觀光旅遊",
+        "title": "21. 峇里島海灘衝浪與一日遊包車 (Wisata Pantai & Sewa Mobil di Bali)",
+        "subtitle": "在峇里島海灘聘請衝浪教練並洽談整天私人司機包車行程",
+        "location": "峇里島 Canggu 海灘與私人包車",
+        "icon": "fa-umbrella-beach",
+        "culture_tip": "在峇里島包車 (Sewa mobil + supir) 是一日遊首選，費用通常包含司機與油資 (Sudah termasuk bensin)。稱呼男性在地人常親切叫 *Bli*。",
+        "dialogueSections": [
+          {
+            "id": "d1",
+            "title": "洽談包車司機一日遊",
+            "dialogue": [
+              {
+                "speaker": "Supir",
+                "id_text": "Halo Bli! Mau sewa mobil keliling Bali seharian ke Ubud dan Uluwatu?",
+                "zh_text": "哈囉朋友！想包車遊覽峇里島一整天去烏布和烏魯瓦圖嗎？"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Halo Bli. Berapa tarif sewa mobil seharian selama 10 jam?",
+                "zh_text": "哈囉大哥。請問包車 10 小時一整天的費用是多少？"
+              },
+              {
+                "speaker": "Supir",
+                "id_text": "Rp 600.000 saja Bli, sudah termasuk mobil ber-AC, bensin, dan supir.",
+                "zh_text": "只要六十萬盾，已經包含冷氣車、油資與司機服務費。"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Bisa mampir ke pantai Canggu dulu untuk belajar surfing?",
+                "zh_text": "可以先順路去 Canggu 海灘學衝浪嗎？"
+              },
+              {
+                "speaker": "Supir",
+                "id_text": "Bisa banget! Nanti saya tunggu di area parkir pantai ya.",
+                "zh_text": "完全可以！等下我就在海灘停車場等您喔。"
+              }
+            ]
+          }
+        ],
+        "interactive_quiz": {
+          "question": "在峇里島當地，對年輕或同輩男性的在地親切尊稱是？",
+          "options": [
+            {
+              "text": "Bli",
+              "correct": true,
+              "feedback": "答對了！在峇里島稱呼男性常用 Bli（大哥/兄弟）！"
+            },
+            {
+              "text": "Bapak",
+              "correct": false,
+              "feedback": "Bapak 是通用的長輩尊稱，但在峇里島年輕人間 Bli 極具在地親和力！"
+            },
+            {
+              "text": "Mbak",
+              "correct": false,
+              "feedback": "Mbak 是稱呼女性喔。"
+            }
+          ]
+        }
+      },
+      {
+        "id": "sit_22_bromo_sunrise",
+        "category": "travel",
+        "categoryName": "🏖️ 觀光旅遊",
+        "title": "22. 婆羅摩火山日出吉普車探險 (Tour Bromo Sunrise)",
+        "subtitle": "半夜搭乘 4x4 吉普車出發，在觀景台守候壯麗日出與攀登火山口",
+        "location": "東爪哇 Bromo 火山觀景台 (Penanjakan)",
+        "icon": "fa-volcano",
+        "culture_tip": "婆羅摩火山清晨氣溫非常寒冷（約 5-10°C），需要租借厚外套 (Jaket tebal) 與毛帽。日出過後可以騎馬或健行登上火山口邊緣。",
+        "dialogueSections": [
+          {
+            "id": "d1",
+            "title": "吉普車導遊清晨出發對話",
+            "dialogue": [
+              {
+                "speaker": "Guide",
+                "id_text": "Selamat pagi! Jam 3 pagi kita berangkat naik Jeep ke Penanjakan ya.",
+                "zh_text": "早安！我們凌晨 3 點搭吉普車出發前往觀景台看日出喔。"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Udara di luar dingin sekali ya! Apakah ada sewa jaket tebal di sini?",
+                "zh_text": "外面空氣好冷啊！請問這裡有租厚外套的地方嗎？"
+              },
+              {
+                "speaker": "Guide",
+                "id_text": "Ada di warung kopi dekat sini, sewa jaket cuma Rp 25.000.",
+                "zh_text": "這附近的小吃店有，租一件外套只要兩萬五千盾。"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Setelah lihat sunrise, apakah kita bisa jalan ke kawah Bromo?",
+                "zh_text": "看完日出後，我們可以走到婆羅摩火山口上面嗎？"
+              },
+              {
+                "speaker": "Guide",
+                "id_text": "Bisa, kita lewati Lautan Pasir lalu naik tangga ke bibir kawah.",
+                "zh_text": "可以的，我們會穿過沙海，然後走階梯登上火山口邊緣。"
+              }
+            ]
+          }
+        ],
+        "interactive_quiz": {
+          "question": "火山口邊緣或火山口在印尼文中的字詞是？",
+          "options": [
+            {
+              "text": "Kawah / Bibir kawah",
+              "correct": true,
+              "feedback": "答對了！Kawah 就是「火山口」！"
+            },
+            {
+              "text": "Pantai",
+              "correct": false,
+              "feedback": "這是海灘喔。"
+            },
+            {
+              "text": "Pasar",
+              "correct": false,
+              "feedback": "這是市場喔。"
+            }
+          ]
+        }
+      },
+      {
+        "id": "sit_23_borobudur",
+        "category": "travel",
+        "categoryName": "🏖️ 觀光旅遊",
+        "title": "23. 參觀日惹婆羅浮屠佛塔與導覽 (Wisata Candi Borobudur)",
+        "subtitle": "購買參觀門票、穿著傳統沙龍 (Sarung) 並聆聽浮雕歷史解說",
+        "location": "中爪哇 Borobudur 世界文化遺產保護區",
+        "icon": "fa-gopuram",
+        "culture_tip": "參觀神聖宗教古蹟（如 Borobudur 婆羅浮屠、Prambanan 普蘭巴南）時需著過膝下裝，門口會免費發放傳統沙龍圍裙 (Kain Sarung) 以示尊重敬意。",
+        "dialogueSections": [
+          {
+            "id": "d1",
+            "title": "購買門票與導覽解說",
+            "dialogue": [
+              {
+                "speaker": "Petugas",
+                "id_text": "Selamat pagi Kak. Untuk naik ke atas monumen Candi Borobudur wajib pakai sandal Upanat ya.",
+                "zh_text": "早安。要登上婆羅浮屠古蹟頂層，必須換上專用特製草鞋 (Upanat) 喔。"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Baik Pak. Apakah sudah termasuk pemandu wisata yang bisa bahasa Inggris?",
+                "zh_text": "好的先生。門票有包含能說英文的導覽員嗎？"
+              },
+              {
+                "speaker": "Petugas",
+                "id_text": "Sudah termasuk Kak, nanti berkumpul dengan pemandu di lobi utama.",
+                "zh_text": "已經包含在內了，等下請在大廳和導覽員集合。"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Terima kasih banyak. Berapa lama durasi turnya di atas candi?",
+                "zh_text": "非常謝謝。在佛塔上的導覽時間大約多久呢？"
+              },
+              {
+                "speaker": "Petugas",
+                "id_text": "Sekitar satu jam untuk melihat relief cerita Buddha dan stupa.",
+                "zh_text": "大約一小時，欣賞佛陀故事浮雕與佛塔。"
+              }
+            ]
+          }
+        ],
+        "interactive_quiz": {
+          "question": "參觀印尼神廟與佛塔時，印尼語的佛寺神廟通稱詞是？",
+          "options": [
+            {
+              "text": "Candi (如 Candi Borobudur)",
+              "correct": true,
+              "feedback": "答對了！Candi 是印尼古佛塔與印度教神廟的專有名詞！"
+            },
+            {
+              "text": "Bandara",
+              "correct": false,
+              "feedback": "這是機場喔。"
+            },
+            {
+              "text": "Stasiun",
+              "correct": false,
+              "feedback": "這是車站喔。"
+            }
+          ]
+        }
+      },
+      {
+        "id": "sit_24_gili_snorkeling",
+        "category": "travel",
+        "categoryName": "🏖️ 觀光旅遊",
+        "title": "24. 吉利群島浮潛看海龜與包船 (Snorkeling & Island Hopping di Gili)",
+        "subtitle": "在 Gili Trawangan 預訂玻璃底跳島木船並租用蛙鏡呼吸管",
+        "location": "龍目島 Gili Trawangan 海灘碼頭",
+        "icon": "fa-water",
+        "culture_tip": "吉利三島 (Gili Trawangan, Meno, Air) 禁止任何機動燃油車輛，島上全靠腳踏車或馬車 (Cidomo)。這裡海水清澈見底，是世界級看海龜 (Penyu) 聖地！",
+        "dialogueSections": [
+          {
+            "id": "d1",
+            "title": "預訂浮潛出海行程",
+            "dialogue": [
+              {
+                "speaker": "Operator",
+                "id_text": "Halo Kak! Mau ikut tur snorkeling melihat penyu dan patung bawah laut?",
+                "zh_text": "哈囉！想參加浮潛行程看海龜和海底雕像嗎？"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Berapa biaya per orang untuk tur 3 pulau (Gili T, Meno, Air)?",
+                "zh_text": "三島跳島（吉利 T、Meno、Air）每個人費用是多少？"
+              },
+              {
+                "speaker": "Operator",
+                "id_text": "Rp 150.000 per orang dengan perahu glass bottom, sudah termasuk masker dan life jacket.",
+                "zh_text": "每人只要十五萬盾搭乘玻璃底船，已包含面鏡呼吸管與救生衣。"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Apakah ada instruktur yang membantu ambil foto di bawah air?",
+                "zh_text": "有教練會在水下幫忙拍照嗎？"
+              },
+              {
+                "speaker": "Operator",
+                "id_text": "Ada kamera GoPro Kak, nanti file fotonya langsung dikirim ke ponsel Anda.",
+                "zh_text": "有附 GoPro 相機喔，等下拍的照片會直接傳到您的手機裡。"
+              }
+            ]
+          }
+        ],
+        "interactive_quiz": {
+          "question": "在印尼海島浮潛看到「海龜」時，海龜的印尼語是？",
+          "options": [
+            {
+              "text": "Penyu / Kura-kura laut",
+              "correct": true,
+              "feedback": "答對了！Penyu 就是海龜！"
+            },
+            {
+              "text": "Ikan hiu",
+              "correct": false,
+              "feedback": "這是鯊魚喔。"
+            },
+            {
+              "text": "Burung",
+              "correct": false,
+              "feedback": "這是鳥類喔。"
+            }
+          ]
+        }
+      },
+      {
+        "id": "sit_25_business_meeting",
+        "category": "business",
+        "categoryName": "💼 商務職場",
+        "title": "25. 拜訪客戶與商務會議開場禮儀 (Kunjungan Bisnis & Rapat Formal)",
+        "subtitle": "初次拜訪印尼合作夥伴公司、交換名片與正式開場致意",
+        "location": "雅加達 SCBD 金融區企業總部會議室",
+        "icon": "fa-handshake",
+        "culture_tip": "印尼商務文化非常看重社交信任 (Hubungan Baik)。開會前通常會有 10-15 分鐘的破冰閒聊 (Basa-basi)，不要一坐下就直奔嚴肅合約談判。",
+        "dialogueSections": [
+          {
+            "id": "d1",
+            "title": "交換名片與會議開場",
+            "dialogue": [
+              {
+                "speaker": "Mitra Bisnis",
+                "id_text": "Selamat pagi Bapak David, terima kasih sudah berkunjung ke kantor kami di SCBD.",
+                "zh_text": "David 先生早安，非常感謝您蒞臨我們位於 SCBD 的辦公室。"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Selamat pagi Pak Hendra. Suatu kehormatan bagi saya bisa bertemu langsung dengan tim Anda.",
+                "zh_text": "Hendra 先生早安。能與貴公司團隊當面交流是我的榮幸。"
+              },
+              {
+                "speaker": "Mitra Bisnis",
+                "id_text": "Ini kartu nama saya. Bagaimana perjalanan dari hotel ke sini, lancar?",
+                "zh_text": "這是我的名片。從飯店過來的路上還順利嗎？"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Ini kartu nama saya juga Pak. Tadi naik MRT sangat cepat dan tepat waktu.",
+                "zh_text": "這也是我的名片。剛剛搭乘 MRT 非常迅速且準時。"
+              },
+              {
+                "speaker": "Mitra Bisnis",
+                "id_text": "Bagus sekali. Mari kita mulai presentasi kerja sama proyek ini.",
+                "zh_text": "太好了。那我們就開始本次專案的合作簡報吧。"
+              }
+            ]
+          }
+        ],
+        "interactive_quiz": {
+          "question": "在印尼商務場合交換名片時，名片的印尼語單字是？",
+          "options": [
+            {
+              "text": "Kartu nama",
+              "correct": true,
+              "feedback": "答對了！Kartu nama 就是名片！"
+            },
+            {
+              "text": "Kartu pos",
+              "correct": false,
+              "feedback": "這是明信片喔。"
+            },
+            {
+              "text": "Kartu kredit",
+              "correct": false,
+              "feedback": "這是信用卡喔。"
+            }
+          ]
+        }
+      },
+      {
+        "id": "sit_26_office_colleague",
+        "category": "business",
+        "categoryName": "💼 商務職場",
+        "title": "26. 辦公室同事日常協作與請假申請 (Kerja Sama Tim & Izin Cuti)",
+        "subtitle": "與印尼同事溝通工作進度、請求協助並向主管請假",
+        "location": "雅加達科技新創公司開放式辦公室",
+        "icon": "fa-laptop-code",
+        "culture_tip": "在印尼職場，同事情感融洽，下班常一起聚餐 (Nongkrong bareng)。請假時說 *izin cuti* (請假)，生病請假則附上 *surat dokter* (醫生證明)。",
+        "dialogueSections": [
+          {
+            "id": "d1",
+            "title": "向主管提出休假申請",
+            "dialogue": [
+              {
+                "speaker": "Saya",
+                "id_text": "Selamat siang Pak Anton, boleh saya bicara sebentar?",
+                "zh_text": "Anton 主管午安，我可以和您借用幾分鐘說句話嗎？"
+              },
+              {
+                "speaker": "Manajer",
+                "id_text": "Siang David, silakan duduk. Ada apa?",
+                "zh_text": "午安 David，請坐。有什麼事嗎？"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Saya mau mengajukan izin cuti dua hari minggu depan untuk urusan keluarga.",
+                "zh_text": "我想申請下週兩天的休假，要處理家庭事務。"
+              },
+              {
+                "speaker": "Manajer",
+                "id_text": "Pekerjaan proyek Anda apakah sudah diserahterimakan ke rekan tim?",
+                "zh_text": "你手頭上的專案工作已經交接給同組同事了嗎？"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Sudah Pak, saya sudah koordinasi dengan Siti untuk back up.",
+                "zh_text": "都交接好了，我已經和 Siti 協調好由她協助代理代班。"
+              },
+              {
+                "speaker": "Manajer",
+                "id_text": "Baik kalau begitu, silakan isi form cuti di sistem ya.",
+                "zh_text": "既然這樣沒問題，請在系統上填寫休假申請表吧。"
+              }
+            ]
+          }
+        ],
+        "interactive_quiz": {
+          "question": "向主管或公司申請「休假/請假」，印尼語中最標準的詞彙是？",
+          "options": [
+            {
+              "text": "Izin cuti",
+              "correct": true,
+              "feedback": "答對了！Cuti 是休假，Izin cuti 就是請假申請！"
+            },
+            {
+              "text": "Lembur malam",
+              "correct": false,
+              "feedback": "這是加班喔。"
+            },
+            {
+              "text": "Pecat karyawan",
+              "correct": false,
+              "feedback": "這是解雇員工的意思喔。"
+            }
+          ]
+        }
+      },
+      {
+        "id": "sit_27_business_negotiation",
+        "category": "business",
+        "categoryName": "💼 商務職場",
+        "title": "27. 洽談報價、合約條款與折扣 (Negosiasi Kontrak & Diskon Bisnis)",
+        "subtitle": "討論批發採購報價單 (Quotation)、付款方式與交期 (Lead time)",
+        "location": "泗水出口貿易公司會議室",
+        "icon": "fa-file-signature",
+        "culture_tip": "印尼商務談判講究雙贏 (Win-win) 與留面子。提出降價時通常以長期合作量大為由 (*kalau pesan dalam jumlah banyak, apakah ada diskon khusus?*)。",
+        "dialogueSections": [
+          {
+            "id": "d1",
+            "title": "商務採購條件與付款洽談",
+            "dialogue": [
+              {
+                "speaker": "Klien",
+                "id_text": "Kami sudah membaca proposal penawaran harga yang Anda kirimkan.",
+                "zh_text": "我們已經審閱了您發送過來的報價提議書。"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Bagaimana tanggapan Bapak mengenai harga dan spesifikasi produknya?",
+                "zh_text": "請問您對產品的價格與規格有什麼看法反饋嗎？"
+              },
+              {
+                "speaker": "Klien",
+                "id_text": "Kualitas produk sangat bagus, tapi apakah ada diskon jika kami pesan satu kontainer penuh?",
+                "zh_text": "產品品質非常好，但如果我們一次訂購一整個完整貨櫃，是否有特殊折扣？"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Kami bisa berikan diskon 8 persen dan jaminan garansi satu tahun penuh.",
+                "zh_text": "我們可以提供 8% 的專屬折扣，並附加一整年的完整售後保固。"
+              },
+              {
+                "speaker": "Klien",
+                "id_text": "Sangat menarik. Kami setuju dan siap menandatangani nota kesepahaman (MoU).",
+                "zh_text": "非常具有吸引力。我們同意並準備簽署合作備忘錄 (MoU)。"
+              }
+            ]
+          }
+        ],
+        "interactive_quiz": {
+          "question": "商務場合中「簽署合約」的印尼語動作是？",
+          "options": [
+            {
+              "text": "Tanda tangan kontrak",
+              "correct": true,
+              "feedback": "答對了！Tanda tangan 是簽名，Kontrak 是合約！"
+            },
+            {
+              "text": "Batal perjanjian",
+              "correct": false,
+              "feedback": "這是取消合約協定喔。"
+            },
+            {
+              "text": "Tidur di kantor",
+              "correct": false,
+              "feedback": "這是在辦公室睡覺的意思。"
+            }
+          ]
+        }
+      },
+      {
+        "id": "sit_28_pharmacy",
+        "category": "health",
+        "categoryName": "🏥 醫療與應急",
+        "title": "28. 藥局買腸胃藥、防蚊液與止痛藥 (Beli Obat di Apotek)",
+        "subtitle": "在連鎖藥局 (Guardian / Kimia Farma) 描述頭痛腹瀉並購買成藥",
+        "location": "雅加達大型商場 Guardian 藥妝店",
         "icon": "fa-pills",
-        "image": "assets/coffee_shop_illustration_1787210903184.jpg",
-        "culture_tip": "在印尼如果覺得吹冷氣著涼、腹脹疲倦，當地人稱之為 **'Masuk angin'**（風進到體內），最經典的草本成藥是 **Tolak Angin**。",
+        "culture_tip": "印尼最知名的連鎖藥局是 **Kimia Farma** 與 **Guardian / Watsons**。水土不服拉肚子可買 *Diatabs* 或 *Entrostop*，感冒頭痛可買 *Paracetamol* / *Panadol*。",
         "dialogueSections": [
           {
             "id": "d1",
-            "title": "藥局諮詢與症狀描述",
+            "title": "藥師諮詢與症狀說明",
             "dialogue": [
               {
                 "speaker": "Apoteker",
-                "id_text": "Selamat pagi, ada keluhan apa yang bisa saya bantu?",
-                "zh_text": "早安，身體有哪裡不舒服我可以為您推薦藥品嗎？"
+                "id_text": "Selamat sore, ada yang bisa saya bantu Kak?",
+                "zh_text": "傍晚好，有什麼我可以為您服務的嗎？"
               },
               {
                 "speaker": "Saya",
-                "id_text": "Kepala saya pusing dan badan terasa demam sejak semalam.",
-                "zh_text": "我從昨晚開始頭很暈，而且身體感覺在發燒。"
+                "id_text": "Selamat sore. Perut saya sakit dan diare sejak tadi pagi, ada obat yang cocok?",
+                "zh_text": "傍晚好。我從今天早上開始肚子絞痛而且拉肚子，有合適的藥嗎？"
               },
               {
                 "speaker": "Apoteker",
-                "id_text": "Apakah ada sakit perut atau diare juga?",
-                "zh_text": "肚子會痛或者有拉肚子腹瀉的症狀嗎？"
+                "id_text": "Ada obat Entrostop ini Kak. Minum 2 tablet sekaligus setelah buang air besar.",
+                "zh_text": "有這款 Entrostop 止瀉藥。每次排便後一次服用 2 顆。"
               },
               {
                 "speaker": "Saya",
-                "id_text": "Sedikit masuk angin dan mual.",
-                "zh_text": "有點著涼反胃噁心。"
+                "id_text": "Saya juga agak pusing dan demam ringan, apakah ada Parasetamol?",
+                "zh_text": "我也有點頭暈和輕微發燒，有普拿疼止痛藥嗎？"
               },
               {
                 "speaker": "Apoteker",
-                "id_text": "Ini obat Paracetamol untuk demam dan pusing, diminum 3 kali sehari setelah makan ya.",
-                "zh_text": "這是退燒止痛的普拿疼 (Paracetamol)，一天吃三次，飯後服用喔。"
+                "id_text": "Ada, ini Parasetamol 500mg. Jangan lupa banyak minum air hangat ya.",
+                "zh_text": "有的，這是 500mg 普拿疼。別忘了多喝溫開水喔。"
               },
               {
                 "speaker": "Saya",
-                "id_text": "Baik, terima kasih banyak ya Dok.",
-                "zh_text": "好的，非常感謝您。"
-              }
-            ]
-          },
-          {
-            "id": "d2",
-            "title": "購買國民神藥 Tolak Angin",
-            "dialogue": [
-              {
-                "speaker": "Saya",
-                "id_text": "Mbak, ada Tolak Angin cair yang kemasan kotak?",
-                "zh_text": "小姐，有盒裝的 Tolak Angin 草本液體包嗎？"
-              },
-              {
-                "speaker": "Apoteker",
-                "id_text": "Ada Kak, mau yang original atau rasa mint?",
-                "zh_text": "有的，要原味還是薄荷口味？"
-              },
-              {
-                "speaker": "Saya",
-                "id_text": "Yang original satu kotak ya. Sama minyak kayu putih satu botol kecil.",
-                "zh_text": "原味的一盒。另外還要一小瓶白樹油 (Minyak Kayu Putih)。"
+                "id_text": "Terima kasih banyak atas sarannya Apoteker!",
+                "zh_text": "非常謝謝藥師的建議！"
               }
             ]
           }
         ],
         "interactive_quiz": {
-          "question": "如果要告訴藥師「我頭痛發燒」，應該怎麼說？",
+          "question": "在藥局如果想要描述「肚子痛拉肚子/腹瀉」，關鍵詞是？",
           "options": [
             {
-              "text": "Saya sakit kepala dan demam.",
+              "text": "Sakit perut dan diare",
               "correct": true,
-              "feedback": "精準表達！Sakit kepala = 頭痛，demam = 發燒。"
+              "feedback": "答對了！Sakit perut 是肚子痛，Diare 是腹瀉拉肚子！"
             },
             {
-              "text": "Saya lapar dan haus.",
+              "text": "Sakit gigi dan mau cabut",
               "correct": false,
-              "feedback": "這是「我又餓又渴」的意思。"
+              "feedback": "這是牙齒痛要拔牙喔。"
             },
             {
-              "text": "Saya mau jalan-jalan.",
+              "text": "Kaki saya patah",
               "correct": false,
-              "feedback": "這是「我想去散步旅遊」的意思。"
+              "feedback": "這是斷腿骨折喔。"
             }
           ]
         }
       },
       {
-        "id": "sit_09_housing",
-        "title": "9. 租屋住宿與設備故障報修 (Sewa Kos & Masalah)",
-        "subtitle": "與房東/管理員溝通房租、水電與冷氣維修",
-        "location": "雅加達雅房公寓 (Kos-kosan)",
-        "icon": "fa-house-chimney",
-        "image": "assets/indo_hero_illustration_1787210889692.jpg",
-        "culture_tip": "印尼的單身套房/雅房通稱為 **Kos / Kos-kosan**。租屋時需詢問是否包含水電 (Listrik & Air) 以及 WiFi 與冷氣 (AC)。",
+        "id": "sit_29_hospital_doctor",
+        "category": "health",
+        "categoryName": "🏥 醫療與應急",
+        "title": "29. 醫院掛號就診與描述身體症狀 (Periksa ke Dokter di Rumah Sakit)",
+        "subtitle": "在國際綜合醫院辦理掛號、向醫生詳細描述病情病史",
+        "location": "雅加達 Siloam 國際綜合醫院門診",
+        "icon": "fa-hospital",
+        "culture_tip": "外國人在印尼看病可優先選擇國際連鎖醫院（如 Siloam 或 Medistra）。醫生普遍英文流利，看診時會詢問有無過敏史 (*Ada alergi obat?*)。",
         "dialogueSections": [
           {
             "id": "d1",
-            "title": "冷氣故障報修",
+            "title": "醫生問診與身體檢查",
             "dialogue": [
               {
-                "speaker": "Saya",
-                "id_text": "Permisi Pak, AC di kamar 203 sepertinya rusak, tidak dingin sama sekali.",
-                "zh_text": "不好意思房東先生，203 號房的冷氣好像壞掉了，完全不會冷。"
-              },
-              {
-                "speaker": "Bapak Kos",
-                "id_text": "Oh ya? Kapan mulai tidak dingin, Mas?",
-                "zh_text": "是喔？從什麼時候開始不冷的呢小哥？"
+                "speaker": "Dokter",
+                "id_text": "Selamat siang Pak David. Apa keluhan utama yang Anda rasakan?",
+                "zh_text": "David 先生午安。您目前主要感到哪裡不舒服呢？"
               },
               {
                 "speaker": "Saya",
-                "id_text": "Mulai tadi malam, cuma keluar angin biasa dan bocor air sedikit.",
-                "zh_text": "從昨晚開始，只吹出普通風，而且還稍微有點漏水。"
+                "id_text": "Selamat siang Dok. Sudah tiga hari saya demam tinggi, batuk, dan badan terasa lemas.",
+                "zh_text": "醫生午安。我已經連續三天發高燒、咳嗽，而且全身感到無力發軟。"
               },
               {
-                "speaker": "Bapak Kos",
-                "id_text": "Baik Mas, nanti siang saya panggilkan tukang servis AC untuk cek ya.",
-                "zh_text": "好的小哥，今天下午我會叫冷氣維修師傅過來檢查修繕喔。"
-              },
-              {
-                "speaker": "Saya",
-                "id_text": "Terima kasih banyak atas bantuannya, Pak!",
-                "zh_text": "非常感謝房東先生的幫忙！"
-              }
-            ]
-          },
-          {
-            "id": "d2",
-            "title": "詢問房租包含項目與繳費",
-            "dialogue": [
-              {
-                "speaker": "Saya",
-                "id_text": "Pak, uang sewa kos bulan ini sudah termasuk listrik dan air?",
-                "zh_text": "房東先生，這個月的房租已經包含水電費了嗎？"
-              },
-              {
-                "speaker": "Bapak Kos",
-                "id_text": "Sudah termasuk air dan WiFi Mas, kalau listrik pakai token pulsa sendiri ya.",
-                "zh_text": "已經包含水費和 WiFi 了小哥，電費是用獨立儲值電卡喔。"
+                "speaker": "Dokter",
+                "id_text": "Mari saya periksa detak jantung dan cek suhu tubuhnya dulu. Apakah ada alergi obat tertentu?",
+                "zh_text": "來，我先幫您聽診心跳並量測體溫。請問您對特定藥物有過敏史嗎？"
               },
               {
                 "speaker": "Saya",
-                "id_text": "Baik Pak, saya transfer uang sewanya via BCA ya.",
-                "zh_text": "好的房東先生，我透過 BCA 銀行轉帳房租給您喔。"
+                "id_text": "Tidak ada alergi obat Dok.",
+                "zh_text": "我沒有任何藥物過敏，醫生。"
+              },
+              {
+                "speaker": "Dokter",
+                "id_text": "Ini resep obatnya ya, ada antibiotik dan vitamin. Nanti tebus di loket farmasi lantai 1.",
+                "zh_text": "這是處方箋，有抗生素和維他命。等下請到一樓藥局櫃檯領藥。"
               }
             ]
           }
         ],
         "interactive_quiz": {
-          "question": "表達「冷氣壞了，完全不冷」的道地句子是？",
+          "question": "看醫生時，如果醫生問 'Ada alergi obat?' 是在詢問你什麼？",
           "options": [
             {
-              "text": "AC rusak, tidak dingin sama sekali.",
+              "text": "請問您是否有藥物過敏？",
               "correct": true,
-              "feedback": "非常正確！Rusak = 損壞，tidak dingin = 不冷。"
+              "feedback": "答對了！Alergi obat 就是藥物過敏！"
             },
             {
-              "text": "AC sangat dingin.",
+              "text": "請問您想買什麼藥？",
               "correct": false,
-              "feedback": "這是「冷氣超冷」的意思。"
+              "feedback": "這不是問想買什麼藥喔。"
             },
             {
-              "text": "Kamar sangat bersih.",
+              "text": "您有帶健保卡嗎？",
               "correct": false,
-              "feedback": "這是「房間很乾淨」的意思。"
+              "feedback": "這是問過敏史喔。"
             }
           ]
         }
       },
       {
-        "id": "sit_10_immigration",
-        "title": "10. 機場入境海關與緊急應變 (Imigrasi & Situasi Darurat)",
-        "subtitle": "回答海關移民官問話，並在遺失物品時求助",
-        "location": "雅加達蘇加諾-哈達國際機場海關",
-        "icon": "fa-passport",
-        "image": "assets/indo_hero_illustration_1787210889692.jpg",
-        "culture_tip": "入境印尼海關時，保持從容自信，主動遞交護照 (Paspor) 與電子簽證/電子海關申報單 (e-CD QR Code)。",
+        "id": "sit_30_police_lost",
+        "category": "health",
+        "categoryName": "🏥 醫療與應急",
+        "title": "30. 遺失皮夾護照與警察局報案 (Lapor Polisi: Dompet / Paspor Hilang)",
+        "subtitle": "在警察局 (Polsek) 製作報案筆錄，領取報案證明 (Surat Kehilangan)",
+        "location": "峇里島登巴薩市警察局 (Kantor Polisi)",
+        "icon": "fa-shield-halved",
+        "culture_tip": "遺失護照或財物時，需至當地警局開立 **Surat Tanda Penerimaan Laporan Kehilangan**（遺失報案證明書），後續才能向駐印尼代表處補辦緊急旅行證件或向保險公司申請理賠。",
         "dialogueSections": [
           {
             "id": "d1",
-            "title": "海關入境審查",
+            "title": "製作遺失報案筆錄",
             "dialogue": [
               {
-                "speaker": "Petugas Imigrasi",
-                "id_text": "Selamat siang. Paspor dan boarding pass, silakan.",
-                "zh_text": "午安。請出示您的護照與登機證。"
+                "speaker": "Polisi",
+                "id_text": "Selamat siang. Ada keperluan apa datang ke kantor polisi?",
+                "zh_text": "午安。請問來到警察局有什麼需要協助報案的？"
               },
               {
                 "speaker": "Saya",
-                "id_text": "Selamat siang. Ini paspor dan dokumen saya.",
-                "zh_text": "午安。這是我的護照和相關文件。"
-              },
-              {
-                "speaker": "Petugas Imigrasi",
-                "id_text": "Apa tujuan kunjungan Anda ke Indonesia?",
-                "zh_text": "您來印尼的訪問目的是什麼？"
-              },
-              {
-                "speaker": "Saya",
-                "id_text": "Untuk liburan dan jalan-jalan.",
-                "zh_text": "為了度假和觀光旅遊。"
-              },
-              {
-                "speaker": "Petugas Imigrasi",
-                "id_text": "Berapa lama Anda akan tinggal di Indonesia?",
-                "zh_text": "您預計在印尼停留多久？"
-              },
-              {
-                "speaker": "Saya",
-                "id_text": "Kira-kira dua minggu di Jakarta dan Bali.",
-                "zh_text": "大約在雅加達和峇里島待兩週。"
-              },
-              {
-                "speaker": "Petugas Imigrasi",
-                "id_text": "Baik, selamat menikmati liburan di Indonesia!",
-                "zh_text": "好的，祝您在印尼度假愉快！"
-              }
-            ]
-          },
-          {
-            "id": "d2",
-            "title": "遺失錢包報警求助 (Situasi Darurat)",
-            "dialogue": [
-              {
-                "speaker": "Saya",
-                "id_text": "Pak Polisi, tolong saya! Dompet saya sepertinya tertinggal di taksi.",
-                "zh_text": "警察先生，請幫幫我！我的錢包好像忘在計程車上了。"
+                "id_text": "Selamat siang Pak Polisi. Saya mau membuat surat laporan kehilangan dompet dan paspor saya.",
+                "zh_text": "警察長官午安。我想開立皮夾與護照的遺失報案證明書。"
               },
               {
                 "speaker": "Polisi",
-                "id_text": "Tenang Mas, apakah ingat nomor plat mobil atau nama perusahaannya?",
-                "zh_text": "別緊張小哥，您記得車牌號碼或是計程車公司名稱嗎？"
+                "id_text": "Di mana dan kapan perkiraan waktu kejadiannya hilang?",
+                "zh_text": "大約是在哪裡、什麼時間點遺失的呢？"
               },
               {
                 "speaker": "Saya",
-                "id_text": "Saya naik Bluebird dari bandara, ini struk pembayarannya.",
-                "zh_text": "我是搭乘從機場出發的 Bluebird 計程車，這是收據。"
+                "id_text": "Tadi pagi sekitar jam 10 saat saya naik taksi dari Seminyak ke Kuta.",
+                "zh_text": "今天早上大約 10 點，當我搭計程車從水明漾到庫塔的時候。"
               },
               {
                 "speaker": "Polisi",
-                "id_text": "Bagus sekali ada struknya, mari saya bantu hubungi call center taksi.",
-                "zh_text": "太好了有收據，我來幫您聯絡計程車客服中心找回。"
+                "id_text": "Baik, tolong tulis kronologi dan data diri Anda di formulir ini ya.",
+                "zh_text": "好的，請在這份表格上寫下遺失事發經過與您的個人資料。"
+              },
+              {
+                "speaker": "Saya",
+                "id_text": "Sudah selesai saya isi Pak. Terima kasih banyak atas bantuannya.",
+                "zh_text": "我已經填寫完畢了長官。非常感謝您的協助。"
               }
             ]
           }
         ],
         "interactive_quiz": {
-          "question": "當海關問你 'Apa tujuan kunjungan Anda?'（你的入境目的是什麼？），觀光客最標準的回答是？",
+          "question": "護照或貴重物品在印尼遺失時，申請理賠或補發必備的「警察局遺失證明文件」稱作？",
           "options": [
             {
-              "text": "Untuk liburan dan jalan-jalan.",
+              "text": "Surat Kehilangan / Laporan Kehilangan",
               "correct": true,
-              "feedback": "正確無誤！Liburan = 度假，jalan-jalan = 旅遊觀光。"
+              "feedback": "答對了！Surat Kehilangan 是向警方申請的遺失報案證明！"
             },
             {
-              "text": "Saya mau beli mobil.",
+              "text": "Surat Izin Mengemudi (SIM)",
               "correct": false,
-              "feedback": "這是「我要買車」的意思。"
+              "feedback": "這是駕照喔。"
             },
             {
-              "text": "Saya tidak punya paspor.",
+              "text": "Karcis parkir",
               "correct": false,
-              "feedback": "這是「我沒有護照」，會被海關扣留喔！"
+              "feedback": "這是停車收據喔。"
             }
           ]
         }
