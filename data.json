@@ -3138,7 +3138,7 @@
             }
           ]
         },
-        "image": "assets/scene_transport_ojol.jpg"
+        "image": "assets/indo_hero_illustration_1787210889692.jpg"
       },
       {
         "id": "sit_03_airport_customs",
@@ -3212,7 +3212,7 @@
             }
           ]
         },
-        "image": "assets/scene_transport_ojol.jpg"
+        "image": "https://images.unsplash.com/photo-1530521954074-e64f6810b32d?auto=format&fit=crop&w=800&q=80"
       },
       {
         "id": "sit_04_rental_gas",
@@ -3302,7 +3302,7 @@
             }
           ]
         },
-        "image": "assets/scene_transport_ojol.jpg"
+        "image": "https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=800&q=80"
       },
       {
         "id": "sit_05_coffee",
@@ -3540,7 +3540,7 @@
             }
           ]
         },
-        "image": "assets/scene_culinary_warung.jpg"
+        "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80"
       },
       {
         "id": "sit_08_gofood",
@@ -3604,7 +3604,7 @@
             }
           ]
         },
-        "image": "assets/scene_culinary_warung.jpg"
+        "image": "https://images.unsplash.com/photo-1526367790999-0150786686a2?auto=format&fit=crop&w=800&q=80"
       },
       {
         "id": "sit_09_hotel_checkin",
@@ -3742,7 +3742,7 @@
             }
           ]
         },
-        "image": "assets/scene_accommodation_hotel.jpg"
+        "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80"
       },
       {
         "id": "sit_11_hotel_service_repair",
@@ -3806,7 +3806,7 @@
             }
           ]
         },
-        "image": "assets/scene_accommodation_hotel.jpg"
+        "image": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80"
       },
       {
         "id": "sit_12_laundry",
@@ -3875,7 +3875,7 @@
             }
           ]
         },
-        "image": "assets/scene_accommodation_hotel.jpg"
+        "image": "https://images.unsplash.com/photo-1545173168-9f1947eebb7f?auto=format&fit=crop&w=800&q=80"
       },
       {
         "id": "sit_13_minimarket",
@@ -3944,7 +3944,7 @@
             }
           ]
         },
-        "image": "assets/scene_shopping_pasar.jpg"
+        "image": "https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&w=800&q=80"
       },
       {
         "id": "sit_14_market_bargain",
@@ -4077,7 +4077,7 @@
             }
           ]
         },
-        "image": "assets/scene_shopping_pasar.jpg"
+        "image": "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=800&q=80"
       },
       {
         "id": "sit_16_batik_souvenir",
@@ -4141,7 +4141,7 @@
             }
           ]
         },
-        "image": "assets/scene_shopping_pasar.jpg"
+        "image": "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=800&q=80"
       },
       {
         "id": "sit_17_kenalan",
@@ -4210,7 +4210,7 @@
             }
           ]
         },
-        "image": "assets/scene_social_bertamu.jpg"
+        "image": "assets/map_stage_1_sapaan.jpg"
       },
       {
         "id": "sit_18_bertamu",
@@ -4338,7 +4338,7 @@
             }
           ]
         },
-        "image": "assets/scene_social_bertamu.jpg"
+        "image": "assets/map_stage_4_gaul.jpg"
       },
       {
         "id": "sit_20_cultural_show",
@@ -4402,7 +4402,7 @@
             }
           ]
         },
-        "image": "assets/scene_social_bertamu.jpg"
+        "image": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80"
       },
       {
         "id": "sit_21_bali_surf_driver",
@@ -4466,7 +4466,7 @@
             }
           ]
         },
-        "image": "assets/scene_travel_adventure.jpg"
+        "image": "assets/map_stage_3_situasi.jpg"
       },
       {
         "id": "sit_22_bromo_sunrise",
@@ -4594,7 +4594,7 @@
             }
           ]
         },
-        "image": "assets/scene_travel_adventure.jpg"
+        "image": "https://images.unsplash.com/photo-1596402184320-417e7178b2cd?auto=format&fit=crop&w=800&q=80"
       },
       {
         "id": "sit_24_gili_snorkeling",
@@ -4658,7 +4658,7 @@
             }
           ]
         },
-        "image": "assets/scene_travel_adventure.jpg"
+        "image": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80"
       },
       {
         "id": "sit_25_business_meeting",
@@ -4791,7 +4791,7 @@
             }
           ]
         },
-        "image": "assets/scene_business_meeting.jpg"
+        "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
       },
       {
         "id": "sit_27_business_negotiation",
@@ -4855,7 +4855,7 @@
             }
           ]
         },
-        "image": "assets/scene_business_meeting.jpg"
+        "image": "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=800&q=80"
       },
       {
         "id": "sit_28_pharmacy",
@@ -4988,7 +4988,7 @@
             }
           ]
         },
-        "image": "assets/scene_health_apotek.jpg"
+        "image": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80"
       },
       {
         "id": "sit_30_police_lost",
@@ -5057,7 +5057,7 @@
             }
           ]
         },
-        "image": "assets/scene_health_apotek.jpg"
+        "image": "https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?auto=format&fit=crop&w=800&q=80"
       }
     ],
     "shadowing_phrases": [
