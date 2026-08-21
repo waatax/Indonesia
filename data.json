@@ -3068,7 +3068,8 @@
               "feedback": "Titik 是定位點，不是故障喔。"
             }
           ]
-        }
+        },
+        "image": "assets/scene_transport_ojol.jpg"
       },
       {
         "id": "sit_02_mrt",
@@ -3136,7 +3137,8 @@
               "feedback": "這是火車上吃東西的意思喔。"
             }
           ]
-        }
+        },
+        "image": "assets/scene_transport_ojol.jpg"
       },
       {
         "id": "sit_03_airport_customs",
@@ -3209,7 +3211,8 @@
               "feedback": "這是計程車很貴的意思喔。"
             }
           ]
-        }
+        },
+        "image": "assets/scene_transport_ojol.jpg"
       },
       {
         "id": "sit_04_rental_gas",
@@ -3298,7 +3301,8 @@
               "feedback": "這是「我的機車壞掉了」的意思。"
             }
           ]
-        }
+        },
+        "image": "assets/scene_transport_ojol.jpg"
       },
       {
         "id": "sit_05_coffee",
@@ -3397,7 +3401,8 @@
               "feedback": "這是問「多少錢」喔。"
             }
           ]
-        }
+        },
+        "image": "assets/coffee_shop_illustration_1787210903184.jpg"
       },
       {
         "id": "sit_06_warung",
@@ -3465,7 +3470,8 @@
               "feedback": "這是少糖喔。"
             }
           ]
-        }
+        },
+        "image": "assets/scene_culinary_warung.jpg"
       },
       {
         "id": "sit_07_padang",
@@ -3533,7 +3539,8 @@
               "feedback": "那是洗手洗指專用的小碗喔。"
             }
           ]
-        }
+        },
+        "image": "assets/scene_culinary_warung.jpg"
       },
       {
         "id": "sit_08_gofood",
@@ -3596,7 +3603,8 @@
               "feedback": "這是拒收餐點的意思喔。"
             }
           ]
-        }
+        },
+        "image": "assets/scene_culinary_warung.jpg"
       },
       {
         "id": "sit_09_hotel_checkin",
@@ -3664,7 +3672,8 @@
               "feedback": "這是要免費香菸的意思喔。"
             }
           ]
-        }
+        },
+        "image": "assets/scene_accommodation_hotel.jpg"
       },
       {
         "id": "sit_10_apartment_kost",
@@ -3732,7 +3741,8 @@
               "feedback": "這不正確喔。"
             }
           ]
-        }
+        },
+        "image": "assets/scene_accommodation_hotel.jpg"
       },
       {
         "id": "sit_11_hotel_service_repair",
@@ -3795,7 +3805,8 @@
               "feedback": "這是我想買新冷氣的意思。"
             }
           ]
-        }
+        },
+        "image": "assets/scene_accommodation_hotel.jpg"
       },
       {
         "id": "sit_12_laundry",
@@ -3863,7 +3874,8 @@
               "feedback": "這是美髮沙龍喔。"
             }
           ]
-        }
+        },
+        "image": "assets/scene_accommodation_hotel.jpg"
       },
       {
         "id": "sit_13_minimarket",
@@ -3931,7 +3943,8 @@
               "feedback": "這是買 Es krim 喔。"
             }
           ]
-        }
+        },
+        "image": "assets/scene_shopping_pasar.jpg"
       },
       {
         "id": "sit_14_market_bargain",
@@ -3999,7 +4012,8 @@
               "feedback": "這是「我不想買這個東西」的意思。"
             }
           ]
-        }
+        },
+        "image": "assets/scene_shopping_pasar.jpg"
       },
       {
         "id": "sit_15_mall_simcard",
@@ -4062,7 +4076,8 @@
               "feedback": "這完全無效喔。"
             }
           ]
-        }
+        },
+        "image": "assets/scene_shopping_pasar.jpg"
       },
       {
         "id": "sit_16_batik_souvenir",
@@ -4125,7 +4140,8 @@
               "feedback": "這是衣服壞了的意思。"
             }
           ]
-        }
+        },
+        "image": "assets/scene_shopping_pasar.jpg"
       },
       {
         "id": "sit_17_kenalan",
@@ -4193,7 +4209,8 @@
               "feedback": "Berapa 是問數量/價格，不能用來問人名喔。"
             }
           ]
-        }
+        },
+        "image": "assets/scene_social_bertamu.jpg"
       },
       {
         "id": "sit_18_bertamu",
@@ -4256,7 +4273,8 @@
               "feedback": "左手在傳統文化中被視為不潔，不能用於遞送物品喔！"
             }
           ]
-        }
+        },
+        "image": "assets/scene_social_bertamu.jpg"
       },
       {
         "id": "sit_19_weekend_hangout",
@@ -4319,7 +4337,8 @@
               "feedback": "那是 Malam Senin 喔。"
             }
           ]
-        }
+        },
+        "image": "assets/scene_social_bertamu.jpg"
       },
       {
         "id": "sit_20_cultural_show",
@@ -4382,7 +4401,8 @@
               "feedback": "這是司機喔。"
             }
           ]
-        }
+        },
+        "image": "assets/scene_social_bertamu.jpg"
       },
       {
         "id": "sit_21_bali_surf_driver",
@@ -4445,7 +4465,8 @@
               "feedback": "Mbak 是稱呼女性喔。"
             }
           ]
-        }
+        },
+        "image": "assets/scene_travel_adventure.jpg"
       },
       {
         "id": "sit_22_bromo_sunrise",
@@ -4508,7 +4529,8 @@
               "feedback": "這是市場喔。"
             }
           ]
-        }
+        },
+        "image": "assets/scene_travel_adventure.jpg"
       },
       {
         "id": "sit_23_borobudur",
@@ -4571,7 +4593,8 @@
               "feedback": "這是車站喔。"
             }
           ]
-        }
+        },
+        "image": "assets/scene_travel_adventure.jpg"
       },
       {
         "id": "sit_24_gili_snorkeling",
@@ -4634,7 +4657,8 @@
               "feedback": "這是鳥類喔。"
             }
           ]
-        }
+        },
+        "image": "assets/scene_travel_adventure.jpg"
       },
       {
         "id": "sit_25_business_meeting",
@@ -4697,7 +4721,8 @@
               "feedback": "這是信用卡喔。"
             }
           ]
-        }
+        },
+        "image": "assets/scene_business_meeting.jpg"
       },
       {
         "id": "sit_26_office_colleague",
@@ -4765,7 +4790,8 @@
               "feedback": "這是解雇員工的意思喔。"
             }
           ]
-        }
+        },
+        "image": "assets/scene_business_meeting.jpg"
       },
       {
         "id": "sit_27_business_negotiation",
@@ -4828,7 +4854,8 @@
               "feedback": "這是在辦公室睡覺的意思。"
             }
           ]
-        }
+        },
+        "image": "assets/scene_business_meeting.jpg"
       },
       {
         "id": "sit_28_pharmacy",
@@ -4896,7 +4923,8 @@
               "feedback": "這是斷腿骨折喔。"
             }
           ]
-        }
+        },
+        "image": "assets/scene_health_apotek.jpg"
       },
       {
         "id": "sit_29_hospital_doctor",
@@ -4959,7 +4987,8 @@
               "feedback": "這是問過敏史喔。"
             }
           ]
-        }
+        },
+        "image": "assets/scene_health_apotek.jpg"
       },
       {
         "id": "sit_30_police_lost",
@@ -5027,7 +5056,8 @@
               "feedback": "這是停車收據喔。"
             }
           ]
-        }
+        },
+        "image": "assets/scene_health_apotek.jpg"
       }
     ],
     "shadowing_phrases": [
