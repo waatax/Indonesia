@@ -636,7 +636,7 @@ main {
     background: var(--surface);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
-    padding: 1.2rem 1rem;
+    padding: 1.1rem 0.9rem;
     text-align: center;
     cursor: pointer;
     transition: all var(--transition-fast);
@@ -644,32 +644,67 @@ main {
     flex-direction: column;
     align-items: center;
     box-shadow: var(--shadow-sm);
+    position: relative;
 }
 
 .letter-card:hover {
-    border-color: var(--primary);
+    border-color: var(--accent);
     transform: translateY(-4px);
     box-shadow: var(--shadow-md);
 }
 
+.letter-card-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0.3rem;
+}
+
 .letter-title {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
     font-weight: 900;
     color: var(--primary);
     line-height: 1;
+    cursor: pointer;
+    transition: transform var(--transition-fast);
+}
+.letter-title:hover {
+    transform: scale(1.1);
 }
 
 .letter-ipa {
     font-size: 0.8rem;
     color: var(--text-light);
     font-family: monospace;
-    margin: 0.3rem 0;
+    margin: 0.2rem 0;
 }
 
-.letter-word {
-    font-size: 1rem;
-    font-weight: 700;
+.letter-word-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: var(--background);
+    border: 1px solid var(--border-color);
+    padding: 0.3rem 0.65rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.95rem;
+    font-weight: 800;
     color: var(--text-main);
+    cursor: pointer;
+    margin: 0.4rem 0 0.2rem;
+    transition: all var(--transition-fast);
+}
+
+.letter-word-badge:hover {
+    background: var(--accent-light);
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: scale(1.05);
+}
+
+.letter-word-badge i {
+    color: var(--accent);
+    font-size: 0.85rem;
 }
 
 .letter-zh {
@@ -683,7 +718,43 @@ main {
     color: var(--primary);
     padding: 0.2rem 0.5rem;
     border-radius: var(--radius-sm);
-    margin-top: 0.5rem;
+    margin-top: 0.4rem;
+    width: 100%;
+}
+
+.letter-card-actions {
+    display: flex;
+    gap: 0.3rem;
+    margin-top: 0.6rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.letter-btn {
+    background: var(--background);
+    border: 1px solid var(--border-color);
+    color: var(--text-muted);
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 0.25rem 0.45rem;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    transition: all var(--transition-fast);
+}
+
+.letter-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-light);
+}
+
+.letter-btn.primary-btn {
+    background: var(--accent-light);
+    border-color: var(--accent);
+    color: var(--accent);
 }
 
 .digraphs-grid {

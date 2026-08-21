@@ -342,7 +342,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             });
         });
 
-        // 2. Render 26 Letters
+        // 2. Render 26 Letters with dedicated Indonesian Word Audio Triggers
         const alphabetContainer = document.getElementById('alphabet-grid-container');
         if (alphabetContainer && alphaModule.letters) {
             alphabetContainer.innerHTML = '';
@@ -350,15 +350,57 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const card = document.createElement('div');
                 card.className = 'letter-card';
                 card.innerHTML = `
-                    <div class="letter-title">${item.letter}</div>
-                    <div class="letter-ipa">${item.ipa}</div>
-                    <div class="letter-word">${item.example}</div>
+                    <div class="letter-card-top">
+                        <div class="letter-title" title="點擊聽字母名 (${item.name})">${item.letter}</div>
+                        <div class="letter-ipa">${item.ipa}</div>
+                    </div>
+                    <div class="letter-word-badge" title="點擊聽單字「${item.example}」印尼語發音">
+                        <i class="fa-solid fa-volume-high"></i> <span class="letter-word">${item.example}</span>
+                    </div>
                     <div class="letter-zh">${item.zh}</div>
                     ${item.note ? `<div class="letter-note">${item.note}</div>` : ''}
+                    <div class="letter-card-actions">
+                        <button class="letter-btn primary-btn play-word-btn" title="聽單字印尼文"><i class="fa-solid fa-volume-high"></i> 印尼音</button>
+                        <button class="letter-btn play-bilingual-btn" title="中+印雙語"><i class="fa-solid fa-language"></i> 雙語</button>
+                        <button class="letter-btn play-slow-btn" title="0.75x 慢速"><i class="fa-solid fa-turtle"></i> 慢速</button>
+                    </div>
                 `;
-                card.addEventListener('click', () => {
+
+                // Title: speak letter name
+                card.querySelector('.letter-title').addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    audioEngine.speak(item.name || item.letter, { lang: 'id' });
+                });
+
+                // Badge: speak pure Indonesian word
+                card.querySelector('.letter-word-badge').addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    audioEngine.speak(item.example, { lang: 'id' });
+                });
+
+                // Play Word Button (Indonesian)
+                card.querySelector('.play-word-btn').addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    audioEngine.speak(item.example, { lang: 'id' });
+                });
+
+                // Bilingual Button
+                card.querySelector('.play-bilingual-btn').addEventListener('click', (e) => {
+                    e.stopPropagation();
                     audioEngine.speakBilingual(item.example, `${item.letter}，${item.zh}`);
                 });
+
+                // Slow Speed Button
+                card.querySelector('.play-slow-btn').addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    audioEngine.speak(item.example, { lang: 'id', rate: 0.75 });
+                });
+
+                // Card background click
+                card.addEventListener('click', () => {
+                    audioEngine.speak(item.example, { lang: 'id' });
+                });
+
                 alphabetContainer.appendChild(card);
             });
         }
@@ -378,16 +420,16 @@ document.addEventListener('DOMContentLoaded', async () => {
                         <span class="letter-ipa">${v.ipa}</span>
                     </div>
                     <div class="vowel-desc">${v.desc}</div>
+                    <div style="font-weight: 700; font-size: 0.85rem; color: var(--accent); margin-bottom: 0.4rem;"><i class="fa-solid fa-volume-high"></i> 點擊單字聽印尼語發音：</div>
                     <div class="vowel-ex-list">
-                        ${v.examples.map(ex => `<span class="vowel-ex-pill" data-word="${ex.id}" data-zh="${ex.zh}">${ex.id} (${ex.zh})</span>`).join('')}
+                        ${v.examples.map(ex => `<span class="vowel-ex-pill" data-word="${ex.id}" data-zh="${ex.zh}"><i class="fa-solid fa-volume-high"></i> ${ex.id} (${ex.zh})</span>`).join('')}
                     </div>
                 `;
                 card.querySelectorAll('.vowel-ex-pill').forEach(pill => {
                     pill.addEventListener('click', (e) => {
                         e.stopPropagation();
                         const word = pill.getAttribute('data-word');
-                        const zh = pill.getAttribute('data-zh');
-                        audioEngine.speakBilingual(word, zh);
+                        audioEngine.speak(word, { lang: 'id' });
                     });
                 });
                 vowelsContainer.appendChild(card);
@@ -400,23 +442,23 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const card = document.createElement('div');
                 card.className = 'minimal-pair-card';
                 card.innerHTML = `
-                    <div class="pair-row pair-1">
-                        <strong>${pair.word1}</strong>
+                    <div class="pair-row pair-1" title="點擊聽印尼語發音">
+                        <strong><i class="fa-solid fa-volume-high" style="color: var(--accent); margin-right: 0.3rem;"></i>${pair.word1}</strong>
                         <span style="color: var(--text-muted);">${pair.meaning1}</span>
                     </div>
-                    <div class="pair-row pair-2">
-                        <strong>${pair.word2}</strong>
+                    <div class="pair-row pair-2" title="點擊聽印尼語發音">
+                        <strong><i class="fa-solid fa-volume-high" style="color: var(--accent); margin-right: 0.3rem;"></i>${pair.word2}</strong>
                         <span style="color: var(--text-muted);">${pair.meaning2}</span>
                     </div>
                     <div class="pair-tip"><i class="fa-solid fa-lightbulb"></i> ${pair.tip}</div>
                 `;
                 card.querySelector('.pair-1').addEventListener('click', () => {
                     const cleanWord = pair.word1.split(' (')[0];
-                    audioEngine.speakBilingual(cleanWord, pair.meaning1);
+                    audioEngine.speak(cleanWord, { lang: 'id' });
                 });
                 card.querySelector('.pair-2').addEventListener('click', () => {
                     const cleanWord = pair.word2.split(' (')[0];
-                    audioEngine.speakBilingual(cleanWord, pair.meaning2);
+                    audioEngine.speak(cleanWord, { lang: 'id' });
                 });
                 minimalPairsContainer.appendChild(card);
             });
@@ -438,16 +480,15 @@ document.addEventListener('DOMContentLoaded', async () => {
                         </div>
                     </div>
                     <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">${c.desc}</p>
-                    <div style="font-weight: 700; font-size: 0.85rem; color: var(--accent); margin-bottom: 0.5rem;">示範例詞 (點擊試聽)：</div>
+                    <div style="font-weight: 700; font-size: 0.85rem; color: var(--accent); margin-bottom: 0.5rem;"><i class="fa-solid fa-volume-high"></i> 示範單字 (點擊聽印尼文發音)：</div>
                     <div class="vowel-ex-list">
-                        ${c.examples.map(ex => `<span class="vowel-ex-pill" data-word="${ex.id}" data-zh="${ex.zh}">${ex.id} (${ex.zh})</span>`).join('')}
+                        ${c.examples.map(ex => `<span class="vowel-ex-pill" data-word="${ex.id}" data-zh="${ex.zh}"><i class="fa-solid fa-volume-high"></i> ${ex.id} (${ex.zh})</span>`).join('')}
                     </div>
                 `;
                 card.querySelectorAll('.vowel-ex-pill').forEach(pill => {
                     pill.addEventListener('click', () => {
                         const word = pill.getAttribute('data-word');
-                        const zh = pill.getAttribute('data-zh');
-                        audioEngine.speakBilingual(word, zh);
+                        audioEngine.speak(word, { lang: 'id' });
                     });
                 });
                 consonantsContainer.appendChild(card);
@@ -468,11 +509,29 @@ document.addEventListener('DOMContentLoaded', async () => {
                         <span class="digraph-combo">${item.combo}</span>
                         <span class="letter-ipa">${item.ipa}</span>
                     </div>
-                    <div style="font-weight: 700; color: var(--text-main); font-size: 1.05rem;">${item.example} (${item.zh})</div>
+                    <div style="font-weight: 700; color: var(--text-main); font-size: 1.05rem; cursor: pointer;" class="digraph-word-target">
+                        <i class="fa-solid fa-volume-high" style="color: var(--accent); margin-right: 0.3rem;"></i>${item.example} (${item.zh})
+                    </div>
                     <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.3rem;">${item.note}</div>
+                    <div class="letter-card-actions" style="margin-top: 0.8rem;">
+                        <button class="letter-btn primary-btn play-digraph-id"><i class="fa-solid fa-volume-high"></i> 印尼音</button>
+                        <button class="letter-btn play-digraph-bi"><i class="fa-solid fa-language"></i> 雙語</button>
+                    </div>
                 `;
-                card.addEventListener('click', () => {
+                card.querySelector('.play-digraph-id').addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    audioEngine.speak(item.example, { lang: 'id' });
+                });
+                card.querySelector('.play-digraph-bi').addEventListener('click', (e) => {
+                    e.stopPropagation();
                     audioEngine.speakBilingual(item.example, `${item.combo}，${item.zh}`);
+                });
+                card.querySelector('.digraph-word-target').addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    audioEngine.speak(item.example, { lang: 'id' });
+                });
+                card.addEventListener('click', () => {
+                    audioEngine.speak(item.example, { lang: 'id' });
                 });
                 digraphsContainer.appendChild(card);
             });
@@ -488,11 +547,29 @@ document.addEventListener('DOMContentLoaded', async () => {
                         <span class="digraph-combo">${item.combo}</span>
                         <span style="font-size: 0.8rem; background: var(--accent-light); color: var(--accent); padding: 0.1rem 0.5rem; border-radius: 4px;">雙母音</span>
                     </div>
-                    <div style="font-weight: 700; color: var(--text-main); font-size: 1.05rem;">${item.example} (${item.zh})</div>
+                    <div style="font-weight: 700; color: var(--text-main); font-size: 1.05rem; cursor: pointer;" class="diphthong-word-target">
+                        <i class="fa-solid fa-volume-high" style="color: var(--accent); margin-right: 0.3rem;"></i>${item.example} (${item.zh})
+                    </div>
                     <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.3rem;">${item.note}</div>
+                    <div class="letter-card-actions" style="margin-top: 0.8rem;">
+                        <button class="letter-btn primary-btn play-diph-id"><i class="fa-solid fa-volume-high"></i> 印尼音</button>
+                        <button class="letter-btn play-diph-bi"><i class="fa-solid fa-language"></i> 雙語</button>
+                    </div>
                 `;
-                card.addEventListener('click', () => {
+                card.querySelector('.play-diph-id').addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    audioEngine.speak(item.example, { lang: 'id' });
+                });
+                card.querySelector('.play-diph-bi').addEventListener('click', (e) => {
+                    e.stopPropagation();
                     audioEngine.speakBilingual(item.example, `${item.combo}，${item.zh}`);
+                });
+                card.querySelector('.diphthong-word-target').addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    audioEngine.speak(item.example, { lang: 'id' });
+                });
+                card.addEventListener('click', () => {
+                    audioEngine.speak(item.example, { lang: 'id' });
                 });
                 diphthongsContainer.appendChild(card);
             });
@@ -509,8 +586,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                     <span class="syllable-consonant-tag">${row.consonant}</span>
                     <div class="syllable-pills-list">
                         ${row.syllables.map((syl, sIdx) => `
-                            <button class="syllable-btn" data-syl="${syl}" data-ex="${row.examples[sIdx]}">
-                                <strong>${syl}</strong> <small style="color: var(--text-muted); font-size: 0.75rem;">(${row.examples[sIdx]})</small>
+                            <button class="syllable-btn" data-syl="${syl}" data-ex="${row.examples[sIdx]}" title="聽音節與單字「${row.examples[sIdx]}」">
+                                <i class="fa-solid fa-volume-high" style="font-size: 0.75rem; color: var(--accent); margin-right: 0.2rem;"></i><strong>${syl}</strong> <small style="color: var(--text-muted); font-size: 0.75rem;">(${row.examples[sIdx]})</small>
                             </button>
                         `).join('')}
                     </div>
@@ -526,7 +603,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             });
         }
 
-        // 7. Render Stress Rules
+        // 7. Render Stress Rules with Clickable Example Words
         const stressContainer = document.getElementById('stress-rules-container');
         if (stressContainer && alphaModule.syllable_patterns) {
             stressContainer.innerHTML = `
@@ -534,11 +611,17 @@ document.addEventListener('DOMContentLoaded', async () => {
                     <div class="tip-icon"><i class="fa-solid fa-music"></i></div>
                     <div>
                         <strong>倒數第二音節重音原則 (Penultimate Syllable Stress)</strong>
-                        <p>印尼語的重音非常規律，絕大多數單字的重音落在「倒數第二個音節」上。例如：<em>sa-YA</em> (我), <em>ma-KAN</em> (吃), <em>be-LA-jar</em> (學習), <em>In-do-NE-sia</em> (印尼)。當加上後綴詞綴時，重音會自然向後順移，如 <em>ma-kan</em> (吃) -> <em>ma-kan-AN</em> (食物)。</p>
+                        <p>印尼語的重音非常規律，絕大多數單字的重音落在「倒數第二個音節」上。點擊下列示範單字聆聽標準重音發音：</p>
+                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.6rem;">
+                            <button class="action-btn small" onclick="window.indoSpeakWord('saya')"><i class="fa-solid fa-volume-high"></i> sa-YA (我)</button>
+                            <button class="action-btn small" onclick="window.indoSpeakWord('makan')"><i class="fa-solid fa-volume-high"></i> ma-KAN (吃)</button>
+                            <button class="action-btn small" onclick="window.indoSpeakWord('belajar')"><i class="fa-solid fa-volume-high"></i> be-LA-jar (學習)</button>
+                            <button class="action-btn small" onclick="window.indoSpeakWord('Indonesia')"><i class="fa-solid fa-volume-high"></i> In-do-NE-sia (印尼)</button>
+                        </div>
                     </div>
                 </div>
                 <div style="background: var(--surface); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 1.5rem; box-shadow: var(--shadow-sm);">
-                    <h4 style="font-size: 1.1rem; font-weight: 800; margin-bottom: 1rem;"><i class="fa-solid fa-list-check"></i> 常見 6 大音節拼讀結構模式：</h4>
+                    <h4 style="font-size: 1.1rem; font-weight: 800; margin-bottom: 1rem;"><i class="fa-solid fa-list-check"></i> 常見 6 大音節拼讀結構模式 (點擊單字聽讀音)：</h4>
                     <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem;">
                         ${alphaModule.syllable_patterns.patterns.map(p => `
                             <div style="background: var(--background); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1rem;">
@@ -546,7 +629,9 @@ document.addEventListener('DOMContentLoaded', async () => {
                                     <strong style="color: var(--primary); font-size: 1.1rem;">${p.pattern}</strong>
                                     <span style="font-size: 0.8rem; color: var(--text-muted);">${p.desc}</span>
                                 </div>
-                                <div style="font-size: 0.88rem; color: var(--text-main); font-weight: 600;">例詞：${p.example}</div>
+                                <div style="font-size: 0.88rem; color: var(--text-main); font-weight: 600; cursor: pointer;" onclick="window.indoSpeakWord('${p.example.split(' ')[0]}')">
+                                    <i class="fa-solid fa-volume-high" style="color: var(--accent); margin-right: 0.25rem;"></i>例詞：${p.example}
+                                </div>
                             </div>
                         `).join('')}
                     </div>
@@ -554,6 +639,13 @@ document.addEventListener('DOMContentLoaded', async () => {
             `;
         }
     }
+
+    // Global helper for single Indonesian word speech
+    window.indoSpeakWord = (word) => {
+        if (word) {
+            audioEngine.speak(word, { lang: 'id' });
+        }
+    };
 
     // ==========================================================================
     // 5. Pronoun & Social Kinship Calculator (Viet-inspired)
