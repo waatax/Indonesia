@@ -6210,6 +6210,176 @@
         "icon": "👑",
         "desc": "完全解碼 TikTok 迷因、街頭俚語與聽力盲聽"
       }
+    ],
+    "cities_guide": [
+      {
+        "id": "jakarta",
+        "name_zh": "雅加達",
+        "name_id": "DKI Jakarta",
+        "tagline": "都會巨港 · 潮流口語與科技商務之都",
+        "image": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=700&q=80",
+        "desc": "印尼首都與政治經濟心臟，摩天大樓與傳統街區交織。現代捷運 (MRT)、GoFood 外送、南雅加達 (Jaksel) 潮流咖啡廳以及全國青年通用的 Bahasa Gaul 流行俚語皆誕生於此。",
+        "highlights": [
+          "國家紀念塔 (Monas)",
+          "南雅加達文青區 (Senopati)",
+          "雅加達舊城區 (Kota Tua)"
+        ],
+        "specialty_food": "Kerak Telor (香脆椰絲蛋餅), Soto Betawi (濃郁椰奶牛肉湯), Kopi Susu Aren (棕櫚糖拿鐵)",
+        "dialects_and_phrases": [
+          {
+            "phrase": "Gue lagi otw ke Sudirman nih.",
+            "zh": "我正趕往蘇迪曼大道商務區的路上喔。"
+          },
+          {
+            "phrase": "Mau nongkrong di mana kita malam ini?",
+            "zh": "今晚我們要去哪裡聚聚泡咖啡廳呢？"
+          }
+        ]
+      },
+      {
+        "id": "bandung",
+        "name_zh": "萬隆",
+        "name_id": "Bandung (Jawa Barat)",
+        "tagline": "花城 · 爪哇巴黎與高鐵 Whoosh 終點站",
+        "image": "https://images.unsplash.com/photo-1571898223382-0aa3499f74d1?auto=format&fit=crop&w=700&q=80",
+        "desc": "西爪哇首府，氣候涼爽宜人的高原花城。雅萬高鐵 (Whoosh) 僅需 45 分鐘直達！這裡是巽他 (Sunda) 文化搖籃，以文創服飾、布拉加街 (Jalan Braga) 復古咖啡廳與豐富街頭小吃聞名全印尼。",
+        "highlights": [
+          "雅萬高鐵萬隆站 (Stasiun Whoosh)",
+          "布拉加歷史老街 (Jalan Braga)",
+          "白湖火山覆舟山 (Tangkuban Perahu)"
+        ],
+        "specialty_food": "Batagor (香脆炸魚豆腐餛飩), Seblak (重辣濕炒炸蝦片年糕), Peuyeum (甜香發酵木薯)",
+        "dialects_and_phrases": [
+          {
+            "phrase": "Sampurasun! Kumaha damang Bandung?",
+            "zh": "巽他語：您好！萬隆的一切都安好嗎？"
+          },
+          {
+            "phrase": "Hatur nuhun pisan atas bantuannya ya!",
+            "zh": "非常感謝您的熱心相助！"
+          }
+        ]
+      },
+      {
+        "id": "semarang",
+        "name_zh": "三寶瓏",
+        "name_id": "Semarang (Jawa Tengah)",
+        "tagline": "千門之都 · 鄭和三保宮與荷蘭殖民老城",
+        "image": "https://images.unsplash.com/photo-1596402184320-417e7178b2cd?auto=format&fit=crop&w=700&q=80",
+        "desc": "中爪哇首府與歷史名港，明代鄭和下西洋重要停泊地。市內擁有全印尼最壯麗的三保宮 (Sam Poo Kong)、充滿神祕傳奇色彩的千重門 (Lawang Sewu) 以及荷蘭殖民紅磚老城。",
+        "highlights": [
+          "鄭和三保宮 (Klenteng Sam Poo Kong)",
+          "千重門 (Lawang Sewu)",
+          "荷蘭殖民老城 (Kota Lama Semarang)"
+        ],
+        "specialty_food": "Lumpia Semarang (三寶瓏竹筍炸春捲), Tahu Gimbal (酥脆蝦餅豆腐佐花生醬), Bandeng Juwana (無刺香酥虱目魚)",
+        "dialects_and_phrases": [
+          {
+            "phrase": "Sugeng rawuh wonten kitha Semarang!",
+            "zh": "爪哇禮貌語：誠摯歡迎光臨三寶瓏市！"
+          },
+          {
+            "phrase": "Monggo pinarak lan ngunjuk teh rumiyin.",
+            "zh": "請進請坐，先喝杯熱茶歇歇腳吧。"
+          }
+        ]
+      },
+      {
+        "id": "surabaya",
+        "name_zh": "泗水",
+        "name_id": "Surabaya (Jawa Timur)",
+        "tagline": "英雄之城 · 東爪哇工商業巨港與黑湯傳奇",
+        "image": "assets/surabaya_illustration_1787210917170.jpg",
+        "desc": "印尼第二大都會與東爪哇首府，以 1945 年獨立保衛戰被譽為「英雄之城」。泗水人豪爽率直熱情，擁有全印尼最具代表性的古法黑堅果牛肉湯 (Rawon) 與跨越海峽的蘇馬度大橋 (Jembatan Suramadu)。",
+        "highlights": [
+          "英雄紀念碑 (Tugu Pahlawan)",
+          "蘇馬度跨海大橋 (Jembatan Suramadu)",
+          "狂野野生動物園 (Taman Safari Prigen)"
+        ],
+        "specialty_food": "Rawon Daging (黑堅果深黑牛肉名湯), Rujak Cingur (牛鼻軟骨蔬果佐黑膏醬), Lontong Balap (豆芽豆皮年糕)",
+        "dialects_and_phrases": [
+          {
+            "phrase": "Piye kabare rek? Ayo mangan rawon!",
+            "zh": "東爪哇口語：大家過得如何？走去吃黑湯牛肉！"
+          },
+          {
+            "phrase": "Matur nuwun sanget dulur Suroboyo!",
+            "zh": "東爪哇語：十分感謝泗水的兄弟姊妹們！"
+          }
+        ]
+      },
+      {
+        "id": "bali",
+        "name_zh": "峇里島",
+        "name_id": "Bali (Denpasar / Ubud / Canggu)",
+        "tagline": "眾神之島 · 印度教神廟、衝浪與數位遊民天堂",
+        "image": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=700&q=80",
+        "desc": "舉世聞名的熱帶度假天堂與文化聖地。島上居民多數信奉峇里印度教，每日可見精緻的花祭 (Canang Sari)。烏布梯田藝術與長谷 (Canggu) 吸引著全球遠端工作者與數位遊民駐足。",
+        "highlights": [
+          "烏布聖猴森林與梯田 (Ubud)",
+          "海神廟 (Tanah Lot)",
+          "長谷衝浪海灘與共享空間 (Canggu)"
+        ],
+        "specialty_food": "Bebek Betutu (芭蕉葉香料慢烤鴨), Babi Guling (傳統金黃脆皮烤乳豬), Sambal Matah (生鮮香茅紅蔥辣醬)",
+        "dialects_and_phrases": [
+          {
+            "phrase": "Om Swastyastu! Selamat datang di Bali.",
+            "zh": "峇里祈福語：願神明賜予平安！歡迎來到峇里島。"
+          },
+          {
+            "phrase": "Matur suksma atas kebaikan hatimu.",
+            "zh": "峇里語：衷心感謝您的美好心意與熱情！"
+          }
+        ]
+      },
+      {
+        "id": "banten",
+        "name_zh": "萬丹",
+        "name_id": "Banten (Serang / Anyer / Ujung Kulon)",
+        "tagline": "南洋門戶 · 蘇門答臘海峽渡口與世界遺產犀牛之鄉",
+        "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=700&q=80",
+        "desc": "爪哇島最西端的歷史要塞，扼守巽他海峽，是前往蘇門答臘的跨島渡輪門戶 (Pelabuhan Merak)。境內的烏戎庫隆國家公園 (Ujung Kulon) 為世界自然遺產，是珍稀爪哇單角犀牛的最後棲息地。",
+        "highlights": [
+          "烏戎庫隆國家公園 (Taman Nasional Ujung Kulon)",
+          "安耶爾海灘 (Pantai Anyer)",
+          "萬丹大清真寺遺址 (Masjid Agung Banten)"
+        ],
+        "specialty_food": "Sate Bandeng (去骨去刺魚肉灌入炙烤串燒), Rabeg Banten (羊肉濃郁香料煲), Gerem Asem (酸甜青檸烤肉湯)",
+        "dialects_and_phrases": [
+          {
+            "phrase": "Wilujeng sumping di tanah Jawara Banten!",
+            "zh": "萬丹語：熱烈歡迎來到豪傑之鄉萬丹！"
+          },
+          {
+            "phrase": "Hatur nuhun jasa atas bantuannya.",
+            "zh": "萬丹方言：真是太感謝您的幫忙了。"
+          }
+        ]
+      },
+      {
+        "id": "makassar",
+        "name_zh": "望加錫",
+        "name_id": "Makassar (Sulawesi Selatan)",
+        "tagline": "大東印尼門戶 · 航海勇者之鄉與絕美洛薩里夕陽",
+        "image": "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=700&q=80",
+        "desc": "南蘇拉威西省會，為整個大東印尼地區（蘇拉威西、摩鹿加、巴布亞）的海空物流樞紐。擁有傳奇航海民族布吉斯人 (Bugis) 的造船工藝 (Pinisi)、全印尼最知名的洛薩里海灘落日與濃醇牛雜名湯 Coto Makassar。",
+        "highlights": [
+          "洛薩里海灘日落大道 (Pantai Losari)",
+          "鹿特丹古堡 (Fort Rotterdam)",
+          "傳統比尼西帆船造船廠 (Perahu Pinisi)"
+        ],
+        "specialty_food": "Coto Makassar (傳統古法藥膳牛雜花生湯), Konro Bakar (炭烤巨無霸香料牛肋排), Pisang Epe (炭烤扁香蕉淋椰糖起司)",
+        "dialects_and_phrases": [
+          {
+            "phrase": "Tabe' Puang, apa kareba di Makassar?",
+            "zh": "望加錫敬語：借光請問尊長，望加錫近來一切好嗎？"
+          },
+          {
+            "phrase": "Kareba baji'! Ayo nikmati sunset Losari.",
+            "zh": "望加錫語：一切都很好！走吧去欣賞洛薩里海灘夕陽。"
+          }
+        ]
+      }
     ]
   }
 }

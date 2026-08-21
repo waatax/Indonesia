@@ -250,6 +250,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         curriculumData = json.curriculum;
 
         initNavigation();
+        initCitiesExplorer(curriculumData.cities_guide);
         initAlphabetModule(curriculumData.alphabet_module);
         initPronounCalculator(curriculumData.pronoun_calculator);
         initGrammarModule(curriculumData.grammar_modules);
@@ -304,6 +305,84 @@ document.addEventListener('DOMContentLoaded', async () => {
         document.querySelector('.logo-area')?.addEventListener('click', () => {
             switchView('map-view');
         });
+    }
+
+    // ==========================================================================
+    // 3.5. 7 Major Cities & Islands Explorer (Peta 7 Kota Nusantara)
+    // ==========================================================================
+    function initCitiesExplorer(cities) {
+        if (!cities || cities.length === 0) return;
+
+        const tabsContainer = document.getElementById('cities-nav-tabs');
+        const displayContainer = document.getElementById('city-detail-display');
+        if (!tabsContainer || !displayContainer) return;
+
+        let activeCity = cities[0];
+
+        function renderCityDetail(city) {
+            displayContainer.innerHTML = `
+                <div class="city-detail-card">
+                    <div class="city-hero-image-wrap">
+                        <img src="${city.image}" class="city-hero-img" alt="${city.name_zh}">
+                        <div class="city-img-badge"><i class="fa-solid fa-location-dot"></i> ${city.name_id}</div>
+                    </div>
+                    <div class="city-info-content">
+                        <div>
+                            <div class="city-title-row">
+                                <span class="city-main-title">${city.name_zh}</span>
+                                <span class="city-id-name">${city.name_id}</span>
+                            </div>
+                            <div class="city-tagline"><i class="fa-solid fa-crown" style="font-size: 0.85rem; margin-right: 0.3rem;"></i>${city.tagline}</div>
+                            <p class="city-desc">${city.desc}</p>
+                            
+                            <div class="city-spec-box">
+                                <div style="font-weight: 700; font-size: 0.85rem; color: var(--accent); margin-bottom: 0.4rem;"><i class="fa-solid fa-utensils"></i> 在地代表美食 (Kuliner Khas)：</div>
+                                <div style="font-size: 0.88rem; color: var(--text-main); font-weight: 600;">${city.specialty_food}</div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div style="font-weight: 700; font-size: 0.85rem; color: var(--primary); margin-bottom: 0.4rem;"><i class="fa-solid fa-comments"></i> 在地常用社交金句 (點擊直接發音)：</div>
+                            <div class="city-phrases-list">
+                                ${city.dialects_and_phrases.map(p => `
+                                    <div class="city-phrase-item" data-phrase="${p.phrase}" data-zh="${p.zh}">
+                                        <div>
+                                            <strong style="font-size: 0.92rem; color: var(--text-main);"><i class="fa-solid fa-volume-high" style="color: var(--accent); margin-right: 0.3rem;"></i>${p.phrase}</strong>
+                                            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.15rem;">${p.zh}</div>
+                                        </div>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            displayContainer.querySelectorAll('.city-phrase-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    const phrase = item.getAttribute('data-phrase');
+                    const zh = item.getAttribute('data-zh');
+                    audioEngine.speakBilingual(phrase, zh);
+                });
+            });
+        }
+
+        tabsContainer.innerHTML = '';
+        cities.forEach((city, idx) => {
+            const btn = document.createElement('button');
+            btn.className = `city-tab-btn ${idx === 0 ? 'active' : ''}`;
+            btn.innerHTML = `<i class="fa-solid fa-map-pin"></i> <span>${city.name_zh}</span>`;
+            btn.addEventListener('click', () => {
+                tabsContainer.querySelectorAll('.city-tab-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                activeCity = city;
+                renderCityDetail(city);
+                if (navigator.vibrate) navigator.vibrate(10);
+            });
+            tabsContainer.appendChild(btn);
+        });
+
+        renderCityDetail(activeCity);
     }
 
     // ==========================================================================
