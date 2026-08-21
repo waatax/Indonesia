@@ -6217,94 +6217,162 @@
         "name_zh": "雅加達",
         "name_id": "DKI Jakarta",
         "tagline": "都會巨港 · 潮流口語與科技商務之都",
-        "image": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=700&q=80",
-        "desc": "印尼首都與政治經濟心臟，摩天大樓與傳統街區交織。現代捷運 (MRT)、GoFood 外送、南雅加達 (Jaksel) 潮流咖啡廳以及全國青年通用的 Bahasa Gaul 流行俚語皆誕生於此。",
-        "highlights": [
-          "國家紀念塔 (Monas)",
-          "南雅加達文青區 (Senopati)",
-          "雅加達舊城區 (Kota Tua)"
-        ],
-        "specialty_food": "Kerak Telor (香脆椰絲蛋餅), Soto Betawi (濃郁椰奶牛肉湯), Kopi Susu Aren (棕櫚糖拿鐵)",
-        "dialects_and_phrases": [
+        "population": "約 1,070 萬人 (大都會區 Jabodetabek 逾 4,000 萬人)",
+        "province": "DKI 雅加達首都特區 (Daerah Khusus Ibukota Jakarta)",
+        "geography": "位於爪哇島西北岸沿海低平原，北臨爪哇海，平均氣溫 27°C - 32°C，為印尼第一大都會與全東南亞最大城市群。",
+        "image": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=800&q=80",
+        "history_culture": "歷史上曾名為巽他格拉巴 (Sunda Kelapa) 與荷屬巴達維亞 (Batavia)。融合巴達維 (Betawi) 原住民文化、爪哇、華人、阿拉伯與現代國際都會風潮，為印尼政治、金融與科技創新樞紐，也是年輕人潮流口語 (Bahasa Gaul) 的發源地。",
+        "destinations": [
           {
-            "phrase": "Gue lagi otw ke Sudirman nih.",
-            "zh": "我正趕往蘇迪曼大道商務區的路上喔。"
+            "name": "國家紀念塔 (Monas)",
+            "desc": "市中心獨立廣場地標，高 132 公尺，塔頂覆蓋純金火焰象徵獨立精神。"
           },
           {
-            "phrase": "Mau nongkrong di mana kita malam ini?",
-            "zh": "今晚我們要去哪裡聚聚泡咖啡廳呢？"
+            "name": "巴達維亞舊城區 (Kota Tua)",
+            "desc": "17 世紀荷蘭東印度公司殖民總督府廣場，鵝卵石街道與復古咖啡館林立。"
+          },
+          {
+            "name": "伊斯蒂克拉爾大清真寺 (Masjid Istiqlal)",
+            "desc": "東南亞最大清真寺，可同時容納 20 萬人禮拜，與對面天主教聖母大教堂相鄰。"
+          },
+          {
+            "name": "卡普克新城 (Pantai Indah Kapuk / PIK)",
+            "desc": "雅加達北部沿海網美水岸商圈、海鮮美食與現代精緻生活休閒聚落。"
+          }
+        ],
+        "specialty_food": "Kerak Telor (辣椰絲糯米鴨蛋煎餅), Soto Betawi (濃郁椰奶香料牛肉湯), Nasi Uduk (椰漿香蘭葉米飯), Kopi Susu Aren (棕櫚糖特調拿鐵)",
+        "fun_fact": "雅加達是全球使用社群平台（X / Instagram / TikTok）最熱絡的城市之一，每天產生的印尼語迷因與流行語迅速風靡全島！",
+        "dialects_and_phrases": [
+          {
+            "phrase": "Gue lagi otw ke Sudirman nih, macet bgt!",
+            "zh": "我正趕往蘇迪曼大道商務區的路上，超級大塞車！"
+          },
+          {
+            "phrase": "Mau nongkrong di mana kita malam ini bro?",
+            "zh": "兄弟，我們今晚要去哪裡喝咖啡聚聚閒聊呢？"
           }
         ]
       },
       {
         "id": "bandung",
         "name_zh": "萬隆",
-        "name_id": "Bandung (Jawa Barat)",
-        "tagline": "花城 · 爪哇巴黎與高鐵 Whoosh 終點站",
-        "image": "https://images.unsplash.com/photo-1571898223382-0aa3499f74d1?auto=format&fit=crop&w=700&q=80",
-        "desc": "西爪哇首府，氣候涼爽宜人的高原花城。雅萬高鐵 (Whoosh) 僅需 45 分鐘直達！這裡是巽他 (Sunda) 文化搖籃，以文創服飾、布拉加街 (Jalan Braga) 復古咖啡廳與豐富街頭小吃聞名全印尼。",
-        "highlights": [
-          "雅萬高鐵萬隆站 (Stasiun Whoosh)",
-          "布拉加歷史老街 (Jalan Braga)",
-          "白湖火山覆舟山 (Tangkuban Perahu)"
+        "name_id": "Bandung",
+        "tagline": "花城 · 爪哇巴黎與東南亞首條高鐵 Whoosh 終點",
+        "population": "約 250 萬人 (大萬隆都會區逾 850 萬人)",
+        "province": "Jawa Barat (西爪哇省首府)",
+        "geography": "海拔約 768 公尺的高原盆地，四周群山與覆舟火山環抱，氣候四季涼爽宜人 (18°C - 26°C)，為印尼最受歡迎的避暑花園城市。",
+        "image": "https://images.unsplash.com/photo-1571898223382-0aa3499f74d1?auto=format&fit=crop&w=800&q=80",
+        "history_culture": "享有「爪哇巴黎 (Paris van Java)」與「花城 (Kota Kembang)」之稱。1955 年著名的亞非會議 (Konferensi Asia-Afrika) 在此召開。萬隆是巽他 (Sunda) 族藝文與音樂中心，以時尚服飾設計 (Factory Outlets)、獨立書店與獨立音樂聞名。",
+        "destinations": [
+          {
+            "name": "布拉加歷史老街 (Jalan Braga)",
+            "desc": "荷蘭裝飾藝術 (Art Deco) 建築群、文青咖啡廳、畫廊與露天餐廳集聚。"
+          },
+          {
+            "name": "沙爹大廈 (Gedung Sate)",
+            "desc": "西爪哇省政府大樓，建築頂端飾有沙爹串造形標誌，融合荷蘭與印尼傳統建築風格。"
+          },
+          {
+            "name": "覆舟火山 (Gunung Tangkuban Perahu)",
+            "desc": "形如倒扣木舟的活火山，可開車直達火山口邊緣俯瞰壯麗硫磺白煙。"
+          },
+          {
+            "name": "白湖火山 (Kawah Putih)",
+            "desc": "如夢似幻的綠松石色酸性火口湖，雲霧繚繞，為印尼極具代表性的攝影仙境。"
+          }
         ],
-        "specialty_food": "Batagor (香脆炸魚豆腐餛飩), Seblak (重辣濕炒炸蝦片年糕), Peuyeum (甜香發酵木薯)",
+        "specialty_food": "Batagor (香脆炸魚豆腐餛飩佐微辣花生醬), Seblak (辛辣濕炒碎蝦餅與年糕), Peuyeum (甜香發酵木薯), Siomay Bandung (蒸魚漿豆腐燒賣)",
+        "fun_fact": "雅萬高鐵 (Whoosh) 營運最高時速達 350 km/h，從雅加達市區到萬隆僅需 45 分鐘，週末前往萬隆喝咖啡已成雅加達人生活日常！",
         "dialects_and_phrases": [
           {
             "phrase": "Sampurasun! Kumaha damang Bandung?",
-            "zh": "巽他語：您好！萬隆的一切都安好嗎？"
+            "zh": "巽他語問候：您好！萬隆的大家都安好嗎？"
           },
           {
             "phrase": "Hatur nuhun pisan atas bantuannya ya!",
-            "zh": "非常感謝您的熱心相助！"
+            "zh": "巽他語感謝：非常感謝您的熱心幫忙！"
           }
         ]
       },
       {
         "id": "semarang",
         "name_zh": "三寶瓏",
-        "name_id": "Semarang (Jawa Tengah)",
-        "tagline": "千門之都 · 鄭和三保宮與荷蘭殖民老城",
-        "image": "https://images.unsplash.com/photo-1596402184320-417e7178b2cd?auto=format&fit=crop&w=700&q=80",
-        "desc": "中爪哇首府與歷史名港，明代鄭和下西洋重要停泊地。市內擁有全印尼最壯麗的三保宮 (Sam Poo Kong)、充滿神祕傳奇色彩的千重門 (Lawang Sewu) 以及荷蘭殖民紅磚老城。",
-        "highlights": [
-          "鄭和三保宮 (Klenteng Sam Poo Kong)",
-          "千重門 (Lawang Sewu)",
-          "荷蘭殖民老城 (Kota Lama Semarang)"
+        "name_id": "Semarang",
+        "tagline": "千門之都 · 鄭和三保宮與荷蘭殖民紅磚老城",
+        "population": "約 169 萬人 (大三寶瓏區 Kedungsepur 逾 600 萬人)",
+        "province": "Jawa Tengah (中爪哇省首府)",
+        "geography": "位於爪哇島北岸海濱，依山面海，由沿海低地港口與南部丘陵台地組成，氣溫約 26°C - 33°C。",
+        "image": "https://images.unsplash.com/photo-1596402184320-417e7178b2cd?auto=format&fit=crop&w=800&q=80",
+        "history_culture": "明代三寶太監鄭和下西洋船隊於 15 世紀在此停泊登陸，深植中華海洋貿易歷史。三寶瓏融合了爪哇族傳統敬語禮俗、閩南移民文化與 18 世紀荷蘭殖民遺產，是一座多元族群和諧共榮的典範古城。",
+        "destinations": [
+          {
+            "name": "鄭和三保宮 (Klenteng Sam Poo Kong)",
+            "desc": "印尼最壯麗宏偉的中式寺廟建築群，紀念鄭和下西洋，供奉三寶大人。"
+          },
+          {
+            "name": "千重門 (Lawang Sewu)",
+            "desc": "原荷蘭東印度鐵路總部，因擁有千扇百葉拱門而聞名，充滿神秘歷史色彩。"
+          },
+          {
+            "name": "三寶瓏舊城 (Kota Lama / Little Netherlands)",
+            "desc": "保存完好的荷蘭殖民紅磚巴洛克圓頂教堂 (Gereja Blenduk) 與運河倉庫區。"
+          },
+          {
+            "name": "翁加蘭高原茶園 (Kebun Teh Medini Ungaran)",
+            "desc": "三寶瓏南部連綿起伏的清涼翠綠茶山與登山健行勝地。"
+          }
         ],
-        "specialty_food": "Lumpia Semarang (三寶瓏竹筍炸春捲), Tahu Gimbal (酥脆蝦餅豆腐佐花生醬), Bandeng Juwana (無刺香酥虱目魚)",
+        "specialty_food": "Lumpia Semarang (三寶瓏竹筍鮮蝦酥皮春捲), Tahu Gimbal (酥炸蝦餅豆腐佐爪哇花生蝦醬), Bandeng Juwana (高壓鍋熟透無刺酥骨虱目魚), Wingko Babat (椰香糯米烤餅)",
+        "fun_fact": "三寶瓏的春捲 (Lumpia) 是全印尼公認的春捲發源地，內餡加入鮮甜脆筍與鮮蝦，吃時搭配特製濃稠甜醬與青蔥段，風味無與倫比！",
         "dialects_and_phrases": [
           {
             "phrase": "Sugeng rawuh wonten kitha Semarang!",
-            "zh": "爪哇禮貌語：誠摯歡迎光臨三寶瓏市！"
+            "zh": "爪哇禮貌敬語：誠摯歡迎光臨三寶瓏市！"
           },
           {
             "phrase": "Monggo pinarak lan ngunjuk teh rumiyin.",
-            "zh": "請進請坐，先喝杯熱茶歇歇腳吧。"
+            "zh": "爪哇待客語：請進請坐，先喝杯清香熱茶休息一下。"
           }
         ]
       },
       {
         "id": "surabaya",
         "name_zh": "泗水",
-        "name_id": "Surabaya (Jawa Timur)",
-        "tagline": "英雄之城 · 東爪哇工商業巨港與黑湯傳奇",
+        "name_id": "Surabaya",
+        "tagline": "英雄之城 · 東爪哇工商業巨港與黑湯牛肉傳奇",
+        "population": "約 302 萬人 (泗水大都會區 Gerbangkertosusila 逾 1,000 萬人)",
+        "province": "Jawa Timur (東爪哇省首府)",
+        "geography": "位於爪哇島東北部馬都拉海峽 (Selat Madura) 西岸，為印尼第二大城市與東部群島物資航運樞紐，氣溫約 27°C - 34°C。",
         "image": "assets/surabaya_illustration_1787210917170.jpg",
-        "desc": "印尼第二大都會與東爪哇首府，以 1945 年獨立保衛戰被譽為「英雄之城」。泗水人豪爽率直熱情，擁有全印尼最具代表性的古法黑堅果牛肉湯 (Rawon) 與跨越海峽的蘇馬度大橋 (Jembatan Suramadu)。",
-        "highlights": [
-          "英雄紀念碑 (Tugu Pahlawan)",
-          "蘇馬度跨海大橋 (Jembatan Suramadu)",
-          "狂野野生動物園 (Taman Safari Prigen)"
+        "history_culture": "1945 年 11 月 10 日泗水軍民頑強抵抗同盟軍進犯，保衛剛宣告獨立的印尼共和國，因此獲封為「英雄之城 (Kota Pahlawan)」，11 月 10 日亦定為印尼國定英雄節。泗水人 (Arek Suroboyo) 性格豪放不羈、真誠義氣。",
+        "destinations": [
+          {
+            "name": "英雄紀念碑與博物館 (Tugu Pahlawan)",
+            "desc": "高 41 公尺的倒立火箭形紀念碑，記錄印尼獨立抗戰血淚歷史。"
+          },
+          {
+            "name": "蘇馬度跨海大橋 (Jembatan Suramadu)",
+            "desc": "全長 5.4 公里，橫跨馬都拉海峽，為印尼最長的海上斜張橋。"
+          },
+          {
+            "name": "潛艇紀念館 (Monumen Kapal Selam / Monkasel)",
+            "desc": "二戰後蘇聯建造的真實俄製潛艇，直接改裝為陸地開放參觀博物館。"
+          },
+          {
+            "name": "三寶麟菸草博物館 (House of Sampoerna)",
+            "desc": "荷蘭殖民宅邸，可俯瞰數百名熟練女工純手工捲丁香菸草的壯觀場景。"
+          }
         ],
-        "specialty_food": "Rawon Daging (黑堅果深黑牛肉名湯), Rujak Cingur (牛鼻軟骨蔬果佐黑膏醬), Lontong Balap (豆芽豆皮年糕)",
+        "specialty_food": "Rawon Daging (以黑堅果 Kluwek 熬煮的深黑牛肉傳奇名湯), Rujak Cingur (牛鼻軟骨與熱帶蔬果佐黑色蝦醬), Lontong Balap (滿滿豆芽炸豆腐年糕湯), Sate Klopo (裹椰絲炙烤牛肉串)",
+        "fun_fact": "泗水市徽為「鯊魚 (Sura)」與「鱷魚 (Baya)」在波濤中搏鬥的圖案，代表水陸強者的力量與勇氣，象徵泗水市民不屈不撓的精神！",
         "dialects_and_phrases": [
           {
-            "phrase": "Piye kabare rek? Ayo mangan rawon!",
-            "zh": "東爪哇口語：大家過得如何？走去吃黑湯牛肉！"
+            "phrase": "Piye kabare rek? Ayo mangan rawon pedas!",
+            "zh": "東爪哇熱情口語：兄弟姊妹們過得怎樣？走去吃大辣黑湯牛肉！"
           },
           {
             "phrase": "Matur nuwun sanget dulur Suroboyo!",
-            "zh": "東爪哇語：十分感謝泗水的兄弟姊妹們！"
+            "zh": "爪哇語：衷心感謝泗水的親朋好友們！"
           }
         ]
       },
@@ -6312,23 +6380,40 @@
         "id": "bali",
         "name_zh": "峇里島",
         "name_id": "Bali (Denpasar / Ubud / Canggu)",
-        "tagline": "眾神之島 · 印度教神廟、衝浪與數位遊民天堂",
-        "image": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=700&q=80",
-        "desc": "舉世聞名的熱帶度假天堂與文化聖地。島上居民多數信奉峇里印度教，每日可見精緻的花祭 (Canang Sari)。烏布梯田藝術與長谷 (Canggu) 吸引著全球遠端工作者與數位遊民駐足。",
-        "highlights": [
-          "烏布聖猴森林與梯田 (Ubud)",
-          "海神廟 (Tanah Lot)",
-          "長谷衝浪海灘與共享空間 (Canggu)"
-        ],
-        "specialty_food": "Bebek Betutu (芭蕉葉香料慢烤鴨), Babi Guling (傳統金黃脆皮烤乳豬), Sambal Matah (生鮮香茅紅蔥辣醬)",
-        "dialects_and_phrases": [
+        "tagline": "眾神之島 · 印度教千年古廟、衝浪與全球數位遊民天堂",
+        "population": "約 430 萬人 (全省人口)",
+        "province": "Provinsi Bali (省府登巴薩 Denpasar)",
+        "geography": "位於爪哇島東側的熱帶火山島，中央矗立著阿貢聖山 (Gunung Agung，標高 3,031 公尺) 與巴杜爾火山，環抱梯田、斷崖海灣與黑白沙灘。",
+        "image": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80",
+        "history_culture": "印尼境內唯一的印度教主導島嶼，發展出獨特的「峇里印度教 (Agama Hindu Dharma)」。島上擁有兩萬多座寺廟，居民每日敬獻手工編織花籃供品 (Canang Sari)。烏布 (Ubud) 為木雕石雕與甘美朗音樂之都，長谷 (Canggu) 與水明漾 (Seminyak) 則是全球衝浪客與數位遠端工作者最熱門的大本營。",
+        "destinations": [
           {
-            "phrase": "Om Swastyastu! Selamat datang di Bali.",
-            "zh": "峇里祈福語：願神明賜予平安！歡迎來到峇里島。"
+            "name": "海神廟 (Pura Tanah Lot)",
+            "desc": "矗立於印度洋巨浪岩石上的千年古寺，黃昏落日剪影壯美絕倫。"
           },
           {
-            "phrase": "Matur suksma atas kebaikan hatimu.",
-            "zh": "峇里語：衷心感謝您的美好心意與熱情！"
+            "name": "水神廟 (Pura Ulun Danu Beratan)",
+            "desc": "布拉坦火口湖畔的水上聖殿，印尼五萬盾紙鈔背面的代表性圖案。"
+          },
+          {
+            "name": "烏布德哥拉朗梯田 (Tegalalang Rice Terrace)",
+            "desc": "被列入 UNESCO 世界文化遺產的傳統蘇巴克 (Subak) 梯田灌溉景觀。"
+          },
+          {
+            "name": "佩尼達島恐龍灣 (Kelingking Beach)",
+            "desc": "宛如巨型暴龍探海的碧海懸崖絕景，全球 Instagram 最火紅打卡勝地。"
+          }
+        ],
+        "specialty_food": "Bebek Betutu (以數十種香料醃漬芭蕉葉慢火蒸烤鴨), Babi Guling (金黃香脆烤乳豬), Sambal Matah (生鮮香茅紅蔥青檸生辣醬), Sate Lilit (香茅草裹魚漿炭烤肉串)",
+        "fun_fact": "峇里島每年逢印尼曆新年「安寧日 (Nyepi)」，全島實施 24 小時全面靜默：全島斷電、所有商店歇業、國際機場關閉、禁止出門與生火，整座島嶼回歸純淨無光害星空！",
+        "dialects_and_phrases": [
+          {
+            "phrase": "Om Swastyastu! Selamat datang di Pulau Dewata.",
+            "zh": "峇里祈福語：願神明賜予吉祥平安！歡迎來到眾神之島。"
+          },
+          {
+            "phrase": "Matur suksma atas segala kebaikan dan keramahan.",
+            "zh": "峇里語致謝：衷心感謝您無微不至的善意與熱情款待。"
           }
         ]
       },
@@ -6337,22 +6422,39 @@
         "name_zh": "萬丹",
         "name_id": "Banten (Serang / Anyer / Ujung Kulon)",
         "tagline": "南洋門戶 · 蘇門答臘海峽渡口與世界遺產犀牛之鄉",
-        "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=700&q=80",
-        "desc": "爪哇島最西端的歷史要塞，扼守巽他海峽，是前往蘇門答臘的跨島渡輪門戶 (Pelabuhan Merak)。境內的烏戎庫隆國家公園 (Ujung Kulon) 為世界自然遺產，是珍稀爪哇單角犀牛的最後棲息地。",
-        "highlights": [
-          "烏戎庫隆國家公園 (Taman Nasional Ujung Kulon)",
-          "安耶爾海灘 (Pantai Anyer)",
-          "萬丹大清真寺遺址 (Masjid Agung Banten)"
+        "population": "約 1,254 萬人 (全省人口)",
+        "province": "Provinsi Banten (首府西冷 Serang / 工業重鎮 Cilegon / 大唐格朗 Tangerang)",
+        "geography": "位於爪哇島最西端，扼守連接爪哇與蘇門答臘島的巽他海峽 (Selat Sunda)，境內擁有美麗海灘、喀斯特山林與未受污染的原始雨林。",
+        "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+        "history_culture": "16 世紀曾為稱霸東南亞的萬丹伊斯蘭蘇丹國 (Kesultanan Banten)，胡椒貿易樞紐。境內梅拉克港 (Pelabuhan Merak) 為跨海渡輪要塞。深山中居住著恪守古法、完全拒絕現代科技與電力的原住民巴杜伊族 (Suku Baduy)，保存了極為純粹的傳統生活模式。",
+        "destinations": [
+          {
+            "name": "烏戎庫隆國家公園 (Taman Nasional Ujung Kulon)",
+            "desc": "聯合國教科文組織世界自然遺產，為全球極度瀕危爪哇單角犀牛 (Badak Jawa) 最後家園。"
+          },
+          {
+            "name": "安耶爾海灘 (Pantai Anyer)",
+            "desc": "面對巽他海峽的度假海灘，遠眺喀拉喀托火山 (Krakatau) 壯闊海景。"
+          },
+          {
+            "name": "萬丹大清真寺遺址 (Masjid Agung Banten)",
+            "desc": "建於 1556 年，擁有融合中國寶塔與荷蘭燈塔造型的標誌性白色宣禮塔。"
+          },
+          {
+            "name": "鹿島秘境 (Pulau Peucang)",
+            "desc": "碧藍清澈玻璃海與野生鹿群悠遊的原始生態純淨海島。"
+          }
         ],
-        "specialty_food": "Sate Bandeng (去骨去刺魚肉灌入炙烤串燒), Rabeg Banten (羊肉濃郁香料煲), Gerem Asem (酸甜青檸烤肉湯)",
+        "specialty_food": "Sate Bandeng (繁複工法去除全身魚刺後將香料魚肉泥塞回魚皮烘烤的國宴料理), Rabeg Banten (中東香料燉煮的軟嫩羊肉煲), Gerem Asem (酸甜青檸野火烤肉湯)",
+        "fun_fact": "萬丹的「內巴杜伊 (Baduy Dalam)」族人至今不使用任何電力、金錢、汽車或手機，外出全憑赤腳步行數十公里，被人類學者稱為亞洲最純淨的自然保護聚落！",
         "dialects_and_phrases": [
           {
             "phrase": "Wilujeng sumping di tanah Jawara Banten!",
-            "zh": "萬丹語：熱烈歡迎來到豪傑之鄉萬丹！"
+            "zh": "萬丹巽他語：熱烈歡迎光臨豪傑之鄉萬丹！"
           },
           {
-            "phrase": "Hatur nuhun jasa atas bantuannya.",
-            "zh": "萬丹方言：真是太感謝您的幫忙了。"
+            "phrase": "Hatur nuhun jasa atas bantuan dulur sadaya.",
+            "zh": "萬丹方言：真是太感謝各位鄉親好友們的協助了。"
           }
         ]
       },
@@ -6361,22 +6463,39 @@
         "name_zh": "望加錫",
         "name_id": "Makassar (Sulawesi Selatan)",
         "tagline": "大東印尼門戶 · 航海勇者之鄉與絕美洛薩里夕陽",
-        "image": "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=700&q=80",
-        "desc": "南蘇拉威西省會，為整個大東印尼地區（蘇拉威西、摩鹿加、巴布亞）的海空物流樞紐。擁有傳奇航海民族布吉斯人 (Bugis) 的造船工藝 (Pinisi)、全印尼最知名的洛薩里海灘落日與濃醇牛雜名湯 Coto Makassar。",
-        "highlights": [
-          "洛薩里海灘日落大道 (Pantai Losari)",
-          "鹿特丹古堡 (Fort Rotterdam)",
-          "傳統比尼西帆船造船廠 (Perahu Pinisi)"
-        ],
-        "specialty_food": "Coto Makassar (傳統古法藥膳牛雜花生湯), Konro Bakar (炭烤巨無霸香料牛肋排), Pisang Epe (炭烤扁香蕉淋椰糖起司)",
-        "dialects_and_phrases": [
+        "population": "約 149 萬人 (大都會區 Mamminasata 逾 333 萬人)",
+        "province": "Sulawesi Selatan (南蘇拉威西省首府)",
+        "geography": "位於蘇拉威西島西南半島，瀕臨望加錫海峽 (Selat Makassar)，為通往摩鹿加香料群島、巴布亞與東南亞各島的深水港灣樞紐。",
+        "image": "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=800&q=80",
+        "history_culture": "歷史上著名的哥瓦蘇丹國 (Kesultanan Gowa) 核心。布吉斯族 (Bugis) 與望加錫族為舉世聞名的航海與造船民族，其打造的比尼西帆船 (Pinisi) 已列入 UNESCO 非物質文化遺產。望加錫人熱情好客，重視家族榮譽 (Siri')。",
+        "destinations": [
           {
-            "phrase": "Tabe' Puang, apa kareba di Makassar?",
-            "zh": "望加錫敬語：借光請問尊長，望加錫近來一切好嗎？"
+            "name": "洛薩里海灘日落大道 (Pantai Losari)",
+            "desc": "印尼最負盛名的都市海岸大道，傍晚聚集數萬人品嚐炭烤香蕉欣賞海峽夕陽。"
           },
           {
-            "phrase": "Kareba baji'! Ayo nikmati sunset Losari.",
-            "zh": "望加錫語：一切都很好！走吧去欣賞洛薩里海灘夕陽。"
+            "name": "鹿特丹古堡 (Benteng Rotterdam)",
+            "desc": "17 世紀哥瓦王國與荷蘭殖民時期要塞，保存完好，俯瞰蔚藍海港。"
+          },
+          {
+            "name": "99 圓頂水上清真寺 (Masjid 99 Kubah)",
+            "desc": "由著名建築大師設計，99 座橘紅色漸層圓頂矗立於海濱，極具視覺震撼。"
+          },
+          {
+            "name": "拉芒拉芒喀斯特地貌 (Rammang-Rammang)",
+            "desc": "世界第三大喀斯特石灰岩森林，乘小舟穿梭於石林與翠綠水稻田間如入仙境。"
+          }
+        ],
+        "specialty_food": "Coto Makassar (加入 40 種天然草本香料與炒花生慢燉的牛雜名湯), Konro Bakar (炭烤巨無霸香料黑牛肋排), Pisang Epe (炭烤扁香蕉淋濃郁棕櫚糖漿與起司), Es Pisang Ijo (綠斑蘭糯米裹香蕉甜冰)",
+        "fun_fact": "望加錫的比尼西雙桅木帆船 (Perahu Pinisi) 全程不用一顆鐵釘，全靠木榫接合工藝，數百年來航行橫渡印度洋遠達非洲與澳洲海岸！",
+        "dialects_and_phrases": [
+          {
+            "phrase": "Tabe' Puang, apa kareba di kota Makassar?",
+            "zh": "望加錫敬語：借光請問尊長，望加錫市近來一切可好？"
+          },
+          {
+            "phrase": "Kareba baji'! Ayo santai nikmati sunset di Pantai Losari.",
+            "zh": "望加錫語：一切都非常美好！走吧去洛薩里海灘悠閒欣賞日落。"
           }
         ]
       }

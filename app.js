@@ -308,7 +308,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     // ==========================================================================
-    // 3.5. 7 Major Cities & Islands Explorer (Peta 7 Kota Nusantara)
+    // 3.5. 7 Major Cities & Islands Explorer (Peta 7 Kota Nusantara - 日系清晰質感)
     // ==========================================================================
     function initCitiesExplorer(cities) {
         if (!cities || cities.length === 0) return;
@@ -321,47 +321,103 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         function renderCityDetail(city) {
             displayContainer.innerHTML = `
-                <div class="city-detail-card">
-                    <div class="city-hero-image-wrap">
-                        <img src="${city.image}" class="city-hero-img" alt="${city.name_zh}">
-                        <div class="city-img-badge"><i class="fa-solid fa-location-dot"></i> ${city.name_id}</div>
-                    </div>
-                    <div class="city-info-content">
-                        <div>
-                            <div class="city-title-row">
-                                <span class="city-main-title">${city.name_zh}</span>
-                                <span class="city-id-name">${city.name_id}</span>
-                            </div>
-                            <div class="city-tagline"><i class="fa-solid fa-crown" style="font-size: 0.85rem; margin-right: 0.3rem;"></i>${city.tagline}</div>
-                            <p class="city-desc">${city.desc}</p>
-                            
-                            <div class="city-spec-box">
-                                <div style="font-weight: 700; font-size: 0.85rem; color: var(--accent); margin-bottom: 0.4rem;"><i class="fa-solid fa-utensils"></i> 在地代表美食 (Kuliner Khas)：</div>
-                                <div style="font-size: 0.88rem; color: var(--text-main); font-weight: 600;">${city.specialty_food}</div>
+                <div class="jp-city-card">
+                    <!-- 頂部城市視覺與標籤 -->
+                    <div class="jp-city-hero">
+                        <div class="jp-city-img-wrapper">
+                            <img src="${city.image}" class="jp-city-cover-img" alt="${city.name_zh}">
+                            <div class="jp-city-badge-float">
+                                <span class="jp-badge-tag"><i class="fa-solid fa-location-dot"></i> ${city.name_id}</span>
                             </div>
                         </div>
 
-                        <div>
-                            <div style="font-weight: 700; font-size: 0.85rem; color: var(--primary); margin-bottom: 0.4rem;"><i class="fa-solid fa-comments"></i> 在地常用社交金句 (點擊直接發音)：</div>
-                            <div class="city-phrases-list">
-                                ${city.dialects_and_phrases.map(p => `
-                                    <div class="city-phrase-item" data-phrase="${p.phrase}" data-zh="${p.zh}">
+                        <div class="jp-city-header-body">
+                            <div class="jp-city-title-row">
+                                <div>
+                                    <h3 class="jp-city-title">${city.name_zh} <span class="jp-city-subtitle">${city.name_id}</span></h3>
+                                    <div class="jp-city-tagline"><i class="fa-solid fa-feather-pointed" style="color: var(--primary);"></i> ${city.tagline}</div>
+                                </div>
+                            </div>
+
+                            <!-- Wiki 核心數據指標膠囊 -->
+                            <div class="jp-city-metrics-grid">
+                                <div class="jp-metric-item">
+                                    <span class="jp-metric-label"><i class="fa-solid fa-users"></i> 常住人口 (WIKI)</span>
+                                    <strong class="jp-metric-val">${city.population}</strong>
+                                </div>
+                                <div class="jp-metric-item">
+                                    <span class="jp-metric-label"><i class="fa-solid fa-landmark"></i> 行政區劃</span>
+                                    <strong class="jp-metric-val">${city.province}</strong>
+                                </div>
+                            </div>
+
+                            <!-- 地理氣候 -->
+                            <div class="jp-geo-snippet">
+                                <i class="fa-solid fa-compass" style="color: var(--accent); margin-right: 0.35rem;"></i>
+                                <span><strong>地理氣候：</strong>${city.geography}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 歷史人文與風土介紹 -->
+                    <div class="jp-city-section">
+                        <h4 class="jp-sec-title"><i class="fa-solid fa-book-open"></i> 地理人文與歷史脈絡 (Sejarah & Budaya)</h4>
+                        <p class="jp-text-lead">${city.history_culture}</p>
+                    </div>
+
+                    <!-- 著名必訪地標景點 (4 Destinations) -->
+                    <div class="jp-city-section">
+                        <h4 class="jp-sec-title"><i class="fa-solid fa-map-location-dot"></i> 在地著名景點與地標景觀 (Destinasi Wisata Terkenal)</h4>
+                        <div class="jp-destinations-grid">
+                            ${city.destinations.map((dest, i) => `
+                                <div class="jp-dest-card">
+                                    <div class="jp-dest-num">0${i + 1}</div>
+                                    <div class="jp-dest-content">
+                                        <h5>${dest.name}</h5>
+                                        <p>${dest.desc}</p>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+
+                    <!-- 在地必吃美食 & Wiki 趣味冷知識 -->
+                    <div class="jp-two-col-grid">
+                        <div class="jp-food-card">
+                            <h4 class="jp-sec-title" style="color: #e76f51;"><i class="fa-solid fa-utensils"></i> 在地必吃代表美食 (Kuliner Khas)</h4>
+                            <p class="jp-food-list">${city.specialty_food}</p>
+                        </div>
+                        <div class="jp-funfact-card">
+                            <h4 class="jp-sec-title" style="color: #2a9d8f;"><i class="fa-solid fa-lightbulb"></i> Wiki 趣味冷知識 (Tahukah Anda?)</h4>
+                            <p class="jp-funfact-text">${city.fun_fact}</p>
+                        </div>
+                    </div>
+
+                    <!-- 在地特色方言問候與生活社交金句 -->
+                    <div class="jp-city-section" style="margin-bottom: 0;">
+                        <h4 class="jp-sec-title"><i class="fa-solid fa-comments"></i> 在地常用方言社交金句 (點擊直接發音)</h4>
+                        <div class="jp-phrases-container">
+                            ${city.dialects_and_phrases.map(p => `
+                                <div class="jp-phrase-row" data-phrase="${p.phrase}" data-zh="${p.zh}">
+                                    <div class="jp-phrase-left">
+                                        <button class="jp-phrase-speaker-btn" title="點擊發音"><i class="fa-solid fa-volume-high"></i></button>
                                         <div>
-                                            <strong style="font-size: 0.92rem; color: var(--text-main);"><i class="fa-solid fa-volume-high" style="color: var(--accent); margin-right: 0.3rem;"></i>${p.phrase}</strong>
-                                            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.15rem;">${p.zh}</div>
+                                            <div class="jp-phrase-id">${p.phrase}</div>
+                                            <div class="jp-phrase-zh">${p.zh}</div>
                                         </div>
                                     </div>
-                                `).join('')}
-                            </div>
+                                    <span class="jp-listen-tag">中+印雙語 <i class="fa-solid fa-headphones"></i></span>
+                                </div>
+                            `).join('')}
                         </div>
                     </div>
                 </div>
             `;
 
-            displayContainer.querySelectorAll('.city-phrase-item').forEach(item => {
-                item.addEventListener('click', () => {
-                    const phrase = item.getAttribute('data-phrase');
-                    const zh = item.getAttribute('data-zh');
+            displayContainer.querySelectorAll('.jp-phrase-row').forEach(row => {
+                row.addEventListener('click', () => {
+                    const phrase = row.getAttribute('data-phrase');
+                    const zh = row.getAttribute('data-zh');
                     audioEngine.speakBilingual(phrase, zh);
                 });
             });
@@ -371,7 +427,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         cities.forEach((city, idx) => {
             const btn = document.createElement('button');
             btn.className = `city-tab-btn ${idx === 0 ? 'active' : ''}`;
-            btn.innerHTML = `<i class="fa-solid fa-map-pin"></i> <span>${city.name_zh}</span>`;
+            btn.innerHTML = `<i class="fa-solid fa-location-dot"></i> <span>${city.name_zh}</span> <small style="opacity: 0.75; font-size: 0.75rem; margin-left: 0.15rem;">${city.name_id.split(' ')[0]}</small>`;
             btn.addEventListener('click', () => {
                 tabsContainer.querySelectorAll('.city-tab-btn').forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
