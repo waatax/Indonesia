@@ -1329,7 +1329,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const card = document.createElement('div');
                 card.className = 'module-card';
                 card.innerHTML = `
-                    <img src="${mod.image || 'assets/indo_hero_illustration_1787210889692.jpg'}" class="module-card-img" alt="${mod.title}">
+                    <img src="${mod.image || 'assets/indo_hero_illustration_1787210889692.jpg'}" onerror="this.src='assets/indo_hero_illustration_1787210889692.jpg'" loading="lazy" class="module-card-img" alt="${mod.title}">
                     <div class="module-card-content">
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.3rem;">
                             <span class="module-loc-tag"><i class="fa-solid fa-location-dot"></i> ${mod.location || '印尼生活實境'}</span>
@@ -1371,6 +1371,18 @@ document.addEventListener('DOMContentLoaded', async () => {
             document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
             document.getElementById('lesson-view').classList.add('active');
             window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            const heroImg = document.getElementById('current-lesson-img');
+            if (heroImg) {
+                heroImg.src = mod.image || 'assets/indo_hero_illustration_1787210889692.jpg';
+                heroImg.onerror = function() {
+                    this.src = 'assets/indo_hero_illustration_1787210889692.jpg';
+                };
+            }
+            const subtitleEl = document.getElementById('current-lesson-subtitle');
+            if (subtitleEl) subtitleEl.textContent = mod.subtitle || '體驗印尼現代生活情境與在地道地交流。';
+            const catBadgeEl = document.getElementById('current-lesson-cat-badge');
+            if (catBadgeEl) catBadgeEl.textContent = mod.category ? mod.category.toUpperCase() : 'SITUASI';
 
             document.getElementById('current-lesson-title').textContent = mod.title;
             document.getElementById('current-lesson-loc').innerHTML = `<i class="fa-solid fa-location-dot"></i> ${mod.location || '印尼生活實境'}`;
