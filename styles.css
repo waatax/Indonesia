@@ -6697,5 +6697,30 @@ kbd {
     }
 }
 
+/* 全站文字點擊朗讀視覺反饋 (Audio Pulse Animation) */
+.audio-pulse-speaking {
+    outline: 2px solid var(--primary) !important;
+    outline-offset: 3px;
+    background: rgba(230, 57, 70, 0.08) !important;
+    border-radius: var(--radius-sm);
+    animation: audioPulseAnim 1.2s ease-in-out;
+}
 
+@keyframes audioPulseAnim {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
 
+.peribahasa-dialogue-box {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.peribahasa-dialogue-box:hover {
+    background: rgba(42, 157, 143, 0.15);
+}
+
+.sentence-item-card {
+    cursor: pointer;
+}

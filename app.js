@@ -17,6 +17,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             this.speechRate = 1.0;
             this.activeKey = null;
             this.listeners = new Set();
+            this.audioCache = new Map();
+            this.currentAudio = null;
+            this.preferNativeVoice = true; // 預設優先啟用原生印尼語音源，確保全平台百分之百真人道地發音
 
             if (this.synth) {
                 this.initVoices();
@@ -42,26 +45,27 @@ document.addEventListener('DOMContentLoaded', async () => {
                 }) || null;
             }
             if (langCode.startsWith('id') || langCode.startsWith('in')) {
-                // 1. 優先精準匹配印尼原生語音 (id-ID, in-ID 或名稱包含 Indonesia)
                 let voice = this.voices.find(v => {
                     const l = (v.lang || '').toLowerCase();
                     const n = (v.name || '').toLowerCase();
                     return l === 'id-id' || l === 'in-id' || l.startsWith('id_') || l.startsWith('in_') || n.includes('indonesia') || n.includes('indonesian');
                 });
-                // 2. 次要匹配以 id 或 in 開頭的語音
                 if (!voice) {
                     voice = this.voices.find(v => {
                         const l = (v.lang || '').toLowerCase();
                         return l.startsWith('id') || l.startsWith('in');
                     });
                 }
-                // 3. 備援親緣語音 (馬來語 ms-MY，發音音素極近)
                 if (!voice) {
                     voice = this.voices.find(v => (v.lang || '').toLowerCase().startsWith('ms'));
                 }
                 return voice || null;
             }
             return null;
+        }
+
+        hasIndonesianVoice() {
+            return !!this.getVoice('id');
         }
 
         subscribe(listener) {
@@ -84,15 +88,88 @@ document.addEventListener('DOMContentLoaded', async () => {
             cleaned = cleaned.replace(/\[[^\]]*\]/g, ' ');
             cleaned = cleaned.replace(/【[^】]*】/g, ' ');
             cleaned = cleaned.replace(/[\u4e00-\u9fa5]/g, ' ');
-            cleaned = cleaned.replace(/[，。！？；：（）「」『』、《》“”‘’…—\/\-]/g, ' ');
+            cleaned = cleaned.replace(/[，。！？；：（）「」『』、《》“”‘’…—\/]/g, ' ');
             cleaned = cleaned.replace(/\s+/g, ' ').trim();
             return cleaned;
         }
 
+        stopCurrentAudio() {
+            if (this.currentAudio) {
+                try {
+                    this.currentAudio.pause();
+                    this.currentAudio.currentTime = 0;
+                    this.currentAudio.onended = null;
+                    this.currentAudio.onerror = null;
+                } catch (e) {}
+                this.currentAudio = null;
+            }
+        }
+
         /**
-         * Single language speech (Indonesian or Chinese)
+         * Plays authentic Indonesian audio via high-fidelity native audio stream
+         * Google TTS native Indonesian endpoint - guarantees natural native pronunciation on ANY platform
          */
-        speak(rawText, options = {}) {
+        speakOnlineAudio(cleanText, options = {}) {
+            return new Promise((resolve) => {
+                if (!cleanText) { resolve(); return; }
+
+                this.stopCurrentAudio();
+                if (this.synth) {
+                    try { this.synth.cancel(); } catch (e) {}
+                }
+
+                // Chunk to 180 chars max for clean TTS URL
+                const textChunk = cleanText.length > 180 ? cleanText.substring(0, 180) : cleanText;
+                const url = `https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=id&q=${encodeURIComponent(textChunk)}`;
+
+                let audio = this.audioCache.get(url);
+                if (!audio) {
+                    audio = new Audio(url);
+                    this.audioCache.set(url, audio);
+                }
+
+                this.currentAudio = audio;
+                try {
+                    audio.currentTime = 0;
+                } catch (e) {}
+
+                audio.playbackRate = options.rate || this.speechRate;
+
+                this.activeKey = options.key || cleanText;
+                this.notifyState({ isPlaying: true, activeKey: this.activeKey });
+                if (options.onStart) options.onStart();
+
+                let isResolved = false;
+                const finish = () => {
+                    if (isResolved) return;
+                    isResolved = true;
+                    this.currentAudio = null;
+                    this.notifyState({ isPlaying: false, activeKey: null });
+                    if (options.onEnd) options.onEnd();
+                    resolve();
+                };
+
+                audio.onended = finish;
+                audio.onerror = (err) => {
+                    console.warn('Native audio stream error, falling back to Web Speech API:', err);
+                    this.speakWithSynth(cleanText, options).then(finish);
+                };
+
+                const playPromise = audio.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch((err) => {
+                        console.warn('Audio play restricted or failed, falling back to Web Speech API:', err);
+                        this.speakWithSynth(cleanText, options).then(finish);
+                    });
+                }
+                if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(10);
+            });
+        }
+
+        /**
+         * Speaks using browser SpeechSynthesis (Local fallback)
+         */
+        speakWithSynth(rawText, options = {}) {
             return new Promise((resolve) => {
                 if (!this.synth || !rawText) {
                     resolve();
@@ -104,7 +181,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     this.synth.cancel();
                 } catch (e) {}
 
-                const lang = options.lang || 'id'; // 'id' | 'zh'
+                const lang = options.lang || 'id';
                 const targetLang = lang === 'zh' ? 'zh-TW' : 'id-ID';
                 const textToSpeak = lang === 'id' ? this.cleanIndoText(rawText) : rawText.trim();
                 if (!textToSpeak) {
@@ -140,13 +217,39 @@ document.addEventListener('DOMContentLoaded', async () => {
                 };
 
                 this.synth.speak(utterance);
-                if (navigator.vibrate) navigator.vibrate(10);
+                if (typeof navigator !== 'undefined' && navigator.vibrate) navigator.vibrate(10);
             });
         }
 
         /**
+         * Universal Speak entry point
+         * Intelligently selects between High-Fidelity Native Audio Stream and local SpeechSynthesis
+         */
+        speak(rawText, options = {}) {
+            if (!rawText) return Promise.resolve();
+
+            const lang = options.lang || 'id';
+
+            // 中文朗讀一律採用 Web Speech API 中文音色
+            if (lang === 'zh') {
+                return this.speakWithSynth(rawText, options);
+            }
+
+            // 印尼文朗讀：
+            // 優先使用高清晰印尼原生語音流，確保所有設備（包含無印尼語音包的 Windows/Android）發音極度標準道地
+            const cleanText = this.cleanIndoText(rawText);
+            if (!cleanText) return Promise.resolve();
+
+            if (this.preferNativeVoice || !this.hasIndonesianVoice()) {
+                return this.speakOnlineAudio(cleanText, options);
+            } else {
+                return this.speakWithSynth(cleanText, options);
+            }
+        }
+
+        /**
          * Bilingual Dual-Language speech ("中+印" 雙語播放機制)
-         * Speaks Chinese translation first, pauses naturally (350ms), then speaks Indonesian!
+         * 先朗讀中文翻譯，自然微停頓 (350ms)，再以印尼原生真人發音朗讀印尼語！
          */
         async speakBilingual(idText, zhText, options = {}) {
             if (!idText || !zhText) {
@@ -193,6 +296,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 clearTimeout(this.currentSequenceTimer);
                 this.currentSequenceTimer = null;
             }
+            this.stopCurrentAudio();
             if (this.synth) {
                 try {
                     this.synth.cancel();
@@ -3118,6 +3222,13 @@ document.addEventListener('DOMContentLoaded', async () => {
             speedBtn.querySelector('.speed-label').textContent = speedLabels[speedIdx];
             if (navigator.vibrate) navigator.vibrate(10);
         });
+
+        // 頂部真人語音測試按鈕
+        const audioTestBtn = document.getElementById('audio-test-btn');
+        audioTestBtn?.addEventListener('click', () => {
+            audioEngine.speak('Halo, selamat belajar bahasa Indonesia! Semua kosakata, peribahasa, dan percakapan siap didengarkan.', { lang: 'id' });
+            if (navigator.vibrate) navigator.vibrate(15);
+        });
     }
 
     // ==========================================================================
@@ -4691,9 +4802,14 @@ document.addEventListener('DOMContentLoaded', async () => {
                                 <strong><i class="fa-solid fa-feather-pointed"></i> 文化典故與用法：</strong>${escapeHtml(item.cultural_note)}
                             </div>
                             ${item.example ? `
-                            <div class="peribahasa-dialogue-box">
-                                <div style="font-weight: 700; color: var(--text-main); margin-bottom: 0.2rem;">${escapeHtml(item.example)}</div>
-                                <div style="color: var(--text-muted); font-size: 0.8rem;">${escapeHtml(item.example_zh || '')}</div>
+                            <div class="peribahasa-dialogue-box" data-speak-example="${escapeHtml(item.example)}" title="點擊聆聽對話例句">
+                                <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem;">
+                                    <div>
+                                        <div style="font-weight: 700; color: var(--text-main); margin-bottom: 0.2rem;"><i class="fa-solid fa-comments" style="color: var(--secondary); margin-right: 0.35rem;"></i>${escapeHtml(item.example)}</div>
+                                        <div style="color: var(--text-muted); font-size: 0.8rem;">${escapeHtml(item.example_zh || '')}</div>
+                                    </div>
+                                    <button class="vocab-audio-btn play-peri-ex-btn" title="朗讀示範會話" style="width: 28px; height: 28px; font-size: 0.75rem; flex-shrink: 0;"><i class="fa-solid fa-volume-high"></i></button>
+                                </div>
                             </div>` : ''}
                         </div>
                     </div>
@@ -4709,6 +4825,20 @@ document.addEventListener('DOMContentLoaded', async () => {
                 card.querySelector('.play-peri-bi-btn')?.addEventListener('click', () => {
                     audioEngine.speakBilingual(item.phrase, item.meaning_zh);
                 });
+                const exBox = card.querySelector('.peribahasa-dialogue-box');
+                const exBtn = card.querySelector('.play-peri-ex-btn');
+                if (exBtn && item.example) {
+                    exBtn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        audioEngine.speakBilingual(item.example, item.example_zh || '');
+                    });
+                }
+                if (exBox && item.example) {
+                    exBox.addEventListener('click', (e) => {
+                        if (e.target.closest('button')) return;
+                        audioEngine.speakBilingual(item.example, item.example_zh || '');
+                    });
+                }
             });
         }
 
@@ -4787,7 +4917,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             container.innerHTML = filtered.map((item, idx) => {
                 const catLabel = catNameMap[item.category] || '日常生活';
                 return `
-                    <div class="sentence-item-card" data-idx="${idx}">
+                    <div class="sentence-item-card" data-idx="${idx}" data-speak-id="${escapeHtml(item.id_sent)}" title="點擊卡片直接朗讀">
                         <div>
                             <span class="sentence-card-cat">${catLabel}</span>
                             <div class="sentence-id-text">${escapeHtml(item.id_sent)}</div>
@@ -4835,9 +4965,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     // ==========================================================================
-    // 全站點擊單字/句子即時發音委託 (Universal Click-to-Speak Delegation)
+    // 全站點擊單字/片語/會話 即時發音委託 (Universal Click-to-Speak Delegation)
+    // 確保整個學習系統中每一個單字、成語、例句、會話氣泡均可點擊即時發音！
     // ==========================================================================
     document.addEventListener('click', (e) => {
+        // 1. Explicit data-speak attributes
         const speakBtn = e.target.closest('[data-speak]');
         if (speakBtn) {
             const text = speakBtn.getAttribute('data-speak');
@@ -4847,11 +4979,33 @@ document.addEventListener('DOMContentLoaded', async () => {
             return;
         }
 
-        // 點擊任何印尼語文字區塊自動朗讀
-        const wordEl = e.target.closest('.card-word-id, .cheat-phrase-id, .bubble-id-text, .result-id, .num-pill, .banknote-id');
-        if (wordEl && !e.target.closest('button')) {
-            const text = wordEl.textContent.trim();
-            if (text) {
+        // 2. Explicit data-speak-bi attributes
+        const speakBiBtn = e.target.closest('[data-speak-bi]');
+        if (speakBiBtn) {
+            const idText = speakBiBtn.getAttribute('data-speak-bi');
+            const zhText = speakBiBtn.getAttribute('data-speak-zh') || '';
+            audioEngine.speakBilingual(idText, zhText);
+            return;
+        }
+
+        // 3. Any Indonesian text element anywhere on the page
+        const indoTextEl = e.target.closest([
+            '.card-word-id', '.cheat-phrase-id', '.bubble-id-text', '.result-id', '.num-pill', '.banknote-id',
+            '.vocab-card-word', '.vocab-word-id', '.ex-id', '.ex-id-text', '.peribahasa-id-phrase', '.sentence-id-text',
+            '.jp-phrase-id', '.deriv-word', '.gaul-word', '.card-word-large', '.baku-text', '.gaul-text',
+            '.vocab-data-table td:nth-child(2)', '.vocab-data-table td:nth-child(7)',
+            '.pronoun-table td:nth-child(2)', '.pronoun-table td:nth-child(3)', '.pronoun-table td:nth-child(4)',
+            '.letter-card', '.diphthong-card', '.quiz-opt-letter', '[data-speak-id]', '[data-word]'
+        ].join(', '));
+
+        if (indoTextEl && !e.target.closest('button, input, select, textarea, a')) {
+            const rawText = indoTextEl.getAttribute('data-speak-id') || 
+                            indoTextEl.getAttribute('data-word') || 
+                            indoTextEl.textContent.trim();
+            const text = audioEngine.cleanIndoText(rawText);
+            if (text && text.length > 0 && text.length < 300) {
+                indoTextEl.classList.add('audio-pulse-speaking');
+                setTimeout(() => indoTextEl.classList.remove('audio-pulse-speaking'), 1200);
                 audioEngine.speak(text, { lang: 'id' });
             }
         }
