@@ -3457,35 +3457,1127 @@ footer {
     color: var(--text-muted);
 }
 
-/* Responsive Adaptations */
+/* ==========================================================================
+   New Interactive & Beginner Components Styles
+   ========================================================================== */
+
+/* 1. Header Onboarding Pill Button */
+.onboarding-pill-btn {
+    background: linear-gradient(135deg, #FF6B6B 0%, #E63946 100%);
+    color: #ffffff;
+    border: none;
+    padding: 0.4rem 0.85rem;
+    border-radius: var(--radius-full);
+    font-size: 0.82rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    box-shadow: 0 2px 8px rgba(230, 57, 70, 0.25);
+    transition: all var(--transition-fast);
+}
+.onboarding-pill-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(230, 57, 70, 0.4);
+}
+
+/* 2. Beginner Reassurance Card */
+.beginner-reassurance-card {
+    background: linear-gradient(135deg, rgba(42, 157, 143, 0.08) 0%, rgba(0, 119, 182, 0.08) 100%);
+    border: 1px solid rgba(42, 157, 143, 0.25);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+.reassurance-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+.reassurance-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
+    background: var(--success);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    flex-shrink: 0;
+}
+.reassurance-header h4 {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--text-main);
+}
+.reassurance-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-top: 0.2rem;
+}
+.reassurance-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+}
+.reassurance-item {
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    box-shadow: var(--shadow-sm);
+}
+.reassurance-item i {
+    font-size: 1.25rem;
+    margin-top: 0.15rem;
+}
+.reassurance-item strong {
+    display: block;
+    font-size: 0.95rem;
+    color: var(--text-main);
+}
+.reassurance-item span {
+    display: block;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin-top: 0.2rem;
+    line-height: 1.4;
+}
+
+/* 3. Top 10 Survival Phrases Quick Bar */
+.top-survival-bar {
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-sm);
+}
+.top-survival-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+.top-survival-header h4 {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--text-main);
+}
+.survival-chips-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+.survival-chip {
+    background: var(--background);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+    padding: 0.45rem 0.9rem;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-main);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: all var(--transition-fast);
+}
+.survival-chip:hover {
+    border-color: var(--primary);
+    background: var(--primary-light);
+    transform: translateY(-2px);
+}
+.survival-chip i {
+    color: var(--primary);
+    font-size: 0.8rem;
+}
+.survival-chip .chip-zh {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* 4. Stage Card Badges */
+.stage-badge-row {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 0.35rem;
+}
+.stage-badge-pill {
+    background: var(--accent-light);
+    color: var(--accent);
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 0.1rem 0.5rem;
+    border-radius: var(--radius-full);
+}
+.stage-xp-tag {
+    background: rgba(245, 158, 11, 0.15);
+    color: #D97706;
+    font-size: 0.72rem;
+    font-weight: 800;
+    padding: 0.1rem 0.5rem;
+    border-radius: var(--radius-full);
+}
+
+/* 5. Sound Discrimination Quiz */
+.highlight-tab {
+    border-color: var(--primary) !important;
+    color: var(--primary) !important;
+    background: var(--primary-light) !important;
+}
+.sound-quiz-card {
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+    text-align: center;
+}
+.sound-quiz-header {
+    margin-bottom: 1.5rem;
+}
+.sound-quiz-header h3 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin: 0.5rem 0 0.2rem;
+}
+.sound-quiz-header p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+.sound-quiz-body {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.sound-quiz-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0.85rem;
+    margin-top: 1.5rem;
+}
+.sound-opt-btn {
+    background: var(--background);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-main);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+.sound-opt-btn span {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+.sound-opt-btn:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+.sound-opt-btn.correct {
+    background: var(--success-light);
+    border-color: var(--success);
+    color: var(--success);
+}
+.sound-opt-btn.wrong {
+    background: var(--primary-light);
+    border-color: var(--primary);
+    color: var(--primary);
+}
+.sound-quiz-feedback {
+    margin-top: 1.25rem;
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    font-size: 0.95rem;
+}
+
+/* 6. Kinship Decision Matrix Card */
+.kinship-matrix-card {
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+    box-shadow: var(--shadow-sm);
+    margin-top: 2rem;
+}
+.matrix-header h3 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--text-main);
+}
+.matrix-header p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-top: 0.2rem;
+}
+.matrix-controls-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1.25rem 0;
+}
+.matrix-control-item label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 0.35rem;
+}
+.matrix-result-box {
+    background: var(--background);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+}
+.matrix-result-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed var(--border-color);
+}
+.matrix-badge-col {
+    text-align: center;
+}
+.matrix-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+.matrix-val {
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: var(--primary);
+    margin: 0.2rem 0;
+}
+.matrix-hint {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}
+.matrix-sample-wrap {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/* 7. D-M Dynamic Builder */
+.dm-builder-card {
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+    box-shadow: var(--shadow-sm);
+    margin-top: 1.5rem;
+}
+.dm-header h3 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--text-main);
+}
+.dm-header p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-top: 0.2rem;
+}
+.dm-samples-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1.25rem 0;
+}
+.dm-sample-btn {
+    background: var(--background);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+    padding: 0.4rem 0.85rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-main);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+.dm-sample-btn.active, .dm-sample-btn:hover {
+    background: var(--accent);
+    color: #ffffff;
+    border-color: var(--accent);
+}
+.dm-visualizer-box {
+    background: var(--background);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+}
+.dm-blocks-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+}
+.dm-block-item {
+    background: var(--surface);
+    border: 2px solid var(--accent);
+    border-radius: var(--radius-md);
+    padding: 1rem 1.5rem;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+}
+.dm-block-role {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--accent);
+    text-transform: uppercase;
+}
+.dm-block-word {
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: var(--text-main);
+    margin: 0.2rem 0;
+}
+.dm-block-meaning {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+.dm-arrow {
+    font-size: 1.5rem;
+    color: var(--text-light);
+}
+
+/* 8. Tidak vs Bukan Tester */
+.tidak-bukan-card {
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+    box-shadow: var(--shadow-sm);
+}
+.tb-header h3 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin: 0.4rem 0 0.2rem;
+}
+.tb-header p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+.tb-quiz-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+    margin-top: 1.25rem;
+}
+.tb-quiz-item {
+    background: var(--background);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+}
+.tb-prompt {
+    font-weight: 800;
+    font-size: 1rem;
+    color: var(--text-main);
+    margin-bottom: 0.3rem;
+}
+.tb-prompt-zh {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 0.85rem;
+}
+.tb-btns-row {
+    display: flex;
+    gap: 0.5rem;
+}
+.tb-btn {
+    flex: 1;
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 0.5rem;
+    font-weight: 800;
+    color: var(--text-main);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+.tb-btn:hover {
+    border-color: var(--accent);
+}
+.tb-btn.correct {
+    background: var(--success-light);
+    border-color: var(--success);
+    color: var(--success);
+}
+.tb-btn.wrong {
+    background: var(--primary-light);
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+/* 9. Indonesian Banknotes Visual Guide */
+.banknotes-card {
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+    box-shadow: var(--shadow-sm);
+    margin-top: 1.5rem;
+}
+.banknotes-header h3 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--text-main);
+}
+.banknotes-header p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-top: 0.2rem;
+}
+.banknotes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1.25rem;
+}
+.banknote-item {
+    border-radius: var(--radius-md);
+    padding: 1.2rem 1rem;
+    color: #ffffff;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-fast);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 120px;
+}
+.banknote-item:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: var(--shadow-md);
+}
+.banknote-amount {
+    font-size: 1.3rem;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+}
+.banknote-words {
+    font-size: 0.78rem;
+    opacity: 0.92;
+    font-weight: 600;
+    margin: 0.3rem 0;
+}
+.banknote-approx {
+    font-size: 0.72rem;
+    background: rgba(0, 0, 0, 0.25);
+    padding: 0.15rem 0.4rem;
+    border-radius: var(--radius-full);
+    display: inline-block;
+}
+.banknote-100k { background: linear-gradient(135deg, #E63946 0%, #D62828 100%); }
+.banknote-50k { background: linear-gradient(135deg, #0077B6 0%, #023E8A 100%); }
+.banknote-20k { background: linear-gradient(135deg, #2A9D8F 0%, #1F7A6F 100%); }
+.banknote-10k { background: linear-gradient(135deg, #8B5CF6 0%, #6D28D9 100%); }
+.banknote-5k { background: linear-gradient(135deg, #D97706 0%, #B45309 100%); }
+.banknote-2k { background: linear-gradient(135deg, #64748B 0%, #475569 100%); }
+
+/* 10. 4-Part Day Time Visualizer */
+.day-time-clock-card {
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+    box-shadow: var(--shadow-sm);
+    margin-top: 1.5rem;
+}
+.clock-header h3 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--text-main);
+}
+.clock-header p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-top: 0.2rem;
+}
+.clock-time-segments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1.25rem;
+}
+.time-segment-card {
+    background: var(--background);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+.time-segment-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-sm);
+}
+.time-segment-icon {
+    font-size: 2rem;
+    margin-bottom: 0.4rem;
+}
+.time-segment-name {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--text-main);
+}
+.time-segment-hours {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin: 0.2rem 0 0.5rem;
+}
+.time-segment-zh {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+/* 11. PC Shortcuts Bar */
+.desktop-shortcuts-bar {
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 0.6rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    margin-bottom: 1.25rem;
+    overflow-x: auto;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}
+.shortcut-pill {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    white-space: nowrap;
+}
+kbd {
+    background: var(--background);
+    border: 1px solid var(--border-hover);
+    border-radius: 4px;
+    padding: 0.15rem 0.45rem;
+    font-family: monospace;
+    font-size: 0.78rem;
+    font-weight: 800;
+    color: var(--text-main);
+    box-shadow: 0 1px 0 var(--border-hover);
+}
+.card-syllable {
+    font-size: 0.95rem;
+    color: var(--accent);
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+/* 12. Word Inspection Popover */
+.word-inspect-popover {
+    position: fixed;
+    z-index: 1000;
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 0.85rem 1.1rem;
+    box-shadow: var(--shadow-lg);
+    min-width: 200px;
+    max-width: 280px;
+    animation: fadeInSlide 0.2s ease forwards;
+}
+.popover-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.3rem;
+}
+.popover-word {
+    font-size: 1.1rem;
+    font-weight: 900;
+    color: var(--primary);
+}
+.popover-close-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+.popover-zh {
+    font-size: 0.9rem;
+    color: var(--text-main);
+    margin-bottom: 0.6rem;
+}
+.popover-actions {
+    display: flex;
+    gap: 0.4rem;
+}
+
+/* 13. Lesson Navigation Switcher */
+.lesson-quick-switch {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* 14. Shadowing Self-Rate Bar */
+.self-rate-container {
+    margin-top: 1.25rem;
+    padding-top: 1rem;
+    border-top: 1px dashed var(--border-color);
+    text-align: center;
+}
+.self-rate-label {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+.self-rate-btns {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+.self-btn {
+    border: 1px solid var(--border-color);
+    background: var(--surface);
+    padding: 0.4rem 0.8rem;
+    border-radius: var(--radius-full);
+    font-size: 0.82rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+.self-btn.gold:hover { background: rgba(245, 158, 11, 0.15); border-color: #F59E0B; color: #D97706; }
+.self-btn.silver:hover { background: var(--accent-light); border-color: var(--accent); color: var(--accent); }
+.self-btn.bronze:hover { background: var(--primary-light); border-color: var(--primary); color: var(--primary); }
+
+/* 15. Affix Interactive Puzzle */
+.affix-puzzle-card {
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+    box-shadow: var(--shadow-sm);
+    margin-top: 1.5rem;
+}
+.puzzle-header h3 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--text-main);
+}
+.puzzle-header p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-top: 0.2rem;
+}
+.affix-selectors-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem;
+    margin: 1.25rem 0;
+}
+.affix-selector-col label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 0.4rem;
+}
+.affix-pill-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+.affix-chip {
+    background: var(--background);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 0.5rem 0.85rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-main);
+    cursor: pointer;
+    text-align: left;
+    transition: all var(--transition-fast);
+}
+.affix-chip.active, .affix-chip:hover {
+    background: var(--accent);
+    color: #ffffff;
+    border-color: var(--accent);
+}
+.affix-puzzle-result {
+    background: var(--background);
+    border: 2px dashed var(--accent);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+    text-align: center;
+}
+.puzzle-res-word {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--primary);
+    margin-bottom: 0.2rem;
+}
+.puzzle-res-zh {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: 0.8rem;
+}
+
+/* 16. Culture Dos & Don'ts */
+.culture-dos-donts-card {
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+    box-shadow: var(--shadow-sm);
+    margin-top: 1.5rem;
+}
+.dos-donts-header h3 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--text-main);
+}
+.dos-donts-header p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-top: 0.2rem;
+}
+.dos-donts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.25rem;
+}
+.dos-col, .donts-col {
+    background: var(--background);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+}
+.col-title {
+    font-size: 1rem;
+    font-weight: 800;
+    margin-bottom: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+.col-title.green { color: var(--success); }
+.col-title.red { color: var(--primary); }
+.do-item, .dont-item {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+}
+.do-item strong, .dont-item strong {
+    color: var(--text-main);
+}
+
+/* 17. Beginner Onboarding Modal & Drawer */
+.onboarding-card {
+    max-width: 540px;
+}
+.onboarding-welcome h4 {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 0.3rem;
+}
+.onboarding-welcome p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 1.25rem;
+}
+.onboarding-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    margin-bottom: 1.5rem;
+}
+.onboarding-step-item {
+    background: var(--background);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 0.9rem 1.1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+}
+.step-badge {
+    background: var(--primary);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 0.2rem 0.5rem;
+    border-radius: 6px;
+    white-space: nowrap;
+    margin-top: 0.1rem;
+}
+.step-text strong {
+    display: block;
+    font-size: 0.95rem;
+    color: var(--text-main);
+}
+.step-text p {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin-top: 0.2rem;
+    line-height: 1.4;
+}
+.drawer-overlay {
+    align-items: flex-end;
+}
+.drawer-card {
+    background: var(--surface);
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    width: 100%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 1.5rem;
+    animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes slideUp {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+}
+.drawer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+}
+.drawer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+}
+.drawer-item-btn {
+    background: var(--background);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 0.85rem 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-main);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    transition: all var(--transition-fast);
+}
+.drawer-item-btn i {
+    font-size: 1.25rem;
+    color: var(--accent);
+}
+.drawer-item-btn:hover {
+    border-color: var(--accent);
+    background: var(--accent-light);
+}
+
+/* 18. Mobile Bottom Navigation Bar (直式手機專用) */
+.mobile-bottom-nav {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--surface);
+    border-top: 1px solid var(--border-color);
+    padding: 0.4rem 0.5rem calc(0.4rem + env(safe-area-inset-bottom));
+    z-index: 99;
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.06);
+    justify-content: space-around;
+    align-items: center;
+}
+.mobile-nav-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 0.72rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    cursor: pointer;
+    padding: 0.35rem 0.6rem;
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+    flex: 1;
+}
+.mobile-nav-btn i {
+    font-size: 1.15rem;
+}
+.mobile-nav-btn.active {
+    color: var(--primary);
+}
+
+/* ==========================================================================
+   Multi-Resolution Responsive Breakpoints (4K, 2K/1080p, Tablet, Mobile)
+   ========================================================================== */
+
+/* 4K Ultra-HD & Super Widescreen (2560px ~ 3840px+) */
+@media (min-width: 2560px) {
+    main {
+        max-width: 1750px;
+    }
+    html {
+        font-size: 18px;
+    }
+    .alphabet-grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+    .situational-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .culture-rules-grid, .emergency-phrases-grid, .decoder-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .banknotes-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+/* 2K & Standard FullHD Widescreen (1440px ~ 2559px) */
+@media (min-width: 1440px) and (max-width: 2559px) {
+    main {
+        max-width: 1400px;
+    }
+    .situational-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .culture-rules-grid, .decoder-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .banknotes-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+/* Tablet & Intermediate (769px ~ 1024px) */
+@media (max-width: 1024px) {
+    main {
+        max-width: 95%;
+        padding: 0 1rem;
+    }
+    .situational-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Cell Phone & Portrait (<= 768px) */
 @media (max-width: 768px) {
+    body {
+        padding-bottom: 70px; /* Space for Mobile Bottom Nav */
+    }
+
     header {
-        flex-direction: column;
-        align-items: stretch;
-        padding: 0.75rem 1rem;
+        padding: 0.6rem 0.9rem;
+        gap: 0.5rem;
     }
 
     .main-nav {
-        order: 3;
-        margin-top: 0.5rem;
+        display: none; /* Replaced by Mobile Bottom Nav + Drawer */
+    }
+
+    .mobile-bottom-nav {
+        display: flex;
     }
 
     .header-controls {
-        order: 2;
-        justify-content: flex-end;
+        gap: 0.35rem;
+    }
+
+    .onboarding-pill-btn span {
+        display: none;
+    }
+
+    .onboarding-pill-btn {
+        padding: 0.4rem 0.6rem;
+    }
+
+    .speed-toggle-btn {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.72rem;
     }
 
     .hero-banner {
         grid-template-columns: 1fr;
-        padding: 1.5rem;
+        padding: 1.25rem;
+        gap: 1rem;
     }
 
     .hero-image-wrap {
-        height: 180px;
+        height: 160px;
     }
 
     .hero-content h2 {
-        font-size: 1.6rem;
+        font-size: 1.35rem;
+    }
+
+    .hero-stats {
+        gap: 0.5rem;
+    }
+
+    .stat-item {
+        padding: 0.5rem;
+    }
+
+    .stat-num {
+        font-size: 1.3rem;
+    }
+
+    .stat-label {
+        font-size: 0.72rem;
+    }
+
+    .stage-card {
+        flex-direction: column;
+    }
+
+    .stage-thumb {
+        width: 100%;
+        height: 120px;
+    }
+
+    .jp-city-card {
+        padding: 1rem;
+    }
+
+    .jp-city-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .jp-city-img-wrapper {
+        height: 170px;
     }
 
     .result-columns {
@@ -3500,59 +4592,2110 @@ footer {
         max-width: 95%;
     }
 
-    .stage-card {
-        flex-direction: column;
-    }
-
-    .stage-thumb {
-        width: 100%;
-        height: 120px;
-    }
-
     .teaching-hero-card {
         flex-direction: column;
     }
 
     .teaching-hero-img {
         width: 100%;
-        height: 160px;
+        height: 150px;
     }
 
-    .jp-city-card {
-        padding: 1.25rem;
-        border-radius: 16px;
-    }
-
-    .jp-city-hero {
-        grid-template-columns: 1fr;
-        gap: 1.25rem;
-        padding-bottom: 1.25rem;
-    }
-
-    .jp-city-img-wrapper {
-        height: 190px;
-    }
-
-    .jp-city-title {
-        font-size: 1.5rem;
-    }
-
-    .jp-destinations-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .jp-two-col-grid {
+    .jp-destinations-grid, .jp-two-col-grid {
         grid-template-columns: 1fr;
     }
 
     .jp-phrase-row {
         flex-direction: column;
         align-items: flex-start;
-        gap: 0.75rem;
+        gap: 0.6rem;
     }
 
     .jp-listen-tag {
         align-self: flex-end;
     }
+
+    .desktop-shortcuts-bar {
+        font-size: 0.75rem;
+    }
+
+    .desktop-shortcuts-bar .shortcut-pill:not(.mobile-hint) {
+        display: none;
+    }
+
+    .flashcard-3d {
+        min-height: 240px;
+    }
+
+    .deck-controls {
+        flex-wrap: wrap;
+    }
+
+    .deck-btn {
+        flex: 1 1 45%;
+        padding: 0.6rem 0.5rem;
+        font-size: 0.85rem;
+    }
+
+    .dialogue-toolbar {
+        flex-direction: column;
+        gap: 0.6rem;
+    }
+
+    .toolbar-left, .toolbar-right {
+        width: 100%;
+        display: flex;
+    }
+
+    .control-btn {
+        flex: 1;
+        justify-content: center;
+    }
 }
+
+/* Extra Small Phones (<= 480px) */
+@media (max-width: 480px) {
+    .alphabet-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .banknotes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .clock-time-segments-grid {
+        grid-template-columns: 1fr;
+    }
+    .drawer-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ==========================================================================
+   7x7. 7 大生活與商務核心情境特訓專區樣式 (7 Deep Scenarios Mastery Styles)
+   ========================================================================== */
+
+/* 導覽醒目標籤 */
+.highlight-scenario-tab {
+    background: linear-gradient(135deg, rgba(230, 57, 70, 0.12), rgba(231, 111, 81, 0.18)) !important;
+    border: 1px solid rgba(230, 57, 70, 0.35) !important;
+    color: var(--primary) !important;
+    font-weight: 700 !important;
+}
+
+.highlight-scenario-tab.active {
+    background: linear-gradient(135deg, var(--primary), #e76f51) !important;
+    color: #fff !important;
+    box-shadow: 0 4px 14px rgba(230, 57, 70, 0.35) !important;
+}
+
+.highlight-drawer {
+    border-color: var(--primary) !important;
+    background: var(--primary-light) !important;
+    color: var(--primary) !important;
+    font-weight: 700 !important;
+}
+
+.highlight-mobile {
+    color: var(--primary) !important;
+    font-weight: 700 !important;
+}
+
+/* 首頁橫幅卡片 */
+.scenarios-showcase-banner {
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    margin: 1.5rem 0 2rem 0;
+    box-shadow: var(--shadow-md);
+    position: relative;
+    overflow: hidden;
+}
+
+.scenarios-showcase-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--primary), var(--warning), var(--accent));
+}
+
+.showcase-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 0.6rem;
+}
+
+.showcase-badge-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.showcase-badge-title h3 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--text-main);
+    margin: 0;
+}
+
+.showcase-desc {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 1.25rem;
+    line-height: 1.6;
+}
+
+.showcase-chips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.75rem;
+}
+
+.scenario-jump-chip {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.75rem 1rem;
+    background: var(--background);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    color: var(--text-main);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-fast);
+    text-align: left;
+}
+
+.scenario-jump-chip i {
+    color: var(--primary);
+    font-size: 1.1rem;
+}
+
+.scenario-jump-chip:hover {
+    background: var(--primary-light);
+    border-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+/* 特訓視圖標題與統計 */
+.scenarios-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.scenarios-title-wrap {
+    flex: 1;
+    min-width: 300px;
+}
+
+.scenarios-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.35rem 0.85rem;
+    background: linear-gradient(135deg, var(--primary), var(--warning));
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border-radius: var(--radius-full);
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.scenarios-stats-card {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1rem 1.4rem;
+    box-shadow: var(--shadow-sm);
+    flex-wrap: wrap;
+}
+
+.scenarios-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.scenarios-stat .num {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--primary);
+    line-height: 1.1;
+}
+
+.scenarios-stat .lbl {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.scenarios-audio-pref {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+.speed-toggle-scenario-btn,
+.bilingual-toggle-scenario-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 0.85rem;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--border-color);
+    background: var(--background);
+    color: var(--text-main);
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.bilingual-toggle-scenario-btn.active {
+    background: var(--primary-light);
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+/* 7 大主題膠囊切換列 */
+.scenarios-pill-nav {
+    display: flex;
+    gap: 0.6rem;
+    overflow-x: auto;
+    padding: 0.4rem 0 1.2rem 0;
+    margin-bottom: 1.5rem;
+    scrollbar-width: thin;
+}
+
+.scenarios-pill-nav::-webkit-scrollbar {
+    height: 5px;
+}
+.scenarios-pill-nav::-webkit-scrollbar-thumb {
+    background: var(--border-hover);
+    border-radius: 4px;
+}
+
+.scenario-pill-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.25rem;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--border-color);
+    background: var(--surface);
+    color: var(--text-main);
+    font-size: 0.9rem;
+    font-weight: 600;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: var(--transition-fast);
+    box-shadow: var(--shadow-sm);
+}
+
+.scenario-pill-btn i {
+    font-size: 1rem;
+    opacity: 0.85;
+}
+
+.scenario-pill-btn:hover {
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.scenario-pill-btn.active {
+    background: var(--secondary);
+    color: #fff;
+    border-color: var(--secondary);
+    box-shadow: 0 4px 12px rgba(29, 53, 87, 0.25);
+}
+
+[data-theme="dark"] .scenario-pill-btn.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    box-shadow: 0 4px 14px rgba(255, 90, 95, 0.35);
+}
+
+/* 主題工作區卡片 */
+.scenario-workspace-card {
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+}
+
+/* 主題橫幅 */
+.scenario-hero-banner {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(29, 53, 87, 0.05), rgba(230, 57, 70, 0.04));
+    border-bottom: 1px solid var(--border-color);
+}
+
+.scenario-hero-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: var(--radius-md);
+    background: var(--surface);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: var(--primary);
+    box-shadow: var(--shadow-sm);
+    flex-shrink: 0;
+}
+
+.scenario-hero-info h3 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin: 0.3rem 0;
+    color: var(--text-main);
+}
+
+.scenario-hero-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.scenario-category-pill {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--radius-full);
+    background: var(--primary);
+    color: #fff;
+}
+
+.scenario-id-pill {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+.scenario-hero-info p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* 模式導覽列 */
+.scenario-mode-tabs {
+    display: flex;
+    background: var(--background);
+    border-bottom: 1px solid var(--border-color);
+    overflow-x: auto;
+    padding: 0.5rem 1rem;
+    gap: 0.4rem;
+}
+
+.scenario-mode-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.65rem 1.1rem;
+    border-radius: var(--radius-md);
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-weight: 700;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.scenario-mode-tab:hover {
+    color: var(--text-main);
+    background: var(--surface);
+}
+
+.scenario-mode-tab.active {
+    background: var(--surface);
+    color: var(--primary);
+    box-shadow: var(--shadow-sm);
+}
+
+/* 模式面板容器 */
+.scenario-mode-panels {
+    padding: 2rem;
+}
+
+/* 模式 1: 快速速成卡樣式 */
+.cheat-header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.cheat-header-bar h4 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin: 0;
+    color: var(--text-main);
+}
+
+.cheat-header-bar p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin: 0.2rem 0 0 0;
+}
+
+.cheat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.25rem;
+}
+
+.cheat-phrase-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-normal);
+    position: relative;
+}
+
+.cheat-phrase-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.cheat-phrase-card.playing {
+    border-color: var(--primary);
+    background: var(--primary-light);
+    box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.2);
+}
+
+.cheat-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.6rem;
+}
+
+.cheat-phrase-num {
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--text-light);
+}
+
+.cheat-audio-btns {
+    display: flex;
+    gap: 0.35rem;
+}
+
+.cheat-phrase-id {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 0.35rem;
+    line-height: 1.4;
+    cursor: pointer;
+}
+
+.cheat-phrase-id:hover {
+    color: var(--primary);
+}
+
+.cheat-phrase-syllable {
+    font-size: 0.85rem;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.cheat-phrase-zh {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 0.6rem;
+}
+
+.cheat-phrase-breakdown {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    background: var(--background);
+    padding: 0.45rem 0.65rem;
+    border-radius: var(--radius-sm);
+    line-height: 1.4;
+}
+
+/* 模式 2: 深度教學卡片 */
+.deep-lessons-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.deep-lesson-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.lesson-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.75rem;
+}
+
+.lesson-num-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.25rem 0.65rem;
+    border-radius: var(--radius-sm);
+    background: var(--secondary);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+[data-theme="dark"] .lesson-num-badge {
+    background: var(--primary);
+}
+
+.lesson-card-header h4 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--text-main);
+    margin: 0;
+}
+
+.lesson-card-body p {
+    font-size: 1rem;
+    color: var(--text-main);
+    line-height: 1.8;
+}
+
+/* 模式 3: 實戰情境角色會話 */
+.dialogue-selector-bar {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.dialogue-tab-btn {
+    padding: 0.6rem 1.2rem;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--border-color);
+    background: var(--background);
+    color: var(--text-main);
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.dialogue-tab-btn.active {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+
+.dialogue-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.dialogue-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+}
+
+.dialogue-card-header h4 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--text-main);
+    margin: 0;
+}
+
+.dialogue-card-header p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin: 0.2rem 0 0 0;
+}
+
+.dialogue-bubbles-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.dialogue-bubble-row {
+    display: flex;
+    gap: 0.85rem;
+    max-width: 85%;
+    transition: var(--transition-fast);
+}
+
+.dialogue-bubble-row.left {
+    align-self: flex-start;
+}
+
+.dialogue-bubble-row.right {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+}
+
+.speaker-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-full);
+    background: var(--secondary);
+    color: #fff;
+    font-weight: 800;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: var(--shadow-sm);
+}
+
+.dialogue-bubble-row.right .speaker-avatar {
+    background: var(--primary);
+}
+
+.bubble-content-wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.dialogue-bubble-row.right .bubble-content-wrap {
+    align-items: flex-end;
+}
+
+.speaker-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.3rem;
+    font-size: 0.8rem;
+}
+
+.speaker-role-tag {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    background: var(--background);
+    padding: 0.1rem 0.4rem;
+    border-radius: var(--radius-sm);
+}
+
+.bubble-box {
+    background: var(--background);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1rem 1.25rem;
+    position: relative;
+    box-shadow: var(--shadow-sm);
+}
+
+.dialogue-bubble-row.right .bubble-box {
+    background: rgba(230, 57, 70, 0.05);
+    border-color: rgba(230, 57, 70, 0.2);
+}
+
+.dialogue-bubble-row.active-speaking .bubble-box {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.25);
+}
+
+.bubble-id-text {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-main);
+    line-height: 1.5;
+    margin-bottom: 0.35rem;
+    cursor: pointer;
+}
+
+.bubble-id-text:hover {
+    color: var(--primary);
+}
+
+.bubble-zh-text {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 0.6rem;
+}
+
+.bubble-audio-actions {
+    display: flex;
+    gap: 0.4rem;
+}
+
+.bubble-audio-btn {
+    padding: 0.25rem 0.6rem;
+    font-size: 0.75rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-color);
+    background: var(--surface);
+    color: var(--text-main);
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition-fast);
+}
+
+.bubble-audio-btn:hover {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+
+/* 模式 4: 專屬 3D 複習閃卡舞台 */
+.scenario-flashcard-stage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+.deck-progress-bar-wrap {
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.deck-progress-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.mastered-tag {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--radius-full);
+    background: var(--background);
+    color: var(--text-muted);
+}
+
+.mastered-tag.mastered {
+    background: var(--success-light);
+    color: var(--success);
+    font-weight: 800;
+}
+
+.deck-progress-track {
+    width: 100%;
+    height: 8px;
+    background: var(--background);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.deck-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary), var(--warning));
+    transition: width 0.3s ease;
+}
+
+.flashcard-3d-wrap {
+    width: 100%;
+    height: 380px;
+    perspective: 1200px;
+    margin-bottom: 1.5rem;
+}
+
+.flashcard-3d {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.flashcard-3d.flipped {
+    transform: rotateY(180deg);
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: var(--radius-lg);
+    border: 2px solid var(--border-color);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    background: var(--surface);
+}
+
+.card-face.card-back {
+    transform: rotateY(180deg);
+    background: var(--surface-elevated);
+}
+
+.card-category-tag {
+    position: absolute;
+    top: 1.25rem;
+    left: 1.25rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--radius-full);
+    background: var(--background);
+    color: var(--text-muted);
+}
+
+.card-word-id {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+}
+
+.card-syllable {
+    font-size: 1.1rem;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.card-hint {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+}
+
+.card-front-btns {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+}
+
+.card-word-zh {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 1.2rem;
+}
+
+.card-example-box {
+    background: var(--background);
+    padding: 1rem 1.25rem;
+    border-radius: var(--radius-md);
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.card-example-box .ex-id {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 0.3rem;
+}
+
+.card-example-box .ex-zh {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.card-tip-box {
+    font-size: 0.85rem;
+    color: var(--warning);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.deck-controls {
+    display: flex;
+    gap: 0.75rem;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.deck-btn {
+    flex: 1;
+    padding: 0.85rem 1rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    background: var(--surface);
+    color: var(--text-main);
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition-fast);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+.deck-btn:hover {
+    background: var(--background);
+}
+
+.deck-btn.primary {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+
+.deck-btn.success {
+    background: var(--success);
+    color: #fff;
+    border-color: var(--success);
+}
+
+.deck-sub-controls {
+    display: flex;
+    gap: 1rem;
+}
+
+/* 模式 5: 實戰小工具樣式 */
+.interactive-tools-container {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.interactive-tool-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.tool-title-row {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+}
+
+.tool-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
+    background: var(--primary-light);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    flex-shrink: 0;
+}
+
+.tool-title-row h4 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--text-main);
+    margin: 0;
+}
+
+.tool-title-row p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin: 0.2rem 0 0 0;
+}
+
+.tool-controls-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.tool-select-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    margin-bottom: 0.4rem;
+}
+
+.tool-result-box {
+    background: var(--background);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.tool-result-id {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+}
+
+.tool-result-zh {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.tool-result-actions {
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+}
+
+.tool-tips-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.tip-row-item {
+    background: var(--background);
+    padding: 1rem 1.25rem;
+    border-radius: var(--radius-md);
+}
+
+.tip-row-item strong {
+    display: block;
+    font-size: 1rem;
+    color: var(--text-main);
+    margin-bottom: 0.3rem;
+}
+
+.tip-row-item p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* 模式 6: 隨堂測驗 */
+.scenario-quiz-box {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.quiz-question-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.quiz-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+}
+
+.quiz-q-num {
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: var(--text-light);
+}
+
+.quiz-question-text {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.quiz-options-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.quiz-option-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 1rem 1.25rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    background: var(--surface);
+    color: var(--text-main);
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: left;
+    transition: var(--transition-fast);
+}
+
+.quiz-option-btn .opt-letter {
+    width: 28px;
+    height: 28px;
+    border-radius: var(--radius-full);
+    background: var(--background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+}
+
+.quiz-option-btn:hover {
+    border-color: var(--primary);
+    background: var(--background);
+}
+
+.quiz-option-btn.correct {
+    background: var(--success-light);
+    border-color: var(--success);
+    color: var(--success);
+    font-weight: 800;
+}
+
+.quiz-option-btn.correct .opt-letter {
+    background: var(--success);
+    color: #fff;
+}
+
+.quiz-option-btn.wrong {
+    background: rgba(230, 57, 70, 0.1);
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.quiz-option-btn.wrong .opt-letter {
+    background: var(--primary);
+    color: #fff;
+}
+
+.quiz-feedback-box {
+    padding: 1rem 1.25rem;
+    border-radius: var(--radius-md);
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.quiz-feedback-box.correct {
+    background: var(--success-light);
+    color: var(--success);
+    border: 1px solid rgba(42, 157, 143, 0.3);
+}
+
+.quiz-feedback-box.wrong {
+    background: rgba(230, 57, 70, 0.1);
+    color: var(--primary);
+    border: 1px solid rgba(230, 57, 70, 0.3);
+}
+
+.quiz-actions-row {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* 響應式調整 (Responsive Overrides) */
+@media (max-width: 768px) {
+    .scenarios-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .scenarios-stats-card {
+        width: 100%;
+        justify-content: space-around;
+    }
+    .scenario-hero-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+    .scenario-hero-tags {
+        justify-content: center;
+    }
+    .scenario-mode-panels {
+        padding: 1.25rem;
+    }
+    .cheat-grid {
+        grid-template-columns: 1fr;
+    }
+    .dialogue-bubble-row {
+        max-width: 100%;
+    }
+    .flashcard-3d-wrap {
+        height: 340px;
+    }
+    .card-word-id {
+        font-size: 1.8rem;
+    }
+}
+
+/* ==========================================================================
+   15. 萬字高頻核心字庫引擎 (10,000 Vocab Engine Styles)
+   ========================================================================== */
+.highlight-vocab-tab {
+    background: linear-gradient(135deg, rgba(230, 57, 70, 0.15), rgba(244, 162, 97, 0.25)) !important;
+    border-color: var(--primary) !important;
+    color: var(--primary) !important;
+    font-weight: 800 !important;
+}
+
+.vocab-tier-overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.75rem;
+}
+
+.tier-card {
+    background: var(--surface);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.tier-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--primary);
+    box-shadow: var(--shadow-md);
+}
+
+.tier-card.active {
+    border-color: var(--primary);
+    background: linear-gradient(135deg, var(--surface) 60%, rgba(230, 57, 70, 0.08));
+    box-shadow: 0 8px 24px rgba(230, 57, 70, 0.15);
+}
+
+.tier-badge {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--radius-sm);
+    background: rgba(230, 57, 70, 0.1);
+    color: var(--primary);
+    font-size: 0.75rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.tier-card.active .tier-badge {
+    background: var(--primary);
+    color: #fff;
+}
+
+.tier-title {
+    font-size: 1.35rem;
+    font-weight: 900;
+    color: var(--text-main);
+    margin-bottom: 0.2rem;
+}
+
+.tier-level {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--secondary);
+    margin-bottom: 0.4rem;
+}
+
+.tier-desc {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+    margin-bottom: 0.6rem;
+}
+
+.tier-count {
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: var(--text-main);
+}
+
+.vocab-toolbar-card {
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.vocab-search-row {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.vocab-search-input-wrap {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.vocab-search-input-wrap i.fa-magnifying-glass {
+    position: absolute;
+    left: 1rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.vocab-search-input-wrap input {
+    width: 100%;
+    padding: 0.75rem 2.8rem 0.75rem 2.8rem;
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    background: var(--background);
+    color: var(--text-main);
+    font-size: 0.95rem;
+    font-family: inherit;
+    transition: all 0.2s ease;
+}
+
+.vocab-search-input-wrap input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.12);
+}
+
+#vocab-10k-clear-search-btn {
+    position: absolute;
+    right: 0.75rem;
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 0.4rem;
+    font-size: 0.9rem;
+}
+
+.vocab-view-toggle {
+    display: flex;
+    gap: 0.35rem;
+}
+
+.view-mode-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-color);
+    background: var(--background);
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.view-mode-btn.active {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+
+.vocab-filter-chips-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    padding: 0.75rem 0;
+    border-top: 1px dashed var(--border-color);
+    border-bottom: 1px dashed var(--border-color);
+    margin-bottom: 0.85rem;
+}
+
+.filter-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-muted);
+}
+
+.pos-chips-wrap {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+}
+
+.pos-chip {
+    padding: 0.35rem 0.75rem;
+    border-radius: var(--radius-pill);
+    border: 1px solid var(--border-color);
+    background: var(--background);
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.pos-chip:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.pos-chip.active {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+
+.vocab-stats-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.vocab-stats-row strong {
+    color: var(--primary);
+}
+
+.vocab-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.vocab-card {
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.25s ease;
+    box-shadow: var(--shadow-sm);
+}
+
+.vocab-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    border-color: rgba(230, 57, 70, 0.4);
+}
+
+.vocab-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.vocab-card-word {
+    font-size: 1.45rem;
+    font-weight: 900;
+    color: var(--text-main);
+    line-height: 1.2;
+}
+
+.vocab-card-syllables {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+    margin-top: 0.2rem;
+}
+
+.vocab-card-actions {
+    display: flex;
+    gap: 0.35rem;
+}
+
+.vocab-audio-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    background: var(--background);
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: all 0.2s ease;
+}
+
+.vocab-audio-btn:hover {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+
+.vocab-card-badges {
+    display: flex;
+    gap: 0.35rem;
+    margin-bottom: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.tag-pos {
+    padding: 0.15rem 0.5rem;
+    border-radius: var(--radius-sm);
+    background: rgba(42, 157, 143, 0.12);
+    color: var(--secondary);
+    font-size: 0.72rem;
+    font-weight: 800;
+}
+
+.tag-tier {
+    padding: 0.15rem 0.5rem;
+    border-radius: var(--radius-sm);
+    background: rgba(230, 57, 70, 0.1);
+    color: var(--primary);
+    font-size: 0.72rem;
+    font-weight: 800;
+}
+
+.tag-level {
+    padding: 0.15rem 0.5rem;
+    border-radius: var(--radius-sm);
+    background: rgba(244, 162, 97, 0.15);
+    color: #d97706;
+    font-size: 0.72rem;
+    font-weight: 800;
+}
+
+.vocab-card-zh {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 0.75rem;
+}
+
+.vocab-card-example {
+    background: var(--background);
+    border-radius: var(--radius-sm);
+    padding: 0.65rem 0.85rem;
+    font-size: 0.82rem;
+    margin-bottom: 0.85rem;
+    border-left: 3px solid var(--primary);
+}
+
+.vocab-card-example .ex-id-text {
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 0.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.vocab-card-example .ex-zh-text {
+    color: var(--text-muted);
+}
+
+.vocab-card-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.master-toggle-btn {
+    padding: 0.35rem 0.75rem;
+    border-radius: var(--radius-pill);
+    border: 1px solid var(--border-color);
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.master-toggle-btn.mastered {
+    background: var(--success);
+    color: #fff;
+    border-color: var(--success);
+}
+
+/* 萬字庫表格模式 (Table View) */
+.vocab-table-wrap {
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    overflow-x: auto;
+    margin-bottom: 2rem;
+}
+
+.vocab-data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+    text-align: left;
+}
+
+.vocab-data-table th {
+    background: var(--background);
+    padding: 0.85rem 1rem;
+    font-weight: 800;
+    color: var(--text-muted);
+    border-bottom: 2px solid var(--border-color);
+    white-space: nowrap;
+}
+
+.vocab-data-table td {
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: middle;
+}
+
+.vocab-data-table tr:hover td {
+    background: rgba(230, 57, 70, 0.03);
+}
+
+/* 分頁控制器樣式 */
+.vocab-pagination-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.page-btn {
+    min-width: 38px;
+    height: 38px;
+    padding: 0 0.6rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-color);
+    background: var(--surface);
+    color: var(--text-main);
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.page-btn:hover:not(:disabled) {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.page-btn.active {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+
+.page-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* ==========================================================================
+   16. 印尼成語俗諺與經典片語 (Peribahasa Styles)
+   ========================================================================== */
+.peribahasa-controls-card {
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+    margin-bottom: 1.75rem;
+}
+
+.peribahasa-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.peribahasa-card {
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.25s ease;
+    border-top: 4px solid var(--warning);
+    box-shadow: var(--shadow-sm);
+}
+
+.peribahasa-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.peribahasa-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+}
+
+.peribahasa-cat-tag {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #d97706;
+    background: rgba(244, 162, 97, 0.15);
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--radius-sm);
+}
+
+.peribahasa-id-phrase {
+    font-size: 1.25rem;
+    font-weight: 900;
+    font-style: italic;
+    color: var(--text-main);
+    line-height: 1.35;
+    margin-bottom: 0.75rem;
+    padding-left: 0.75rem;
+    border-left: 3px solid var(--warning);
+}
+
+.peribahasa-zh-meaning {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 0.6rem;
+}
+
+.peribahasa-literal-box {
+    background: var(--background);
+    padding: 0.6rem 0.85rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+}
+
+.peribahasa-culture-box {
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: var(--text-light);
+    margin-bottom: 0.85rem;
+}
+
+.peribahasa-dialogue-box {
+    background: rgba(42, 157, 143, 0.08);
+    border-radius: var(--radius-sm);
+    padding: 0.65rem 0.85rem;
+    font-size: 0.82rem;
+    margin-bottom: 0.85rem;
+}
+
+.peribahasa-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+/* ==========================================================================
+   17. 生活常用語句庫 (Everyday Sentences Styles)
+   ========================================================================== */
+.sentence-categories-bar {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
+    -webkit-overflow-scrolling: touch;
+}
+
+.sentence-cat-btn {
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-pill);
+    border: 1px solid var(--border-color);
+    background: var(--surface);
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: all 0.2s ease;
+}
+
+.sentence-cat-btn:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.sentence-cat-btn.active {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+
+.sentences-list-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+}
+
+.sentence-item-card {
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.25s ease;
+    border-left: 4px solid var(--secondary);
+    box-shadow: var(--shadow-sm);
+}
+
+.sentence-item-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.sentence-card-cat {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--secondary);
+    background: rgba(42, 157, 143, 0.12);
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--radius-sm);
+    display: inline-block;
+    margin-bottom: 0.6rem;
+}
+
+.sentence-id-text {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--text-main);
+    line-height: 1.4;
+    margin-bottom: 0.4rem;
+}
+
+.sentence-zh-text {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+}
+
+.sentence-breakdown-box {
+    background: var(--background);
+    padding: 0.6rem 0.85rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-bottom: 0.75rem;
+    line-height: 1.45;
+}
+
+.sentence-tip-pill {
+    font-size: 0.78rem;
+    color: #d97706;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.sentence-card-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+/* ==========================================================================
+   18. 10K Flashcard Modal Styles
+   ========================================================================== */
+.flashcard-10k-modal-card {
+    max-width: 600px;
+    width: 90%;
+}
+
+.flashcard-tier-selector-pills {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.tier-pill-btn {
+    padding: 0.4rem 0.85rem;
+    border-radius: var(--radius-pill);
+    border: 1px solid var(--border-color);
+    background: var(--background);
+    color: var(--text-muted);
+    font-size: 0.82rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tier-pill-btn.active {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+
+.flashcard-wrapper {
+    perspective: 1000px;
+    margin-bottom: 1.5rem;
+}
+
+#fc10k-card {
+    width: 100%;
+    height: 320px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+}
+
+#fc10k-card.flipped {
+    transform: rotateY(180deg);
+}
+
+#fc10k-card .card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid var(--border-color);
+    background: var(--surface);
+    box-shadow: var(--shadow-md);
+}
+
+#fc10k-card .card-back {
+    transform: rotateY(180deg);
+    background: linear-gradient(135deg, var(--surface) 60%, rgba(42, 157, 143, 0.08));
+}
+
+.card-tier-tag {
+    font-size: 0.78rem;
+    font-weight: 800;
+    color: var(--primary);
+    background: rgba(230, 57, 70, 0.1);
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-pill);
+    margin-bottom: 1rem;
+}
+
+.card-word-large {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--text-main);
+    line-height: 1.1;
+    margin-bottom: 0.35rem;
+}
+
+.card-syllables-sub {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    margin-bottom: 0.75rem;
+}
+
+.card-pos-badge {
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--radius-sm);
+    background: rgba(42, 157, 143, 0.12);
+    color: var(--secondary);
+    font-size: 0.75rem;
+    font-weight: 800;
+    margin-bottom: 1.25rem;
+}
+
+.card-flip-prompt {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+.card-front-actions, .card-back-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* 響應式優化 (Mobile Media Queries for New Modules) */
+@media (max-width: 768px) {
+    .vocab-tier-overview-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .vocab-search-row {
+        flex-direction: column;
+    }
+    .vocab-cards-grid {
+        grid-template-columns: 1fr;
+    }
+    .peribahasa-grid {
+        grid-template-columns: 1fr;
+    }
+    .sentences-list-grid {
+        grid-template-columns: 1fr;
+    }
+    #fc10k-card {
+        height: 290px;
+    }
+    .card-word-large {
+        font-size: 1.8rem;
+    }
+}
+
+
 
