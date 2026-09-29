@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             cleaned = cleaned.replace(/\[[^\]]*\]/g, ' ');
             cleaned = cleaned.replace(/【[^】]*】/g, ' ');
             cleaned = cleaned.replace(/[\u4e00-\u9fa5]/g, ' ');
-            cleaned = cleaned.replace(/[，。！？；：（）「」『』、《》“”‘’…—\/]/g, ' ');
+            cleaned = cleaned.replace(/[，。！？；：（）「」『』、《》“”‘’…—/]/g, ' ');
             cleaned = cleaned.replace(/\s+/g, ' ').trim();
             return cleaned;
         }
@@ -1320,7 +1320,30 @@ document.addEventListener('DOMContentLoaded', async () => {
                 `;
             }
 
-            if (mod.examples) {
+            if (mod.items && mod.items.length > 0) {
+                bodyHtml += `
+                    <h4 style="font-size: 1rem; font-weight: 700; margin: 1rem 0 0.6rem; color: var(--text-main);"><i class="fa-solid fa-circle-question" style="color: var(--primary); margin-right: 0.35rem;"></i>疑問詞矩陣解析 (點擊單詞或例句發音)：</h4>
+                    <div class="grammar-items-matrix">
+                        ${mod.items.map(it => `
+                            <div class="grammar-matrix-card" data-ex-id="${(it.example || it.id_word).replace(/"/g, '&quot;')}" data-ex-zh="${(it.example_zh || it.zh_word).replace(/"/g, '&quot;')}">
+                                <div class="matrix-card-top">
+                                    <div class="matrix-word-group">
+                                        <span class="matrix-id-word">${it.id_word}</span>
+                                        <span class="matrix-zh-word">${it.zh_word}</span>
+                                    </div>
+                                    <button class="icon-action-btn matrix-speak-btn" style="width: 32px; height: 32px;" title="發音"><i class="fa-solid fa-volume-high"></i></button>
+                                </div>
+                                <div class="matrix-example-text">
+                                    <div class="m-ex-id">${it.example}</div>
+                                    <div class="m-ex-zh">${it.example_zh}</div>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+            }
+
+            if (mod.examples && mod.examples.length > 0) {
                 bodyHtml += `
                     <h4 style="font-size: 1rem; font-weight: 700; margin: 1rem 0 0.5rem;">範例示範 (點擊中+印雙語朗讀)：</h4>
                     <div class="examples-grid">
@@ -1351,6 +1374,14 @@ document.addEventListener('DOMContentLoaded', async () => {
                 exCard.addEventListener('click', () => {
                     const idSent = exCard.getAttribute('data-ex-id');
                     const zhSent = exCard.getAttribute('data-ex-zh');
+                    audioEngine.speakBilingual(idSent, zhSent);
+                });
+            });
+
+            card.querySelectorAll('.grammar-matrix-card').forEach(mCard => {
+                mCard.addEventListener('click', () => {
+                    const idSent = mCard.getAttribute('data-ex-id');
+                    const zhSent = mCard.getAttribute('data-ex-zh');
                     audioEngine.speakBilingual(idSent, zhSent);
                 });
             });
@@ -3179,51 +3210,171 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     // ==========================================================================
-    // 16. Header Controls (Theme, Font, Speed)
+    // 16. Header Controls (Themes, Fluid Font Sizing, Speech Rate, Shortcuts)
     // ==========================================================================
     function initHeaderControls() {
         const themeBtn = document.getElementById('theme-toggle');
+        const themePopover = document.getElementById('theme-picker-popover');
+        const themeOptionBtns = document.querySelectorAll('.theme-option-btn');
         const fontIncBtn = document.getElementById('font-increase');
         const fontDecBtn = document.getElementById('font-decrease');
+        const fontIndicator = document.getElementById('font-size-indicator');
         const speedBtn = document.getElementById('speed-toggle-btn');
         const htmlEl = document.documentElement;
 
-        themeBtn?.addEventListener('click', () => {
-            const currentTheme = htmlEl.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            htmlEl.setAttribute('data-theme', newTheme);
-            themeBtn.innerHTML = newTheme === 'dark' ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+        // 1. Theme Configuration (4 Reading Comfort Modes)
+        const themes = [
+            { id: 'light', name: '柔和晨光', icon: 'fa-sun' },
+            { id: 'paper', name: '暖陽護眼紙質', icon: 'fa-book-open-reader' },
+            { id: 'forest', name: '翠綠林蔭', icon: 'fa-leaf' },
+            { id: 'dark', name: '深邃星夜', icon: 'fa-moon' }
+        ];
+
+        function applyTheme(themeId) {
+            const found = themes.find(t => t.id === themeId) || themes[0];
+            htmlEl.setAttribute('data-theme', found.id);
+            localStorage.setItem('indo_theme', found.id);
+            if (themeBtn) {
+                themeBtn.innerHTML = `<i class="fa-solid ${found.icon}"></i>`;
+                themeBtn.title = `當前主題：${found.name} (點擊切換 / 右鍵選擇)`;
+            }
+            themeOptionBtns.forEach(btn => {
+                btn.classList.toggle('active', btn.getAttribute('data-theme') === found.id);
+            });
+        }
+
+        // Restore saved theme
+        const savedTheme = localStorage.getItem('indo_theme') || 'light';
+        applyTheme(savedTheme);
+
+        // Click theme button: cycle to next theme
+        themeBtn?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const current = htmlEl.getAttribute('data-theme') || 'light';
+            const curIdx = themes.findIndex(t => t.id === current);
+            const nextTheme = themes[(curIdx + 1) % themes.length];
+            applyTheme(nextTheme.id);
             if (navigator.vibrate) navigator.vibrate(10);
         });
 
-        const fontSizes = ['small', 'normal', 'large'];
-        let fontIdx = 1;
+        // Right-click or hold on theme button: toggle popover
+        themeBtn?.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+            themePopover?.classList.toggle('active');
+        });
+
+        themeOptionBtns.forEach(optBtn => {
+            optBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const th = optBtn.getAttribute('data-theme');
+                if (th) applyTheme(th);
+                themePopover?.classList.remove('active');
+                if (navigator.vibrate) navigator.vibrate(10);
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.theme-switch-wrap')) {
+                themePopover?.classList.remove('active');
+            }
+        });
+
+        // 2. Fluid 5-Step Font Size Scaling
+        const fontSizes = ['xs', 'small', 'normal', 'large', 'xl'];
+        const fontPercentLabels = ['85%', '92%', '100%', '115%', '125%'];
+        let fontIdx = 2; // default: 'normal' (100%)
+
+        function updateFontDisplay() {
+            const size = fontSizes[fontIdx];
+            htmlEl.setAttribute('data-font-size', size);
+            localStorage.setItem('indo_font_size', size);
+            if (fontIndicator) {
+                fontIndicator.textContent = fontPercentLabels[fontIdx];
+                fontIndicator.title = `字級：${fontPercentLabels[fontIdx]} (點擊重設為 100%)`;
+            }
+        }
+
+        const savedFontSize = localStorage.getItem('indo_font_size');
+        if (savedFontSize && fontSizes.includes(savedFontSize)) {
+            fontIdx = fontSizes.indexOf(savedFontSize);
+        }
+        updateFontDisplay();
+
         fontIncBtn?.addEventListener('click', () => {
             if (fontIdx < fontSizes.length - 1) {
                 fontIdx++;
-                htmlEl.setAttribute('data-font-size', fontSizes[fontIdx]);
-                if (navigator.vibrate) navigator.vibrate(8);
-            }
-        });
-        fontDecBtn?.addEventListener('click', () => {
-            if (fontIdx > 0) {
-                fontIdx--;
-                htmlEl.setAttribute('data-font-size', fontSizes[fontIdx]);
+                updateFontDisplay();
                 if (navigator.vibrate) navigator.vibrate(8);
             }
         });
 
+        fontDecBtn?.addEventListener('click', () => {
+            if (fontIdx > 0) {
+                fontIdx--;
+                updateFontDisplay();
+                if (navigator.vibrate) navigator.vibrate(8);
+            }
+        });
+
+        fontIndicator?.addEventListener('click', () => {
+            fontIdx = 2; // reset to 100% normal
+            updateFontDisplay();
+            if (navigator.vibrate) navigator.vibrate(12);
+        });
+
+        // 3. Speech Rate Speed Control
         const speeds = [0.75, 1.0, 1.2];
         const speedLabels = ['0.75x 慢速', '1.0x 標準', '1.2x 極速'];
         let speedIdx = 1;
+
+        const savedSpeed = localStorage.getItem('indo_speech_rate');
+        if (savedSpeed) {
+            const parsed = parseFloat(savedSpeed);
+            const idx = speeds.indexOf(parsed);
+            if (idx !== -1) speedIdx = idx;
+        }
+        audioEngine.speechRate = speeds[speedIdx];
+        if (speedBtn) {
+            speedBtn.querySelector('.speed-label').textContent = speedLabels[speedIdx];
+        }
+
         speedBtn?.addEventListener('click', () => {
             speedIdx = (speedIdx + 1) % speeds.length;
             audioEngine.speechRate = speeds[speedIdx];
+            localStorage.setItem('indo_speech_rate', String(audioEngine.speechRate));
             speedBtn.querySelector('.speed-label').textContent = speedLabels[speedIdx];
             if (navigator.vibrate) navigator.vibrate(10);
         });
 
-        // 頂部真人語音測試按鈕
+        // 4. Keyboard Shortcuts for Desktop UX
+        document.addEventListener('keydown', (e) => {
+            const tag = (e.target.tagName || '').toLowerCase();
+            if (tag === 'input' || tag === 'textarea' || tag === 'select' || e.target.isContentEditable) {
+                return;
+            }
+
+            if (e.key === '[' || (e.ctrlKey && e.key === '-')) {
+                if (fontIdx > 0) {
+                    fontIdx--;
+                    updateFontDisplay();
+                }
+            } else if (e.key === ']' || (e.ctrlKey && e.key === '=')) {
+                if (fontIdx < fontSizes.length - 1) {
+                    fontIdx++;
+                    updateFontDisplay();
+                }
+            } else if (e.key === '0' && e.ctrlKey) {
+                fontIdx = 2;
+                updateFontDisplay();
+            } else if (e.key === 't' || e.key === 'T') {
+                const current = htmlEl.getAttribute('data-theme') || 'light';
+                const curIdx = themes.findIndex(t => t.id === current);
+                const nextTheme = themes[(curIdx + 1) % themes.length];
+                applyTheme(nextTheme.id);
+            }
+        });
+
+        // 5. Native Indonesian Audio Test Button
         const audioTestBtn = document.getElementById('audio-test-btn');
         audioTestBtn?.addEventListener('click', () => {
             audioEngine.speak('Halo, selamat belajar bahasa Indonesia! Semua kosakata, peribahasa, dan percakapan siap didengarkan.', { lang: 'id' });
@@ -4760,12 +4911,16 @@ document.addEventListener('DOMContentLoaded', async () => {
         function renderPeribahasa() {
             const filtered = peribahasaList.filter(item => {
                 if (activeCat !== 'all' && item.category !== activeCat) return false;
+                const phrase = item.phrase || item.id_phrase || '';
+                const meaningZh = item.meaning_zh || item.zh_meaning || '';
+                const literalMeaning = item.literal_meaning || item.literal_zh || '';
+                const culturalNote = item.cultural_note || item.origin_culture || '';
                 if (searchQuery) {
                     const q = searchQuery.toLowerCase();
-                    const matchPhrase = item.phrase && item.phrase.toLowerCase().includes(q);
-                    const matchLiteral = item.literal_meaning && item.literal_meaning.toLowerCase().includes(q);
-                    const matchZh = item.meaning_zh && item.meaning_zh.toLowerCase().includes(q);
-                    const matchNote = item.cultural_note && item.cultural_note.toLowerCase().includes(q);
+                    const matchPhrase = phrase.toLowerCase().includes(q);
+                    const matchLiteral = literalMeaning.toLowerCase().includes(q);
+                    const matchZh = meaningZh.toLowerCase().includes(q);
+                    const matchNote = culturalNote.toLowerCase().includes(q);
                     if (!matchPhrase && !matchLiteral && !matchZh && !matchNote) return false;
                 }
                 return true;
@@ -4783,6 +4938,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             container.innerHTML = filtered.map((item, idx) => {
                 const catLabel = catNameMap[item.category] || '文化片語';
+                const phrase = item.phrase || item.id_phrase || '';
+                const meaningZh = item.meaning_zh || item.zh_meaning || '';
+                const literalMeaning = item.literal_meaning || item.literal_zh || '';
+                const culturalNote = item.cultural_note || item.origin_culture || '';
+                const exampleText = item.example || item.dialogue_example || '';
+                const exampleZh = item.example_zh || item.dialogue_zh || (exampleText ? '【例句含義】' + meaningZh : '');
+
                 return `
                     <div class="peribahasa-card" data-idx="${idx}">
                         <div>
@@ -4793,20 +4955,20 @@ document.addEventListener('DOMContentLoaded', async () => {
                                     <button class="icon-action-btn play-peri-bi-btn" title="中印雙語朗讀"><i class="fa-solid fa-language"></i></button>
                                 </div>
                             </div>
-                            <div class="peribahasa-id-phrase">"${escapeHtml(item.phrase)}"</div>
-                            <div class="peribahasa-zh-meaning">【涵義】${escapeHtml(item.meaning_zh)}</div>
+                            <div class="peribahasa-id-phrase">"${escapeHtml(phrase)}"</div>
+                            <div class="peribahasa-zh-meaning">【涵義】${escapeHtml(meaningZh)}</div>
                             <div class="peribahasa-literal-box">
-                                <strong><i class="fa-solid fa-seedling"></i> 字面直譯：</strong>${escapeHtml(item.literal_meaning)}
+                                <strong><i class="fa-solid fa-seedling"></i> 字面直譯：</strong>${escapeHtml(literalMeaning)}
                             </div>
                             <div class="peribahasa-culture-box">
-                                <strong><i class="fa-solid fa-feather-pointed"></i> 文化典故與用法：</strong>${escapeHtml(item.cultural_note)}
+                                <strong><i class="fa-solid fa-feather-pointed"></i> 文化典故與用法：</strong>${escapeHtml(culturalNote)}
                             </div>
-                            ${item.example ? `
-                            <div class="peribahasa-dialogue-box" data-speak-example="${escapeHtml(item.example)}" title="點擊聆聽對話例句">
+                            ${exampleText ? `
+                            <div class="peribahasa-dialogue-box" data-speak-example="${escapeHtml(exampleText)}" title="點擊聆聽對話例句">
                                 <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem;">
                                     <div>
-                                        <div style="font-weight: 700; color: var(--text-main); margin-bottom: 0.2rem;"><i class="fa-solid fa-comments" style="color: var(--secondary); margin-right: 0.35rem;"></i>${escapeHtml(item.example)}</div>
-                                        <div style="color: var(--text-muted); font-size: 0.8rem;">${escapeHtml(item.example_zh || '')}</div>
+                                        <div style="font-weight: 700; color: var(--text-main); margin-bottom: 0.2rem;"><i class="fa-solid fa-comments" style="color: var(--secondary); margin-right: 0.35rem;"></i>${escapeHtml(exampleText)}</div>
+                                        <div style="color: var(--text-muted); font-size: 0.8rem;">${escapeHtml(exampleZh)}</div>
                                     </div>
                                     <button class="vocab-audio-btn play-peri-ex-btn" title="朗讀示範會話" style="width: 28px; height: 28px; font-size: 0.75rem; flex-shrink: 0;"><i class="fa-solid fa-volume-high"></i></button>
                                 </div>
@@ -4819,26 +4981,37 @@ document.addEventListener('DOMContentLoaded', async () => {
             // Bind audio
             container.querySelectorAll('.peribahasa-card').forEach((card, i) => {
                 const item = filtered[i];
-                card.querySelector('.play-peri-btn')?.addEventListener('click', () => {
-                    audioEngine.speak(item.phrase, { lang: 'id' });
+                const phrase = item.phrase || item.id_phrase || '';
+                const meaningZh = item.meaning_zh || item.zh_meaning || '';
+                const exampleText = item.example || item.dialogue_example || '';
+                const exampleZh = item.example_zh || item.dialogue_zh || (exampleText ? '【例句含義】' + meaningZh : '');
+
+                card.querySelector('.play-peri-btn')?.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    audioEngine.speak(phrase, { lang: 'id' });
                 });
-                card.querySelector('.play-peri-bi-btn')?.addEventListener('click', () => {
-                    audioEngine.speakBilingual(item.phrase, item.meaning_zh);
+                card.querySelector('.play-peri-bi-btn')?.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    audioEngine.speakBilingual(phrase, meaningZh);
                 });
                 const exBox = card.querySelector('.peribahasa-dialogue-box');
                 const exBtn = card.querySelector('.play-peri-ex-btn');
-                if (exBtn && item.example) {
+                if (exBtn && exampleText) {
                     exBtn.addEventListener('click', (e) => {
                         e.stopPropagation();
-                        audioEngine.speakBilingual(item.example, item.example_zh || '');
+                        audioEngine.speakBilingual(exampleText, exampleZh);
                     });
                 }
-                if (exBox && item.example) {
+                if (exBox && exampleText) {
                     exBox.addEventListener('click', (e) => {
                         if (e.target.closest('button')) return;
-                        audioEngine.speakBilingual(item.example, item.example_zh || '');
+                        audioEngine.speakBilingual(exampleText, exampleZh);
                     });
                 }
+                card.addEventListener('click', (e) => {
+                    if (e.target.closest('button') || e.target.closest('.peribahasa-dialogue-box')) return;
+                    audioEngine.speakBilingual(phrase, meaningZh);
+                });
             });
         }
 
@@ -4916,12 +5089,15 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             container.innerHTML = filtered.map((item, idx) => {
                 const catLabel = catNameMap[item.category] || '日常生活';
+                const idSent = item.id_sent || item.id_text || '';
+                const zhSent = item.zh_sent || item.zh_text || '';
+
                 return `
-                    <div class="sentence-item-card" data-idx="${idx}" data-speak-id="${escapeHtml(item.id_sent)}" title="點擊卡片直接朗讀">
+                    <div class="sentence-item-card" data-idx="${idx}" data-speak-id="${escapeHtml(idSent)}" title="點擊卡片直接聆聽中+印雙語朗讀">
                         <div>
                             <span class="sentence-card-cat">${catLabel}</span>
-                            <div class="sentence-id-text">${escapeHtml(item.id_sent)}</div>
-                            <div class="sentence-zh-text">${escapeHtml(item.zh_sent)}</div>
+                            <div class="sentence-id-text">${escapeHtml(idSent)}</div>
+                            <div class="sentence-zh-text">${escapeHtml(zhSent)}</div>
                             ${item.breakdown ? `
                             <div class="sentence-breakdown-box">
                                 <strong><i class="fa-solid fa-cubes"></i> 文法解析：</strong>${escapeHtml(item.breakdown)}
@@ -4932,8 +5108,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                             </div>` : ''}
                         </div>
                         <div class="sentence-card-actions">
-                            <button class="action-btn small play-sent-btn"><i class="fa-solid fa-volume-high"></i> 印</button>
-                            <button class="action-btn small secondary play-sent-bi-btn"><i class="fa-solid fa-language"></i> 雙語</button>
+                            <button class="action-btn small play-sent-btn" title="朗讀印尼文"><i class="fa-solid fa-volume-high"></i> 印</button>
+                            <button class="action-btn small secondary play-sent-bi-btn" title="中印雙語朗讀"><i class="fa-solid fa-language"></i> 雙語</button>
                         </div>
                     </div>
                 `;
@@ -4942,11 +5118,20 @@ document.addEventListener('DOMContentLoaded', async () => {
             // Bind audio
             container.querySelectorAll('.sentence-item-card').forEach((card, i) => {
                 const item = filtered[i];
-                card.querySelector('.play-sent-btn')?.addEventListener('click', () => {
-                    audioEngine.speak(item.id_sent, { lang: 'id' });
+                const idSent = item.id_sent || item.id_text || '';
+                const zhSent = item.zh_sent || item.zh_text || '';
+
+                card.querySelector('.play-sent-btn')?.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    audioEngine.speak(idSent, { lang: 'id' });
                 });
-                card.querySelector('.play-sent-bi-btn')?.addEventListener('click', () => {
-                    audioEngine.speakBilingual(item.id_sent, item.zh_sent);
+                card.querySelector('.play-sent-bi-btn')?.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    audioEngine.speakBilingual(idSent, zhSent);
+                });
+                card.addEventListener('click', (e) => {
+                    if (e.target.closest('button')) return;
+                    audioEngine.speakBilingual(idSent, zhSent);
                 });
             });
         }

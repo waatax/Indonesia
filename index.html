@@ -52,11 +52,32 @@
                 <button class="speed-toggle-btn" id="speed-toggle-btn" title="切換語速">
                     <span class="speed-label">1.0x 標準</span>
                 </button>
-                <div class="font-controls">
-                    <button class="icon-action-btn font-btn" id="font-decrease" title="縮小字體"><i class="fa-solid fa-minus"></i></button>
-                    <button class="icon-action-btn font-btn" id="font-increase" title="放大字體"><i class="fa-solid fa-plus"></i></button>
+                <div class="font-controls" title="全站自訂閱讀字體大小 (快捷鍵 [ 與 ])">
+                    <button class="icon-action-btn font-btn" id="font-decrease" title="縮小字級"><i class="fa-solid fa-minus"></i></button>
+                    <span class="font-size-indicator" id="font-size-indicator" title="點擊重設為 100% 標準字級">100%</span>
+                    <button class="icon-action-btn font-btn" id="font-increase" title="放大字級"><i class="fa-solid fa-plus"></i></button>
                 </div>
-                <button class="icon-action-btn" id="theme-toggle" title="切換深淺色主題"><i class="fa-solid fa-moon"></i></button>
+                <div class="theme-switch-wrap">
+                    <button class="icon-action-btn" id="theme-toggle" title="切換閱讀主題 (點擊切換，或長按選擇)"><i class="fa-solid fa-sun"></i></button>
+                    <div class="theme-picker-popover" id="theme-picker-popover">
+                        <button class="theme-option-btn" data-theme="light">
+                            <span class="theme-color-swatch" style="background: #F8F9FD; border-color: #E63946;"></span>
+                            <span>柔和晨光 (Day)</span>
+                        </button>
+                        <button class="theme-option-btn" data-theme="paper">
+                            <span class="theme-color-swatch" style="background: #F4EFE6; border-color: #C0392B;"></span>
+                            <span>暖陽護眼 (Paper)</span>
+                        </button>
+                        <button class="theme-option-btn" data-theme="forest">
+                            <span class="theme-color-swatch" style="background: #EDF3EE; border-color: #15803D;"></span>
+                            <span>翠綠林蔭 (Sage)</span>
+                        </button>
+                        <button class="theme-option-btn" data-theme="dark">
+                            <span class="theme-color-swatch" style="background: #0B0F19; border-color: #38BDF8;"></span>
+                            <span>深邃星夜 (Night)</span>
+                        </button>
+                    </div>
+                </div>
                 <div class="streak-badge" title="連續打卡天數與學習積分">
                     <span class="flame-icon">🔥</span>
                     <span id="streak-count">1</span> 天
@@ -1700,30 +1721,50 @@
             </div>
         </div>
 
-        <!-- 手機專用「更多模組」底部抽屜彈窗 (More Modules Drawer) -->
+        <!-- 手機專用「更多模組」底部抽屜彈窗 (More Modules Categorized Drawer) -->
         <div class="modal-overlay drawer-overlay" id="more-modules-modal">
             <div class="drawer-card">
+                <div class="drawer-drag-handle"></div>
                 <div class="drawer-header">
-                    <h3><i class="fa-solid fa-table-cells-large"></i> 探索所有學習模組</h3>
+                    <h3><i class="fa-solid fa-table-cells-large"></i> 探索全站 16 大學習模組</h3>
                     <button class="close-modal-btn" id="close-more-modules-btn"><i class="fa-solid fa-xmark"></i></button>
                 </div>
-                <div class="drawer-grid">
-                    <button class="drawer-item-btn" data-target="map-view"><i class="fa-solid fa-route"></i> 學習地圖</button>
-                    <button class="drawer-item-btn highlight-drawer" data-target="vocab-10k-view"><i class="fa-solid fa-book-atlas"></i> 萬字核心庫</button>
-                    <button class="drawer-item-btn highlight-drawer" data-target="scenarios-view"><i class="fa-solid fa-bullseye"></i> 7大情境特訓</button>
-                    <button class="drawer-item-btn" data-target="peribahasa-view"><i class="fa-solid fa-quote-left"></i> 成語與片語</button>
-                    <button class="drawer-item-btn" data-target="sentences-view"><i class="fa-solid fa-comment-dots"></i> 生活常用句</button>
-                    <button class="drawer-item-btn" data-target="alphabet-view"><i class="fa-solid fa-font"></i> 字母發音</button>
-                    <button class="drawer-item-btn" data-target="pronoun-view"><i class="fa-solid fa-users-viewfinder"></i> 稱謂計算器</button>
-                    <button class="drawer-item-btn" data-target="grammar-view"><i class="fa-solid fa-book-bookmark"></i> 核心語法</button>
-                    <button class="drawer-item-btn" data-target="numbers-view"><i class="fa-solid fa-coins"></i> 數字時間</button>
-                    <button class="drawer-item-btn" data-target="flashcard-view"><i class="fa-solid fa-layer-group"></i> 智能字卡</button>
-                    <button class="drawer-item-btn" data-target="module-view"><i class="fa-solid fa-comments"></i> 實境會話</button>
-                    <button class="drawer-item-btn" data-target="shadowing-view"><i class="fa-solid fa-microphone-lines"></i> 跟讀評分</button>
-                    <button class="drawer-item-btn" data-target="affix-view"><i class="fa-solid fa-cubes"></i> 詞綴與口語</button>
-                    <button class="drawer-item-btn" data-target="culture-view"><i class="fa-solid fa-earth-asia"></i> 風土與生存</button>
-                    <button class="drawer-item-btn" data-target="phonetics-lab-view"><i class="fa-solid fa-microphone"></i> 彈舌調音室</button>
-                    <button class="drawer-item-btn" data-target="quiz-view"><i class="fa-solid fa-puzzle-piece"></i> 拼圖測驗</button>
+
+                <!-- 分組 1: 基礎起步 -->
+                <div class="drawer-section">
+                    <div class="drawer-section-title"><i class="fa-solid fa-seedling" style="color: var(--success);"></i> 1. 核心基礎入門</div>
+                    <div class="drawer-grid">
+                        <button class="drawer-item-btn" data-target="map-view"><i class="fa-solid fa-route"></i> 學習地圖</button>
+                        <button class="drawer-item-btn" data-target="alphabet-view"><i class="fa-solid fa-font"></i> 字母發音</button>
+                        <button class="drawer-item-btn" data-target="pronoun-view"><i class="fa-solid fa-users-viewfinder"></i> 稱謂計算器</button>
+                        <button class="drawer-item-btn" data-target="grammar-view"><i class="fa-solid fa-book-bookmark"></i> 核心語法</button>
+                        <button class="drawer-item-btn" data-target="numbers-view"><i class="fa-solid fa-coins"></i> 數字時間</button>
+                        <button class="drawer-item-btn" data-target="phonetics-lab-view"><i class="fa-solid fa-microphone"></i> 彈舌調音室</button>
+                    </div>
+                </div>
+
+                <!-- 分組 2: 詞彙與特訓 -->
+                <div class="drawer-section">
+                    <div class="drawer-section-title"><i class="fa-solid fa-bullseye" style="color: var(--primary);"></i> 2. 詞彙與核心特訓</div>
+                    <div class="drawer-grid">
+                        <button class="drawer-item-btn highlight-drawer" data-target="vocab-10k-view"><i class="fa-solid fa-book-atlas"></i> 萬字核心庫</button>
+                        <button class="drawer-item-btn highlight-drawer" data-target="scenarios-view"><i class="fa-solid fa-bullseye"></i> 7大情境特訓</button>
+                        <button class="drawer-item-btn" data-target="flashcard-view"><i class="fa-solid fa-layer-group"></i> 智能字卡</button>
+                        <button class="drawer-item-btn" data-target="sentences-view"><i class="fa-solid fa-comment-dots"></i> 生活常用句</button>
+                        <button class="drawer-item-btn" data-target="peribahasa-view"><i class="fa-solid fa-quote-left"></i> 成語與片語</button>
+                    </div>
+                </div>
+
+                <!-- 分組 3: 會話進階與實戰 -->
+                <div class="drawer-section">
+                    <div class="drawer-section-title"><i class="fa-solid fa-comments" style="color: var(--accent);"></i> 3. 實境會話與口語</div>
+                    <div class="drawer-grid">
+                        <button class="drawer-item-btn" data-target="module-view"><i class="fa-solid fa-comments"></i> 實境會話</button>
+                        <button class="drawer-item-btn" data-target="shadowing-view"><i class="fa-solid fa-microphone-lines"></i> 跟讀評分</button>
+                        <button class="drawer-item-btn" data-target="affix-view"><i class="fa-solid fa-cubes"></i> 詞綴與口語</button>
+                        <button class="drawer-item-btn" data-target="culture-view"><i class="fa-solid fa-earth-asia"></i> 風土與生存</button>
+                        <button class="drawer-item-btn" data-target="quiz-view"><i class="fa-solid fa-puzzle-piece"></i> 拼圖測驗</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1734,13 +1775,13 @@
                 <i class="fa-solid fa-route"></i>
                 <span>地圖</span>
             </button>
+            <button class="mobile-nav-btn highlight-mobile" data-target="vocab-10k-view">
+                <i class="fa-solid fa-book-atlas"></i>
+                <span>萬字庫</span>
+            </button>
             <button class="mobile-nav-btn highlight-mobile" data-target="scenarios-view">
                 <i class="fa-solid fa-bullseye"></i>
                 <span>特訓</span>
-            </button>
-            <button class="mobile-nav-btn" data-target="alphabet-view">
-                <i class="fa-solid fa-font"></i>
-                <span>發音</span>
             </button>
             <button class="mobile-nav-btn" data-target="flashcard-view">
                 <i class="fa-solid fa-layer-group"></i>
@@ -1750,12 +1791,8 @@
                 <i class="fa-solid fa-comments"></i>
                 <span>會話</span>
             </button>
-            <button class="mobile-nav-btn" data-target="quiz-view">
-                <i class="fa-solid fa-puzzle-piece"></i>
-                <span>測驗</span>
-            </button>
             <button class="mobile-nav-btn" id="mobile-more-btn">
-                <i class="fa-solid fa-ellipsis"></i>
+                <i class="fa-solid fa-table-cells-large"></i>
                 <span>更多</span>
             </button>
         </nav>

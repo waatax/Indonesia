@@ -7,8 +7,8 @@
     "pos": "動詞",
     "tier": 1000,
     "level": "BIPA 1",
-    "example": "Kata \"ada\" merupakan salah satu kosakata dasar terpenting dalam bahasa Indonesia.",
-    "example_zh": "「ada」(有 / 存在) 是印尼語中最關鍵基礎字根之一。"
+    "example": "Apakah ada kamar kosong untuk malam ini?",
+    "example_zh": "請問今晚還有空房嗎？"
   },
   {
     "id": "v_00002",
@@ -18,8 +18,8 @@
     "pos": "名詞",
     "tier": 1000,
     "level": "BIPA 1",
-    "example": "Kata \"adat\" merupakan salah satu kosakata dasar terpenting dalam bahasa Indonesia.",
-    "example_zh": "「adat」(傳統習俗 / 風俗) 是印尼語中最關鍵基礎字根之一。"
+    "example": "Upacara adat di Bali sangat kaya akan nilai budaya.",
+    "example_zh": "峇里島的傳統民俗儀式富有深厚的文化底蘊。"
   },
   {
     "id": "v_00003",
@@ -29,8 +29,8 @@
     "pos": "形容詞",
     "tier": 1000,
     "level": "BIPA 1",
-    "example": "Kata \"adil\" merupakan salah satu kosakata dasar terpenting dalam bahasa Indonesia.",
-    "example_zh": "「adil」(公正 / 公平) 是印尼語中最關鍵基礎字根之一。"
+    "example": "Hakim harus membuat keputusan yang adil dan bijaksana.",
+    "example_zh": "法官必須做出公正且明智的裁決。"
   },
   {
     "id": "v_00004",
@@ -40,8 +40,8 @@
     "pos": "動詞",
     "tier": 1000,
     "level": "BIPA 1",
-    "example": "Kata \"adu\" merupakan salah satu kosakata dasar terpenting dalam bahasa Indonesia.",
-    "example_zh": "「adu」(爭辯 / 對決 / 較量) 是印尼語中最關鍵基礎字根之一。"
+    "example": "Kedua tim sepak bola akan beradu ketangkasan besok sore.",
+    "example_zh": "兩支足球隊明天下午將較量球技。"
   },
   {
     "id": "v_00005",
@@ -51,8 +51,8 @@
     "pos": "動詞",
     "tier": 1000,
     "level": "BIPA 1",
-    "example": "Kata \"ajar\" merupakan salah satu kosakata dasar terpenting dalam bahasa Indonesia.",
-    "example_zh": "「ajar」(教導 / 傳授) 是印尼語中最關鍵基礎字根之一。"
+    "example": "Guru kami selalu mengajar dengan penuh kesabaran.",
+    "example_zh": "我們的老師總是充滿耐心地教導我們。"
   },
   {
     "id": "v_00006",
@@ -62,8 +62,8 @@
     "pos": "動詞",
     "tier": 1000,
     "level": "BIPA 1",
-    "example": "Kata \"ajak\" merupakan salah satu kosakata dasar terpenting dalam bahasa Indonesia.",
-    "example_zh": "「ajak」(邀請 / 相約) 是印尼語中最關鍵基礎字根之一。"
+    "example": "Teman saya mengajak makan malam bersama di restoran Padang.",
+    "example_zh": "我朋友邀請我一起去巴東餐廳吃晚餐。"
   },
   {
     "id": "v_00007",
@@ -73,8 +73,8 @@
     "pos": "名詞",
     "tier": 1000,
     "level": "BIPA 1",
-    "example": "Kata \"akal\" merupakan salah satu kosakata dasar terpenting dalam bahasa Indonesia.",
-    "example_zh": "「akal」(理智 / 智謀 / 辦法) 是印尼語中最關鍵基礎字根之一。"
+    "example": "Kita harus mencari akal untuk menyelesaikan tantangan ini.",
+    "example_zh": "我們必須想出辦法來解決這個難題。"
   },
   {
     "id": "v_00008",
@@ -84,8 +84,8 @@
     "pos": "名詞",
     "tier": 1000,
     "level": "BIPA 1",
-    "example": "Kata \"akhir\" merupakan salah satu kosakata dasar terpenting dalam bahasa Indonesia.",
-    "example_zh": "「akhir」(末尾 / 終結) 是印尼語中最關鍵基礎字根之一。"
+    "example": "Pada akhir pekan ini kami berencana jalan-jalan ke pantai.",
+    "example_zh": "這個週末我們計畫去海邊走走。"
   },
   {
     "id": "v_00009",
@@ -95,8 +95,8 @@
     "pos": "形容詞",
     "tier": 1000,
     "level": "BIPA 1",
-    "example": "Kata \"akrab\" merupakan salah satu kosakata dasar terpenting dalam bahasa Indonesia.",
-    "example_zh": "「akrab」(親密 / 融洽) 是印尼語中最關鍵基礎字根之一。"
+    "example": "Hubungan diplomatik kedua negara terjalin sangat akrab.",
+    "example_zh": "兩國的外交關係維繫得非常融洽親密。"
   },
   {
     "id": "v_00010",
@@ -106,8 +106,8 @@
     "pos": "動詞",
     "tier": 1000,
     "level": "BIPA 1",
-    "example": "Kata \"alih\" merupakan salah satu kosakata dasar terpenting dalam bahasa Indonesia.",
-    "example_zh": "「alih」(轉移 / 調換) 是印尼語中最關鍵基礎字根之一。"
+    "example": "Pabrik ini mulai mengalihkan fokus ke energi ramah lingkungan.",
+    "example_zh": "這家工廠開始將重心轉向環保新能源。"
   },
   {
     "id": "v_00011",
@@ -117,8 +117,8 @@
     "pos": "形容詞",
     "tier": 1000,
     "level": "BIPA 1",
-    "example": "Kata \"aman\" merupakan salah satu kosakata dasar terpenting dalam bahasa Indonesia.",
-    "example_zh": "「aman」(安全 / 平安) 是印尼語中最關鍵基礎字根之一。"
+    "example": "Lingkungan perumahan di sini sangat aman dan tenang.",
+    "example_zh": "這裡的住宅區環境非常安全且清幽。"
   },
   {
     "id": "v_00012",
@@ -128,8 +128,8 @@
     "pos": "動詞",
     "tier": 1000,
     "level": "BIPA 1",
-    "example": "Kata \"ambil\" merupakan salah satu kosakata dasar terpenting dalam bahasa Indonesia.",
-    "example_zh": "「ambil」(拿取 / 領取) 是印尼語中最關鍵基礎字根之一。"
+    "example": "Tolong ambilkan koper saya di bagasi taksi.",
+    "example_zh": "請幫我拿一下計程車後車廂裡的行李箱。"
   },
   {
     "id": "v_00013",
@@ -139,8 +139,8 @@
     "pos": "動詞",
     "tier": 1000,
     "level": "BIPA 1",
-    "example": "Kata \"ancam\" merupakan salah satu kosakata dasar terpenting dalam bahasa Indonesia.",
-    "example_zh": "「ancam」(威脅 / 恐嚇) 是印尼語中最關鍵基礎字根之一。"
+    "example": "Perubahan iklim mengancam kelestarian alam dan terumbu karang.",
+    "example_zh": "氣候變遷威脅著大自然與珊瑚礁的生態。"
   },
   {
     "id": "v_00014",
@@ -150,8 +150,8 @@
     "pos": "動詞",
     "tier": 1000,
     "level": "BIPA 1",
-    "example": "Kata \"anggap\" merupakan salah satu kosakata dasar terpenting dalam bahasa Indonesia.",
-    "example_zh": "「anggap」(認為 / 視為) 是印尼語中最關鍵基礎字根之一。"
+    "example": "Masyarakat menganggap kejujuran adalah prinsip hidup terpenting.",
+    "example_zh": "社會大眾認為誠實是人生最重要的原則。"
   },
   {
     "id": "v_00015",
@@ -161,8 +161,8 @@
     "pos": "名詞",
     "tier": 1000,
     "level": "BIPA 1",
-    "example": "Kata \"anggota\" merupakan salah satu kosakata dasar terpenting dalam bahasa Indonesia.",
-    "example_zh": "「anggota」(成員 / 委員) 是印尼語中最關鍵基礎字根之一。"
+    "example": "Semua anggota keluarga berkumpul untuk merayakan Idul Fitri.",
+    "example_zh": "全體家族成員齊聚一堂慶祝開齋節。"
   },
   {
     "id": "v_00016",
@@ -172,8 +172,8 @@
     "pos": "動詞",
     "tier": 1000,
     "level": "BIPA 1",
-    "example": "Kata \"angkat\" merupakan salah satu kosakata dasar terpenting dalam bahasa Indonesia.",
-    "example_zh": "「angkat」(抬起 / 提拔) 是印尼語中最關鍵基礎字根之一。"
+    "example": "Tolong bantu saya mengangkat kotak kardus yang berat ini.",
+    "example_zh": "請幫我搬抬一下這個沉重的紙箱。"
   },
   {
     "id": "v_00017",
@@ -194,8 +194,8 @@
     "pos": "動詞",
     "tier": 1000,
     "level": "BIPA 1",
-    "example": "Kata \"antar\" merupakan salah satu kosakata dasar terpenting dalam bahasa Indonesia.",
-    "example_zh": "「antar」(護送 / 遞送) 是印尼語中最關鍵基礎字根之一。"
+    "example": "Driver ojol sedang mengantar pesanan makanan ke rumah.",
+    "example_zh": "外送司機正在送餐到家裡。"
   },
   {
     "id": "v_00019",
@@ -227,8 +227,8 @@
     "pos": "名詞",
     "tier": 1000,
     "level": "BIPA 1",
-    "example": "Kata \"arti\" merupakan salah satu kosakata dasar terpenting dalam bahasa Indonesia.",
-    "example_zh": "「arti」(意義 / 含義) 是印尼語中最關鍵基礎字根之一。"
+    "example": "Apa arti kata ini dalam konteks percakapan gaul?",
+    "example_zh": "這個詞在口語會話語境中是什麼意思？"
   },
   {
     "id": "v_00022",
@@ -249,8 +249,8 @@
     "pos": "動詞",
     "tier": 1000,
     "level": "BIPA 1",
-    "example": "Kata \"atur\" merupakan salah satu kosakata dasar terpenting dalam bahasa Indonesia.",
-    "example_zh": "「atur」(安排 / 規範) 是印尼語中最關鍵基礎字根之一。"
+    "example": "Manajer proyek sedang mengatur jadwal pertemuan dengan klien.",
+    "example_zh": "專案經理正在安排與客戶的會議時程。"
   },
   {
     "id": "v_00024",
@@ -260,8 +260,8 @@
     "pos": "動詞",
     "tier": 1000,
     "level": "BIPA 1",
-    "example": "Kata \"awas\" merupakan salah satu kosakata dasar terpenting dalam bahasa Indonesia.",
-    "example_zh": "「awas」(警戒 / 留神) 是印尼語中最關鍵基礎字根之一。"
+    "example": "Awas lantai licin setelah dibersihkan dengan pembersih lantai!",
+    "example_zh": "地板剛清潔過小心濕滑！"
   },
   {
     "id": "v_00025",
@@ -271,8 +271,8 @@
     "pos": "動詞",
     "tier": 1000,
     "level": "BIPA 1",
-    "example": "Kata \"baca\" merupakan salah satu kosakata dasar terpenting dalam bahasa Indonesia.",
-    "example_zh": "「baca」(閱讀 / 朗誦) 是印尼語中最關鍵基礎字根之一。"
+    "example": "Saya suka membaca novel sambil minum kopi di kafe.",
+    "example_zh": "我喜歡在咖啡廳一邊喝咖啡一邊讀小說。"
   },
   {
     "id": "v_00026",
@@ -282,8 +282,8 @@
     "pos": "動詞",
     "tier": 1000,
     "level": "BIPA 1",
-    "example": "Kata \"bagi\" merupakan salah satu kosakata dasar terpenting dalam bahasa Indonesia.",
-    "example_zh": "「bagi」(劃分 / 分配) 是印尼語中最關鍵基礎字根之一。"
+    "example": "Kita harus membagi tugas proyek secara merata dan transparan.",
+    "example_zh": "我們必須平均且透明地分配專案任務。"
   },
   {
     "id": "v_00027",
@@ -293,8 +293,8 @@
     "pos": "形容詞",
     "tier": 1000,
     "level": "BIPA 1",
-    "example": "Kata \"bagus\" merupakan salah satu kosakata dasar terpenting dalam bahasa Indonesia.",
-    "example_zh": "「bagus」(優良 / 美好) 是印尼語中最關鍵基礎字根之一。"
+    "example": "Pemandangan matahari terbenam di pantai Kuta sangat bagus.",
+    "example_zh": "庫塔海灘的日落景色非常美麗壯觀。"
   },
   {
     "id": "v_00028",
@@ -326,8 +326,8 @@
     "pos": "動詞",
     "tier": 1000,
     "level": "BIPA 1",
-    "example": "Kata \"bakar\" merupakan salah satu kosakata dasar terpenting dalam bahasa Indonesia.",
-    "example_zh": "「bakar」(燃燒 / 烘烤) 是印尼語中最關鍵基礎字根之一。"
+    "example": "Kami makan malam ikan bakar di tepi pantai Jimbaran.",
+    "example_zh": "我們在金巴蘭海灘邊吃烤魚晚餐。"
   },
   {
     "id": "v_00031",
@@ -337,8 +337,8 @@
     "pos": "動詞",
     "tier": 1000,
     "level": "BIPA 1",
-    "example": "Kata \"balas\" merupakan salah satu kosakata dasar terpenting dalam bahasa Indonesia.",
-    "example_zh": "「balas」(回覆 / 回報) 是印尼語中最關鍵基礎字根之一。"
+    "example": "Jangan lupa membalas pesan WhatsApp dari klien sebelum sore.",
+    "example_zh": "下午前別忘了回覆客戶傳來的 WhatsApp 訊息。"
   },
   {
     "id": "v_00032",
@@ -348,8 +348,8 @@
     "pos": "動詞",
     "tier": 1000,
     "level": "BIPA 1",
-    "example": "Kata \"balik\" merupakan salah satu kosakata dasar terpenting dalam bahasa Indonesia.",
-    "example_zh": "「balik」(翻轉 / 返回) 是印尼語中最關鍵基礎字根之一。"
+    "example": "Kapan kamu akan balik ke kota asalmu?",
+    "example_zh": "你什麼時候要返回你的家鄉城市？"
   },
   {
     "id": "v_00033",
@@ -381,8 +381,8 @@
     "pos": "動詞",
     "tier": 1000,
     "level": "BIPA 1",
-    "example": "Kata \"bantu\" merupakan salah satu kosakata dasar terpenting dalam bahasa Indonesia.",
-    "example_zh": "「bantu」(協助 / 幫忙) 是印尼語中最關鍵基礎字根之一。"
+    "example": "Terima kasih banyak atas bantuan dan kerja sama tim.",
+    "example_zh": "非常感謝團隊的協助與配合。"
   },
   {
     "id": "v_00036",
@@ -392,8 +392,8 @@
     "pos": "動詞",
     "tier": 1000,
     "level": "BIPA 1",
-    "example": "Kata \"bawa\" merupakan salah satu kosakata dasar terpenting dalam bahasa Indonesia.",
-    "example_zh": "「bawa」(攜帶 / 帶來) 是印尼語中最關鍵基礎字根之一。"
+    "example": "Jangan lupa membawa paspor dan tiket pesawat ke bandara.",
+    "example_zh": "去機場時別忘了隨身攜帶護照與機票。"
   },
   {
     "id": "v_00037",
@@ -403,8 +403,8 @@
     "pos": "動詞",
     "tier": 1000,
     "level": "BIPA 1",
-    "example": "Kata \"bayar\" merupakan salah satu kosakata dasar terpenting dalam bahasa Indonesia.",
-    "example_zh": "「bayar」(支付 / 繳費) 是印尼語中最關鍵基礎字根之一。"
+    "example": "Bisa bayar pakai QRIS atau transfer antarbank nggak, Kak?",
+    "example_zh": "請問可以用 QRIS 掃碼或跨行轉帳付款嗎？"
   },
   {
     "id": "v_00038",
@@ -414,8 +414,8 @@
     "pos": "形容詞",
     "tier": 1000,
     "level": "BIPA 1",
-    "example": "Kata \"bebas\" merupakan salah satu kosakata dasar terpenting dalam bahasa Indonesia.",
-    "example_zh": "「bebas」(自由 / 免除) 是印尼語中最關鍵基礎字根之一。"
+    "example": "Area pantai ini bebas dari polusi dan sangat asri.",
+    "example_zh": "這個海灘區域遠離污染，環境非常幽靜天然。"
   },
   {
     "id": "v_00039",
@@ -469,8 +469,8 @@
     "pos": "動詞",
     "tier": 1000,
     "level": "BIPA 1",
-    "example": "Kata \"beli\" merupakan salah satu kosakata dasar terpenting dalam bahasa Indonesia.",
-    "example_zh": "「beli」(購買 / 採買) 是印尼語中最關鍵基礎字根之一。"
+    "example": "Ibu membeli sayuran segar dan bumbu dapur di pasar tradisional.",
+    "example_zh": "媽媽在傳統市場購買新鮮蔬菜與烹飪香料。"
   },
   {
     "id": "v_00044",
@@ -502,8 +502,8 @@
     "pos": "形容詞",
     "tier": 1000,
     "level": "BIPA 1",
-    "example": "Kata \"benar\" merupakan salah satu kosakata dasar terpenting dalam bahasa Indonesia.",
-    "example_zh": "「benar」(真實 / 正確) 是印尼語中最關鍵基礎字根之一。"
+    "example": "Jawaban yang Anda berikan dalam ujian sangat tepat dan benar.",
+    "example_zh": "您在測驗中所給出的答案非常精確正確。"
   },
   {
     "id": "v_00047",
@@ -535,8 +535,8 @@
     "pos": "形容詞",
     "tier": 1000,
     "level": "BIPA 1",
-    "example": "Kata \"berani\" merupakan salah satu kosakata dasar terpenting dalam bahasa Indonesia.",
-    "example_zh": "「berani」(英勇 / 果敢) 是印尼語中最關鍵基礎字根之一。"
+    "example": "Kita harus berani berbicara bahasa Indonesia dalam percakapan nyata.",
+    "example_zh": "我們必須勇於在真實會話中開口說印尼語。"
   },
   {
     "id": "v_00050",
@@ -546,8 +546,8 @@
     "pos": "形容詞",
     "tier": 1000,
     "level": "BIPA 1",
-    "example": "Kata \"berat\" merupakan salah satu kosakata dasar terpenting dalam bahasa Indonesia.",
-    "example_zh": "「berat」(沉重 / 艱鉅) 是印尼語中最關鍵基礎字根之一。"
+    "example": "Tugas ini terasa berat tetapi hasilnya sangat memuaskan.",
+    "example_zh": "這項任務雖然沉重，但成果非常令人滿意。"
   },
   {
     "id": "v_00051",
@@ -557,8 +557,8 @@
     "pos": "形容詞",
     "tier": 1000,
     "level": "BIPA 1",
-    "example": "Kata \"bersih\" merupakan salah satu kosakata dasar terpenting dalam bahasa Indonesia.",
-    "example_zh": "「bersih」(清潔 / 乾淨) 是印尼語中最關鍵基礎字根之一。"
+    "example": "Kamar hotel bintang lima ini sangat bersih dan wangi.",
+    "example_zh": "這間五星級飯店的客房非常整潔芬芳。"
   },
   {
     "id": "v_00052",
@@ -568,8 +568,8 @@
     "pos": "動詞",
     "tier": 1000,
     "level": "BIPA 1",
-    "example": "Kata \"bicara\" merupakan salah satu kosakata dasar terpenting dalam bahasa Indonesia.",
-    "example_zh": "「bicara」(說話 / 會談) 是印尼語中最關鍵基礎字根之一。"
+    "example": "Mari kita bicara santai sambil menikmati secangkir kopi panas.",
+    "example_zh": "讓我們一邊享用熱咖啡，一邊輕鬆閒聊吧。"
   },
   {
     "id": "v_00053",
@@ -612,8 +612,8 @@
     "pos": "助動詞",
     "tier": 1000,
     "level": "BIPA 1",
-    "example": "Kata \"bisa\" merupakan salah satu kosakata dasar terpenting dalam bahasa Indonesia.",
-    "example_zh": "「bisa」(能夠 / 毒液) 是印尼語中最關鍵基礎字根之一。"
+    "example": "Apakah Anda bisa berbicara bahasa Inggris atau Mandarin?",
+    "example_zh": "請問您會說英文或中文嗎？"
   },
   {
     "id": "v_00057",
@@ -689,8 +689,8 @@
     "pos": "動詞",
     "tier": 1000,
     "level": "BIPA 1",
-    "example": "Kata \"buka\" merupakan salah satu kosakata dasar terpenting dalam bahasa Indonesia.",
-    "example_zh": "「buka」(開啟 / 揭幕) 是印尼語中最關鍵基礎字根之一。"
+    "example": "Toko obat apotek ini buka selama 24 jam setiap hari.",
+    "example_zh": "這家西藥房藥局每天 24 小時全天候營業。"
   },
   {
     "id": "v_00064",
@@ -744,8 +744,8 @@
     "pos": "動詞",
     "tier": 1000,
     "level": "BIPA 1",
-    "example": "Kata \"butuh\" merupakan salah satu kosakata dasar terpenting dalam bahasa Indonesia.",
-    "example_zh": "「butuh」(需要 / 亟求) 是印尼語中最關鍵基礎字根之一。"
+    "example": "Saya butuh bantuan untuk menerjemahkan dokumen kontrak resmi ini.",
+    "example_zh": "我需要有人協助翻譯這份正式合約文件。"
   },
   {
     "id": "v_00069",
@@ -21391,8 +21391,8 @@
     "pos": "動詞",
     "tier": 3000,
     "level": "BIPA 3",
-    "example": "Bentuk \"bekerja\" merupakan bentuk baku dalam tata bahasa Indonesia modern.",
-    "example_zh": "「bekerja」是現代印尼語標準文法中極為典範的構詞型態。"
+    "example": "Dia bekerja keras sebagai staf IT di perusahaan rintisan.",
+    "example_zh": "他在一家新創公司擔任 IT 人員努力工作。"
   },
   {
     "id": "v_01946",
