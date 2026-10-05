@@ -1399,6 +1399,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         audioEngine.speak(word, { lang: 'id' });
     };
 
+    window.indoSpeakSlow = (word) => {
+        audioEngine.speak(word, { lang: 'id', rate: 0.75 });
+    };
+
     // ==========================================================================
     // 7. Numbers, Rupiah & Time System
     // ==========================================================================
