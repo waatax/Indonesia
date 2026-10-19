@@ -1,9 +1,9 @@
 {
   "curriculum": {
     "meta": {
-      "title": "Indo Learning Hub - 頂級印尼語自學旗艦系統 (BIPA A1-C2 全面覆蓋)",
+      "title": "Indo Learning Hub - 頂級印尼語自學旗艦系統 (本站 A1–C2 學習路線 全面覆蓋)",
       "description": "全方位的印尼語學習系統：深入 26 字母與母子音音標、12 大生活分類 260+ 單字片語、8 大類 30 組實境會話、中印雙語朗讀與智能閃卡記憶測驗。",
-      "version": "4.0.0",
+      "version": "4.1.0",
       "features_count": {
         "grammar_modules": 16,
         "peribahasa": 52,
@@ -11,19 +11,20 @@
         "situational_modules": 30,
         "cities_guide": 10,
         "scenarios_mastery": 7
-      }
+      },
+      "level_note": "A1–C2 是本站教學標籤，非 BIPA 官方 1–7 級的直接換算；詞彙排序不構成官方詞頻或能力認證。"
     },
     "alphabet_module": {
       "overview": {
         "title": "印尼語字母與發音完整系統 (Sistem Alfabet & Fonetik Bahasa Indonesia)",
-        "description": "印尼語使用 26 個拉丁字母，無聲調，重音普遍在倒數第二個音節。拼寫與讀音高度對應，掌握基本規則即可見字讀音！",
+        "description": "印尼語使用 26 個拉丁字母，不用聲調區分詞義。拼寫與發音有規律，但 e 的讀音、重音與部分字尾實現仍需連同詞彙和示範音學習。",
         "tips": [
-          "重音原則：絕大多數印尼語單字重音在「倒數第二個音節」 (Penultimate syllable)，例如：sa-ya, ma-kan, be-la-jar。⚠️ 例外：若倒數第二音節為弱讀母音 E (pepet /ə/)，重音則順移至「最後一個音節」(如 be-nAR, ce-pAT)。",
+          "重音常出現在倒數第二音節附近，但受詞彙、語句與地區口音影響；不要把單一重音規則當作所有詞的唯一讀法。",
           "無聲調障礙：不像中文有四聲或越南語有六調，音調平穩自然流暢即可。",
           "母音 E 雙音：E 有弱讀 pepet (/ə/ 如 empat) 與強讀 taling (/e/ 如 bebek) 兩種發音。",
           "子音 C 與 J：字母 C 永遠發 /tʃ/ (如中文「七/吃」)，字母 J 發 /dʒ/ (如英文 'jump')。",
           "舌尖彈舌 R：字母 R 為齒齦顫音 (Alveolar Trill)，初學者可先以清晰的「ㄌ/ㄦ」過渡。",
-          "字尾 K 喉塞音：K 在字尾時聲帶快速閉合不送氣 (Glottal stop /ʔ/)，如 tidak 讀作 'ti-da''。"
+          "字尾 K 喉塞音：K 在字尾常實現為喉塞音 /ʔ/，也可能是不釋放的 /k/，依詞彙及口音而異，如 tidak 讀作 'ti-da''。"
         ]
       },
       "letters": [
@@ -133,7 +134,7 @@
           "type": "consonant",
           "example": "Kopi",
           "zh": "咖啡",
-          "note": "⚠️ 字首/字中發「ㄎ/ㄍ」；字尾是「喉塞音」，聲帶迅速關閉不送氣，如 Tidak (Ti-da')。"
+          "note": "⚠️ 字首/字中通常為 /k/；詞尾常為 /ʔ/ 或不釋放的 /k/，依詞彙與口音而異，如 Tidak (Ti-da')。"
         },
         {
           "letter": "L",
@@ -478,7 +479,7 @@
           "combo": "K (字尾)",
           "ipa": "/ʔ/",
           "title": "字尾 K 喉塞音 (Glottal Stop)",
-          "desc": "在字首或字中時讀 /k/；但在音節結尾時，聲帶瞬間緊閉阻斷氣流，不爆破不噴氣。",
+          "desc": "在字首或字中時讀 /k/；在詞尾常讀作喉塞音 /ʔ/，部分詞或口音保留不釋放的 /k/；避免額外加母音。",
           "examples": [
             {
               "id": "Tidak",

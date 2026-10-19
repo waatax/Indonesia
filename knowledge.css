@@ -1,0 +1,22 @@
+.knowledge-panel{margin:1.25rem 0 2rem;border:1px solid var(--primary,#b82e3b);border-radius:16px;background:var(--surface,#fff);color:var(--text-main,#202733);overflow:hidden}
+.knowledge-diagram{max-width:640px;margin:1rem auto;padding:1rem;border:1px solid var(--border-color,#8886);border-radius:12px}.knowledge-diagram figcaption{font-weight:700}.knowledge-diagram svg{display:block;width:100%;height:auto}.knowledge-diagram rect{fill:var(--primary-light,#8881);stroke:currentColor}.knowledge-diagram text{fill:currentColor;font:16px sans-serif}.knowledge-diagram path{fill:none;stroke:currentColor;stroke-width:2}.knowledge-diagram p{font-size:.85rem}
+.knowledge-panel>summary{padding:1rem 1.25rem;font-size:1.1rem;font-weight:700;cursor:pointer;list-style-position:inside}
+.knowledge-panel small{display:inline-block;font-size:.75em;font-weight:500;margin-left:.65rem}
+.knowledge-body{padding:0 1.25rem 1.25rem;line-height:1.8}
+.knowledge-flow{display:flex;gap:1rem;padding:0;list-style:none;margin:1.25rem 0;flex-wrap:wrap}
+.knowledge-flow li{flex:1;min-width:150px;border:1px solid currentColor;border-radius:12px;padding:.65rem}
+.knowledge-flow li span{display:inline-grid;place-items:center;border-radius:50%;background:var(--primary,#b82e3b);color:#fff;width:1.8rem;height:1.8rem;margin-right:.5rem}
+.knowledge-table-wrap{overflow-x:auto;max-width:100%;border-radius:10px;border:1px solid #8886}
+.knowledge-panel table{width:100%;border-collapse:collapse;font-size:.95rem;table-layout:fixed;min-width:560px}
+.knowledge-panel th,.knowledge-panel td{padding:.8rem;text-align:left;vertical-align:top;border-bottom:1px solid #8885;overflow-wrap:anywhere}
+.knowledge-panel th:first-child{width:19%}.knowledge-panel caption{text-align:left;padding:.65rem;font-weight:700}
+.knowledge-example{font-weight:600}.knowledge-panel thead{background:#8881}
+.knowledge-check{margin:1.25rem 0 0;border:1px solid #8886;border-radius:12px;padding:1rem;min-width:0}
+.knowledge-check legend{font-weight:700;padding:0 .4rem}
+.knowledge-check button{display:inline-block;margin:.4rem .6rem .4rem 0;padding:.65rem .9rem;border:1px solid currentColor;background:transparent;color:inherit;border-radius:9px;font:inherit;cursor:pointer;min-height:44px;text-align:left}
+.knowledge-check button[aria-pressed=true]{outline:3px solid var(--primary,#b82e3b);outline-offset:2px}
+.knowledge-panel :focus-visible{outline:3px solid var(--primary,#b82e3b);outline-offset:3px}
+.knowledge-feedback{min-height:1.8em;font-weight:600}.knowledge-task{margin-top:1rem}.knowledge-review{padding:.8rem 0}.knowledge-review summary{cursor:pointer;font-weight:700}.knowledge-review ol{padding-left:1.5rem}
+.knowledge-source{font-size:.8rem;margin-top:1rem}.knowledge-source a{color:inherit;text-decoration:underline}
+@media(max-width:600px){.knowledge-body{padding:0 .8rem 1rem}.knowledge-panel>summary{padding:.85rem}.knowledge-flow{gap:.5rem}.knowledge-flow li{min-width:100%;box-sizing:border-box}.knowledge-check button{width:100%}}
+@media print{.knowledge-panel{break-inside:avoid}.knowledge-check button{display:none}}
