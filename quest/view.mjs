@@ -12,6 +12,7 @@ import {
   localDay,
   streakOf
 } from './engine.mjs';
+import { QUEST_POOL, GOALS } from './engine.mjs';
 import * as sound from './sound.mjs';
 import { answerText, correctionTip } from './coach.mjs';
 
@@ -36,12 +37,14 @@ const ui = {
   matchSelected: null,
   matchedPairs: new Set(),
   showHint: false,
-  activeGuide: null
+  activeGuide: null,
+  confirmExit: false,
+  notice: ''
 };
 
 // Data fetcher
 async function fetchJson(path) {
-  const res = await fetch(`${path}?t=${Date.now()}`);
+  const res = await fetch(`${path}?v=20261027-journey`);
   if (!res.ok) throw new Error(`Failed to load ${path}`);
   return await res.json();
 }
@@ -64,10 +67,14 @@ async function boot() {
     const loads = ['s1', 's2', 's3', 's4', 's5', 's6', 's7', 's8', 'stories', 'vocab'].map(name =>
       fetchJson(`course/${name}.json`)
         .then(data => course.register(data))
-        .catch(err => console.warn(`Could not load course file ${name}:`, err))
     );
     await Promise.all(loads);
 
+    ui.activeFeedback = game.currentSession()?.feedback || null;
+    const nextNode = [...course.nodes.values()].find(n => game.nodeStatus(n.id) === 'available' && n.kind !== 'boss');
+    ui.sectionId = nextNode?.section || 's1';
+    readRoute();
+    window.addEventListener('hashchange', () => { readRoute(); render(); });
     // Initial render
     render();
     bindEvents();
@@ -88,6 +95,18 @@ async function boot() {
 // Render Orchestrator
 // -------------------------------------------------------------
 function render() {
+  const focusKey = document.activeElement?.closest('[data-choice], [data-token], [data-tray-index], [data-match-idx], [data-act], [data-nav]');
+  const focusAttr = focusKey && [...focusKey.attributes].find(a => a.name.startsWith('data-'));
+  renderContent();
+  if (focusAttr) [...root.querySelectorAll(`[${focusAttr.name}]`)].find(el => el.getAttribute(focusAttr.name) === focusAttr.value)?.focus({ preventScroll: true });
+}
+
+function readRoute() {
+  const tab = location.hash.slice(1);
+  if (['learn', 'practice', 'stories', 'library', 'profile'].includes(tab)) ui.tab = tab;
+}
+
+function renderContent() {
   const session = game.currentSession();
   if (ui.sessionResult) {
     root.innerHTML = renderSummary(ui.sessionResult);
@@ -101,8 +120,10 @@ function render() {
   root.innerHTML = `
     <div class="quest-layout">
       ${renderRail()}
-      <main class="quest-main">
+      <main class="quest-main" id="main-content">
         ${renderTopBar()}
+        ${game.warning ? `<p class="storage-warning" role="status">${esc(game.warning)}</p>` : ''}
+        ${ui.notice ? `<p class="storage-warning" role="status">${esc(ui.notice)}</p>` : ''}
         ${
           ui.tab === 'learn'
             ? renderLearn()
@@ -146,7 +167,7 @@ function renderRail() {
         ${tabs
           .map(
             t => `
-          <button class="quest-nav-btn ${ui.tab === t.id ? 'active' : ''}" data-nav="${t.id}">
+          <button class="quest-nav-btn ${ui.tab === t.id ? 'active' : ''}" data-nav="${t.id}" ${ui.tab === t.id ? 'aria-current="page"' : ''}>
             <span class="quest-nav-icon">${t.icon}</span>
             <span>${esc(t.label)}</span>
           </button>
@@ -187,7 +208,7 @@ function renderBottomBar() {
       ${tabs
         .map(
           t => `
-        <button class="mobile-nav-btn ${ui.tab === t.id ? 'active' : ''}" data-nav="${t.id}">
+        <button class="mobile-nav-btn ${ui.tab === t.id ? 'active' : ''}" data-nav="${t.id}" ${ui.tab === t.id ? 'aria-current="page"' : ''}>
           <span class="mobile-nav-icon">${t.icon}</span>
           <span>${esc(t.label)}</span>
         </button>
@@ -205,7 +226,7 @@ function renderTopBar() {
       <div class="quest-badges-group">
         <span class="badge-item streak" title="連勝天數">🔥 ${game.streak()}</span>
         <span class="badge-item gems" title="寶石數量">💎 ${game.state.gems}</span>
-        <span class="badge-item hearts" title="愛心">❤️ ${HEARTS}</span>
+        <span class="badge-item" title="累積經驗值">⚡ ${game.state.xp.total} XP</span>
       </div>
       <a href="../" class="back-to-hub-btn" title="返回印尼語學習大廳">
         <span>🏛️ 回主教學網</span>
@@ -220,17 +241,29 @@ function renderTopBar() {
 function renderLearn() {
   const currentSec = course.section(ui.sectionId) || course.index.sections[0];
   const allSections = course.index.sections;
+  const nodes = currentSec.units.flatMap(u => u.nodes);
+  const completed = nodes.filter(n => ['done', 'crowned'].includes(game.nodeStatus(n.id))).length;
+  const next = nodes.find(n => game.nodeStatus(n.id) === 'available' && n.kind !== 'boss') || nodes.find(n => game.nodeStatus(n.id) === 'available');
+  const todayXp = game.state.xp.days[game.today()] || 0;
 
   return `
+    <div class="journey-heading"><div><p class="eyebrow">BAHASA INDONESIA · 你的印尼語冒險</p><h2>Selamat datang! <span>今天也進步一點。</span></h2></div><span class="journey-stamp">🇮🇩 中文 × 印尼語</span></div>
+    <div class="learning-grid"><div class="learning-path">
+    <section class="next-lesson-card">
+      <div class="travel-mark" aria-hidden="true">🏝️</div>
+      <div><p class="eyebrow">${next ? '準備好了嗎？下一站是' : '這個階段已完成'}</p><h3>${next ? esc(next.title) : '做得好！重溫或探索下一階段'}</h3><p>約 3 分鐘 · 聽、選、組句，開口更有自信</p></div>
+      ${next ? `<button class="action-btn check" data-node="${next.id}">開始學習 →</button>` : '<button class="action-btn check" data-nav="practice">溫習一下 →</button>'}
+    </section>
     <div class="section-banner ${currentSec.color}">
       <p class="section-banner-eyebrow">第 ${currentSec.no} 階段 · ${esc(currentSec.level)}</p>
       <h2 class="section-banner-title">${esc(currentSec.title)}</h2>
-      <p class="section-banner-sub">每天一小步，掌握自然印尼語！點選下方節點開啟闖關。</p>
+      <p class="section-banner-sub">已完成 ${completed} / ${nodes.length} 關 · 一般練習不限愛心，魔王挑戰 3 顆愛心</p>
+      <progress class="section-progress" value="${completed}" max="${nodes.length}" aria-label="階段完成進度"></progress>
       <div class="section-switcher">
         ${allSections
           .map(
             s => `
-          <button class="section-chip ${s.id === currentSec.id ? 'active' : ''}" data-select-section="${s.id}">
+          <button class="section-chip ${s.id === currentSec.id ? 'active' : ''}" data-select-section="${s.id}" aria-pressed="${s.id === currentSec.id}">
             第 ${s.no} 階 · ${esc(s.level.split(' ')[0])}
           </button>
         `
@@ -261,14 +294,15 @@ function renderLearn() {
                 const icon = status === 'crowned' ? '👑' : status === 'done' ? '✓' : n.icon || '⭐';
 
                 return `
-                <div class="node-row ${posClass}">
+                <div class="node-row ${posClass} ${n.id === next?.id ? 'next-node' : ''}">
                   <button class="node-btn ${status} ${isBoss ? 'boss' : ''}" 
                           data-node="${n.id}" 
                           ${status === 'locked' ? 'disabled' : ''} 
-                          title="${esc(n.title)}">
+                          aria-label="${esc(n.title)}：${({ locked: '尚未解鎖', available: '可以開始', done: '已完成', crowned: '已獲王冠' })[status]}" title="${esc(n.title)}">
                     ${icon}
                     ${status === 'crowned' ? '<span class="node-crown-tag">👑</span>' : ''}
                   </button>
+                  <span class="node-label">${esc(n.title)}<small>${n.id === next?.id ? '從這裡開始' : status === 'locked' ? '完成前面的練習解鎖' : status === 'done' || status === 'crowned' ? '已完成 · 可以重溫' : isBoss ? '綜合挑戰 · 3 顆愛心' : '準備出發'}</small></span>
                 </div>
               `;
               })
@@ -278,6 +312,12 @@ function renderLearn() {
         })
         .join('')}
     </div>
+    <p class="path-note">課程階段為內容導引，完成闖關不等同取得 CEFR 或 BIPA 能力認證。</p>
+    </div><aside class="daily-panel" aria-label="每日學習進度">
+      <section class="dashboard-card"><p class="eyebrow">SEDIKIT DEMI SEDIKIT</p><h3>每天一小步 🌱</h3><p>把印尼語變成日常。今天先完成一個小目標。</p><div class="daily-xp"><strong>${todayXp}</strong><span>/ ${game.goalXp()} XP</span><span>${todayXp >= game.goalXp() ? '✓ 達標' : '今日目標'}</span></div><progress value="${Math.min(todayXp, game.goalXp())}" max="${game.goalXp()}" aria-label="每日經驗值目標"></progress><label class="goal-label" for="daily-goal">我的每日目標</label><select id="daily-goal">${Object.entries(GOALS).map(([key, xp]) => `<option value="${key}" ${game.state.profile.goal === key ? 'selected' : ''}>${({ casual: '輕鬆學', regular: '穩定學', serious: '認真學', intense: '挑戰自己' })[key]} · ${xp} XP</option>`).join('')}</select></section>
+      <section class="dashboard-card"><h3>今日任務 ✨</h3><p>每項完成獲得 10 💎，全部完成再加 20 💎。</p><div class="daily-quests">${game.state.quests.list.map(q => { const def = QUEST_POOL.find(x => x.id === q.id); return `<div class="daily-quest"><span>${q.done ? '✅' : def.icon}</span><div><strong>${esc(def.label)}</strong><progress value="${q.n}" max="${q.target}" aria-label="${esc(def.label)}"></progress></div><small>${q.n}/${q.target}</small></div>`; }).join('')}</div></section>
+      <section class="dashboard-card review-nudge"><h3>讓記憶更牢固 🎯</h3><p>${game.dueItems().length} 題到期複習 · ${game.state.mistakes.length} 題待訂正</p><button class="unit-guide-btn" data-nav="practice">前往溫習 →</button></section>
+    </aside></div>
   `;
 }
 
@@ -305,7 +345,7 @@ function renderLesson(session) {
     <div class="session-overlay">
       <header class="session-header">
         <button class="session-close-btn" data-act="cancel-session" title="離開本次闖關">✕</button>
-        <div class="session-progress-bar">
+        <div class="session-progress-bar" role="progressbar" aria-label="本次練習進度" aria-valuenow="${progressPercent}" aria-valuemin="0" aria-valuemax="100">
           <div class="session-progress-fill" style="width: ${progressPercent}%;"></div>
         </div>
         ${
@@ -320,6 +360,7 @@ function renderLesson(session) {
       </header>
 
       <div class="session-card">
+        <p class="question-counter">第 ${current + 1} / ${total} 題${total > session.originalCount ? ` · 含 ${total - session.originalCount} 次錯題重練` : ''}</p>
         <div class="session-kind-pill ${isRemediating ? 'remediated' : ''}">
           <span>${isRemediating ? '🔄 再次挑戰：征服這道題！' : kindNames[item.kind] || '✨ 闖關題'}</span>
         </div>
@@ -356,6 +397,7 @@ function renderLesson(session) {
       </div>
 
       ${renderFeedbackSheet()}
+      ${ui.confirmExit ? `<div class="exit-backdrop"><section class="dashboard-card exit-dialog" role="dialog" aria-modal="true" aria-labelledby="exit-title"><h3 id="exit-title">先休息一下嗎？</h3><p>留在練習可繼續答題；離開會結束本次練習，已答過的錯題會留在訂正本。</p><button class="action-btn check" data-act="keep-learning">繼續練習</button><button class="unit-guide-btn" data-act="confirm-exit">結束這次練習</button></section></div>` : ''}
     </div>
   `;
 }
@@ -372,7 +414,7 @@ function renderItemInput(item) {
             const isSelected = ui.selectedChoice === opt;
             const hotkey = i + 1;
             return `
-            <button class="choice-btn ${isSelected ? 'selected' : ''}" data-choice="${esc(opt)}">
+            <button class="choice-btn ${isSelected ? 'selected' : ''}" data-choice="${esc(opt)}" aria-pressed="${isSelected}" ${ui.activeFeedback ? 'disabled' : ''}>
               <span>${esc(opt)}</span>
               <span class="choice-hotkey">${hotkey}</span>
             </button>
@@ -451,7 +493,7 @@ function renderItemInput(item) {
       <div class="input-box-wrap">
         <input type="text" class="quest-input" id="quest-text-input" 
                placeholder="請輸入印尼文字詞..." 
-               value="${esc(ui.inputVal)}" autofocus autocomplete="off" />
+               value="${esc(ui.inputVal)}" aria-label="印尼語答案" lang="id" ${ui.activeFeedback ? 'disabled' : ''} autocomplete="off" />
       </div>
     `;
   }
@@ -466,7 +508,7 @@ function renderFeedbackSheet() {
     return `
       <footer class="session-footer">
         <div class="session-footer-inner">
-          <button class="action-btn check ${canCheck ? '' : 'disabled'}" data-act="submit-answer">
+          <span class="keyboard-tip">選擇答案後檢查 · Enter 繼續</span><button class="action-btn check ${canCheck ? '' : 'disabled'}" data-act="submit-answer" ${canCheck ? '' : 'disabled'}>
             檢查答案
           </button>
         </div>
@@ -477,7 +519,7 @@ function renderFeedbackSheet() {
   const fb = ui.activeFeedback;
   if (fb.correct) {
     return `
-      <div class="feedback-sheet correct">
+      <div class="feedback-sheet correct" role="status" aria-live="polite">
         <div class="feedback-content">
           <div class="feedback-info">
             <h3 class="feedback-title">🎉 ${fb.remediated ? '征服成功！' : '太棒了！Bagus sekali!'}</h3>
@@ -492,7 +534,7 @@ function renderFeedbackSheet() {
     `;
   } else {
     return `
-      <div class="feedback-sheet wrong">
+      <div class="feedback-sheet wrong" role="status" aria-live="polite">
         <div class="feedback-content">
           <div class="feedback-info">
             <h3 class="feedback-title">❌ 正確答案是：</h3>
@@ -545,9 +587,9 @@ function renderSummary(res) {
     <div class="session-overlay">
       <div class="confetti-container">${confetti}</div>
       <div class="summary-container">
-        <div class="celebration-icon">🏆</div>
-        <h2 class="celebration-title">單元闖關完成！</h2>
-        <p class="celebration-sub">Luar biasa! 每天一小步，印尼語大進步！</p>
+        <div class="celebration-icon">${res.failed ? '🌱' : '🏆'}</div>
+        <h2 class="celebration-title">${res.failed ? '休息一下，再挑戰！' : '單元闖關完成！'}</h2>
+        <p class="celebration-sub">${res.failed ? '愛心用完了，這次不計通關。到溫習頁訂正錯題後再來試試。' : 'Luar biasa! 每天一小步，印尼語大進步！'}</p>
 
         <div class="summary-stats-grid">
           <div class="summary-stat-box">
@@ -584,17 +626,18 @@ function renderPractice() {
   return `
     <div style="width:100%;max-width:680px;padding:20px 0;">
       <h2 style="font-size:26px;font-weight:900;margin-bottom:8px;">🎯 溫習與錯題強化</h2>
-      <p style="color:var(--ink-secondary);margin-bottom:24px;">間隔重複記憶（SRS）與錯題訂正本，確保學過的每一句話都能烙印腦海。</p>
+      <p style="color:var(--ink-secondary);margin-bottom:24px;">答對後安排於 1、3、7、14、30 天後複習；答錯會重新安排，慢慢把記憶練穩。</p>
+      <section class="dashboard-card due-review"><div><h3>🗓️ 到期複習</h3><p>${game.dueItems().length ? `今天有 ${game.dueItems().length} 題等你回想。` : '目前沒有到期題目，先闖關學點新內容吧！'}</p></div><button class="action-btn check" data-act="practice-due" ${game.dueItems().length ? '' : 'disabled'}>開始複習</button></section>
 
       <div style="display:flex;flex-direction:column;gap:16px;">
         <div style="padding:24px;border-radius:var(--radius);background:var(--card);border:2px solid var(--line);box-shadow:0 4px 0 var(--line-d);display:flex;align-items:center;justify-content:space-between;">
           <div>
             <h3 style="font-size:18px;font-weight:800;color:var(--ink);">📖 錯題訂正本</h3>
             <p style="font-size:14px;color:var(--ink-secondary);margin-top:4px;">
-              ${mistakeCount > 0 ? `目前累積有 <strong>${mistakeCount}</strong> 道待加強題目。` : '太棒了！目前錯題本為空，基礎超扎實！'}
+              ${mistakeCount > 0 ? `目前累積有 <strong>${mistakeCount}</strong> 道待加強題目。` : '目前沒有待訂正題目，可以繼續闖關或做閃電複習。'}
             </p>
           </div>
-          <button class="action-btn check" data-act="practice-mistakes" ${mistakeCount === 0 ? '' : ''}>
+          <button class="action-btn check" data-act="practice-mistakes" ${mistakeCount === 0 ? 'disabled' : ''}>
             立即訂正
           </button>
         </div>
@@ -747,7 +790,7 @@ function renderGuideModal() {
   const g = ui.activeGuide;
   return `
     <div class="session-overlay" style="background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;padding:20px;">
-      <div style="background:var(--card);width:100%;max-width:540px;border-radius:var(--radius);padding:24px;border:2px solid var(--line);box-shadow:0 8px 30px rgba(0,0,0,0.2);">
+      <div role="dialog" aria-modal="true" aria-label="單元學習手冊" style="background:var(--card);width:100%;max-width:540px;max-height:85dvh;overflow:auto;border-radius:var(--radius);padding:24px;border:2px solid var(--line);box-shadow:0 8px 30px rgba(0,0,0,0.2);">
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
           <h3 style="font-size:20px;font-weight:800;">📘 ${esc(g.title)}</h3>
           <button style="background:none;border:none;font-size:20px;cursor:pointer;" data-act="close-guide">✕</button>
@@ -768,6 +811,7 @@ function bindEvents() {
     const navBtn = e.target.closest('[data-nav]');
     if (navBtn) {
       ui.tab = navBtn.dataset.nav;
+      history.replaceState(null, '', `#${ui.tab}`);
       sound.sfx('tap');
       render();
       return;
@@ -873,22 +917,32 @@ function bindEvents() {
 
     // Cancel Session
     if (e.target.closest('[data-act="cancel-session"]')) {
-      if (confirm('確定要放棄本次練習嗎？目前答題進度將不會計入。')) {
-        game.cancelSession();
-        resetSessionUI();
-        render();
-      }
+      ui.confirmExit = true;
+      render();
+      root.querySelector('[data-act="keep-learning"]')?.focus();
+      return;
+    }
+    if (e.target.closest('[data-act="keep-learning"]')) {
+      ui.confirmExit = false; render(); return;
+    }
+    if (e.target.closest('[data-act="confirm-exit"]')) {
+      ui.confirmExit = false; game.cancelSession(); sound.stop(); resetSessionUI(); render();
       return;
     }
 
     // Finish Summary
     if (e.target.closest('[data-act="finish-summary"]')) {
+      if (ui.sessionResult?.failed) ui.tab = 'practice';
       ui.sessionResult = null;
       render();
       return;
     }
 
     // Practice buttons
+    if (e.target.closest('[data-act="practice-due"]')) {
+      if (!game.startPractice('due')) return;
+      resetSessionUI(); render(); return;
+    }
     if (e.target.closest('[data-act="practice-mistakes"]')) {
       sound.sfx('tap');
       game.startPractice('mistakes');
@@ -919,7 +973,7 @@ function bindEvents() {
     if (e.target.closest('[data-act="buy-freeze"]')) {
       if (game.buy('freeze')) {
         sound.sfx('combo');
-        alert('🎉 成功購買連勝凍結卡！');
+        ui.notice = '🎉 成功購買連勝凍結卡！';
         render();
       }
       return;
@@ -927,11 +981,15 @@ function bindEvents() {
   });
 
   // Text input listener
+  root.addEventListener('change', e => {
+    if (e.target.id === 'daily-goal') { game.setGoal(e.target.value); render(); }
+  });
   root.addEventListener('input', e => {
     if (e.target.id === 'quest-text-input') {
       ui.inputVal = e.target.value;
       const checkBtn = root.querySelector('[data-act="submit-answer"]');
       if (checkBtn) {
+        checkBtn.disabled = !ui.inputVal.trim();
         if (ui.inputVal.trim().length > 0) {
           checkBtn.classList.remove('disabled');
         } else {
@@ -1013,6 +1071,7 @@ function resetSessionUI() {
 }
 
 function handleSubmitAnswer() {
+  if (ui.activeFeedback || ui.confirmExit || !hasSelectedAnswer()) return;
   const val = getCurrentAnswerValue();
   const res = game.submit(val);
   if (!res) return;
@@ -1029,6 +1088,7 @@ function handleSubmitAnswer() {
 }
 
 function handleNextQuestion() {
+  if (ui.confirmExit) return;
   ui.activeFeedback = null;
   ui.selectedChoice = null;
   ui.placedTokens = [];
@@ -1056,11 +1116,23 @@ function handleNextQuestion() {
 // -------------------------------------------------------------
 function bindKeyboard() {
   window.addEventListener('keydown', e => {
+    if (ui.activeGuide || ui.confirmExit) {
+      if (e.key === 'Escape') { ui.activeGuide = null; ui.confirmExit = false; render(); }
+      if (e.key === 'Tab') {
+        const buttons = [...root.querySelectorAll('[role="dialog"] button')];
+        if (!buttons.includes(document.activeElement) || (!e.shiftKey && document.activeElement === buttons.at(-1))) { e.preventDefault(); buttons[0]?.focus(); }
+        else if (e.shiftKey && document.activeElement === buttons[0]) { e.preventDefault(); buttons.at(-1)?.focus(); }
+      }
+      return;
+    }
+    if (e.isComposing || e.repeat) return;
+    if (e.target.closest('button, select, a') && e.key === 'Enter') return;
     const session = game.currentSession();
     if (!session) return;
 
     // Next question on Enter
     if (e.key === 'Enter') {
+      e.preventDefault();
       if (ui.activeFeedback) {
         handleNextQuestion();
       } else if (hasSelectedAnswer()) {

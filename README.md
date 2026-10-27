@@ -44,6 +44,9 @@ node scripts/check_knowledge.cjs
 
 # 驗證 Indo Quest 遊戲化架構、題目音訊、提示與狀態機
 node scripts/test_quest.cjs
+
+# 驗證進度恢復、重複送答、愛心、間隔複習與完整課程通路
+node scripts/test_quest_regressions.mjs
 ```
 
 ---
@@ -51,3 +54,17 @@ node scripts/test_quest.cjs
 ## 🚀 部署
 
 本專案透過 GitHub Actions 自動部署至 GitHub Pages，每次推送 `main` 分支即自動建置上線。
+
+發布前會執行三組檢查，通過後僅上傳網站使用的 HTML、JavaScript、CSS、資料與 assets/quest 檔案。
+
+### 2026-10-28 學習體驗更新
+
+- 首頁加入下一關、具名關卡、階段進度、每日 XP 目標與任務面板。
+- 到期複習按 1、3、7、14、30 天排程；重複答對尚未到期的題目不會提早延長間隔。
+- 重新整理可恢復題目位置、錯題與已提交的回饋；魔王愛心歸零不授予通關或王冠。
+- 補齊咖啡店、QRIS 結帳、辦公室社交三篇故事，五篇故事皆有可完成的題目。
+- 手機安全區、深色模式、鍵盤焦點、減少動畫與離開確認已改善。
+
+進度儲存在目前瀏覽器，不跨裝置同步；語音取決於裝置可用的語音引擎。課程階段為內容導引，並非 CEFR 或 BIPA 能力認證。
+
+設計依據與驗證範圍見 [優化驗證紀錄](QUEST_IMPROVEMENTS.md)。

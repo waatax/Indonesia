@@ -228,7 +228,12 @@ export function createGame({ storage, now = () => Date.now(), course }) {
     const raw = storage?.getItem(KEY);
     if (raw) {
       const parsed = JSON.parse(raw);
-      state = { ...fresh(now()), ...parsed };
+      state = { ...fresh(now()), ...parsed, profile: { ...fresh(now()).profile, ...parsed.profile } };
+      if (state.session) {
+        for (const key of ['mistakes', 'remediated']) {
+          state.session[key] = new Set(Array.isArray(parsed.session[key]) ? parsed.session[key] : []);
+        }
+      }
     }
   } catch {
     warning = '無法讀取本機紀錄，已開啟新進度。';
@@ -237,12 +242,14 @@ export function createGame({ storage, now = () => Date.now(), course }) {
   function save() {
     try {
       if (storage) {
-        storage.setItem(KEY, JSON.stringify(state));
+        storage.setItem(KEY, JSON.stringify(state, (_, value) => value instanceof Set ? [...value] : value));
       }
     } catch {
       warning = '無法儲存：請確認瀏覽器支援 LocalStorage。';
     }
   }
+
+  const dueItems = () => Object.keys(state.review).filter(id => course.item(id) && state.review[id].due <= now());
 
   const today = () => localDay(now());
   const goalXp = () => GOALS[state.profile?.goal] || GOALS.regular;
@@ -371,6 +378,8 @@ export function createGame({ storage, now = () => Date.now(), course }) {
     if (type === 'mistakes') {
       pool = [...state.mistakes];
     }
+    if (type === 'due') pool = dueItems();
+    if (type === 'due' && !pool.length) return null;
     if (!pool.length) {
       // Fallback to random learned items
       pool = Object.keys(state.items);
@@ -417,6 +426,15 @@ export function createGame({ storage, now = () => Date.now(), course }) {
     streak,
     today,
     goalXp,
+    dueItems,
+    get warning() { return warning || (!storage ? '目前無法儲存進度，關閉頁面後紀錄將消失。' : ''); },
+    setGoal(goal) {
+      if (!GOALS[goal]) return;
+      state.profile.goal = goal;
+      const q = state.quests.list.find(q => q.id === 'xp');
+      if (q && !q.done) q.target = GOALS[goal];
+      save();
+    },
     nodeStatus,
     sectionUnlocked,
     drainPending: () => {
@@ -441,6 +459,7 @@ export function createGame({ storage, now = () => Date.now(), course }) {
 
     // Session lifecycle
     startLesson(nodeId) {
+      if (nodeStatus(nodeId) === 'locked') return null;
       state.session = composeLesson(nodeId);
       save();
       return state.session;
@@ -467,7 +486,7 @@ export function createGame({ storage, now = () => Date.now(), course }) {
     // Submit answer with "使其學會" mastery queue
     submit(value) {
       const s = state.session;
-      if (!s) return null;
+      if (!s || s.feedback || s.hearts === 0) return s?.feedback || null;
       const itemId = s.queue[s.current];
       const item = course.item(itemId);
       if (!item) return null;
@@ -483,8 +502,18 @@ export function createGame({ storage, now = () => Date.now(), course }) {
       if (ok) {
         rec.c++;
         s.streak++;
+        ensureQuests();
+        const comboQuest = state.quests.list.find(q => q.id === 'combo');
+        if (comboQuest && !comboQuest.done) comboQuest.n = Math.min(comboQuest.target, s.streak - 1);
         bumpQuest('combo', 1);
-        if (item.type === 'listen') bumpQuest('listen', 1);
+        if (item.type === 'listen') { bumpQuest('listen', 1); state.stats.listen++; }
+        state.stats.combo = Math.max(state.stats.combo, s.streak);
+        const review = state.review[itemId] || { level: -1 };
+        if (!review.due || review.due <= now()) {
+          review.level = Math.min(REVIEW_DAYS.length - 1, review.level + 1);
+          review.due = now() + REVIEW_DAYS[review.level] * DAY;
+        }
+        state.review[itemId] = review;
 
         if (isRemediating) {
           s.remediated.add(itemId);
@@ -495,15 +524,20 @@ export function createGame({ storage, now = () => Date.now(), course }) {
         const mIdx = state.mistakes.indexOf(itemId);
         if (mIdx >= 0) state.mistakes.splice(mIdx, 1);
 
-        return {
+        s.feedback = {
           correct: true,
           item,
           remediated: isRemediating,
           streak: s.streak
         };
+        save();
+        return s.feedback;
       } else {
         rec.m++;
         s.streak = 0;
+        const comboQuest = state.quests.list.find(q => q.id === 'combo');
+        if (comboQuest && !comboQuest.done) comboQuest.n = 0;
+        state.review[itemId] = { level: -1, due: now() };
         s.mistakes.add(itemId);
 
         // Add to permanent mistake notebook
@@ -518,28 +552,37 @@ export function createGame({ storage, now = () => Date.now(), course }) {
         // === MASTERY LOOP: ENQUEUE MISSED ITEM TO THE END ===
         s.queue.push(itemId);
 
-        return {
+        s.feedback = {
           correct: false,
           item,
           hearts: s.hearts,
           heartsLeft: s.hearts !== null ? s.hearts : null
         };
+        save();
+        return s.feedback;
       }
     },
 
     next() {
       const s = state.session;
-      if (!s) return null;
+      if (!s || !s.feedback) return null;
+      if (s.hearts === 0) {
+        state.session = null;
+        save();
+        return { done: true, failed: true, xpEarned: 0, mistakesCount: s.mistakes.size, remediatedCount: s.remediated.size, accuracy: 0, streak: streak() };
+      }
+      delete s.feedback;
       s.current++;
       if (s.current >= s.queue.length) {
         return this.finishSession();
       }
+      save();
       return { done: false, item: this.currentItem() };
     },
 
     finishSession() {
       const s = state.session;
-      if (!s) return null;
+      if (!s || s.current < s.queue.length || s.hearts === 0) return null;
 
       const t = today();
       if (!state.days.includes(t)) {

@@ -92,16 +92,40 @@
           "type": "choice",
           "kind": "talk",
           "prompt": "老闆問：「Pedasnya mau gimana, Kak?」（辣度要如何？），你想吃微辣，該怎麼回答？",
-          "audio": "Pedas sedang saja ya Mas.",
+          "audio": "Sedikit pedas saja ya, Mas.",
           "options": [
-            "Pedas sedang saja ya Mas.",
+            "Sedikit pedas saja ya, Mas.",
             "Pedas gila banyak cabai!",
             "Gak mau makan."
           ],
-          "answer": "Pedas sedang saja ya Mas.",
-          "hint": "Pedas sedang = 中辣/微辣",
-          "why": "Pedas sedang saja 表示適度辣度即可。"
+          "answer": "Sedikit pedas saja ya, Mas.",
+          "hint": "Sedikit = 一點點；sedang 則是中等程度。",
+          "why": "Sedikit pedas 表示微辣，pedas sedang 是中辣，兩者要分清楚。"
         }
+      ]
+    },
+    "story-03": {
+      "id": "story-03", "title": "咖啡店工作：WiFi 與插座", "icon": "☕",
+      "steps": [
+        { "id": "st3-1", "type": "choice", "kind": "talk", "prompt": "你想在咖啡店工作。店員說「Kata sandi Wi-Fi ada di struk.」，密碼在哪裡？", "audio": "Kata sandi Wi-Fi ada di struk.", "options": ["收據上", "門口", "洗手間"], "answer": "收據上", "hint": "Struk 是收據，kata sandi 是密碼。", "why": "Ada di 表示位於某處；di struk 就是在收據上。" },
+        { "id": "st3-2", "type": "build", "kind": "talk", "prompt": "想替筆電充電，請組句：「這裡有插座嗎？」", "audio": "Apakah ada stopkontak di sini?", "tokens": ["di", "Apakah", "sini", "stopkontak", "ada"], "answer": "Apakah ada stopkontak di sini?", "hint": "Apakah ada…? 是詢問「有沒有……？」。", "why": "Stopkontak 是插座，di sini 是這裡。" },
+        { "id": "st3-3", "type": "choice", "kind": "talk", "prompt": "店員回答「Ada, di dekat meja itu.」，插座在哪裡？", "audio": "Ada, di dekat meja itu.", "options": ["那張桌子附近", "收據背面", "店外面"], "answer": "那張桌子附近", "hint": "Dekat = 近，meja = 桌子。", "why": "Di dekat… 表示在……附近；meja itu 是那張桌子。" }
+      ]
+    },
+    "story-04": {
+      "id": "story-04", "title": "結帳實戰：QRIS 掃碼拆帳", "icon": "💳",
+      "steps": [
+        { "id": "st4-1", "type": "choice", "kind": "talk", "prompt": "結帳時店員問「Mau bayar tunai atau pakai QRIS?」，他在問什麼？", "audio": "Mau bayar tunai atau pakai QRIS?", "options": ["想用現金還是 QRIS 付款？", "想內用還是外帶？", "要不要加冰？"], "answer": "想用現金還是 QRIS 付款？", "hint": "Tunai = 現金，atau = 或者。", "why": "Bayar 是付款；pakai QRIS 是使用 QRIS 掃碼支付。" },
+        { "id": "st4-2", "type": "build", "kind": "talk", "prompt": "你和朋友想分開結帳，請組句：「可以分開付款嗎？」", "audio": "Bisa bayar terpisah?", "tokens": ["terpisah", "Bisa", "bayar"], "answer": "Bisa bayar terpisah?", "hint": "Terpisah = 分開。", "why": "Bisa…? 是日常請求句型；先確認店家是否接受分開付款。" },
+        { "id": "st4-3", "type": "choice", "kind": "talk", "prompt": "店員說「Bisa. Silakan periksa jumlahnya sebelum membayar.」，付款前應先做什麼？", "audio": "Bisa. Silakan periksa jumlahnya sebelum membayar.", "options": ["確認付款金額", "再點一份餐", "把收據丟掉"], "answer": "確認付款金額", "hint": "Periksa = 檢查，jumlah = 金額或數量，sebelum = 在……之前。", "why": "Silakan 是禮貌的「請」；整句請你在付款前先核對金額。" }
+      ]
+    },
+    "story-05": {
+      "id": "story-05", "title": "辦公室社交：週末打算做什麼？", "icon": "💼",
+      "steps": [
+        { "id": "st5-1", "type": "choice", "kind": "talk", "prompt": "午休時同事問「Akhir pekan ini kamu ada rencana?」，他想知道什麼？", "audio": "Akhir pekan ini kamu ada rencana?", "options": ["你這個週末有計畫嗎？", "你今天幾點下班？", "你昨天去哪裡？"], "answer": "你這個週末有計畫嗎？", "hint": "Akhir pekan = 週末，rencana = 計畫。", "why": "口語常省略 apakah，直接用升調提出是非問句。" },
+        { "id": "st5-2", "type": "build", "kind": "talk", "prompt": "請組句回覆：「我打算和朋友一起去。」", "audio": "Saya berencana pergi bersama teman.", "tokens": ["teman", "pergi", "Saya", "bersama", "berencana"], "answer": "Saya berencana pergi bersama teman.", "hint": "Berencana = 打算，bersama = 一起。", "why": "Rencana 加上 ber- 形成 berencana，後面可接去做的事情。" },
+        { "id": "st5-3", "type": "choice", "kind": "talk", "prompt": "同事說「Kalau tidak hujan, kita bisa jalan-jalan.」，出遊的條件是什麼？", "audio": "Kalau tidak hujan, kita bisa jalan-jalan.", "options": ["如果沒下雨", "如果已經很晚", "如果大家不想去"], "answer": "如果沒下雨", "hint": "Kalau = 如果，hujan = 下雨。", "why": "Kalau 引導條件句；kita 包含聽話者，jalan-jalan 表示出去走走。" }
       ]
     }
   }
