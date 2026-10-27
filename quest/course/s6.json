@@ -1,0 +1,259 @@
+{
+  "id": "s6",
+  "items": {
+    "u6:c:0": {
+      "id": "u6:c:0",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "主動句「Budi membaca buku itu」(Budi 讀了那本書)，改為被動句應為：",
+      "audio": "Buku itu dibaca oleh Budi.",
+      "answer": "Buku itu dibaca oleh Budi.",
+      "options": [
+        "Buku itu dibaca oleh Budi.",
+        "Buku itu membacakan Budi.",
+        "Budi dibaca oleh buku.",
+        "Buku itu terbaca Budi."
+      ],
+      "hint": "被動前綴是 di-，受詞提到句首作主詞。oleh 是「由/被」。",
+      "why": "被動句骨架：受詞 + di-動詞 + (oleh) + 行為者。",
+      "level": 3
+    },
+    "u6:c:1": {
+      "id": "u6:c:1",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "句子：「Nasi goreng ini sudah ___ oleh adik.」(這盤炒飯已經被弟弟吃掉了)，空格應填入：",
+      "audio": "Nasi goreng ini sudah dimakan oleh adik.",
+      "answer": "dimakan (被吃)",
+      "options": [
+        "dimakan (被吃)",
+        "memakan",
+        "makanan",
+        "termakan"
+      ],
+      "hint": "被動語態：makan 加上 di- 前綴。",
+      "why": "炒飯是被吃的對象，使用被動態 dimakan。",
+      "level": 3
+    },
+    "u6:c:2": {
+      "id": "u6:c:2",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "「tidur」(睡覺) 加上前綴「ter-」變成「tertidur」，通常傳達何種語意？",
+      "audio": "Kemarin malam saya tertidur di sofa.",
+      "answer": "意外、無意識地睡著了",
+      "options": [
+        "意外、無意識地睡著了",
+        "故意去睡覺",
+        "命令別人睡覺",
+        "睡很久的意思"
+      ],
+      "hint": "ter- 核心語義常表達「無心、不由自主、非蓄意」的狀態。",
+      "why": "tertidur 表達不知不覺睡著了（如看電視時睡著），與主動的 tidur 截然不同。",
+      "level": 3
+    },
+    "u6:c:3": {
+      "id": "u6:c:3",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "形容詞「besar」(大) 加上前綴「ter-」變成「terbesar」，意思是：",
+      "audio": "Ini adalah gedung terbesar di Jakarta.",
+      "answer": "最大的 (最高級)",
+      "options": [
+        "最大的 (最高級)",
+        "突然變大",
+        "比較大",
+        "很不大的意思"
+      ],
+      "hint": "ter- 除了意外態，加在形容詞前方就是「最高級」！",
+      "why": "ter- + 形容詞 = 最高級（例如 terbaik 最好、tercantik 最漂亮）。",
+      "level": 3
+    },
+    "u6:c:4": {
+      "id": "u6:c:4",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "字根「tulis」(寫) 加上名詞化前綴「peN-」變成「penulis」，意思是：",
+      "audio": "Dia adalah penulis novel terkenal.",
+      "answer": "作家、作者 (寫書寫作的人)",
+      "options": [
+        "作家、作者 (寫書寫作的人)",
+        "書局、文具店",
+        "文章、筆記",
+        "寫字的動作"
+      ],
+      "hint": "peN- 表示執行該動作的人（施事者）或工具。",
+      "why": "peN- + 字根表示從事該行為的人：tulis -> penulis (作者)。",
+      "level": 3
+    },
+    "u6:c:5": {
+      "id": "u6:c:5",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "字根「makan」(吃) 加上尾綴「-an」變成「makanan」，意思是：",
+      "audio": "Makanan khas Padang sangat lezat.",
+      "answer": "食物 (吃的產物/名詞)",
+      "options": [
+        "食物 (吃的產物/名詞)",
+        "餐廳",
+        "廚師",
+        "正在吃"
+      ],
+      "hint": "尾綴 -an 最常表示該動作產生的具體事物或集合體。",
+      "why": "makan (吃) + -an -> makanan (食物)。同理 minum (喝) -> minuman (飲料)。",
+      "level": 3
+    },
+    "u6:c:6": {
+      "id": "u6:c:6",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "字根「sehat」(健康/形容詞) 加上環綴「ke-...-an」變成「kesehatan」，意思是：",
+      "audio": "Kesehatan adalah hal yang paling penting.",
+      "answer": "健康 (抽象名詞/健康狀況)",
+      "options": [
+        "健康 (抽象名詞/健康狀況)",
+        "生病了",
+        "變得更健康",
+        "醫生"
+      ],
+      "hint": "ke-...-an 將形容詞昇華為「抽象概念或名詞」。",
+      "why": "ke-...-an 是構成抽象名詞的最高頻環綴：sehat -> kesehatan (健康)。",
+      "level": 3
+    },
+    "u6:match:1": {
+      "id": "u6:match:1",
+      "kind": "word",
+      "type": "match",
+      "prompt": "配對印尼語構詞詞綴與功能：",
+      "audio": "dimakan, terbaik, penulis, kesehatan",
+      "pairs": [
+        [
+          "di- + 字根",
+          "被動語態 (被做)"
+        ],
+        [
+          "ter- + 形容詞",
+          "最高級 (最...)"
+        ],
+        [
+          "peN- + 字根",
+          "人物/施事者 (做的人)"
+        ],
+        [
+          "ke-...-an",
+          "抽象名詞 (狀況/性質)"
+        ]
+      ],
+      "answer": "matched",
+      "hint": "di- 是被動，ter- 是最高級，peN- 是人。",
+      "why": "印尼詞綴體系全通！",
+      "level": 3
+    }
+  },
+  "units": {
+    "u6-1": {
+      "guide": {
+        "title": "被動語態 di- 的自然敘事",
+        "content": "印尼人在客觀陳述事情時極愛用被動語態 di-。結構為：受事名詞 + di-動詞 + oleh + 施事者。例如：Kopi ini diminum oleh saya."
+      },
+      "nodes": {
+        "u6-1:word": [
+          "u6:c:0",
+          "u6:c:1",
+          "u6:match:1"
+        ],
+        "u6-1:listen": [
+          "u6:c:0",
+          "u6:c:1",
+          "u6:match:1"
+        ],
+        "u6-1:build": [
+          "u6:c:0",
+          "u6:c:1",
+          "u6:match:1"
+        ],
+        "u6-1:drill": [
+          "u6:c:0",
+          "u6:c:1",
+          "u6:match:1"
+        ],
+        "u6-1:boss": [
+          "u6:c:0",
+          "u6:c:1",
+          "u6:match:1"
+        ]
+      }
+    },
+    "u6-2": {
+      "guide": {
+        "title": "意外態與最高級 ter-",
+        "content": "ter- 有兩大威力：1. 無意或意外狀態（terjatuh 跌倒、tertinggal 遺落）；2. 最高級形容詞（terbaik 最好、terbesar 最大）。"
+      },
+      "nodes": {
+        "u6-2:word": [
+          "u6:c:2",
+          "u6:c:3",
+          "u6:match:1"
+        ],
+        "u6-2:listen": [
+          "u6:c:2",
+          "u6:c:3",
+          "u6:match:1"
+        ],
+        "u6-2:build": [
+          "u6:c:2",
+          "u6:c:3",
+          "u6:match:1"
+        ],
+        "u6-2:drill": [
+          "u6:c:2",
+          "u6:c:3",
+          "u6:match:1"
+        ],
+        "u6-2:boss": [
+          "u6:c:2",
+          "u6:c:3",
+          "u6:match:1"
+        ]
+      }
+    },
+    "u6-3": {
+      "guide": {
+        "title": "名詞積木：peN-, -an 與 ke-...-an",
+        "content": "peN- 代表從事該職業的人；-an 代表動作成果或具體物件；ke-...-an 代表抽象概念或所處環境狀態。"
+      },
+      "nodes": {
+        "u6-3:word": [
+          "u6:c:4",
+          "u6:c:5",
+          "u6:c:6",
+          "u6:match:1"
+        ],
+        "u6-3:listen": [
+          "u6:c:4",
+          "u6:c:5",
+          "u6:c:6",
+          "u6:match:1"
+        ],
+        "u6-3:build": [
+          "u6:c:4",
+          "u6:c:5",
+          "u6:c:6",
+          "u6:match:1"
+        ],
+        "u6-3:drill": [
+          "u6:c:4",
+          "u6:c:5",
+          "u6:c:6",
+          "u6:match:1"
+        ],
+        "u6-3:boss": [
+          "u6:c:4",
+          "u6:c:5",
+          "u6:c:6",
+          "u6:match:1"
+        ]
+      }
+    }
+  }
+}

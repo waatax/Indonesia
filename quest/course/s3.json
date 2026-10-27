@@ -1,0 +1,731 @@
+{
+  "id": "s3",
+  "items": {
+    "u3-1:b:0": {
+      "id": "u3-1:b:0",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝點餐印尼文：「我要點一份特製印尼炒飯。」",
+      "audio": "Saya mau pesan nasi goreng spesial satu.",
+      "tokens": [
+        "Saya",
+        "pesan",
+        "goreng",
+        "tidur",
+        "nasi",
+        "mau",
+        "mobil",
+        "spesial",
+        "satu"
+      ],
+      "answer": "Saya mau pesan nasi goreng spesial satu",
+      "hint": "mau(要) + pesan(點餐)",
+      "why": "在餐廳點餐必備金句：Saya mau pesan ...",
+      "level": 2
+    },
+    "u3-1:c:0": {
+      "id": "u3-1:c:0",
+      "kind": "word",
+      "type": "choice",
+      "prompt": "「Saya mau pesan nasi goreng spesial satu.」在印尼餐廳點餐的意思是？",
+      "audio": "Saya mau pesan nasi goreng spesial satu.",
+      "answer": "我要點一份特製印尼炒飯。",
+      "options": [
+        "這裡可以刷信用卡嗎？",
+        "車票在哪裡買？",
+        "我要點一份特製印尼炒飯。",
+        "請問有洗手間嗎？"
+      ],
+      "hint": "mau(要) + pesan(點餐)",
+      "why": "在餐廳點餐必備金句：Saya mau pesan ...",
+      "level": 2
+    },
+    "u3-1:l:0": {
+      "id": "u3-1:l:0",
+      "kind": "talk",
+      "type": "listen",
+      "prompt": "聽一聽服務員或客人的點餐語音，選出正確意思：",
+      "audio": "Saya mau pesan nasi goreng spesial satu.",
+      "answer": "我要點一份特製印尼炒飯。",
+      "options": [
+        "請問有熱水嗎？",
+        "我要點一份特製印尼炒飯。",
+        "我要外帶三個便當。",
+        "桌上有空的座位嗎？"
+      ],
+      "hint": "mau(要) + pesan(點餐)",
+      "why": "Saya mau pesan nasi goreng spesial satu. 意思為：我要點一份特製印尼炒飯。",
+      "level": 2
+    },
+    "u3-1:b:1": {
+      "id": "u3-1:b:1",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝點餐印尼文：「請幫我做中辣喔。」",
+      "audio": "Tolong buat pedas sedang ya.",
+      "tokens": [
+        "Tolong",
+        "ya",
+        "pedas",
+        "mobil",
+        "sedang",
+        "tidur",
+        "buat"
+      ],
+      "answer": "Tolong buat pedas sedang ya",
+      "hint": "pedas(辣) + sedang(中等)",
+      "why": "印尼辣椒狠辣，不吃辣一定要說 Tidak pedas 或 pedas sedang。",
+      "level": 2
+    },
+    "u3-1:c:1": {
+      "id": "u3-1:c:1",
+      "kind": "word",
+      "type": "choice",
+      "prompt": "「Tolong buat pedas sedang ya.」在印尼餐廳點餐的意思是？",
+      "audio": "Tolong buat pedas sedang ya.",
+      "answer": "請幫我做中辣喔。",
+      "options": [
+        "請幫我做中辣喔。",
+        "請問有洗手間嗎？",
+        "這裡可以刷信用卡嗎？",
+        "車票在哪裡買？"
+      ],
+      "hint": "pedas(辣) + sedang(中等)",
+      "why": "印尼辣椒狠辣，不吃辣一定要說 Tidak pedas 或 pedas sedang。",
+      "level": 2
+    },
+    "u3-1:l:1": {
+      "id": "u3-1:l:1",
+      "kind": "talk",
+      "type": "listen",
+      "prompt": "聽一聽服務員或客人的點餐語音，選出正確意思：",
+      "audio": "Tolong buat pedas sedang ya.",
+      "answer": "請幫我做中辣喔。",
+      "options": [
+        "桌上有空的座位嗎？",
+        "請問有熱水嗎？",
+        "我要外帶三個便當。",
+        "請幫我做中辣喔。"
+      ],
+      "hint": "pedas(辣) + sedang(中等)",
+      "why": "Tolong buat pedas sedang ya. 意思為：請幫我做中辣喔。",
+      "level": 2
+    },
+    "u3-1:b:2": {
+      "id": "u3-1:b:2",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝點餐印尼文：「請給我一杯甜冰茶。」",
+      "audio": "Minta es teh manis satu gelas.",
+      "tokens": [
+        "Minta",
+        "satu",
+        "tidur",
+        "es",
+        "teh",
+        "mobil",
+        "manis",
+        "gelas"
+      ],
+      "answer": "Minta es teh manis satu gelas",
+      "hint": "Es teh manis 是印尼的國民救命甜飲料。",
+      "why": "印尼最受歡迎解辣飲品，點餐必喊！",
+      "level": 2
+    },
+    "u3-1:c:2": {
+      "id": "u3-1:c:2",
+      "kind": "word",
+      "type": "choice",
+      "prompt": "「Minta es teh manis satu gelas.」在印尼餐廳點餐的意思是？",
+      "audio": "Minta es teh manis satu gelas.",
+      "answer": "請給我一杯甜冰茶。",
+      "options": [
+        "車票在哪裡買？",
+        "請給我一杯甜冰茶。",
+        "請問有洗手間嗎？",
+        "這裡可以刷信用卡嗎？"
+      ],
+      "hint": "Es teh manis 是印尼的國民救命甜飲料。",
+      "why": "印尼最受歡迎解辣飲品，點餐必喊！",
+      "level": 2
+    },
+    "u3-1:l:2": {
+      "id": "u3-1:l:2",
+      "kind": "talk",
+      "type": "listen",
+      "prompt": "聽一聽服務員或客人的點餐語音，選出正確意思：",
+      "audio": "Minta es teh manis satu gelas.",
+      "answer": "請給我一杯甜冰茶。",
+      "options": [
+        "請給我一杯甜冰茶。",
+        "桌上有空的座位嗎？",
+        "請問有熱水嗎？",
+        "我要外帶三個便當。"
+      ],
+      "hint": "Es teh manis 是印尼的國民救命甜飲料。",
+      "why": "Minta es teh manis satu gelas. 意思為：請給我一杯甜冰茶。",
+      "level": 2
+    },
+    "u3-1:b:3": {
+      "id": "u3-1:b:3",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝點餐印尼文：「全部總共多少錢？」",
+      "audio": "Berapa harganya semuanya?",
+      "tokens": [
+        "harganya",
+        "Berapa",
+        "tidur",
+        "semuanya",
+        "mobil"
+      ],
+      "answer": "Berapa harganya semuanya",
+      "hint": "Berapa(多少) + harganya(價錢) + semuanya(全部)",
+      "why": "結帳買單必用語。",
+      "level": 2
+    },
+    "u3-1:c:3": {
+      "id": "u3-1:c:3",
+      "kind": "word",
+      "type": "choice",
+      "prompt": "「Berapa harganya semuanya?」在印尼餐廳點餐的意思是？",
+      "audio": "Berapa harganya semuanya?",
+      "answer": "全部總共多少錢？",
+      "options": [
+        "請問有洗手間嗎？",
+        "全部總共多少錢？",
+        "車票在哪裡買？",
+        "這裡可以刷信用卡嗎？"
+      ],
+      "hint": "Berapa(多少) + harganya(價錢) + semuanya(全部)",
+      "why": "結帳買單必用語。",
+      "level": 2
+    },
+    "u3-1:l:3": {
+      "id": "u3-1:l:3",
+      "kind": "talk",
+      "type": "listen",
+      "prompt": "聽一聽服務員或客人的點餐語音，選出正確意思：",
+      "audio": "Berapa harganya semuanya?",
+      "answer": "全部總共多少錢？",
+      "options": [
+        "全部總共多少錢？",
+        "桌上有空的座位嗎？",
+        "請問有熱水嗎？",
+        "我要外帶三個便當。"
+      ],
+      "hint": "Berapa(多少) + harganya(價錢) + semuanya(全部)",
+      "why": "Berapa harganya semuanya? 意思為：全部總共多少錢？",
+      "level": 2
+    },
+    "u3-1:b:4": {
+      "id": "u3-1:b:4",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝點餐印尼文：「我想嚐嚐梭羅特色的烤雞。」",
+      "audio": "Saya mau coba ayam bakar khas Solo.",
+      "tokens": [
+        "Solo",
+        "bakar",
+        "khas",
+        "ayam",
+        "coba",
+        "mau",
+        "Saya",
+        "mobil",
+        "tidur"
+      ],
+      "answer": "Saya mau coba ayam bakar khas Solo",
+      "hint": "ayam bakar = 烤雞, khas = 特色",
+      "why": "印尼各地方烤雞甜醬香氣十足。",
+      "level": 2
+    },
+    "u3-1:c:4": {
+      "id": "u3-1:c:4",
+      "kind": "word",
+      "type": "choice",
+      "prompt": "「Saya mau coba ayam bakar khas Solo.」在印尼餐廳點餐的意思是？",
+      "audio": "Saya mau coba ayam bakar khas Solo.",
+      "answer": "我想嚐嚐梭羅特色的烤雞。",
+      "options": [
+        "我想嚐嚐梭羅特色的烤雞。",
+        "請問有洗手間嗎？",
+        "這裡可以刷信用卡嗎？",
+        "車票在哪裡買？"
+      ],
+      "hint": "ayam bakar = 烤雞, khas = 特色",
+      "why": "印尼各地方烤雞甜醬香氣十足。",
+      "level": 2
+    },
+    "u3-1:l:4": {
+      "id": "u3-1:l:4",
+      "kind": "talk",
+      "type": "listen",
+      "prompt": "聽一聽服務員或客人的點餐語音，選出正確意思：",
+      "audio": "Saya mau coba ayam bakar khas Solo.",
+      "answer": "我想嚐嚐梭羅特色的烤雞。",
+      "options": [
+        "我要外帶三個便當。",
+        "桌上有空的座位嗎？",
+        "請問有熱水嗎？",
+        "我想嚐嚐梭羅特色的烤雞。"
+      ],
+      "hint": "ayam bakar = 烤雞, khas = 特色",
+      "why": "Saya mau coba ayam bakar khas Solo. 意思為：我想嚐嚐梭羅特色的烤雞。",
+      "level": 2
+    },
+    "u3-1:match:1": {
+      "id": "u3-1:match:1",
+      "kind": "word",
+      "type": "match",
+      "prompt": "將印尼道地美食與中文名稱配對：",
+      "audio": "Nasi goreng, Sate ayam, Rendang, Es teh manis",
+      "pairs": [
+        [
+          "Nasi goreng",
+          "印尼炒飯"
+        ],
+        [
+          "Sate ayam",
+          "雞肉沙嗲"
+        ],
+        [
+          "Rendang",
+          "巴東燉牛肉"
+        ],
+        [
+          "Es teh manis",
+          "甜冰茶"
+        ]
+      ],
+      "answer": "matched",
+      "hint": "Sate 是沙嗲烤肉，Rendang 是世界第一美味燉牛肉。",
+      "why": "美食達人認證通過！",
+      "level": 1
+    },
+    "u3-2:b:0": {
+      "id": "u3-2:b:0",
+      "kind": "talk",
+      "type": "build",
+      "prompt": "請組裝叫車對話：「上車點依照地圖定位點對嗎？」",
+      "audio": "Penjemputan sesuai titik ya Kak?",
+      "tokens": [
+        "titik",
+        "sesuai",
+        "Penjemputan",
+        "ya",
+        "tidak",
+        "kopi",
+        "Kak"
+      ],
+      "answer": "Penjemputan sesuai titik ya Kak",
+      "hint": "titik 是地圖定位點，sesuai 是符合/依照。",
+      "why": "叫 Gojek/Grab 司機傳訊第一句百分之九十是這句！",
+      "level": 2
+    },
+    "u3-2:c:0": {
+      "id": "u3-2:c:0",
+      "kind": "talk",
+      "type": "choice",
+      "prompt": "司機傳來「Penjemputan sesuai titik ya Kak?」，意思是：",
+      "audio": "Penjemputan sesuai titik ya Kak?",
+      "answer": "上車點依照地圖定位點對嗎？",
+      "options": [
+        "上車點依照地圖定位點對嗎？",
+        "我要先去加油。",
+        "請問可以取消訂單嗎？",
+        "路上大塞車要遲到了。"
+      ],
+      "hint": "titik 是地圖定位點，sesuai 是符合/依照。",
+      "why": "叫 Gojek/Grab 司機傳訊第一句百分之九十是這句！",
+      "level": 2
+    },
+    "u3-2:b:1": {
+      "id": "u3-2:b:1",
+      "kind": "talk",
+      "type": "build",
+      "prompt": "請組裝叫車對話：「我已經在大廳門口了，正在走出去。」",
+      "audio": "Saya sudah di depan lobi, otw keluar.",
+      "tokens": [
+        "lobi",
+        "keluar",
+        "sudah",
+        "kopi",
+        "otw",
+        "di",
+        "depan",
+        "tidak",
+        "Saya"
+      ],
+      "answer": "Saya sudah di depan lobi otw keluar",
+      "hint": "otw = On The Way (在路上了)",
+      "why": "印尼年輕人傳訊超愛用 otw！",
+      "level": 2
+    },
+    "u3-2:c:1": {
+      "id": "u3-2:c:1",
+      "kind": "talk",
+      "type": "choice",
+      "prompt": "司機傳來「Saya sudah di depan lobi, otw keluar.」，意思是：",
+      "audio": "Saya sudah di depan lobi, otw keluar.",
+      "answer": "我已經在大廳門口了，正在走出去。",
+      "options": [
+        "路上大塞車要遲到了。",
+        "請問可以取消訂單嗎？",
+        "我要先去加油。",
+        "我已經在大廳門口了，正在走出去。"
+      ],
+      "hint": "otw = On The Way (在路上了)",
+      "why": "印尼年輕人傳訊超愛用 otw！",
+      "level": 2
+    },
+    "u3-2:b:2": {
+      "id": "u3-2:b:2",
+      "kind": "talk",
+      "type": "build",
+      "prompt": "請組裝叫車對話：「我穿綠色外套、戴黑色安全帽。」",
+      "audio": "Saya pakai jaket hijau dan helm hitam.",
+      "tokens": [
+        "jaket",
+        "hijau",
+        "Saya",
+        "hitam",
+        "dan",
+        "kopi",
+        "tidak",
+        "helm",
+        "pakai"
+      ],
+      "answer": "Saya pakai jaket hijau dan helm hitam",
+      "hint": "hijau(綠色), hitam(黑色)",
+      "why": "司機描述自身特徵方便認車。",
+      "level": 2
+    },
+    "u3-2:c:2": {
+      "id": "u3-2:c:2",
+      "kind": "talk",
+      "type": "choice",
+      "prompt": "司機傳來「Saya pakai jaket hijau dan helm hitam.」，意思是：",
+      "audio": "Saya pakai jaket hijau dan helm hitam.",
+      "answer": "我穿綠色外套、戴黑色安全帽。",
+      "options": [
+        "我穿綠色外套、戴黑色安全帽。",
+        "請問可以取消訂單嗎？",
+        "我要先去加油。",
+        "路上大塞車要遲到了。"
+      ],
+      "hint": "hijau(綠色), hitam(黑色)",
+      "why": "司機描述自身特徵方便認車。",
+      "level": 2
+    },
+    "u3-2:b:3": {
+      "id": "u3-2:b:3",
+      "kind": "talk",
+      "type": "build",
+      "prompt": "請組裝叫車對話：「我的機車車牌號碼是 B 1234 XYZ。」",
+      "audio": "Plat nomor motor saya B 1234 XYZ.",
+      "tokens": [
+        "kopi",
+        "saya",
+        "nomor",
+        "tidak",
+        "motor",
+        "XYZ",
+        "Plat",
+        "B",
+        "1234"
+      ],
+      "answer": "Plat nomor motor saya B 1234 XYZ",
+      "hint": "plat nomor = 車牌號碼",
+      "why": "確認車牌防上錯車。",
+      "level": 2
+    },
+    "u3-2:c:3": {
+      "id": "u3-2:c:3",
+      "kind": "talk",
+      "type": "choice",
+      "prompt": "司機傳來「Plat nomor motor saya B 1234 XYZ.」，意思是：",
+      "audio": "Plat nomor motor saya B 1234 XYZ.",
+      "answer": "我的機車車牌號碼是 B 1234 XYZ。",
+      "options": [
+        "路上大塞車要遲到了。",
+        "我要先去加油。",
+        "請問可以取消訂單嗎？",
+        "我的機車車牌號碼是 B 1234 XYZ。"
+      ],
+      "hint": "plat nomor = 車牌號碼",
+      "why": "確認車牌防上錯車。",
+      "level": 2
+    },
+    "u3-3:b:0": {
+      "id": "u3-3:b:0",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝方位印尼文：「洗手間在哪裡？」",
+      "audio": "Di mana toilet?",
+      "tokens": [
+        "jauh",
+        "kiri",
+        "Di",
+        "toilet",
+        "mana"
+      ],
+      "answer": "Di mana toilet",
+      "hint": "Di mana = 在哪裡",
+      "why": "問地點最核心句型：Di mana + 名詞。",
+      "level": 2
+    },
+    "u3-3:c:0": {
+      "id": "u3-3:c:0",
+      "kind": "word",
+      "type": "choice",
+      "prompt": "問路回答「Di mana toilet?」是什麼意思？",
+      "audio": "Di mana toilet?",
+      "answer": "洗手間在哪裡？",
+      "options": [
+        "公車已經滿座了。",
+        "洗手間在哪裡？",
+        "車票已經賣光了。",
+        "今天營業時間結束了。"
+      ],
+      "hint": "Di mana = 在哪裡",
+      "why": "問地點最核心句型：Di mana + 名詞。",
+      "level": 2
+    },
+    "u3-3:b:1": {
+      "id": "u3-3:b:1",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝方位印尼文：「直走然後右轉。」",
+      "audio": "Jalan lurus lalu belok kanan.",
+      "tokens": [
+        "jauh",
+        "belok",
+        "Jalan",
+        "kiri",
+        "kanan",
+        "lurus",
+        "lalu"
+      ],
+      "answer": "Jalan lurus lalu belok kanan",
+      "hint": "lurus(直), belok kanan(右轉)",
+      "why": "問路指示必學：lurus (直行), kanan (右), kiri (左)。",
+      "level": 2
+    },
+    "u3-3:c:1": {
+      "id": "u3-3:c:1",
+      "kind": "word",
+      "type": "choice",
+      "prompt": "問路回答「Jalan lurus lalu belok kanan.」是什麼意思？",
+      "audio": "Jalan lurus lalu belok kanan.",
+      "answer": "直走然後右轉。",
+      "options": [
+        "直走然後右轉。",
+        "公車已經滿座了。",
+        "今天營業時間結束了。",
+        "車票已經賣光了。"
+      ],
+      "hint": "lurus(直), belok kanan(右轉)",
+      "why": "問路指示必學：lurus (直行), kanan (右), kiri (左)。",
+      "level": 2
+    },
+    "u3-3:b:2": {
+      "id": "u3-3:b:2",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝方位印尼文：「位置就在捷運站附近。」",
+      "audio": "Lokasinya dekat stasiun MRT.",
+      "tokens": [
+        "stasiun",
+        "MRT",
+        "kiri",
+        "jauh",
+        "Lokasinya",
+        "dekat"
+      ],
+      "answer": "Lokasinya dekat stasiun MRT",
+      "hint": "dekat(靠近/附近)",
+      "why": "dekat 表示距離近，jauh 表示遠。",
+      "level": 2
+    },
+    "u3-3:c:2": {
+      "id": "u3-3:c:2",
+      "kind": "word",
+      "type": "choice",
+      "prompt": "問路回答「Lokasinya dekat stasiun MRT.」是什麼意思？",
+      "audio": "Lokasinya dekat stasiun MRT.",
+      "answer": "位置就在捷運站附近。",
+      "options": [
+        "今天營業時間結束了。",
+        "車票已經賣光了。",
+        "公車已經滿座了。",
+        "位置就在捷運站附近。"
+      ],
+      "hint": "dekat(靠近/附近)",
+      "why": "dekat 表示距離近，jauh 表示遠。",
+      "level": 2
+    }
+  },
+  "units": {
+    "u3-1": {
+      "guide": {
+        "title": "印尼餐廳點餐與調味客製",
+        "content": "印尼料理香料豐富、辣椒生猛。點餐關鍵句是 Saya mau pesan...（我要點...）。想要不辣務必交代 Tidak pedas 或 Jangan pedas，飲料推薦點一杯 Es teh manis (甜冰茶) 解暑！"
+      },
+      "nodes": {
+        "u3-1:word": [
+          "u3-1:c:0",
+          "u3-1:c:1",
+          "u3-1:c:2",
+          "u3-1:c:3",
+          "u3-1:c:4",
+          "u3-1:match:1"
+        ],
+        "u3-1:listen": [
+          "u3-1:l:0",
+          "u3-1:l:1",
+          "u3-1:l:2",
+          "u3-1:l:3",
+          "u3-1:l:4"
+        ],
+        "u3-1:build": [
+          "u3-1:b:0",
+          "u3-1:b:1",
+          "u3-1:b:2",
+          "u3-1:b:3",
+          "u3-1:b:4"
+        ],
+        "u3-1:drill": [
+          "u3-1:b:0",
+          "u3-1:c:0",
+          "u3-1:l:0",
+          "u3-1:b:1",
+          "u3-1:c:1",
+          "u3-1:l:1",
+          "u3-1:b:2",
+          "u3-1:c:2"
+        ],
+        "u3-1:boss": [
+          "u3-1:b:0",
+          "u3-1:c:0",
+          "u3-1:l:0",
+          "u3-1:b:1",
+          "u3-1:c:1",
+          "u3-1:l:1",
+          "u3-1:b:2",
+          "u3-1:c:2",
+          "u3-1:l:2",
+          "u3-1:b:3",
+          "u3-1:c:3",
+          "u3-1:l:3",
+          "u3-1:b:4",
+          "u3-1:c:4",
+          "u3-1:l:4",
+          "u3-1:match:1"
+        ]
+      }
+    },
+    "u3-2": {
+      "guide": {
+        "title": "Gojek / Grab 叫車通訊實戰",
+        "content": "在印尼搭摩托車或叫車，司機在 App 內傳訊第一句通常是 Penjemputan sesuai titik ya, Kak?（上車點照地圖定位嗎？）。回答 Iya Pak, saya tunggu di depan... 即可順暢上車！"
+      },
+      "nodes": {
+        "u3-2:word": [
+          "u3-2:b:0",
+          "u3-2:c:0",
+          "u3-2:b:1",
+          "u3-2:c:1",
+          "u3-2:b:2",
+          "u3-2:c:2",
+          "u3-2:b:3",
+          "u3-2:c:3"
+        ],
+        "u3-2:listen": [
+          "u3-2:b:0",
+          "u3-2:c:0",
+          "u3-2:b:1",
+          "u3-2:c:1",
+          "u3-2:b:2",
+          "u3-2:c:2",
+          "u3-2:b:3",
+          "u3-2:c:3"
+        ],
+        "u3-2:build": [
+          "u3-2:b:0",
+          "u3-2:b:1",
+          "u3-2:b:2",
+          "u3-2:b:3"
+        ],
+        "u3-2:drill": [
+          "u3-2:b:0",
+          "u3-2:c:0",
+          "u3-2:b:1",
+          "u3-2:c:1",
+          "u3-2:b:2",
+          "u3-2:c:2",
+          "u3-2:b:3",
+          "u3-2:c:3"
+        ],
+        "u3-2:boss": [
+          "u3-2:b:0",
+          "u3-2:c:0",
+          "u3-2:b:1",
+          "u3-2:c:1",
+          "u3-2:b:2",
+          "u3-2:c:2",
+          "u3-2:b:3",
+          "u3-2:c:3"
+        ]
+      }
+    },
+    "u3-3": {
+      "guide": {
+        "title": "問路指引與方位空間語法",
+        "content": "問地點句型：Di mana + 地點？指引方向的三大方向詞：Lurus (直走)、Kanan (向右)、Kiri (向左)。表示距離：Dekat (近)、Jauh (遠)。"
+      },
+      "nodes": {
+        "u3-3:word": [
+          "u3-3:b:0",
+          "u3-3:c:0",
+          "u3-3:b:1",
+          "u3-3:c:1",
+          "u3-3:b:2",
+          "u3-3:c:2"
+        ],
+        "u3-3:listen": [
+          "u3-3:b:0",
+          "u3-3:c:0",
+          "u3-3:b:1",
+          "u3-3:c:1",
+          "u3-3:b:2",
+          "u3-3:c:2"
+        ],
+        "u3-3:build": [
+          "u3-3:b:0",
+          "u3-3:c:0",
+          "u3-3:b:1",
+          "u3-3:c:1",
+          "u3-3:b:2",
+          "u3-3:c:2"
+        ],
+        "u3-3:drill": [
+          "u3-3:b:0",
+          "u3-3:c:0",
+          "u3-3:b:1",
+          "u3-3:c:1",
+          "u3-3:b:2",
+          "u3-3:c:2"
+        ],
+        "u3-3:boss": [
+          "u3-3:b:0",
+          "u3-3:c:0",
+          "u3-3:b:1",
+          "u3-3:c:1",
+          "u3-3:b:2",
+          "u3-3:c:2"
+        ]
+      }
+    }
+  }
+}

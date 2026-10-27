@@ -1,0 +1,333 @@
+{
+  "id": "s5",
+  "items": {
+    "u5:c:0": {
+      "id": "u5:c:0",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "字根「main」(玩) 加上前綴「ber-」變成「bermain」，主要功能是？",
+      "audio": "Anak-anak sedang bermain di taman.",
+      "answer": "形成不及物動詞（從事該活動/進行中）",
+      "options": [
+        "形成不及物動詞（從事該活動/進行中）",
+        "形成名詞工具",
+        "形成被動態",
+        "形成最高級形容詞"
+      ],
+      "hint": "ber- 常用於表達狀態、擁有或自發動作，不接直接受詞。",
+      "why": "ber- 核心功能即為不及物動詞化：main (玩) -> bermain (在玩耍)。",
+      "level": 3
+    },
+    "u5:c:1": {
+      "id": "u5:c:1",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "字根「ajar」(教導) 加上前綴「ber-」變成「學習」，拼寫會發生什麼特殊變化？",
+      "audio": "Saya belajar bahasa Indonesia setiap hari.",
+      "answer": "belajar (r 變成 l 的特殊同化音)",
+      "options": [
+        "belajar (r 變成 l 的特殊同化音)",
+        "berajar",
+        "beajar",
+        "mengajar"
+      ],
+      "hint": "注意：不是 berajar 喔！它是極少數 r 轉 l 的同化字。",
+      "why": "ajar + ber- 產生異化作用變成 belajar，表示主動「學習」。",
+      "level": 3
+    },
+    "u5:c:2": {
+      "id": "u5:c:2",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "名詞「mobil」(汽車) 加上前綴「ber-」變成「bermobil」，其引申意思是？",
+      "answer": "擁有汽車、開著汽車出行",
+      "options": [
+        "擁有汽車、開著汽車出行",
+        "製造汽車的人",
+        "洗車場",
+        "被車子撞到"
+      ],
+      "hint": "ber- 加名詞常表示「擁有」或「使用該工具」。",
+      "why": "ber- + 名詞 = 擁有某物，例如 bermobil (有車/開車)、bersepeda (騎自行車)。",
+      "level": 3
+    },
+    "u5:c:3": {
+      "id": "u5:c:3",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "字根「tulis」(寫) 加上主動及物前綴「meN-」時，因首字母為 T，鼻音同化後會變成？",
+      "audio": "Dia menulis surat cinta.",
+      "answer": "menulis (T 脫落被 N 取代)",
+      "options": [
+        "menulis (T 脫落被 N 取代)",
+        "mentulis",
+        "memtulis",
+        "mengtulis"
+      ],
+      "hint": "K, T, S, P 四大易脫落清輔音口訣：T 遇 meN- 變成 men-！",
+      "why": "口訣 KTSP 遇 meN- 皆同化脫落：tulis -> me + n + ulis = menulis。",
+      "level": 3
+    },
+    "u5:c:4": {
+      "id": "u5:c:4",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "字根「beli」(買) 首字母為濁音 B，加上主動及物前綴「meN-」後會變成？",
+      "audio": "Ibu membeli sayur di pasar.",
+      "answer": "membeli (B 不脫落，前綴為 mem-)",
+      "options": [
+        "membeli (B 不脫落，前綴為 mem-)",
+        "memeli",
+        "menbeli",
+        "mengbeli"
+      ],
+      "hint": "B 是雙唇濁音，搭配雙唇鼻音 m，字母保留不脫落。",
+      "why": "濁輔音 B 不脫落：beli -> membeli。",
+      "level": 3
+    },
+    "u5:c:5": {
+      "id": "u5:c:5",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "字根「kirim」(寄送) 首字母為清音 K，加上主動及物前綴「meN-」後會變成？",
+      "audio": "Saya mengirim paket lewat kurir.",
+      "answer": "mengirim (K 脫落被 ng 取代)",
+      "options": [
+        "mengirim (K 脫落被 ng 取代)",
+        "menkirim",
+        "memkirim",
+        "mengkirim"
+      ],
+      "hint": "KTSP 規則：K 脫落，變成 meng-！",
+      "why": "kirim -> me + ng + irim = mengirim。",
+      "level": 3
+    },
+    "u5:c:6": {
+      "id": "u5:c:6",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "句子：「Dia ___ dokter.」(他不是醫生)，空格應填入：",
+      "audio": "Dia bukan dokter, dia guru.",
+      "answer": "bukan (因為 dokter 是名詞身分)",
+      "options": [
+        "bukan (因為 dokter 是名詞身分)",
+        "tidak",
+        "jangan",
+        "belum"
+      ],
+      "hint": "Dokter 是職業名詞。否定名詞必用 bukan！",
+      "why": "否定金律：bukan 否定名詞/代名詞；tidak 否定動詞與形容詞。",
+      "level": 3
+    },
+    "u5:c:7": {
+      "id": "u5:c:7",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "句子：「Saya ___ suka makanan pedas.」(我不喜歡辣的食物)，空格應填入：",
+      "audio": "Saya tidak suka makanan pedas.",
+      "answer": "tidak (因為 suka 是動詞/形容詞)",
+      "options": [
+        "tidak (因為 suka 是動詞/形容詞)",
+        "bukan",
+        "jangan",
+        "tiada"
+      ],
+      "hint": "Suka 是喜歡 (動詞)。否定動詞用 tidak！",
+      "why": "Suka 為動詞，否定必須用 tidak suka，不能用 bukan suka。",
+      "level": 3
+    },
+    "u5:c:8": {
+      "id": "u5:c:8",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "句子：「Rumah ini ___ mahal.」(這棟房子不貴)，空格應填入：",
+      "audio": "Rumah ini tidak mahal sama sekali.",
+      "answer": "tidak (因為 mahal 是形容詞)",
+      "options": [
+        "tidak (因為 mahal 是形容詞)",
+        "bukan",
+        "jangan",
+        "tiada"
+      ],
+      "hint": "Mahal 是昂貴 (形容詞)。否定形容詞用 tidak！",
+      "why": "形容詞否定必用 tidak。",
+      "level": 3
+    },
+    "u5:b:0": {
+      "id": "u5:b:0",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝句型：「他們正在辦公室工作。」",
+      "audio": "Mereka sedang bekerja di kantor.",
+      "tokens": [
+        "tidur",
+        "tidak",
+        "Mereka",
+        "kantor",
+        "sedang",
+        "di",
+        "bekerja"
+      ],
+      "answer": "Mereka sedang bekerja di kantor",
+      "hint": "bekerja 是 kerja 加 ber- 形成的不及物動詞。",
+      "why": "ber- + kerja -> bekerja。",
+      "level": 3
+    },
+    "u5:b:1": {
+      "id": "u5:b:1",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝句型：「媽媽正在廚房煮飯。」",
+      "audio": "Ibu sedang memasak nasi di dapur.",
+      "tokens": [
+        "memasak",
+        "di",
+        "Ibu",
+        "tidak",
+        "nasi",
+        "tidur",
+        "sedang",
+        "dapur"
+      ],
+      "answer": "Ibu sedang memasak nasi di dapur",
+      "hint": "masak 首字母 m，直接加 me- 成為 memasak。",
+      "why": "及物動詞 memasak 接受詞 nasi。",
+      "level": 3
+    },
+    "u5:b:2": {
+      "id": "u5:b:2",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝句型：「這不是我的包包。」",
+      "audio": "Ini bukan tas saya.",
+      "tokens": [
+        "tidak",
+        "saya",
+        "Ini",
+        "tidur",
+        "bukan",
+        "tas"
+      ],
+      "answer": "Ini bukan tas saya",
+      "hint": "tas 是名詞，否定必須用 bukan！",
+      "why": "bukan + 名詞否定。",
+      "level": 3
+    }
+  },
+  "units": {
+    "u5-1": {
+      "guide": {
+        "title": "前綴 ber- 的狀態動詞魔法",
+        "content": "ber- 表示處於某種狀態、從事某動作或「擁有某物」。例如：bermain (玩耍)、belajar (學習)、bekerja (工作)、bermobil (開著車)。"
+      },
+      "nodes": {
+        "u5-1:word": [
+          "u5:c:0",
+          "u5:c:1",
+          "u5:c:2",
+          "u5:b:0"
+        ],
+        "u5-1:listen": [
+          "u5:c:0",
+          "u5:c:1",
+          "u5:c:2",
+          "u5:b:0"
+        ],
+        "u5-1:build": [
+          "u5:c:0",
+          "u5:c:1",
+          "u5:c:2",
+          "u5:b:0"
+        ],
+        "u5-1:drill": [
+          "u5:c:0",
+          "u5:c:1",
+          "u5:c:2",
+          "u5:b:0"
+        ],
+        "u5-1:boss": [
+          "u5:c:0",
+          "u5:c:1",
+          "u5:c:2",
+          "u5:b:0"
+        ]
+      }
+    },
+    "u5-2": {
+      "guide": {
+        "title": "及物動詞 meN- 六大鼻音同化",
+        "content": "meN- 是接直接受詞的主動及物標誌。注意 KTSP 四字根首音脫落同化：K->meng-, T->men-, S->meny-, P->mem-。例如 tulis -> menulis, sapu -> menyapu。"
+      },
+      "nodes": {
+        "u5-2:word": [
+          "u5:c:3",
+          "u5:c:4",
+          "u5:c:5",
+          "u5:b:1"
+        ],
+        "u5-2:listen": [
+          "u5:c:3",
+          "u5:c:4",
+          "u5:c:5",
+          "u5:b:1"
+        ],
+        "u5-2:build": [
+          "u5:c:3",
+          "u5:c:4",
+          "u5:c:5",
+          "u5:b:1"
+        ],
+        "u5-2:drill": [
+          "u5:c:3",
+          "u5:c:4",
+          "u5:c:5",
+          "u5:b:1"
+        ],
+        "u5-2:boss": [
+          "u5:c:3",
+          "u5:c:4",
+          "u5:c:5",
+          "u5:b:1"
+        ]
+      }
+    },
+    "u5-3": {
+      "guide": {
+        "title": "否定雙雄：tidak 與 bukan 終極分辨",
+        "content": "記住終極鐵律：bukan 只能否定「名詞」與「身分」（如 Bukan dokter, Bukan saya）；tidak 否定「動詞」與「形容詞」（如 Tidak suka, Tidak mahal）。"
+      },
+      "nodes": {
+        "u5-3:word": [
+          "u5:c:6",
+          "u5:c:7",
+          "u5:c:8",
+          "u5:b:2"
+        ],
+        "u5-3:listen": [
+          "u5:c:6",
+          "u5:c:7",
+          "u5:c:8",
+          "u5:b:2"
+        ],
+        "u5-3:build": [
+          "u5:c:6",
+          "u5:c:7",
+          "u5:c:8",
+          "u5:b:2"
+        ],
+        "u5-3:drill": [
+          "u5:c:6",
+          "u5:c:7",
+          "u5:c:8",
+          "u5:b:2"
+        ],
+        "u5-3:boss": [
+          "u5:c:6",
+          "u5:c:7",
+          "u5:c:8",
+          "u5:b:2"
+        ]
+      }
+    }
+  }
+}

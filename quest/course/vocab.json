@@ -1,0 +1,168 @@
+{
+  "sets": [
+    {
+      "id": "v-basics",
+      "title": "基礎核心動詞與名詞",
+      "icon": "🌱",
+      "words": [
+        {
+          "w": "ada",
+          "zh": "有 / 存在",
+          "ex": "Apakah ada kamar kosong untuk malam ini?"
+        },
+        {
+          "w": "adat",
+          "zh": "傳統習俗 / 風俗",
+          "ex": "Upacara adat di Bali sangat kaya akan nilai budaya."
+        },
+        {
+          "w": "adil",
+          "zh": "公正 / 公平",
+          "ex": "Hakim harus membuat keputusan yang adil dan bijaksana."
+        },
+        {
+          "w": "adu",
+          "zh": "爭辯 / 對決 / 較量",
+          "ex": "Kedua tim sepak bola akan beradu ketangkasan besok sore."
+        },
+        {
+          "w": "ajar",
+          "zh": "教導 / 傳授",
+          "ex": "Guru kami selalu mengajar dengan penuh kesabaran."
+        },
+        {
+          "w": "ajak",
+          "zh": "邀請 / 相約",
+          "ex": "Teman saya mengajak makan malam bersama di restoran Padang."
+        },
+        {
+          "w": "akal",
+          "zh": "理智 / 智謀 / 辦法",
+          "ex": "Kita harus mencari akal untuk menyelesaikan tantangan ini."
+        },
+        {
+          "w": "akhir",
+          "zh": "末尾 / 終結",
+          "ex": "Pada akhir pekan ini kami berencana jalan-jalan ke pantai."
+        },
+        {
+          "w": "akrab",
+          "zh": "親密 / 融洽",
+          "ex": "Hubungan diplomatik kedua negara terjalin sangat akrab."
+        },
+        {
+          "w": "alih",
+          "zh": "轉移 / 調換",
+          "ex": "Pabrik ini mulai mengalihkan fokus ke energi ramah lingkungan."
+        },
+        {
+          "w": "aman",
+          "zh": "安全 / 平安",
+          "ex": "Lingkungan perumahan di sini sangat aman dan tenang."
+        },
+        {
+          "w": "ambil",
+          "zh": "拿取 / 領取",
+          "ex": "Tolong ambilkan koper saya di bagasi taksi."
+        },
+        {
+          "w": "ancam",
+          "zh": "威脅 / 恐嚇",
+          "ex": "Perubahan iklim mengancam kelestarian alam dan terumbu karang."
+        },
+        {
+          "w": "anggap",
+          "zh": "認為 / 視為",
+          "ex": "Masyarakat menganggap kejujuran adalah prinsip hidup terpenting."
+        },
+        {
+          "w": "anggota",
+          "zh": "成員 / 委員",
+          "ex": "Semua anggota keluarga berkumpul untuk merayakan Idul Fitri."
+        }
+      ]
+    },
+    {
+      "id": "v-food",
+      "title": "餐飲與日常料理",
+      "icon": "🍛",
+      "words": [
+        {
+          "w": "Nasi putih",
+          "zh": "白飯",
+          "ex": "Minta nasi putih satu porsi ya."
+        },
+        {
+          "w": "Nasi goreng",
+          "zh": "印尼炒飯",
+          "ex": "Nasi goreng spesial pedas sedang."
+        },
+        {
+          "w": "Mie goreng",
+          "zh": "印尼炒麵",
+          "ex": "Mie goreng dengan telur mata sapi."
+        },
+        {
+          "w": "Ayam goreng",
+          "zh": "印尼炸雞",
+          "ex": "Ayam goreng kremes renyah sekali."
+        },
+        {
+          "w": "Ayam bakar",
+          "zh": "烤雞",
+          "ex": "Saya mau pesan ayam bakar bumbu kecap."
+        },
+        {
+          "w": "Sate ayam",
+          "zh": "雞肉沙嗲",
+          "ex": "Sate ayam bumbu kacang 10 tusuk."
+        },
+        {
+          "w": "Rendang",
+          "zh": "巴東燉牛肉",
+          "ex": "Rendang sapi khas Padang sangat lezat."
+        },
+        {
+          "w": "Bakso",
+          "zh": "印尼牛肉丸湯",
+          "ex": "Semangkok bakso hangat enak dimakan saat hujan."
+        },
+        {
+          "w": "Soto ayam",
+          "zh": "黃薑雞湯",
+          "ex": "Soto ayam pakai kuah bening."
+        },
+        {
+          "w": "Gado-gado",
+          "zh": "花生醬溫沙拉",
+          "ex": "Gado-gado tanpa cabai ya."
+        },
+        {
+          "w": "Es teh manis",
+          "zh": "甜冰茶 (國民飲料)",
+          "ex": "Minta es teh manis satu gelas."
+        },
+        {
+          "w": "Es kopi susu aren",
+          "zh": "冰棕櫚糖拿鐵",
+          "ex": "Es kopi susu aren less sugar."
+        },
+        {
+          "w": "Jus alpukat",
+          "zh": "酪梨巧克力果汁",
+          "ex": "Jus alpukat pakai cokelat kental manis."
+        },
+        {
+          "w": "Air mineral",
+          "zh": "礦泉水",
+          "ex": "Air mineral dingin satu botol."
+        },
+        {
+          "w": "Air kelapa muda",
+          "zh": "新鮮椰子水",
+          "ex": "Minum air kelapa muda saat cuaca panas."
+        }
+      ]
+    }
+  ]
+}

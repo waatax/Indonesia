@@ -1,0 +1,312 @@
+{
+  "id": "s8",
+  "items": {
+    "u8:c:0": {
+      "id": "u8:c:0",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "印尼經典成語「Ada gula ada semut.」寓意為何？",
+      "audio": "Ada gula ada semut.",
+      "answer": "有利益或繁榮的地方，自然會吸引人聚集追求。",
+      "options": [
+        "有利益或繁榮的地方，自然會吸引人聚集追求。",
+        "貪小便宜最後得不償失。",
+        "時間就是金錢一去不復返。",
+        "千里之行始於足下。"
+      ],
+      "hint": "字面意思：有糖的地方就有螞蟻。",
+      "why": "Ada gula ada semut.（有糖的地方就有螞蟻。）：比喻繁華發達之地或有利可圖之處，四方之人都會趨之若鶩。",
+      "level": 4
+    },
+    "u8:b:0": {
+      "id": "u8:b:0",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝印尼成語：「有糖的地方就有螞蟻。」",
+      "audio": "Ada gula ada semut.",
+      "tokens": [
+        "gula",
+        "ada",
+        "semut",
+        "tidak",
+        "Ada",
+        "makan"
+      ],
+      "answer": "Ada gula ada semut",
+      "hint": "Gula 是糖，Semut 是螞蟻。",
+      "why": "比喻繁華發達之地或有利可圖之處，四方之人都會趨之若鶩。",
+      "level": 4
+    },
+    "u8:c:1": {
+      "id": "u8:c:1",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "印尼經典成語「Berakit-rakit ke hulu, berenang-renang ke tepian.」寓意為何？",
+      "audio": "Berakit-rakit ke hulu, berenang-renang ke tepian.",
+      "answer": "先苦後甘，先經歷艱難困苦，方能收穫成功的甘甜。",
+      "options": [
+        "先苦後甘，先經歷艱難困苦，方能收穫成功的甘甜。",
+        "貪小便宜最後得不償失。",
+        "時間就是金錢一去不復返。",
+        "千里之行始於足下。"
+      ],
+      "hint": "字面意思：划竹筏到上游，游水到岸邊。",
+      "why": "Berakit-rakit ke hulu, berenang-renang ke tepian.（划竹筏到上游，游水到岸邊。）：印尼家喻戶曉勉勵學子與奮鬥者的名言，相當於「苦盡甘來」。",
+      "level": 4
+    },
+    "u8:b:1": {
+      "id": "u8:b:1",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝印尼成語：「划竹筏到上游，游水到岸邊。」",
+      "audio": "Berakit-rakit ke hulu, berenang-renang ke tepian.",
+      "tokens": [
+        "ke",
+        "Berakit-rakit",
+        "ke",
+        "tepian",
+        "berenang-renang",
+        "tidak",
+        "hulu",
+        "makan"
+      ],
+      "answer": "Berakit-rakit ke hulu berenang-renang ke tepian",
+      "hint": "經典後半句：Bersakit-sakit dahulu, bersenang-senang kemudian.",
+      "why": "印尼家喻戶曉勉勵學子與奮鬥者的名言，相當於「苦盡甘來」。",
+      "level": 4
+    },
+    "u8:c:2": {
+      "id": "u8:c:2",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "印尼經典成語「Sambil menyelam minum air.」寓意為何？",
+      "audio": "Sambil menyelam minum air.",
+      "answer": "一舉兩得、事半功倍、一石二鳥。",
+      "options": [
+        "貪小便宜最後得不償失。",
+        "千里之行始於足下。",
+        "一舉兩得、事半功倍、一石二鳥。",
+        "時間就是金錢一去不復返。"
+      ],
+      "hint": "字面意思：一邊潛水一邊喝水。",
+      "why": "Sambil menyelam minum air.（一邊潛水一邊喝水。）：比喻在做一件事的同時，順便把另一件有利的事也完成了。",
+      "level": 4
+    },
+    "u8:b:2": {
+      "id": "u8:b:2",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝印尼成語：「一邊潛水一邊喝水。」",
+      "audio": "Sambil menyelam minum air.",
+      "tokens": [
+        "makan",
+        "air",
+        "Sambil",
+        "menyelam",
+        "minum",
+        "tidak"
+      ],
+      "answer": "Sambil menyelam minum air",
+      "hint": "Menyelam 是潛水，minum air 是喝水。",
+      "why": "比喻在做一件事的同時，順便把另一件有利的事也完成了。",
+      "level": 4
+    },
+    "u8:c:3": {
+      "id": "u8:c:3",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "印尼經典成語「Air tenang menghanyutkan.」寓意為何？",
+      "audio": "Air tenang menghanyutkan.",
+      "answer": "大智若愚，看似沈默內斂的人，往往胸藏淵博智慧或不可忽視的力量。",
+      "options": [
+        "時間就是金錢一去不復返。",
+        "千里之行始於足下。",
+        "大智若愚，看似沈默內斂的人，往往胸藏淵博智慧或不可忽視的力量。",
+        "貪小便宜最後得不償失。"
+      ],
+      "hint": "字面意思：平靜的水流往往最深沉、能把人沖走。",
+      "why": "Air tenang menghanyutkan.（平靜的水流往往最深沉、能把人沖走。）：警惕不要因外表平靜少言而輕視他人深厚的實力。",
+      "level": 4
+    },
+    "u8:b:3": {
+      "id": "u8:b:3",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝印尼成語：「平靜的水流往往最深沉、能把人沖走。」",
+      "audio": "Air tenang menghanyutkan.",
+      "tokens": [
+        "Air",
+        "menghanyutkan",
+        "tidak",
+        "tenang",
+        "makan"
+      ],
+      "answer": "Air tenang menghanyutkan",
+      "hint": "Tenang = 平靜，Menghanyutkan = 沖走。",
+      "why": "警惕不要因外表平靜少言而輕視他人深厚的實力。",
+      "level": 4
+    },
+    "u8:c:4": {
+      "id": "u8:c:4",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "印尼經典成語「Lain ladang lain belalang, lain lubuk lain ikannya.」寓意為何？",
+      "audio": "Lain ladang lain belalang, lain lubuk lain ikannya.",
+      "answer": "入境隨俗，各地風俗習慣各有不同，應給予尊重。",
+      "options": [
+        "入境隨俗，各地風俗習慣各有不同，應給予尊重。",
+        "時間就是金錢一去不復返。",
+        "千里之行始於足下。",
+        "貪小便宜最後得不償失。"
+      ],
+      "hint": "字面意思：不同田地有不同蚱蜢，不同水潭有不同魚類。",
+      "why": "Lain ladang lain belalang, lain lubuk lain ikannya.（不同田地有不同蚱蜢，不同水潭有不同魚類。）：印尼萬島之國各族群文化相異，此句是尊重多元文化的至理名言。",
+      "level": 4
+    },
+    "u8:match:1": {
+      "id": "u8:match:1",
+      "kind": "word",
+      "type": "match",
+      "prompt": "配對印尼諺語與對應寓意：",
+      "audio": "Ada gula ada semut, Berakit-rakit ke hulu, Sambil menyelam minum air, Lain ladang lain belalang",
+      "pairs": [
+        [
+          "Ada gula ada semut",
+          "有利益自然吸引人聚"
+        ],
+        [
+          "Berakit-rakit",
+          "先苦後甘，苦盡甘來"
+        ],
+        [
+          "Sambil menyelam",
+          "一舉兩得，事半功倍"
+        ],
+        [
+          "Lain ladang",
+          "入境隨俗，尊重多元"
+        ]
+      ],
+      "answer": "matched",
+      "hint": "Semut 是螞蟻，Menyelam 是潛水。",
+      "why": "文化哲理深沉圓滿！",
+      "level": 4
+    }
+  },
+  "units": {
+    "u8-1": {
+      "guide": {
+        "title": "印尼處世哲學與成語俗諺",
+        "content": "印尼俗諺 (Peribahasa) 深具南洋海島人際和諧與處世智慧。例如「Ada gula ada semut」(有糖有蟻) 與「Berakit-rakit」(苦盡甘來)。"
+      },
+      "nodes": {
+        "u8-1:word": [
+          "u8:c:0",
+          "u8:b:0",
+          "u8:c:1",
+          "u8:b:1",
+          "u8:match:1"
+        ],
+        "u8-1:listen": [
+          "u8:c:0",
+          "u8:b:0",
+          "u8:c:1",
+          "u8:b:1",
+          "u8:match:1"
+        ],
+        "u8-1:build": [
+          "u8:c:0",
+          "u8:b:0",
+          "u8:c:1",
+          "u8:b:1",
+          "u8:match:1"
+        ],
+        "u8-1:drill": [
+          "u8:c:0",
+          "u8:b:0",
+          "u8:c:1",
+          "u8:b:1",
+          "u8:match:1"
+        ],
+        "u8-1:boss": [
+          "u8:c:0",
+          "u8:b:0",
+          "u8:c:1",
+          "u8:b:1",
+          "u8:match:1"
+        ]
+      }
+    },
+    "u8-2": {
+      "guide": {
+        "title": "自然萬物與河流的智慧",
+        "content": "從水流觀察人性的諺語：Air tenang menghanyutkan (靜水流深，大智若愚)；Sambil menyelam minum air (一舉兩得)。"
+      },
+      "nodes": {
+        "u8-2:word": [
+          "u8:c:2",
+          "u8:b:2",
+          "u8:c:3",
+          "u8:b:3",
+          "u8:match:1"
+        ],
+        "u8-2:listen": [
+          "u8:c:2",
+          "u8:b:2",
+          "u8:c:3",
+          "u8:b:3",
+          "u8:match:1"
+        ],
+        "u8-2:build": [
+          "u8:c:2",
+          "u8:b:2",
+          "u8:c:3",
+          "u8:b:3",
+          "u8:match:1"
+        ],
+        "u8-2:drill": [
+          "u8:c:2",
+          "u8:b:2",
+          "u8:c:3",
+          "u8:b:3",
+          "u8:match:1"
+        ],
+        "u8-2:boss": [
+          "u8:c:2",
+          "u8:b:2",
+          "u8:c:3",
+          "u8:b:3",
+          "u8:match:1"
+        ]
+      }
+    },
+    "u8-3": {
+      "guide": {
+        "title": "雙城記：雅加達與泗水的文化對比",
+        "content": "雅加達節奏快速、流行語交織；泗水民風豪爽直率 (Arek Suroboyo)，兩地語言在禮貌度與詞彙使用上各有迷人風貌。"
+      },
+      "nodes": {
+        "u8-3:word": [
+          "u8:c:4",
+          "u8:match:1"
+        ],
+        "u8-3:listen": [
+          "u8:c:4",
+          "u8:match:1"
+        ],
+        "u8-3:build": [
+          "u8:c:4",
+          "u8:match:1"
+        ],
+        "u8-3:drill": [
+          "u8:c:4",
+          "u8:match:1"
+        ],
+        "u8-3:boss": [
+          "u8:c:4",
+          "u8:match:1"
+        ]
+      }
+    }
+  }
+}

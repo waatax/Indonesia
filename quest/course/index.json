@@ -1,0 +1,1181 @@
+{
+  "version": "2026-10-27.indo.v1",
+  "language": "id",
+  "targetLangName": "Bahasa Indonesia",
+  "sections": [
+    {
+      "id": "s1",
+      "no": 1,
+      "title": "第一步：開口打招呼與字母發音",
+      "level": "Pre-A1 (BIPA 1 入門)",
+      "color": "green",
+      "icon": "👋",
+      "units": [
+        {
+          "id": "u1-1",
+          "title": "初次相遇：日常問候與道別",
+          "icon": "🌱",
+          "color": "green",
+          "level": "Pre-A1 (BIPA 1 入門)",
+          "nodes": [
+            {
+              "id": "u1-1:word",
+              "kind": "word",
+              "title": "核心單字與發音",
+              "icon": "🔤",
+              "size": 8
+            },
+            {
+              "id": "u1-1:listen",
+              "kind": "listen",
+              "title": "聽力與語音辨識",
+              "icon": "👂",
+              "size": 8
+            },
+            {
+              "id": "u1-1:build",
+              "kind": "build",
+              "title": "積木組句與句型",
+              "icon": "🧱",
+              "size": 8
+            },
+            {
+              "id": "u1-1:drill",
+              "kind": "drill",
+              "title": "實戰應用訓練",
+              "icon": "🎯",
+              "size": 8
+            },
+            {
+              "id": "u1-1:boss",
+              "kind": "boss",
+              "title": "單元通關挑戰",
+              "icon": "🏆",
+              "size": 10
+            }
+          ]
+        },
+        {
+          "id": "u1-2",
+          "title": "認識你真好：自我介紹與名字",
+          "icon": "🙋",
+          "color": "teal",
+          "level": "Pre-A1 (BIPA 1 入門)",
+          "nodes": [
+            {
+              "id": "u1-2:word",
+              "kind": "word",
+              "title": "核心單字與發音",
+              "icon": "🔤",
+              "size": 8
+            },
+            {
+              "id": "u1-2:listen",
+              "kind": "listen",
+              "title": "聽力與語音辨識",
+              "icon": "👂",
+              "size": 8
+            },
+            {
+              "id": "u1-2:build",
+              "kind": "build",
+              "title": "積木組句與句型",
+              "icon": "🧱",
+              "size": 8
+            },
+            {
+              "id": "u1-2:drill",
+              "kind": "drill",
+              "title": "實戰應用訓練",
+              "icon": "🎯",
+              "size": 8
+            },
+            {
+              "id": "u1-2:boss",
+              "kind": "boss",
+              "title": "單元通關挑戰",
+              "icon": "🏆",
+              "size": 10
+            }
+          ]
+        },
+        {
+          "id": "u1-3",
+          "title": "字母發音與神奇母音",
+          "icon": "🔤",
+          "color": "sky",
+          "level": "Pre-A1 (BIPA 1 入門)",
+          "nodes": [
+            {
+              "id": "u1-3:word",
+              "kind": "word",
+              "title": "核心單字與發音",
+              "icon": "🔤",
+              "size": 8
+            },
+            {
+              "id": "u1-3:listen",
+              "kind": "listen",
+              "title": "聽力與語音辨識",
+              "icon": "👂",
+              "size": 8
+            },
+            {
+              "id": "u1-3:build",
+              "kind": "build",
+              "title": "積木組句與句型",
+              "icon": "🧱",
+              "size": 8
+            },
+            {
+              "id": "u1-3:drill",
+              "kind": "drill",
+              "title": "實戰應用訓練",
+              "icon": "🎯",
+              "size": 8
+            },
+            {
+              "id": "u1-3:boss",
+              "kind": "boss",
+              "title": "單元通關挑戰",
+              "icon": "🏆",
+              "size": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "no": 2,
+      "title": "生活日常：數字、時間與人稱代名詞",
+      "level": "A1 (BIPA 1 基礎)",
+      "color": "sky",
+      "icon": "🔢",
+      "units": [
+        {
+          "id": "u2-1",
+          "title": "印尼數字 1–100 與算錢計價",
+          "icon": "🪙",
+          "color": "sky",
+          "level": "A1 (BIPA 1 基礎)",
+          "nodes": [
+            {
+              "id": "u2-1:word",
+              "kind": "word",
+              "title": "核心單字與發音",
+              "icon": "🔤",
+              "size": 8
+            },
+            {
+              "id": "u2-1:listen",
+              "kind": "listen",
+              "title": "聽力與語音辨識",
+              "icon": "👂",
+              "size": 8
+            },
+            {
+              "id": "u2-1:build",
+              "kind": "build",
+              "title": "積木組句與句型",
+              "icon": "🧱",
+              "size": 8
+            },
+            {
+              "id": "u2-1:drill",
+              "kind": "drill",
+              "title": "實戰應用訓練",
+              "icon": "🎯",
+              "size": 8
+            },
+            {
+              "id": "u2-1:boss",
+              "kind": "boss",
+              "title": "單元通關挑戰",
+              "icon": "🏆",
+              "size": 10
+            }
+          ]
+        },
+        {
+          "id": "u2-2",
+          "title": "人稱代名詞與禮貌尊稱",
+          "icon": "👥",
+          "color": "blue",
+          "level": "A1 (BIPA 1 基礎)",
+          "nodes": [
+            {
+              "id": "u2-2:word",
+              "kind": "word",
+              "title": "核心單字與發音",
+              "icon": "🔤",
+              "size": 8
+            },
+            {
+              "id": "u2-2:listen",
+              "kind": "listen",
+              "title": "聽力與語音辨識",
+              "icon": "👂",
+              "size": 8
+            },
+            {
+              "id": "u2-2:build",
+              "kind": "build",
+              "title": "積木組句與句型",
+              "icon": "🧱",
+              "size": 8
+            },
+            {
+              "id": "u2-2:drill",
+              "kind": "drill",
+              "title": "實戰應用訓練",
+              "icon": "🎯",
+              "size": 8
+            },
+            {
+              "id": "u2-2:boss",
+              "kind": "boss",
+              "title": "單元通關挑戰",
+              "icon": "🏆",
+              "size": 10
+            }
+          ]
+        },
+        {
+          "id": "u2-3",
+          "title": "時間、星期與日常作息",
+          "icon": "⏰",
+          "color": "indigo",
+          "level": "A1 (BIPA 1 基礎)",
+          "nodes": [
+            {
+              "id": "u2-3:word",
+              "kind": "word",
+              "title": "核心單字與發音",
+              "icon": "🔤",
+              "size": 8
+            },
+            {
+              "id": "u2-3:listen",
+              "kind": "listen",
+              "title": "聽力與語音辨識",
+              "icon": "👂",
+              "size": 8
+            },
+            {
+              "id": "u2-3:build",
+              "kind": "build",
+              "title": "積木組句與句型",
+              "icon": "🧱",
+              "size": 8
+            },
+            {
+              "id": "u2-3:drill",
+              "kind": "drill",
+              "title": "實戰應用訓練",
+              "icon": "🎯",
+              "size": 8
+            },
+            {
+              "id": "u2-3:boss",
+              "kind": "boss",
+              "title": "單元通關挑戰",
+              "icon": "🏆",
+              "size": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "no": 3,
+      "title": "街頭實戰：印尼小吃、點餐與移動問路",
+      "level": "A1–A2 (BIPA 2 生活)",
+      "color": "orange",
+      "icon": "🍛",
+      "units": [
+        {
+          "id": "u3-1",
+          "title": "街頭美食：印尼炒飯與特色熱飲",
+          "icon": "🍽️",
+          "color": "orange",
+          "level": "A1–A2 (BIPA 2 生活)",
+          "nodes": [
+            {
+              "id": "u3-1:word",
+              "kind": "word",
+              "title": "核心單字與發音",
+              "icon": "🔤",
+              "size": 8
+            },
+            {
+              "id": "u3-1:listen",
+              "kind": "listen",
+              "title": "聽力與語音辨識",
+              "icon": "👂",
+              "size": 8
+            },
+            {
+              "id": "u3-1:build",
+              "kind": "build",
+              "title": "積木組句與句型",
+              "icon": "🧱",
+              "size": 8
+            },
+            {
+              "id": "u3-1:drill",
+              "kind": "drill",
+              "title": "實戰應用訓練",
+              "icon": "🎯",
+              "size": 8
+            },
+            {
+              "id": "u3-1:boss",
+              "kind": "boss",
+              "title": "單元通關挑戰",
+              "icon": "🏆",
+              "size": 10
+            }
+          ]
+        },
+        {
+          "id": "u3-2",
+          "title": "Gojek 摩托叫車與交通對話",
+          "icon": "🛵",
+          "color": "gold",
+          "level": "A1–A2 (BIPA 2 生活)",
+          "nodes": [
+            {
+              "id": "u3-2:word",
+              "kind": "word",
+              "title": "核心單字與發音",
+              "icon": "🔤",
+              "size": 8
+            },
+            {
+              "id": "u3-2:listen",
+              "kind": "listen",
+              "title": "聽力與語音辨識",
+              "icon": "👂",
+              "size": 8
+            },
+            {
+              "id": "u3-2:build",
+              "kind": "build",
+              "title": "積木組句與句型",
+              "icon": "🧱",
+              "size": 8
+            },
+            {
+              "id": "u3-2:drill",
+              "kind": "drill",
+              "title": "實戰應用訓練",
+              "icon": "🎯",
+              "size": 8
+            },
+            {
+              "id": "u3-2:boss",
+              "kind": "boss",
+              "title": "單元通關挑戰",
+              "icon": "🏆",
+              "size": 10
+            }
+          ]
+        },
+        {
+          "id": "u3-3",
+          "title": "城市導航：問路與空間方位",
+          "icon": "🧭",
+          "color": "pink",
+          "level": "A1–A2 (BIPA 2 生活)",
+          "nodes": [
+            {
+              "id": "u3-3:word",
+              "kind": "word",
+              "title": "核心單字與發音",
+              "icon": "🔤",
+              "size": 8
+            },
+            {
+              "id": "u3-3:listen",
+              "kind": "listen",
+              "title": "聽力與語音辨識",
+              "icon": "👂",
+              "size": 8
+            },
+            {
+              "id": "u3-3:build",
+              "kind": "build",
+              "title": "積木組句與句型",
+              "icon": "🧱",
+              "size": 8
+            },
+            {
+              "id": "u3-3:drill",
+              "kind": "drill",
+              "title": "實戰應用訓練",
+              "icon": "🎯",
+              "size": 8
+            },
+            {
+              "id": "u3-3:boss",
+              "kind": "boss",
+              "title": "單元通關挑戰",
+              "icon": "🏆",
+              "size": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "no": 4,
+      "title": "當代生活：QRIS 支付、咖啡社交與殺價",
+      "level": "A2 (BIPA 2 進階)",
+      "color": "pink",
+      "icon": "📱",
+      "units": [
+        {
+          "id": "u4-1",
+          "title": "無現金社會：QRIS 掃碼與拆帳",
+          "icon": "💳",
+          "color": "pink",
+          "level": "A2 (BIPA 2 進階)",
+          "nodes": [
+            {
+              "id": "u4-1:word",
+              "kind": "word",
+              "title": "核心單字與發音",
+              "icon": "🔤",
+              "size": 8
+            },
+            {
+              "id": "u4-1:listen",
+              "kind": "listen",
+              "title": "聽力與語音辨識",
+              "icon": "👂",
+              "size": 8
+            },
+            {
+              "id": "u4-1:build",
+              "kind": "build",
+              "title": "積木組句與句型",
+              "icon": "🧱",
+              "size": 8
+            },
+            {
+              "id": "u4-1:drill",
+              "kind": "drill",
+              "title": "實戰應用訓練",
+              "icon": "🎯",
+              "size": 8
+            },
+            {
+              "id": "u4-1:boss",
+              "kind": "boss",
+              "title": "單元通關挑戰",
+              "icon": "🏆",
+              "size": 10
+            }
+          ]
+        },
+        {
+          "id": "u4-2",
+          "title": "咖啡館社交 (Nongkrong) 與棕櫚糖拿鐵",
+          "icon": "☕",
+          "color": "violet",
+          "level": "A2 (BIPA 2 進階)",
+          "nodes": [
+            {
+              "id": "u4-2:word",
+              "kind": "word",
+              "title": "核心單字與發音",
+              "icon": "🔤",
+              "size": 8
+            },
+            {
+              "id": "u4-2:listen",
+              "kind": "listen",
+              "title": "聽力與語音辨識",
+              "icon": "👂",
+              "size": 8
+            },
+            {
+              "id": "u4-2:build",
+              "kind": "build",
+              "title": "積木組句與句型",
+              "icon": "🧱",
+              "size": 8
+            },
+            {
+              "id": "u4-2:drill",
+              "kind": "drill",
+              "title": "實戰應用訓練",
+              "icon": "🎯",
+              "size": 8
+            },
+            {
+              "id": "u4-2:boss",
+              "kind": "boss",
+              "title": "單元通關挑戰",
+              "icon": "🏆",
+              "size": 10
+            }
+          ]
+        },
+        {
+          "id": "u4-3",
+          "title": "傳統市場與超商實用殺價",
+          "icon": "🛍️",
+          "color": "orange",
+          "level": "A2 (BIPA 2 進階)",
+          "nodes": [
+            {
+              "id": "u4-3:word",
+              "kind": "word",
+              "title": "核心單字與發音",
+              "icon": "🔤",
+              "size": 8
+            },
+            {
+              "id": "u4-3:listen",
+              "kind": "listen",
+              "title": "聽力與語音辨識",
+              "icon": "👂",
+              "size": 8
+            },
+            {
+              "id": "u4-3:build",
+              "kind": "build",
+              "title": "積木組句與句型",
+              "icon": "🧱",
+              "size": 8
+            },
+            {
+              "id": "u4-3:drill",
+              "kind": "drill",
+              "title": "實戰應用訓練",
+              "icon": "🎯",
+              "size": 8
+            },
+            {
+              "id": "u4-3:boss",
+              "kind": "boss",
+              "title": "單元通關挑戰",
+              "icon": "🏆",
+              "size": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "no": 5,
+      "title": "核心詞綴 I：狀態動詞 ber- 與主動及物 meN-",
+      "level": "B1 (BIPA 3 構詞基底)",
+      "color": "violet",
+      "icon": "🧱",
+      "units": [
+        {
+          "id": "u5-1",
+          "title": "狀態與自發動詞：ber- 前綴",
+          "icon": "🧩",
+          "color": "violet",
+          "level": "B1 (BIPA 3 構詞基底)",
+          "nodes": [
+            {
+              "id": "u5-1:word",
+              "kind": "word",
+              "title": "核心單字與發音",
+              "icon": "🔤",
+              "size": 8
+            },
+            {
+              "id": "u5-1:listen",
+              "kind": "listen",
+              "title": "聽力與語音辨識",
+              "icon": "👂",
+              "size": 8
+            },
+            {
+              "id": "u5-1:build",
+              "kind": "build",
+              "title": "積木組句與句型",
+              "icon": "🧱",
+              "size": 8
+            },
+            {
+              "id": "u5-1:drill",
+              "kind": "drill",
+              "title": "實戰應用訓練",
+              "icon": "🎯",
+              "size": 8
+            },
+            {
+              "id": "u5-1:boss",
+              "kind": "boss",
+              "title": "單元通關挑戰",
+              "icon": "🏆",
+              "size": 10
+            }
+          ]
+        },
+        {
+          "id": "u5-2",
+          "title": "及物動詞之王：meN- 六大鼻音同化",
+          "icon": "🌊",
+          "color": "indigo",
+          "level": "B1 (BIPA 3 構詞基底)",
+          "nodes": [
+            {
+              "id": "u5-2:word",
+              "kind": "word",
+              "title": "核心單字與發音",
+              "icon": "🔤",
+              "size": 8
+            },
+            {
+              "id": "u5-2:listen",
+              "kind": "listen",
+              "title": "聽力與語音辨識",
+              "icon": "👂",
+              "size": 8
+            },
+            {
+              "id": "u5-2:build",
+              "kind": "build",
+              "title": "積木組句與句型",
+              "icon": "🧱",
+              "size": 8
+            },
+            {
+              "id": "u5-2:drill",
+              "kind": "drill",
+              "title": "實戰應用訓練",
+              "icon": "🎯",
+              "size": 8
+            },
+            {
+              "id": "u5-2:boss",
+              "kind": "boss",
+              "title": "單元通關挑戰",
+              "icon": "🏆",
+              "size": 10
+            }
+          ]
+        },
+        {
+          "id": "u5-3",
+          "title": "否定雙雄對決：tidak vs bukan 徹底搞懂",
+          "icon": "❌",
+          "color": "red",
+          "level": "B1 (BIPA 3 構詞基底)",
+          "nodes": [
+            {
+              "id": "u5-3:word",
+              "kind": "word",
+              "title": "核心單字與發音",
+              "icon": "🔤",
+              "size": 8
+            },
+            {
+              "id": "u5-3:listen",
+              "kind": "listen",
+              "title": "聽力與語音辨識",
+              "icon": "👂",
+              "size": 8
+            },
+            {
+              "id": "u5-3:build",
+              "kind": "build",
+              "title": "積木組句與句型",
+              "icon": "🧱",
+              "size": 8
+            },
+            {
+              "id": "u5-3:drill",
+              "kind": "drill",
+              "title": "實戰應用訓練",
+              "icon": "🎯",
+              "size": 8
+            },
+            {
+              "id": "u5-3:boss",
+              "kind": "boss",
+              "title": "單元通關挑戰",
+              "icon": "🏆",
+              "size": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "no": 6,
+      "title": "核心詞綴 II：被動 di-、意外 ter- 與名詞化",
+      "level": "B1–B2 (BIPA 4 精熟)",
+      "color": "teal",
+      "icon": "⚙️",
+      "units": [
+        {
+          "id": "u6-1",
+          "title": "自然客觀敘事：di- 被動語態",
+          "icon": "🔄",
+          "color": "teal",
+          "level": "B1–B2 (BIPA 4 精熟)",
+          "nodes": [
+            {
+              "id": "u6-1:word",
+              "kind": "word",
+              "title": "核心單字與發音",
+              "icon": "🔤",
+              "size": 8
+            },
+            {
+              "id": "u6-1:listen",
+              "kind": "listen",
+              "title": "聽力與語音辨識",
+              "icon": "👂",
+              "size": 8
+            },
+            {
+              "id": "u6-1:build",
+              "kind": "build",
+              "title": "積木組句與句型",
+              "icon": "🧱",
+              "size": 8
+            },
+            {
+              "id": "u6-1:drill",
+              "kind": "drill",
+              "title": "實戰應用訓練",
+              "icon": "🎯",
+              "size": 8
+            },
+            {
+              "id": "u6-1:boss",
+              "kind": "boss",
+              "title": "單元通關挑戰",
+              "icon": "🏆",
+              "size": 10
+            }
+          ]
+        },
+        {
+          "id": "u6-2",
+          "title": "無心插柳：ter- 意外態與最高級",
+          "icon": "⚡",
+          "color": "blue",
+          "level": "B1–B2 (BIPA 4 精熟)",
+          "nodes": [
+            {
+              "id": "u6-2:word",
+              "kind": "word",
+              "title": "核心單字與發音",
+              "icon": "🔤",
+              "size": 8
+            },
+            {
+              "id": "u6-2:listen",
+              "kind": "listen",
+              "title": "聽力與語音辨識",
+              "icon": "👂",
+              "size": 8
+            },
+            {
+              "id": "u6-2:build",
+              "kind": "build",
+              "title": "積木組句與句型",
+              "icon": "🧱",
+              "size": 8
+            },
+            {
+              "id": "u6-2:drill",
+              "kind": "drill",
+              "title": "實戰應用訓練",
+              "icon": "🎯",
+              "size": 8
+            },
+            {
+              "id": "u6-2:boss",
+              "kind": "boss",
+              "title": "單元通關挑戰",
+              "icon": "🏆",
+              "size": 10
+            }
+          ]
+        },
+        {
+          "id": "u6-3",
+          "title": "字根變身名詞：peN-、-an 與 ke-...-an",
+          "icon": "📦",
+          "color": "green",
+          "level": "B1–B2 (BIPA 4 精熟)",
+          "nodes": [
+            {
+              "id": "u6-3:word",
+              "kind": "word",
+              "title": "核心單字與發音",
+              "icon": "🔤",
+              "size": 8
+            },
+            {
+              "id": "u6-3:listen",
+              "kind": "listen",
+              "title": "聽力與語音辨識",
+              "icon": "👂",
+              "size": 8
+            },
+            {
+              "id": "u6-3:build",
+              "kind": "build",
+              "title": "積木組句與句型",
+              "icon": "🧱",
+              "size": 8
+            },
+            {
+              "id": "u6-3:drill",
+              "kind": "drill",
+              "title": "實戰應用訓練",
+              "icon": "🎯",
+              "size": 8
+            },
+            {
+              "id": "u6-3:boss",
+              "kind": "boss",
+              "title": "單元通關挑戰",
+              "icon": "🏆",
+              "size": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "no": 7,
+      "title": "雅加達流行口語 (Bahasa Gaul) 與語氣助詞",
+      "level": "B2 (BIPA 5 在地社交)",
+      "color": "gold",
+      "icon": "🔥",
+      "units": [
+        {
+          "id": "u7-1",
+          "title": "道地口語靈魂：sih, dong, kok, deh, nih, tuh",
+          "icon": "💬",
+          "color": "gold",
+          "level": "B2 (BIPA 5 在地社交)",
+          "nodes": [
+            {
+              "id": "u7-1:word",
+              "kind": "word",
+              "title": "核心單字與發音",
+              "icon": "🔤",
+              "size": 8
+            },
+            {
+              "id": "u7-1:listen",
+              "kind": "listen",
+              "title": "聽力與語音辨識",
+              "icon": "👂",
+              "size": 8
+            },
+            {
+              "id": "u7-1:build",
+              "kind": "build",
+              "title": "積木組句與句型",
+              "icon": "🧱",
+              "size": 8
+            },
+            {
+              "id": "u7-1:drill",
+              "kind": "drill",
+              "title": "實戰應用訓練",
+              "icon": "🎯",
+              "size": 8
+            },
+            {
+              "id": "u7-1:boss",
+              "kind": "boss",
+              "title": "單元通關挑戰",
+              "icon": "🏆",
+              "size": 10
+            }
+          ]
+        },
+        {
+          "id": "u7-2",
+          "title": "年輕人縮寫密碼：wkwk, otw, mager, gpp",
+          "icon": "😎",
+          "color": "orange",
+          "level": "B2 (BIPA 5 在地社交)",
+          "nodes": [
+            {
+              "id": "u7-2:word",
+              "kind": "word",
+              "title": "核心單字與發音",
+              "icon": "🔤",
+              "size": 8
+            },
+            {
+              "id": "u7-2:listen",
+              "kind": "listen",
+              "title": "聽力與語音辨識",
+              "icon": "👂",
+              "size": 8
+            },
+            {
+              "id": "u7-2:build",
+              "kind": "build",
+              "title": "積木組句與句型",
+              "icon": "🧱",
+              "size": 8
+            },
+            {
+              "id": "u7-2:drill",
+              "kind": "drill",
+              "title": "實戰應用訓練",
+              "icon": "🎯",
+              "size": 8
+            },
+            {
+              "id": "u7-2:boss",
+              "kind": "boss",
+              "title": "單元通關挑戰",
+              "icon": "🏆",
+              "size": 10
+            }
+          ]
+        },
+        {
+          "id": "u7-3",
+          "title": "Baku 正式書面 vs Gaul 街頭口語無痛切換",
+          "icon": "🔄",
+          "color": "pink",
+          "level": "B2 (BIPA 5 在地社交)",
+          "nodes": [
+            {
+              "id": "u7-3:word",
+              "kind": "word",
+              "title": "核心單字與發音",
+              "icon": "🔤",
+              "size": 8
+            },
+            {
+              "id": "u7-3:listen",
+              "kind": "listen",
+              "title": "聽力與語音辨識",
+              "icon": "👂",
+              "size": 8
+            },
+            {
+              "id": "u7-3:build",
+              "kind": "build",
+              "title": "積木組句與句型",
+              "icon": "🧱",
+              "size": 8
+            },
+            {
+              "id": "u7-3:drill",
+              "kind": "drill",
+              "title": "實戰應用訓練",
+              "icon": "🎯",
+              "size": 8
+            },
+            {
+              "id": "u7-3:boss",
+              "kind": "boss",
+              "title": "單元通關挑戰",
+              "icon": "🏆",
+              "size": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "no": 8,
+      "title": "文化俗諺 (Peribahasa) 與深度跨文化表達",
+      "level": "C1–C2 (BIPA 6 卓越)",
+      "color": "blue",
+      "icon": "🌴",
+      "units": [
+        {
+          "id": "u8-1",
+          "title": "印尼處世哲學：經典成語與俗諺 I",
+          "icon": "📜",
+          "color": "blue",
+          "level": "C1–C2 (BIPA 6 卓越)",
+          "nodes": [
+            {
+              "id": "u8-1:word",
+              "kind": "word",
+              "title": "核心單字與發音",
+              "icon": "🔤",
+              "size": 8
+            },
+            {
+              "id": "u8-1:listen",
+              "kind": "listen",
+              "title": "聽力與語音辨識",
+              "icon": "👂",
+              "size": 8
+            },
+            {
+              "id": "u8-1:build",
+              "kind": "build",
+              "title": "積木組句與句型",
+              "icon": "🧱",
+              "size": 8
+            },
+            {
+              "id": "u8-1:drill",
+              "kind": "drill",
+              "title": "實戰應用訓練",
+              "icon": "🎯",
+              "size": 8
+            },
+            {
+              "id": "u8-1:boss",
+              "kind": "boss",
+              "title": "單元通關挑戰",
+              "icon": "🏆",
+              "size": 10
+            }
+          ]
+        },
+        {
+          "id": "u8-2",
+          "title": "自然與動物智慧：經典成語與俗諺 II",
+          "icon": "🐅",
+          "color": "teal",
+          "level": "C1–C2 (BIPA 6 卓越)",
+          "nodes": [
+            {
+              "id": "u8-2:word",
+              "kind": "word",
+              "title": "核心單字與發音",
+              "icon": "🔤",
+              "size": 8
+            },
+            {
+              "id": "u8-2:listen",
+              "kind": "listen",
+              "title": "聽力與語音辨識",
+              "icon": "👂",
+              "size": 8
+            },
+            {
+              "id": "u8-2:build",
+              "kind": "build",
+              "title": "積木組句與句型",
+              "icon": "🧱",
+              "size": 8
+            },
+            {
+              "id": "u8-2:drill",
+              "kind": "drill",
+              "title": "實戰應用訓練",
+              "icon": "🎯",
+              "size": 8
+            },
+            {
+              "id": "u8-2:boss",
+              "kind": "boss",
+              "title": "單元通關挑戰",
+              "icon": "🏆",
+              "size": 10
+            }
+          ]
+        },
+        {
+          "id": "u8-3",
+          "title": "雙城記與文化思維：雅加達 vs 泗水深入對比",
+          "icon": "🏙️",
+          "color": "indigo",
+          "level": "C1–C2 (BIPA 6 卓越)",
+          "nodes": [
+            {
+              "id": "u8-3:word",
+              "kind": "word",
+              "title": "核心單字與發音",
+              "icon": "🔤",
+              "size": 8
+            },
+            {
+              "id": "u8-3:listen",
+              "kind": "listen",
+              "title": "聽力與語音辨識",
+              "icon": "👂",
+              "size": 8
+            },
+            {
+              "id": "u8-3:build",
+              "kind": "build",
+              "title": "積木組句與句型",
+              "icon": "🧱",
+              "size": 8
+            },
+            {
+              "id": "u8-3:drill",
+              "kind": "drill",
+              "title": "實戰應用訓練",
+              "icon": "🎯",
+              "size": 8
+            },
+            {
+              "id": "u8-3:boss",
+              "kind": "boss",
+              "title": "單元通關挑戰",
+              "icon": "🏆",
+              "size": 10
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "branches": [],
+  "stories": [
+    {
+      "id": "story-01",
+      "title": "叫車初體驗：司機在哪裡？",
+      "icon": "🛵",
+      "level": "A1",
+      "section": "s3"
+    },
+    {
+      "id": "story-02",
+      "title": "小吃攤點餐：少冰微辣！",
+      "icon": "🍜",
+      "level": "A1",
+      "section": "s3"
+    },
+    {
+      "id": "story-03",
+      "title": "咖啡店工作：WiFi 與插座",
+      "icon": "☕",
+      "level": "A2",
+      "section": "s4"
+    },
+    {
+      "id": "story-04",
+      "title": "結帳實戰：QRIS 掃碼拆帳",
+      "icon": "💳",
+      "level": "A2",
+      "section": "s4"
+    },
+    {
+      "id": "story-05",
+      "title": "辦公室社交：週末打算做什麼？",
+      "icon": "💼",
+      "level": "B1",
+      "section": "s7"
+    }
+  ]
+}

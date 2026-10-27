@@ -1,0 +1,259 @@
+{
+  "id": "s7",
+  "items": {
+    "u7:c:0": {
+      "id": "u7:c:0",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "句末加上語氣助詞「dong」（如：Tolong bantu dong!），傳達的語氣是：",
+      "audio": "Bisa minta tolong dong!",
+      "answer": "親近友善的拜託、撒嬌或「當然囉/理所當然」",
+      "options": [
+        "親近友善的拜託、撒嬌或「當然囉/理所當然」",
+        "憤怒嚴肅的斥責",
+        "疑惑反問",
+        "正式書面陳述"
+      ],
+      "hint": "Dong 讓請求變得親切軟化，或表達自信肯定。",
+      "why": "Dong 是印尼社交最討喜的粒子，能迅速拉近人際距離。",
+      "level": 3
+    },
+    "u7:c:1": {
+      "id": "u7:c:1",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "對話中說「Kamu kenapa sih?」，其中的「sih」語氣通常表示：",
+      "audio": "Kamu kenapa sih hari ini?",
+      "answer": "疑惑、微探究或「到底怎麼了嘛」的情緒",
+      "options": [
+        "疑惑、微探究或「到底怎麼了嘛」的情緒",
+        "堅決命令",
+        "宣告放棄",
+        "道別用語"
+      ],
+      "hint": "Sih 常用在疑問句加深好奇或微抱怨口吻。",
+      "why": "Sih 具有探問、求證與微妙情感色彩。",
+      "level": 3
+    },
+    "u7:c:2": {
+      "id": "u7:c:2",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "句子開頭用「Kok...」（如：Kok kamu belum datang?），意思是：",
+      "audio": "Kok kamu belum sampai sekarang?",
+      "answer": "怎麼會.../為什麼（帶著訝異或不解）",
+      "options": [
+        "怎麼會.../為什麼（帶著訝異或不解）",
+        "如果...的話",
+        "謝謝你",
+        "恭喜你"
+      ],
+      "hint": "Kok 是 Kenapa (為什麼) 的超高頻口語替代詞。",
+      "why": "Kok 代表帶著驚訝好奇的「怎麼會這樣？」。",
+      "level": 3
+    },
+    "u7:c:3": {
+      "id": "u7:c:3",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "印尼年輕人常說「Lagi mager nih.」，其中「mager」是哪兩個字的縮寫？",
+      "audio": "Aduh lagi mager banget nih.",
+      "answer": "Males gerak (懶得動、不想動)",
+      "options": [
+        "Males gerak (懶得動、不想動)",
+        "Makan burger",
+        "Malam gemerlap",
+        "Mau gereja"
+      ],
+      "hint": "Males = 懶惰，Gerak = 移動。",
+      "why": "Mager = Malas gerak，是印尼年輕世代最經典的網路流行縮寫！",
+      "level": 3
+    },
+    "u7:c:4": {
+      "id": "u7:c:4",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "在 WhatsApp 簡訊聊天時，對方回覆「gpp」，意思相當於中文的：",
+      "audio": "Gak apa-apa santai aja.",
+      "answer": "沒關係、沒事 (Gak apa-apa)",
+      "options": [
+        "沒關係、沒事 (Gak apa-apa)",
+        "快點來",
+        "很高興",
+        "不贊成"
+      ],
+      "hint": "G (gak) + P (apa) + P (apa)",
+      "why": "Gpp = Gak apa-apa (沒事啦/不打緊)，訊息回覆頻率極高。",
+      "level": 3
+    },
+    "u7:c:5": {
+      "id": "u7:c:5",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "正式書面語（Bahasa Baku）的「Tidak apa-apa」，在雅加達口語最地道的說法是：",
+      "audio": "Gak apa-apa kok, tenang saja.",
+      "answer": "Gak apa-apa / Gpp",
+      "options": [
+        "Gak apa-apa / Gpp",
+        "Bukan apa-apa",
+        "Tiada apa",
+        "Jangan apa"
+      ],
+      "hint": "雅加達口語將 tidak 口語化為 gak 或 enggak。",
+      "why": "Tidak -> gak 是現代印尼口語的最顯著特徵。",
+      "level": 3
+    },
+    "u7:c:6": {
+      "id": "u7:c:6",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "書面語「Sudah」(已經)，在印尼街頭年輕人口中通常簡化說成：",
+      "audio": "Udah selesai dari tadi.",
+      "answer": "Udah",
+      "options": [
+        "Udah",
+        "Sudahan",
+        "Adah",
+        "Telahan"
+      ],
+      "hint": "Sudah -> Udah (省去字首 S)。",
+      "why": "Sudah -> udah, Tidak -> gak 是印尼日常口語兩大基石。",
+      "level": 3
+    },
+    "u7:match:1": {
+      "id": "u7:match:1",
+      "kind": "word",
+      "type": "match",
+      "prompt": "配對印尼社群縮寫與真諦：",
+      "audio": "mager, gpp, otw, bucin",
+      "pairs": [
+        [
+          "mager",
+          "懶得動 (malas gerak)"
+        ],
+        [
+          "gpp",
+          "沒關係 (gak apa-apa)"
+        ],
+        [
+          "otw",
+          "在路上了 (on the way)"
+        ],
+        [
+          "bucin",
+          "戀愛腦 (budak cinta)"
+        ]
+      ],
+      "answer": "matched",
+      "hint": "Bucin 是戀愛奴隸，mager 是懶惰移動。",
+      "why": "雅加達潮人認證通過！",
+      "level": 3
+    }
+  },
+  "units": {
+    "u7-1": {
+      "guide": {
+        "title": "語氣助詞大師班：dong, sih, kok, deh",
+        "content": "語氣助詞是印尼會話的靈魂。Dong (親切請求/當然)、Sih (探問/到底)、Kok (訝異反問為何)、Deh (勸誘/好啦就這樣)。"
+      },
+      "nodes": {
+        "u7-1:word": [
+          "u7:c:0",
+          "u7:c:1",
+          "u7:c:2",
+          "u7:match:1"
+        ],
+        "u7-1:listen": [
+          "u7:c:0",
+          "u7:c:1",
+          "u7:c:2",
+          "u7:match:1"
+        ],
+        "u7-1:build": [
+          "u7:c:0",
+          "u7:c:1",
+          "u7:c:2",
+          "u7:match:1"
+        ],
+        "u7-1:drill": [
+          "u7:c:0",
+          "u7:c:1",
+          "u7:c:2",
+          "u7:match:1"
+        ],
+        "u7-1:boss": [
+          "u7:c:0",
+          "u7:c:1",
+          "u7:c:2",
+          "u7:match:1"
+        ]
+      }
+    },
+    "u7-2": {
+      "guide": {
+        "title": "印尼 TikTok 與 WhatsApp 流行縮寫",
+        "content": "掌握當代縮寫：mager (懶得動)、gabut (發呆無聊)、bucin (戀愛腦)、kepo (八卦好管閒事)、gpp (沒事)。"
+      },
+      "nodes": {
+        "u7-2:word": [
+          "u7:c:3",
+          "u7:c:4",
+          "u7:match:1"
+        ],
+        "u7-2:listen": [
+          "u7:c:3",
+          "u7:c:4",
+          "u7:match:1"
+        ],
+        "u7-2:build": [
+          "u7:c:3",
+          "u7:c:4",
+          "u7:match:1"
+        ],
+        "u7-2:drill": [
+          "u7:c:3",
+          "u7:c:4",
+          "u7:match:1"
+        ],
+        "u7-2:boss": [
+          "u7:c:3",
+          "u7:c:4",
+          "u7:match:1"
+        ]
+      }
+    },
+    "u7-3": {
+      "guide": {
+        "title": "正式語體 (Baku) 與街頭語體 (Gaul) 互轉",
+        "content": "Tidak 轉為 Gak、Sudah 轉為 Udah、Bisa 轉為 Bisa dong、動詞前綴 meN- 常在口語中自然脫落。懂得切換才算真正精通印尼語！"
+      },
+      "nodes": {
+        "u7-3:word": [
+          "u7:c:5",
+          "u7:c:6",
+          "u7:match:1"
+        ],
+        "u7-3:listen": [
+          "u7:c:5",
+          "u7:c:6",
+          "u7:match:1"
+        ],
+        "u7-3:build": [
+          "u7:c:5",
+          "u7:c:6",
+          "u7:match:1"
+        ],
+        "u7-3:drill": [
+          "u7:c:5",
+          "u7:c:6",
+          "u7:match:1"
+        ],
+        "u7-3:boss": [
+          "u7:c:5",
+          "u7:c:6",
+          "u7:match:1"
+        ]
+      }
+    }
+  }
+}

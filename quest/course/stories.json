@@ -1,0 +1,108 @@
+{
+  "stories": {
+    "story-01": {
+      "id": "story-01",
+      "title": "叫車初體驗：司機在哪裡？",
+      "icon": "🛵",
+      "steps": [
+        {
+          "id": "st1-1",
+          "type": "choice",
+          "kind": "talk",
+          "speaker": "Driver",
+          "audio": "Halo Kak, penjemputan sesuai titik di depan stasiun ya?",
+          "prompt": "司機發來訊息：「Halo Kak, penjemputan sesuai titik di depan stasiun ya?」他在詢問什麼？",
+          "options": [
+            "上車點是否照著車站前的地圖定位點？",
+            "請問你身上帶了多少印尼盾現金？",
+            "是否可以改去別的地方載你？"
+          ],
+          "answer": "上車點是否照著車站前的地圖定位點？",
+          "hint": "Titik = 地圖定位點，Stasiun = 車站。",
+          "why": "Sesuai titik 是確認定位點對不對。"
+        },
+        {
+          "id": "st1-2",
+          "type": "build",
+          "kind": "talk",
+          "prompt": "請回覆司機：「是的，我穿白衣服在出口等您。」",
+          "audio": "Iya Pak, saya pakai baju putih di pintu keluar.",
+          "tokens": [
+            "Iya",
+            "Pak,",
+            "saya",
+            "pakai",
+            "baju",
+            "putih",
+            "di",
+            "pintu",
+            "keluar."
+          ],
+          "answer": "Iya Pak, saya pakai baju putih di pintu keluar.",
+          "hint": "baju putih = 白衣服, pintu keluar = 出口",
+          "why": "特徵交代清楚，司機能一眼認出你！"
+        },
+        {
+          "id": "st1-3",
+          "type": "choice",
+          "kind": "talk",
+          "speaker": "Driver",
+          "audio": "Baik Kak, saya sudah sampai di lobi pakai jaket hijau helm hitam.",
+          "prompt": "司機回覆說他穿什麼？",
+          "options": [
+            "綠色外套與黑色安全帽",
+            "藍色雨衣與紅色安全帽",
+            "白色制服與墨鏡"
+          ],
+          "answer": "綠色外套與黑色安全帽",
+          "hint": "Hijau = 綠色, Hitam = 黑色。Gojek 招牌綠色外套！",
+          "why": "Jaket hijau helm hitam 是經典司機裝扮。"
+        }
+      ]
+    },
+    "story-02": {
+      "id": "story-02",
+      "title": "小吃攤點餐：少冰微辣！",
+      "icon": "🍜",
+      "steps": [
+        {
+          "id": "st2-1",
+          "type": "build",
+          "kind": "talk",
+          "prompt": "向老闆點一份炒飯與一杯甜冰茶：",
+          "audio": "Mau pesan nasi goreng satu dan es teh manis satu.",
+          "tokens": [
+            "Mau",
+            "pesan",
+            "nasi",
+            "goreng",
+            "satu",
+            "dan",
+            "es",
+            "teh",
+            "manis",
+            "satu."
+          ],
+          "answer": "Mau pesan nasi goreng satu dan es teh manis satu.",
+          "hint": "Mau pesan = 我要點餐",
+          "why": "最經典美味的印尼小吃組合！"
+        },
+        {
+          "id": "st2-2",
+          "type": "choice",
+          "kind": "talk",
+          "prompt": "老闆問：「Pedasnya mau gimana, Kak?」（辣度要如何？），你想吃微辣，該怎麼回答？",
+          "audio": "Pedas sedang saja ya Mas.",
+          "options": [
+            "Pedas sedang saja ya Mas.",
+            "Pedas gila banyak cabai!",
+            "Gak mau makan."
+          ],
+          "answer": "Pedas sedang saja ya Mas.",
+          "hint": "Pedas sedang = 中辣/微辣",
+          "why": "Pedas sedang saja 表示適度辣度即可。"
+        }
+      ]
+    }
+  }
+}
