@@ -79,6 +79,42 @@
       "id": "u8:c:2",
       "kind": "grammar",
       "type": "choice",
+      "prompt": "印尼經典成語「Besar pasak daripada tiang.」寓意為何？",
+      "audio": "Besar pasak daripada tiang.",
+      "answer": "入不敷出、花費超出收入能力。",
+      "options": [
+        "入不敷出、花費超出收入能力。",
+        "千里之行始於足下。",
+        "時間就是金錢一去不復返。",
+        "貪小便宜最後得不償失。"
+      ],
+      "hint": "字面意思：榫頭比柱子還要粗大。",
+      "why": "Besar pasak daripada tiang.（榫頭比柱子還要粗大。）：勸誡人們理財要量入為出，切勿過度揮霍。",
+      "level": 4
+    },
+    "u8:b:2": {
+      "id": "u8:b:2",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝印尼成語：「榫頭比柱子還要粗大。」",
+      "audio": "Besar pasak daripada tiang.",
+      "tokens": [
+        "pasak",
+        "Besar",
+        "tiang",
+        "daripada",
+        "tidak",
+        "makan"
+      ],
+      "answer": "Besar pasak daripada tiang",
+      "hint": "pasak 是木樁榫釘，tiang 是房屋樑柱。",
+      "why": "勸誡人們理財要量入為出，切勿過度揮霍。",
+      "level": 4
+    },
+    "u8:c:3": {
+      "id": "u8:c:3",
+      "kind": "grammar",
+      "type": "choice",
       "prompt": "印尼經典成語「Sambil menyelam minum air.」寓意為何？",
       "audio": "Sambil menyelam minum air.",
       "answer": "一舉兩得、事半功倍、一石二鳥。",
@@ -92,8 +128,8 @@
       "why": "Sambil menyelam minum air.（一邊潛水一邊喝水。）：比喻在做一件事的同時，順便把另一件有利的事也完成了。",
       "level": 4
     },
-    "u8:b:2": {
-      "id": "u8:b:2",
+    "u8:b:3": {
+      "id": "u8:b:3",
       "kind": "drill",
       "type": "build",
       "prompt": "請組裝印尼成語：「一邊潛水一邊喝水。」",
@@ -111,8 +147,8 @@
       "why": "比喻在做一件事的同時，順便把另一件有利的事也完成了。",
       "level": 4
     },
-    "u8:c:3": {
-      "id": "u8:c:3",
+    "u8:c:4": {
+      "id": "u8:c:4",
       "kind": "grammar",
       "type": "choice",
       "prompt": "印尼經典成語「Air tenang menghanyutkan.」寓意為何？",
@@ -128,8 +164,8 @@
       "why": "Air tenang menghanyutkan.（平靜的水流往往最深沉、能把人沖走。）：警惕不要因外表平靜少言而輕視他人深厚的實力。",
       "level": 4
     },
-    "u8:b:3": {
-      "id": "u8:b:3",
+    "u8:b:4": {
+      "id": "u8:b:4",
       "kind": "drill",
       "type": "build",
       "prompt": "請組裝印尼成語：「平靜的水流往往最深沉、能把人沖走。」",
@@ -146,8 +182,44 @@
       "why": "警惕不要因外表平靜少言而輕視他人深厚的實力。",
       "level": 4
     },
-    "u8:c:4": {
-      "id": "u8:c:4",
+    "u8:c:5": {
+      "id": "u8:c:5",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "印尼經典成語「Bagai katak dalam tempurung.」寓意為何？",
+      "audio": "Bagai katak dalam tempurung.",
+      "answer": "井底之蛙，眼界狹隘、見識淺陋。",
+      "options": [
+        "井底之蛙，眼界狹隘、見識淺陋。",
+        "貪小便宜最後得不償失。",
+        "時間就是金錢一去不復返。",
+        "千里之行始於足下。"
+      ],
+      "hint": "字面意思：宛如椰子殼下遮蔽的青蛙。",
+      "why": "Bagai katak dalam tempurung.（宛如椰子殼下遮蔽的青蛙。）：形容目光短淺不知天高地厚。",
+      "level": 4
+    },
+    "u8:b:5": {
+      "id": "u8:b:5",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝印尼成語：「宛如椰子殼下遮蔽的青蛙。」",
+      "audio": "Bagai katak dalam tempurung.",
+      "tokens": [
+        "makan",
+        "tempurung",
+        "dalam",
+        "tidak",
+        "katak",
+        "Bagai"
+      ],
+      "answer": "Bagai katak dalam tempurung",
+      "hint": "tempurung 是堅硬的半邊椰子殼。",
+      "why": "形容目光短淺不知天高地厚。",
+      "level": 4
+    },
+    "u8:c:6": {
+      "id": "u8:c:6",
       "kind": "grammar",
       "type": "choice",
       "prompt": "印尼經典成語「Lain ladang lain belalang, lain lubuk lain ikannya.」寓意為何？",
@@ -161,6 +233,243 @@
       ],
       "hint": "字面意思：不同田地有不同蚱蜢，不同水潭有不同魚類。",
       "why": "Lain ladang lain belalang, lain lubuk lain ikannya.（不同田地有不同蚱蜢，不同水潭有不同魚類。）：印尼萬島之國各族群文化相異，此句是尊重多元文化的至理名言。",
+      "level": 4
+    },
+    "u8:c:7": {
+      "id": "u8:c:7",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "印尼經典成語「Berat sama dipikul, ringan sama dijinjing.」寓意為何？",
+      "audio": "Berat sama dipikul, ringan sama dijinjing.",
+      "answer": "同甘共苦、守望相助（印尼 Gotong Royong 互助國魂）。",
+      "options": [
+        "貪小便宜最後得不償失。",
+        "同甘共苦、守望相助（印尼 Gotong Royong 互助國魂）。",
+        "千里之行始於足下。",
+        "時間就是金錢一去不復返。"
+      ],
+      "hint": "字面意思：重物一同扛肩上，輕物一同提手裡。",
+      "why": "Berat sama dipikul, ringan sama dijinjing.（重物一同扛肩上，輕物一同提手裡。）：體現印尼深層核心價值觀 Gotong Royong (互助共榮)。",
+      "level": 4
+    },
+    "u8:b:7": {
+      "id": "u8:b:7",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝印尼成語：「重物一同扛肩上，輕物一同提手裡。」",
+      "audio": "Berat sama dipikul, ringan sama dijinjing.",
+      "tokens": [
+        "Berat",
+        "makan",
+        "sama",
+        "ringan",
+        "dipikul",
+        "sama",
+        "dijinjing",
+        "tidak"
+      ],
+      "answer": "Berat sama dipikul ringan sama dijinjing",
+      "hint": "Pikul = 肩扛, Jinjing = 手提。",
+      "why": "體現印尼深層核心價值觀 Gotong Royong (互助共榮)。",
+      "level": 4
+    },
+    "u8:c:8": {
+      "id": "u8:c:8",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "印尼經典成語「Air beriak tanda tak dalam.」寓意為何？",
+      "audio": "Air beriak tanda tak dalam.",
+      "answer": "半瓶醋響叮噹，愛誇誇其談的人往往學識淺薄。",
+      "options": [
+        "貪小便宜最後得不償失。",
+        "時間就是金錢一去不復返。",
+        "千里之行始於足下。",
+        "半瓶醋響叮噹，愛誇誇其談的人往往學識淺薄。"
+      ],
+      "hint": "字面意思：水面漣漪喧鬧，表示水深不深。",
+      "why": "Air beriak tanda tak dalam.（水面漣漪喧鬧，表示水深不深。）：告誡人要謙遜沉穩，話多誇大者往往缺乏真才實學。",
+      "level": 4
+    },
+    "u8:b:8": {
+      "id": "u8:b:8",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝印尼成語：「水面漣漪喧鬧，表示水深不深。」",
+      "audio": "Air beriak tanda tak dalam.",
+      "tokens": [
+        "beriak",
+        "tanda",
+        "tidak",
+        "makan",
+        "Air",
+        "dalam",
+        "tak"
+      ],
+      "answer": "Air beriak tanda tak dalam",
+      "hint": "Beriak 是表面起波浪漣漪，Tak dalam 是不深。",
+      "why": "告誡人要謙遜沉穩，話多誇大者往往缺乏真才實學。",
+      "level": 4
+    },
+    "u8:c:9": {
+      "id": "u8:c:9",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "印尼經典成語「Tong kosong nyaring bunyinya.」寓意為何？",
+      "audio": "Tong kosong nyaring bunyinya.",
+      "answer": "虛有其表、肚裡沒貨的人，說起大話來比誰都大聲。",
+      "options": [
+        "時間就是金錢一去不復返。",
+        "貪小便宜最後得不償失。",
+        "虛有其表、肚裡沒貨的人，說起大話來比誰都大聲。",
+        "千里之行始於足下。"
+      ],
+      "hint": "字面意思：空水桶敲起來聲音最響亮。",
+      "why": "Tong kosong nyaring bunyinya.（空水桶敲起來聲音最響亮。）：印尼最家喻戶曉諷刺吹噓之人的經典成語。",
+      "level": 4
+    },
+    "u8:b:9": {
+      "id": "u8:b:9",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝印尼成語：「空水桶敲起來聲音最響亮。」",
+      "audio": "Tong kosong nyaring bunyinya.",
+      "tokens": [
+        "kosong",
+        "nyaring",
+        "bunyinya",
+        "tidak",
+        "Tong",
+        "makan"
+      ],
+      "answer": "Tong kosong nyaring bunyinya",
+      "hint": "Tong = 鐵桶木桶, Kosong = 空的, Nyaring = 響亮清脆。",
+      "why": "印尼最家喻戶曉諷刺吹噓之人的經典成語。",
+      "level": 4
+    },
+    "u8:c:10": {
+      "id": "u8:c:10",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "印尼經典成語「Ada asap ada api.」寓意為何？",
+      "audio": "Ada asap ada api.",
+      "answer": "無風不起浪、事出必有因。",
+      "options": [
+        "時間就是金錢一去不復返。",
+        "千里之行始於足下。",
+        "無風不起浪、事出必有因。",
+        "貪小便宜最後得不償失。"
+      ],
+      "hint": "字面意思：有濃煙必有烈火。",
+      "why": "Ada asap ada api.（有濃煙必有烈火。）：傳言謠言或某事發生，背後必定有其真實的根源。",
+      "level": 4
+    },
+    "u8:b:10": {
+      "id": "u8:b:10",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝印尼成語：「有濃煙必有烈火。」",
+      "audio": "Ada asap ada api.",
+      "tokens": [
+        "asap",
+        "api",
+        "tidak",
+        "ada",
+        "makan",
+        "Ada"
+      ],
+      "answer": "Ada asap ada api",
+      "hint": "Asap 是煙霧，Api 是火。",
+      "why": "傳言謠言或某事發生，背後必定有其真實的根源。",
+      "level": 4
+    },
+    "u8:c:11": {
+      "id": "u8:c:11",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "印尼經典成語「Gajah di pelupuk mata tidak tampak.」寓意為何？",
+      "audio": "Gajah di pelupuk mata tidak tampak.",
+      "answer": "嚴以律人寬以待己，對自己顯眼的盲點視而不見。",
+      "options": [
+        "時間就是金錢一去不復返。",
+        "貪小便宜最後得不償失。",
+        "嚴以律人寬以待己，對自己顯眼的盲點視而不見。",
+        "千里之行始於足下。"
+      ],
+      "hint": "字面意思：眼皮前的大象看不見。",
+      "why": "Gajah di pelupuk mata tidak tampak.（眼皮前的大象看不見。）：深刻揭示人性盲點的印尼國寶級警世格言。",
+      "level": 4
+    },
+    "u8:b:11": {
+      "id": "u8:b:11",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝印尼成語：「眼皮前的大象看不見。」",
+      "audio": "Gajah di pelupuk mata tidak tampak.",
+      "tokens": [
+        "mata",
+        "tidak",
+        "tampak",
+        "pelupuk",
+        "di",
+        "tidak",
+        "Gajah",
+        "makan"
+      ],
+      "answer": "Gajah di pelupuk mata tidak tampak",
+      "hint": "Gajah = 大象, Pelupuk mata = 眼皮眼睫。",
+      "why": "深刻揭示人性盲點的印尼國寶級警世格言。",
+      "level": 4
+    },
+    "u8:c:12": {
+      "id": "u8:c:12",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "印尼經典成語「Di mana bumi dipijak di situ langit dijunjung.」寓意為何？",
+      "audio": "Di mana bumi dipijak di situ langit dijunjung.",
+      "answer": "入境隨俗、入鄉問禁，尊重並融入當地的法律與文化禮俗。",
+      "options": [
+        "入境隨俗、入鄉問禁，尊重並融入當地的法律與文化禮俗。",
+        "時間就是金錢一去不復返。",
+        "貪小便宜最後得不償失。",
+        "千里之行始於足下。"
+      ],
+      "hint": "字面意思：腳踩在哪一方土地，頭頂就當敬重哪一片青天。",
+      "why": "Di mana bumi dipijak di situ langit dijunjung.（腳踩在哪一方土地，頭頂就當敬重哪一片青天。）：印尼跨族群跨島嶼交往最重要的最高指導原則。",
+      "level": 4
+    },
+    "u8:c:13": {
+      "id": "u8:c:13",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "印尼經典成語「Bhinneka Tunggal Ika.」寓意為何？",
+      "audio": "Bhinneka Tunggal Ika.",
+      "answer": "殊途同歸、多元一體（印尼建國核心國徽箴言）。",
+      "options": [
+        "千里之行始於足下。",
+        "殊途同歸、多元一體（印尼建國核心國徽箴言）。",
+        "貪小便宜最後得不償失。",
+        "時間就是金錢一去不復返。"
+      ],
+      "hint": "字面意思：縱有千般相異，本質合為一體。",
+      "why": "Bhinneka Tunggal Ika.（縱有千般相異，本質合為一體。）：印尼最核心的文化國家精神：多元一體，包容並蓄。",
+      "level": 4
+    },
+    "u8:b:13": {
+      "id": "u8:b:13",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝印尼成語：「縱有千般相異，本質合為一體。」",
+      "audio": "Bhinneka Tunggal Ika.",
+      "tokens": [
+        "Ika",
+        "tidak",
+        "Tunggal",
+        "Bhinneka",
+        "makan"
+      ],
+      "answer": "Bhinneka Tunggal Ika",
+      "hint": "源自爪哇古語，凝聚全印尼上千族群的和諧之魂。",
+      "why": "印尼最核心的文化國家精神：多元一體，包容並蓄。",
       "level": 4
     },
     "u8:match:1": {
@@ -205,34 +514,49 @@
           "u8:b:0",
           "u8:c:1",
           "u8:b:1",
-          "u8:match:1"
+          "u8:c:2",
+          "u8:b:2",
+          "u8:c:8",
+          "u8:b:8"
         ],
         "u8-1:listen": [
           "u8:c:0",
           "u8:b:0",
           "u8:c:1",
           "u8:b:1",
-          "u8:match:1"
+          "u8:c:2",
+          "u8:b:2",
+          "u8:c:8",
+          "u8:b:8"
         ],
         "u8-1:build": [
-          "u8:c:0",
           "u8:b:0",
-          "u8:c:1",
           "u8:b:1",
-          "u8:match:1"
+          "u8:b:2",
+          "u8:b:8",
+          "u8:b:9"
         ],
         "u8-1:drill": [
           "u8:c:0",
           "u8:b:0",
           "u8:c:1",
           "u8:b:1",
-          "u8:match:1"
+          "u8:c:2",
+          "u8:b:2",
+          "u8:c:8",
+          "u8:b:8"
         ],
         "u8-1:boss": [
           "u8:c:0",
           "u8:b:0",
           "u8:c:1",
           "u8:b:1",
+          "u8:c:2",
+          "u8:b:2",
+          "u8:c:8",
+          "u8:b:8",
+          "u8:c:9",
+          "u8:b:9",
           "u8:match:1"
         ]
       }
@@ -240,70 +564,110 @@
     "u8-2": {
       "guide": {
         "title": "自然萬物與河流的智慧",
-        "content": "從水流觀察人性的諺語：Air tenang menghanyutkan (靜水流深，大智若愚)；Sambil menyelam minum air (一舉兩得)。"
+        "content": "從水流觀察人性的諺語：Air tenang menghanyutkan (靜水流深，大智若愚)；Sambil menyelam minum air (一舉兩得)；Bagai katak dalam tempurung (井底之蛙)。"
       },
       "nodes": {
         "u8-2:word": [
-          "u8:c:2",
-          "u8:b:2",
           "u8:c:3",
           "u8:b:3",
-          "u8:match:1"
+          "u8:c:4",
+          "u8:b:4",
+          "u8:c:5",
+          "u8:b:5",
+          "u8:c:10",
+          "u8:b:10"
         ],
         "u8-2:listen": [
-          "u8:c:2",
-          "u8:b:2",
           "u8:c:3",
           "u8:b:3",
-          "u8:match:1"
+          "u8:c:4",
+          "u8:b:4",
+          "u8:c:5",
+          "u8:b:5",
+          "u8:c:10",
+          "u8:b:10"
         ],
         "u8-2:build": [
-          "u8:c:2",
-          "u8:b:2",
-          "u8:c:3",
           "u8:b:3",
-          "u8:match:1"
+          "u8:b:4",
+          "u8:b:5",
+          "u8:b:10",
+          "u8:b:11"
         ],
         "u8-2:drill": [
-          "u8:c:2",
-          "u8:b:2",
           "u8:c:3",
           "u8:b:3",
-          "u8:match:1"
+          "u8:c:4",
+          "u8:b:4",
+          "u8:c:5",
+          "u8:b:5",
+          "u8:c:10",
+          "u8:b:10"
         ],
         "u8-2:boss": [
-          "u8:c:2",
-          "u8:b:2",
           "u8:c:3",
           "u8:b:3",
+          "u8:c:4",
+          "u8:b:4",
+          "u8:c:5",
+          "u8:b:5",
+          "u8:c:10",
+          "u8:b:10",
+          "u8:c:11",
+          "u8:b:11",
           "u8:match:1"
         ]
       }
     },
     "u8-3": {
       "guide": {
-        "title": "雙城記：雅加達與泗水的文化對比",
-        "content": "雅加達節奏快速、流行語交織；泗水民風豪爽直率 (Arek Suroboyo)，兩地語言在禮貌度與詞彙使用上各有迷人風貌。"
+        "title": "雙城記與文化核心價值",
+        "content": "從語言看民族精神：Lain ladang lain belalang (入境隨俗，尊重各族群多元文化)；Berat sama dipikul (Gotong Royong 互助共榮)。"
       },
       "nodes": {
         "u8-3:word": [
-          "u8:c:4",
+          "u8:c:6",
+          "u8:c:7",
+          "u8:b:7",
+          "u8:c:12",
+          "u8:c:13",
+          "u8:b:13",
           "u8:match:1"
         ],
         "u8-3:listen": [
-          "u8:c:4",
+          "u8:c:6",
+          "u8:c:7",
+          "u8:b:7",
+          "u8:c:12",
+          "u8:c:13",
+          "u8:b:13",
           "u8:match:1"
         ],
         "u8-3:build": [
-          "u8:c:4",
+          "u8:c:6",
+          "u8:c:7",
+          "u8:b:7",
+          "u8:c:12",
+          "u8:c:13",
+          "u8:b:13",
           "u8:match:1"
         ],
         "u8-3:drill": [
-          "u8:c:4",
+          "u8:c:6",
+          "u8:c:7",
+          "u8:b:7",
+          "u8:c:12",
+          "u8:c:13",
+          "u8:b:13",
           "u8:match:1"
         ],
         "u8-3:boss": [
-          "u8:c:4",
+          "u8:c:6",
+          "u8:c:7",
+          "u8:b:7",
+          "u8:c:12",
+          "u8:c:13",
+          "u8:b:13",
           "u8:match:1"
         ]
       }

@@ -9,9 +9,9 @@
       "audio": "satu",
       "answer": "1 (一)",
       "options": [
+        "4 (四)",
         "2 (二)",
-        "3 (三)",
-        "1,000,000 (一百萬)",
+        "50,000 (五萬)",
         "1 (一)"
       ],
       "hint": "聽發音，這是印尼數字基礎計數。",
@@ -26,9 +26,9 @@
       "audio": "satu",
       "answer": "satu",
       "options": [
-        "delapan",
-        "sepuluh ribu",
-        "enam",
+        "dua",
+        "lima",
+        "empat",
         "satu"
       ],
       "hint": "代表中文的 1 (一)",
@@ -45,8 +45,8 @@
       "options": [
         "2 (二)",
         "5 (五)",
-        "3 (三)",
-        "10,000 (一萬)"
+        "1,000,000 (一百萬)",
+        "4 (四)"
       ],
       "hint": "聽發音，這是印尼數字基礎計數。",
       "why": "dua 就是數字 2 (二)。在印尼買東西必用！",
@@ -61,9 +61,9 @@
       "answer": "dua",
       "options": [
         "dua",
-        "tujuh",
-        "sebelas",
-        "seratus"
+        "sembilan",
+        "satu juta",
+        "tiga"
       ],
       "hint": "代表中文的 2 (二)",
       "why": "聽音辨數：dua = 2 (二)",
@@ -77,9 +77,9 @@
       "audio": "tiga",
       "answer": "3 (三)",
       "options": [
+        "10 (十)",
+        "1 (一)",
         "8 (八)",
-        "4 (四)",
-        "6 (六)",
         "3 (三)"
       ],
       "hint": "聽發音，這是印尼數字基礎計數。",
@@ -94,9 +94,9 @@
       "audio": "tiga",
       "answer": "tiga",
       "options": [
-        "sepuluh",
+        "dua puluh",
         "enam",
-        "delapan",
+        "satu",
         "tiga"
       ],
       "hint": "代表中文的 3 (三)",
@@ -111,10 +111,10 @@
       "audio": "empat",
       "answer": "4 (四)",
       "options": [
-        "1 (一)",
-        "1,000 (一千)",
+        "1,000,000 (一百萬)",
+        "10 (十)",
         "4 (四)",
-        "20 (二十)"
+        "3 (三)"
       ],
       "hint": "聽發音，這是印尼數字基礎計數。",
       "why": "empat 就是數字 4 (四)。在印尼買東西必用！",
@@ -128,10 +128,10 @@
       "audio": "empat",
       "answer": "empat",
       "options": [
-        "satu juta",
+        "seribu",
         "empat",
-        "lima",
-        "sepuluh"
+        "tiga",
+        "tujuh"
       ],
       "hint": "代表中文的 4 (四)",
       "why": "聽音辨數：empat = 4 (四)",
@@ -145,10 +145,10 @@
       "audio": "lima",
       "answer": "5 (五)",
       "options": [
-        "3 (三)",
+        "1 (一)",
         "5 (五)",
         "8 (八)",
-        "10,000 (一萬)"
+        "2 (二)"
       ],
       "hint": "聽發音，這是印尼數字基礎計數。",
       "why": "lima 就是數字 5 (五)。在印尼買東西必用！",
@@ -162,9 +162,9 @@
       "audio": "lima",
       "answer": "lima",
       "options": [
-        "satu",
+        "tiga",
         "lima",
-        "dua puluh",
+        "satu",
         "delapan"
       ],
       "hint": "代表中文的 5 (五)",
@@ -179,10 +179,10 @@
       "audio": "enam",
       "answer": "6 (六)",
       "options": [
-        "20 (二十)",
-        "6 (六)",
         "1 (一)",
-        "8 (八)"
+        "6 (六)",
+        "5 (五)",
+        "100 (一百)"
       ],
       "hint": "聽發音，這是印尼數字基礎計數。",
       "why": "enam 就是數字 6 (六)。在印尼買東西必用！",
@@ -196,10 +196,10 @@
       "audio": "enam",
       "answer": "enam",
       "options": [
-        "tiga",
+        "dua puluh",
         "enam",
-        "lima",
-        "delapan"
+        "satu juta",
+        "lima puluh ribu"
       ],
       "hint": "代表中文的 6 (六)",
       "why": "聽音辨數：enam = 6 (六)",
@@ -214,8 +214,8 @@
       "answer": "7 (七)",
       "options": [
         "7 (七)",
-        "10,000 (一萬)",
-        "1,000 (一千)",
+        "100 (一百)",
+        "6 (六)",
         "20 (二十)"
       ],
       "hint": "聽發音，這是印尼數字基礎計數。",
@@ -231,9 +231,9 @@
       "answer": "tujuh",
       "options": [
         "tujuh",
-        "sembilan",
-        "empat",
-        "seribu"
+        "seratus",
+        "enam",
+        "sepuluh"
       ],
       "hint": "代表中文的 7 (七)",
       "why": "聽音辨數：tujuh = 7 (七)",
@@ -248,9 +248,9 @@
       "answer": "8 (八)",
       "options": [
         "3 (三)",
-        "1,000,000 (一百萬)",
+        "20 (二十)",
         "8 (八)",
-        "1,000 (一千)"
+        "10 (十)"
       ],
       "hint": "聽發音，這是印尼數字基礎計數。",
       "why": "delapan 就是數字 8 (八)。在印尼買東西必用！",
@@ -264,10 +264,10 @@
       "audio": "delapan",
       "answer": "delapan",
       "options": [
-        "lima",
+        "sepuluh",
         "delapan",
-        "tiga",
-        "empat"
+        "seratus",
+        "tujuh"
       ],
       "hint": "代表中文的 8 (八)",
       "why": "聽音辨數：delapan = 8 (八)",
@@ -281,10 +281,10 @@
       "audio": "sembilan",
       "answer": "9 (九)",
       "options": [
-        "1 (一)",
+        "7 (七)",
         "9 (九)",
-        "10 (十)",
-        "6 (六)"
+        "1 (一)",
+        "20 (二十)"
       ],
       "hint": "聽發音，這是印尼數字基礎計數。",
       "why": "sembilan 就是數字 9 (九)。在印尼買東西必用！",
@@ -298,10 +298,10 @@
       "audio": "sembilan",
       "answer": "sembilan",
       "options": [
-        "seribu",
-        "tiga",
+        "satu juta",
+        "sepuluh",
         "sembilan",
-        "dua puluh"
+        "dua"
       ],
       "hint": "代表中文的 9 (九)",
       "why": "聽音辨數：sembilan = 9 (九)",
@@ -316,8 +316,8 @@
       "answer": "10 (十)",
       "options": [
         "10 (十)",
+        "4 (四)",
         "6 (六)",
-        "9 (九)",
         "2 (二)"
       ],
       "hint": "聽發音，這是印尼數字基礎計數。",
@@ -332,10 +332,10 @@
       "audio": "sepuluh",
       "answer": "sepuluh",
       "options": [
-        "sepuluh ribu",
+        "empat",
         "delapan",
         "sepuluh",
-        "enam"
+        "dua"
       ],
       "hint": "代表中文的 10 (十)",
       "why": "聽音辨數：sepuluh = 10 (十)",
@@ -350,9 +350,9 @@
       "answer": "11 (十一)",
       "options": [
         "3 (三)",
-        "1 (一)",
+        "9 (九)",
         "11 (十一)",
-        "7 (七)"
+        "10 (十)"
       ],
       "hint": "聽發音，這是印尼數字基礎計數。",
       "why": "sebelas 就是數字 11 (十一)。在印尼買東西必用！",
@@ -366,10 +366,10 @@
       "audio": "sebelas",
       "answer": "sebelas",
       "options": [
-        "lima",
+        "satu juta",
         "sebelas",
-        "satu",
-        "dua puluh"
+        "sembilan",
+        "enam"
       ],
       "hint": "代表中文的 11 (十一)",
       "why": "聽音辨數：sebelas = 11 (十一)",
@@ -384,9 +384,9 @@
       "answer": "20 (二十)",
       "options": [
         "20 (二十)",
-        "6 (六)",
-        "5 (五)",
-        "4 (四)"
+        "4 (四)",
+        "50,000 (五萬)",
+        "2 (二)"
       ],
       "hint": "聽發音，這是印尼數字基礎計數。",
       "why": "dua puluh 就是數字 20 (二十)。在印尼買東西必用！",
@@ -401,9 +401,9 @@
       "answer": "dua puluh",
       "options": [
         "dua puluh",
-        "empat",
-        "delapan",
-        "satu juta"
+        "lima puluh ribu",
+        "satu",
+        "tujuh"
       ],
       "hint": "代表中文的 20 (二十)",
       "why": "聽音辨數：dua puluh = 20 (二十)",
@@ -413,17 +413,17 @@
       "id": "u2-1:c:12",
       "kind": "word",
       "type": "choice",
-      "prompt": "印尼文數字「seratus」代表：",
-      "audio": "seratus",
-      "answer": "100 (一百)",
+      "prompt": "印尼文數字「dua puluh lima ribu」代表：",
+      "audio": "dua puluh lima ribu",
+      "answer": "25,000 (二萬五千)",
       "options": [
+        "7 (七)",
+        "4 (四)",
         "11 (十一)",
-        "100 (一百)",
-        "3 (三)",
-        "10,000 (一萬)"
+        "25,000 (二萬五千)"
       ],
       "hint": "聽發音，這是印尼數字基礎計數。",
-      "why": "seratus 就是數字 100 (一百)。在印尼買東西必用！",
+      "why": "dua puluh lima ribu 就是數字 25,000 (二萬五千)。在印尼買東西必用！",
       "level": 1
     },
     "u2-1:l:12": {
@@ -431,33 +431,33 @@
       "kind": "talk",
       "type": "listen",
       "prompt": "聽聽數字語音，選出聽到的印尼數字：",
-      "audio": "seratus",
-      "answer": "seratus",
+      "audio": "dua puluh lima ribu",
+      "answer": "dua puluh lima ribu",
       "options": [
-        "satu",
-        "seratus",
-        "sembilan",
-        "tujuh"
+        "lima puluh ribu",
+        "sebelas",
+        "seribu",
+        "dua puluh lima ribu"
       ],
-      "hint": "代表中文的 100 (一百)",
-      "why": "聽音辨數：seratus = 100 (一百)",
+      "hint": "代表中文的 25,000 (二萬五千)",
+      "why": "聽音辨數：dua puluh lima ribu = 25,000 (二萬五千)",
       "level": 1
     },
     "u2-1:c:13": {
       "id": "u2-1:c:13",
       "kind": "word",
       "type": "choice",
-      "prompt": "印尼文數字「seribu」代表：",
-      "audio": "seribu",
-      "answer": "1,000 (一千)",
+      "prompt": "印尼文數字「lima puluh ribu」代表：",
+      "audio": "lima puluh ribu",
+      "answer": "50,000 (五萬)",
       "options": [
-        "1,000 (一千)",
-        "5 (五)",
-        "2 (二)",
-        "4 (四)"
+        "11 (十一)",
+        "50,000 (五萬)",
+        "3 (三)",
+        "2 (二)"
       ],
       "hint": "聽發音，這是印尼數字基礎計數。",
-      "why": "seribu 就是數字 1,000 (一千)。在印尼買東西必用！",
+      "why": "lima puluh ribu 就是數字 50,000 (五萬)。在印尼買東西必用！",
       "level": 1
     },
     "u2-1:l:13": {
@@ -465,33 +465,33 @@
       "kind": "talk",
       "type": "listen",
       "prompt": "聽聽數字語音，選出聽到的印尼數字：",
-      "audio": "seribu",
-      "answer": "seribu",
+      "audio": "lima puluh ribu",
+      "answer": "lima puluh ribu",
       "options": [
-        "seribu",
-        "tiga",
-        "empat",
-        "dua"
+        "lima",
+        "lima puluh ribu",
+        "dua puluh lima ribu",
+        "seribu"
       ],
-      "hint": "代表中文的 1,000 (一千)",
-      "why": "聽音辨數：seribu = 1,000 (一千)",
+      "hint": "代表中文的 50,000 (五萬)",
+      "why": "聽音辨數：lima puluh ribu = 50,000 (五萬)",
       "level": 1
     },
     "u2-1:c:14": {
       "id": "u2-1:c:14",
       "kind": "word",
       "type": "choice",
-      "prompt": "印尼文數字「sepuluh ribu」代表：",
-      "audio": "sepuluh ribu",
-      "answer": "10,000 (一萬)",
+      "prompt": "印尼文數字「seratus」代表：",
+      "audio": "seratus",
+      "answer": "100 (一百)",
       "options": [
-        "10,000 (一萬)",
-        "4 (四)",
-        "10 (十)",
-        "2 (二)"
+        "7 (七)",
+        "100 (一百)",
+        "11 (十一)",
+        "9 (九)"
       ],
       "hint": "聽發音，這是印尼數字基礎計數。",
-      "why": "sepuluh ribu 就是數字 10,000 (一萬)。在印尼買東西必用！",
+      "why": "seratus 就是數字 100 (一百)。在印尼買東西必用！",
       "level": 1
     },
     "u2-1:l:14": {
@@ -499,33 +499,33 @@
       "kind": "talk",
       "type": "listen",
       "prompt": "聽聽數字語音，選出聽到的印尼數字：",
-      "audio": "sepuluh ribu",
-      "answer": "sepuluh ribu",
+      "audio": "seratus",
+      "answer": "seratus",
       "options": [
-        "sepuluh ribu",
-        "empat",
-        "satu juta",
-        "seratus"
+        "tujuh",
+        "seratus",
+        "sepuluh",
+        "tiga"
       ],
-      "hint": "代表中文的 10,000 (一萬)",
-      "why": "聽音辨數：sepuluh ribu = 10,000 (一萬)",
+      "hint": "代表中文的 100 (一百)",
+      "why": "聽音辨數：seratus = 100 (一百)",
       "level": 1
     },
     "u2-1:c:15": {
       "id": "u2-1:c:15",
       "kind": "word",
       "type": "choice",
-      "prompt": "印尼文數字「satu juta」代表：",
-      "audio": "satu juta",
-      "answer": "1,000,000 (一百萬)",
+      "prompt": "印尼文數字「seribu」代表：",
+      "audio": "seribu",
+      "answer": "1,000 (一千)",
       "options": [
-        "5 (五)",
-        "1,000,000 (一百萬)",
-        "1 (一)",
-        "3 (三)"
+        "1,000 (一千)",
+        "50,000 (五萬)",
+        "3 (三)",
+        "100 (一百)"
       ],
       "hint": "聽發音，這是印尼數字基礎計數。",
-      "why": "satu juta 就是數字 1,000,000 (一百萬)。在印尼買東西必用！",
+      "why": "seribu 就是數字 1,000 (一千)。在印尼買東西必用！",
       "level": 1
     },
     "u2-1:l:15": {
@@ -533,13 +533,81 @@
       "kind": "talk",
       "type": "listen",
       "prompt": "聽聽數字語音，選出聽到的印尼數字：",
+      "audio": "seribu",
+      "answer": "seribu",
+      "options": [
+        "seribu",
+        "empat",
+        "satu juta",
+        "dua"
+      ],
+      "hint": "代表中文的 1,000 (一千)",
+      "why": "聽音辨數：seribu = 1,000 (一千)",
+      "level": 1
+    },
+    "u2-1:c:16": {
+      "id": "u2-1:c:16",
+      "kind": "word",
+      "type": "choice",
+      "prompt": "印尼文數字「sepuluh ribu」代表：",
+      "audio": "sepuluh ribu",
+      "answer": "10,000 (一萬)",
+      "options": [
+        "10,000 (一萬)",
+        "6 (六)",
+        "50,000 (五萬)",
+        "4 (四)"
+      ],
+      "hint": "聽發音，這是印尼數字基礎計數。",
+      "why": "sepuluh ribu 就是數字 10,000 (一萬)。在印尼買東西必用！",
+      "level": 1
+    },
+    "u2-1:l:16": {
+      "id": "u2-1:l:16",
+      "kind": "talk",
+      "type": "listen",
+      "prompt": "聽聽數字語音，選出聽到的印尼數字：",
+      "audio": "sepuluh ribu",
+      "answer": "sepuluh ribu",
+      "options": [
+        "sepuluh ribu",
+        "dua puluh lima ribu",
+        "sembilan",
+        "seratus"
+      ],
+      "hint": "代表中文的 10,000 (一萬)",
+      "why": "聽音辨數：sepuluh ribu = 10,000 (一萬)",
+      "level": 1
+    },
+    "u2-1:c:17": {
+      "id": "u2-1:c:17",
+      "kind": "word",
+      "type": "choice",
+      "prompt": "印尼文數字「satu juta」代表：",
+      "audio": "satu juta",
+      "answer": "1,000,000 (一百萬)",
+      "options": [
+        "10 (十)",
+        "1,000,000 (一百萬)",
+        "5 (五)",
+        "11 (十一)"
+      ],
+      "hint": "聽發音，這是印尼數字基礎計數。",
+      "why": "satu juta 就是數字 1,000,000 (一百萬)。在印尼買東西必用！",
+      "level": 1
+    },
+    "u2-1:l:17": {
+      "id": "u2-1:l:17",
+      "kind": "talk",
+      "type": "listen",
+      "prompt": "聽聽數字語音，選出聽到的印尼數字：",
       "audio": "satu juta",
       "answer": "satu juta",
       "options": [
-        "tiga",
+        "seratus",
         "satu juta",
-        "sepuluh ribu",
-        "sebelas"
+        "sembilan",
+        "lima"
       ],
       "hint": "代表中文的 1,000,000 (一百萬)",
       "why": "聽音辨數：satu juta = 1,000,000 (一百萬)",
@@ -579,7 +647,7 @@
       "kind": "grammar",
       "type": "choice",
       "prompt": "向沒被邀請的對方說「我們要去吃飯了」，該用哪一個「我們」？",
-      "audio": "Bapak dan Ibu",
+      "audio": "Bapak dan Ibu, Saya dan Beliau",
       "answer": "Kami (排除聽話者)",
       "options": [
         "Kami (排除聽話者)",
@@ -596,7 +664,7 @@
       "kind": "grammar",
       "type": "choice",
       "prompt": "在計程車上稱呼男性司機大哥或長輩先生，最適當禮貌的尊稱是：",
-      "audio": "Bapak dan Ibu",
+      "audio": "Bapak dan Ibu, Saya dan Beliau",
       "answer": "Pak / Bapak",
       "options": [
         "Pak / Bapak",
@@ -613,7 +681,7 @@
       "kind": "grammar",
       "type": "choice",
       "prompt": "在雅加達稱呼平輩服務人員或年輕女性，親切且最常用的稱呼是：",
-      "audio": "Bapak dan Ibu",
+      "audio": "Bapak dan Ibu, Saya dan Beliau",
       "answer": "Mbak 或 Kak",
       "options": [
         "Mbak 或 Kak",
@@ -630,7 +698,7 @@
       "kind": "grammar",
       "type": "choice",
       "prompt": "正式場合、職場會議或對陌生人說「我」，必須使用：",
-      "audio": "Bapak dan Ibu",
+      "audio": "Bapak dan Ibu, Saya dan Beliau",
       "answer": "Saya (正式客氣)",
       "options": [
         "Saya (正式客氣)",
@@ -640,6 +708,40 @@
       ],
       "hint": "Saya 是標準禮貌的「我」。",
       "why": "初學者與職場對話一律使用 Saya 最安全合宜。",
+      "level": 2
+    },
+    "u2-2:c:4": {
+      "id": "u2-2:c:4",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "老師對台下所有學生說「你們」，印尼語應使用哪個人稱代名詞？",
+      "audio": "Bapak dan Ibu, Saya dan Beliau",
+      "answer": "Kalian (你們/複數)",
+      "options": [
+        "Kalian (你們/複數)",
+        "Kamu (你/單數)",
+        "Mereka (他們)",
+        "Kami (我們)"
+      ],
+      "hint": "Kamu 只能指單數的一個人。",
+      "why": "第二人稱複數「你們」必須使用 Kalian。",
+      "level": 2
+    },
+    "u2-2:c:5": {
+      "id": "u2-2:c:5",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "向同事尊敬地提及公司資深總經理或大學校長「他/她」，最適當的敬稱是：",
+      "audio": "Bapak dan Ibu, Saya dan Beliau",
+      "answer": "Beliau (尊稱的他/她)",
+      "options": [
+        "Beliau (尊稱的他/她)",
+        "Dia (普通他/她)",
+        "Kamu",
+        "Mereka"
+      ],
+      "hint": "Beliau 展現崇高的敬意與教養。",
+      "why": "Beliau 是專門敬稱德高望重之長輩、師長或領袖的第三人稱。",
       "level": 2
     },
     "u2-2:b:0": {
@@ -679,6 +781,45 @@
       "answer": "Kita pergi sekarang ya",
       "hint": "Kita = 大家一起的我們, pergi = 出發",
       "why": "邀約大家一起出發用 Kita。",
+      "level": 2
+    },
+    "u2-2:b:2": {
+      "id": "u2-2:b:2",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝代名詞句型：「他/她是我的大學教授 (崇敬)。」",
+      "audio": "Beliau adalah dosen saya.",
+      "tokens": [
+        "tidur",
+        "saya",
+        "adalah",
+        "kami",
+        "Beliau",
+        "dosen"
+      ],
+      "answer": "Beliau adalah dosen saya",
+      "hint": "Beliau = 尊貴的他, dosen = 大學講師教授",
+      "why": "用 Beliau 表達對恩師的敬意。",
+      "level": 2
+    },
+    "u2-2:b:3": {
+      "id": "u2-2:b:3",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝代名詞句型：「你們大家一起學習印尼語。」",
+      "audio": "Kalian belajar bahasa Indonesia bersama.",
+      "tokens": [
+        "Kalian",
+        "tidur",
+        "belajar",
+        "bersama",
+        "kami",
+        "Indonesia",
+        "bahasa"
+      ],
+      "answer": "Kalian belajar bahasa Indonesia bersama",
+      "hint": "Kalian = 你們, belajar = 學習",
+      "why": "複數人稱 Kalian 搭配動詞。",
       "level": 2
     },
     "u2-3:b:0": {
@@ -823,13 +964,125 @@
       "hint": "Hari = 日子/天, Senin = 星期一",
       "why": "星期一到日：Senin, Selasa, Rabu, Kamis, Jumat, Sabtu, Minggu。",
       "level": 2
+    },
+    "u2-3:b:4": {
+      "id": "u2-3:b:4",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝印尼文：「我早上五點半起床 (差半小時六點)。」",
+      "audio": "Saya bangun jam setengah enam pagi.",
+      "tokens": [
+        "Saya",
+        "kemarin",
+        "bangun",
+        "besok",
+        "jam",
+        "pagi",
+        "enam",
+        "setengah"
+      ],
+      "answer": "Saya bangun jam setengah enam pagi",
+      "hint": "Setengah enam = 5:30！",
+      "why": "bangun (起床) + jam setengah enam pagi (5:30 am)。",
+      "level": 2
+    },
+    "u2-3:c:4": {
+      "id": "u2-3:c:4",
+      "kind": "talk",
+      "type": "choice",
+      "prompt": "「Saya bangun jam setengah enam pagi.」是什麼意思？",
+      "audio": "Saya bangun jam setengah enam pagi.",
+      "answer": "我早上五點半起床 (差半小時六點)。",
+      "options": [
+        "明天下午見面嗎？",
+        "我們幾點去吃午餐？",
+        "火車已經抵達了嗎？",
+        "我早上五點半起床 (差半小時六點)。"
+      ],
+      "hint": "Setengah enam = 5:30！",
+      "why": "bangun (起床) + jam setengah enam pagi (5:30 am)。",
+      "level": 2
+    },
+    "u2-3:b:5": {
+      "id": "u2-3:b:5",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝印尼文：「昨天傍晚下了非常大的雨。」",
+      "audio": "Kemarin sore hujan lebat sekali.",
+      "tokens": [
+        "besok",
+        "lebat",
+        "sore",
+        "Kemarin",
+        "kemarin",
+        "hujan",
+        "sekali"
+      ],
+      "answer": "Kemarin sore hujan lebat sekali",
+      "hint": "Kemarin = 昨天, lebat = 傾盆大雨",
+      "why": "時間副詞放句首清晰自然。",
+      "level": 2
+    },
+    "u2-3:c:5": {
+      "id": "u2-3:c:5",
+      "kind": "talk",
+      "type": "choice",
+      "prompt": "「Kemarin sore hujan lebat sekali.」是什麼意思？",
+      "audio": "Kemarin sore hujan lebat sekali.",
+      "answer": "昨天傍晚下了非常大的雨。",
+      "options": [
+        "明天下午見面嗎？",
+        "昨天傍晚下了非常大的雨。",
+        "火車已經抵達了嗎？",
+        "我們幾點去吃午餐？"
+      ],
+      "hint": "Kemarin = 昨天, lebat = 傾盆大雨",
+      "why": "時間副詞放句首清晰自然。",
+      "level": 2
+    },
+    "u2-3:b:6": {
+      "id": "u2-3:b:6",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝印尼文：「明天晚上我們有約吃晚餐。」",
+      "audio": "Besok malam kita ada janji makan malam.",
+      "tokens": [
+        "malam",
+        "kemarin",
+        "ada",
+        "besok",
+        "janji",
+        "Besok",
+        "kita"
+      ],
+      "answer": "Besok malam kita ada janji",
+      "hint": "Besok malam = 明晚, janji = 約定",
+      "why": "約定必備句型。",
+      "level": 2
+    },
+    "u2-3:c:6": {
+      "id": "u2-3:c:6",
+      "kind": "talk",
+      "type": "choice",
+      "prompt": "「Besok malam kita ada janji makan malam.」是什麼意思？",
+      "audio": "Besok malam kita ada janji makan malam.",
+      "answer": "明天晚上我們有約吃晚餐。",
+      "options": [
+        "明天下午見面嗎？",
+        "我們幾點去吃午餐？",
+        "火車已經抵達了嗎？",
+        "明天晚上我們有約吃晚餐。"
+      ],
+      "hint": "Besok malam = 明晚, janji = 約定",
+      "why": "約定必備句型。",
+      "level": 2
     }
   },
   "units": {
     "u2-1": {
       "guide": {
         "title": "印尼數字與貨幣面額指南",
-        "content": "印尼盾 (Rupiah) 面額大，萬位數常用 Ribu (千)，例如 Rp 10.000 (sepuluh ribu)。百萬是 Juta。熟練 1 到 10 就能延伸組出所有大數字！"
+        "content": "印尼盾 (Rupiah) 面額大，萬位數常用 Ribu (千)，例如 Rp 25.000 (dua puluh lima ribu)。百萬是 Juta。熟練 1 到 10 就能延伸組出所有大數字！"
       },
       "nodes": {
         "u2-1:word": [
@@ -849,6 +1102,8 @@
           "u2-1:c:13",
           "u2-1:c:14",
           "u2-1:c:15",
+          "u2-1:c:16",
+          "u2-1:c:17",
           "u2-1:match:1"
         ],
         "u2-1:listen": [
@@ -867,7 +1122,9 @@
           "u2-1:l:12",
           "u2-1:l:13",
           "u2-1:l:14",
-          "u2-1:l:15"
+          "u2-1:l:15",
+          "u2-1:l:16",
+          "u2-1:l:17"
         ],
         "u2-1:build": [
           "u2-1:c:0",
@@ -922,6 +1179,10 @@
           "u2-1:l:14",
           "u2-1:c:15",
           "u2-1:l:15",
+          "u2-1:c:16",
+          "u2-1:l:16",
+          "u2-1:c:17",
+          "u2-1:l:17",
           "u2-1:match:1"
         ]
       }
@@ -929,7 +1190,7 @@
     "u2-2": {
       "guide": {
         "title": "人稱代名詞與禮貌社交稱謂",
-        "content": "印尼語嚴格區分 Kita (包含聽者大家一起) 與 Kami (排除聽者的我們)。初次見面稱成年男性為 Pak / Bapak，女性為 Bu / Ibu，平輩同儕一律稱呼親切的 Kak！"
+        "content": "印尼語嚴格區分 Kita (包含聽者大家一起) 與 Kami (排除聽者的我們)。初次見面稱成年男性為 Pak / Bapak，女性為 Bu / Ibu，平輩稱呼親切的 Kak，敬重長輩用 Beliau！"
       },
       "nodes": {
         "u2-2:word": [
@@ -937,6 +1198,8 @@
           "u2-2:c:1",
           "u2-2:c:2",
           "u2-2:c:3",
+          "u2-2:c:4",
+          "u2-2:c:5",
           "u2-2:b:0",
           "u2-2:b:1"
         ],
@@ -945,22 +1208,24 @@
           "u2-2:c:1",
           "u2-2:c:2",
           "u2-2:c:3",
+          "u2-2:c:4",
+          "u2-2:c:5",
           "u2-2:b:0",
           "u2-2:b:1"
         ],
         "u2-2:build": [
-          "u2-2:c:0",
-          "u2-2:c:1",
-          "u2-2:c:2",
-          "u2-2:c:3",
           "u2-2:b:0",
-          "u2-2:b:1"
+          "u2-2:b:1",
+          "u2-2:b:2",
+          "u2-2:b:3"
         ],
         "u2-2:drill": [
           "u2-2:c:0",
           "u2-2:c:1",
           "u2-2:c:2",
           "u2-2:c:3",
+          "u2-2:c:4",
+          "u2-2:c:5",
           "u2-2:b:0",
           "u2-2:b:1"
         ],
@@ -969,15 +1234,19 @@
           "u2-2:c:1",
           "u2-2:c:2",
           "u2-2:c:3",
+          "u2-2:c:4",
+          "u2-2:c:5",
           "u2-2:b:0",
-          "u2-2:b:1"
+          "u2-2:b:1",
+          "u2-2:b:2",
+          "u2-2:b:3"
         ]
       }
     },
     "u2-3": {
       "guide": {
         "title": "時間表達與半點陷阱 (Setengah)",
-        "content": "注意印尼語表達半點的特殊邏輯：Jam setengah delapan 字面是「半個八點」，實際意思是「差半小時就八點」，也就是台灣習慣說的 7:30！"
+        "content": "注意印尼語表達半點的特殊邏輯：Jam setengah delapan 字面是「半個八點」，實際意思是「差半小時就八點」，也就是 7:30！時間時段 pagi, siang, sore, malam 放在數字之後。"
       },
       "nodes": {
         "u2-3:word": [
@@ -994,13 +1263,19 @@
           "u2-3:c:0",
           "u2-3:c:1",
           "u2-3:c:2",
-          "u2-3:c:3"
+          "u2-3:c:3",
+          "u2-3:c:4",
+          "u2-3:c:5",
+          "u2-3:c:6"
         ],
         "u2-3:build": [
           "u2-3:b:0",
           "u2-3:b:1",
           "u2-3:b:2",
-          "u2-3:b:3"
+          "u2-3:b:3",
+          "u2-3:b:4",
+          "u2-3:b:5",
+          "u2-3:b:6"
         ],
         "u2-3:drill": [
           "u2-3:b:0",
@@ -1020,7 +1295,13 @@
           "u2-3:b:2",
           "u2-3:c:2",
           "u2-3:b:3",
-          "u2-3:c:3"
+          "u2-3:c:3",
+          "u2-3:b:4",
+          "u2-3:c:4",
+          "u2-3:b:5",
+          "u2-3:c:5",
+          "u2-3:b:6",
+          "u2-3:c:6"
         ]
       }
     }

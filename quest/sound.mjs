@@ -1,5 +1,7 @@
 // sound.mjs
 // Indonesian speech synthesis (Web Speech API) and pure Web Audio SFX.
+// Supports bilingual smart narration (Indonesian id-ID & Traditional Chinese zh-TW),
+// option pronunciation, slow rate playback, and zero-dependency Web Audio sound cues.
 
 let rate = 0.95, effects = true, generation = 0, current = null, ctx = null;
 
@@ -15,14 +17,19 @@ export function voice(lang = 'id') {
   if (!s || !s.getVoices) return null;
   const vs = s.getVoices() || [];
   if (lang === 'zh') {
-    return vs.find(v => /^zh[-_]TW/i.test(v.lang)) || vs.find(v => /^zh/i.test(v.lang)) || null;
+    return (
+      vs.find(v => /^zh[-_]TW/i.test(v.lang)) ||
+      vs.find(v => /^zh[-_]HK/i.test(v.lang)) ||
+      vs.find(v => /^zh/i.test(v.lang)) ||
+      null
+    );
   }
-  // Indonesian primary matching
+  // Indonesian primary matching with Malay fallback
   return (
     vs.find(v => /^id[-_]ID/i.test(v.lang) && /natural|neural|google|indonesia|damayanti|andika/i.test(v.name)) ||
     vs.find(v => /^id[-_]ID/i.test(v.lang)) ||
     vs.find(v => /^id/i.test(v.lang)) ||
-    vs.find(v => /^ms[-_]MY/i.test(v.lang)) || // Malay fallback
+    vs.find(v => /^ms[-_]MY/i.test(v.lang)) ||
     null
   );
 }
@@ -44,7 +51,7 @@ export function stop() {
   }
 }
 
-// Resolves to 'ok' | 'error' | 'unavailable' | 'stopped'
+// Speaks single-language string
 export function speak(text, { slow = false, lang = 'id' } = {}) {
   stop();
   const g = generation;
@@ -59,7 +66,7 @@ export function speak(text, { slow = false, lang = 'id' } = {}) {
     } else {
       u.lang = lang === 'zh' ? 'zh-TW' : 'id-ID';
     }
-    u.rate = slow ? Math.max(0.6, rate - 0.25) : rate;
+    u.rate = slow ? Math.max(0.6, rate - 0.28) : rate;
     u.pitch = 1.0;
 
     u.onend = () => resolve(g === generation ? 'ok' : 'stopped');
@@ -77,7 +84,55 @@ export function play({ text, slow = false }) {
   return speak(text, { slow, lang: 'id' });
 }
 
-// Synthesized sound effects using Web Audio API
+// Quick pronunciation for choice options or word tiles
+export function pronounceOption(text) {
+  if (!text) return;
+  const isChineseOnly = /^[\u4e00-\u9fa5\s，。！？、…0-9A-Za-z()（）]+$/.test(text) && /[\u4e00-\u9fa5]/.test(text);
+  const lang = isChineseOnly ? 'zh' : 'id';
+  return speak(text, { slow: false, lang });
+}
+
+// Bilingual narration: splits text into Indonesian and Chinese segments and reads each with its native voice!
+export async function narrate(text, { slow = false } = {}) {
+  stop();
+  if (!text) return 'unavailable';
+  const g = generation;
+
+  // Split by language scripts (Chinese vs Latin/Others)
+  const chunks = String(text).match(/[\u4e00-\u9fa5]+|[^\u4e00-\u9fa5]+/g) || [];
+  for (const chunk of chunks) {
+    if (generation !== g) return 'stopped';
+    const trimmed = chunk.trim();
+    if (!trimmed || /^[:\-.,!?;:()（）/]+$/.test(trimmed)) continue;
+
+    const isZh = /[\u4e00-\u9fa5]/.test(trimmed);
+    const res = await new Promise(resolve => {
+      const s = synth();
+      if (!s) return resolve('unavailable');
+      const u = new SpeechSynthesisUtterance(trimmed);
+      const v = voice(isZh ? 'zh' : 'id');
+      if (v) {
+        u.voice = v;
+        u.lang = v.lang;
+      } else {
+        u.lang = isZh ? 'zh-TW' : 'id-ID';
+      }
+      u.rate = slow ? Math.max(0.65, rate - 0.25) : rate;
+      u.onend = () => resolve(generation === g ? 'ok' : 'stopped');
+      u.onerror = () => resolve(generation === g ? 'error' : 'stopped');
+      try {
+        s.speak(u);
+      } catch {
+        resolve('error');
+      }
+    });
+
+    if (res !== 'ok') return res;
+  }
+  return 'ok';
+}
+
+// Pure Web Audio synthesized sound effects
 export function sfx(kind) {
   if (!effects || typeof window === 'undefined') return;
   try {

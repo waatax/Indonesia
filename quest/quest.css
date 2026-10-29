@@ -671,6 +671,18 @@ body {
   box-shadow: 0 1px 0 var(--line-d);
 }
 
+.audio-btn.alt {
+  background: var(--soft);
+  color: var(--ink);
+  border: 2px solid var(--line);
+  box-shadow: 0 4px 0 var(--line-d);
+}
+
+.audio-btn.alt:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 var(--line-d);
+}
+
 /* Hint Trigger & Drawer */
 .hint-toggle-btn {
   display: inline-flex;
@@ -704,6 +716,49 @@ body {
   flex-direction: column;
   gap: 12px;
   width: 100%;
+}
+
+.choice-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.choice-row .choice-btn {
+  flex: 1;
+}
+
+.choice-speak-btn {
+  width: 48px;
+  height: 54px;
+  border-radius: var(--radius);
+  background: var(--card);
+  border: 2px solid var(--line);
+  box-shadow: 0 4px 0 var(--line-d);
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+}
+
+.choice-speak-btn:hover {
+  background: var(--soft);
+  border-color: var(--line-d);
+}
+
+.choice-speak-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 var(--line-d);
+}
+
+.choice-row.selected .choice-speak-btn {
+  border-color: var(--sky);
+  background: var(--sky-l);
+  box-shadow: 0 4px 0 var(--sky-d);
 }
 
 .choice-btn {
@@ -749,12 +804,43 @@ body {
 .tray-box {
   min-height: 100px;
   border-bottom: 2px solid var(--line);
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   align-content: flex-start;
   padding: 12px 0;
+}
+
+.tray-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+
+.tray-say-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  background: var(--soft);
+  color: var(--ink);
+  border: 2px solid var(--line);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 0 var(--line-d);
+  transition: transform 0.1s;
+}
+
+.tray-say-btn:hover {
+  background: var(--line);
+}
+
+.tray-say-btn:active {
+  transform: translateY(2px);
+  box-shadow: none;
 }
 
 .word-bank-box {
@@ -984,6 +1070,44 @@ body {
   font-weight: 600;
   color: var(--ink);
   line-height: 1.4;
+}
+
+.feedback-audio-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+  flex-wrap: wrap;
+}
+
+.feedback-audio-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.1s;
+}
+
+.feedback-audio-btn.correct {
+  background: var(--green);
+  color: white;
+  box-shadow: 0 3px 0 var(--green-d);
+}
+
+.feedback-audio-btn.wrong {
+  background: var(--red);
+  color: white;
+  box-shadow: 0 3px 0 var(--red-d);
+}
+
+.feedback-audio-btn:active {
+  transform: translateY(2px);
+  box-shadow: none;
 }
 
 .action-btn.continue {

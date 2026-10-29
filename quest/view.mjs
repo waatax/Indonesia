@@ -14,7 +14,7 @@ import {
 } from './engine.mjs';
 import { QUEST_POOL, GOALS } from './engine.mjs';
 import * as sound from './sound.mjs';
-import { answerText, correctionTip } from './coach.mjs';
+import { answerText, spokenAnswer, correctionTip } from './coach.mjs';
 
 const root = document.querySelector('#game');
 let storage;
@@ -367,20 +367,23 @@ function renderLesson(session) {
 
         <h2 class="session-prompt">${esc(item.prompt || '')}</h2>
 
-        ${
-          item.audio
-            ? `
-          <div class="audio-action-row">
+        <div class="audio-action-row">
+          ${
+            item.audio
+              ? `
             <button class="audio-btn" data-say="${esc(item.audio)}">
               <span>🔊 聽印尼語發音</span>
             </button>
             <button class="slow-audio-btn" data-say-slow="${esc(item.audio)}" title="慢速 0.7x 清楚朗讀">
               <span>🐢 慢速</span>
             </button>
-          </div>
-        `
-            : ''
-        }
+          `
+              : ''
+          }
+          <button class="audio-btn alt" data-narrate="${esc(item.prompt)}" title="朗讀題目">
+            <span>🗣️ 朗讀題目</span>
+          </button>
+        </div>
 
         ${
           item.hint
@@ -414,10 +417,15 @@ function renderItemInput(item) {
             const isSelected = ui.selectedChoice === opt;
             const hotkey = i + 1;
             return `
-            <button class="choice-btn ${isSelected ? 'selected' : ''}" data-choice="${esc(opt)}" aria-pressed="${isSelected}" ${ui.activeFeedback ? 'disabled' : ''}>
-              <span>${esc(opt)}</span>
-              <span class="choice-hotkey">${hotkey}</span>
-            </button>
+            <div class="choice-row ${isSelected ? 'selected' : ''}">
+              <button class="choice-btn ${isSelected ? 'selected' : ''}" data-choice="${esc(opt)}" aria-pressed="${isSelected}" ${ui.activeFeedback ? 'disabled' : ''}>
+                <span class="choice-text">${esc(opt)}</span>
+                <span class="choice-hotkey">${hotkey}</span>
+              </button>
+              <button class="choice-speak-btn" data-say-option="${esc(opt)}" title="朗讀此選項發音" aria-label="朗讀選項發音 ${esc(opt)}" ${ui.activeFeedback ? 'disabled' : ''}>
+                <span>🔊</span>
+              </button>
+            </div>
           `;
           })
           .join('')}
@@ -428,6 +436,7 @@ function renderItemInput(item) {
   // 2. Sentence Building (Word Bank)
   if (item.type === 'build') {
     const tokens = item.tokens || [];
+    const hasPlaced = ui.placedTokens.length > 0;
     return `
       <div class="build-container">
         <div class="tray-box">
@@ -441,6 +450,13 @@ function renderItemInput(item) {
             )
             .join('')}
         </div>
+        ${hasPlaced ? `
+          <div class="tray-actions">
+            <button class="tray-say-btn" data-act="say-tray" title="朗讀組好的句子">
+              <span>🔊 朗讀組好的句子</span>
+            </button>
+          </div>
+        ` : ''}
         <div class="word-bank-box">
           ${tokens
             .map((tok, idx) => {
@@ -517,6 +533,7 @@ function renderFeedbackSheet() {
   }
 
   const fb = ui.activeFeedback;
+  const targetSpoken = spokenAnswer(fb.item);
   if (fb.correct) {
     return `
       <div class="feedback-sheet correct" role="status" aria-live="polite">
@@ -525,6 +542,17 @@ function renderFeedbackSheet() {
             <h3 class="feedback-title">🎉 ${fb.remediated ? '征服成功！' : '太棒了！Bagus sekali!'}</h3>
             <p class="feedback-text">${esc(answerText(fb.item))}</p>
             ${fb.item.why ? `<p style="font-size:13px;color:#15803d;margin-top:2px;">💡 ${esc(fb.item.why)}</p>` : ''}
+            ${
+              targetSpoken
+                ? `
+              <div class="feedback-audio-actions">
+                <button class="feedback-audio-btn correct" data-say-feedback="${esc(targetSpoken)}">
+                  <span>🔊 朗讀正解</span>
+                </button>
+              </div>
+            `
+                : ''
+            }
           </div>
           <button class="action-btn continue" data-act="next-question">
             繼續前進 →
@@ -533,13 +561,28 @@ function renderFeedbackSheet() {
       </div>
     `;
   } else {
+    const tipText = correctionTip(fb.item, getCurrentAnswerValue());
     return `
       <div class="feedback-sheet wrong" role="status" aria-live="polite">
         <div class="feedback-content">
           <div class="feedback-info">
             <h3 class="feedback-title">❌ 正確答案是：</h3>
             <p class="feedback-text" style="font-weight:800;color:var(--red-d);">${esc(answerText(fb.item))}</p>
-            <p style="font-size:13px;color:#991b1b;margin-top:4px;white-space:pre-line;">${esc(correctionTip(fb.item, getCurrentAnswerValue()))}</p>
+            <div class="feedback-audio-actions">
+              ${
+                targetSpoken
+                  ? `
+                <button class="feedback-audio-btn wrong" data-say-feedback="${esc(targetSpoken)}">
+                  <span>🔊 朗讀正解發音</span>
+                </button>
+              `
+                  : ''
+              }
+              <button class="feedback-audio-btn wrong" data-say-explain="${esc(tipText)}">
+                <span>🗣️ 聽教練解說</span>
+              </button>
+            </div>
+            <p style="font-size:13px;color:#991b1b;margin-top:6px;white-space:pre-line;">${esc(tipText)}</p>
           </div>
           <button class="action-btn continue wrong" data-act="next-question">
             我記住了，繼續 →
@@ -861,6 +904,31 @@ function bindEvents() {
       sound.play({ text: saySlowBtn.dataset.saySlow, slow: true });
       return;
     }
+    const narrateBtn = e.target.closest('[data-narrate]');
+    if (narrateBtn) {
+      sound.narrate(narrateBtn.dataset.narrate);
+      return;
+    }
+    const sayOptionBtn = e.target.closest('[data-say-option]');
+    if (sayOptionBtn) {
+      sound.pronounceOption(sayOptionBtn.dataset.sayOption);
+      return;
+    }
+    const sayFeedbackBtn = e.target.closest('[data-say-feedback]');
+    if (sayFeedbackBtn) {
+      sound.play({ text: sayFeedbackBtn.dataset.sayFeedback });
+      return;
+    }
+    const sayExplainBtn = e.target.closest('[data-say-explain]');
+    if (sayExplainBtn) {
+      sound.narrate(sayExplainBtn.dataset.sayExplain);
+      return;
+    }
+    if (e.target.closest('[data-act="say-tray"]')) {
+      const sentence = ui.placedTokens.join(' ');
+      if (sentence) sound.play({ text: sentence });
+      return;
+    }
 
     // Toggle Hint
     if (e.target.closest('[data-act="toggle-hint"]')) {
@@ -875,6 +943,7 @@ function bindEvents() {
     if (choiceBtn && !ui.activeFeedback) {
       ui.selectedChoice = choiceBtn.dataset.choice;
       sound.sfx('tap');
+      sound.pronounceOption(choiceBtn.dataset.choice);
       render();
       return;
     }
@@ -884,6 +953,7 @@ function bindEvents() {
     if (tokenBtn && !ui.activeFeedback && !tokenBtn.classList.contains('placed')) {
       ui.placedTokens.push(tokenBtn.dataset.token);
       sound.sfx('tap');
+      sound.pronounceOption(tokenBtn.dataset.token);
       render();
       return;
     }
@@ -1083,6 +1153,12 @@ function handleSubmitAnswer() {
   } else {
     sound.sfx('wrong');
     try { navigator.vibrate?.([40, 60, 40]); } catch {}
+    const targetSpoken = spokenAnswer(res.item);
+    if (targetSpoken) {
+      setTimeout(() => {
+        sound.pronounceOption(targetSpoken);
+      }, 400);
+    }
   }
   render();
 }

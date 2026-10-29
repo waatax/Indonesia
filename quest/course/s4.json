@@ -113,6 +113,115 @@
       "id": "u4:b:2",
       "kind": "drill",
       "type": "build",
+      "prompt": "請組裝印尼文：「可以給我列印一張消費收據/發票嗎？」",
+      "audio": "Bisa minta struk pembayarannya ya?",
+      "tokens": [
+        "minta",
+        "Bisa",
+        "pembayarannya",
+        "tidur",
+        "ya",
+        "struk",
+        "mahal"
+      ],
+      "answer": "Bisa minta struk pembayarannya ya",
+      "hint": "struk = 收據小票",
+      "why": "報帳或確認扣款明細必備句。",
+      "level": 2
+    },
+    "u4:c:2": {
+      "id": "u4:c:2",
+      "kind": "talk",
+      "type": "choice",
+      "prompt": "「Bisa minta struk pembayarannya ya?」的意思是？",
+      "audio": "Bisa minta struk pembayarannya ya?",
+      "answer": "可以給我列印一張消費收據/發票嗎？",
+      "options": [
+        "現在立刻就要出發了。",
+        "包裹已經寄到了嗎？",
+        "我想退換這件衣服。",
+        "可以給我列印一張消費收據/發票嗎？"
+      ],
+      "hint": "struk = 收據小票",
+      "why": "報帳或確認扣款明細必備句。",
+      "level": 2
+    },
+    "u4:l:2": {
+      "id": "u4:l:2",
+      "kind": "talk",
+      "type": "listen",
+      "prompt": "聽一聽生活語音，選出正確的意思：",
+      "audio": "Bisa minta struk pembayarannya ya?",
+      "answer": "可以給我列印一張消費收據/發票嗎？",
+      "options": [
+        "火車票還能預訂嗎？",
+        "請問有洗手間嗎？",
+        "可以給我列印一張消費收據/發票嗎？",
+        "要加多少印尼盾？"
+      ],
+      "hint": "struk = 收據小票",
+      "why": "Bisa minta struk pembayarannya ya? 意思是：可以給我列印一張消費收據/發票嗎？",
+      "level": 2
+    },
+    "u4:b:3": {
+      "id": "u4:b:3",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝印尼文：「我已經透過手機銀行 App 完成轉帳了。」",
+      "audio": "Saya sudah transfer lewat mobile banking.",
+      "tokens": [
+        "mahal",
+        "transfer",
+        "mobile",
+        "banking",
+        "sudah",
+        "lewat",
+        "Saya",
+        "tidur"
+      ],
+      "answer": "Saya sudah transfer lewat mobile banking",
+      "hint": "transfer = 轉帳",
+      "why": "手機轉帳確認必用。",
+      "level": 2
+    },
+    "u4:c:3": {
+      "id": "u4:c:3",
+      "kind": "talk",
+      "type": "choice",
+      "prompt": "「Saya sudah transfer lewat mobile banking.」的意思是？",
+      "audio": "Saya sudah transfer lewat mobile banking.",
+      "answer": "我已經透過手機銀行 App 完成轉帳了。",
+      "options": [
+        "我想退換這件衣服。",
+        "現在立刻就要出發了。",
+        "包裹已經寄到了嗎？",
+        "我已經透過手機銀行 App 完成轉帳了。"
+      ],
+      "hint": "transfer = 轉帳",
+      "why": "手機轉帳確認必用。",
+      "level": 2
+    },
+    "u4:l:3": {
+      "id": "u4:l:3",
+      "kind": "talk",
+      "type": "listen",
+      "prompt": "聽一聽生活語音，選出正確的意思：",
+      "audio": "Saya sudah transfer lewat mobile banking.",
+      "answer": "我已經透過手機銀行 App 完成轉帳了。",
+      "options": [
+        "我已經透過手機銀行 App 完成轉帳了。",
+        "請問有洗手間嗎？",
+        "火車票還能預訂嗎？",
+        "要加多少印尼盾？"
+      ],
+      "hint": "transfer = 轉帳",
+      "why": "Saya sudah transfer lewat mobile banking. 意思是：我已經透過手機銀行 App 完成轉帳了。",
+      "level": 2
+    },
+    "u4:b:4": {
+      "id": "u4:b:4",
+      "kind": "drill",
+      "type": "build",
       "prompt": "請組裝印尼文：「一杯冰棕櫚糖拿鐵，少糖微糖。」",
       "audio": "Es kopi susu aren satu, less sugar ya.",
       "tokens": [
@@ -132,8 +241,8 @@
       "why": "印尼年輕人文青咖啡館天天喝的國民特調。",
       "level": 2
     },
-    "u4:c:2": {
-      "id": "u4:c:2",
+    "u4:c:4": {
+      "id": "u4:c:4",
       "kind": "talk",
       "type": "choice",
       "prompt": "「Es kopi susu aren satu, less sugar ya.」的意思是？",
@@ -149,8 +258,8 @@
       "why": "印尼年輕人文青咖啡館天天喝的國民特調。",
       "level": 2
     },
-    "u4:l:2": {
-      "id": "u4:l:2",
+    "u4:l:4": {
+      "id": "u4:l:4",
       "kind": "talk",
       "type": "listen",
       "prompt": "聽一聽生活語音，選出正確的意思：",
@@ -166,8 +275,8 @@
       "why": "Es kopi susu aren satu, less sugar ya. 意思是：一杯冰棕櫚糖拿鐵，少糖微糖。",
       "level": 2
     },
-    "u4:b:3": {
-      "id": "u4:b:3",
+    "u4:b:5": {
+      "id": "u4:b:5",
       "kind": "drill",
       "type": "build",
       "prompt": "請組裝印尼文：「這裡有插座跟免費 WiFi 嗎？」",
@@ -188,8 +297,8 @@
       "why": "在咖啡廳遠端工作/讀書 nongkrong 的必備問句。",
       "level": 2
     },
-    "u4:c:3": {
-      "id": "u4:c:3",
+    "u4:c:5": {
+      "id": "u4:c:5",
       "kind": "talk",
       "type": "choice",
       "prompt": "「Ada colokan dan WiFi gratis di sini?」的意思是？",
@@ -205,8 +314,8 @@
       "why": "在咖啡廳遠端工作/讀書 nongkrong 的必備問句。",
       "level": 2
     },
-    "u4:l:3": {
-      "id": "u4:l:3",
+    "u4:l:5": {
+      "id": "u4:l:5",
       "kind": "talk",
       "type": "listen",
       "prompt": "聽一聽生活語音，選出正確的意思：",
@@ -222,8 +331,63 @@
       "why": "Ada colokan dan WiFi gratis di sini? 意思是：這裡有插座跟免費 WiFi 嗎？",
       "level": 2
     },
-    "u4:b:4": {
-      "id": "u4:b:4",
+    "u4:b:6": {
+      "id": "u4:b:6",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝印尼文：「角落的那張桌子還是空位嗎？」",
+      "audio": "Apakah meja di pojok itu masih kosong?",
+      "tokens": [
+        "Apakah",
+        "kosong",
+        "itu",
+        "pojok",
+        "mahal",
+        "meja",
+        "di",
+        "tidur"
+      ],
+      "answer": "Apakah meja di pojok itu kosong",
+      "hint": "pojok = 角落, kosong = 空的",
+      "why": "找咖啡店舒適座位必問。",
+      "level": 2
+    },
+    "u4:c:6": {
+      "id": "u4:c:6",
+      "kind": "talk",
+      "type": "choice",
+      "prompt": "「Apakah meja di pojok itu masih kosong?」的意思是？",
+      "audio": "Apakah meja di pojok itu masih kosong?",
+      "answer": "角落的那張桌子還是空位嗎？",
+      "options": [
+        "我想退換這件衣服。",
+        "包裹已經寄到了嗎？",
+        "現在立刻就要出發了。",
+        "角落的那張桌子還是空位嗎？"
+      ],
+      "hint": "pojok = 角落, kosong = 空的",
+      "why": "找咖啡店舒適座位必問。",
+      "level": 2
+    },
+    "u4:l:6": {
+      "id": "u4:l:6",
+      "kind": "talk",
+      "type": "listen",
+      "prompt": "聽一聽生活語音，選出正確的意思：",
+      "audio": "Apakah meja di pojok itu masih kosong?",
+      "answer": "角落的那張桌子還是空位嗎？",
+      "options": [
+        "角落的那張桌子還是空位嗎？",
+        "火車票還能預訂嗎？",
+        "請問有洗手間嗎？",
+        "要加多少印尼盾？"
+      ],
+      "hint": "pojok = 角落, kosong = 空的",
+      "why": "Apakah meja di pojok itu masih kosong? 意思是：角落的那張桌子還是空位嗎？",
+      "level": 2
+    },
+    "u4:b:7": {
+      "id": "u4:b:7",
       "kind": "drill",
       "type": "build",
       "prompt": "請組裝印尼文：「老闆娘，價格可以算便宜一點點嗎？」",
@@ -242,8 +406,8 @@
       "why": "傳統市場殺價最客氣有效的問法。",
       "level": 2
     },
-    "u4:c:4": {
-      "id": "u4:c:4",
+    "u4:c:7": {
+      "id": "u4:c:7",
       "kind": "talk",
       "type": "choice",
       "prompt": "「Bisa kurang sedikit harganya, Bu?」的意思是？",
@@ -259,8 +423,8 @@
       "why": "傳統市場殺價最客氣有效的問法。",
       "level": 2
     },
-    "u4:l:4": {
-      "id": "u4:l:4",
+    "u4:l:7": {
+      "id": "u4:l:7",
       "kind": "talk",
       "type": "listen",
       "prompt": "聽一聽生活語音，選出正確的意思：",
@@ -276,8 +440,8 @@
       "why": "Bisa kurang sedikit harganya, Bu? 意思是：老闆娘，價格可以算便宜一點點嗎？",
       "level": 2
     },
-    "u4:b:5": {
-      "id": "u4:b:5",
+    "u4:b:8": {
+      "id": "u4:b:8",
       "kind": "drill",
       "type": "build",
       "prompt": "請組裝印尼文：「現在立刻在黃色購物車下單結帳吧！」",
@@ -297,8 +461,8 @@
       "why": "印尼直播帶貨狂潮最常聽到的口頭禪。",
       "level": 2
     },
-    "u4:c:5": {
-      "id": "u4:c:5",
+    "u4:c:8": {
+      "id": "u4:c:8",
       "kind": "talk",
       "type": "choice",
       "prompt": "「Checkout sekarang di keranjang kuning ya!」的意思是？",
@@ -314,8 +478,8 @@
       "why": "印尼直播帶貨狂潮最常聽到的口頭禪。",
       "level": 2
     },
-    "u4:l:5": {
-      "id": "u4:l:5",
+    "u4:l:8": {
+      "id": "u4:l:8",
       "kind": "talk",
       "type": "listen",
       "prompt": "聽一聽生活語音，選出正確的意思：",
@@ -329,6 +493,61 @@
       ],
       "hint": "TikTok Shop 招牌名詞：keranjang kuning (黃色小黃車)。",
       "why": "Checkout sekarang di keranjang kuning ya! 意思是：現在立刻在黃色購物車下單結帳吧！",
+      "level": 2
+    },
+    "u4:b:9": {
+      "id": "u4:b:9",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝印尼文：「如果買兩個的話，有打折優惠嗎？」",
+      "audio": "Kalau beli dua ada diskon nggak?",
+      "tokens": [
+        "dua",
+        "mahal",
+        "beli",
+        "nggak",
+        "ada",
+        "Kalau",
+        "tidur",
+        "diskon"
+      ],
+      "answer": "Kalau beli dua ada diskon nggak",
+      "hint": "diskon = 折扣/打折",
+      "why": "買多件時的議價技巧。",
+      "level": 2
+    },
+    "u4:c:9": {
+      "id": "u4:c:9",
+      "kind": "talk",
+      "type": "choice",
+      "prompt": "「Kalau beli dua ada diskon nggak?」的意思是？",
+      "audio": "Kalau beli dua ada diskon nggak?",
+      "answer": "如果買兩個的話，有打折優惠嗎？",
+      "options": [
+        "現在立刻就要出發了。",
+        "包裹已經寄到了嗎？",
+        "如果買兩個的話，有打折優惠嗎？",
+        "我想退換這件衣服。"
+      ],
+      "hint": "diskon = 折扣/打折",
+      "why": "買多件時的議價技巧。",
+      "level": 2
+    },
+    "u4:l:9": {
+      "id": "u4:l:9",
+      "kind": "talk",
+      "type": "listen",
+      "prompt": "聽一聽生活語音，選出正確的意思：",
+      "audio": "Kalau beli dua ada diskon nggak?",
+      "answer": "如果買兩個的話，有打折優惠嗎？",
+      "options": [
+        "要加多少印尼盾？",
+        "如果買兩個的話，有打折優惠嗎？",
+        "請問有洗手間嗎？",
+        "火車票還能預訂嗎？"
+      ],
+      "hint": "diskon = 折扣/打折",
+      "why": "Kalau beli dua ada diskon nggak? 意思是：如果買兩個的話，有打折優惠嗎？",
       "level": 2
     },
     "u4:match:1": {
@@ -365,7 +584,7 @@
     "u4-1": {
       "guide": {
         "title": "QRIS 無現金支付與拆帳",
-        "content": "QRIS (發音像 Kris) 是印尼全國行動支付標竿，各類小吃店攤販皆支援。問店員：Bisa bayar pakai QRIS? 即可掃碼。"
+        "content": "QRIS (發音像 Kris) 是印尼全國行動支付標竿，各類小吃店攤販皆支援。問店員：Bisa bayar pakai QRIS? 即可掃碼。索取明細說 Minta struk。"
       },
       "nodes": {
         "u4-1:word": [
@@ -375,22 +594,24 @@
           "u4:b:1",
           "u4:c:1",
           "u4:l:1",
-          "u4:match:1"
+          "u4:b:2",
+          "u4:c:2"
         ],
         "u4-1:listen": [
           "u4:c:0",
           "u4:l:0",
           "u4:c:1",
-          "u4:l:1"
+          "u4:l:1",
+          "u4:c:2",
+          "u4:l:2",
+          "u4:c:3",
+          "u4:l:3"
         ],
         "u4-1:build": [
           "u4:b:0",
-          "u4:c:0",
-          "u4:l:0",
           "u4:b:1",
-          "u4:c:1",
-          "u4:l:1",
-          "u4:match:1"
+          "u4:b:2",
+          "u4:b:3"
         ],
         "u4-1:drill": [
           "u4:b:0",
@@ -399,7 +620,8 @@
           "u4:b:1",
           "u4:c:1",
           "u4:l:1",
-          "u4:match:1"
+          "u4:b:2",
+          "u4:c:2"
         ],
         "u4-1:boss": [
           "u4:b:0",
@@ -408,6 +630,12 @@
           "u4:b:1",
           "u4:c:1",
           "u4:l:1",
+          "u4:b:2",
+          "u4:c:2",
+          "u4:l:2",
+          "u4:b:3",
+          "u4:c:3",
+          "u4:l:3",
           "u4:match:1"
         ]
       }
@@ -415,49 +643,57 @@
     "u4-2": {
       "guide": {
         "title": "咖啡社交文化 (Nongkrong)",
-        "content": "印尼的「Nongkrong」文化指三五好友在咖啡館喝茶聊天放鬆。最熱門飲料是 Es kopi susu aren（棕櫚糖拿鐵）。要插座問：Ada colokan?"
+        "content": "印尼的「Nongkrong」文化指三五好友在咖啡館喝茶聊天放鬆。最熱門飲料是 Es kopi susu aren（棕櫚糖拿鐵）。找插座問：Ada colokan?"
       },
       "nodes": {
         "u4-2:word": [
-          "u4:b:2",
-          "u4:c:2",
-          "u4:l:2",
-          "u4:b:3",
-          "u4:c:3",
-          "u4:l:3",
-          "u4:match:1"
+          "u4:b:4",
+          "u4:c:4",
+          "u4:l:4",
+          "u4:b:5",
+          "u4:c:5",
+          "u4:l:5",
+          "u4:b:6",
+          "u4:c:6"
         ],
         "u4-2:listen": [
-          "u4:c:2",
-          "u4:l:2",
-          "u4:c:3",
-          "u4:l:3"
+          "u4:c:4",
+          "u4:l:4",
+          "u4:c:5",
+          "u4:l:5",
+          "u4:c:6",
+          "u4:l:6"
         ],
         "u4-2:build": [
-          "u4:b:2",
-          "u4:c:2",
-          "u4:l:2",
-          "u4:b:3",
-          "u4:c:3",
-          "u4:l:3",
-          "u4:match:1"
+          "u4:b:4",
+          "u4:c:4",
+          "u4:l:4",
+          "u4:b:5",
+          "u4:c:5",
+          "u4:l:5",
+          "u4:b:6",
+          "u4:c:6"
         ],
         "u4-2:drill": [
-          "u4:b:2",
-          "u4:c:2",
-          "u4:l:2",
-          "u4:b:3",
-          "u4:c:3",
-          "u4:l:3",
-          "u4:match:1"
+          "u4:b:4",
+          "u4:c:4",
+          "u4:l:4",
+          "u4:b:5",
+          "u4:c:5",
+          "u4:l:5",
+          "u4:b:6",
+          "u4:c:6"
         ],
         "u4-2:boss": [
-          "u4:b:2",
-          "u4:c:2",
-          "u4:l:2",
-          "u4:b:3",
-          "u4:c:3",
-          "u4:l:3",
+          "u4:b:4",
+          "u4:c:4",
+          "u4:l:4",
+          "u4:b:5",
+          "u4:c:5",
+          "u4:l:5",
+          "u4:b:6",
+          "u4:c:6",
+          "u4:l:6",
           "u4:match:1"
         ]
       }
@@ -465,49 +701,57 @@
     "u4-3": {
       "guide": {
         "title": "市場議價社交藝術",
-        "content": "在傳統市場或觀光市集，殺價要帶著微笑。問 Bisa kurang sedikit?（可以減一點嗎？）或 Kalau beli dua berapa?（買兩個算多少？）。"
+        "content": "在傳統市場或觀光市集，殺價要帶著微笑。問 Bisa kurang sedikit?（可以減一點嗎？）或 Kalau beli dua ada diskon?（買兩個有打折嗎？）。"
       },
       "nodes": {
         "u4-3:word": [
-          "u4:b:4",
-          "u4:c:4",
-          "u4:l:4",
-          "u4:b:5",
-          "u4:c:5",
-          "u4:l:5",
-          "u4:match:1"
+          "u4:b:7",
+          "u4:c:7",
+          "u4:l:7",
+          "u4:b:8",
+          "u4:c:8",
+          "u4:l:8",
+          "u4:b:9",
+          "u4:c:9"
         ],
         "u4-3:listen": [
-          "u4:c:4",
-          "u4:l:4",
-          "u4:c:5",
-          "u4:l:5"
+          "u4:c:7",
+          "u4:l:7",
+          "u4:c:8",
+          "u4:l:8",
+          "u4:c:9",
+          "u4:l:9"
         ],
         "u4-3:build": [
-          "u4:b:4",
-          "u4:c:4",
-          "u4:l:4",
-          "u4:b:5",
-          "u4:c:5",
-          "u4:l:5",
-          "u4:match:1"
+          "u4:b:7",
+          "u4:c:7",
+          "u4:l:7",
+          "u4:b:8",
+          "u4:c:8",
+          "u4:l:8",
+          "u4:b:9",
+          "u4:c:9"
         ],
         "u4-3:drill": [
-          "u4:b:4",
-          "u4:c:4",
-          "u4:l:4",
-          "u4:b:5",
-          "u4:c:5",
-          "u4:l:5",
-          "u4:match:1"
+          "u4:b:7",
+          "u4:c:7",
+          "u4:l:7",
+          "u4:b:8",
+          "u4:c:8",
+          "u4:l:8",
+          "u4:b:9",
+          "u4:c:9"
         ],
         "u4-3:boss": [
-          "u4:b:4",
-          "u4:c:4",
-          "u4:l:4",
-          "u4:b:5",
-          "u4:c:5",
-          "u4:l:5",
+          "u4:b:7",
+          "u4:c:7",
+          "u4:l:7",
+          "u4:b:8",
+          "u4:c:8",
+          "u4:l:8",
+          "u4:b:9",
+          "u4:c:9",
+          "u4:l:9",
           "u4:match:1"
         ]
       }

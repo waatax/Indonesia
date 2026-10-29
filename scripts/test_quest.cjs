@@ -110,12 +110,27 @@ for (const s of indexData.sections) {
 }
 
 console.log(`✅ PASS 2: Course manifest valid. 8 Sections, ${totalUnits} Units, ${totalNodes} Nodes, ${totalItems} Authored Items.`);
+console.log(`         Content Expansion: ${totalItems} items (+${Math.round((totalItems - 179) / 179 * 100)}% increase over baseline 179 items).`);
+assert.ok(totalItems >= 200, 'Must have at least 10% useful content expansion across the board');
 console.log(`         100% of items contain Indonesian audio, contextual hints, and coach explanations.`);
 
 // 4. Test Game Engine, State, Streaks, Hearts, and Mastery Loop ("使其學會")
 (async () => {
   // 3. Test Coach feedback and explanation derivation
   const coach = await import(pathToFileURL(path.join(questDir, 'coach.mjs')).href);
+  const sound = await import(pathToFileURL(path.join(questDir, 'sound.mjs')).href);
+
+  // Test sound exports
+  assert.equal(typeof sound.pronounceOption, 'function', 'Sound must export pronounceOption');
+  assert.equal(typeof sound.narrate, 'function', 'Sound must export narrate');
+  assert.equal(typeof sound.play, 'function', 'Sound must export play');
+  assert.equal(typeof sound.sfx, 'function', 'Sound must export sfx');
+
+  // Test spokenAnswer extraction
+  assert.equal(coach.spokenAnswer({ type: 'choice', answer: 'Saya (正式客氣)' }), 'Saya');
+  assert.equal(coach.spokenAnswer({ type: 'choice', answer: 'Pak / Bapak' }), 'Pak');
+  assert.equal(coach.spokenAnswer({ type: 'build', answer: 'Selamat pagi teman' }), 'Selamat pagi teman');
+
   const sampleChoice = {
     id: 'test-1',
     type: 'choice',
@@ -129,7 +144,16 @@ console.log(`         100% of items contain Indonesian audio, contextual hints, 
   const tip = coach.correctionTip(sampleChoice, 'tidak');
   assert.ok(tip.includes('隊列末尾'), 'Tip must mention queue re-insertion');
   assert.ok(tip.includes('bukan'), 'Tip must include grammar distinction');
-  console.log('✅ PASS 3: Coach module correctly derives answerText and actionable correction tips.');
+
+  // Test blind spot detection: kita vs kami
+  const tipKita = coach.correctionTip({ answer: 'Kita' }, 'Kami');
+  assert.ok(tipKita.includes('Kita') && tipKita.includes('Kami'), 'Tip must clarify Kita vs Kami difference');
+
+  // Test blind spot detection: setengah half past
+  const tipTime = coach.correctionTip({ prompt: '現在幾點？', hint: 'setengah' }, 'jam delapan');
+  assert.ok(tipTime.includes('setengah'), 'Tip must clarify setengah half hour logic');
+
+  console.log('✅ PASS 3: Coach module correctly derives answerText, spokenAnswer, and blind-spot diagnostic correction tips.');
   const engine = await import(pathToFileURL(path.join(questDir, 'engine.mjs')).href);
   const { createCourse, createGame, normalize, accepts, streakOf } = engine;
 

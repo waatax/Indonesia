@@ -274,6 +274,171 @@
       "why": "Saya mau coba ayam bakar khas Solo. 意思為：我想嚐嚐梭羅特色的烤雞。",
       "level": 2
     },
+    "u3-1:b:5": {
+      "id": "u3-1:b:5",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝點餐印尼文：「請問要內用還是外帶包裝？」",
+      "audio": "Mau makan di sini atau dibungkus?",
+      "tokens": [
+        "makan",
+        "dibungkus",
+        "sini",
+        "mobil",
+        "Mau",
+        "atau",
+        "di",
+        "tidur"
+      ],
+      "answer": "Mau makan di sini atau dibungkus",
+      "hint": "dibungkus = 外帶打包, makan di sini = 內用",
+      "why": "小吃攤老闆點餐必問名句：內用還是外帶？",
+      "level": 2
+    },
+    "u3-1:c:5": {
+      "id": "u3-1:c:5",
+      "kind": "word",
+      "type": "choice",
+      "prompt": "「Mau makan di sini atau dibungkus?」在印尼餐廳點餐的意思是？",
+      "audio": "Mau makan di sini atau dibungkus?",
+      "answer": "請問要內用還是外帶包裝？",
+      "options": [
+        "這裡可以刷信用卡嗎？",
+        "請問有洗手間嗎？",
+        "請問要內用還是外帶包裝？",
+        "車票在哪裡買？"
+      ],
+      "hint": "dibungkus = 外帶打包, makan di sini = 內用",
+      "why": "小吃攤老闆點餐必問名句：內用還是外帶？",
+      "level": 2
+    },
+    "u3-1:l:5": {
+      "id": "u3-1:l:5",
+      "kind": "talk",
+      "type": "listen",
+      "prompt": "聽一聽服務員或客人的點餐語音，選出正確意思：",
+      "audio": "Mau makan di sini atau dibungkus?",
+      "answer": "請問要內用還是外帶包裝？",
+      "options": [
+        "我要外帶三個便當。",
+        "桌上有空的座位嗎？",
+        "請問有熱水嗎？",
+        "請問要內用還是外帶包裝？"
+      ],
+      "hint": "dibungkus = 外帶打包, makan di sini = 內用",
+      "why": "Mau makan di sini atau dibungkus? 意思為：請問要內用還是外帶包裝？",
+      "level": 2
+    },
+    "u3-1:b:6": {
+      "id": "u3-1:b:6",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝點餐印尼文：「請給我一杯酪梨果汁，去冰喔。」",
+      "audio": "Minta jus alpukat satu, tanpa es ya.",
+      "tokens": [
+        "es",
+        "satu",
+        "jus",
+        "tanpa",
+        "tidur",
+        "mobil",
+        "alpukat",
+        "Minta",
+        "ya"
+      ],
+      "answer": "Minta jus alpukat satu tanpa es ya",
+      "hint": "tanpa = 不含/去, es = 冰塊",
+      "why": "客製飲料去冰說法：tanpa es。",
+      "level": 2
+    },
+    "u3-1:c:6": {
+      "id": "u3-1:c:6",
+      "kind": "word",
+      "type": "choice",
+      "prompt": "「Minta jus alpukat satu, tanpa es ya.」在印尼餐廳點餐的意思是？",
+      "audio": "Minta jus alpukat satu, tanpa es ya.",
+      "answer": "請給我一杯酪梨果汁，去冰喔。",
+      "options": [
+        "請問有洗手間嗎？",
+        "車票在哪裡買？",
+        "這裡可以刷信用卡嗎？",
+        "請給我一杯酪梨果汁，去冰喔。"
+      ],
+      "hint": "tanpa = 不含/去, es = 冰塊",
+      "why": "客製飲料去冰說法：tanpa es。",
+      "level": 2
+    },
+    "u3-1:l:6": {
+      "id": "u3-1:l:6",
+      "kind": "talk",
+      "type": "listen",
+      "prompt": "聽一聽服務員或客人的點餐語音，選出正確意思：",
+      "audio": "Minta jus alpukat satu, tanpa es ya.",
+      "answer": "請給我一杯酪梨果汁，去冰喔。",
+      "options": [
+        "請給我一杯酪梨果汁，去冰喔。",
+        "桌上有空的座位嗎？",
+        "我要外帶三個便當。",
+        "請問有熱水嗎？"
+      ],
+      "hint": "tanpa = 不含/去, es = 冰塊",
+      "why": "Minta jus alpukat satu, tanpa es ya. 意思為：請給我一杯酪梨果汁，去冰喔。",
+      "level": 2
+    },
+    "u3-1:b:7": {
+      "id": "u3-1:b:7",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝點餐印尼文：「可以幫我多加一點辣椒醬嗎？」",
+      "audio": "Bisa tolong tambah sambal sedikit?",
+      "tokens": [
+        "mobil",
+        "tambah",
+        "sedikit",
+        "tolong",
+        "sambal",
+        "tidur",
+        "Bisa"
+      ],
+      "answer": "Bisa tolong tambah sambal sedikit",
+      "hint": "tambah = 增加/加, sambal = 辣醬",
+      "why": "印尼小吃靈魂 Sambal，想要多一點直接說 tambah sambal。",
+      "level": 2
+    },
+    "u3-1:c:7": {
+      "id": "u3-1:c:7",
+      "kind": "word",
+      "type": "choice",
+      "prompt": "「Bisa tolong tambah sambal sedikit?」在印尼餐廳點餐的意思是？",
+      "audio": "Bisa tolong tambah sambal sedikit?",
+      "answer": "可以幫我多加一點辣椒醬嗎？",
+      "options": [
+        "可以幫我多加一點辣椒醬嗎？",
+        "這裡可以刷信用卡嗎？",
+        "請問有洗手間嗎？",
+        "車票在哪裡買？"
+      ],
+      "hint": "tambah = 增加/加, sambal = 辣醬",
+      "why": "印尼小吃靈魂 Sambal，想要多一點直接說 tambah sambal。",
+      "level": 2
+    },
+    "u3-1:l:7": {
+      "id": "u3-1:l:7",
+      "kind": "talk",
+      "type": "listen",
+      "prompt": "聽一聽服務員或客人的點餐語音，選出正確意思：",
+      "audio": "Bisa tolong tambah sambal sedikit?",
+      "answer": "可以幫我多加一點辣椒醬嗎？",
+      "options": [
+        "我要外帶三個便當。",
+        "請問有熱水嗎？",
+        "桌上有空的座位嗎？",
+        "可以幫我多加一點辣椒醬嗎？"
+      ],
+      "hint": "tambah = 增加/加, sambal = 辣醬",
+      "why": "Bisa tolong tambah sambal sedikit? 意思為：可以幫我多加一點辣椒醬嗎？",
+      "level": 2
+    },
     "u3-1:match:1": {
       "id": "u3-1:match:1",
       "kind": "word",
@@ -457,6 +622,83 @@
       "why": "確認車牌防上錯車。",
       "level": 2
     },
+    "u3-2:b:4": {
+      "id": "u3-2:b:4",
+      "kind": "talk",
+      "type": "build",
+      "prompt": "請組裝叫車對話：「司機大哥稍等一下，我正在搭電梯下樓。」",
+      "audio": "Tunggu sebentar Pak, saya lagi turun lift.",
+      "tokens": [
+        "lift",
+        "saya",
+        "Pak",
+        "kopi",
+        "Tunggu",
+        "tidak",
+        "lagi",
+        "sebentar",
+        "turun"
+      ],
+      "answer": "Tunggu sebentar Pak saya lagi turun lift",
+      "hint": "turun = 下去, lift = 電梯",
+      "why": "住高樓公寓大廈告知司機必備。",
+      "level": 2
+    },
+    "u3-2:c:4": {
+      "id": "u3-2:c:4",
+      "kind": "talk",
+      "type": "choice",
+      "prompt": "司機傳來「Tunggu sebentar Pak, saya lagi turun lift.」，意思是：",
+      "audio": "Tunggu sebentar Pak, saya lagi turun lift.",
+      "answer": "司機大哥稍等一下，我正在搭電梯下樓。",
+      "options": [
+        "司機大哥稍等一下，我正在搭電梯下樓。",
+        "請問可以取消訂單嗎？",
+        "我要先去加油。",
+        "路上大塞車要遲到了。"
+      ],
+      "hint": "turun = 下去, lift = 電梯",
+      "why": "住高樓公寓大廈告知司機必備。",
+      "level": 2
+    },
+    "u3-2:b:5": {
+      "id": "u3-2:b:5",
+      "kind": "talk",
+      "type": "build",
+      "prompt": "請組裝叫車對話：「非常感謝司機大哥，等一下給您五星好評！」",
+      "audio": "Terima kasih banyak Pak, nanti saya beri bintang lima!",
+      "tokens": [
+        "Terima",
+        "kopi",
+        "bintang",
+        "tidak",
+        "lima",
+        "Pak",
+        "banyak",
+        "kasih"
+      ],
+      "answer": "Terima kasih banyak Pak bintang lima",
+      "hint": "bintang lima = 五顆星",
+      "why": "司機最喜歡聽到的暖心感謝。",
+      "level": 2
+    },
+    "u3-2:c:5": {
+      "id": "u3-2:c:5",
+      "kind": "talk",
+      "type": "choice",
+      "prompt": "司機傳來「Terima kasih banyak Pak, nanti saya beri bintang lima!」，意思是：",
+      "audio": "Terima kasih banyak Pak, nanti saya beri bintang lima!",
+      "answer": "非常感謝司機大哥，等一下給您五星好評！",
+      "options": [
+        "路上大塞車要遲到了。",
+        "非常感謝司機大哥，等一下給您五星好評！",
+        "我要先去加油。",
+        "請問可以取消訂單嗎？"
+      ],
+      "hint": "bintang lima = 五顆星",
+      "why": "司機最喜歡聽到的暖心感謝。",
+      "level": 2
+    },
     "u3-3:b:0": {
       "id": "u3-3:b:0",
       "kind": "drill",
@@ -564,13 +806,89 @@
       "hint": "dekat(靠近/附近)",
       "why": "dekat 表示距離近，jauh 表示遠。",
       "level": 2
+    },
+    "u3-3:b:3": {
+      "id": "u3-3:b:3",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝方位印尼文：「那家店就在馬路的正對面。」",
+      "audio": "Toko itu ada di seberang jalan.",
+      "tokens": [
+        "itu",
+        "di",
+        "jauh",
+        "kiri",
+        "jalan",
+        "ada",
+        "Toko",
+        "seberang"
+      ],
+      "answer": "Toko itu ada di seberang jalan",
+      "hint": "seberang = 對面/跨過",
+      "why": "問路極高頻方位詞：di seberang jalan (對面)。",
+      "level": 2
+    },
+    "u3-3:c:3": {
+      "id": "u3-3:c:3",
+      "kind": "word",
+      "type": "choice",
+      "prompt": "問路回答「Toko itu ada di seberang jalan.」是什麼意思？",
+      "audio": "Toko itu ada di seberang jalan.",
+      "answer": "那家店就在馬路的正對面。",
+      "options": [
+        "今天營業時間結束了。",
+        "車票已經賣光了。",
+        "那家店就在馬路的正對面。",
+        "公車已經滿座了。"
+      ],
+      "hint": "seberang = 對面/跨過",
+      "why": "問路極高頻方位詞：di seberang jalan (對面)。",
+      "level": 2
+    },
+    "u3-3:b:4": {
+      "id": "u3-3:b:4",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝方位印尼文：「從這裡走路需要幾分鐘？」",
+      "audio": "Berapa menit jalan kaki dari sini?",
+      "tokens": [
+        "Berapa",
+        "kiri",
+        "menit",
+        "dari",
+        "sini",
+        "kaki",
+        "jalan",
+        "jauh"
+      ],
+      "answer": "Berapa menit jalan kaki dari sini",
+      "hint": "jalan kaki = 走路步行, menit = 分鐘",
+      "why": "問步行距離必備句型。",
+      "level": 2
+    },
+    "u3-3:c:4": {
+      "id": "u3-3:c:4",
+      "kind": "word",
+      "type": "choice",
+      "prompt": "問路回答「Berapa menit jalan kaki dari sini?」是什麼意思？",
+      "audio": "Berapa menit jalan kaki dari sini?",
+      "answer": "從這裡走路需要幾分鐘？",
+      "options": [
+        "公車已經滿座了。",
+        "今天營業時間結束了。",
+        "車票已經賣光了。",
+        "從這裡走路需要幾分鐘？"
+      ],
+      "hint": "jalan kaki = 走路步行, menit = 分鐘",
+      "why": "問步行距離必備句型。",
+      "level": 2
     }
   },
   "units": {
     "u3-1": {
       "guide": {
         "title": "印尼餐廳點餐與調味客製",
-        "content": "印尼料理香料豐富、辣椒生猛。點餐關鍵句是 Saya mau pesan...（我要點...）。想要不辣務必交代 Tidak pedas 或 Jangan pedas，飲料推薦點一杯 Es teh manis (甜冰茶) 解暑！"
+        "content": "印尼料理香料豐富、辣椒生猛。點餐關鍵句是 Saya mau pesan...。內用說 Makan di sini，外帶說 Dibungkus。飲料去冰說 Tanpa es，推薦點一杯國民甜冰茶 Es teh manis 解暑！"
       },
       "nodes": {
         "u3-1:word": [
@@ -579,6 +897,9 @@
           "u3-1:c:2",
           "u3-1:c:3",
           "u3-1:c:4",
+          "u3-1:c:5",
+          "u3-1:c:6",
+          "u3-1:c:7",
           "u3-1:match:1"
         ],
         "u3-1:listen": [
@@ -586,14 +907,20 @@
           "u3-1:l:1",
           "u3-1:l:2",
           "u3-1:l:3",
-          "u3-1:l:4"
+          "u3-1:l:4",
+          "u3-1:l:5",
+          "u3-1:l:6",
+          "u3-1:l:7"
         ],
         "u3-1:build": [
           "u3-1:b:0",
           "u3-1:b:1",
           "u3-1:b:2",
           "u3-1:b:3",
-          "u3-1:b:4"
+          "u3-1:b:4",
+          "u3-1:b:5",
+          "u3-1:b:6",
+          "u3-1:b:7"
         ],
         "u3-1:drill": [
           "u3-1:b:0",
@@ -621,6 +948,15 @@
           "u3-1:b:4",
           "u3-1:c:4",
           "u3-1:l:4",
+          "u3-1:b:5",
+          "u3-1:c:5",
+          "u3-1:l:5",
+          "u3-1:b:6",
+          "u3-1:c:6",
+          "u3-1:l:6",
+          "u3-1:b:7",
+          "u3-1:c:7",
+          "u3-1:l:7",
           "u3-1:match:1"
         ]
       }
@@ -628,7 +964,7 @@
     "u3-2": {
       "guide": {
         "title": "Gojek / Grab 叫車通訊實戰",
-        "content": "在印尼搭摩托車或叫車，司機在 App 內傳訊第一句通常是 Penjemputan sesuai titik ya, Kak?（上車點照地圖定位嗎？）。回答 Iya Pak, saya tunggu di depan... 即可順暢上車！"
+        "content": "在印尼搭摩托車或叫車，司機在 App 內傳訊第一句通常是 Penjemputan sesuai titik ya, Kak?（上車點照地圖定位嗎？）。下樓時說 Lagi turun lift，抵達記得說 Terima kasih banyak！"
       },
       "nodes": {
         "u3-2:word": [
@@ -649,13 +985,19 @@
           "u3-2:b:2",
           "u3-2:c:2",
           "u3-2:b:3",
-          "u3-2:c:3"
+          "u3-2:c:3",
+          "u3-2:b:4",
+          "u3-2:c:4",
+          "u3-2:b:5",
+          "u3-2:c:5"
         ],
         "u3-2:build": [
           "u3-2:b:0",
           "u3-2:b:1",
           "u3-2:b:2",
-          "u3-2:b:3"
+          "u3-2:b:3",
+          "u3-2:b:4",
+          "u3-2:b:5"
         ],
         "u3-2:drill": [
           "u3-2:b:0",
@@ -675,23 +1017,26 @@
           "u3-2:b:2",
           "u3-2:c:2",
           "u3-2:b:3",
-          "u3-2:c:3"
+          "u3-2:c:3",
+          "u3-2:b:4",
+          "u3-2:c:4",
+          "u3-2:b:5",
+          "u3-2:c:5"
         ]
       }
     },
     "u3-3": {
       "guide": {
         "title": "問路指引與方位空間語法",
-        "content": "問地點句型：Di mana + 地點？指引方向的三大方向詞：Lurus (直走)、Kanan (向右)、Kiri (向左)。表示距離：Dekat (近)、Jauh (遠)。"
+        "content": "問地點句型：Di mana + 地點？指引方向的三大方向詞：Lurus (直走)、Kanan (向右)、Kiri (向左)。表示位置：Di seberang (對面)、Dekat (近)、Jauh (遠)。"
       },
       "nodes": {
         "u3-3:word": [
-          "u3-3:b:0",
           "u3-3:c:0",
-          "u3-3:b:1",
           "u3-3:c:1",
-          "u3-3:b:2",
-          "u3-3:c:2"
+          "u3-3:c:2",
+          "u3-3:c:3",
+          "u3-3:c:4"
         ],
         "u3-3:listen": [
           "u3-3:b:0",
@@ -699,15 +1044,16 @@
           "u3-3:b:1",
           "u3-3:c:1",
           "u3-3:b:2",
-          "u3-3:c:2"
+          "u3-3:c:2",
+          "u3-3:b:3",
+          "u3-3:c:3"
         ],
         "u3-3:build": [
           "u3-3:b:0",
-          "u3-3:c:0",
           "u3-3:b:1",
-          "u3-3:c:1",
           "u3-3:b:2",
-          "u3-3:c:2"
+          "u3-3:b:3",
+          "u3-3:b:4"
         ],
         "u3-3:drill": [
           "u3-3:b:0",
@@ -715,7 +1061,9 @@
           "u3-3:b:1",
           "u3-3:c:1",
           "u3-3:b:2",
-          "u3-3:c:2"
+          "u3-3:c:2",
+          "u3-3:b:3",
+          "u3-3:c:3"
         ],
         "u3-3:boss": [
           "u3-3:b:0",
@@ -723,7 +1071,11 @@
           "u3-3:b:1",
           "u3-3:c:1",
           "u3-3:b:2",
-          "u3-3:c:2"
+          "u3-3:c:2",
+          "u3-3:b:3",
+          "u3-3:c:3",
+          "u3-3:b:4",
+          "u3-3:c:4"
         ]
       }
     }

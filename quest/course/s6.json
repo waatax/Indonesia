@@ -39,6 +39,23 @@
       "id": "u6:c:2",
       "kind": "grammar",
       "type": "choice",
+      "prompt": "句子：「Kamar hotel ini sedang ___ oleh petugas.」(飯店房間正在被員工打掃清潔)，應填入：",
+      "audio": "Kamar hotel ini sedang dibersihkan oleh petugas.",
+      "answer": "dibersihkan (被清潔)",
+      "options": [
+        "dibersihkan (被清潔)",
+        "membersihkan",
+        "kebersihan",
+        "pembersih"
+      ],
+      "hint": "被動態：bersih + di-...-kan",
+      "why": "房間是受事主語，用被動形式 dibersihkan。",
+      "level": 3
+    },
+    "u6:c:3": {
+      "id": "u6:c:3",
+      "kind": "grammar",
+      "type": "choice",
       "prompt": "「tidur」(睡覺) 加上前綴「ter-」變成「tertidur」，通常傳達何種語意？",
       "audio": "Kemarin malam saya tertidur di sofa.",
       "answer": "意外、無意識地睡著了",
@@ -52,8 +69,8 @@
       "why": "tertidur 表達不知不覺睡著了（如看電視時睡著），與主動的 tidur 截然不同。",
       "level": 3
     },
-    "u6:c:3": {
-      "id": "u6:c:3",
+    "u6:c:4": {
+      "id": "u6:c:4",
       "kind": "grammar",
       "type": "choice",
       "prompt": "形容詞「besar」(大) 加上前綴「ter-」變成「terbesar」，意思是：",
@@ -69,8 +86,25 @@
       "why": "ter- + 形容詞 = 最高級（例如 terbaik 最好、tercantik 最漂亮）。",
       "level": 3
     },
-    "u6:c:4": {
-      "id": "u6:c:4",
+    "u6:c:5": {
+      "id": "u6:c:5",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "句子：「Dia ___ dari sepeda saat hujan.」(下雨時他不小心從腳踏車上摔了下來)，應填入：",
+      "audio": "Dia terjatuh dari sepeda saat hujan.",
+      "answer": "terjatuh (意外摔倒)",
+      "options": [
+        "terjatuh (意外摔倒)",
+        "menjatuhkan",
+        "dijatuh",
+        "jatuhan"
+      ],
+      "hint": "意外不由自主的動作加 ter-。",
+      "why": "terjatuh 表達非故意的意外跌倒。",
+      "level": 3
+    },
+    "u6:c:6": {
+      "id": "u6:c:6",
       "kind": "grammar",
       "type": "choice",
       "prompt": "字根「tulis」(寫) 加上名詞化前綴「peN-」變成「penulis」，意思是：",
@@ -86,8 +120,8 @@
       "why": "peN- + 字根表示從事該行為的人：tulis -> penulis (作者)。",
       "level": 3
     },
-    "u6:c:5": {
-      "id": "u6:c:5",
+    "u6:c:7": {
+      "id": "u6:c:7",
       "kind": "grammar",
       "type": "choice",
       "prompt": "字根「makan」(吃) 加上尾綴「-an」變成「makanan」，意思是：",
@@ -103,8 +137,8 @@
       "why": "makan (吃) + -an -> makanan (食物)。同理 minum (喝) -> minuman (飲料)。",
       "level": 3
     },
-    "u6:c:6": {
-      "id": "u6:c:6",
+    "u6:c:8": {
+      "id": "u6:c:8",
       "kind": "grammar",
       "type": "choice",
       "prompt": "字根「sehat」(健康/形容詞) 加上環綴「ke-...-an」變成「kesehatan」，意思是：",
@@ -118,6 +152,188 @@
       ],
       "hint": "ke-...-an 將形容詞昇華為「抽象概念或名詞」。",
       "why": "ke-...-an 是構成抽象名詞的最高頻環綴：sehat -> kesehatan (健康)。",
+      "level": 3
+    },
+    "u6:c:9": {
+      "id": "u6:c:9",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "字根「bersih」(乾淨) 加上環綴「ke-...-an」構成「kebersihan」，意思是：",
+      "audio": "Kebersihan adalah sebagian dari iman.",
+      "answer": "清潔、衛生 (名詞)",
+      "options": [
+        "清潔、衛生 (名詞)",
+        "打掃的人",
+        "弄髒了",
+        "非常乾淨的"
+      ],
+      "hint": "乾淨的抽象概念名詞。",
+      "why": "bersih -> kebersihan (環境清潔/衛生狀況)。",
+      "level": 3
+    },
+    "u6:c:10": {
+      "id": "u6:c:10",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "在店門口看到招牌寫著「Rumah ini dijual」，意思是：",
+      "audio": "Rumah ini dijual cepat tanpa perantara.",
+      "answer": "這間房子出售中 (被出售)",
+      "options": [
+        "這間房子出售中 (被出售)",
+        "這間房子正在出租",
+        "這間房子禁止進入",
+        "這間房子已完工"
+      ],
+      "hint": "jual 是賣，di- 是被動態。",
+      "why": "jual (賣) + di- -> dijual (出售中/被販賣)。出租則是 disewakan。",
+      "level": 3
+    },
+    "u6:c:11": {
+      "id": "u6:c:11",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "店家門口告示牌寫著「Toko ditutup sementara」，意思是：",
+      "audio": "Toko ini ditutup sementara waktu.",
+      "answer": "本店暫時休息關門 (被關閉)",
+      "options": [
+        "本店暫時休息關門 (被關閉)",
+        "本店擴大營業中",
+        "本店歡迎光臨",
+        "本店正在盤點"
+      ],
+      "hint": "tutup 是關閉，di- 是被動態。",
+      "why": "tutup -> ditutup (被關閉)。",
+      "level": 3
+    },
+    "u6:c:12": {
+      "id": "u6:c:12",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "名詞/動詞「kenal」(認識) 加上前綴「ter-」變成「terkenal」，意思是：",
+      "audio": "Rendang adalah makanan terkenal di dunia.",
+      "answer": "著名的、出名的 (最廣為人知的)",
+      "options": [
+        "著名的、出名的 (最廣為人知的)",
+        "不認識的陌生人",
+        "剛認識的朋友",
+        "互相認識"
+      ],
+      "hint": "ter-kenal = 人人都認識的 -> 有名的。",
+      "why": "terkenal (著名的) 是印尼語最高頻形容詞之一。",
+      "level": 3
+    },
+    "u6:c:13": {
+      "id": "u6:c:13",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "形容詞「lambat」(慢) 加上前綴「ter-」變成「terlambat」，意思是：",
+      "audio": "Maaf saya terlambat datang ke kantor.",
+      "answer": "遲到了、被耽擱耽誤了",
+      "options": [
+        "遲到了、被耽擱耽誤了",
+        "動作最快",
+        "開車開得很慢",
+        "提早到達"
+      ],
+      "hint": "terlambat = 意外延遲、遲到。",
+      "why": "lambat (慢) + ter- -> terlambat (遲到)。",
+      "level": 3
+    },
+    "u6:c:14": {
+      "id": "u6:c:14",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "字根「beli」(買) 加上施事者前綴「peN-」變成「pembeli」，意思是：",
+      "audio": "Banyak pembeli antre di toko itu.",
+      "answer": "顧客、買家 (購物的人)",
+      "options": [
+        "顧客、買家 (購物的人)",
+        "收銀機",
+        "商品貨架",
+        "批發商"
+      ],
+      "hint": "beli 是買，peN- 是做該動作的人。",
+      "why": "beli -> pembeli (買方/顧客)；jual -> penjual (賣方/老闆)。",
+      "level": 3
+    },
+    "u6:c:15": {
+      "id": "u6:c:15",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "形容詞「aman」(安全) 加上環綴「ke-...-an」構成「keamanan」，意思是：",
+      "audio": "Satpam menjaga keamanan lingkungan.",
+      "answer": "安全維護、治安秩序 (抽象名詞)",
+      "options": [
+        "安全維護、治安秩序 (抽象名詞)",
+        "危險地帶",
+        "保險箱",
+        "救生衣"
+      ],
+      "hint": "aman 是安全的，ke-...-an 轉化為抽象名詞。",
+      "why": "aman -> keamanan (安全性、治安)。",
+      "level": 3
+    },
+    "u6:b:0": {
+      "id": "u6:b:0",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝詞綴句型：「這款咖啡產製於蘇門答臘島。」",
+      "audio": "Kopi ini dibuat di pulau Sumatera.",
+      "tokens": [
+        "pulau",
+        "ini",
+        "Kopi",
+        "di",
+        "dibuat",
+        "tidur",
+        "Sumatera",
+        "tidak"
+      ],
+      "answer": "Kopi ini dibuat di pulau Sumatera",
+      "hint": "buat(製作) + di- -> dibuat(被製作)",
+      "why": "被動句型陳述產地。",
+      "level": 3
+    },
+    "u6:b:1": {
+      "id": "u6:b:1",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝詞綴句型：「這家餐廳在峇里島非常有名。」",
+      "audio": "Restoran ini sangat terkenal di Bali.",
+      "tokens": [
+        "di",
+        "Bali",
+        "terkenal",
+        "tidak",
+        "tidur",
+        "sangat",
+        "ini",
+        "Restoran"
+      ],
+      "answer": "Restoran ini sangat terkenal di Bali",
+      "hint": "terkenal = 著名的",
+      "why": "ter- 形容詞名句。",
+      "level": 3
+    },
+    "u6:b:2": {
+      "id": "u6:b:2",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝詞綴句型：「這杯甜飲口感非常清涼。」",
+      "audio": "Minuman manis ini segar sekali rasanya.",
+      "tokens": [
+        "tidur",
+        "segar",
+        "ini",
+        "tidak",
+        "Minuman",
+        "rasanya",
+        "sekali",
+        "manis"
+      ],
+      "answer": "Minuman manis ini segar sekali rasanya",
+      "hint": "minum(喝) + -an -> minuman(飲料)",
+      "why": "-an 產物名詞化。",
       "level": 3
     },
     "u6:match:1": {
@@ -160,26 +376,46 @@
         "u6-1:word": [
           "u6:c:0",
           "u6:c:1",
+          "u6:c:2",
+          "u6:c:10",
+          "u6:c:11",
+          "u6:b:0",
           "u6:match:1"
         ],
         "u6-1:listen": [
           "u6:c:0",
           "u6:c:1",
+          "u6:c:2",
+          "u6:c:10",
+          "u6:c:11",
+          "u6:b:0",
           "u6:match:1"
         ],
         "u6-1:build": [
           "u6:c:0",
           "u6:c:1",
+          "u6:c:2",
+          "u6:c:10",
+          "u6:c:11",
+          "u6:b:0",
           "u6:match:1"
         ],
         "u6-1:drill": [
           "u6:c:0",
           "u6:c:1",
+          "u6:c:2",
+          "u6:c:10",
+          "u6:c:11",
+          "u6:b:0",
           "u6:match:1"
         ],
         "u6-1:boss": [
           "u6:c:0",
           "u6:c:1",
+          "u6:c:2",
+          "u6:c:10",
+          "u6:c:11",
+          "u6:b:0",
           "u6:match:1"
         ]
       }
@@ -191,28 +427,48 @@
       },
       "nodes": {
         "u6-2:word": [
-          "u6:c:2",
           "u6:c:3",
+          "u6:c:4",
+          "u6:c:5",
+          "u6:c:12",
+          "u6:c:13",
+          "u6:b:1",
           "u6:match:1"
         ],
         "u6-2:listen": [
-          "u6:c:2",
           "u6:c:3",
+          "u6:c:4",
+          "u6:c:5",
+          "u6:c:12",
+          "u6:c:13",
+          "u6:b:1",
           "u6:match:1"
         ],
         "u6-2:build": [
-          "u6:c:2",
           "u6:c:3",
+          "u6:c:4",
+          "u6:c:5",
+          "u6:c:12",
+          "u6:c:13",
+          "u6:b:1",
           "u6:match:1"
         ],
         "u6-2:drill": [
-          "u6:c:2",
           "u6:c:3",
+          "u6:c:4",
+          "u6:c:5",
+          "u6:c:12",
+          "u6:c:13",
+          "u6:b:1",
           "u6:match:1"
         ],
         "u6-2:boss": [
-          "u6:c:2",
           "u6:c:3",
+          "u6:c:4",
+          "u6:c:5",
+          "u6:c:12",
+          "u6:c:13",
+          "u6:b:1",
           "u6:match:1"
         ]
       }
@@ -224,33 +480,53 @@
       },
       "nodes": {
         "u6-3:word": [
-          "u6:c:4",
-          "u6:c:5",
           "u6:c:6",
+          "u6:c:7",
+          "u6:c:8",
+          "u6:c:9",
+          "u6:c:14",
+          "u6:c:15",
+          "u6:b:2",
           "u6:match:1"
         ],
         "u6-3:listen": [
-          "u6:c:4",
-          "u6:c:5",
           "u6:c:6",
+          "u6:c:7",
+          "u6:c:8",
+          "u6:c:9",
+          "u6:c:14",
+          "u6:c:15",
+          "u6:b:2",
           "u6:match:1"
         ],
         "u6-3:build": [
-          "u6:c:4",
-          "u6:c:5",
           "u6:c:6",
+          "u6:c:7",
+          "u6:c:8",
+          "u6:c:9",
+          "u6:c:14",
+          "u6:c:15",
+          "u6:b:2",
           "u6:match:1"
         ],
         "u6-3:drill": [
-          "u6:c:4",
-          "u6:c:5",
           "u6:c:6",
+          "u6:c:7",
+          "u6:c:8",
+          "u6:c:9",
+          "u6:c:14",
+          "u6:c:15",
+          "u6:b:2",
           "u6:match:1"
         ],
         "u6-3:boss": [
-          "u6:c:4",
-          "u6:c:5",
           "u6:c:6",
+          "u6:c:7",
+          "u6:c:8",
+          "u6:c:9",
+          "u6:c:14",
+          "u6:c:15",
+          "u6:b:2",
           "u6:match:1"
         ]
       }

@@ -40,6 +40,7 @@
       "kind": "grammar",
       "type": "choice",
       "prompt": "名詞「mobil」(汽車) 加上前綴「ber-」變成「bermobil」，其引申意思是？",
+      "audio": "Mereka bermobil ke Bandung.",
       "answer": "擁有汽車、開著汽車出行",
       "options": [
         "擁有汽車、開著汽車出行",
@@ -55,6 +56,23 @@
       "id": "u5:c:3",
       "kind": "grammar",
       "type": "choice",
+      "prompt": "動詞「berbicara」(說話/交談) 是由哪一個字根加上 ber- 構成？",
+      "audio": "Saya sedang berbicara dengan teman.",
+      "answer": "bicara (言論/話語)",
+      "options": [
+        "bicara (言論/話語)",
+        "baca",
+        "bisa",
+        "bibir"
+      ],
+      "hint": "bicara 是談話之意。",
+      "why": "bicara + ber- -> berbicara (交談/發言)。",
+      "level": 3
+    },
+    "u5:c:4": {
+      "id": "u5:c:4",
+      "kind": "grammar",
+      "type": "choice",
       "prompt": "字根「tulis」(寫) 加上主動及物前綴「meN-」時，因首字母為 T，鼻音同化後會變成？",
       "audio": "Dia menulis surat cinta.",
       "answer": "menulis (T 脫落被 N 取代)",
@@ -68,8 +86,8 @@
       "why": "口訣 KTSP 遇 meN- 皆同化脫落：tulis -> me + n + ulis = menulis。",
       "level": 3
     },
-    "u5:c:4": {
-      "id": "u5:c:4",
+    "u5:c:5": {
+      "id": "u5:c:5",
       "kind": "grammar",
       "type": "choice",
       "prompt": "字根「beli」(買) 首字母為濁音 B，加上主動及物前綴「meN-」後會變成？",
@@ -85,8 +103,8 @@
       "why": "濁輔音 B 不脫落：beli -> membeli。",
       "level": 3
     },
-    "u5:c:5": {
-      "id": "u5:c:5",
+    "u5:c:6": {
+      "id": "u5:c:6",
       "kind": "grammar",
       "type": "choice",
       "prompt": "字根「kirim」(寄送) 首字母為清音 K，加上主動及物前綴「meN-」後會變成？",
@@ -102,8 +120,93 @@
       "why": "kirim -> me + ng + irim = mengirim。",
       "level": 3
     },
-    "u5:c:6": {
-      "id": "u5:c:6",
+    "u5:c:7": {
+      "id": "u5:c:7",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "字根「sapu」(掃地) 首字母為 S，加上主動及物前綴「meN-」後會變成？",
+      "audio": "Adik menyapu lantai kamar.",
+      "answer": "menyapu (S 脫落被 ny 取代)",
+      "options": [
+        "menyapu (S 脫落被 ny 取代)",
+        "mensapu",
+        "memsapu",
+        "mengsapu"
+      ],
+      "hint": "KTSP 規則：S 遇 meN- 脫落同化為 meny-！",
+      "why": "sapu -> me + ny + apu = menyapu。",
+      "level": 3
+    },
+    "u5:c:8": {
+      "id": "u5:c:8",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "字根「beda」(差別) 加上前綴「ber-」變成「berbeda」，意思是：",
+      "audio": "Pendapat kami sangat berbeda.",
+      "answer": "不同、有差異 (形容詞/狀態)",
+      "options": [
+        "不同、有差異 (形容詞/狀態)",
+        "完全相同",
+        "吵架爭論",
+        "改變主意"
+      ],
+      "hint": "berbeda 表示具備差異的狀態。",
+      "why": "beda (差別) + ber- = berbeda (不同、各異)。",
+      "level": 3
+    },
+    "u5:c:9": {
+      "id": "u5:c:9",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "字根「temu」(遇) 加上前綴「ber-」變成「bertemu」，意思是：",
+      "audio": "Senang bertemu dengan Anda.",
+      "answer": "見面、相遇 (不及物動詞)",
+      "options": [
+        "見面、相遇 (不及物動詞)",
+        "尋找遺失物",
+        "道別離開",
+        "迷路走失"
+      ],
+      "hint": "Senang bertemu dengan Anda = 很高興遇見你。",
+      "why": "temu + ber- -> bertemu (相遇、見面)。",
+      "level": 3
+    },
+    "u5:c:10": {
+      "id": "u5:c:10",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "字根「dengar」(聽) 首字母為齒齦濁音 D，加上前綴「meN-」後應為：",
+      "audio": "Saya mendengarkan lagu Indonesia.",
+      "answer": "mendengar (D 保留不脫落，前綴為 men-)",
+      "options": [
+        "mendengar (D 保留不脫落，前綴為 men-)",
+        "menengar",
+        "memdengar",
+        "mengdengar"
+      ],
+      "hint": "濁輔音 B, D, G 都不脫落！只有清輔音 K, T, S, P 才會脫落。",
+      "why": "D 為濁音，保留不脫落：dengar -> mendengar。",
+      "level": 3
+    },
+    "u5:c:11": {
+      "id": "u5:c:11",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "字根「ambil」(拿/取) 首字母為母音 A，加上前綴「meN-」後應為：",
+      "audio": "Tolong mengambil payung itu.",
+      "answer": "mengambil (母音開頭一律加 meng-)",
+      "options": [
+        "mengambil (母音開頭一律加 meng-)",
+        "menambil",
+        "memambil",
+        "meambil"
+      ],
+      "hint": "所有母音 a, e, i, o, u 開頭的字根，meN- 規則一律接 meng-！",
+      "why": "母音前綴規則：ambil -> mengambil, atur -> mengatur。",
+      "level": 3
+    },
+    "u5:c:12": {
+      "id": "u5:c:12",
       "kind": "grammar",
       "type": "choice",
       "prompt": "句子：「Dia ___ dokter.」(他不是醫生)，空格應填入：",
@@ -119,8 +222,8 @@
       "why": "否定金律：bukan 否定名詞/代名詞；tidak 否定動詞與形容詞。",
       "level": 3
     },
-    "u5:c:7": {
-      "id": "u5:c:7",
+    "u5:c:13": {
+      "id": "u5:c:13",
       "kind": "grammar",
       "type": "choice",
       "prompt": "句子：「Saya ___ suka makanan pedas.」(我不喜歡辣的食物)，空格應填入：",
@@ -136,8 +239,8 @@
       "why": "Suka 為動詞，否定必須用 tidak suka，不能用 bukan suka。",
       "level": 3
     },
-    "u5:c:8": {
-      "id": "u5:c:8",
+    "u5:c:14": {
+      "id": "u5:c:14",
       "kind": "grammar",
       "type": "choice",
       "prompt": "句子：「Rumah ini ___ mahal.」(這棟房子不貴)，空格應填入：",
@@ -151,6 +254,57 @@
       ],
       "hint": "Mahal 是昂貴 (形容詞)。否定形容詞用 tidak！",
       "why": "形容詞否定必用 tidak。",
+      "level": 3
+    },
+    "u5:c:15": {
+      "id": "u5:c:15",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "句子：「Ini ___ salah kamu.」(這不是你的錯)，空格應填入：",
+      "audio": "Ini bukan salah kamu, tenang saja.",
+      "answer": "bukan (因為 salah 在此指過錯/名詞)",
+      "options": [
+        "bukan (因為 salah 在此指過錯/名詞)",
+        "tidak",
+        "jangan",
+        "belum"
+      ],
+      "hint": "指稱責任、過錯歸屬時用 bukan。",
+      "why": "bukan salah kamu 表示這不是你的責任/錯誤。",
+      "level": 3
+    },
+    "u5:c:16": {
+      "id": "u5:c:16",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "句子：「Saya ___ bisa datang besok.」(我明天不能來)，空格應填入：",
+      "audio": "Maaf saya tidak bisa datang besok.",
+      "answer": "tidak (因為 bisa 是助動詞能/可以)",
+      "options": [
+        "tidak (因為 bisa 是助動詞能/可以)",
+        "bukan",
+        "jangan",
+        "tiada"
+      ],
+      "hint": "bisa (能夠) 是助動詞，否定必須用 tidak bisa！",
+      "why": "助動詞/能力動詞否定一律使用 tidak bisa，不可用 bukan bisa。",
+      "level": 3
+    },
+    "u5:c:17": {
+      "id": "u5:c:17",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "句子：「Ini ___ uang saya.」(這不是我的錢)，空格應填入：",
+      "audio": "Ini bukan uang saya, jangan salah paham.",
+      "answer": "bukan (因為 uang 是名詞)",
+      "options": [
+        "bukan (因為 uang 是名詞)",
+        "tidak",
+        "belum",
+        "jangan"
+      ],
+      "hint": "uang (錢) 是名詞。否定名詞一律用 bukan！",
+      "why": "名詞否定標準規則：bukan uang saya。",
       "level": 3
     },
     "u5:b:0": {
@@ -177,40 +331,163 @@
       "id": "u5:b:1",
       "kind": "drill",
       "type": "build",
-      "prompt": "請組裝句型：「媽媽正在廚房煮飯。」",
-      "audio": "Ibu sedang memasak nasi di dapur.",
+      "prompt": "請組裝句型：「我們走路步行去學校。」",
+      "audio": "Kami berjalan kaki ke sekolah.",
       "tokens": [
-        "memasak",
-        "di",
-        "Ibu",
+        "berjalan",
         "tidak",
-        "nasi",
-        "tidur",
-        "sedang",
-        "dapur"
+        "ke",
+        "Kami",
+        "sekolah",
+        "kaki",
+        "tidur"
       ],
-      "answer": "Ibu sedang memasak nasi di dapur",
-      "hint": "masak 首字母 m，直接加 me- 成為 memasak。",
-      "why": "及物動詞 memasak 接受詞 nasi。",
+      "answer": "Kami berjalan kaki ke sekolah",
+      "hint": "berjalan kaki = 走路",
+      "why": "ber- + jalan -> berjalan (走)。",
       "level": 3
     },
     "u5:b:2": {
       "id": "u5:b:2",
       "kind": "drill",
       "type": "build",
+      "prompt": "請組裝句型：「媽媽正在廚房煮飯。」",
+      "audio": "Ibu sedang memasak nasi di dapur.",
+      "tokens": [
+        "sedang",
+        "dapur",
+        "nasi",
+        "tidur",
+        "Ibu",
+        "tidak",
+        "memasak",
+        "di"
+      ],
+      "answer": "Ibu sedang memasak nasi di dapur",
+      "hint": "masak 首字母 m，直接加 me- 成為 memasak。",
+      "why": "及物動詞 memasak 接受詞 nasi。",
+      "level": 3
+    },
+    "u5:b:3": {
+      "id": "u5:b:3",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝句型：「我幫爸爸清洗汽車。」",
+      "audio": "Saya membantu ayah mencuci mobil.",
+      "tokens": [
+        "mencuci",
+        "Saya",
+        "tidak",
+        "ayah",
+        "membantu",
+        "tidur",
+        "mobil"
+      ],
+      "answer": "Saya membantu ayah mencuci mobil",
+      "hint": "cuci 首字母 c 不脫落，變 mencuci。",
+      "why": "c 不脫落：cuci -> mencuci。",
+      "level": 3
+    },
+    "u5:b:4": {
+      "id": "u5:b:4",
+      "kind": "drill",
+      "type": "build",
       "prompt": "請組裝句型：「這不是我的包包。」",
       "audio": "Ini bukan tas saya.",
       "tokens": [
-        "tidak",
+        "bukan",
         "saya",
+        "tas",
         "Ini",
         "tidur",
-        "bukan",
-        "tas"
+        "tidak"
       ],
       "answer": "Ini bukan tas saya",
       "hint": "tas 是名詞，否定必須用 bukan！",
       "why": "bukan + 名詞否定。",
+      "level": 3
+    },
+    "u5:b:5": {
+      "id": "u5:b:5",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝句型：「他今天不想參加會議。」",
+      "audio": "Dia tidak mau ikut rapat hari ini.",
+      "tokens": [
+        "tidur",
+        "rapat",
+        "tidak",
+        "tidak",
+        "ikut",
+        "Dia",
+        "mau"
+      ],
+      "answer": "Dia tidak mau ikut rapat",
+      "hint": "mau 是助動詞想要，否定用 tidak。",
+      "why": "tidak mau = 不想。",
+      "level": 3
+    },
+    "u5:b:6": {
+      "id": "u5:b:6",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝句型：「我們在火車站相遇見面。」",
+      "audio": "Kami bertemu di stasiun kereta api.",
+      "tokens": [
+        "api",
+        "tidak",
+        "bertemu",
+        "kereta",
+        "tidur",
+        "di",
+        "stasiun",
+        "Kami"
+      ],
+      "answer": "Kami bertemu di stasiun kereta api",
+      "hint": "bertemu = 見面相遇, stasiun = 火車站",
+      "why": "bertemu 常用句型。",
+      "level": 3
+    },
+    "u5:b:7": {
+      "id": "u5:b:7",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝句型：「他每天閱讀故事書。」",
+      "audio": "Dia membaca buku cerita setiap hari.",
+      "tokens": [
+        "Dia",
+        "setiap",
+        "buku",
+        "tidur",
+        "tidak",
+        "hari",
+        "membaca",
+        "cerita"
+      ],
+      "answer": "Dia membaca buku cerita setiap hari",
+      "hint": "membaca 是 baca 的主動及物動詞形式。",
+      "why": "baca -> membaca (閱讀)。",
+      "level": 3
+    },
+    "u5:b:8": {
+      "id": "u5:b:8",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝句型：「這對我們來說不是大問題。」",
+      "audio": "Ini bukan masalah besar untuk kita.",
+      "tokens": [
+        "bukan",
+        "besar",
+        "Ini",
+        "untuk",
+        "kita",
+        "tidak",
+        "tidur",
+        "masalah"
+      ],
+      "answer": "Ini bukan masalah besar untuk kita",
+      "hint": "masalah 是名詞問題，否定用 bukan。",
+      "why": "bukan masalah besar = 不是大問題。",
       "level": 3
     }
   },
@@ -225,31 +502,52 @@
           "u5:c:0",
           "u5:c:1",
           "u5:c:2",
-          "u5:b:0"
+          "u5:c:3",
+          "u5:c:8",
+          "u5:c:9",
+          "u5:b:0",
+          "u5:b:1"
         ],
         "u5-1:listen": [
           "u5:c:0",
           "u5:c:1",
           "u5:c:2",
-          "u5:b:0"
+          "u5:c:3",
+          "u5:c:8",
+          "u5:c:9",
+          "u5:b:0",
+          "u5:b:1"
         ],
         "u5-1:build": [
           "u5:c:0",
           "u5:c:1",
           "u5:c:2",
-          "u5:b:0"
+          "u5:c:3",
+          "u5:c:8",
+          "u5:c:9",
+          "u5:b:0",
+          "u5:b:1"
         ],
         "u5-1:drill": [
           "u5:c:0",
           "u5:c:1",
           "u5:c:2",
-          "u5:b:0"
+          "u5:c:3",
+          "u5:c:8",
+          "u5:c:9",
+          "u5:b:0",
+          "u5:b:1"
         ],
         "u5-1:boss": [
           "u5:c:0",
           "u5:c:1",
           "u5:c:2",
-          "u5:b:0"
+          "u5:c:3",
+          "u5:c:8",
+          "u5:c:9",
+          "u5:b:0",
+          "u5:b:1",
+          "u5:b:6"
         ]
       }
     },
@@ -260,34 +558,55 @@
       },
       "nodes": {
         "u5-2:word": [
-          "u5:c:3",
           "u5:c:4",
           "u5:c:5",
-          "u5:b:1"
+          "u5:c:6",
+          "u5:c:7",
+          "u5:c:10",
+          "u5:c:11",
+          "u5:b:2",
+          "u5:b:3"
         ],
         "u5-2:listen": [
-          "u5:c:3",
           "u5:c:4",
           "u5:c:5",
-          "u5:b:1"
+          "u5:c:6",
+          "u5:c:7",
+          "u5:c:10",
+          "u5:c:11",
+          "u5:b:2",
+          "u5:b:3"
         ],
         "u5-2:build": [
-          "u5:c:3",
           "u5:c:4",
           "u5:c:5",
-          "u5:b:1"
+          "u5:c:6",
+          "u5:c:7",
+          "u5:c:10",
+          "u5:c:11",
+          "u5:b:2",
+          "u5:b:3"
         ],
         "u5-2:drill": [
-          "u5:c:3",
           "u5:c:4",
           "u5:c:5",
-          "u5:b:1"
+          "u5:c:6",
+          "u5:c:7",
+          "u5:c:10",
+          "u5:c:11",
+          "u5:b:2",
+          "u5:b:3"
         ],
         "u5-2:boss": [
-          "u5:c:3",
           "u5:c:4",
           "u5:c:5",
-          "u5:b:1"
+          "u5:c:6",
+          "u5:c:7",
+          "u5:c:10",
+          "u5:c:11",
+          "u5:b:2",
+          "u5:b:3",
+          "u5:b:7"
         ]
       }
     },
@@ -298,34 +617,55 @@
       },
       "nodes": {
         "u5-3:word": [
-          "u5:c:6",
-          "u5:c:7",
-          "u5:c:8",
-          "u5:b:2"
+          "u5:c:12",
+          "u5:c:13",
+          "u5:c:14",
+          "u5:c:15",
+          "u5:c:16",
+          "u5:c:17",
+          "u5:b:4",
+          "u5:b:5"
         ],
         "u5-3:listen": [
-          "u5:c:6",
-          "u5:c:7",
-          "u5:c:8",
-          "u5:b:2"
+          "u5:c:12",
+          "u5:c:13",
+          "u5:c:14",
+          "u5:c:15",
+          "u5:c:16",
+          "u5:c:17",
+          "u5:b:4",
+          "u5:b:5"
         ],
         "u5-3:build": [
-          "u5:c:6",
-          "u5:c:7",
-          "u5:c:8",
-          "u5:b:2"
+          "u5:c:12",
+          "u5:c:13",
+          "u5:c:14",
+          "u5:c:15",
+          "u5:c:16",
+          "u5:c:17",
+          "u5:b:4",
+          "u5:b:5"
         ],
         "u5-3:drill": [
-          "u5:c:6",
-          "u5:c:7",
-          "u5:c:8",
-          "u5:b:2"
+          "u5:c:12",
+          "u5:c:13",
+          "u5:c:14",
+          "u5:c:15",
+          "u5:c:16",
+          "u5:c:17",
+          "u5:b:4",
+          "u5:b:5"
         ],
         "u5-3:boss": [
-          "u5:c:6",
-          "u5:c:7",
-          "u5:c:8",
-          "u5:b:2"
+          "u5:c:12",
+          "u5:c:13",
+          "u5:c:14",
+          "u5:c:15",
+          "u5:c:16",
+          "u5:c:17",
+          "u5:b:4",
+          "u5:b:5",
+          "u5:b:8"
         ]
       }
     }

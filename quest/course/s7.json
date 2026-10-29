@@ -56,6 +56,23 @@
       "id": "u7:c:3",
       "kind": "grammar",
       "type": "choice",
+      "prompt": "句子結尾用「deh」（如：Ayo pesan kopi sekarang deh.），常帶有什麼語氣？",
+      "audio": "Ayo pesan kopi sekarang deh.",
+      "answer": "勸誘、下定決心或「好啦就這樣吧」",
+      "options": [
+        "勸誘、下定決心或「好啦就這樣吧」",
+        "強烈拒絕",
+        "懷疑不可信",
+        "問候晚安"
+      ],
+      "hint": "Deh 促成決定，好啦就這麼辦。",
+      "why": "Deh 具有收斂猶豫、達成決定的柔和勸誘感。",
+      "level": 3
+    },
+    "u7:c:4": {
+      "id": "u7:c:4",
+      "kind": "grammar",
+      "type": "choice",
       "prompt": "印尼年輕人常說「Lagi mager nih.」，其中「mager」是哪兩個字的縮寫？",
       "audio": "Aduh lagi mager banget nih.",
       "answer": "Males gerak (懶得動、不想動)",
@@ -69,8 +86,8 @@
       "why": "Mager = Malas gerak，是印尼年輕世代最經典的網路流行縮寫！",
       "level": 3
     },
-    "u7:c:4": {
-      "id": "u7:c:4",
+    "u7:c:5": {
+      "id": "u7:c:5",
       "kind": "grammar",
       "type": "choice",
       "prompt": "在 WhatsApp 簡訊聊天時，對方回覆「gpp」，意思相當於中文的：",
@@ -86,8 +103,42 @@
       "why": "Gpp = Gak apa-apa (沒事啦/不打緊)，訊息回覆頻率極高。",
       "level": 3
     },
-    "u7:c:5": {
-      "id": "u7:c:5",
+    "u7:c:6": {
+      "id": "u7:c:6",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "流行語「bucin」形容陷入熱戀願意為對方做任何事的模樣，是哪兩個字的縮寫？",
+      "audio": "Dasar bucin banget kamu ya!",
+      "answer": "Budak cinta (愛情的奴隸 / 戀愛腦)",
+      "options": [
+        "Budak cinta (愛情的奴隸 / 戀愛腦)",
+        "Buku cina",
+        "Bunga cincin",
+        "Bukan cinta"
+      ],
+      "hint": "Budak = 奴隸, cinta = 愛情。",
+      "why": "Bucin 形容戀愛腦、被愛情牽著走的人。",
+      "level": 3
+    },
+    "u7:c:7": {
+      "id": "u7:c:7",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "朋友一直打聽別人的隱私八卦，你可以對他說「Jangan ___ dong!」：",
+      "audio": "Jangan kepo dong!",
+      "answer": "kepo (愛八卦、愛打聽閒事)",
+      "options": [
+        "kepo (愛八卦、愛打聽閒事)",
+        "santai",
+        "capek",
+        "lelah"
+      ],
+      "hint": "源自閩南語「雞婆」，流行至印尼。",
+      "why": "Kepo 是印尼極度普遍形容愛打聽八卦管閒事的俚語。",
+      "level": 3
+    },
+    "u7:c:8": {
+      "id": "u7:c:8",
       "kind": "grammar",
       "type": "choice",
       "prompt": "正式書面語（Bahasa Baku）的「Tidak apa-apa」，在雅加達口語最地道的說法是：",
@@ -103,8 +154,8 @@
       "why": "Tidak -> gak 是現代印尼口語的最顯著特徵。",
       "level": 3
     },
-    "u7:c:6": {
-      "id": "u7:c:6",
+    "u7:c:9": {
+      "id": "u7:c:9",
       "kind": "grammar",
       "type": "choice",
       "prompt": "書面語「Sudah」(已經)，在印尼街頭年輕人口中通常簡化說成：",
@@ -118,6 +169,187 @@
       ],
       "hint": "Sudah -> Udah (省去字首 S)。",
       "why": "Sudah -> udah, Tidak -> gak 是印尼日常口語兩大基石。",
+      "level": 3
+    },
+    "u7:c:10": {
+      "id": "u7:c:10",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "在雅加達口語中，正式書面尾綴「-kan」（如 belikan 幫買），常被哪一個口語後綴取代？",
+      "audio": "Tolong beliin kopi dong.",
+      "answer": "-in (如 beliin 代替 belikan)",
+      "options": [
+        "-in (如 beliin 代替 belikan)",
+        "-an",
+        "-kanlah",
+        "-keun"
+      ],
+      "hint": "雅加達 Betawi 方言習慣把 -kan 轉為 -in。",
+      "why": "口語中常用 -in 取代 -kan/-i：beliin (幫買)、bukain (幫開)。",
+      "level": 3
+    },
+    "u7:c:11": {
+      "id": "u7:c:11",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "朋友遞咖啡給你時說「Ini kopi buat kamu nih!」，助詞「nih」的作用是：",
+      "audio": "Ini kopi hangat buat kamu nih.",
+      "answer": "近指提示「這就給你囉/你看這個」，拉近親密感",
+      "options": [
+        "近指提示「這就給你囉/你看這個」，拉近親密感",
+        "表示不屑排斥",
+        "表示鄭重警告",
+        "表示懷疑不信"
+      ],
+      "hint": "Nih 源自 ini (這個/近指)。",
+      "why": "Nih 在句末能喚起對方注意力並增添親切感。",
+      "level": 3
+    },
+    "u7:c:12": {
+      "id": "u7:c:12",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "指著遠處提醒朋友說「Tuh kan, benar apa kata saya!」，「tuh」的作用是：",
+      "audio": "Tuh kan, benar apa kata saya!",
+      "answer": "遠指提請「你看吧/就如同剛才所說」，引起注意",
+      "options": [
+        "遠指提請「你看吧/就如同剛才所說」，引起注意",
+        "表示道歉自責",
+        "表示詢問價格",
+        "表示打招呼早上好"
+      ],
+      "hint": "Tuh 源自 itu (那個/遠指)。",
+      "why": "Tuh kan 常搭配連用，意思是「你看吧！果然不出所料」。",
+      "level": 3
+    },
+    "u7:c:13": {
+      "id": "u7:c:13",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "週日放假沒事幹，朋友發限動說「Lagi gabut banget」，「gabut」是指：",
+      "audio": "Hari Minggu ini aku lagi gabut banget.",
+      "answer": "發呆無聊、沒事找事做 (原指 Gaji Buta 拿薪水沒事幹)",
+      "options": [
+        "發呆無聊、沒事找事做 (原指 Gaji Buta 拿薪水沒事幹)",
+        "肚子非常餓",
+        "急著要去趕車",
+        "心情很激動"
+      ],
+      "hint": "Gabut 是年輕人形容無所事事、閒得發慌的必備詞。",
+      "why": "現代印尼俚語最常見日常心境之一。",
+      "level": 3
+    },
+    "u7:c:14": {
+      "id": "u7:c:14",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "別人隨口開個玩笑你就難過了，朋友會提醒你「Jangan baper ya!」，「baper」縮寫自：",
+      "audio": "Santai saja kawan, jangan baper ya.",
+      "answer": "Bawa perasaan (走心、玻璃心、太認真敏感)",
+      "options": [
+        "Bawa perasaan (走心、玻璃心、太認真敏感)",
+        "Banyak pikiran",
+        "Bakar perahu",
+        "Baju perak"
+      ],
+      "hint": "Bawa = 帶入, Perasaan = 情緒感覺。",
+      "why": "Baper 形容情緒容易被牽動、太過敏感走心。",
+      "level": 3
+    },
+    "u7:c:15": {
+      "id": "u7:c:15",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "在雅加達跟朋友聚會，對方說「Santai aja, gak usah buru-buru!」，意思是：",
+      "audio": "Santai aja, gak usah buru-buru.",
+      "answer": "放輕鬆慢慢來，不用著急忙慌！",
+      "options": [
+        "放輕鬆慢慢來，不用著急忙慌！",
+        "快一點，時間來不及了！",
+        "請你立刻付錢！",
+        "明天不要來了！"
+      ],
+      "hint": "Santai = 悠閒放鬆, Gak usah = 不需要, Buru-buru = 匆忙。",
+      "why": "印尼 Jam Karet (橡皮筋時間) 隨和從容生活態度的縮影金句。",
+      "level": 3
+    },
+    "u7:c:16": {
+      "id": "u7:c:16",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "口語中驚訝反問「Beneran nih?」，相當於書面標準語的：",
+      "audio": "Beneran nih kamu mau traktir?",
+      "answer": "Benarkah? / Sungguh-sungguhkah? (真的假的？)",
+      "options": [
+        "Benarkah? / Sungguh-sungguhkah? (真的假的？)",
+        "Bolehkah?",
+        "Sudahkah?",
+        "Mungkinkah?"
+      ],
+      "hint": "Bener = Benar (對/真實)。",
+      "why": "Beneran 是口語確認真實性的第一名口頭禪。",
+      "level": 3
+    },
+    "u7:b:0": {
+      "id": "u7:b:0",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝流行口語：「這是你點的咖啡喔，拿去吧。」",
+      "audio": "Ini kopi pesanan kamu nih.",
+      "tokens": [
+        "pesanan",
+        "kopi",
+        "Ini",
+        "tidur",
+        "nih",
+        "kamu",
+        "tidak"
+      ],
+      "answer": "Ini kopi pesanan kamu nih",
+      "hint": "nih 提示語氣助詞",
+      "why": "親切遞物金句。",
+      "level": 3
+    },
+    "u7:b:1": {
+      "id": "u7:b:1",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝流行口語：「別走心太認真，我們只是開玩笑而已。」",
+      "audio": "Jangan baper kita cuma bercanda saja.",
+      "tokens": [
+        "kita",
+        "tidur",
+        "Jangan",
+        "bercanda",
+        "saja",
+        "tidak",
+        "baper",
+        "cuma"
+      ],
+      "answer": "Jangan baper kita cuma bercanda saja",
+      "hint": "baper = 玻璃心走心, bercanda = 開玩笑",
+      "why": "社交幽默調侃必備。",
+      "level": 3
+    },
+    "u7:b:2": {
+      "id": "u7:b:2",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝流行口語：「放輕鬆兄弟，不用著急趕時間。」",
+      "audio": "Santai aja bro gak usah buru-buru.",
+      "tokens": [
+        "gak",
+        "tidur",
+        "aja",
+        "tidak",
+        "usah",
+        "Santai",
+        "buru-buru",
+        "bro"
+      ],
+      "answer": "Santai aja bro gak usah buru-buru",
+      "hint": "santai aja = 放輕鬆",
+      "why": "雅加達口語極致流暢。",
       "level": 3
     },
     "u7:match:1": {
@@ -161,30 +393,50 @@
           "u7:c:0",
           "u7:c:1",
           "u7:c:2",
+          "u7:c:3",
+          "u7:c:11",
+          "u7:c:12",
+          "u7:b:0",
           "u7:match:1"
         ],
         "u7-1:listen": [
           "u7:c:0",
           "u7:c:1",
           "u7:c:2",
+          "u7:c:3",
+          "u7:c:11",
+          "u7:c:12",
+          "u7:b:0",
           "u7:match:1"
         ],
         "u7-1:build": [
           "u7:c:0",
           "u7:c:1",
           "u7:c:2",
+          "u7:c:3",
+          "u7:c:11",
+          "u7:c:12",
+          "u7:b:0",
           "u7:match:1"
         ],
         "u7-1:drill": [
           "u7:c:0",
           "u7:c:1",
           "u7:c:2",
+          "u7:c:3",
+          "u7:c:11",
+          "u7:c:12",
+          "u7:b:0",
           "u7:match:1"
         ],
         "u7-1:boss": [
           "u7:c:0",
           "u7:c:1",
           "u7:c:2",
+          "u7:c:3",
+          "u7:c:11",
+          "u7:c:12",
+          "u7:b:0",
           "u7:match:1"
         ]
       }
@@ -196,28 +448,53 @@
       },
       "nodes": {
         "u7-2:word": [
-          "u7:c:3",
           "u7:c:4",
+          "u7:c:5",
+          "u7:c:6",
+          "u7:c:7",
+          "u7:c:13",
+          "u7:c:14",
+          "u7:b:1",
           "u7:match:1"
         ],
         "u7-2:listen": [
-          "u7:c:3",
           "u7:c:4",
+          "u7:c:5",
+          "u7:c:6",
+          "u7:c:7",
+          "u7:c:13",
+          "u7:c:14",
+          "u7:b:1",
           "u7:match:1"
         ],
         "u7-2:build": [
-          "u7:c:3",
           "u7:c:4",
+          "u7:c:5",
+          "u7:c:6",
+          "u7:c:7",
+          "u7:c:13",
+          "u7:c:14",
+          "u7:b:1",
           "u7:match:1"
         ],
         "u7-2:drill": [
-          "u7:c:3",
           "u7:c:4",
+          "u7:c:5",
+          "u7:c:6",
+          "u7:c:7",
+          "u7:c:13",
+          "u7:c:14",
+          "u7:b:1",
           "u7:match:1"
         ],
         "u7-2:boss": [
-          "u7:c:3",
           "u7:c:4",
+          "u7:c:5",
+          "u7:c:6",
+          "u7:c:7",
+          "u7:c:13",
+          "u7:c:14",
+          "u7:b:1",
           "u7:match:1"
         ]
       }
@@ -225,32 +502,52 @@
     "u7-3": {
       "guide": {
         "title": "正式語體 (Baku) 與街頭語體 (Gaul) 互轉",
-        "content": "Tidak 轉為 Gak、Sudah 轉為 Udah、Bisa 轉為 Bisa dong、動詞前綴 meN- 常在口語中自然脫落。懂得切換才算真正精通印尼語！"
+        "content": "Tidak 轉為 Gak、Sudah 轉為 Udah、-kan 轉為 -in (beliin)。懂得切換才算真正精通印尼語！"
       },
       "nodes": {
         "u7-3:word": [
-          "u7:c:5",
-          "u7:c:6",
+          "u7:c:8",
+          "u7:c:9",
+          "u7:c:10",
+          "u7:c:15",
+          "u7:c:16",
+          "u7:b:2",
           "u7:match:1"
         ],
         "u7-3:listen": [
-          "u7:c:5",
-          "u7:c:6",
+          "u7:c:8",
+          "u7:c:9",
+          "u7:c:10",
+          "u7:c:15",
+          "u7:c:16",
+          "u7:b:2",
           "u7:match:1"
         ],
         "u7-3:build": [
-          "u7:c:5",
-          "u7:c:6",
+          "u7:c:8",
+          "u7:c:9",
+          "u7:c:10",
+          "u7:c:15",
+          "u7:c:16",
+          "u7:b:2",
           "u7:match:1"
         ],
         "u7-3:drill": [
-          "u7:c:5",
-          "u7:c:6",
+          "u7:c:8",
+          "u7:c:9",
+          "u7:c:10",
+          "u7:c:15",
+          "u7:c:16",
+          "u7:b:2",
           "u7:match:1"
         ],
         "u7-3:boss": [
-          "u7:c:5",
-          "u7:c:6",
+          "u7:c:8",
+          "u7:c:9",
+          "u7:c:10",
+          "u7:c:15",
+          "u7:c:16",
+          "u7:b:2",
           "u7:match:1"
         ]
       }
