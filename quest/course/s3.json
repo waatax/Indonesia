@@ -439,6 +439,172 @@
       "why": "Bisa tolong tambah sambal sedikit? 意思為：可以幫我多加一點辣椒醬嗎？",
       "level": 2
     },
+    "u3-1:b:8": {
+      "id": "u3-1:b:8",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝點餐印尼文：「請給我一杯無糖冰茶，不要加糖。」",
+      "audio": "Minta es teh tawar satu tanpa gula.",
+      "tokens": [
+        "gula",
+        "mobil",
+        "Minta",
+        "satu",
+        "tidur",
+        "tanpa",
+        "teh",
+        "es",
+        "tawar"
+      ],
+      "answer": "Minta es teh tawar satu tanpa gula",
+      "hint": "teh tawar = 無糖茶, tanpa gula = 不加糖",
+      "why": "印尼茶飲預設極甜，喝無糖必喊 Teh tawar！",
+      "level": 2
+    },
+    "u3-1:c:8": {
+      "id": "u3-1:c:8",
+      "kind": "word",
+      "type": "choice",
+      "prompt": "「Minta es teh tawar satu tanpa gula.」在印尼餐廳點餐的意思是？",
+      "audio": "Minta es teh tawar satu tanpa gula.",
+      "answer": "請給我一杯無糖冰茶，不要加糖。",
+      "options": [
+        "這裡可以刷信用卡嗎？",
+        "車票在哪裡買？",
+        "請給我一杯無糖冰茶，不要加糖。",
+        "請問有洗手間嗎？"
+      ],
+      "hint": "teh tawar = 無糖茶, tanpa gula = 不加糖",
+      "why": "印尼茶飲預設極甜，喝無糖必喊 Teh tawar！",
+      "level": 2
+    },
+    "u3-1:l:8": {
+      "id": "u3-1:l:8",
+      "kind": "talk",
+      "type": "listen",
+      "prompt": "聽一聽服務員或客人的點餐語音，選出正確意思：",
+      "audio": "Minta es teh tawar satu tanpa gula.",
+      "answer": "請給我一杯無糖冰茶，不要加糖。",
+      "options": [
+        "我要外帶三個便當。",
+        "請問有熱水嗎？",
+        "請給我一杯無糖冰茶，不要加糖。",
+        "桌上有空的座位嗎？"
+      ],
+      "hint": "teh tawar = 無糖茶, tanpa gula = 不加糖",
+      "why": "Minta es teh tawar satu tanpa gula. 意思為：請給我一杯無糖冰茶，不要加糖。",
+      "level": 2
+    },
+    "u3-1:b:9": {
+      "id": "u3-1:b:9",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝點餐印尼文：「請辣椒醬只要放一點點就好。」",
+      "audio": "Tolong sambal sedikit saja ya.",
+      "tokens": [
+        "mobil",
+        "saja",
+        "Tolong",
+        "sedikit",
+        "tidur",
+        "ya",
+        "sambal"
+      ],
+      "answer": "Tolong sambal sedikit saja ya",
+      "hint": "sedikit saja = 只要一點點",
+      "why": "不耐辣者的點餐救星句。",
+      "level": 2
+    },
+    "u3-1:c:9": {
+      "id": "u3-1:c:9",
+      "kind": "word",
+      "type": "choice",
+      "prompt": "「Tolong sambal sedikit saja ya.」在印尼餐廳點餐的意思是？",
+      "audio": "Tolong sambal sedikit saja ya.",
+      "answer": "請辣椒醬只要放一點點就好。",
+      "options": [
+        "請問有洗手間嗎？",
+        "這裡可以刷信用卡嗎？",
+        "車票在哪裡買？",
+        "請辣椒醬只要放一點點就好。"
+      ],
+      "hint": "sedikit saja = 只要一點點",
+      "why": "不耐辣者的點餐救星句。",
+      "level": 2
+    },
+    "u3-1:l:9": {
+      "id": "u3-1:l:9",
+      "kind": "talk",
+      "type": "listen",
+      "prompt": "聽一聽服務員或客人的點餐語音，選出正確意思：",
+      "audio": "Tolong sambal sedikit saja ya.",
+      "answer": "請辣椒醬只要放一點點就好。",
+      "options": [
+        "請辣椒醬只要放一點點就好。",
+        "桌上有空的座位嗎？",
+        "我要外帶三個便當。",
+        "請問有熱水嗎？"
+      ],
+      "hint": "sedikit saja = 只要一點點",
+      "why": "Tolong sambal sedikit saja ya. 意思為：請辣椒醬只要放一點點就好。",
+      "level": 2
+    },
+    "u3-1:b:10": {
+      "id": "u3-1:b:10",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝點餐印尼文：「小哥，請幫我外帶打包帶回家。」",
+      "audio": "Tolong dibungkus untuk dibawa pulang ya Mas.",
+      "tokens": [
+        "Mas",
+        "dibawa",
+        "Tolong",
+        "dibungkus",
+        "pulang",
+        "tidur",
+        "untuk",
+        "ya",
+        "mobil"
+      ],
+      "answer": "Tolong dibungkus untuk dibawa pulang ya Mas",
+      "hint": "dibawa pulang = 帶回家",
+      "why": "夜市小吃打包外帶最客氣說法。",
+      "level": 2
+    },
+    "u3-1:c:10": {
+      "id": "u3-1:c:10",
+      "kind": "word",
+      "type": "choice",
+      "prompt": "「Tolong dibungkus untuk dibawa pulang ya Mas.」在印尼餐廳點餐的意思是？",
+      "audio": "Tolong dibungkus untuk dibawa pulang ya Mas.",
+      "answer": "小哥，請幫我外帶打包帶回家。",
+      "options": [
+        "這裡可以刷信用卡嗎？",
+        "車票在哪裡買？",
+        "小哥，請幫我外帶打包帶回家。",
+        "請問有洗手間嗎？"
+      ],
+      "hint": "dibawa pulang = 帶回家",
+      "why": "夜市小吃打包外帶最客氣說法。",
+      "level": 2
+    },
+    "u3-1:l:10": {
+      "id": "u3-1:l:10",
+      "kind": "talk",
+      "type": "listen",
+      "prompt": "聽一聽服務員或客人的點餐語音，選出正確意思：",
+      "audio": "Tolong dibungkus untuk dibawa pulang ya Mas.",
+      "answer": "小哥，請幫我外帶打包帶回家。",
+      "options": [
+        "請問有熱水嗎？",
+        "小哥，請幫我外帶打包帶回家。",
+        "我要外帶三個便當。",
+        "桌上有空的座位嗎？"
+      ],
+      "hint": "dibawa pulang = 帶回家",
+      "why": "Tolong dibungkus untuk dibawa pulang ya Mas. 意思為：小哥，請幫我外帶打包帶回家。",
+      "level": 2
+    },
     "u3-1:match:1": {
       "id": "u3-1:match:1",
       "kind": "word",
@@ -699,6 +865,122 @@
       "why": "司機最喜歡聽到的暖心感謝。",
       "level": 2
     },
+    "u3-2:b:6": {
+      "id": "u3-2:b:6",
+      "kind": "talk",
+      "type": "build",
+      "prompt": "請組裝叫車對話：「司機大哥，請給我一頂乾淨的安全帽。」",
+      "audio": "Pak minta helm yang bersih satu ya.",
+      "tokens": [
+        "tidak",
+        "yang",
+        "helm",
+        "minta",
+        "ya",
+        "kopi",
+        "bersih",
+        "satu",
+        "Pak"
+      ],
+      "answer": "Pak minta helm yang bersih satu ya",
+      "hint": "helm = 安全帽, bersih = 乾淨",
+      "why": "搭 GoRide 摩托車保護頭部安全必說句子。",
+      "level": 2
+    },
+    "u3-2:c:6": {
+      "id": "u3-2:c:6",
+      "kind": "talk",
+      "type": "choice",
+      "prompt": "司機傳來「Pak minta helm yang bersih satu ya.」，意思是：",
+      "audio": "Pak minta helm yang bersih satu ya.",
+      "answer": "司機大哥，請給我一頂乾淨的安全帽。",
+      "options": [
+        "司機大哥，請給我一頂乾淨的安全帽。",
+        "請問可以取消訂單嗎？",
+        "我要先去加油。",
+        "路上大塞車要遲到了。"
+      ],
+      "hint": "helm = 安全帽, bersih = 乾淨",
+      "why": "搭 GoRide 摩托車保護頭部安全必說句子。",
+      "level": 2
+    },
+    "u3-2:b:7": {
+      "id": "u3-2:b:7",
+      "kind": "talk",
+      "type": "build",
+      "prompt": "請組裝叫車對話：「請問我們要走高速公路比較快嗎？」",
+      "audio": "Apakah kita mau lewat jalan tol?",
+      "tokens": [
+        "jalan",
+        "Apakah",
+        "kopi",
+        "tol",
+        "lewat",
+        "tidak",
+        "kita",
+        "mau"
+      ],
+      "answer": "Apakah kita mau lewat jalan tol",
+      "hint": "jalan tol = 高速公路",
+      "why": "搭 GoCar 汽車避開市區塞車常用問句。",
+      "level": 2
+    },
+    "u3-2:c:7": {
+      "id": "u3-2:c:7",
+      "kind": "talk",
+      "type": "choice",
+      "prompt": "司機傳來「Apakah kita mau lewat jalan tol?」，意思是：",
+      "audio": "Apakah kita mau lewat jalan tol?",
+      "answer": "請問我們要走高速公路比較快嗎？",
+      "options": [
+        "請問我們要走高速公路比較快嗎？",
+        "路上大塞車要遲到了。",
+        "請問可以取消訂單嗎？",
+        "我要先去加油。"
+      ],
+      "hint": "jalan tol = 高速公路",
+      "why": "搭 GoCar 汽車避開市區塞車常用問句。",
+      "level": 2
+    },
+    "u3-2:b:8": {
+      "id": "u3-2:b:8",
+      "kind": "talk",
+      "type": "build",
+      "prompt": "請組裝叫車對話：「我已經在北大廳門口等候了。」",
+      "audio": "Saya sudah menunggu di depan lobby utara.",
+      "tokens": [
+        "Saya",
+        "di",
+        "depan",
+        "tidak",
+        "menunggu",
+        "utara",
+        "kopi",
+        "lobby",
+        "sudah"
+      ],
+      "answer": "Saya sudah menunggu di depan lobby utara",
+      "hint": "lobby utara = 北大廳, menunggu = 等候",
+      "why": "商場或車站有多個出入口時精準溝通句。",
+      "level": 2
+    },
+    "u3-2:c:8": {
+      "id": "u3-2:c:8",
+      "kind": "talk",
+      "type": "choice",
+      "prompt": "司機傳來「Saya sudah menunggu di depan lobby utara.」，意思是：",
+      "audio": "Saya sudah menunggu di depan lobby utara.",
+      "answer": "我已經在北大廳門口等候了。",
+      "options": [
+        "我已經在北大廳門口等候了。",
+        "請問可以取消訂單嗎？",
+        "我要先去加油。",
+        "路上大塞車要遲到了。"
+      ],
+      "hint": "lobby utara = 北大廳, menunggu = 等候",
+      "why": "商場或車站有多個出入口時精準溝通句。",
+      "level": 2
+    },
     "u3-3:b:0": {
       "id": "u3-3:b:0",
       "kind": "drill",
@@ -882,6 +1164,123 @@
       "hint": "jalan kaki = 走路步行, menit = 分鐘",
       "why": "問步行距離必備句型。",
       "level": 2
+    },
+    "u3-3:b:5": {
+      "id": "u3-3:b:5",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝方位印尼文：「請在前面的紅綠燈處迴轉。」",
+      "audio": "Tolong putar balik di depan lampu merah.",
+      "tokens": [
+        "Tolong",
+        "jauh",
+        "depan",
+        "putar",
+        "di",
+        "kiri",
+        "balik",
+        "lampu",
+        "merah"
+      ],
+      "answer": "Tolong putar balik di depan lampu merah",
+      "hint": "putar balik = 迴轉, lampu merah = 紅綠燈",
+      "why": "搭車導航超高頻指示：putar balik 迴轉。",
+      "level": 2
+    },
+    "u3-3:c:5": {
+      "id": "u3-3:c:5",
+      "kind": "word",
+      "type": "choice",
+      "prompt": "問路回答「Tolong putar balik di depan lampu merah.」是什麼意思？",
+      "audio": "Tolong putar balik di depan lampu merah.",
+      "answer": "請在前面的紅綠燈處迴轉。",
+      "options": [
+        "請在前面的紅綠燈處迴轉。",
+        "今天營業時間結束了。",
+        "車票已經賣光了。",
+        "公車已經滿座了。"
+      ],
+      "hint": "putar balik = 迴轉, lampu merah = 紅綠燈",
+      "why": "搭車導航超高頻指示：putar balik 迴轉。",
+      "level": 2
+    },
+    "u3-3:b:6": {
+      "id": "u3-3:b:6",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝方位印尼文：「銀行大樓就在馬路的左側。」",
+      "audio": "Gedung bank ada di sebelah kiri jalan.",
+      "tokens": [
+        "Gedung",
+        "ada",
+        "bank",
+        "jalan",
+        "sebelah",
+        "jauh",
+        "kiri",
+        "di",
+        "kiri"
+      ],
+      "answer": "Gedung bank ada di sebelah kiri jalan",
+      "hint": "sebelah kiri = 左邊/左側",
+      "why": "方位左右側必備句。",
+      "level": 2
+    },
+    "u3-3:c:6": {
+      "id": "u3-3:c:6",
+      "kind": "word",
+      "type": "choice",
+      "prompt": "問路回答「Gedung bank ada di sebelah kiri jalan.」是什麼意思？",
+      "audio": "Gedung bank ada di sebelah kiri jalan.",
+      "answer": "銀行大樓就在馬路的左側。",
+      "options": [
+        "銀行大樓就在馬路的左側。",
+        "今天營業時間結束了。",
+        "公車已經滿座了。",
+        "車票已經賣光了。"
+      ],
+      "hint": "sebelah kiri = 左邊/左側",
+      "why": "方位左右側必備句。",
+      "level": 2
+    },
+    "u3-3:b:7": {
+      "id": "u3-3:b:7",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝方位印尼文：「穿過第二個紅綠燈後再右轉。」",
+      "audio": "Lewat lampu merah kedua lalu belok kanan.",
+      "tokens": [
+        "lalu",
+        "belok",
+        "kanan",
+        "kiri",
+        "Lewat",
+        "jauh",
+        "merah",
+        "kedua",
+        "lampu"
+      ],
+      "answer": "Lewat lampu merah kedua lalu belok kanan",
+      "hint": "lewat = 經過, kedua = 第二個",
+      "why": "複雜路況指引實用語。",
+      "level": 2
+    },
+    "u3-3:c:7": {
+      "id": "u3-3:c:7",
+      "kind": "word",
+      "type": "choice",
+      "prompt": "問路回答「Lewat lampu merah kedua lalu belok kanan.」是什麼意思？",
+      "audio": "Lewat lampu merah kedua lalu belok kanan.",
+      "answer": "穿過第二個紅綠燈後再右轉。",
+      "options": [
+        "穿過第二個紅綠燈後再右轉。",
+        "今天營業時間結束了。",
+        "公車已經滿座了。",
+        "車票已經賣光了。"
+      ],
+      "hint": "lewat = 經過, kedua = 第二個",
+      "why": "複雜路況指引實用語。",
+      "level": 2
     }
   },
   "units": {
@@ -900,6 +1299,9 @@
           "u3-1:c:5",
           "u3-1:c:6",
           "u3-1:c:7",
+          "u3-1:c:8",
+          "u3-1:c:9",
+          "u3-1:c:10",
           "u3-1:match:1"
         ],
         "u3-1:listen": [
@@ -910,7 +1312,10 @@
           "u3-1:l:4",
           "u3-1:l:5",
           "u3-1:l:6",
-          "u3-1:l:7"
+          "u3-1:l:7",
+          "u3-1:l:8",
+          "u3-1:l:9",
+          "u3-1:l:10"
         ],
         "u3-1:build": [
           "u3-1:b:0",
@@ -920,7 +1325,10 @@
           "u3-1:b:4",
           "u3-1:b:5",
           "u3-1:b:6",
-          "u3-1:b:7"
+          "u3-1:b:7",
+          "u3-1:b:8",
+          "u3-1:b:9",
+          "u3-1:b:10"
         ],
         "u3-1:drill": [
           "u3-1:b:0",
@@ -930,7 +1338,33 @@
           "u3-1:c:1",
           "u3-1:l:1",
           "u3-1:b:2",
-          "u3-1:c:2"
+          "u3-1:c:2",
+          "u3-1:l:2",
+          "u3-1:b:3",
+          "u3-1:c:3",
+          "u3-1:l:3",
+          "u3-1:b:4",
+          "u3-1:c:4",
+          "u3-1:l:4",
+          "u3-1:b:5",
+          "u3-1:c:5",
+          "u3-1:l:5",
+          "u3-1:b:6",
+          "u3-1:c:6",
+          "u3-1:l:6",
+          "u3-1:b:7",
+          "u3-1:c:7",
+          "u3-1:l:7",
+          "u3-1:b:8",
+          "u3-1:c:8",
+          "u3-1:l:8",
+          "u3-1:b:9",
+          "u3-1:c:9",
+          "u3-1:l:9",
+          "u3-1:b:10",
+          "u3-1:c:10",
+          "u3-1:l:10",
+          "u3-1:match:1"
         ],
         "u3-1:boss": [
           "u3-1:b:0",
@@ -957,6 +1391,15 @@
           "u3-1:b:7",
           "u3-1:c:7",
           "u3-1:l:7",
+          "u3-1:b:8",
+          "u3-1:c:8",
+          "u3-1:l:8",
+          "u3-1:b:9",
+          "u3-1:c:9",
+          "u3-1:l:9",
+          "u3-1:b:10",
+          "u3-1:c:10",
+          "u3-1:l:10",
           "u3-1:match:1"
         ]
       }
@@ -975,7 +1418,17 @@
           "u3-2:b:2",
           "u3-2:c:2",
           "u3-2:b:3",
-          "u3-2:c:3"
+          "u3-2:c:3",
+          "u3-2:b:4",
+          "u3-2:c:4",
+          "u3-2:b:5",
+          "u3-2:c:5",
+          "u3-2:b:6",
+          "u3-2:c:6",
+          "u3-2:b:7",
+          "u3-2:c:7",
+          "u3-2:b:8",
+          "u3-2:c:8"
         ],
         "u3-2:listen": [
           "u3-2:b:0",
@@ -989,7 +1442,13 @@
           "u3-2:b:4",
           "u3-2:c:4",
           "u3-2:b:5",
-          "u3-2:c:5"
+          "u3-2:c:5",
+          "u3-2:b:6",
+          "u3-2:c:6",
+          "u3-2:b:7",
+          "u3-2:c:7",
+          "u3-2:b:8",
+          "u3-2:c:8"
         ],
         "u3-2:build": [
           "u3-2:b:0",
@@ -997,7 +1456,10 @@
           "u3-2:b:2",
           "u3-2:b:3",
           "u3-2:b:4",
-          "u3-2:b:5"
+          "u3-2:b:5",
+          "u3-2:b:6",
+          "u3-2:b:7",
+          "u3-2:b:8"
         ],
         "u3-2:drill": [
           "u3-2:b:0",
@@ -1007,7 +1469,17 @@
           "u3-2:b:2",
           "u3-2:c:2",
           "u3-2:b:3",
-          "u3-2:c:3"
+          "u3-2:c:3",
+          "u3-2:b:4",
+          "u3-2:c:4",
+          "u3-2:b:5",
+          "u3-2:c:5",
+          "u3-2:b:6",
+          "u3-2:c:6",
+          "u3-2:b:7",
+          "u3-2:c:7",
+          "u3-2:b:8",
+          "u3-2:c:8"
         ],
         "u3-2:boss": [
           "u3-2:b:0",
@@ -1021,7 +1493,13 @@
           "u3-2:b:4",
           "u3-2:c:4",
           "u3-2:b:5",
-          "u3-2:c:5"
+          "u3-2:c:5",
+          "u3-2:b:6",
+          "u3-2:c:6",
+          "u3-2:b:7",
+          "u3-2:c:7",
+          "u3-2:b:8",
+          "u3-2:c:8"
         ]
       }
     },
@@ -1036,7 +1514,10 @@
           "u3-3:c:1",
           "u3-3:c:2",
           "u3-3:c:3",
-          "u3-3:c:4"
+          "u3-3:c:4",
+          "u3-3:c:5",
+          "u3-3:c:6",
+          "u3-3:c:7"
         ],
         "u3-3:listen": [
           "u3-3:b:0",
@@ -1046,14 +1527,25 @@
           "u3-3:b:2",
           "u3-3:c:2",
           "u3-3:b:3",
-          "u3-3:c:3"
+          "u3-3:c:3",
+          "u3-3:b:4",
+          "u3-3:c:4",
+          "u3-3:b:5",
+          "u3-3:c:5",
+          "u3-3:b:6",
+          "u3-3:c:6",
+          "u3-3:b:7",
+          "u3-3:c:7"
         ],
         "u3-3:build": [
           "u3-3:b:0",
           "u3-3:b:1",
           "u3-3:b:2",
           "u3-3:b:3",
-          "u3-3:b:4"
+          "u3-3:b:4",
+          "u3-3:b:5",
+          "u3-3:b:6",
+          "u3-3:b:7"
         ],
         "u3-3:drill": [
           "u3-3:b:0",
@@ -1063,7 +1555,15 @@
           "u3-3:b:2",
           "u3-3:c:2",
           "u3-3:b:3",
-          "u3-3:c:3"
+          "u3-3:c:3",
+          "u3-3:b:4",
+          "u3-3:c:4",
+          "u3-3:b:5",
+          "u3-3:c:5",
+          "u3-3:b:6",
+          "u3-3:c:6",
+          "u3-3:b:7",
+          "u3-3:c:7"
         ],
         "u3-3:boss": [
           "u3-3:b:0",
@@ -1075,7 +1575,13 @@
           "u3-3:b:3",
           "u3-3:c:3",
           "u3-3:b:4",
-          "u3-3:c:4"
+          "u3-3:c:4",
+          "u3-3:b:5",
+          "u3-3:c:5",
+          "u3-3:b:6",
+          "u3-3:c:6",
+          "u3-3:b:7",
+          "u3-3:c:7"
         ]
       }
     }

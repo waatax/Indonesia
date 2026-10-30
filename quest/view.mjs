@@ -39,7 +39,8 @@ const ui = {
   showHint: false,
   activeGuide: null,
   confirmExit: false,
-  notice: ''
+  notice: '',
+  autoSpeak: true
 };
 
 // Data fetcher
@@ -51,6 +52,11 @@ async function fetchJson(path) {
 
 async function boot() {
   try {
+    try {
+      const savedAuto = storage?.getItem('indonesia-quest-auto-speak');
+      if (savedAuto !== null) ui.autoSpeak = savedAuto === 'true';
+    } catch {}
+
     root.innerHTML = `
       <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;width:100%;font-weight:700;color:var(--green);gap:16px;">
         <div style="font-size:48px;animation:spin 1s infinite linear;">🇮🇩</div>
@@ -341,6 +347,12 @@ function renderLesson(session) {
     boss: '🏆 魔王挑戰'
   };
 
+  let mascotMsg = '🌟 快樂學好印尼語，大膽開口說！';
+  if (isRemediating) mascotMsg = '🔄 別氣餒！這次看清結構與發音，一定能順利征服！';
+  else if (item.type === 'listen') mascotMsg = '👂 閉上眼睛仔細聽發音音節，抓住印尼語韻律感！';
+  else if (item.type === 'build') mascotMsg = '🧱 詞序小提示：印尼語修飾詞在後方 (D-M 法則)！';
+  else if (item.kind === 'grammar') mascotMsg = '📐 觀察核心詞綴與句型骨架，答錯了教練也會陪你訂正！';
+
   return `
     <div class="session-overlay">
       <header class="session-header">
@@ -348,6 +360,9 @@ function renderLesson(session) {
         <div class="session-progress-bar" role="progressbar" aria-label="本次練習進度" aria-valuenow="${progressPercent}" aria-valuemin="0" aria-valuemax="100">
           <div class="session-progress-fill" style="width: ${progressPercent}%;"></div>
         </div>
+        <button class="session-audio-toggle ${ui.autoSpeak ? 'active' : ''}" data-act="toggle-auto-speak" title="切換進入題目時自動語音朗讀">
+          <span>${ui.autoSpeak ? '🔊 自動語音' : '🔈 靜音模式'}</span>
+        </button>
         ${
           session.hearts !== null
             ? `
@@ -360,6 +375,11 @@ function renderLesson(session) {
       </header>
 
       <div class="session-card">
+        <div class="mascot-bar">
+          <span class="mascot-avatar">${isRemediating ? '💪' : item.type === 'listen' ? '🎧' : '🦉'}</span>
+          <span class="mascot-speech">${mascotMsg}</span>
+        </div>
+
         <p class="question-counter">第 ${current + 1} / ${total} 題${total > session.originalCount ? ` · 含 ${total - session.originalCount} 次錯題重練` : ''}</p>
         <div class="session-kind-pill ${isRemediating ? 'remediated' : ''}">
           <span>${isRemediating ? '🔄 再次挑戰：征服這道題！' : kindNames[item.kind] || '✨ 闖關題'}</span>
@@ -371,18 +391,27 @@ function renderLesson(session) {
           ${
             item.audio
               ? `
-            <button class="audio-btn" data-say="${esc(item.audio)}">
-              <span>🔊 聽印尼語發音</span>
+            <button class="audio-btn" data-say="${esc(item.audio)}" title="念出標準印尼語語音">
+              <span>🔊 念出題目</span>
             </button>
             <button class="slow-audio-btn" data-say-slow="${esc(item.audio)}" title="慢速 0.7x 清楚朗讀">
-              <span>🐢 慢速</span>
+              <span>🐢 慢速念出</span>
             </button>
           `
               : ''
           }
-          <button class="audio-btn alt" data-narrate="${esc(item.prompt)}" title="朗讀題目">
-            <span>🗣️ 朗讀題目</span>
+          <button class="audio-btn alt" data-narrate="${esc(item.prompt)}" title="朗讀題目說明">
+            <span>🗣️ 朗讀題目說明</span>
           </button>
+          ${
+            (item.type === 'choice' || item.type === 'listen') && item.options && item.options.length > 0
+              ? `
+            <button class="audio-btn sub" data-act="read-all-options" title="依序朗讀所有選項發音與內容">
+              <span>📋 念出所有選項</span>
+            </button>
+          `
+              : ''
+          }
         </div>
 
         ${
@@ -539,20 +568,35 @@ function renderFeedbackSheet() {
       <div class="feedback-sheet correct" role="status" aria-live="polite">
         <div class="feedback-content">
           <div class="feedback-info">
-            <h3 class="feedback-title">🎉 ${fb.remediated ? '征服成功！' : '太棒了！Bagus sekali!'}</h3>
+            <div class="feedback-header-row">
+              <h3 class="feedback-title">🎉 ${fb.remediated ? '征服成功！' : '太棒了！Bagus sekali!'}</h3>
+              ${fb.streak >= 2 ? `<span class="combo-pill">🔥 連對 ${fb.streak} 題！手感極佳！</span>` : ''}
+            </div>
             <p class="feedback-text">${esc(answerText(fb.item))}</p>
             ${fb.item.why ? `<p style="font-size:13px;color:#15803d;margin-top:2px;">💡 ${esc(fb.item.why)}</p>` : ''}
-            ${
-              targetSpoken
-                ? `
-              <div class="feedback-audio-actions">
-                <button class="feedback-audio-btn correct" data-say-feedback="${esc(targetSpoken)}">
+            <div class="feedback-audio-actions">
+              ${
+                targetSpoken
+                  ? `
+                <button class="feedback-audio-btn correct" data-say-feedback="${esc(targetSpoken)}" title="念出標準正解發音">
                   <span>🔊 朗讀正解</span>
                 </button>
-              </div>
-            `
-                : ''
-            }
+                <button class="feedback-audio-btn correct alt" data-say-feedback-slow="${esc(targetSpoken)}" title="慢速 0.7x 朗讀正解">
+                  <span>🐢 慢速正解</span>
+                </button>
+              `
+                  : ''
+              }
+              ${
+                fb.item.why
+                  ? `
+                <button class="feedback-audio-btn correct alt" data-say-explain="${esc(fb.item.why)}" title="朗讀解析內容">
+                  <span>💡 念出解析</span>
+                </button>
+              `
+                  : ''
+              }
+            </div>
           </div>
           <button class="action-btn continue" data-act="next-question">
             繼續前進 →
@@ -567,22 +611,25 @@ function renderFeedbackSheet() {
         <div class="feedback-content">
           <div class="feedback-info">
             <h3 class="feedback-title">❌ 正確答案是：</h3>
-            <p class="feedback-text" style="font-weight:800;color:var(--red-d);">${esc(answerText(fb.item))}</p>
+            <p class="feedback-text" style="font-weight:800;color:var(--red-d);font-size:17px;">${esc(answerText(fb.item))}</p>
             <div class="feedback-audio-actions">
               ${
                 targetSpoken
                   ? `
-                <button class="feedback-audio-btn wrong" data-say-feedback="${esc(targetSpoken)}">
+                <button class="feedback-audio-btn wrong" data-say-feedback="${esc(targetSpoken)}" title="念出正解標準發音">
                   <span>🔊 朗讀正解發音</span>
+                </button>
+                <button class="feedback-audio-btn wrong alt" data-say-feedback-slow="${esc(targetSpoken)}" title="慢速 0.7x 清楚朗讀正解">
+                  <span>🐢 慢速正解</span>
                 </button>
               `
                   : ''
               }
-              <button class="feedback-audio-btn wrong" data-say-explain="${esc(tipText)}">
-                <span>🗣️ 聽教練解說</span>
+              <button class="feedback-audio-btn wrong" data-say-explain="${esc(tipText)}" title="聽教練語音詳解">
+                <span>🗣️ 聽教練語音解說</span>
               </button>
             </div>
-            <p style="font-size:13px;color:#991b1b;margin-top:6px;white-space:pre-line;">${esc(tipText)}</p>
+            <div class="correction-tip-box" style="font-size:13px;color:#991b1b;margin-top:6px;white-space:pre-line;line-height:1.5;">${esc(tipText)}</div>
           </div>
           <button class="action-btn continue wrong" data-act="next-question">
             我記住了，繼續 →
@@ -919,6 +966,11 @@ function bindEvents() {
       sound.play({ text: sayFeedbackBtn.dataset.sayFeedback });
       return;
     }
+    const sayFeedbackSlowBtn = e.target.closest('[data-say-feedback-slow]');
+    if (sayFeedbackSlowBtn) {
+      sound.play({ text: sayFeedbackSlowBtn.dataset.sayFeedbackSlow, slow: true });
+      return;
+    }
     const sayExplainBtn = e.target.closest('[data-say-explain]');
     if (sayExplainBtn) {
       sound.narrate(sayExplainBtn.dataset.sayExplain);
@@ -927,6 +979,18 @@ function bindEvents() {
     if (e.target.closest('[data-act="say-tray"]')) {
       const sentence = ui.placedTokens.join(' ');
       if (sentence) sound.play({ text: sentence });
+      return;
+    }
+    if (e.target.closest('[data-act="read-all-options"]')) {
+      const it = game.currentItem();
+      if (it?.options) sound.pronounceOptions(it.options);
+      return;
+    }
+    if (e.target.closest('[data-act="toggle-auto-speak"]')) {
+      ui.autoSpeak = !ui.autoSpeak;
+      try { storage?.setItem('indonesia-quest-auto-speak', String(ui.autoSpeak)); } catch {}
+      sound.sfx('tap');
+      render();
       return;
     }
 
@@ -1124,9 +1188,13 @@ function startLesson(nodeId) {
   render();
 
   // Auto-speak audio for initial item
-  const item = game.currentItem();
-  if (item?.audio) {
-    sound.play({ text: item.audio });
+  if (ui.autoSpeak) {
+    const item = game.currentItem();
+    if (item?.audio) {
+      sound.play({ text: item.audio });
+    } else if (item?.prompt) {
+      sound.narrate(item.prompt);
+    }
   }
 }
 
@@ -1147,17 +1215,22 @@ function handleSubmitAnswer() {
   if (!res) return;
 
   ui.activeFeedback = res;
+  const targetSpoken = spokenAnswer(res.item);
   if (res.correct) {
-    sound.sfx(res.remediated ? 'combo' : 'correct');
+    sound.sfx(res.remediated ? 'combo' : (res.streak >= 3 ? 'combo' : 'correct'));
     try { navigator.vibrate?.(25); } catch {}
+    if (ui.autoSpeak && targetSpoken) {
+      setTimeout(() => {
+        sound.play({ text: targetSpoken });
+      }, 200);
+    }
   } else {
     sound.sfx('wrong');
     try { navigator.vibrate?.([40, 60, 40]); } catch {}
-    const targetSpoken = spokenAnswer(res.item);
-    if (targetSpoken) {
+    if (ui.autoSpeak && targetSpoken) {
       setTimeout(() => {
-        sound.pronounceOption(targetSpoken);
-      }, 400);
+        sound.play({ text: targetSpoken });
+      }, 350);
     }
   }
   render();
@@ -1180,9 +1253,13 @@ function handleNextQuestion() {
     render();
   } else {
     render();
-    const item = game.currentItem();
-    if (item?.audio) {
-      sound.play({ text: item.audio });
+    if (ui.autoSpeak) {
+      const item = game.currentItem();
+      if (item?.audio) {
+        sound.play({ text: item.audio });
+      } else if (item?.prompt) {
+        sound.narrate(item.prompt);
+      }
     }
   }
 }

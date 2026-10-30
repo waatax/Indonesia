@@ -683,6 +683,69 @@ body {
   box-shadow: 0 2px 0 var(--line-d);
 }
 
+.audio-btn.sub {
+  background: var(--card);
+  color: var(--ink);
+  border: 2px solid var(--line);
+  box-shadow: 0 3px 0 var(--line-d);
+  font-size: 13px;
+  padding: 8px 14px;
+}
+
+.audio-btn.sub:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 var(--line-d);
+}
+
+.session-audio-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  background: var(--soft);
+  color: var(--ink-secondary);
+  border: 2px solid var(--line);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.session-audio-toggle:hover {
+  border-color: var(--sky);
+}
+
+.session-audio-toggle.active {
+  background: #e0f2fe;
+  color: #0369a1;
+  border-color: var(--sky);
+}
+
+.mascot-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--soft);
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius);
+  padding: 10px 14px;
+  margin-bottom: 16px;
+}
+
+.mascot-avatar {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.mascot-speech {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.4;
+}
+
 /* Hint Trigger & Drawer */
 .hint-toggle-btn {
   display: inline-flex;
@@ -1108,6 +1171,55 @@ body {
 .feedback-audio-btn:active {
   transform: translateY(2px);
   box-shadow: none;
+}
+
+.feedback-audio-btn.correct.alt {
+  background: var(--card);
+  color: var(--green-d);
+  border: 1.5px solid var(--green);
+  box-shadow: 0 2px 0 var(--green);
+}
+
+.feedback-audio-btn.wrong.alt {
+  background: var(--card);
+  color: var(--red-d);
+  border: 1.5px solid var(--red);
+  box-shadow: 0 2px 0 var(--red);
+}
+
+.feedback-header-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.combo-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #fef3c7;
+  color: #b45309;
+  border: 1.5px solid #f59e0b;
+  padding: 2px 10px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 800;
+  animation: pulseCombo 1.2s infinite;
+}
+
+@keyframes pulseCombo {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.correction-tip-box {
+  background: rgba(254, 242, 242, 0.95);
+  border: 1.5px solid rgba(239, 68, 68, 0.4);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  margin-top: 10px;
 }
 
 .action-btn.continue {

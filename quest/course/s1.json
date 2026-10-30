@@ -9,10 +9,10 @@
       "audio": "Selamat pagi",
       "answer": "早安 (清晨到上午 11:00)",
       "options": [
-        "請留步 / 保重 (對留在原處的人說)",
+        "祝一路順風 / 慢走 (對離開出發的人說)",
         "早安 (清晨到上午 11:00)",
-        "午安 (上午 11:00 到下午 15:00)",
-        "晚安 (天黑 18:30 以後)"
+        "不客氣、彼此彼此",
+        "你好嗎？最近好嗎？"
       ],
       "hint": "Pagi 是「早上」",
       "why": "Selamat pagi 是標準早安問候語。",
@@ -26,10 +26,10 @@
       "audio": "Selamat pagi",
       "answer": "Selamat pagi",
       "options": [
-        "Apa kabar?",
-        "Permisi",
+        "Sama-sama",
+        "Selamat jalan",
         "Selamat pagi",
-        "Selamat siang"
+        "Selamat malam"
       ],
       "hint": "意思是：早安 (清晨到上午 11:00)",
       "why": "Selamat pagi 意思為「早安 (清晨到上午 11:00)」。",
@@ -60,10 +60,10 @@
       "audio": "Selamat siang",
       "answer": "午安 (上午 11:00 到下午 15:00)",
       "options": [
-        "再見、下次見",
-        "傍晚安 (下午 15:00 到天黑前 18:30)",
+        "晚安 (天黑 18:30 以後)",
+        "掰掰！（親友道別）",
         "午安 (上午 11:00 到下午 15:00)",
-        "祝一路順風 / 慢走 (對離開出發的人說)"
+        "不客氣、彼此彼此"
       ],
       "hint": "Siang 是「中午/白天」",
       "why": "Selamat siang 用於中午至午後陽光最強的時段。",
@@ -78,9 +78,9 @@
       "answer": "Selamat siang",
       "options": [
         "Selamat siang",
-        "Dadah!",
+        "Terima kasih",
         "Apa kabar?",
-        "Selamat pagi"
+        "Selamat sore"
       ],
       "hint": "意思是：午安 (上午 11:00 到下午 15:00)",
       "why": "Selamat siang 意思為「午安 (上午 11:00 到下午 15:00)」。",
@@ -111,10 +111,10 @@
       "audio": "Selamat sore",
       "answer": "傍晚安 (下午 15:00 到天黑前 18:30)",
       "options": [
-        "晚安 (天黑 18:30 以後)",
-        "不客氣、彼此彼此",
+        "午安 (上午 11:00 到下午 15:00)",
+        "請留步 / 保重 (對留在原處的人說)",
         "傍晚安 (下午 15:00 到天黑前 18:30)",
-        "謝謝你"
+        "你好嗎？最近好嗎？"
       ],
       "hint": "Sore 是「傍晚/下午」",
       "why": "Selamat sore 用於下班放學、太陽即將西下的黃昏。",
@@ -128,10 +128,10 @@
       "audio": "Selamat sore",
       "answer": "Selamat sore",
       "options": [
-        "Selamat siang",
+        "Selamat malam",
         "Selamat sore",
-        "Maaf",
-        "Apa kabar?"
+        "Selamat tinggal",
+        "Sampai nanti"
       ],
       "hint": "意思是：傍晚安 (下午 15:00 到天黑前 18:30)",
       "why": "Selamat sore 意思為「傍晚安 (下午 15:00 到天黑前 18:30)」。",
@@ -163,9 +163,9 @@
       "answer": "晚安 (天黑 18:30 以後)",
       "options": [
         "晚安 (天黑 18:30 以後)",
-        "你好嗎？最近好嗎？",
-        "不客氣、彼此彼此",
-        "再見、下次見"
+        "祝一路順風 / 慢走 (對離開出發的人說)",
+        "早安 (清晨到上午 11:00)",
+        "路上小心 / 慢走 (溫馨叮嚀)"
       ],
       "hint": "Malam 是「夜晚」",
       "why": "Selamat malam 是晚上見面或離別時的問候。",
@@ -179,10 +179,10 @@
       "audio": "Selamat malam",
       "answer": "Selamat malam",
       "options": [
-        "Selamat tinggal",
         "Sama-sama",
+        "Terima kasih",
         "Selamat malam",
-        "Selamat pagi"
+        "Hati-hati di jalan"
       ],
       "hint": "意思是：晚安 (天黑 18:30 以後)",
       "why": "Selamat malam 意思為「晚安 (天黑 18:30 以後)」。",
@@ -213,10 +213,10 @@
       "audio": "Apa kabar?",
       "answer": "你好嗎？最近好嗎？",
       "options": [
+        "請留步 / 保重 (對留在原處的人說)",
         "早安 (清晨到上午 11:00)",
-        "午安 (上午 11:00 到下午 15:00)",
         "你好嗎？最近好嗎？",
-        "謝謝你"
+        "傍晚安 (下午 15:00 到天黑前 18:30)"
       ],
       "hint": "Apa(什麼) + kabar(消息/近況)",
       "why": "Apa kabar? 字面是「有什麼消息？」，是印尼人最溫暖的寒暄。",
@@ -231,9 +231,9 @@
       "answer": "Apa kabar?",
       "options": [
         "Apa kabar?",
-        "Sama-sama",
-        "Selamat siang",
-        "Selamat tinggal"
+        "Salam kenal",
+        "Selamat tinggal",
+        "Selamat pagi"
       ],
       "hint": "意思是：你好嗎？最近好嗎？",
       "why": "Apa kabar? 意思為「你好嗎？最近好嗎？」。",
@@ -264,10 +264,10 @@
       "audio": "Kabar baik",
       "answer": "很好、我很好",
       "options": [
-        "對不起 / 抱歉",
+        "掰掰！（親友道別）",
         "很好、我很好",
-        "你好嗎？最近好嗎？",
-        "謝謝你"
+        "再見、下次見",
+        "初次見面幸會 / 請多指教"
       ],
       "hint": "Baik 是「好」",
       "why": "回答 Apa kabar? 最常見的標準回覆就是 Kabar baik（近況很好）。",
@@ -281,10 +281,10 @@
       "audio": "Kabar baik",
       "answer": "Kabar baik",
       "options": [
-        "Selamat malam",
+        "Hati-hati di jalan",
         "Kabar baik",
-        "Terima kasih",
-        "Dadah!"
+        "Selamat sore",
+        "Selamat malam"
       ],
       "hint": "意思是：很好、我很好",
       "why": "Kabar baik 意思為「很好、我很好」。",
@@ -315,10 +315,10 @@
       "audio": "Terima kasih",
       "answer": "謝謝你",
       "options": [
-        "傍晚安 (下午 15:00 到天黑前 18:30)",
-        "請留步 / 保重 (對留在原處的人說)",
+        "午安 (上午 11:00 到下午 15:00)",
+        "很好、我很好",
         "謝謝你",
-        "對不起 / 抱歉"
+        "你好嗎？最近好嗎？"
       ],
       "hint": "Terima(接受) + kasih(愛/給予)",
       "why": "Terima kasih 字面是「接納愛意」，表達真誠的感謝。",
@@ -332,10 +332,10 @@
       "audio": "Terima kasih",
       "answer": "Terima kasih",
       "options": [
-        "Selamat malam",
+        "Sama-sama",
         "Terima kasih",
-        "Selamat siang",
-        "Kabar baik"
+        "Maaf",
+        "Selamat tinggal"
       ],
       "hint": "意思是：謝謝你",
       "why": "Terima kasih 意思為「謝謝你」。",
@@ -366,10 +366,10 @@
       "audio": "Sama-sama",
       "answer": "不客氣、彼此彼此",
       "options": [
-        "傍晚安 (下午 15:00 到天黑前 18:30)",
+        "晚安 (天黑 18:30 以後)",
         "你好嗎？最近好嗎？",
         "不客氣、彼此彼此",
-        "午安 (上午 11:00 到下午 15:00)"
+        "很好、我很好"
       ],
       "hint": "Sama 是「一樣/相同」",
       "why": "對方說 Terima kasih 後，回敬 Sama-sama 表示不用客氣。",
@@ -383,9 +383,9 @@
       "audio": "Sama-sama",
       "answer": "Sama-sama",
       "options": [
-        "Selamat siang",
+        "Dadah!",
         "Sama-sama",
-        "Selamat malam",
+        "Terima kasih",
         "Maaf"
       ],
       "hint": "意思是：不客氣、彼此彼此",
@@ -400,10 +400,10 @@
       "audio": "Sampai jumpa",
       "answer": "再見、下次見",
       "options": [
-        "午安 (上午 11:00 到下午 15:00)",
+        "對不起 / 抱歉",
         "再見、下次見",
-        "掰掰！（親友道別）",
-        "傍晚安 (下午 15:00 到天黑前 18:30)"
+        "很好、我很好",
+        "祝一路順風 / 慢走 (對離開出發的人說)"
       ],
       "hint": "Sampai(直到) + jumpa(碰面)",
       "why": "Sampai jumpa 是優雅正式的道別語。",
@@ -417,10 +417,10 @@
       "audio": "Sampai jumpa",
       "answer": "Sampai jumpa",
       "options": [
-        "Kabar baik",
+        "Terima kasih",
         "Sampai jumpa",
-        "Selamat siang",
-        "Apa kabar?"
+        "Dadah!",
+        "Kabar baik"
       ],
       "hint": "意思是：再見、下次見",
       "why": "Sampai jumpa 意思為「再見、下次見」。",
@@ -452,9 +452,9 @@
       "answer": "掰掰！（親友道別）",
       "options": [
         "掰掰！（親友道別）",
-        "再見、下次見",
-        "很好、我很好",
-        "你好嗎？最近好嗎？"
+        "路上小心 / 慢走 (溫馨叮嚀)",
+        "你好嗎？最近好嗎？",
+        "早安 (清晨到上午 11:00)"
       ],
       "hint": "揮手道別的輕鬆口語",
       "why": "Dadah 是日常與同儕道別最輕鬆的說法。",
@@ -468,10 +468,10 @@
       "audio": "Dadah!",
       "answer": "Dadah!",
       "options": [
-        "Sampai jumpa",
-        "Selamat pagi",
+        "Selamat jalan",
+        "Selamat siang",
         "Dadah!",
-        "Maaf"
+        "Selamat tinggal"
       ],
       "hint": "意思是：掰掰！（親友道別）",
       "why": "Dadah! 意思為「掰掰！（親友道別）」。",
@@ -486,8 +486,8 @@
       "answer": "祝一路順風 / 慢走 (對離開出發的人說)",
       "options": [
         "祝一路順風 / 慢走 (對離開出發的人說)",
+        "再見、下次見",
         "午安 (上午 11:00 到下午 15:00)",
-        "晚安 (天黑 18:30 以後)",
         "謝謝你"
       ],
       "hint": "Jalan 是「走/路」，對要啟程離開者說。",
@@ -504,8 +504,8 @@
       "options": [
         "Selamat jalan",
         "Selamat sore",
-        "Apa kabar?",
-        "Selamat pagi"
+        "Selamat malam",
+        "Terima kasih"
       ],
       "hint": "意思是：祝一路順風 / 慢走 (對離開出發的人說)",
       "why": "Selamat jalan 意思為「祝一路順風 / 慢走 (對離開出發的人說)」。",
@@ -537,9 +537,9 @@
       "answer": "請留步 / 保重 (對留在原處的人說)",
       "options": [
         "請留步 / 保重 (對留在原處的人說)",
-        "祝一路順風 / 慢走 (對離開出發的人說)",
-        "晚安 (天黑 18:30 以後)",
-        "對不起 / 抱歉"
+        "對不起 / 抱歉",
+        "傍晚安 (下午 15:00 到天黑前 18:30)",
+        "祝一路順風 / 慢走 (對離開出發的人說)"
       ],
       "hint": "Tinggal 是「留下/居住」，對留在原地者說。",
       "why": "對留下來的人說 Selamat tinggal，表達溫馨道別。",
@@ -554,9 +554,9 @@
       "answer": "Selamat tinggal",
       "options": [
         "Selamat tinggal",
-        "Selamat pagi",
+        "Sama-sama",
         "Selamat malam",
-        "Apa kabar?"
+        "Selamat siang"
       ],
       "hint": "意思是：請留步 / 保重 (對留在原處的人說)",
       "why": "Selamat tinggal 意思為「請留步 / 保重 (對留在原處的人說)」。",
@@ -587,7 +587,7 @@
       "audio": "Permisi",
       "answer": "不好意思 / 借過 / 請問",
       "options": [
-        "早安 (清晨到上午 11:00)",
+        "再見、下次見",
         "祝一路順風 / 慢走 (對離開出發的人說)",
         "謝謝你",
         "不好意思 / 借過 / 請問"
@@ -604,9 +604,9 @@
       "audio": "Permisi",
       "answer": "Permisi",
       "options": [
-        "Selamat jalan",
-        "Selamat malam",
+        "Sampai jumpa",
         "Selamat sore",
+        "Dadah!",
         "Permisi"
       ],
       "hint": "意思是：不好意思 / 借過 / 請問",
@@ -621,10 +621,10 @@
       "audio": "Maaf",
       "answer": "對不起 / 抱歉",
       "options": [
-        "早安 (清晨到上午 11:00)",
-        "傍晚安 (下午 15:00 到天黑前 18:30)",
+        "午安 (上午 11:00 到下午 15:00)",
+        "初次見面幸會 / 請多指教",
         "對不起 / 抱歉",
-        "你好嗎？最近好嗎？"
+        "再見、下次見"
       ],
       "hint": "道歉或打擾對方的必備詞彙",
       "why": "Maaf 常用於道歉或客氣打擾。",
@@ -638,13 +638,167 @@
       "audio": "Maaf",
       "answer": "Maaf",
       "options": [
-        "Sampai jumpa",
+        "Selamat sore",
         "Maaf",
         "Selamat pagi",
-        "Kabar baik"
+        "Sampai jumpa"
       ],
       "hint": "意思是：對不起 / 抱歉",
       "why": "Maaf 意思為「對不起 / 抱歉」。",
+      "level": 1
+    },
+    "u1-1:c:14": {
+      "id": "u1-1:c:14",
+      "kind": "word",
+      "type": "choice",
+      "prompt": "「Salam kenal」是什麼意思？",
+      "audio": "Salam kenal",
+      "answer": "初次見面幸會 / 請多指教",
+      "options": [
+        "初次見面幸會 / 請多指教",
+        "晚安 (天黑 18:30 以後)",
+        "早安 (清晨到上午 11:00)",
+        "傍晚安 (下午 15:00 到天黑前 18:30)"
+      ],
+      "hint": "Salam = 問候致意, Kenal = 認識",
+      "why": "Salam kenal 是初次相識時最溫暖真誠的印尼語寒暄！",
+      "level": 1
+    },
+    "u1-1:l:14": {
+      "id": "u1-1:l:14",
+      "kind": "talk",
+      "type": "listen",
+      "prompt": "聽一聽語音，選出聽到的印尼文問候語：",
+      "audio": "Salam kenal",
+      "answer": "Salam kenal",
+      "options": [
+        "Salam kenal",
+        "Sampai jumpa",
+        "Selamat malam",
+        "Hati-hati di jalan"
+      ],
+      "hint": "意思是：初次見面幸會 / 請多指教",
+      "why": "Salam kenal 意思為「初次見面幸會 / 請多指教」。",
+      "level": 1
+    },
+    "u1-1:b:14": {
+      "id": "u1-1:b:14",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝出印尼文：「初次見面幸會 / 請多指教」",
+      "audio": "Salam kenal",
+      "tokens": [
+        "kenal",
+        "bukan",
+        "makan",
+        "Salam"
+      ],
+      "answer": "Salam kenal",
+      "hint": "Salam = 問候致意, Kenal = 認識",
+      "why": "Salam kenal：Salam kenal 是初次相識時最溫暖真誠的印尼語寒暄！",
+      "level": 1
+    },
+    "u1-1:c:15": {
+      "id": "u1-1:c:15",
+      "kind": "word",
+      "type": "choice",
+      "prompt": "「Hati-hati di jalan」是什麼意思？",
+      "audio": "Hati-hati di jalan",
+      "answer": "路上小心 / 慢走 (溫馨叮嚀)",
+      "options": [
+        "不好意思 / 借過 / 請問",
+        "路上小心 / 慢走 (溫馨叮嚀)",
+        "很好、我很好",
+        "晚安 (天黑 18:30 以後)"
+      ],
+      "hint": "Hati-hati = 小心謹慎, di jalan = 在路上",
+      "why": "道別時印尼人必定送上的溫暖關懷：Hati-hati di jalan！",
+      "level": 1
+    },
+    "u1-1:l:15": {
+      "id": "u1-1:l:15",
+      "kind": "talk",
+      "type": "listen",
+      "prompt": "聽一聽語音，選出聽到的印尼文問候語：",
+      "audio": "Hati-hati di jalan",
+      "answer": "Hati-hati di jalan",
+      "options": [
+        "Selamat pagi",
+        "Hati-hati di jalan",
+        "Terima kasih",
+        "Apa kabar?"
+      ],
+      "hint": "意思是：路上小心 / 慢走 (溫馨叮嚀)",
+      "why": "Hati-hati di jalan 意思為「路上小心 / 慢走 (溫馨叮嚀)」。",
+      "level": 1
+    },
+    "u1-1:b:15": {
+      "id": "u1-1:b:15",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝出印尼文：「路上小心 / 慢走 (溫馨叮嚀)」",
+      "audio": "Hati-hati di jalan",
+      "tokens": [
+        "bukan",
+        "makan",
+        "di",
+        "Hati-hati",
+        "jalan"
+      ],
+      "answer": "Hati-hati di jalan",
+      "hint": "Hati-hati = 小心謹慎, di jalan = 在路上",
+      "why": "Hati-hati di jalan：道別時印尼人必定送上的溫暖關懷：Hati-hati di jalan！",
+      "level": 1
+    },
+    "u1-1:c:16": {
+      "id": "u1-1:c:16",
+      "kind": "word",
+      "type": "choice",
+      "prompt": "「Sampai nanti」是什麼意思？",
+      "audio": "Sampai nanti",
+      "answer": "待會見 / 稍後見",
+      "options": [
+        "待會見 / 稍後見",
+        "傍晚安 (下午 15:00 到天黑前 18:30)",
+        "再見、下次見",
+        "謝謝你"
+      ],
+      "hint": "Sampai = 直到, Nanti = 稍後/等等",
+      "why": "當天稍晚還要再碰面時，使用 Sampai nanti 最為貼切。",
+      "level": 1
+    },
+    "u1-1:l:16": {
+      "id": "u1-1:l:16",
+      "kind": "talk",
+      "type": "listen",
+      "prompt": "聽一聽語音，選出聽到的印尼文問候語：",
+      "audio": "Sampai nanti",
+      "answer": "Sampai nanti",
+      "options": [
+        "Sampai nanti",
+        "Kabar baik",
+        "Selamat tinggal",
+        "Selamat jalan"
+      ],
+      "hint": "意思是：待會見 / 稍後見",
+      "why": "Sampai nanti 意思為「待會見 / 稍後見」。",
+      "level": 1
+    },
+    "u1-1:b:16": {
+      "id": "u1-1:b:16",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝出印尼文：「待會見 / 稍後見」",
+      "audio": "Sampai nanti",
+      "tokens": [
+        "nanti",
+        "Sampai",
+        "bukan",
+        "makan"
+      ],
+      "answer": "Sampai nanti",
+      "hint": "Sampai = 直到, Nanti = 稍後/等等",
+      "why": "Sampai nanti：當天稍晚還要再碰面時，使用 Sampai nanti 最為貼切。",
       "level": 1
     },
     "u1-1:match:1": {
@@ -964,6 +1118,119 @@
       "why": "介紹身分：seorang + 職業身分。",
       "level": 1
     },
+    "u1-2:b:8": {
+      "id": "u1-2:b:8",
+      "kind": "build",
+      "type": "build",
+      "prompt": "請組裝印尼文：「我的工作是一名語言老師。」",
+      "audio": "Pekerjaan saya adalah guru bahasa.",
+      "tokens": [
+        "bahasa",
+        "bukan",
+        "guru",
+        "Pekerjaan",
+        "saya",
+        "adalah",
+        "makan"
+      ],
+      "answer": "Pekerjaan saya adalah guru bahasa",
+      "hint": "pekerjaan = 職業工作, guru bahasa = 語言教師",
+      "why": "自我介紹職業身分的核心句型：Pekerjaan saya adalah...",
+      "level": 1
+    },
+    "u1-2:c:8": {
+      "id": "u1-2:c:8",
+      "kind": "word",
+      "type": "choice",
+      "prompt": "請問「Pekerjaan saya adalah guru bahasa.」中文是什麼意思？",
+      "audio": "Pekerjaan saya adalah guru bahasa.",
+      "answer": "我的工作是一名語言老師。",
+      "options": [
+        "我今天很忙碌。",
+        "請問廁所在哪裡？",
+        "我的工作是一名語言老師。",
+        "這道菜非常好吃。"
+      ],
+      "hint": "pekerjaan = 職業工作, guru bahasa = 語言教師",
+      "why": "自我介紹職業身分的核心句型：Pekerjaan saya adalah...",
+      "level": 1
+    },
+    "u1-2:b:9": {
+      "id": "u1-2:b:9",
+      "kind": "build",
+      "type": "build",
+      "prompt": "請組裝印尼文：「非常高興能夠與您相遇。」",
+      "audio": "Senang sekali bisa bertemu dengan Anda.",
+      "tokens": [
+        "sekali",
+        "bertemu",
+        "dengan",
+        "bukan",
+        "Senang",
+        "bisa",
+        "Anda",
+        "makan"
+      ],
+      "answer": "Senang sekali bisa bertemu dengan Anda",
+      "hint": "senang sekali = 非常開心, bertemu = 相遇見面",
+      "why": "展現最高社交教養的優雅結尾問候。",
+      "level": 1
+    },
+    "u1-2:c:9": {
+      "id": "u1-2:c:9",
+      "kind": "word",
+      "type": "choice",
+      "prompt": "請問「Senang sekali bisa bertemu dengan Anda.」中文是什麼意思？",
+      "audio": "Senang sekali bisa bertemu dengan Anda.",
+      "answer": "非常高興能夠與您相遇。",
+      "options": [
+        "非常高興能夠與您相遇。",
+        "這道菜非常好吃。",
+        "我今天很忙碌。",
+        "請問廁所在哪裡？"
+      ],
+      "hint": "senang sekali = 非常開心, bertemu = 相遇見面",
+      "why": "展現最高社交教養的優雅結尾問候。",
+      "level": 1
+    },
+    "u1-2:b:10": {
+      "id": "u1-2:b:10",
+      "kind": "build",
+      "type": "build",
+      "prompt": "請組裝印尼文：「我現在居住在雅加達市。」",
+      "audio": "Saya sekarang tinggal di kota Jakarta.",
+      "tokens": [
+        "Saya",
+        "sekarang",
+        "tinggal",
+        "makan",
+        "Jakarta",
+        "di",
+        "kota",
+        "bukan"
+      ],
+      "answer": "Saya sekarang tinggal di kota Jakarta",
+      "hint": "sekarang = 現在, tinggal di = 居住在",
+      "why": "陳述居住地與生活現況的必備句。",
+      "level": 1
+    },
+    "u1-2:c:10": {
+      "id": "u1-2:c:10",
+      "kind": "word",
+      "type": "choice",
+      "prompt": "請問「Saya sekarang tinggal di kota Jakarta.」中文是什麼意思？",
+      "audio": "Saya sekarang tinggal di kota Jakarta.",
+      "answer": "我現在居住在雅加達市。",
+      "options": [
+        "我今天很忙碌。",
+        "請問廁所在哪裡？",
+        "這道菜非常好吃。",
+        "我現在居住在雅加達市。"
+      ],
+      "hint": "sekarang = 現在, tinggal di = 居住在",
+      "why": "陳述居住地與生活現況的必備句。",
+      "level": 1
+    },
     "u1-2:input:1": {
       "id": "u1-2:input:1",
       "kind": "drill",
@@ -1097,6 +1364,57 @@
       "why": "KH 代表軟顎擦音 /x/，多源自阿拉伯宗教與文化詞彙。",
       "level": 1
     },
+    "u1-3:c:7": {
+      "id": "u1-3:c:7",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "單字「apel」(蘋果) 與「apel」(升旗晨會)，其字母 E 的讀音有何差異？",
+      "audio": "Buah apel manis dan apel pagi",
+      "answer": "蘋果發開口音 E-taling (/e/)，升旗集合發弱化音 E-pepet (/ə/)",
+      "options": [
+        "蘋果發開口音 E-taling (/e/)，升旗集合發弱化音 E-pepet (/ə/)",
+        "兩者發音完全相同毫無差別",
+        "蘋果發 /ə/，集合發 /e/",
+        "兩者都不發音"
+      ],
+      "hint": "印尼語著名同形異音字：apel 蘋果 vs apel 集合。",
+      "why": "印尼語雖然拼讀規則，但少數外來借詞如 apel (荷蘭借詞蘋果 vs 點名集合) 呈現 taling 與 pepet 的發音對比。",
+      "level": 1
+    },
+    "u1-3:c:8": {
+      "id": "u1-3:c:8",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "字母組合「NG」在單字「siang」(白天)、「pisang」(香蕉) 字尾時，發音規律為：",
+      "audio": "Makan pisang di siang hari",
+      "answer": "軟顎鼻音 /ŋ/（類似注音「ㄥ」）",
+      "options": [
+        "軟顎鼻音 /ŋ/（類似注音「ㄥ」）",
+        "N 與 G 分開拼讀",
+        "完全不發音",
+        "發成雙唇音 M"
+      ],
+      "hint": "就像英文 sing、song 結尾的 ng 音。",
+      "why": "NG 在印尼語中為單一軟顎鼻音音素 /ŋ/，不是分開讀 N 和 G！",
+      "level": 1
+    },
+    "u1-3:c:9": {
+      "id": "u1-3:c:9",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "印尼文字母「H」出現在字首（如 hotel, habis, hujan）時，發音特點為：",
+      "audio": "Hotel, habis, hujan",
+      "answer": "清喉擦音 /h/，輕吐氣（類似注音 ㄏ）",
+      "options": [
+        "清喉擦音 /h/，輕吐氣（類似注音 ㄏ）",
+        "完全絕對不發音",
+        "發成中文 ㄎ 的爆破音",
+        "發成喉塞音截斷"
+      ],
+      "hint": "類似英語 home 中的 h，自然吐氣。",
+      "why": "H 在標準印尼語中為標準喉擦音 /h/，清晰但自然輕盈。",
+      "level": 1
+    },
     "u1-3:match:1": {
       "id": "u1-3:match:1",
       "kind": "word",
@@ -1149,6 +1467,9 @@
           "u1-1:c:11",
           "u1-1:c:12",
           "u1-1:c:13",
+          "u1-1:c:14",
+          "u1-1:c:15",
+          "u1-1:c:16",
           "u1-1:match:1"
         ],
         "u1-1:listen": [
@@ -1165,7 +1486,10 @@
           "u1-1:l:10",
           "u1-1:l:11",
           "u1-1:l:12",
-          "u1-1:l:13"
+          "u1-1:l:13",
+          "u1-1:l:14",
+          "u1-1:l:15",
+          "u1-1:l:16"
         ],
         "u1-1:build": [
           "u1-1:b:0",
@@ -1177,7 +1501,10 @@
           "u1-1:b:6",
           "u1-1:b:8",
           "u1-1:b:10",
-          "u1-1:b:11"
+          "u1-1:b:11",
+          "u1-1:b:14",
+          "u1-1:b:15",
+          "u1-1:b:16"
         ],
         "u1-1:drill": [
           "u1-1:c:0",
@@ -1187,7 +1514,47 @@
           "u1-1:l:1",
           "u1-1:b:1",
           "u1-1:c:2",
-          "u1-1:l:2"
+          "u1-1:l:2",
+          "u1-1:b:2",
+          "u1-1:c:3",
+          "u1-1:l:3",
+          "u1-1:b:3",
+          "u1-1:c:4",
+          "u1-1:l:4",
+          "u1-1:b:4",
+          "u1-1:c:5",
+          "u1-1:l:5",
+          "u1-1:b:5",
+          "u1-1:c:6",
+          "u1-1:l:6",
+          "u1-1:b:6",
+          "u1-1:c:7",
+          "u1-1:l:7",
+          "u1-1:c:8",
+          "u1-1:l:8",
+          "u1-1:b:8",
+          "u1-1:c:9",
+          "u1-1:l:9",
+          "u1-1:c:10",
+          "u1-1:l:10",
+          "u1-1:b:10",
+          "u1-1:c:11",
+          "u1-1:l:11",
+          "u1-1:b:11",
+          "u1-1:c:12",
+          "u1-1:l:12",
+          "u1-1:c:13",
+          "u1-1:l:13",
+          "u1-1:c:14",
+          "u1-1:l:14",
+          "u1-1:b:14",
+          "u1-1:c:15",
+          "u1-1:l:15",
+          "u1-1:b:15",
+          "u1-1:c:16",
+          "u1-1:l:16",
+          "u1-1:b:16",
+          "u1-1:match:1"
         ],
         "u1-1:boss": [
           "u1-1:c:0",
@@ -1228,6 +1595,15 @@
           "u1-1:l:12",
           "u1-1:c:13",
           "u1-1:l:13",
+          "u1-1:c:14",
+          "u1-1:l:14",
+          "u1-1:b:14",
+          "u1-1:c:15",
+          "u1-1:l:15",
+          "u1-1:b:15",
+          "u1-1:c:16",
+          "u1-1:l:16",
+          "u1-1:b:16",
           "u1-1:match:1"
         ]
       }
@@ -1246,7 +1622,10 @@
           "u1-2:c:4",
           "u1-2:c:5",
           "u1-2:c:6",
-          "u1-2:c:7"
+          "u1-2:c:7",
+          "u1-2:c:8",
+          "u1-2:c:9",
+          "u1-2:c:10"
         ],
         "u1-2:listen": [
           "u1-2:b:0",
@@ -1256,7 +1635,22 @@
           "u1-2:b:2",
           "u1-2:c:2",
           "u1-2:b:3",
-          "u1-2:c:3"
+          "u1-2:c:3",
+          "u1-2:b:4",
+          "u1-2:c:4",
+          "u1-2:b:5",
+          "u1-2:c:5",
+          "u1-2:b:6",
+          "u1-2:c:6",
+          "u1-2:b:7",
+          "u1-2:c:7",
+          "u1-2:b:8",
+          "u1-2:c:8",
+          "u1-2:b:9",
+          "u1-2:c:9",
+          "u1-2:b:10",
+          "u1-2:c:10",
+          "u1-2:input:1"
         ],
         "u1-2:build": [
           "u1-2:b:0",
@@ -1267,6 +1661,9 @@
           "u1-2:b:5",
           "u1-2:b:6",
           "u1-2:b:7",
+          "u1-2:b:8",
+          "u1-2:b:9",
+          "u1-2:b:10",
           "u1-2:input:1"
         ],
         "u1-2:drill": [
@@ -1277,7 +1674,22 @@
           "u1-2:b:2",
           "u1-2:c:2",
           "u1-2:b:3",
-          "u1-2:c:3"
+          "u1-2:c:3",
+          "u1-2:b:4",
+          "u1-2:c:4",
+          "u1-2:b:5",
+          "u1-2:c:5",
+          "u1-2:b:6",
+          "u1-2:c:6",
+          "u1-2:b:7",
+          "u1-2:c:7",
+          "u1-2:b:8",
+          "u1-2:c:8",
+          "u1-2:b:9",
+          "u1-2:c:9",
+          "u1-2:b:10",
+          "u1-2:c:10",
+          "u1-2:input:1"
         ],
         "u1-2:boss": [
           "u1-2:b:0",
@@ -1296,6 +1708,12 @@
           "u1-2:c:6",
           "u1-2:b:7",
           "u1-2:c:7",
+          "u1-2:b:8",
+          "u1-2:c:8",
+          "u1-2:b:9",
+          "u1-2:c:9",
+          "u1-2:b:10",
+          "u1-2:c:10",
           "u1-2:input:1"
         ]
       }
@@ -1314,6 +1732,9 @@
           "u1-3:c:4",
           "u1-3:c:5",
           "u1-3:c:6",
+          "u1-3:c:7",
+          "u1-3:c:8",
+          "u1-3:c:9",
           "u1-3:match:1"
         ],
         "u1-3:listen": [
@@ -1324,6 +1745,9 @@
           "u1-3:c:4",
           "u1-3:c:5",
           "u1-3:c:6",
+          "u1-3:c:7",
+          "u1-3:c:8",
+          "u1-3:c:9",
           "u1-3:match:1"
         ],
         "u1-3:build": [
@@ -1334,6 +1758,9 @@
           "u1-3:c:4",
           "u1-3:c:5",
           "u1-3:c:6",
+          "u1-3:c:7",
+          "u1-3:c:8",
+          "u1-3:c:9",
           "u1-3:match:1"
         ],
         "u1-3:drill": [
@@ -1344,6 +1771,9 @@
           "u1-3:c:4",
           "u1-3:c:5",
           "u1-3:c:6",
+          "u1-3:c:7",
+          "u1-3:c:8",
+          "u1-3:c:9",
           "u1-3:match:1"
         ],
         "u1-3:boss": [
@@ -1354,6 +1784,9 @@
           "u1-3:c:4",
           "u1-3:c:5",
           "u1-3:c:6",
+          "u1-3:c:7",
+          "u1-3:c:8",
+          "u1-3:c:9",
           "u1-3:match:1"
         ]
       }

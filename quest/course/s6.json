@@ -273,6 +273,108 @@
       "why": "aman -> keamanan (安全性、治安)。",
       "level": 3
     },
+    "u6:c:16": {
+      "id": "u6:c:16",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "句子：「Paket penting ini sudah ___ kemarin sore.」(這個重要包裹昨天傍晚已經被寄出)，應填入：",
+      "audio": "Paket ini sudah dikirim kemarin sore.",
+      "answer": "dikirim (被寄送)",
+      "options": [
+        "dikirim (被寄送)",
+        "mengirim",
+        "pengirim",
+        "kiriman"
+      ],
+      "hint": "包裹是被寄送的對象，使用被動態 di-。",
+      "why": "kirim + di- -> dikirim (被寄送)。主語為受事時用被動態。",
+      "level": 3
+    },
+    "u6:c:17": {
+      "id": "u6:c:17",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "告示牌：「Pintu harus selalu ___ demi keamanan.」(為了安全起見，大門必須隨時上鎖)，應填入：",
+      "audio": "Pintu ini harus selalu dikunci rapat.",
+      "answer": "dikunci (被鎖上)",
+      "options": [
+        "dikunci (被鎖上)",
+        "mengunci",
+        "kuncian",
+        "pengunci"
+      ],
+      "hint": "kunci 是鎖，被動語態加 di-。",
+      "why": "kunci -> dikunci (被鎖上/被關好)。",
+      "level": 3
+    },
+    "u6:c:18": {
+      "id": "u6:c:18",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "句子：「Saya panik karena dompet saya ___ di taksi!」(我很慌張因為我的皮夾遺落在計程車上了！)，應填入：",
+      "audio": "Dompet saya tertinggal di dalam taksi.",
+      "answer": "tertinggal (無意識遺漏/被落下)",
+      "options": [
+        "tertinggal (無意識遺漏/被落下)",
+        "meninggalkan",
+        "ditinggal",
+        "tinggalan"
+      ],
+      "hint": "意外或不由自主把東西落下的狀態用 ter-！",
+      "why": "tertinggal 表達非蓄意的無心遺留、被落下。",
+      "level": 3
+    },
+    "u6:c:19": {
+      "id": "u6:c:19",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "句子：「Suara deburan ombak ___ jelas dari sini.」(從這裡隱約清楚聽得見海浪聲)，應填入：",
+      "audio": "Suara ombak terdengar jelas dari pantai.",
+      "answer": "terdengar (聽得見/被感知到)",
+      "options": [
+        "terdengar (聽得見/被感知到)",
+        "mendengar",
+        "pendengar",
+        "dengaran"
+      ],
+      "hint": "ter- + dengar 表示能力或被聽見的感知狀態。",
+      "why": "terdengar = 能夠聽得見/隱約聽見。",
+      "level": 3
+    },
+    "u6:c:20": {
+      "id": "u6:c:20",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "字根「bicara」(說話) 加上施事者前綴「peN-」變成「pembicara」，意思是：",
+      "audio": "Dia adalah pembicara utama di seminar ini.",
+      "answer": "演講者、發言主講人",
+      "options": [
+        "演講者、發言主講人",
+        "話筒麥克風",
+        "演講大廳",
+        "講話的內容"
+      ],
+      "hint": "peN- 表示執行發言動作的人。",
+      "why": "bicara -> pembicara (演講者/主講嘉賓)。",
+      "level": 3
+    },
+    "u6:c:21": {
+      "id": "u6:c:21",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "形容詞「nyaman」(舒適舒服) 加上環綴「ke-...-an」構成「kenyamanan」，意思是：",
+      "audio": "Kenyamanan penumpang adalah prioritas kami.",
+      "answer": "舒適感、舒適度 (抽象名詞)",
+      "options": [
+        "舒適感、舒適度 (抽象名詞)",
+        "非常不舒服",
+        "按摩椅",
+        "讓人舒服的人"
+      ],
+      "hint": "nyaman 的抽象名詞化。",
+      "why": "nyaman -> kenyamanan (舒適度/愜意感)。",
+      "level": 3
+    },
     "u6:b:0": {
       "id": "u6:b:0",
       "kind": "drill",
@@ -336,6 +438,72 @@
       "why": "-an 產物名詞化。",
       "level": 3
     },
+    "u6:b:3": {
+      "id": "u6:b:3",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝詞綴句型：「這封正式公文昨天傍晚已寄出。」",
+      "audio": "Surat resmi ini sudah dikirim kemarin sore.",
+      "tokens": [
+        "tidak",
+        "dikirim",
+        "ini",
+        "tidur",
+        "kemarin",
+        "resmi",
+        "Surat",
+        "sudah",
+        "sore"
+      ],
+      "answer": "Surat resmi ini sudah dikirim kemarin sore",
+      "hint": "dikirim = 被寄出",
+      "why": "被動句型商務應用。",
+      "level": 3
+    },
+    "u6:b:4": {
+      "id": "u6:b:4",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝詞綴句型：「這是品質最好且價格最便宜的產品。」",
+      "audio": "Ini produk termurah dengan kualitas paling bagus.",
+      "tokens": [
+        "produk",
+        "dengan",
+        "termurah",
+        "paling",
+        "kualitas",
+        "bagus",
+        "tidak",
+        "Ini",
+        "tidur"
+      ],
+      "answer": "Ini produk termurah dengan kualitas paling bagus",
+      "hint": "termurah = 最便宜 (ter- 最高級)",
+      "why": "ter- 最高級形容詞標準句。",
+      "level": 3
+    },
+    "u6:b:5": {
+      "id": "u6:b:5",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝詞綴句型：「高等教育對未來非常重要。」",
+      "audio": "Pendidikan tinggi sangat penting untuk masa depan.",
+      "tokens": [
+        "untuk",
+        "tidur",
+        "depan",
+        "tinggi",
+        "sangat",
+        "penting",
+        "Pendidikan",
+        "masa",
+        "tidak"
+      ],
+      "answer": "Pendidikan tinggi sangat penting untuk masa depan",
+      "hint": "didik + peN-...-an -> pendidikan(教育)",
+      "why": "peN-...-an 抽象制度名詞。",
+      "level": 3
+    },
     "u6:match:1": {
       "id": "u6:match:1",
       "kind": "word",
@@ -379,7 +547,10 @@
           "u6:c:2",
           "u6:c:10",
           "u6:c:11",
+          "u6:c:16",
+          "u6:c:17",
           "u6:b:0",
+          "u6:b:3",
           "u6:match:1"
         ],
         "u6-1:listen": [
@@ -388,7 +559,10 @@
           "u6:c:2",
           "u6:c:10",
           "u6:c:11",
+          "u6:c:16",
+          "u6:c:17",
           "u6:b:0",
+          "u6:b:3",
           "u6:match:1"
         ],
         "u6-1:build": [
@@ -397,7 +571,10 @@
           "u6:c:2",
           "u6:c:10",
           "u6:c:11",
+          "u6:c:16",
+          "u6:c:17",
           "u6:b:0",
+          "u6:b:3",
           "u6:match:1"
         ],
         "u6-1:drill": [
@@ -406,7 +583,10 @@
           "u6:c:2",
           "u6:c:10",
           "u6:c:11",
+          "u6:c:16",
+          "u6:c:17",
           "u6:b:0",
+          "u6:b:3",
           "u6:match:1"
         ],
         "u6-1:boss": [
@@ -415,7 +595,10 @@
           "u6:c:2",
           "u6:c:10",
           "u6:c:11",
+          "u6:c:16",
+          "u6:c:17",
           "u6:b:0",
+          "u6:b:3",
           "u6:match:1"
         ]
       }
@@ -432,7 +615,10 @@
           "u6:c:5",
           "u6:c:12",
           "u6:c:13",
+          "u6:c:18",
+          "u6:c:19",
           "u6:b:1",
+          "u6:b:4",
           "u6:match:1"
         ],
         "u6-2:listen": [
@@ -441,7 +627,10 @@
           "u6:c:5",
           "u6:c:12",
           "u6:c:13",
+          "u6:c:18",
+          "u6:c:19",
           "u6:b:1",
+          "u6:b:4",
           "u6:match:1"
         ],
         "u6-2:build": [
@@ -450,7 +639,10 @@
           "u6:c:5",
           "u6:c:12",
           "u6:c:13",
+          "u6:c:18",
+          "u6:c:19",
           "u6:b:1",
+          "u6:b:4",
           "u6:match:1"
         ],
         "u6-2:drill": [
@@ -459,7 +651,10 @@
           "u6:c:5",
           "u6:c:12",
           "u6:c:13",
+          "u6:c:18",
+          "u6:c:19",
           "u6:b:1",
+          "u6:b:4",
           "u6:match:1"
         ],
         "u6-2:boss": [
@@ -468,7 +663,10 @@
           "u6:c:5",
           "u6:c:12",
           "u6:c:13",
+          "u6:c:18",
+          "u6:c:19",
           "u6:b:1",
+          "u6:b:4",
           "u6:match:1"
         ]
       }
@@ -486,7 +684,10 @@
           "u6:c:9",
           "u6:c:14",
           "u6:c:15",
+          "u6:c:20",
+          "u6:c:21",
           "u6:b:2",
+          "u6:b:5",
           "u6:match:1"
         ],
         "u6-3:listen": [
@@ -496,7 +697,10 @@
           "u6:c:9",
           "u6:c:14",
           "u6:c:15",
+          "u6:c:20",
+          "u6:c:21",
           "u6:b:2",
+          "u6:b:5",
           "u6:match:1"
         ],
         "u6-3:build": [
@@ -506,7 +710,10 @@
           "u6:c:9",
           "u6:c:14",
           "u6:c:15",
+          "u6:c:20",
+          "u6:c:21",
           "u6:b:2",
+          "u6:b:5",
           "u6:match:1"
         ],
         "u6-3:drill": [
@@ -516,7 +723,10 @@
           "u6:c:9",
           "u6:c:14",
           "u6:c:15",
+          "u6:c:20",
+          "u6:c:21",
           "u6:b:2",
+          "u6:b:5",
           "u6:match:1"
         ],
         "u6-3:boss": [
@@ -526,7 +736,10 @@
           "u6:c:9",
           "u6:c:14",
           "u6:c:15",
+          "u6:c:20",
+          "u6:c:21",
           "u6:b:2",
+          "u6:b:5",
           "u6:match:1"
         ]
       }

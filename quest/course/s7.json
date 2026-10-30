@@ -290,6 +290,91 @@
       "why": "Beneran 是口語確認真實性的第一名口頭禪。",
       "level": 3
     },
+    "u7:c:17": {
+      "id": "u7:c:17",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "在陳述句末尾加上語氣助詞「kan?」（如：Kamu sudah tahu kan?），功能是：",
+      "audio": "Kamu sudah tahu rahasia ini kan?",
+      "answer": "反問求認同「對吧？不是嗎？」",
+      "options": [
+        "反問求認同「對吧？不是嗎？」",
+        "強烈拒絕命令",
+        "正式告別",
+        "生氣斥責"
+      ],
+      "hint": "kan 相當於英文的 tag question \"right?\"。",
+      "why": "Kan 是印尼人交談尋求共鳴與認可最高頻的粒子。",
+      "level": 3
+    },
+    "u7:c:18": {
+      "id": "u7:c:18",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "搶促銷機票或快速回覆訊息時說「Ayo gercep dong!」，「gercep」縮寫自：",
+      "audio": "Ayo gercep dong biar kebagian promo!",
+      "answer": "Gerak cepat (動作快、神速秒搶)",
+      "options": [
+        "Gerak cepat (動作快、神速秒搶)",
+        "Gereja pusat",
+        "Gerobak cilik",
+        "Gigi cepat"
+      ],
+      "hint": "Gerak = 動作, Cepat = 快速。",
+      "why": "Gercep 形容反應神速、動作超快，是現代印尼秒殺必喊詞。",
+      "level": 3
+    },
+    "u7:c:19": {
+      "id": "u7:c:19",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "印尼年輕人常說「Santuy bro!」，「santuy」是哪一個單字的趣味俚語變體？",
+      "audio": "Santuy bro, jangan panik ya.",
+      "answer": "Santai (放鬆悠閒、別緊張)",
+      "options": [
+        "Santai (放鬆悠閒、別緊張)",
+        "Satu",
+        "Sapu",
+        "Sakit"
+      ],
+      "hint": "Santai 的口語潮人發音變體。",
+      "why": "Santuy = Santai，是印尼年輕世代放鬆看世界的流行語。",
+      "level": 3
+    },
+    "u7:c:20": {
+      "id": "u7:c:20",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "雅加達口語「Aku pengen liburan ke Bali」，其中的「pengen」相當於書面標準語的：",
+      "audio": "Aku pengen banget liburan ke Bali.",
+      "answer": "Ingin / Mau (想要/渴望)",
+      "options": [
+        "Ingin / Mau (想要/渴望)",
+        "Pergi",
+        "Pernah",
+        "Pulang"
+      ],
+      "hint": "口語中極度普及的「想要」。",
+      "why": "Pengen 是雅加達最廣泛使用的口語想望動詞。",
+      "level": 3
+    },
+    "u7:c:21": {
+      "id": "u7:c:21",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "聊天時問「Udah makan belom?」，其中的「belom」是哪一個標準字的口語化？",
+      "audio": "Kamu udah makan siang belom?",
+      "answer": "Belum (還沒/尚未)",
+      "options": [
+        "Belum (還沒/尚未)",
+        "Bukan",
+        "Bisa",
+        "Boleh"
+      ],
+      "hint": "Belum 口語元音常偏向 o 唸成 belom。",
+      "why": "Belum -> belom 是印尼口音最常見的母音放鬆現象。",
+      "level": 3
+    },
     "u7:b:0": {
       "id": "u7:b:0",
       "kind": "drill",
@@ -352,6 +437,74 @@
       "why": "雅加達口語極致流暢。",
       "level": 3
     },
+    "u7:b:3": {
+      "id": "u7:b:3",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝流行口語：「你今天怎麼會遲到嘛？到底怎麼回事？」",
+      "audio": "Kok kamu bisa telat datang hari ini sih?",
+      "tokens": [
+        "Kok",
+        "hari",
+        "datang",
+        "telat",
+        "bisa",
+        "tidur",
+        "ini",
+        "sih",
+        "kamu",
+        "tidak"
+      ],
+      "answer": "Kok kamu bisa telat datang hari ini sih",
+      "hint": "Kok 訝異開頭，sih 情感收尾",
+      "why": "Kok 與 sih 完美連環口語提問句。",
+      "level": 3
+    },
+    "u7:b:4": {
+      "id": "u7:b:4",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝流行口語：「來吧，我們必須神速搶訂機票！」",
+      "audio": "Ayo kita harus gercep pesan tiket pesawatnya.",
+      "tokens": [
+        "Ayo",
+        "pesan",
+        "gercep",
+        "tiket",
+        "pesawatnya",
+        "tidur",
+        "harus",
+        "tidak",
+        "kita"
+      ],
+      "answer": "Ayo kita harus gercep pesan tiket pesawatnya",
+      "hint": "gercep = 動作超快",
+      "why": "流行語 gercep 實戰應用。",
+      "level": 3
+    },
+    "u7:b:5": {
+      "id": "u7:b:5",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝流行口語：「我好想在那家新咖啡館悠閒喝咖啡。」",
+      "audio": "Aku pengen ngopi santai di kafe baru itu.",
+      "tokens": [
+        "Aku",
+        "ngopi",
+        "di",
+        "pengen",
+        "itu",
+        "baru",
+        "santai",
+        "tidak",
+        "tidur",
+        "kafe"
+      ],
+      "answer": "Aku pengen ngopi santai di kafe baru itu",
+      "hint": "pengen = 想要, ngopi = 喝咖啡 (kopi 口語動詞化)",
+      "why": "ngopi 是 kopi 加口語鼻音化動詞的代表作。",
+      "level": 3
+    },
     "u7:match:1": {
       "id": "u7:match:1",
       "kind": "word",
@@ -396,7 +549,9 @@
           "u7:c:3",
           "u7:c:11",
           "u7:c:12",
+          "u7:c:17",
           "u7:b:0",
+          "u7:b:3",
           "u7:match:1"
         ],
         "u7-1:listen": [
@@ -406,7 +561,9 @@
           "u7:c:3",
           "u7:c:11",
           "u7:c:12",
+          "u7:c:17",
           "u7:b:0",
+          "u7:b:3",
           "u7:match:1"
         ],
         "u7-1:build": [
@@ -416,7 +573,9 @@
           "u7:c:3",
           "u7:c:11",
           "u7:c:12",
+          "u7:c:17",
           "u7:b:0",
+          "u7:b:3",
           "u7:match:1"
         ],
         "u7-1:drill": [
@@ -426,7 +585,9 @@
           "u7:c:3",
           "u7:c:11",
           "u7:c:12",
+          "u7:c:17",
           "u7:b:0",
+          "u7:b:3",
           "u7:match:1"
         ],
         "u7-1:boss": [
@@ -436,7 +597,9 @@
           "u7:c:3",
           "u7:c:11",
           "u7:c:12",
+          "u7:c:17",
           "u7:b:0",
+          "u7:b:3",
           "u7:match:1"
         ]
       }
@@ -454,7 +617,10 @@
           "u7:c:7",
           "u7:c:13",
           "u7:c:14",
+          "u7:c:18",
+          "u7:c:19",
           "u7:b:1",
+          "u7:b:4",
           "u7:match:1"
         ],
         "u7-2:listen": [
@@ -464,7 +630,10 @@
           "u7:c:7",
           "u7:c:13",
           "u7:c:14",
+          "u7:c:18",
+          "u7:c:19",
           "u7:b:1",
+          "u7:b:4",
           "u7:match:1"
         ],
         "u7-2:build": [
@@ -474,7 +643,10 @@
           "u7:c:7",
           "u7:c:13",
           "u7:c:14",
+          "u7:c:18",
+          "u7:c:19",
           "u7:b:1",
+          "u7:b:4",
           "u7:match:1"
         ],
         "u7-2:drill": [
@@ -484,7 +656,10 @@
           "u7:c:7",
           "u7:c:13",
           "u7:c:14",
+          "u7:c:18",
+          "u7:c:19",
           "u7:b:1",
+          "u7:b:4",
           "u7:match:1"
         ],
         "u7-2:boss": [
@@ -494,7 +669,10 @@
           "u7:c:7",
           "u7:c:13",
           "u7:c:14",
+          "u7:c:18",
+          "u7:c:19",
           "u7:b:1",
+          "u7:b:4",
           "u7:match:1"
         ]
       }
@@ -511,7 +689,10 @@
           "u7:c:10",
           "u7:c:15",
           "u7:c:16",
+          "u7:c:20",
+          "u7:c:21",
           "u7:b:2",
+          "u7:b:5",
           "u7:match:1"
         ],
         "u7-3:listen": [
@@ -520,7 +701,10 @@
           "u7:c:10",
           "u7:c:15",
           "u7:c:16",
+          "u7:c:20",
+          "u7:c:21",
           "u7:b:2",
+          "u7:b:5",
           "u7:match:1"
         ],
         "u7-3:build": [
@@ -529,7 +713,10 @@
           "u7:c:10",
           "u7:c:15",
           "u7:c:16",
+          "u7:c:20",
+          "u7:c:21",
           "u7:b:2",
+          "u7:b:5",
           "u7:match:1"
         ],
         "u7-3:drill": [
@@ -538,7 +725,10 @@
           "u7:c:10",
           "u7:c:15",
           "u7:c:16",
+          "u7:c:20",
+          "u7:c:21",
           "u7:b:2",
+          "u7:b:5",
           "u7:match:1"
         ],
         "u7-3:boss": [
@@ -547,7 +737,10 @@
           "u7:c:10",
           "u7:c:15",
           "u7:c:16",
+          "u7:c:20",
+          "u7:c:21",
           "u7:b:2",
+          "u7:b:5",
           "u7:match:1"
         ]
       }

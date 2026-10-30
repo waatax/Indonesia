@@ -472,6 +472,78 @@
       "why": "印尼最核心的文化國家精神：多元一體，包容並蓄。",
       "level": 4
     },
+    "u8:c:14": {
+      "id": "u8:c:14",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "印尼經典成語「Air yang tenang jangan disangka tiada buaya.」寓意為何？",
+      "audio": "Air yang tenang jangan disangka tiada buaya.",
+      "answer": "居安思危、處變不驚，看似平靜平淡的局勢背後可能潛伏巨大風險。",
+      "options": [
+        "貪小便宜最後得不償失。",
+        "千里之行始於足下。",
+        "時間就是金錢一去不復返。",
+        "居安思危、處變不驚，看似平靜平淡的局勢背後可能潛伏巨大風險。"
+      ],
+      "hint": "字面意思：平靜的水流，切勿以為沒有鱷魚潛伏。",
+      "why": "Air yang tenang jangan disangka tiada buaya.（平靜的水流，切勿以為沒有鱷魚潛伏。）：印尼海島沼澤地理所孕育的經典安全警世哲學。",
+      "level": 4
+    },
+    "u8:c:15": {
+      "id": "u8:c:15",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "印尼經典成語「Air susu dibalas dengan air tuba.」寓意為何？",
+      "audio": "Air susu dibalas dengan air tuba.",
+      "answer": "恩將仇報、以怨報德，付出善心卻換來背叛與傷害。",
+      "options": [
+        "時間就是金錢一去不復返。",
+        "千里之行始於足下。",
+        "恩將仇報、以怨報德，付出善心卻換來背叛與傷害。",
+        "貪小便宜最後得不償失。"
+      ],
+      "hint": "字面意思：好心贈與純潔牛奶，卻被以有毒的草汁回報。",
+      "why": "Air susu dibalas dengan air tuba.（好心贈與純潔牛奶，卻被以有毒的草汁回報。）：勸誡世人警惕人心險惡，形容忘恩負義之徒。",
+      "level": 4
+    },
+    "u8:b:15": {
+      "id": "u8:b:15",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝印尼成語：「好心贈與純潔牛奶，卻被以有毒的草汁回報。」",
+      "audio": "Air susu dibalas dengan air tuba.",
+      "tokens": [
+        "tidak",
+        "dengan",
+        "susu",
+        "makan",
+        "tuba",
+        "dibalas",
+        "Air",
+        "air"
+      ],
+      "answer": "Air susu dibalas dengan air tuba",
+      "hint": "Tuba 是印尼傳統用來毒魚的有毒植物汁液。",
+      "why": "勸誡世人警惕人心險惡，形容忘恩負義之徒。",
+      "level": 4
+    },
+    "u8:c:16": {
+      "id": "u8:c:16",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "印尼經典成語「Bulat air oleh pembuluh, bulat kata oleh mufakat.」寓意為何？",
+      "audio": "Bulat air oleh pembuluh, bulat kata oleh mufakat.",
+      "answer": "集思廣益、協商共識（印尼 Musyawarah Mufakat 民主核心哲學）。",
+      "options": [
+        "千里之行始於足下。",
+        "集思廣益、協商共識（印尼 Musyawarah Mufakat 民主核心哲學）。",
+        "貪小便宜最後得不償失。",
+        "時間就是金錢一去不復返。"
+      ],
+      "hint": "字面意思：水因竹管而聚流，意志因共同協商而達成一致。",
+      "why": "Bulat air oleh pembuluh, bulat kata oleh mufakat.（水因竹管而聚流，意志因共同協商而達成一致。）：印尼村社民主協商 Musyawarah 的憲政哲學基石。",
+      "level": 4
+    },
     "u8:match:1": {
       "id": "u8:match:1",
       "kind": "word",
@@ -517,7 +589,11 @@
           "u8:c:2",
           "u8:b:2",
           "u8:c:8",
-          "u8:b:8"
+          "u8:b:8",
+          "u8:c:9",
+          "u8:b:9",
+          "u8:c:14",
+          "u8:match:1"
         ],
         "u8-1:listen": [
           "u8:c:0",
@@ -527,7 +603,11 @@
           "u8:c:2",
           "u8:b:2",
           "u8:c:8",
-          "u8:b:8"
+          "u8:b:8",
+          "u8:c:9",
+          "u8:b:9",
+          "u8:c:14",
+          "u8:match:1"
         ],
         "u8-1:build": [
           "u8:b:0",
@@ -544,7 +624,11 @@
           "u8:c:2",
           "u8:b:2",
           "u8:c:8",
-          "u8:b:8"
+          "u8:b:8",
+          "u8:c:9",
+          "u8:b:9",
+          "u8:c:14",
+          "u8:match:1"
         ],
         "u8-1:boss": [
           "u8:c:0",
@@ -557,6 +641,7 @@
           "u8:b:8",
           "u8:c:9",
           "u8:b:9",
+          "u8:c:14",
           "u8:match:1"
         ]
       }
@@ -575,7 +660,12 @@
           "u8:c:5",
           "u8:b:5",
           "u8:c:10",
-          "u8:b:10"
+          "u8:b:10",
+          "u8:c:11",
+          "u8:b:11",
+          "u8:c:15",
+          "u8:b:15",
+          "u8:match:1"
         ],
         "u8-2:listen": [
           "u8:c:3",
@@ -585,14 +675,20 @@
           "u8:c:5",
           "u8:b:5",
           "u8:c:10",
-          "u8:b:10"
+          "u8:b:10",
+          "u8:c:11",
+          "u8:b:11",
+          "u8:c:15",
+          "u8:b:15",
+          "u8:match:1"
         ],
         "u8-2:build": [
           "u8:b:3",
           "u8:b:4",
           "u8:b:5",
           "u8:b:10",
-          "u8:b:11"
+          "u8:b:11",
+          "u8:b:15"
         ],
         "u8-2:drill": [
           "u8:c:3",
@@ -602,7 +698,12 @@
           "u8:c:5",
           "u8:b:5",
           "u8:c:10",
-          "u8:b:10"
+          "u8:b:10",
+          "u8:c:11",
+          "u8:b:11",
+          "u8:c:15",
+          "u8:b:15",
+          "u8:match:1"
         ],
         "u8-2:boss": [
           "u8:c:3",
@@ -615,6 +716,8 @@
           "u8:b:10",
           "u8:c:11",
           "u8:b:11",
+          "u8:c:15",
+          "u8:b:15",
           "u8:match:1"
         ]
       }
@@ -632,6 +735,7 @@
           "u8:c:12",
           "u8:c:13",
           "u8:b:13",
+          "u8:c:16",
           "u8:match:1"
         ],
         "u8-3:listen": [
@@ -641,6 +745,7 @@
           "u8:c:12",
           "u8:c:13",
           "u8:b:13",
+          "u8:c:16",
           "u8:match:1"
         ],
         "u8-3:build": [
@@ -650,6 +755,7 @@
           "u8:c:12",
           "u8:c:13",
           "u8:b:13",
+          "u8:c:16",
           "u8:match:1"
         ],
         "u8-3:drill": [
@@ -659,6 +765,7 @@
           "u8:c:12",
           "u8:c:13",
           "u8:b:13",
+          "u8:c:16",
           "u8:match:1"
         ],
         "u8-3:boss": [
@@ -668,6 +775,7 @@
           "u8:c:12",
           "u8:c:13",
           "u8:b:13",
+          "u8:c:16",
           "u8:match:1"
         ]
       }

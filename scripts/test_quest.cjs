@@ -111,7 +111,7 @@ for (const s of indexData.sections) {
 
 console.log(`✅ PASS 2: Course manifest valid. 8 Sections, ${totalUnits} Units, ${totalNodes} Nodes, ${totalItems} Authored Items.`);
 console.log(`         Content Expansion: ${totalItems} items (+${Math.round((totalItems - 179) / 179 * 100)}% increase over baseline 179 items).`);
-assert.ok(totalItems >= 200, 'Must have at least 10% useful content expansion across the board');
+assert.ok(totalItems >= 350, 'Must have at least 10% useful content expansion across the board (actual: 402 items)');
 console.log(`         100% of items contain Indonesian audio, contextual hints, and coach explanations.`);
 
 // 4. Test Game Engine, State, Streaks, Hearts, and Mastery Loop ("使其學會")
@@ -122,9 +122,14 @@ console.log(`         100% of items contain Indonesian audio, contextual hints, 
 
   // Test sound exports
   assert.equal(typeof sound.pronounceOption, 'function', 'Sound must export pronounceOption');
+  assert.equal(typeof sound.pronounceOptions, 'function', 'Sound must export pronounceOptions');
+  assert.equal(typeof sound.sanitizeForSpeech, 'function', 'Sound must export sanitizeForSpeech');
   assert.equal(typeof sound.narrate, 'function', 'Sound must export narrate');
   assert.equal(typeof sound.play, 'function', 'Sound must export play');
   assert.equal(typeof sound.sfx, 'function', 'Sound must export sfx');
+
+  // Verify speech sanitizer preserves natural sentence terminal intonation while stripping brackets/symbols
+  assert.equal(sound.sanitizeForSpeech('Halo! 「Selamat pagi」 (apa kabar?)'), 'Halo! Selamat pagi apa kabar?');
 
   // Test spokenAnswer extraction
   assert.equal(coach.spokenAnswer({ type: 'choice', answer: 'Saya (正式客氣)' }), 'Saya');

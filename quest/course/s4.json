@@ -550,6 +550,342 @@
       "why": "Kalau beli dua ada diskon nggak? 意思是：如果買兩個的話，有打折優惠嗎？",
       "level": 2
     },
+    "u4:b:10": {
+      "id": "u4:b:10",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝印尼文：「可以在收銀台幫我儲值電子錢包餘額嗎？」",
+      "audio": "Bisa tolong top up saldo GoPay di kasir?",
+      "tokens": [
+        "saldo",
+        "top",
+        "GoPay",
+        "kasir",
+        "di",
+        "mahal",
+        "Bisa",
+        "tidur",
+        "tolong",
+        "up"
+      ],
+      "answer": "Bisa tolong top up saldo GoPay di kasir",
+      "hint": "saldo = 餘額, top up = 儲值",
+      "why": "超商 Indomaret 或 Alfamart 儲值必備用語。",
+      "level": 2
+    },
+    "u4:c:10": {
+      "id": "u4:c:10",
+      "kind": "talk",
+      "type": "choice",
+      "prompt": "「Bisa tolong top up saldo GoPay di kasir?」的意思是？",
+      "audio": "Bisa tolong top up saldo GoPay di kasir?",
+      "answer": "可以在收銀台幫我儲值電子錢包餘額嗎？",
+      "options": [
+        "我想退換這件衣服。",
+        "包裹已經寄到了嗎？",
+        "可以在收銀台幫我儲值電子錢包餘額嗎？",
+        "現在立刻就要出發了。"
+      ],
+      "hint": "saldo = 餘額, top up = 儲值",
+      "why": "超商 Indomaret 或 Alfamart 儲值必備用語。",
+      "level": 2
+    },
+    "u4:l:10": {
+      "id": "u4:l:10",
+      "kind": "talk",
+      "type": "listen",
+      "prompt": "聽一聽生活語音，選出正確的意思：",
+      "audio": "Bisa tolong top up saldo GoPay di kasir?",
+      "answer": "可以在收銀台幫我儲值電子錢包餘額嗎？",
+      "options": [
+        "火車票還能預訂嗎？",
+        "要加多少印尼盾？",
+        "可以在收銀台幫我儲值電子錢包餘額嗎？",
+        "請問有洗手間嗎？"
+      ],
+      "hint": "saldo = 餘額, top up = 儲值",
+      "why": "Bisa tolong top up saldo GoPay di kasir? 意思是：可以在收銀台幫我儲值電子錢包餘額嗎？",
+      "level": 2
+    },
+    "u4:b:11": {
+      "id": "u4:b:11",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝印尼文：「請直接掃描收銀台桌上的 QR 條碼。」",
+      "audio": "Silakan scan QR code di atas meja kasir.",
+      "tokens": [
+        "mahal",
+        "tidur",
+        "atas",
+        "kasir",
+        "scan",
+        "di",
+        "code",
+        "Silakan",
+        "QR",
+        "meja"
+      ],
+      "answer": "Silakan scan QR code di atas meja kasir",
+      "hint": "silakan = 請, meja kasir = 收銀台",
+      "why": "QRIS 掃碼結帳店員標準引導語。",
+      "level": 2
+    },
+    "u4:c:11": {
+      "id": "u4:c:11",
+      "kind": "talk",
+      "type": "choice",
+      "prompt": "「Silakan scan QR code di atas meja kasir.」的意思是？",
+      "audio": "Silakan scan QR code di atas meja kasir.",
+      "answer": "請直接掃描收銀台桌上的 QR 條碼。",
+      "options": [
+        "請直接掃描收銀台桌上的 QR 條碼。",
+        "現在立刻就要出發了。",
+        "我想退換這件衣服。",
+        "包裹已經寄到了嗎？"
+      ],
+      "hint": "silakan = 請, meja kasir = 收銀台",
+      "why": "QRIS 掃碼結帳店員標準引導語。",
+      "level": 2
+    },
+    "u4:l:11": {
+      "id": "u4:l:11",
+      "kind": "talk",
+      "type": "listen",
+      "prompt": "聽一聽生活語音，選出正確的意思：",
+      "audio": "Silakan scan QR code di atas meja kasir.",
+      "answer": "請直接掃描收銀台桌上的 QR 條碼。",
+      "options": [
+        "請問有洗手間嗎？",
+        "要加多少印尼盾？",
+        "火車票還能預訂嗎？",
+        "請直接掃描收銀台桌上的 QR 條碼。"
+      ],
+      "hint": "silakan = 請, meja kasir = 收銀台",
+      "why": "Silakan scan QR code di atas meja kasir. 意思是：請直接掃描收銀台桌上的 QR 條碼。",
+      "level": 2
+    },
+    "u4:b:12": {
+      "id": "u4:b:12",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝印尼文：「我要點一杯道地的印尼傳統黑咖啡。」",
+      "audio": "Saya mau pesan kopi tubruk asli Indonesia.",
+      "tokens": [
+        "mau",
+        "tidur",
+        "kopi",
+        "tubruk",
+        "mahal",
+        "pesan",
+        "asli",
+        "Indonesia",
+        "Saya"
+      ],
+      "answer": "Saya mau pesan kopi tubruk asli Indonesia",
+      "hint": "kopi tubruk = 印尼古法未濾渣黑咖啡",
+      "why": "印尼最經典的傳統咖啡沖泡方式。",
+      "level": 2
+    },
+    "u4:c:12": {
+      "id": "u4:c:12",
+      "kind": "talk",
+      "type": "choice",
+      "prompt": "「Saya mau pesan kopi tubruk asli Indonesia.」的意思是？",
+      "audio": "Saya mau pesan kopi tubruk asli Indonesia.",
+      "answer": "我要點一杯道地的印尼傳統黑咖啡。",
+      "options": [
+        "我想退換這件衣服。",
+        "包裹已經寄到了嗎？",
+        "我要點一杯道地的印尼傳統黑咖啡。",
+        "現在立刻就要出發了。"
+      ],
+      "hint": "kopi tubruk = 印尼古法未濾渣黑咖啡",
+      "why": "印尼最經典的傳統咖啡沖泡方式。",
+      "level": 2
+    },
+    "u4:l:12": {
+      "id": "u4:l:12",
+      "kind": "talk",
+      "type": "listen",
+      "prompt": "聽一聽生活語音，選出正確的意思：",
+      "audio": "Saya mau pesan kopi tubruk asli Indonesia.",
+      "answer": "我要點一杯道地的印尼傳統黑咖啡。",
+      "options": [
+        "我要點一杯道地的印尼傳統黑咖啡。",
+        "要加多少印尼盾？",
+        "火車票還能預訂嗎？",
+        "請問有洗手間嗎？"
+      ],
+      "hint": "kopi tubruk = 印尼古法未濾渣黑咖啡",
+      "why": "Saya mau pesan kopi tubruk asli Indonesia. 意思是：我要點一杯道地的印尼傳統黑咖啡。",
+      "level": 2
+    },
+    "u4:b:13": {
+      "id": "u4:b:13",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝印尼文：「吃現炸熱騰騰的炸香蕉真是太美味了。」",
+      "audio": "Makan pisang goreng hangat enak sekali.",
+      "tokens": [
+        "Makan",
+        "enak",
+        "hangat",
+        "mahal",
+        "goreng",
+        "tidur",
+        "sekali",
+        "pisang"
+      ],
+      "answer": "Makan pisang goreng hangat enak sekali",
+      "hint": "pisang goreng = 炸香蕉小吃",
+      "why": "喝咖啡 nongkrong 必配的招牌茶點。",
+      "level": 2
+    },
+    "u4:c:13": {
+      "id": "u4:c:13",
+      "kind": "talk",
+      "type": "choice",
+      "prompt": "「Makan pisang goreng hangat enak sekali.」的意思是？",
+      "audio": "Makan pisang goreng hangat enak sekali.",
+      "answer": "吃現炸熱騰騰的炸香蕉真是太美味了。",
+      "options": [
+        "我想退換這件衣服。",
+        "吃現炸熱騰騰的炸香蕉真是太美味了。",
+        "包裹已經寄到了嗎？",
+        "現在立刻就要出發了。"
+      ],
+      "hint": "pisang goreng = 炸香蕉小吃",
+      "why": "喝咖啡 nongkrong 必配的招牌茶點。",
+      "level": 2
+    },
+    "u4:l:13": {
+      "id": "u4:l:13",
+      "kind": "talk",
+      "type": "listen",
+      "prompt": "聽一聽生活語音，選出正確的意思：",
+      "audio": "Makan pisang goreng hangat enak sekali.",
+      "answer": "吃現炸熱騰騰的炸香蕉真是太美味了。",
+      "options": [
+        "吃現炸熱騰騰的炸香蕉真是太美味了。",
+        "火車票還能預訂嗎？",
+        "要加多少印尼盾？",
+        "請問有洗手間嗎？"
+      ],
+      "hint": "pisang goreng = 炸香蕉小吃",
+      "why": "Makan pisang goreng hangat enak sekali. 意思是：吃現炸熱騰騰的炸香蕉真是太美味了。",
+      "level": 2
+    },
+    "u4:b:14": {
+      "id": "u4:b:14",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝印尼文：「如果我拿三個的話，底價算多少？」",
+      "audio": "Harga pasnya berapa kalau saya ambil tiga?",
+      "tokens": [
+        "Harga",
+        "pasnya",
+        "tidur",
+        "ambil",
+        "tiga",
+        "kalau",
+        "berapa",
+        "mahal",
+        "saya"
+      ],
+      "answer": "Harga pasnya berapa kalau saya ambil tiga",
+      "hint": "harga pas = 不二價/底價, ambil = 拿/買",
+      "why": "傳統市集買多件時詢問最終底價金句。",
+      "level": 2
+    },
+    "u4:c:14": {
+      "id": "u4:c:14",
+      "kind": "talk",
+      "type": "choice",
+      "prompt": "「Harga pasnya berapa kalau saya ambil tiga?」的意思是？",
+      "audio": "Harga pasnya berapa kalau saya ambil tiga?",
+      "answer": "如果我拿三個的話，底價算多少？",
+      "options": [
+        "如果我拿三個的話，底價算多少？",
+        "我想退換這件衣服。",
+        "現在立刻就要出發了。",
+        "包裹已經寄到了嗎？"
+      ],
+      "hint": "harga pas = 不二價/底價, ambil = 拿/買",
+      "why": "傳統市集買多件時詢問最終底價金句。",
+      "level": 2
+    },
+    "u4:l:14": {
+      "id": "u4:l:14",
+      "kind": "talk",
+      "type": "listen",
+      "prompt": "聽一聽生活語音，選出正確的意思：",
+      "audio": "Harga pasnya berapa kalau saya ambil tiga?",
+      "answer": "如果我拿三個的話，底價算多少？",
+      "options": [
+        "請問有洗手間嗎？",
+        "火車票還能預訂嗎？",
+        "要加多少印尼盾？",
+        "如果我拿三個的話，底價算多少？"
+      ],
+      "hint": "harga pas = 不二價/底價, ambil = 拿/買",
+      "why": "Harga pasnya berapa kalau saya ambil tiga? 意思是：如果我拿三個的話，底價算多少？",
+      "level": 2
+    },
+    "u4:b:15": {
+      "id": "u4:b:15",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝印尼文：「老闆娘，價格可以再便宜一點點對吧？」",
+      "audio": "Boleh kurang sedikit harganya kan Bu?",
+      "tokens": [
+        "Boleh",
+        "mahal",
+        "sedikit",
+        "kurang",
+        "kan",
+        "tidur",
+        "harganya",
+        "Bu"
+      ],
+      "answer": "Boleh kurang sedikit harganya kan Bu",
+      "hint": "boleh = 可以, kan = 對吧",
+      "why": "帶有親和力的菜市場議價溝通金句。",
+      "level": 2
+    },
+    "u4:c:15": {
+      "id": "u4:c:15",
+      "kind": "talk",
+      "type": "choice",
+      "prompt": "「Boleh kurang sedikit harganya kan Bu?」的意思是？",
+      "audio": "Boleh kurang sedikit harganya kan Bu?",
+      "answer": "老闆娘，價格可以再便宜一點點對吧？",
+      "options": [
+        "我想退換這件衣服。",
+        "老闆娘，價格可以再便宜一點點對吧？",
+        "包裹已經寄到了嗎？",
+        "現在立刻就要出發了。"
+      ],
+      "hint": "boleh = 可以, kan = 對吧",
+      "why": "帶有親和力的菜市場議價溝通金句。",
+      "level": 2
+    },
+    "u4:l:15": {
+      "id": "u4:l:15",
+      "kind": "talk",
+      "type": "listen",
+      "prompt": "聽一聽生活語音，選出正確的意思：",
+      "audio": "Boleh kurang sedikit harganya kan Bu?",
+      "answer": "老闆娘，價格可以再便宜一點點對吧？",
+      "options": [
+        "老闆娘，價格可以再便宜一點點對吧？",
+        "火車票還能預訂嗎？",
+        "要加多少印尼盾？",
+        "請問有洗手間嗎？"
+      ],
+      "hint": "boleh = 可以, kan = 對吧",
+      "why": "Boleh kurang sedikit harganya kan Bu? 意思是：老闆娘，價格可以再便宜一點點對吧？",
+      "level": 2
+    },
     "u4:match:1": {
       "id": "u4:match:1",
       "kind": "word",
@@ -595,7 +931,18 @@
           "u4:c:1",
           "u4:l:1",
           "u4:b:2",
-          "u4:c:2"
+          "u4:c:2",
+          "u4:l:2",
+          "u4:b:3",
+          "u4:c:3",
+          "u4:l:3",
+          "u4:b:10",
+          "u4:c:10",
+          "u4:l:10",
+          "u4:b:11",
+          "u4:c:11",
+          "u4:l:11",
+          "u4:match:1"
         ],
         "u4-1:listen": [
           "u4:c:0",
@@ -605,13 +952,19 @@
           "u4:c:2",
           "u4:l:2",
           "u4:c:3",
-          "u4:l:3"
+          "u4:l:3",
+          "u4:c:10",
+          "u4:l:10",
+          "u4:c:11",
+          "u4:l:11"
         ],
         "u4-1:build": [
           "u4:b:0",
           "u4:b:1",
           "u4:b:2",
-          "u4:b:3"
+          "u4:b:3",
+          "u4:b:10",
+          "u4:b:11"
         ],
         "u4-1:drill": [
           "u4:b:0",
@@ -621,7 +974,18 @@
           "u4:c:1",
           "u4:l:1",
           "u4:b:2",
-          "u4:c:2"
+          "u4:c:2",
+          "u4:l:2",
+          "u4:b:3",
+          "u4:c:3",
+          "u4:l:3",
+          "u4:b:10",
+          "u4:c:10",
+          "u4:l:10",
+          "u4:b:11",
+          "u4:c:11",
+          "u4:l:11",
+          "u4:match:1"
         ],
         "u4-1:boss": [
           "u4:b:0",
@@ -636,6 +1000,12 @@
           "u4:b:3",
           "u4:c:3",
           "u4:l:3",
+          "u4:b:10",
+          "u4:c:10",
+          "u4:l:10",
+          "u4:b:11",
+          "u4:c:11",
+          "u4:l:11",
           "u4:match:1"
         ]
       }
@@ -654,7 +1024,15 @@
           "u4:c:5",
           "u4:l:5",
           "u4:b:6",
-          "u4:c:6"
+          "u4:c:6",
+          "u4:l:6",
+          "u4:b:12",
+          "u4:c:12",
+          "u4:l:12",
+          "u4:b:13",
+          "u4:c:13",
+          "u4:l:13",
+          "u4:match:1"
         ],
         "u4-2:listen": [
           "u4:c:4",
@@ -662,17 +1040,18 @@
           "u4:c:5",
           "u4:l:5",
           "u4:c:6",
-          "u4:l:6"
+          "u4:l:6",
+          "u4:c:12",
+          "u4:l:12",
+          "u4:c:13",
+          "u4:l:13"
         ],
         "u4-2:build": [
           "u4:b:4",
-          "u4:c:4",
-          "u4:l:4",
           "u4:b:5",
-          "u4:c:5",
-          "u4:l:5",
           "u4:b:6",
-          "u4:c:6"
+          "u4:b:12",
+          "u4:b:13"
         ],
         "u4-2:drill": [
           "u4:b:4",
@@ -682,7 +1061,15 @@
           "u4:c:5",
           "u4:l:5",
           "u4:b:6",
-          "u4:c:6"
+          "u4:c:6",
+          "u4:l:6",
+          "u4:b:12",
+          "u4:c:12",
+          "u4:l:12",
+          "u4:b:13",
+          "u4:c:13",
+          "u4:l:13",
+          "u4:match:1"
         ],
         "u4-2:boss": [
           "u4:b:4",
@@ -694,6 +1081,12 @@
           "u4:b:6",
           "u4:c:6",
           "u4:l:6",
+          "u4:b:12",
+          "u4:c:12",
+          "u4:l:12",
+          "u4:b:13",
+          "u4:c:13",
+          "u4:l:13",
           "u4:match:1"
         ]
       }
@@ -712,7 +1105,15 @@
           "u4:c:8",
           "u4:l:8",
           "u4:b:9",
-          "u4:c:9"
+          "u4:c:9",
+          "u4:l:9",
+          "u4:b:14",
+          "u4:c:14",
+          "u4:l:14",
+          "u4:b:15",
+          "u4:c:15",
+          "u4:l:15",
+          "u4:match:1"
         ],
         "u4-3:listen": [
           "u4:c:7",
@@ -720,17 +1121,18 @@
           "u4:c:8",
           "u4:l:8",
           "u4:c:9",
-          "u4:l:9"
+          "u4:l:9",
+          "u4:c:14",
+          "u4:l:14",
+          "u4:c:15",
+          "u4:l:15"
         ],
         "u4-3:build": [
           "u4:b:7",
-          "u4:c:7",
-          "u4:l:7",
           "u4:b:8",
-          "u4:c:8",
-          "u4:l:8",
           "u4:b:9",
-          "u4:c:9"
+          "u4:b:14",
+          "u4:b:15"
         ],
         "u4-3:drill": [
           "u4:b:7",
@@ -740,7 +1142,15 @@
           "u4:c:8",
           "u4:l:8",
           "u4:b:9",
-          "u4:c:9"
+          "u4:c:9",
+          "u4:l:9",
+          "u4:b:14",
+          "u4:c:14",
+          "u4:l:14",
+          "u4:b:15",
+          "u4:c:15",
+          "u4:l:15",
+          "u4:match:1"
         ],
         "u4-3:boss": [
           "u4:b:7",
@@ -752,6 +1162,12 @@
           "u4:b:9",
           "u4:c:9",
           "u4:l:9",
+          "u4:b:14",
+          "u4:c:14",
+          "u4:l:14",
+          "u4:b:15",
+          "u4:c:15",
+          "u4:l:15",
           "u4:match:1"
         ]
       }

@@ -9,9 +9,9 @@
       "audio": "satu",
       "answer": "1 (一)",
       "options": [
-        "4 (四)",
         "2 (二)",
-        "50,000 (五萬)",
+        "20 (二十)",
+        "8 (八)",
         "1 (一)"
       ],
       "hint": "聽發音，這是印尼數字基礎計數。",
@@ -27,7 +27,7 @@
       "answer": "satu",
       "options": [
         "dua",
-        "lima",
+        "enam",
         "empat",
         "satu"
       ],
@@ -45,8 +45,8 @@
       "options": [
         "2 (二)",
         "5 (五)",
-        "1,000,000 (一百萬)",
-        "4 (四)"
+        "50,000 (五萬)",
+        "7 (七)"
       ],
       "hint": "聽發音，這是印尼數字基礎計數。",
       "why": "dua 就是數字 2 (二)。在印尼買東西必用！",
@@ -61,9 +61,9 @@
       "answer": "dua",
       "options": [
         "dua",
-        "sembilan",
-        "satu juta",
-        "tiga"
+        "sepuluh",
+        "dua puluh lima ribu",
+        "enam"
       ],
       "hint": "代表中文的 2 (二)",
       "why": "聽音辨數：dua = 2 (二)",
@@ -77,9 +77,9 @@
       "audio": "tiga",
       "answer": "3 (三)",
       "options": [
+        "6 (六)",
         "10 (十)",
-        "1 (一)",
-        "8 (八)",
+        "4 (四)",
         "3 (三)"
       ],
       "hint": "聽發音，這是印尼數字基礎計數。",
@@ -94,9 +94,9 @@
       "audio": "tiga",
       "answer": "tiga",
       "options": [
+        "sepuluh",
         "dua puluh",
-        "enam",
-        "satu",
+        "empat",
         "tiga"
       ],
       "hint": "代表中文的 3 (三)",
@@ -111,10 +111,10 @@
       "audio": "empat",
       "answer": "4 (四)",
       "options": [
-        "1,000,000 (一百萬)",
-        "10 (十)",
+        "1 (一)",
+        "8 (八)",
         "4 (四)",
-        "3 (三)"
+        "6 (六)"
       ],
       "hint": "聽發音，這是印尼數字基礎計數。",
       "why": "empat 就是數字 4 (四)。在印尼買東西必用！",
@@ -128,10 +128,10 @@
       "audio": "empat",
       "answer": "empat",
       "options": [
-        "seribu",
+        "dua puluh",
         "empat",
         "tiga",
-        "tujuh"
+        "ceban"
       ],
       "hint": "代表中文的 4 (四)",
       "why": "聽音辨數：empat = 4 (四)",
@@ -145,10 +145,10 @@
       "audio": "lima",
       "answer": "5 (五)",
       "options": [
-        "1 (一)",
+        "1,000,000 (一百萬)",
         "5 (五)",
-        "8 (八)",
-        "2 (二)"
+        "1 (一)",
+        "100 (一百)"
       ],
       "hint": "聽發音，這是印尼數字基礎計數。",
       "why": "lima 就是數字 5 (五)。在印尼買東西必用！",
@@ -162,10 +162,10 @@
       "audio": "lima",
       "answer": "lima",
       "options": [
-        "tiga",
+        "dua",
         "lima",
-        "satu",
-        "delapan"
+        "lima puluh ribu",
+        "tiga"
       ],
       "hint": "代表中文的 5 (五)",
       "why": "聽音辨數：lima = 5 (五)",
@@ -181,8 +181,8 @@
       "options": [
         "1 (一)",
         "6 (六)",
-        "5 (五)",
-        "100 (一百)"
+        "3 (三)",
+        "50,000 (五萬)"
       ],
       "hint": "聽發音，這是印尼數字基礎計數。",
       "why": "enam 就是數字 6 (六)。在印尼買東西必用！",
@@ -196,10 +196,10 @@
       "audio": "enam",
       "answer": "enam",
       "options": [
-        "dua puluh",
+        "satu",
         "enam",
-        "satu juta",
-        "lima puluh ribu"
+        "tiga",
+        "seribu"
       ],
       "hint": "代表中文的 6 (六)",
       "why": "聽音辨數：enam = 6 (六)",
@@ -214,9 +214,9 @@
       "answer": "7 (七)",
       "options": [
         "7 (七)",
-        "100 (一百)",
+        "2 (二)",
         "6 (六)",
-        "20 (二十)"
+        "8 (八)"
       ],
       "hint": "聽發音，這是印尼數字基礎計數。",
       "why": "tujuh 就是數字 7 (七)。在印尼買東西必用！",
@@ -231,9 +231,9 @@
       "answer": "tujuh",
       "options": [
         "tujuh",
-        "seratus",
-        "enam",
-        "sepuluh"
+        "lima",
+        "ceban",
+        "sembilan"
       ],
       "hint": "代表中文的 7 (七)",
       "why": "聽音辨數：tujuh = 7 (七)",
@@ -247,10 +247,10 @@
       "audio": "delapan",
       "answer": "8 (八)",
       "options": [
-        "3 (三)",
-        "20 (二十)",
+        "10,000 (市集口語一萬)",
+        "11 (十一)",
         "8 (八)",
-        "10 (十)"
+        "5 (五)"
       ],
       "hint": "聽發音，這是印尼數字基礎計數。",
       "why": "delapan 就是數字 8 (八)。在印尼買東西必用！",
@@ -264,10 +264,10 @@
       "audio": "delapan",
       "answer": "delapan",
       "options": [
-        "sepuluh",
+        "dua puluh",
         "delapan",
-        "seratus",
-        "tujuh"
+        "satu",
+        "sebelas"
       ],
       "hint": "代表中文的 8 (八)",
       "why": "聽音辨數：delapan = 8 (八)",
@@ -281,10 +281,10 @@
       "audio": "sembilan",
       "answer": "9 (九)",
       "options": [
-        "7 (七)",
+        "200,000 (二十萬)",
         "9 (九)",
-        "1 (一)",
-        "20 (二十)"
+        "3 (三)",
+        "2 (二)"
       ],
       "hint": "聽發音，這是印尼數字基礎計數。",
       "why": "sembilan 就是數字 9 (九)。在印尼買東西必用！",
@@ -298,10 +298,10 @@
       "audio": "sembilan",
       "answer": "sembilan",
       "options": [
+        "tiga",
         "satu juta",
-        "sepuluh",
         "sembilan",
-        "dua"
+        "dua puluh"
       ],
       "hint": "代表中文的 9 (九)",
       "why": "聽音辨數：sembilan = 9 (九)",
@@ -316,9 +316,9 @@
       "answer": "10 (十)",
       "options": [
         "10 (十)",
+        "10,000 (市集口語一萬)",
         "4 (四)",
-        "6 (六)",
-        "2 (二)"
+        "200,000 (二十萬)"
       ],
       "hint": "聽發音，這是印尼數字基礎計數。",
       "why": "sepuluh 就是數字 10 (十)。在印尼買東西必用！",
@@ -333,9 +333,9 @@
       "answer": "sepuluh",
       "options": [
         "empat",
-        "delapan",
+        "sembilan",
         "sepuluh",
-        "dua"
+        "seribu"
       ],
       "hint": "代表中文的 10 (十)",
       "why": "聽音辨數：sepuluh = 10 (十)",
@@ -350,9 +350,9 @@
       "answer": "11 (十一)",
       "options": [
         "3 (三)",
-        "9 (九)",
+        "1 (一)",
         "11 (十一)",
-        "10 (十)"
+        "100 (一百)"
       ],
       "hint": "聽發音，這是印尼數字基礎計數。",
       "why": "sebelas 就是數字 11 (十一)。在印尼買東西必用！",
@@ -366,10 +366,10 @@
       "audio": "sebelas",
       "answer": "sebelas",
       "options": [
-        "satu juta",
+        "tiga",
         "sebelas",
-        "sembilan",
-        "enam"
+        "satu",
+        "ceban"
       ],
       "hint": "代表中文的 11 (十一)",
       "why": "聽音辨數：sebelas = 11 (十一)",
@@ -384,9 +384,9 @@
       "answer": "20 (二十)",
       "options": [
         "20 (二十)",
-        "4 (四)",
-        "50,000 (五萬)",
-        "2 (二)"
+        "1,000,000 (一百萬)",
+        "8 (八)",
+        "7 (七)"
       ],
       "hint": "聽發音，這是印尼數字基礎計數。",
       "why": "dua puluh 就是數字 20 (二十)。在印尼買東西必用！",
@@ -401,9 +401,9 @@
       "answer": "dua puluh",
       "options": [
         "dua puluh",
-        "lima puluh ribu",
-        "satu",
-        "tujuh"
+        "satu juta",
+        "enam",
+        "sembilan"
       ],
       "hint": "代表中文的 20 (二十)",
       "why": "聽音辨數：dua puluh = 20 (二十)",
@@ -417,9 +417,9 @@
       "audio": "dua puluh lima ribu",
       "answer": "25,000 (二萬五千)",
       "options": [
+        "1 (一)",
+        "200,000 (二十萬)",
         "7 (七)",
-        "4 (四)",
-        "11 (十一)",
         "25,000 (二萬五千)"
       ],
       "hint": "聽發音，這是印尼數字基礎計數。",
@@ -434,9 +434,9 @@
       "audio": "dua puluh lima ribu",
       "answer": "dua puluh lima ribu",
       "options": [
-        "lima puluh ribu",
-        "sebelas",
-        "seribu",
+        "tujuh",
+        "ceban",
+        "empat",
         "dua puluh lima ribu"
       ],
       "hint": "代表中文的 25,000 (二萬五千)",
@@ -451,10 +451,10 @@
       "audio": "lima puluh ribu",
       "answer": "50,000 (五萬)",
       "options": [
-        "11 (十一)",
+        "9 (九)",
         "50,000 (五萬)",
         "3 (三)",
-        "2 (二)"
+        "1,000 (一千)"
       ],
       "hint": "聽發音，這是印尼數字基礎計數。",
       "why": "lima puluh ribu 就是數字 50,000 (五萬)。在印尼買東西必用！",
@@ -468,10 +468,10 @@
       "audio": "lima puluh ribu",
       "answer": "lima puluh ribu",
       "options": [
-        "lima",
+        "tujuh",
         "lima puluh ribu",
-        "dua puluh lima ribu",
-        "seribu"
+        "sembilan",
+        "seratus"
       ],
       "hint": "代表中文的 50,000 (五萬)",
       "why": "聽音辨數：lima puluh ribu = 50,000 (五萬)",
@@ -485,10 +485,10 @@
       "audio": "seratus",
       "answer": "100 (一百)",
       "options": [
-        "7 (七)",
+        "10,000 (市集口語一萬)",
         "100 (一百)",
-        "11 (十一)",
-        "9 (九)"
+        "25,000 (二萬五千)",
+        "2 (二)"
       ],
       "hint": "聽發音，這是印尼數字基礎計數。",
       "why": "seratus 就是數字 100 (一百)。在印尼買東西必用！",
@@ -502,10 +502,10 @@
       "audio": "seratus",
       "answer": "seratus",
       "options": [
-        "tujuh",
+        "satu",
         "seratus",
-        "sepuluh",
-        "tiga"
+        "satu juta",
+        "tujuh"
       ],
       "hint": "代表中文的 100 (一百)",
       "why": "聽音辨數：seratus = 100 (一百)",
@@ -520,9 +520,9 @@
       "answer": "1,000 (一千)",
       "options": [
         "1,000 (一千)",
-        "50,000 (五萬)",
-        "3 (三)",
-        "100 (一百)"
+        "500 (五百)",
+        "7 (七)",
+        "10 (十)"
       ],
       "hint": "聽發音，這是印尼數字基礎計數。",
       "why": "seribu 就是數字 1,000 (一千)。在印尼買東西必用！",
@@ -537,8 +537,8 @@
       "answer": "seribu",
       "options": [
         "seribu",
-        "empat",
-        "satu juta",
+        "enam",
+        "sepuluh",
         "dua"
       ],
       "hint": "代表中文的 1,000 (一千)",
@@ -554,9 +554,9 @@
       "answer": "10,000 (一萬)",
       "options": [
         "10,000 (一萬)",
-        "6 (六)",
-        "50,000 (五萬)",
-        "4 (四)"
+        "2 (二)",
+        "4 (四)",
+        "10 (十)"
       ],
       "hint": "聽發音，這是印尼數字基礎計數。",
       "why": "sepuluh ribu 就是數字 10,000 (一萬)。在印尼買東西必用！",
@@ -571,9 +571,9 @@
       "answer": "sepuluh ribu",
       "options": [
         "sepuluh ribu",
-        "dua puluh lima ribu",
-        "sembilan",
-        "seratus"
+        "satu juta",
+        "ceban",
+        "empat"
       ],
       "hint": "代表中文的 10,000 (一萬)",
       "why": "聽音辨數：sepuluh ribu = 10,000 (一萬)",
@@ -587,10 +587,10 @@
       "audio": "satu juta",
       "answer": "1,000,000 (一百萬)",
       "options": [
-        "10 (十)",
+        "1 (一)",
         "1,000,000 (一百萬)",
-        "5 (五)",
-        "11 (十一)"
+        "3 (三)",
+        "7 (七)"
       ],
       "hint": "聽發音，這是印尼數字基礎計數。",
       "why": "satu juta 就是數字 1,000,000 (一百萬)。在印尼買東西必用！",
@@ -604,13 +604,149 @@
       "audio": "satu juta",
       "answer": "satu juta",
       "options": [
-        "seratus",
-        "satu juta",
         "sembilan",
-        "lima"
+        "satu juta",
+        "tujuh",
+        "dua ratus ribu"
       ],
       "hint": "代表中文的 1,000,000 (一百萬)",
       "why": "聽音辨數：satu juta = 1,000,000 (一百萬)",
+      "level": 1
+    },
+    "u2-1:c:18": {
+      "id": "u2-1:c:18",
+      "kind": "word",
+      "type": "choice",
+      "prompt": "印尼文數字「lima ratus」代表：",
+      "audio": "lima ratus",
+      "answer": "500 (五百)",
+      "options": [
+        "500 (五百)",
+        "9 (九)",
+        "1 (一)",
+        "2 (二)"
+      ],
+      "hint": "聽發音，這是印尼數字基礎計數。",
+      "why": "lima ratus 就是數字 500 (五百)。在印尼買東西必用！",
+      "level": 1
+    },
+    "u2-1:l:18": {
+      "id": "u2-1:l:18",
+      "kind": "talk",
+      "type": "listen",
+      "prompt": "聽聽數字語音，選出聽到的印尼數字：",
+      "audio": "lima ratus",
+      "answer": "lima ratus",
+      "options": [
+        "lima ratus",
+        "dua",
+        "dua ratus ribu",
+        "sebelas"
+      ],
+      "hint": "代表中文的 500 (五百)",
+      "why": "聽音辨數：lima ratus = 500 (五百)",
+      "level": 1
+    },
+    "u2-1:c:19": {
+      "id": "u2-1:c:19",
+      "kind": "word",
+      "type": "choice",
+      "prompt": "印尼文數字「dua ratus ribu」代表：",
+      "audio": "dua ratus ribu",
+      "answer": "200,000 (二十萬)",
+      "options": [
+        "1 (一)",
+        "100 (一百)",
+        "7 (七)",
+        "200,000 (二十萬)"
+      ],
+      "hint": "聽發音，這是印尼數字基礎計數。",
+      "why": "dua ratus ribu 就是數字 200,000 (二十萬)。在印尼買東西必用！",
+      "level": 1
+    },
+    "u2-1:l:19": {
+      "id": "u2-1:l:19",
+      "kind": "talk",
+      "type": "listen",
+      "prompt": "聽聽數字語音，選出聽到的印尼數字：",
+      "audio": "dua ratus ribu",
+      "answer": "dua ratus ribu",
+      "options": [
+        "dua puluh lima ribu",
+        "lima",
+        "tiga",
+        "dua ratus ribu"
+      ],
+      "hint": "代表中文的 200,000 (二十萬)",
+      "why": "聽音辨數：dua ratus ribu = 200,000 (二十萬)",
+      "level": 1
+    },
+    "u2-1:c:20": {
+      "id": "u2-1:c:20",
+      "kind": "word",
+      "type": "choice",
+      "prompt": "印尼文數字「goceng」代表：",
+      "audio": "goceng",
+      "answer": "5,000 (市集口語五千)",
+      "options": [
+        "7 (七)",
+        "5,000 (市集口語五千)",
+        "5 (五)",
+        "3 (三)"
+      ],
+      "hint": "聽發音，這是印尼數字基礎計數。",
+      "why": "goceng 就是數字 5,000 (市集口語五千)。在印尼買東西必用！",
+      "level": 1
+    },
+    "u2-1:l:20": {
+      "id": "u2-1:l:20",
+      "kind": "talk",
+      "type": "listen",
+      "prompt": "聽聽數字語音，選出聽到的印尼數字：",
+      "audio": "goceng",
+      "answer": "goceng",
+      "options": [
+        "sebelas",
+        "goceng",
+        "lima",
+        "tiga"
+      ],
+      "hint": "代表中文的 5,000 (市集口語五千)",
+      "why": "聽音辨數：goceng = 5,000 (市集口語五千)",
+      "level": 1
+    },
+    "u2-1:c:21": {
+      "id": "u2-1:c:21",
+      "kind": "word",
+      "type": "choice",
+      "prompt": "印尼文數字「ceban」代表：",
+      "audio": "ceban",
+      "answer": "10,000 (市集口語一萬)",
+      "options": [
+        "7 (七)",
+        "100 (一百)",
+        "5 (五)",
+        "10,000 (市集口語一萬)"
+      ],
+      "hint": "聽發音，這是印尼數字基礎計數。",
+      "why": "ceban 就是數字 10,000 (市集口語一萬)。在印尼買東西必用！",
+      "level": 1
+    },
+    "u2-1:l:21": {
+      "id": "u2-1:l:21",
+      "kind": "talk",
+      "type": "listen",
+      "prompt": "聽聽數字語音，選出聽到的印尼數字：",
+      "audio": "ceban",
+      "answer": "ceban",
+      "options": [
+        "lima ratus",
+        "seratus",
+        "tiga",
+        "ceban"
+      ],
+      "hint": "代表中文的 10,000 (市集口語一萬)",
+      "why": "聽音辨數：ceban = 10,000 (市集口語一萬)",
       "level": 1
     },
     "u2-1:match:1": {
@@ -744,6 +880,40 @@
       "why": "Beliau 是專門敬稱德高望重之長輩、師長或領袖的第三人稱。",
       "level": 2
     },
+    "u2-2:c:6": {
+      "id": "u2-2:c:6",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "在印尼各都會餐廳或商店，稱呼年輕男女店員服務生最普及親切的尊稱是：",
+      "audio": "Bapak dan Ibu, Saya dan Beliau",
+      "answer": "Mas (大哥) 與 Mbak (小姐)",
+      "options": [
+        "Mas (大哥) 與 Mbak (小姐)",
+        "Tuan 與 Nyonya",
+        "Kamu 與 Dia",
+        "Bibi 與 Paman"
+      ],
+      "hint": "源自爪哇語兄姐，現已普及為全印尼國民親切稱謂。",
+      "why": "稱呼 Mas 或 Mbak 既得體又充滿人情味！",
+      "level": 2
+    },
+    "u2-2:c:7": {
+      "id": "u2-2:c:7",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "稱呼朋友的父母或平輩熟識長輩，現代印尼人普遍愛用的荷蘭借詞尊稱是：",
+      "audio": "Bapak dan Ibu, Saya dan Beliau",
+      "answer": "Om (叔伯) 與 Tante (阿姨)",
+      "options": [
+        "Om (叔伯) 與 Tante (阿姨)",
+        "Bapak 與 Ibu",
+        "Kakek 與 Nenek",
+        "Kakak 與 Adik"
+      ],
+      "hint": "荷蘭借詞已深植印尼現代都市社交語言中。",
+      "why": "在都會區中產家庭中，叫長輩 Om 與 Tante 非常親近溫馨。",
+      "level": 2
+    },
     "u2-2:b:0": {
       "id": "u2-2:b:0",
       "kind": "drill",
@@ -820,6 +990,26 @@
       "answer": "Kalian belajar bahasa Indonesia bersama",
       "hint": "Kalian = 你們, belajar = 學習",
       "why": "複數人稱 Kalian 搭配動詞。",
+      "level": 2
+    },
+    "u2-2:b:4": {
+      "id": "u2-2:b:4",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝代名詞句型：「我們全家人居住在峇里島。」",
+      "audio": "Kami sekeluarga tinggal di Bali.",
+      "tokens": [
+        "Bali",
+        "tidur",
+        "di",
+        "kami",
+        "sekeluarga",
+        "tinggal",
+        "Kami"
+      ],
+      "answer": "Kami sekeluarga tinggal di Bali",
+      "hint": "Kami 排除聽話者, sekeluarga = 全家",
+      "why": "描述家庭成員時使用排除性代名詞 Kami。",
       "level": 2
     },
     "u2-3:b:0": {
@@ -1076,6 +1266,122 @@
       "hint": "Besok malam = 明晚, janji = 約定",
       "why": "約定必備句型。",
       "level": 2
+    },
+    "u2-3:b:7": {
+      "id": "u2-3:b:7",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝印尼文：「前天我剛抵達雅加達。」",
+      "audio": "Kemarin lusa saya tiba di Jakarta.",
+      "tokens": [
+        "kemarin",
+        "tiba",
+        "saya",
+        "lusa",
+        "Kemarin",
+        "besok",
+        "di",
+        "Jakarta"
+      ],
+      "answer": "Kemarin lusa saya tiba di Jakarta",
+      "hint": "kemarin lusa = 前天, tiba = 抵達",
+      "why": "前天是 kemarin lusa，後天是 besok lusa。",
+      "level": 2
+    },
+    "u2-3:c:7": {
+      "id": "u2-3:c:7",
+      "kind": "talk",
+      "type": "choice",
+      "prompt": "「Kemarin lusa saya tiba di Jakarta.」是什麼意思？",
+      "audio": "Kemarin lusa saya tiba di Jakarta.",
+      "answer": "前天我剛抵達雅加達。",
+      "options": [
+        "明天下午見面嗎？",
+        "前天我剛抵達雅加達。",
+        "火車已經抵達了嗎？",
+        "我們幾點去吃午餐？"
+      ],
+      "hint": "kemarin lusa = 前天, tiba = 抵達",
+      "why": "前天是 kemarin lusa，後天是 besok lusa。",
+      "level": 2
+    },
+    "u2-3:b:8": {
+      "id": "u2-3:b:8",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝印尼文：「後天我們再在這裡相聚。」",
+      "audio": "Besok lusa kita kumpul lagi di sini.",
+      "tokens": [
+        "kita",
+        "lusa",
+        "Besok",
+        "lagi",
+        "kumpul",
+        "besok",
+        "sini",
+        "kemarin",
+        "di"
+      ],
+      "answer": "Besok lusa kita kumpul lagi di sini",
+      "hint": "besok lusa = 後天, kumpul = 聚會相聚",
+      "why": "安排後天行程標準句。",
+      "level": 2
+    },
+    "u2-3:c:8": {
+      "id": "u2-3:c:8",
+      "kind": "talk",
+      "type": "choice",
+      "prompt": "「Besok lusa kita kumpul lagi di sini.」是什麼意思？",
+      "audio": "Besok lusa kita kumpul lagi di sini.",
+      "answer": "後天我們再在這裡相聚。",
+      "options": [
+        "後天我們再在這裡相聚。",
+        "明天下午見面嗎？",
+        "我們幾點去吃午餐？",
+        "火車已經抵達了嗎？"
+      ],
+      "hint": "besok lusa = 後天, kumpul = 聚會相聚",
+      "why": "安排後天行程標準句。",
+      "level": 2
+    },
+    "u2-3:b:9": {
+      "id": "u2-3:b:9",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝印尼文：「火車在八點鐘準時出發。」",
+      "audio": "Kereta api berangkat tepat waktu jam delapan.",
+      "tokens": [
+        "api",
+        "besok",
+        "waktu",
+        "jam",
+        "tepat",
+        "berangkat",
+        "Kereta",
+        "delapan",
+        "kemarin"
+      ],
+      "answer": "Kereta api berangkat tepat waktu jam delapan",
+      "hint": "tepat waktu = 準時, berangkat = 出發",
+      "why": "日常守時重要片語：tepat waktu。",
+      "level": 2
+    },
+    "u2-3:c:9": {
+      "id": "u2-3:c:9",
+      "kind": "talk",
+      "type": "choice",
+      "prompt": "「Kereta api berangkat tepat waktu jam delapan.」是什麼意思？",
+      "audio": "Kereta api berangkat tepat waktu jam delapan.",
+      "answer": "火車在八點鐘準時出發。",
+      "options": [
+        "火車已經抵達了嗎？",
+        "火車在八點鐘準時出發。",
+        "明天下午見面嗎？",
+        "我們幾點去吃午餐？"
+      ],
+      "hint": "tepat waktu = 準時, berangkat = 出發",
+      "why": "日常守時重要片語：tepat waktu。",
+      "level": 2
     }
   },
   "units": {
@@ -1104,6 +1410,10 @@
           "u2-1:c:15",
           "u2-1:c:16",
           "u2-1:c:17",
+          "u2-1:c:18",
+          "u2-1:c:19",
+          "u2-1:c:20",
+          "u2-1:c:21",
           "u2-1:match:1"
         ],
         "u2-1:listen": [
@@ -1124,7 +1434,11 @@
           "u2-1:l:14",
           "u2-1:l:15",
           "u2-1:l:16",
-          "u2-1:l:17"
+          "u2-1:l:17",
+          "u2-1:l:18",
+          "u2-1:l:19",
+          "u2-1:l:20",
+          "u2-1:l:21"
         ],
         "u2-1:build": [
           "u2-1:c:0",
@@ -1134,7 +1448,44 @@
           "u2-1:c:2",
           "u2-1:l:2",
           "u2-1:c:3",
-          "u2-1:l:3"
+          "u2-1:l:3",
+          "u2-1:c:4",
+          "u2-1:l:4",
+          "u2-1:c:5",
+          "u2-1:l:5",
+          "u2-1:c:6",
+          "u2-1:l:6",
+          "u2-1:c:7",
+          "u2-1:l:7",
+          "u2-1:c:8",
+          "u2-1:l:8",
+          "u2-1:c:9",
+          "u2-1:l:9",
+          "u2-1:c:10",
+          "u2-1:l:10",
+          "u2-1:c:11",
+          "u2-1:l:11",
+          "u2-1:c:12",
+          "u2-1:l:12",
+          "u2-1:c:13",
+          "u2-1:l:13",
+          "u2-1:c:14",
+          "u2-1:l:14",
+          "u2-1:c:15",
+          "u2-1:l:15",
+          "u2-1:c:16",
+          "u2-1:l:16",
+          "u2-1:c:17",
+          "u2-1:l:17",
+          "u2-1:c:18",
+          "u2-1:l:18",
+          "u2-1:c:19",
+          "u2-1:l:19",
+          "u2-1:c:20",
+          "u2-1:l:20",
+          "u2-1:c:21",
+          "u2-1:l:21",
+          "u2-1:match:1"
         ],
         "u2-1:drill": [
           "u2-1:c:0",
@@ -1144,7 +1495,44 @@
           "u2-1:c:2",
           "u2-1:l:2",
           "u2-1:c:3",
-          "u2-1:l:3"
+          "u2-1:l:3",
+          "u2-1:c:4",
+          "u2-1:l:4",
+          "u2-1:c:5",
+          "u2-1:l:5",
+          "u2-1:c:6",
+          "u2-1:l:6",
+          "u2-1:c:7",
+          "u2-1:l:7",
+          "u2-1:c:8",
+          "u2-1:l:8",
+          "u2-1:c:9",
+          "u2-1:l:9",
+          "u2-1:c:10",
+          "u2-1:l:10",
+          "u2-1:c:11",
+          "u2-1:l:11",
+          "u2-1:c:12",
+          "u2-1:l:12",
+          "u2-1:c:13",
+          "u2-1:l:13",
+          "u2-1:c:14",
+          "u2-1:l:14",
+          "u2-1:c:15",
+          "u2-1:l:15",
+          "u2-1:c:16",
+          "u2-1:l:16",
+          "u2-1:c:17",
+          "u2-1:l:17",
+          "u2-1:c:18",
+          "u2-1:l:18",
+          "u2-1:c:19",
+          "u2-1:l:19",
+          "u2-1:c:20",
+          "u2-1:l:20",
+          "u2-1:c:21",
+          "u2-1:l:21",
+          "u2-1:match:1"
         ],
         "u2-1:boss": [
           "u2-1:c:0",
@@ -1183,6 +1571,14 @@
           "u2-1:l:16",
           "u2-1:c:17",
           "u2-1:l:17",
+          "u2-1:c:18",
+          "u2-1:l:18",
+          "u2-1:c:19",
+          "u2-1:l:19",
+          "u2-1:c:20",
+          "u2-1:l:20",
+          "u2-1:c:21",
+          "u2-1:l:21",
           "u2-1:match:1"
         ]
       }
@@ -1200,8 +1596,13 @@
           "u2-2:c:3",
           "u2-2:c:4",
           "u2-2:c:5",
+          "u2-2:c:6",
+          "u2-2:c:7",
           "u2-2:b:0",
-          "u2-2:b:1"
+          "u2-2:b:1",
+          "u2-2:b:2",
+          "u2-2:b:3",
+          "u2-2:b:4"
         ],
         "u2-2:listen": [
           "u2-2:c:0",
@@ -1210,14 +1611,20 @@
           "u2-2:c:3",
           "u2-2:c:4",
           "u2-2:c:5",
+          "u2-2:c:6",
+          "u2-2:c:7",
           "u2-2:b:0",
-          "u2-2:b:1"
+          "u2-2:b:1",
+          "u2-2:b:2",
+          "u2-2:b:3",
+          "u2-2:b:4"
         ],
         "u2-2:build": [
           "u2-2:b:0",
           "u2-2:b:1",
           "u2-2:b:2",
-          "u2-2:b:3"
+          "u2-2:b:3",
+          "u2-2:b:4"
         ],
         "u2-2:drill": [
           "u2-2:c:0",
@@ -1226,8 +1633,13 @@
           "u2-2:c:3",
           "u2-2:c:4",
           "u2-2:c:5",
+          "u2-2:c:6",
+          "u2-2:c:7",
           "u2-2:b:0",
-          "u2-2:b:1"
+          "u2-2:b:1",
+          "u2-2:b:2",
+          "u2-2:b:3",
+          "u2-2:b:4"
         ],
         "u2-2:boss": [
           "u2-2:c:0",
@@ -1236,10 +1648,13 @@
           "u2-2:c:3",
           "u2-2:c:4",
           "u2-2:c:5",
+          "u2-2:c:6",
+          "u2-2:c:7",
           "u2-2:b:0",
           "u2-2:b:1",
           "u2-2:b:2",
-          "u2-2:b:3"
+          "u2-2:b:3",
+          "u2-2:b:4"
         ]
       }
     },
@@ -1257,7 +1672,19 @@
           "u2-3:b:2",
           "u2-3:c:2",
           "u2-3:b:3",
-          "u2-3:c:3"
+          "u2-3:c:3",
+          "u2-3:b:4",
+          "u2-3:c:4",
+          "u2-3:b:5",
+          "u2-3:c:5",
+          "u2-3:b:6",
+          "u2-3:c:6",
+          "u2-3:b:7",
+          "u2-3:c:7",
+          "u2-3:b:8",
+          "u2-3:c:8",
+          "u2-3:b:9",
+          "u2-3:c:9"
         ],
         "u2-3:listen": [
           "u2-3:c:0",
@@ -1266,7 +1693,10 @@
           "u2-3:c:3",
           "u2-3:c:4",
           "u2-3:c:5",
-          "u2-3:c:6"
+          "u2-3:c:6",
+          "u2-3:c:7",
+          "u2-3:c:8",
+          "u2-3:c:9"
         ],
         "u2-3:build": [
           "u2-3:b:0",
@@ -1275,7 +1705,10 @@
           "u2-3:b:3",
           "u2-3:b:4",
           "u2-3:b:5",
-          "u2-3:b:6"
+          "u2-3:b:6",
+          "u2-3:b:7",
+          "u2-3:b:8",
+          "u2-3:b:9"
         ],
         "u2-3:drill": [
           "u2-3:b:0",
@@ -1285,7 +1718,19 @@
           "u2-3:b:2",
           "u2-3:c:2",
           "u2-3:b:3",
-          "u2-3:c:3"
+          "u2-3:c:3",
+          "u2-3:b:4",
+          "u2-3:c:4",
+          "u2-3:b:5",
+          "u2-3:c:5",
+          "u2-3:b:6",
+          "u2-3:c:6",
+          "u2-3:b:7",
+          "u2-3:c:7",
+          "u2-3:b:8",
+          "u2-3:c:8",
+          "u2-3:b:9",
+          "u2-3:c:9"
         ],
         "u2-3:boss": [
           "u2-3:b:0",
@@ -1301,7 +1746,13 @@
           "u2-3:b:5",
           "u2-3:c:5",
           "u2-3:b:6",
-          "u2-3:c:6"
+          "u2-3:c:6",
+          "u2-3:b:7",
+          "u2-3:c:7",
+          "u2-3:b:8",
+          "u2-3:c:8",
+          "u2-3:b:9",
+          "u2-3:c:9"
         ]
       }
     }

@@ -198,10 +198,10 @@ function buildUnitNodes(uid, itemsObj, pool) {
   const buildPool = pool.filter(id => itemsObj[id]?.type === 'build' || itemsObj[id]?.kind === 'drill');
   const allScored = pool.filter(id => itemsObj[id]);
 
-  const pWord = wordPool.length >= 4 ? wordPool : allScored.slice(0, 8);
-  const pListen = listenPool.length >= 4 ? listenPool : allScored.slice(0, 8);
-  const pBuild = buildPool.length >= 4 ? buildPool : allScored.slice(0, 8);
-  const pDrill = allScored.slice(0, 8);
+  const pWord = wordPool.length >= 4 ? wordPool : allScored;
+  const pListen = listenPool.length >= 4 ? listenPool : allScored;
+  const pBuild = buildPool.length >= 4 ? buildPool : allScored;
+  const pDrill = allScored;
   const pBoss = allScored;
 
   return {
@@ -236,7 +236,10 @@ const greetings = [
   { id: 'selamat-jalan', id_text: 'Selamat jalan', zh_text: '祝一路順風 / 慢走 (對離開出發的人說)', hint: 'Jalan 是「走/路」，對要啟程離開者說。', why: '印尼道別雙雄：對離開的人說 Selamat jalan，對留下的人說 Selamat tinggal。' },
   { id: 'selamat-tinggal', id_text: 'Selamat tinggal', zh_text: '請留步 / 保重 (對留在原處的人說)', hint: 'Tinggal 是「留下/居住」，對留在原地者說。', why: '對留下來的人說 Selamat tinggal，表達溫馨道別。' },
   { id: 'permisi', id_text: 'Permisi', zh_text: '不好意思 / 借過 / 請問', hint: '發問或穿過人群時最有禮貌的詞', why: 'Permisi 是印尼日常借過或開口問路前最受歡迎的禮貌起手式。' },
-  { id: 'maaf', id_text: 'Maaf', zh_text: '對不起 / 抱歉', hint: '道歉或打擾對方的必備詞彙', why: 'Maaf 常用於道歉或客氣打擾。' }
+  { id: 'maaf', id_text: 'Maaf', zh_text: '對不起 / 抱歉', hint: '道歉或打擾對方的必備詞彙', why: 'Maaf 常用於道歉或客氣打擾。' },
+  { id: 'salam-kenal', id_text: 'Salam kenal', zh_text: '初次見面幸會 / 請多指教', hint: 'Salam = 問候致意, Kenal = 認識', why: 'Salam kenal 是初次相識時最溫暖真誠的印尼語寒暄！' },
+  { id: 'hati-hati', id_text: 'Hati-hati di jalan', zh_text: '路上小心 / 慢走 (溫馨叮嚀)', hint: 'Hati-hati = 小心謹慎, di jalan = 在路上', why: '道別時印尼人必定送上的溫暖關懷：Hati-hati di jalan！' },
+  { id: 'sampai-nanti', id_text: 'Sampai nanti', zh_text: '待會見 / 稍後見', hint: 'Sampai = 直到, Nanti = 稍後/等等', why: '當天稍晚還要再碰面時，使用 Sampai nanti 最為貼切。' }
 ];
 
 greetings.forEach((g, idx) => {
@@ -322,7 +325,10 @@ const intros = [
   // Useful Content Additions:
   { id: 'nama-panggilan', id_text: 'Nama panggilan saya Lisa.', zh_text: '我的暱稱 / 小名叫 Lisa。', words: ['Nama', 'panggilan', 'saya', 'Lisa'], hint: 'Panggilan 來自 panggil (呼喚/叫)', why: '印尼人名字通常很長，初次見面一定會告訴對方自己的暱稱 (Nama panggilan)。' },
   { id: 'umur-saya', id_text: 'Umur saya dua puluh tahun.', zh_text: '我今年二十歲。', words: ['Umur', 'saya', 'dua', 'puluh', 'tahun'], hint: 'Umur = 年齡, tahun = 歲/年', why: '自我介紹年齡常用句：Umur saya ... tahun。' },
-  { id: 'seorang-pelajar', id_text: 'Saya seorang pelajar di universitas.', zh_text: '我是一名大學學生。', words: ['Saya', 'seorang', 'pelajar', 'di', 'universitas'], hint: 'seorang = 一位 (人量詞), pelajar = 學生', why: '介紹身分：seorang + 職業身分。' }
+  { id: 'seorang-pelajar', id_text: 'Saya seorang pelajar di universitas.', zh_text: '我是一名大學學生。', words: ['Saya', 'seorang', 'pelajar', 'di', 'universitas'], hint: 'seorang = 一位 (人量詞), pelajar = 學生', why: '介紹身分：seorang + 職業身分。' },
+  { id: 'pekerjaan-guru', id_text: 'Pekerjaan saya adalah guru bahasa.', zh_text: '我的工作是一名語言老師。', words: ['Pekerjaan', 'saya', 'adalah', 'guru', 'bahasa'], hint: 'pekerjaan = 職業工作, guru bahasa = 語言教師', why: '自我介紹職業身分的核心句型：Pekerjaan saya adalah...' },
+  { id: 'senang-bertemu-anda', id_text: 'Senang sekali bisa bertemu dengan Anda.', zh_text: '非常高興能夠與您相遇。', words: ['Senang', 'sekali', 'bisa', 'bertemu', 'dengan', 'Anda'], hint: 'senang sekali = 非常開心, bertemu = 相遇見面', why: '展現最高社交教養的優雅結尾問候。' },
+  { id: 'tinggal-di-jakarta', id_text: 'Saya sekarang tinggal di kota Jakarta.', zh_text: '我現在居住在雅加達市。', words: ['Saya', 'sekarang', 'tinggal', 'di', 'kota', 'Jakarta'], hint: 'sekarang = 現在, tinggal di = 居住在', why: '陳述居住地與生活現況的必備句。' }
 ];
 
 intros.forEach((item, idx) => {
@@ -381,7 +387,10 @@ const alphabetFacts = [
   // Useful Content Additions:
   { id: 'e-pepet-taling', prompt: '印尼文字母「E」有兩種讀音：弱化音 /ə/（如 empat）與開口音 /e/（如 meja），兩者稱為：', audio: 'Empat dan meja', answer: 'E-pepet (中央元音) 與 E-taling (半閉前元音)', options: ['E-pepet (中央元音) 與 E-taling (半閉前元音)', 'E-besar 與 E-kecil', 'E-panjang 與 E-pendek', 'E-hidup 與 E-mati'], hint: 'Pepet 讀成短促的「呃」，Taling 讀成開口的「欸」。', why: '印尼語 E 分為 /ə/ (pepet 如 teman, besar) 與 /e/ (taling 如 meja, sore)，掌握兩者是發音道地的金鑰！' },
   { id: 'ny-nasal', prompt: '印尼文字母組合「NY」（如 nyamuk, banyak）的發音是：', audio: 'Nyamuk dan banyak', answer: '舌面鼻音（類似中文「泥」的聲母）', options: ['舌面鼻音（類似中文「泥」的聲母）', '分開唸成 N 加 Y', '發成 M 的音', '不發音'], hint: 'Nyamuk = 蚊子，banyak = 很多。', why: 'NY 是單一顎音鼻音 /ɲ/，類似西班牙語的 ñ 或義大利語的 gn。' },
-  { id: 'kh-guttural', prompt: '印尼語組合「KH」（如 khusus, akhir）是清軟顎擦音，其來源通常是：', audio: 'Khusus dan akhir', answer: '阿拉伯語借詞 (Khusus 特殊, Akhir 結尾)', options: ['阿拉伯語借詞 (Khusus 特殊, Akhir 結尾)', '葡萄牙語借詞', '荷蘭語原住民語', '中文方言'], hint: '喉嚨深處發出微摩擦音。', why: 'KH 代表軟顎擦音 /x/，多源自阿拉伯宗教與文化詞彙。' }
+  { id: 'kh-guttural', prompt: '印尼語組合「KH」（如 khusus, akhir）是清軟顎擦音，其來源通常是：', audio: 'Khusus dan akhir', answer: '阿拉伯語借詞 (Khusus 特殊, Akhir 結尾)', options: ['阿拉伯語借詞 (Khusus 特殊, Akhir 結尾)', '葡萄牙語借詞', '荷蘭語原住民語', '中文方言'], hint: '喉嚨深處發出微摩擦音。', why: 'KH 代表軟顎擦音 /x/，多源自阿拉伯宗教與文化詞彙。' },
+  { id: 'apel-sound', prompt: '單字「apel」(蘋果) 與「apel」(升旗晨會)，其字母 E 的讀音有何差異？', audio: 'Buah apel manis dan apel pagi', answer: '蘋果發開口音 E-taling (/e/)，升旗集合發弱化音 E-pepet (/ə/)', options: ['蘋果發開口音 E-taling (/e/)，升旗集合發弱化音 E-pepet (/ə/)', '兩者發音完全相同毫無差別', '蘋果發 /ə/，集合發 /e/', '兩者都不發音'], hint: '印尼語著名同形異音字：apel 蘋果 vs apel 集合。', why: '印尼語雖然拼讀規則，但少數外來借詞如 apel (荷蘭借詞蘋果 vs 點名集合) 呈現 taling 與 pepet 的發音對比。' },
+  { id: 'ng-sound', prompt: '字母組合「NG」在單字「siang」(白天)、「pisang」(香蕉) 字尾時，發音規律為：', audio: 'Makan pisang di siang hari', answer: '軟顎鼻音 /ŋ/（類似注音「ㄥ」）', options: ['軟顎鼻音 /ŋ/（類似注音「ㄥ」）', 'N 與 G 分開拼讀', '完全不發音', '發成雙唇音 M'], hint: '就像英文 sing、song 結尾的 ng 音。', why: 'NG 在印尼語中為單一軟顎鼻音音素 /ŋ/，不是分開讀 N 和 G！' },
+  { id: 'h-initial', prompt: '印尼文字母「H」出現在字首（如 hotel, habis, hujan）時，發音特點為：', audio: 'Hotel, habis, hujan', answer: '清喉擦音 /h/，輕吐氣（類似注音 ㄏ）', options: ['清喉擦音 /h/，輕吐氣（類似注音 ㄏ）', '完全絕對不發音', '發成中文 ㄎ 的爆破音', '發成喉塞音截斷'], hint: '類似英語 home 中的 h，自然吐氣。', why: 'H 在標準印尼語中為標準喉擦音 /h/，清晰但自然輕盈。' }
 ];
 
 alphabetFacts.forEach((af, idx) => {
@@ -437,7 +446,8 @@ const numbers = [
   ['satu', '1 (一)'], ['dua', '2 (二)'], ['tiga', '3 (三)'], ['empat', '4 (四)'], ['lima', '5 (五)'],
   ['enam', '6 (六)'], ['tujuh', '7 (七)'], ['delapan', '8 (八)'], ['sembilan', '9 (九)'], ['sepuluh', '10 (十)'],
   ['sebelas', '11 (十一)'], ['dua puluh', '20 (二十)'], ['dua puluh lima ribu', '25,000 (二萬五千)'], ['lima puluh ribu', '50,000 (五萬)'],
-  ['seratus', '100 (一百)'], ['seribu', '1,000 (一千)'], ['sepuluh ribu', '10,000 (一萬)'], ['satu juta', '1,000,000 (一百萬)']
+  ['seratus', '100 (一百)'], ['seribu', '1,000 (一千)'], ['sepuluh ribu', '10,000 (一萬)'], ['satu juta', '1,000,000 (一百萬)'],
+  ['lima ratus', '500 (五百)'], ['dua ratus ribu', '200,000 (二十萬)'], ['goceng', '5,000 (市集口語五千)'], ['ceban', '10,000 (市集口語一萬)']
 ];
 
 numbers.forEach(([numWord, numZh], idx) => {
@@ -502,7 +512,9 @@ const pronounRules = [
   { id: 'saya-vs-aku', prompt: '正式場合、職場會議或對陌生人說「我」，必須使用：', answer: 'Saya (正式客氣)', options: ['Saya (正式客氣)', 'Aku (親暱熟人)', 'Gue (雅加達俚語)', 'Kita'], hint: 'Saya 是標準禮貌的「我」。', why: '初學者與職場對話一律使用 Saya 最安全合宜。' },
   // Useful Content Additions:
   { id: 'kalian-plural', prompt: '老師對台下所有學生說「你們」，印尼語應使用哪個人稱代名詞？', answer: 'Kalian (你們/複數)', options: ['Kalian (你們/複數)', 'Kamu (你/單數)', 'Mereka (他們)', 'Kami (我們)'], hint: 'Kamu 只能指單數的一個人。', why: '第二人稱複數「你們」必須使用 Kalian。' },
-  { id: 'beliau-respect', prompt: '向同事尊敬地提及公司資深總經理或大學校長「他/她」，最適當的敬稱是：', answer: 'Beliau (尊稱的他/她)', options: ['Beliau (尊稱的他/她)', 'Dia (普通他/她)', 'Kamu', 'Mereka'], hint: 'Beliau 展現崇高的敬意與教養。', why: 'Beliau 是專門敬稱德高望重之長輩、師長或領袖的第三人稱。' }
+  { id: 'beliau-respect', prompt: '向同事尊敬地提及公司資深總經理或大學校長「他/她」，最適當的敬稱是：', answer: 'Beliau (尊稱的他/她)', options: ['Beliau (尊稱的他/她)', 'Dia (普通他/她)', 'Kamu', 'Mereka'], hint: 'Beliau 展現崇高的敬意與教養。', why: 'Beliau 是專門敬稱德高望重之長輩、師長或領袖的第三人稱。' },
+  { id: 'mas-mbak-javanese', prompt: '在印尼各都會餐廳或商店，稱呼年輕男女店員服務生最普及親切的尊稱是：', answer: 'Mas (大哥) 與 Mbak (小姐)', options: ['Mas (大哥) 與 Mbak (小姐)', 'Tuan 與 Nyonya', 'Kamu 與 Dia', 'Bibi 與 Paman'], hint: '源自爪哇語兄姐，現已普及為全印尼國民親切稱謂。', why: '稱呼 Mas 或 Mbak 既得體又充滿人情味！' },
+  { id: 'om-tante-family', prompt: '稱呼朋友的父母或平輩熟識長輩，現代印尼人普遍愛用的荷蘭借詞尊稱是：', answer: 'Om (叔伯) 與 Tante (阿姨)', options: ['Om (叔伯) 與 Tante (阿姨)', 'Bapak 與 Ibu', 'Kakek 與 Nenek', 'Kakak 與 Adik'], hint: '荷蘭借詞已深植印尼現代都市社交語言中。', why: '在都會區中產家庭中，叫長輩 Om 與 Tante 非常親近溫馨。' }
 ];
 
 pronounRules.forEach((p, idx) => {
@@ -527,7 +539,8 @@ const pronounSentences = [
   { id: 'mereka-makan', id_text: 'Mereka makan bersama di restoran.', zh_text: '他們在餐廳一起吃飯。', words: ['Mereka', 'makan', 'bersama', 'di', 'restoran'], hint: 'Mereka = 他們, bersama = 一起', why: '標準代名詞主詞句型。' },
   { id: 'kita-pergi', id_text: 'Kita pergi sekarang ya.', zh_text: '我們現在出發吧（大家一起走）。', words: ['Kita', 'pergi', 'sekarang', 'ya'], hint: 'Kita = 大家一起的我們, pergi = 出發', why: '邀約大家一起出發用 Kita。' },
   { id: 'beliau-dosen', id_text: 'Beliau adalah dosen saya.', zh_text: '他/她是我的大學教授 (崇敬)。', words: ['Beliau', 'adalah', 'dosen', 'saya'], hint: 'Beliau = 尊貴的他, dosen = 大學講師教授', why: '用 Beliau 表達對恩師的敬意。' },
-  { id: 'kalian-belajar', id_text: 'Kalian belajar bahasa Indonesia bersama.', zh_text: '你們大家一起學習印尼語。', words: ['Kalian', 'belajar', 'bahasa', 'Indonesia', 'bersama'], hint: 'Kalian = 你們, belajar = 學習', why: '複數人稱 Kalian 搭配動詞。' }
+  { id: 'kalian-belajar', id_text: 'Kalian belajar bahasa Indonesia bersama.', zh_text: '你們大家一起學習印尼語。', words: ['Kalian', 'belajar', 'bahasa', 'Indonesia', 'bersama'], hint: 'Kalian = 你們, belajar = 學習', why: '複數人稱 Kalian 搭配動詞。' },
+  { id: 'kami-sekeluarga', id_text: 'Kami sekeluarga tinggal di Bali.', zh_text: '我們全家人居住在峇里島。', words: ['Kami', 'sekeluarga', 'tinggal', 'di', 'Bali'], hint: 'Kami 排除聽話者, sekeluarga = 全家', why: '描述家庭成員時使用排除性代名詞 Kami。' }
 ];
 
 pronounSentences.forEach((ps, idx) => {
@@ -557,7 +570,10 @@ const timeItems = [
   // Useful Content Additions:
   { id: 'setengah-enam', id_text: 'Saya bangun jam setengah enam pagi.', zh_text: '我早上五點半起床 (差半小時六點)。', words: ['Saya', 'bangun', 'jam', 'setengah', 'enam', 'pagi'], hint: 'Setengah enam = 5:30！', why: 'bangun (起床) + jam setengah enam pagi (5:30 am)。' },
   { id: 'kemarin-sore', id_text: 'Kemarin sore hujan lebat sekali.', zh_text: '昨天傍晚下了非常大的雨。', words: ['Kemarin', 'sore', 'hujan', 'lebat', 'sekali'], hint: 'Kemarin = 昨天, lebat = 傾盆大雨', why: '時間副詞放句首清晰自然。' },
-  { id: 'besok-malam', id_text: 'Besok malam kita ada janji makan malam.', zh_text: '明天晚上我們有約吃晚餐。', words: ['Besok', 'malam', 'kita', 'ada', 'janji'], hint: 'Besok malam = 明晚, janji = 約定', why: '約定必備句型。' }
+  { id: 'besok-malam', id_text: 'Besok malam kita ada janji makan malam.', zh_text: '明天晚上我們有約吃晚餐。', words: ['Besok', 'malam', 'kita', 'ada', 'janji'], hint: 'Besok malam = 明晚, janji = 約定', why: '約定必備句型。' },
+  { id: 'kemarin-lusa', id_text: 'Kemarin lusa saya tiba di Jakarta.', zh_text: '前天我剛抵達雅加達。', words: ['Kemarin', 'lusa', 'saya', 'tiba', 'di', 'Jakarta'], hint: 'kemarin lusa = 前天, tiba = 抵達', why: '前天是 kemarin lusa，後天是 besok lusa。' },
+  { id: 'besok-lusa', id_text: 'Besok lusa kita kumpul lagi di sini.', zh_text: '後天我們再在這裡相聚。', words: ['Besok', 'lusa', 'kita', 'kumpul', 'lagi', 'di', 'sini'], hint: 'besok lusa = 後天, kumpul = 聚會相聚', why: '安排後天行程標準句。' },
+  { id: 'tepat-waktu', id_text: 'Kereta api berangkat tepat waktu jam delapan.', zh_text: '火車在八點鐘準時出發。', words: ['Kereta', 'api', 'berangkat', 'tepat', 'waktu', 'jam', 'delapan'], hint: 'tepat waktu = 準時, berangkat = 出發', why: '日常守時重要片語：tepat waktu。' }
 ];
 
 timeItems.forEach((t, idx) => {
@@ -614,7 +630,10 @@ const foods = [
   // Useful Content Additions:
   { id: 'bungkus-makan-sini', id_text: 'Mau makan di sini atau dibungkus?', zh_text: '請問要內用還是外帶包裝？', words: ['Mau', 'makan', 'di', 'sini', 'atau', 'dibungkus'], hint: 'dibungkus = 外帶打包, makan di sini = 內用', why: '小吃攤老闆點餐必問名句：內用還是外帶？' },
   { id: 'tanpa-es', id_text: 'Minta jus alpukat satu, tanpa es ya.', zh_text: '請給我一杯酪梨果汁，去冰喔。', words: ['Minta', 'jus', 'alpukat', 'satu', 'tanpa', 'es', 'ya'], hint: 'tanpa = 不含/去, es = 冰塊', why: '客製飲料去冰說法：tanpa es。' },
-  { id: 'tambah-sambal', id_text: 'Bisa tolong tambah sambal sedikit?', zh_text: '可以幫我多加一點辣椒醬嗎？', words: ['Bisa', 'tolong', 'tambah', 'sambal', 'sedikit'], hint: 'tambah = 增加/加, sambal = 辣醬', why: '印尼小吃靈魂 Sambal，想要多一點直接說 tambah sambal。' }
+  { id: 'tambah-sambal', id_text: 'Bisa tolong tambah sambal sedikit?', zh_text: '可以幫我多加一點辣椒醬嗎？', words: ['Bisa', 'tolong', 'tambah', 'sambal', 'sedikit'], hint: 'tambah = 增加/加, sambal = 辣醬', why: '印尼小吃靈魂 Sambal，想要多一點直接說 tambah sambal。' },
+  { id: 'es-teh-tawar', id_text: 'Minta es teh tawar satu tanpa gula.', zh_text: '請給我一杯無糖冰茶，不要加糖。', words: ['Minta', 'es', 'teh', 'tawar', 'satu', 'tanpa', 'gula'], hint: 'teh tawar = 無糖茶, tanpa gula = 不加糖', why: '印尼茶飲預設極甜，喝無糖必喊 Teh tawar！' },
+  { id: 'pedas-sedikit', id_text: 'Tolong sambal sedikit saja ya.', zh_text: '請辣椒醬只要放一點點就好。', words: ['Tolong', 'sambal', 'sedikit', 'saja', 'ya'], hint: 'sedikit saja = 只要一點點', why: '不耐辣者的點餐救星句。' },
+  { id: 'dibungkus-pulang', id_text: 'Tolong dibungkus untuk dibawa pulang ya Mas.', zh_text: '小哥，請幫我外帶打包帶回家。', words: ['Tolong', 'dibungkus', 'untuk', 'dibawa', 'pulang', 'ya', 'Mas'], hint: 'dibawa pulang = 帶回家', why: '夜市小吃打包外帶最客氣說法。' }
 ];
 
 const u31Pool = [];
@@ -693,7 +712,10 @@ const gojekChat = [
   { id: 'plat-nomor', id_text: 'Plat nomor motor saya B 1234 XYZ.', zh_text: '我的機車車牌號碼是 B 1234 XYZ。', words: ['Plat', 'nomor', 'motor', 'saya', 'B', '1234', 'XYZ'], hint: 'plat nomor = 車牌號碼', why: '確認車牌防上錯車。' },
   // Useful Content Additions:
   { id: 'turun-lift', id_text: 'Tunggu sebentar Pak, saya lagi turun lift.', zh_text: '司機大哥稍等一下，我正在搭電梯下樓。', words: ['Tunggu', 'sebentar', 'Pak', 'saya', 'lagi', 'turun', 'lift'], hint: 'turun = 下去, lift = 電梯', why: '住高樓公寓大廈告知司機必備。' },
-  { id: 'bintang-lima', id_text: 'Terima kasih banyak Pak, nanti saya beri bintang lima!', zh_text: '非常感謝司機大哥，等一下給您五星好評！', words: ['Terima', 'kasih', 'banyak', 'Pak', 'bintang', 'lima'], hint: 'bintang lima = 五顆星', why: '司機最喜歡聽到的暖心感謝。' }
+  { id: 'bintang-lima', id_text: 'Terima kasih banyak Pak, nanti saya beri bintang lima!', zh_text: '非常感謝司機大哥，等一下給您五星好評！', words: ['Terima', 'kasih', 'banyak', 'Pak', 'bintang', 'lima'], hint: 'bintang lima = 五顆星', why: '司機最喜歡聽到的暖心感謝。' },
+  { id: 'helm-satu', id_text: 'Pak minta helm yang bersih satu ya.', zh_text: '司機大哥，請給我一頂乾淨的安全帽。', words: ['Pak', 'minta', 'helm', 'yang', 'bersih', 'satu', 'ya'], hint: 'helm = 安全帽, bersih = 乾淨', why: '搭 GoRide 摩托車保護頭部安全必說句子。' },
+  { id: 'jalan-tol', id_text: 'Apakah kita mau lewat jalan tol?', zh_text: '請問我們要走高速公路比較快嗎？', words: ['Apakah', 'kita', 'mau', 'lewat', 'jalan', 'tol'], hint: 'jalan tol = 高速公路', why: '搭 GoCar 汽車避開市區塞車常用問句。' },
+  { id: 'lobby-utara', id_text: 'Saya sudah menunggu di depan lobby utara.', zh_text: '我已經在北大廳門口等候了。', words: ['Saya', 'sudah', 'menunggu', 'di', 'depan', 'lobby', 'utara'], hint: 'lobby utara = 北大廳, menunggu = 等候', why: '商場或車站有多個出入口時精準溝通句。' }
 ];
 
 gojekChat.forEach((g, idx) => {
@@ -736,7 +758,10 @@ const directions = [
   { id: 'dekat-stasiun', id_text: 'Lokasinya dekat stasiun MRT.', zh_text: '位置就在捷運站附近。', words: ['Lokasinya', 'dekat', 'stasiun', 'MRT'], hint: 'dekat(靠近/附近)', why: 'dekat 表示距離近，jauh 表示遠。' },
   // Useful Content Additions:
   { id: 'seberang-jalan', id_text: 'Toko itu ada di seberang jalan.', zh_text: '那家店就在馬路的正對面。', words: ['Toko', 'itu', 'ada', 'di', 'seberang', 'jalan'], hint: 'seberang = 對面/跨過', why: '問路極高頻方位詞：di seberang jalan (對面)。' },
-  { id: 'berapa-menit', id_text: 'Berapa menit jalan kaki dari sini?', zh_text: '從這裡走路需要幾分鐘？', words: ['Berapa', 'menit', 'jalan', 'kaki', 'dari', 'sini'], hint: 'jalan kaki = 走路步行, menit = 分鐘', why: '問步行距離必備句型。' }
+  { id: 'berapa-menit', id_text: 'Berapa menit jalan kaki dari sini?', zh_text: '從這裡走路需要幾分鐘？', words: ['Berapa', 'menit', 'jalan', 'kaki', 'dari', 'sini'], hint: 'jalan kaki = 走路步行, menit = 分鐘', why: '問步行距離必備句型。' },
+  { id: 'putar-balik', id_text: 'Tolong putar balik di depan lampu merah.', zh_text: '請在前面的紅綠燈處迴轉。', words: ['Tolong', 'putar', 'balik', 'di', 'depan', 'lampu', 'merah'], hint: 'putar balik = 迴轉, lampu merah = 紅綠燈', why: '搭車導航超高頻指示：putar balik 迴轉。' },
+  { id: 'sebelah-kiri', id_text: 'Gedung bank ada di sebelah kiri jalan.', zh_text: '銀行大樓就在馬路的左側。', words: ['Gedung', 'bank', 'ada', 'di', 'sebelah', 'kiri', 'jalan'], hint: 'sebelah kiri = 左邊/左側', why: '方位左右側必備句。' },
+  { id: 'lampu-merah-kedua', id_text: 'Lewat lampu merah kedua lalu belok kanan.', zh_text: '穿過第二個紅綠燈後再右轉。', words: ['Lewat', 'lampu', 'merah', 'kedua', 'lalu', 'belok', 'kanan'], hint: 'lewat = 經過, kedua = 第二個', why: '複雜路況指引實用語。' }
 ];
 
 directions.forEach((d, idx) => {
@@ -795,7 +820,13 @@ const modernLife = [
 
   { unit: 'u4-3', id: 'bisa-kurang', id_text: 'Bisa kurang sedikit harganya, Bu?', zh_text: '老闆娘，價格可以算便宜一點點嗎？', words: ['Bisa', 'kurang', 'sedikit', 'harganya', 'Bu'], hint: 'kurang = 減少/便宜', why: '傳統市場殺價最客氣有效的問法。' },
   { unit: 'u4-3', id: 'keranjang-kuning', id_text: 'Checkout sekarang di keranjang kuning ya!', zh_text: '現在立刻在黃色購物車下單結帳吧！', words: ['Checkout', 'sekarang', 'di', 'keranjang', 'kuning', 'ya'], hint: 'TikTok Shop 招牌名詞：keranjang kuning (黃色小黃車)。', why: '印尼直播帶貨狂潮最常聽到的口頭禪。' },
-  { id: 'beli-dua-diskon', unit: 'u4-3', id_text: 'Kalau beli dua ada diskon nggak?', zh_text: '如果買兩個的話，有打折優惠嗎？', words: ['Kalau', 'beli', 'dua', 'ada', 'diskon', 'nggak'], hint: 'diskon = 折扣/打折', why: '買多件時的議價技巧。' }
+  { id: 'beli-dua-diskon', unit: 'u4-3', id_text: 'Kalau beli dua ada diskon nggak?', zh_text: '如果買兩個的話，有打折優惠嗎？', words: ['Kalau', 'beli', 'dua', 'ada', 'diskon', 'nggak'], hint: 'diskon = 折扣/打折', why: '買多件時的議價技巧。' },
+  { unit: 'u4-1', id: 'topup-gopay', id_text: 'Bisa tolong top up saldo GoPay di kasir?', zh_text: '可以在收銀台幫我儲值電子錢包餘額嗎？', words: ['Bisa', 'tolong', 'top', 'up', 'saldo', 'GoPay', 'di', 'kasir'], hint: 'saldo = 餘額, top up = 儲值', why: '超商 Indomaret 或 Alfamart 儲值必備用語。' },
+  { unit: 'u4-1', id: 'scan-barcode', id_text: 'Silakan scan QR code di atas meja kasir.', zh_text: '請直接掃描收銀台桌上的 QR 條碼。', words: ['Silakan', 'scan', 'QR', 'code', 'di', 'atas', 'meja', 'kasir'], hint: 'silakan = 請, meja kasir = 收銀台', why: 'QRIS 掃碼結帳店員標準引導語。' },
+  { unit: 'u4-2', id: 'kopi-tubruk', id_text: 'Saya mau pesan kopi tubruk asli Indonesia.', zh_text: '我要點一杯道地的印尼傳統黑咖啡。', words: ['Saya', 'mau', 'pesan', 'kopi', 'tubruk', 'asli', 'Indonesia'], hint: 'kopi tubruk = 印尼古法未濾渣黑咖啡', why: '印尼最經典的傳統咖啡沖泡方式。' },
+  { unit: 'u4-2', id: 'pisang-goreng', id_text: 'Makan pisang goreng hangat enak sekali.', zh_text: '吃現炸熱騰騰的炸香蕉真是太美味了。', words: ['Makan', 'pisang', 'goreng', 'hangat', 'enak', 'sekali'], hint: 'pisang goreng = 炸香蕉小吃', why: '喝咖啡 nongkrong 必配的招牌茶點。' },
+  { unit: 'u4-3', id: 'harga-pas', id_text: 'Harga pasnya berapa kalau saya ambil tiga?', zh_text: '如果我拿三個的話，底價算多少？', words: ['Harga', 'pasnya', 'berapa', 'kalau', 'saya', 'ambil', 'tiga'], hint: 'harga pas = 不二價/底價, ambil = 拿/買', why: '傳統市集買多件時詢問最終底價金句。' },
+  { unit: 'u4-3', id: 'boleh-kurang-dikit', id_text: 'Boleh kurang sedikit harganya kan Bu?', zh_text: '老闆娘，價格可以再便宜一點點對吧？', words: ['Boleh', 'kurang', 'sedikit', 'harganya', 'kan', 'Bu'], hint: 'boleh = 可以, kan = 對吧', why: '帶有親和力的菜市場議價溝通金句。' }
 ];
 
 const u41Pool = [];
@@ -1071,6 +1102,66 @@ const affix1Questions = [
     options: ['bukan (因為 uang 是名詞)', 'tidak', 'belum', 'jangan'],
     hint: 'uang (錢) 是名詞。否定名詞一律用 bukan！',
     why: '名詞否定標準規則：bukan uang saya。'
+  },
+  {
+    unit: 'u5-1',
+    id: 'ber-keluarga',
+    prompt: '字根「keluarga」(家庭) 加上前綴「ber-」變成「berkeluarga」，意思是：',
+    audio: 'Apakah Anda sudah berkeluarga?',
+    answer: '已成家立業、擁有家庭 (已婚)',
+    options: ['已成家立業、擁有家庭 (已婚)', '找房子獨居', '家庭聚會聚餐', '離家出走'],
+    hint: 'ber- 加名詞表示「擁有/具備」該狀態。',
+    why: 'berkeluarga 表示具備家庭狀態、已成家立業。'
+  },
+  {
+    unit: 'u5-1',
+    id: 'ber-belanja',
+    prompt: '字根「belanja」(花費/購物) 加上前綴「ber-」變成「berbelanja」，其用法為：',
+    audio: 'Ibu sedang berbelanja di pasar tradisional.',
+    answer: '不及物動詞（從事採買購物活動）',
+    options: ['不及物動詞（從事採買購物活動）', '購物發票小票', '購物的商人', '被賣掉的商品'],
+    hint: 'ber- 構成表示從事該活動的不及物動詞。',
+    why: 'belanja -> berbelanja (在購物/去採買)。'
+  },
+  {
+    unit: 'u5-2',
+    id: 'men-nasal-p',
+    prompt: '字根「pakai」(穿戴/使用) 首字母為清輔音 P，加上及物前綴「meN-」後會變成：',
+    audio: 'Dia memakai baju batik yang indah.',
+    answer: 'memakai (P 脫落被 M 取代)',
+    options: ['memakai (P 脫落被 M 取代)', 'mempakai', 'menpakai', 'mengpakai'],
+    hint: 'KTSP 清輔音同化口訣：P 脫落變成 mem-！',
+    why: 'pakai -> me + m + akai = memakai (穿著/使用)。'
+  },
+  {
+    unit: 'u5-2',
+    id: 'men-nasal-tolong',
+    prompt: '字根「tolong」(幫忙) 首字母為清輔音 T，加上及物前綴「meN-」後鼻音同化為：',
+    audio: 'Kita harus saling menolong sesama teman.',
+    answer: 'menolong (T 脫落被 N 取代)',
+    options: ['menolong (T 脫落被 N 取代)', 'mentolong', 'memtolong', 'mengtolong'],
+    hint: 'KTSP 規則：T 脫落同化為 men-！',
+    why: 'tolong -> me + n + olong = menolong (援助/幫助)。'
+  },
+  {
+    unit: 'u5-3',
+    id: 'tidak-vs-bukan-kopi',
+    prompt: '句子：「Ini jus mangga segar, ___ kopi.」(這是現榨芒果汁，不是咖啡)，空格應填入：',
+    audio: 'Ini jus mangga segar, bukan kopi susu.',
+    answer: 'bukan (因為 kopi 是具體名詞)',
+    options: ['bukan (因為 kopi 是具體名詞)', 'tidak', 'jangan', 'tiada'],
+    hint: 'kopi 是具體名詞。否定名詞一律只能用 bukan！',
+    why: '不是咖啡 -> bukan kopi。否定名詞絕不可用 tidak。'
+  },
+  {
+    unit: 'u5-3',
+    id: 'tidak-vs-bukan-capek',
+    prompt: '句子：「Saya masih kuat, ___ capek sama sekali.」(我還很有體力，一點都不累)，空格應填入：',
+    audio: 'Saya tidak capek sama sekali hari ini.',
+    answer: 'tidak (因為 capek 是形容詞疲累)',
+    options: ['tidak (因為 capek 是形容詞疲累)', 'bukan', 'jangan', 'belum'],
+    hint: 'capek 是形容詞 (累)。否定形容詞必用 tidak！',
+    why: '不累 -> tidak capek。否定形容詞必須用 tidak。'
   }
 ];
 
@@ -1103,7 +1194,10 @@ const affixSentences = [
   { unit: 'u5-3', id: 's5-b6', id_text: 'Dia tidak mau ikut rapat hari ini.', zh_text: '他今天不想參加會議。', words: ['Dia', 'tidak', 'mau', 'ikut', 'rapat'], hint: 'mau 是助動詞想要，否定用 tidak。', why: 'tidak mau = 不想。' },
   { unit: 'u5-1', id: 's5-b7', id_text: 'Kami bertemu di stasiun kereta api.', zh_text: '我們在火車站相遇見面。', words: ['Kami', 'bertemu', 'di', 'stasiun', 'kereta', 'api'], hint: 'bertemu = 見面相遇, stasiun = 火車站', why: 'bertemu 常用句型。' },
   { unit: 'u5-2', id: 's5-b8', id_text: 'Dia membaca buku cerita setiap hari.', zh_text: '他每天閱讀故事書。', words: ['Dia', 'membaca', 'buku', 'cerita', 'setiap', 'hari'], hint: 'membaca 是 baca 的主動及物動詞形式。', why: 'baca -> membaca (閱讀)。' },
-  { unit: 'u5-3', id: 's5-b9', id_text: 'Ini bukan masalah besar untuk kita.', zh_text: '這對我們來說不是大問題。', words: ['Ini', 'bukan', 'masalah', 'besar', 'untuk', 'kita'], hint: 'masalah 是名詞問題，否定用 bukan。', why: 'bukan masalah besar = 不是大問題。' }
+  { unit: 'u5-3', id: 's5-b9', id_text: 'Ini bukan masalah besar untuk kita.', zh_text: '這對我們來說不是大問題。', words: ['Ini', 'bukan', 'masalah', 'besar', 'untuk', 'kita'], hint: 'masalah 是名詞問題，否定用 bukan。', why: 'bukan masalah besar = 不是大問題。' },
+  { unit: 'u5-1', id: 's5-b10', id_text: 'Atlet itu berlatih bulu tangkis setiap hari.', zh_text: '那位運動員每天練習羽球。', words: ['Atlet', 'itu', 'berlatih', 'bulu', 'tangkis', 'setiap', 'hari'], hint: 'berlatih = 練習訓練', why: 'latih + ber- -> berlatih (鍛鍊/練習)。' },
+  { unit: 'u5-2', id: 's5-b11', id_text: 'Kami saling menolong teman yang kesusahan.', zh_text: '我們互相幫助遭遇困難的同伴。', words: ['Kami', 'saling', 'menolong', 'teman', 'yang', 'kesusahan'], hint: 'menolong = 幫助 (tolong 加 meN-)', why: '及物動詞 menolong 接受詞 teman。' },
+  { unit: 'u5-3', id: 's5-b12', id_text: 'Buku di meja itu bukan milik saya.', zh_text: '桌上那本書不是我的所有物。', words: ['Buku', 'di', 'meja', 'itu', 'bukan', 'milik', 'saya'], hint: 'milik saya = 我的所有物 (名詞/身分歸屬否定用 bukan)', why: '否定產權所有：bukan milik saya。' }
 ];
 
 affixSentences.forEach((as, idx) => {
@@ -1302,6 +1396,66 @@ const affix2Questions = [
     options: ['安全維護、治安秩序 (抽象名詞)', '危險地帶', '保險箱', '救生衣'],
     hint: 'aman 是安全的，ke-...-an 轉化為抽象名詞。',
     why: 'aman -> keamanan (安全性、治安)。'
+  },
+  {
+    unit: 'u6-1',
+    id: 'di-dikirim',
+    prompt: '句子：「Paket penting ini sudah ___ kemarin sore.」(這個重要包裹昨天傍晚已經被寄出)，應填入：',
+    audio: 'Paket ini sudah dikirim kemarin sore.',
+    answer: 'dikirim (被寄送)',
+    options: ['dikirim (被寄送)', 'mengirim', 'pengirim', 'kiriman'],
+    hint: '包裹是被寄送的對象，使用被動態 di-。',
+    why: 'kirim + di- -> dikirim (被寄送)。主語為受事時用被動態。'
+  },
+  {
+    unit: 'u6-1',
+    id: 'di-dikunci',
+    prompt: '告示牌：「Pintu harus selalu ___ demi keamanan.」(為了安全起見，大門必須隨時上鎖)，應填入：',
+    audio: 'Pintu ini harus selalu dikunci rapat.',
+    answer: 'dikunci (被鎖上)',
+    options: ['dikunci (被鎖上)', 'mengunci', 'kuncian', 'pengunci'],
+    hint: 'kunci 是鎖，被動語態加 di-。',
+    why: 'kunci -> dikunci (被鎖上/被關好)。'
+  },
+  {
+    unit: 'u6-2',
+    id: 'ter-tertinggal',
+    prompt: '句子：「Saya panik karena dompet saya ___ di taksi!」(我很慌張因為我的皮夾遺落在計程車上了！)，應填入：',
+    audio: 'Dompet saya tertinggal di dalam taksi.',
+    answer: 'tertinggal (無意識遺漏/被落下)',
+    options: ['tertinggal (無意識遺漏/被落下)', 'meninggalkan', 'ditinggal', 'tinggalan'],
+    hint: '意外或不由自主把東西落下的狀態用 ter-！',
+    why: 'tertinggal 表達非蓄意的無心遺留、被落下。'
+  },
+  {
+    unit: 'u6-2',
+    id: 'ter-terdengar',
+    prompt: '句子：「Suara deburan ombak ___ jelas dari sini.」(從這裡隱約清楚聽得見海浪聲)，應填入：',
+    audio: 'Suara ombak terdengar jelas dari pantai.',
+    answer: 'terdengar (聽得見/被感知到)',
+    options: ['terdengar (聽得見/被感知到)', 'mendengar', 'pendengar', 'dengaran'],
+    hint: 'ter- + dengar 表示能力或被聽見的感知狀態。',
+    why: 'terdengar = 能夠聽得見/隱約聽見。'
+  },
+  {
+    unit: 'u6-3',
+    id: 'pe-pembicara',
+    prompt: '字根「bicara」(說話) 加上施事者前綴「peN-」變成「pembicara」，意思是：',
+    audio: 'Dia adalah pembicara utama di seminar ini.',
+    answer: '演講者、發言主講人',
+    options: ['演講者、發言主講人', '話筒麥克風', '演講大廳', '講話的內容'],
+    hint: 'peN- 表示執行發言動作的人。',
+    why: 'bicara -> pembicara (演講者/主講嘉賓)。'
+  },
+  {
+    unit: 'u6-3',
+    id: 'ke-an-kenyamanan',
+    prompt: '形容詞「nyaman」(舒適舒服) 加上環綴「ke-...-an」構成「kenyamanan」，意思是：',
+    audio: 'Kenyamanan penumpang adalah prioritas kami.',
+    answer: '舒適感、舒適度 (抽象名詞)',
+    options: ['舒適感、舒適度 (抽象名詞)', '非常不舒服', '按摩椅', '讓人舒服的人'],
+    hint: 'nyaman 的抽象名詞化。',
+    why: 'nyaman -> kenyamanan (舒適度/愜意感)。'
   }
 ];
 
@@ -1328,7 +1482,10 @@ affix2Questions.forEach((q, idx) => {
 const affix2Sentences = [
   { unit: 'u6-1', id: 's6-b1', id_text: 'Kopi ini dibuat di pulau Sumatera.', zh_text: '這款咖啡產製於蘇門答臘島。', words: ['Kopi', 'ini', 'dibuat', 'di', 'pulau', 'Sumatera'], hint: 'buat(製作) + di- -> dibuat(被製作)', why: '被動句型陳述產地。' },
   { unit: 'u6-2', id: 's6-b2', id_text: 'Restoran ini sangat terkenal di Bali.', zh_text: '這家餐廳在峇里島非常有名。', words: ['Restoran', 'ini', 'sangat', 'terkenal', 'di', 'Bali'], hint: 'terkenal = 著名的', why: 'ter- 形容詞名句。' },
-  { unit: 'u6-3', id: 's6-b3', id_text: 'Minuman manis ini segar sekali rasanya.', zh_text: '這杯甜飲口感非常清涼。', words: ['Minuman', 'manis', 'ini', 'segar', 'sekali', 'rasanya'], hint: 'minum(喝) + -an -> minuman(飲料)', why: '-an 產物名詞化。' }
+  { unit: 'u6-3', id: 's6-b3', id_text: 'Minuman manis ini segar sekali rasanya.', zh_text: '這杯甜飲口感非常清涼。', words: ['Minuman', 'manis', 'ini', 'segar', 'sekali', 'rasanya'], hint: 'minum(喝) + -an -> minuman(飲料)', why: '-an 產物名詞化。' },
+  { unit: 'u6-1', id: 's6-b4', id_text: 'Surat resmi ini sudah dikirim kemarin sore.', zh_text: '這封正式公文昨天傍晚已寄出。', words: ['Surat', 'resmi', 'ini', 'sudah', 'dikirim', 'kemarin', 'sore'], hint: 'dikirim = 被寄出', why: '被動句型商務應用。' },
+  { unit: 'u6-2', id: 's6-b5', id_text: 'Ini produk termurah dengan kualitas paling bagus.', zh_text: '這是品質最好且價格最便宜的產品。', words: ['Ini', 'produk', 'termurah', 'dengan', 'kualitas', 'paling', 'bagus'], hint: 'termurah = 最便宜 (ter- 最高級)', why: 'ter- 最高級形容詞標準句。' },
+  { unit: 'u6-3', id: 's6-b6', id_text: 'Pendidikan tinggi sangat penting untuk masa depan.', zh_text: '高等教育對未來非常重要。', words: ['Pendidikan', 'tinggi', 'sangat', 'penting', 'untuk', 'masa', 'depan'], hint: 'didik + peN-...-an -> pendidikan(教育)', why: 'peN-...-an 抽象制度名詞。' }
 ];
 
 affix2Sentences.forEach((as, idx) => {
@@ -1558,6 +1715,56 @@ const gaulQuestions = [
     options: ['Benarkah? / Sungguh-sungguhkah? (真的假的？)', 'Bolehkah?', 'Sudahkah?', 'Mungkinkah?'],
     hint: 'Bener = Benar (對/真實)。',
     why: 'Beneran 是口語確認真實性的第一名口頭禪。'
+  },
+  {
+    unit: 'u7-1',
+    id: 'kan-particle',
+    prompt: '在陳述句末尾加上語氣助詞「kan?」（如：Kamu sudah tahu kan?），功能是：',
+    audio: 'Kamu sudah tahu rahasia ini kan?',
+    answer: '反問求認同「對吧？不是嗎？」',
+    options: ['反問求認同「對吧？不是嗎？」', '強烈拒絕命令', '正式告別', '生氣斥責'],
+    hint: 'kan 相當於英文的 tag question "right?"。',
+    why: 'Kan 是印尼人交談尋求共鳴與認可最高頻的粒子。'
+  },
+  {
+    unit: 'u7-2',
+    id: 'gercep-slang',
+    prompt: '搶促銷機票或快速回覆訊息時說「Ayo gercep dong!」，「gercep」縮寫自：',
+    audio: 'Ayo gercep dong biar kebagian promo!',
+    answer: 'Gerak cepat (動作快、神速秒搶)',
+    options: ['Gerak cepat (動作快、神速秒搶)', 'Gereja pusat', 'Gerobak cilik', 'Gigi cepat'],
+    hint: 'Gerak = 動作, Cepat = 快速。',
+    why: 'Gercep 形容反應神速、動作超快，是現代印尼秒殺必喊詞。'
+  },
+  {
+    unit: 'u7-2',
+    id: 'santuy-slang',
+    prompt: '印尼年輕人常說「Santuy bro!」，「santuy」是哪一個單字的趣味俚語變體？',
+    audio: 'Santuy bro, jangan panik ya.',
+    answer: 'Santai (放鬆悠閒、別緊張)',
+    options: ['Santai (放鬆悠閒、別緊張)', 'Satu', 'Sapu', 'Sakit'],
+    hint: 'Santai 的口語潮人發音變體。',
+    why: 'Santuy = Santai，是印尼年輕世代放鬆看世界的流行語。'
+  },
+  {
+    unit: 'u7-3',
+    id: 'pengen-gaul',
+    prompt: '雅加達口語「Aku pengen liburan ke Bali」，其中的「pengen」相當於書面標準語的：',
+    audio: 'Aku pengen banget liburan ke Bali.',
+    answer: 'Ingin / Mau (想要/渴望)',
+    options: ['Ingin / Mau (想要/渴望)', 'Pergi', 'Pernah', 'Pulang'],
+    hint: '口語中極度普及的「想要」。',
+    why: 'Pengen 是雅加達最廣泛使用的口語想望動詞。'
+  },
+  {
+    unit: 'u7-3',
+    id: 'belom-gaul',
+    prompt: '聊天時問「Udah makan belom?」，其中的「belom」是哪一個標準字的口語化？',
+    audio: 'Kamu udah makan siang belom?',
+    answer: 'Belum (還沒/尚未)',
+    options: ['Belum (還沒/尚未)', 'Bukan', 'Bisa', 'Boleh'],
+    hint: 'Belum 口語元音常偏向 o 唸成 belom。',
+    why: 'Belum -> belom 是印尼口音最常見的母音放鬆現象。'
   }
 ];
 
@@ -1584,7 +1791,10 @@ gaulQuestions.forEach((q, idx) => {
 const gaulSentences = [
   { unit: 'u7-1', id: 's7-b1', id_text: 'Ini kopi pesanan kamu nih.', zh_text: '這是你點的咖啡喔，拿去吧。', words: ['Ini', 'kopi', 'pesanan', 'kamu', 'nih'], hint: 'nih 提示語氣助詞', why: '親切遞物金句。' },
   { unit: 'u7-2', id: 's7-b2', id_text: 'Jangan baper kita cuma bercanda saja.', zh_text: '別走心太認真，我們只是開玩笑而已。', words: ['Jangan', 'baper', 'kita', 'cuma', 'bercanda', 'saja'], hint: 'baper = 玻璃心走心, bercanda = 開玩笑', why: '社交幽默調侃必備。' },
-  { unit: 'u7-3', id: 's7-b3', id_text: 'Santai aja bro gak usah buru-buru.', zh_text: '放輕鬆兄弟，不用著急趕時間。', words: ['Santai', 'aja', 'bro', 'gak', 'usah', 'buru-buru'], hint: 'santai aja = 放輕鬆', why: '雅加達口語極致流暢。' }
+  { unit: 'u7-3', id: 's7-b3', id_text: 'Santai aja bro gak usah buru-buru.', zh_text: '放輕鬆兄弟，不用著急趕時間。', words: ['Santai', 'aja', 'bro', 'gak', 'usah', 'buru-buru'], hint: 'santai aja = 放輕鬆', why: '雅加達口語極致流暢。' },
+  { unit: 'u7-1', id: 's7-b4', id_text: 'Kok kamu bisa telat datang hari ini sih?', zh_text: '你今天怎麼會遲到嘛？到底怎麼回事？', words: ['Kok', 'kamu', 'bisa', 'telat', 'datang', 'hari', 'ini', 'sih'], hint: 'Kok 訝異開頭，sih 情感收尾', why: 'Kok 與 sih 完美連環口語提問句。' },
+  { unit: 'u7-2', id: 's7-b5', id_text: 'Ayo kita harus gercep pesan tiket pesawatnya.', zh_text: '來吧，我們必須神速搶訂機票！', words: ['Ayo', 'kita', 'harus', 'gercep', 'pesan', 'tiket', 'pesawatnya'], hint: 'gercep = 動作超快', why: '流行語 gercep 實戰應用。' },
+  { unit: 'u7-3', id: 's7-b6', id_text: 'Aku pengen ngopi santai di kafe baru itu.', zh_text: '我好想在那家新咖啡館悠閒喝咖啡。', words: ['Aku', 'pengen', 'ngopi', 'santai', 'di', 'kafe', 'baru', 'itu'], hint: 'pengen = 想要, ngopi = 喝咖啡 (kopi 口語動詞化)', why: 'ngopi 是 kopi 加口語鼻音化動詞的代表作。' }
 ];
 
 gaulSentences.forEach((gs, idx) => {
@@ -1770,6 +1980,33 @@ const proverbs = [
     zh_meaning: '殊途同歸、多元一體（印尼建國核心國徽箴言）。',
     hint: '源自爪哇古語，凝聚全印尼上千族群的和諧之魂。',
     why: '印尼最核心的文化國家精神：多元一體，包容並蓄。'
+  },
+  {
+    unit: 'u8-1',
+    id: 'air-tenang-kedalaman',
+    id_text: 'Air yang tenang jangan disangka tiada buaya.',
+    zh_literal: '平靜的水流，切勿以為沒有鱷魚潛伏。',
+    zh_meaning: '居安思危、處變不驚，看似平靜平淡的局勢背後可能潛伏巨大風險。',
+    hint: 'Air tenang = 平水, Buaya = 鱷魚。',
+    why: '印尼海島沼澤地理所孕育的經典安全警世哲學。'
+  },
+  {
+    unit: 'u8-2',
+    id: 'air-susu-tuba',
+    id_text: 'Air susu dibalas dengan air tuba.',
+    zh_literal: '好心贈與純潔牛奶，卻被以有毒的草汁回報。',
+    zh_meaning: '恩將仇報、以怨報德，付出善心卻換來背叛與傷害。',
+    hint: 'Tuba 是印尼傳統用來毒魚的有毒植物汁液。',
+    why: '勸誡世人警惕人心險惡，形容忘恩負義之徒。'
+  },
+  {
+    unit: 'u8-3',
+    id: 'bulat-air',
+    id_text: 'Bulat air oleh pembuluh, bulat kata oleh mufakat.',
+    zh_literal: '水因竹管而聚流，意志因共同協商而達成一致。',
+    zh_meaning: '集思廣益、協商共識（印尼 Musyawarah Mufakat 民主核心哲學）。',
+    hint: 'Pembuluh = 竹管導管, Mufakat = 共識協議。',
+    why: '印尼村社民主協商 Musyawarah 的憲政哲學基石。'
   }
 ];
 

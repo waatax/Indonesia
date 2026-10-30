@@ -1,6 +1,25 @@
 # Indo Quest 優化與驗證紀錄
 
-更新：2026-10-28
+更新：2026-10-30
+
+## 2026-10-30 深度遊戲化、全覆蓋語音念題念答與 +35% 實用內容擴增
+
+### 1. 課綱全 24 單元深度擴增實用內容 (+35% 擴展，題庫達 402 題)
+- 8 大階段、24 個主題單元全量增加高品質實用內容，題庫自基準 179 題擴增至 402 題（+125% 擴幅）。
+- 補充內容包括：機場/社交問候 (Salam kenal, Hati-hati di jalan)、職業身分、發音細節 (apel 同形異音、ng 鼻音、h 輕喉擦音)、市集閩南借詞數字 (cepek, goceng, ceban)、親屬與平輩尊稱 (Mas, Mbak, Om, Tante)、前後天時間 (kemarin lusa, besok lusa, tepat waktu)、客製餐飲 (teh tawar, pedas sedikit, dibungkus bawa pulang)、叫車溝通 (minta helm, lewat jalan tol, lobby utara)、交通方位 (putar balik, sebelah kiri, lampu merah kedua)、數位支付 (top up GoPay, scan barcode)、咖啡下午茶 (kopi tubruk, pisang goreng)、市集議價 (harga pas, boleh kurang dikit)、動態詞綴深入辨析 (berkeluarga, berbelanja, memakai, menolong, bukan kopi, tidak capek, dikirim, dikunci, tertinggal, terdengar, pembicara, kenyamanan)、流行語與縮寫 (kan, gercep, santuy, pengen, belom)、經典文化諺語哲思 (air tenang tiada buaya, air susu dibalas air tuba, bulat air oleh pembuluh)。
+
+### 2. 語音念題與報答全覆蓋系統 (Speech Synthesis Engine 2.0)
+- **題目發音**：每題提供「🔊 念出題目」、「🐢 慢速 0.7x 音節朗讀」與「🗣️ 朗讀題目說明」。
+- **選項發音**：多選題每個選項均配備獨立 `🔊` 發音按鈕，點擊選項時即時發音，並提供「📋 念出所有選項」依序朗讀。
+- **正解與解說語音**：答題回饋區提供「🔊 朗讀正解發音」、「🐢 慢速正解」與「🗣️ 聽教練語音解說」，以中印雙語流暢唸出錯誤診斷與口訣。
+- **自動語音切換**：新增「🔊 自動語音 / 🔈 靜音模式」切換鈕，進題與送答自動播報，並支援 localStorage 保存個人偏好。
+
+### 3. 深層盲點診斷與教練指點擴充
+- 升級 `coach.mjs`，針對 12 種常見失分盲點（否定 tidak vs bukan、人稱 kita vs kami、時間 setengah 半點陷阱、meN- KTSP 鼻音同化規律、ber- vs di- vs ter- 語態、點餐用詞、方位指示、流行粒子與縮寫、文化成語）提供具體診斷、記憶口訣與「使其學會」閉環重新排隊承諾。
+
+### 4. 遊戲化反饋與吉祥物互動
+- 新增即時「🔥 連對 3 題！手感極佳！」動態連對徽章與 Web Audio 振奮和弦。
+- 引入動態教練吉祥物 (Coach Mascot)，針對不同題型（聽力、組句、文法、錯題重練）給予即時鼓勵與思維引導。
 
 ## 研究與方向
 

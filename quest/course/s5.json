@@ -307,6 +307,108 @@
       "why": "名詞否定標準規則：bukan uang saya。",
       "level": 3
     },
+    "u5:c:18": {
+      "id": "u5:c:18",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "字根「keluarga」(家庭) 加上前綴「ber-」變成「berkeluarga」，意思是：",
+      "audio": "Apakah Anda sudah berkeluarga?",
+      "answer": "已成家立業、擁有家庭 (已婚)",
+      "options": [
+        "已成家立業、擁有家庭 (已婚)",
+        "找房子獨居",
+        "家庭聚會聚餐",
+        "離家出走"
+      ],
+      "hint": "ber- 加名詞表示「擁有/具備」該狀態。",
+      "why": "berkeluarga 表示具備家庭狀態、已成家立業。",
+      "level": 3
+    },
+    "u5:c:19": {
+      "id": "u5:c:19",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "字根「belanja」(花費/購物) 加上前綴「ber-」變成「berbelanja」，其用法為：",
+      "audio": "Ibu sedang berbelanja di pasar tradisional.",
+      "answer": "不及物動詞（從事採買購物活動）",
+      "options": [
+        "不及物動詞（從事採買購物活動）",
+        "購物發票小票",
+        "購物的商人",
+        "被賣掉的商品"
+      ],
+      "hint": "ber- 構成表示從事該活動的不及物動詞。",
+      "why": "belanja -> berbelanja (在購物/去採買)。",
+      "level": 3
+    },
+    "u5:c:20": {
+      "id": "u5:c:20",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "字根「pakai」(穿戴/使用) 首字母為清輔音 P，加上及物前綴「meN-」後會變成：",
+      "audio": "Dia memakai baju batik yang indah.",
+      "answer": "memakai (P 脫落被 M 取代)",
+      "options": [
+        "memakai (P 脫落被 M 取代)",
+        "mempakai",
+        "menpakai",
+        "mengpakai"
+      ],
+      "hint": "KTSP 清輔音同化口訣：P 脫落變成 mem-！",
+      "why": "pakai -> me + m + akai = memakai (穿著/使用)。",
+      "level": 3
+    },
+    "u5:c:21": {
+      "id": "u5:c:21",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "字根「tolong」(幫忙) 首字母為清輔音 T，加上及物前綴「meN-」後鼻音同化為：",
+      "audio": "Kita harus saling menolong sesama teman.",
+      "answer": "menolong (T 脫落被 N 取代)",
+      "options": [
+        "menolong (T 脫落被 N 取代)",
+        "mentolong",
+        "memtolong",
+        "mengtolong"
+      ],
+      "hint": "KTSP 規則：T 脫落同化為 men-！",
+      "why": "tolong -> me + n + olong = menolong (援助/幫助)。",
+      "level": 3
+    },
+    "u5:c:22": {
+      "id": "u5:c:22",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "句子：「Ini jus mangga segar, ___ kopi.」(這是現榨芒果汁，不是咖啡)，空格應填入：",
+      "audio": "Ini jus mangga segar, bukan kopi susu.",
+      "answer": "bukan (因為 kopi 是具體名詞)",
+      "options": [
+        "bukan (因為 kopi 是具體名詞)",
+        "tidak",
+        "jangan",
+        "tiada"
+      ],
+      "hint": "kopi 是具體名詞。否定名詞一律只能用 bukan！",
+      "why": "不是咖啡 -> bukan kopi。否定名詞絕不可用 tidak。",
+      "level": 3
+    },
+    "u5:c:23": {
+      "id": "u5:c:23",
+      "kind": "grammar",
+      "type": "choice",
+      "prompt": "句子：「Saya masih kuat, ___ capek sama sekali.」(我還很有體力，一點都不累)，空格應填入：",
+      "audio": "Saya tidak capek sama sekali hari ini.",
+      "answer": "tidak (因為 capek 是形容詞疲累)",
+      "options": [
+        "tidak (因為 capek 是形容詞疲累)",
+        "bukan",
+        "jangan",
+        "belum"
+      ],
+      "hint": "capek 是形容詞 (累)。否定形容詞必用 tidak！",
+      "why": "不累 -> tidak capek。否定形容詞必須用 tidak。",
+      "level": 3
+    },
     "u5:b:0": {
       "id": "u5:b:0",
       "kind": "drill",
@@ -489,6 +591,71 @@
       "hint": "masalah 是名詞問題，否定用 bukan。",
       "why": "bukan masalah besar = 不是大問題。",
       "level": 3
+    },
+    "u5:b:9": {
+      "id": "u5:b:9",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝句型：「那位運動員每天練習羽球。」",
+      "audio": "Atlet itu berlatih bulu tangkis setiap hari.",
+      "tokens": [
+        "tidur",
+        "berlatih",
+        "tidak",
+        "itu",
+        "hari",
+        "bulu",
+        "Atlet",
+        "setiap",
+        "tangkis"
+      ],
+      "answer": "Atlet itu berlatih bulu tangkis setiap hari",
+      "hint": "berlatih = 練習訓練",
+      "why": "latih + ber- -> berlatih (鍛鍊/練習)。",
+      "level": 3
+    },
+    "u5:b:10": {
+      "id": "u5:b:10",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝句型：「我們互相幫助遭遇困難的同伴。」",
+      "audio": "Kami saling menolong teman yang kesusahan.",
+      "tokens": [
+        "tidak",
+        "tidur",
+        "yang",
+        "saling",
+        "Kami",
+        "teman",
+        "menolong",
+        "kesusahan"
+      ],
+      "answer": "Kami saling menolong teman yang kesusahan",
+      "hint": "menolong = 幫助 (tolong 加 meN-)",
+      "why": "及物動詞 menolong 接受詞 teman。",
+      "level": 3
+    },
+    "u5:b:11": {
+      "id": "u5:b:11",
+      "kind": "drill",
+      "type": "build",
+      "prompt": "請組裝句型：「桌上那本書不是我的所有物。」",
+      "audio": "Buku di meja itu bukan milik saya.",
+      "tokens": [
+        "tidur",
+        "di",
+        "saya",
+        "bukan",
+        "milik",
+        "tidak",
+        "Buku",
+        "itu",
+        "meja"
+      ],
+      "answer": "Buku di meja itu bukan milik saya",
+      "hint": "milik saya = 我的所有物 (名詞/身分歸屬否定用 bukan)",
+      "why": "否定產權所有：bukan milik saya。",
+      "level": 3
     }
   },
   "units": {
@@ -505,8 +672,12 @@
           "u5:c:3",
           "u5:c:8",
           "u5:c:9",
+          "u5:c:18",
+          "u5:c:19",
           "u5:b:0",
-          "u5:b:1"
+          "u5:b:1",
+          "u5:b:6",
+          "u5:b:9"
         ],
         "u5-1:listen": [
           "u5:c:0",
@@ -515,18 +686,18 @@
           "u5:c:3",
           "u5:c:8",
           "u5:c:9",
+          "u5:c:18",
+          "u5:c:19",
           "u5:b:0",
-          "u5:b:1"
+          "u5:b:1",
+          "u5:b:6",
+          "u5:b:9"
         ],
         "u5-1:build": [
-          "u5:c:0",
-          "u5:c:1",
-          "u5:c:2",
-          "u5:c:3",
-          "u5:c:8",
-          "u5:c:9",
           "u5:b:0",
-          "u5:b:1"
+          "u5:b:1",
+          "u5:b:6",
+          "u5:b:9"
         ],
         "u5-1:drill": [
           "u5:c:0",
@@ -535,8 +706,12 @@
           "u5:c:3",
           "u5:c:8",
           "u5:c:9",
+          "u5:c:18",
+          "u5:c:19",
           "u5:b:0",
-          "u5:b:1"
+          "u5:b:1",
+          "u5:b:6",
+          "u5:b:9"
         ],
         "u5-1:boss": [
           "u5:c:0",
@@ -545,9 +720,12 @@
           "u5:c:3",
           "u5:c:8",
           "u5:c:9",
+          "u5:c:18",
+          "u5:c:19",
           "u5:b:0",
           "u5:b:1",
-          "u5:b:6"
+          "u5:b:6",
+          "u5:b:9"
         ]
       }
     },
@@ -564,8 +742,12 @@
           "u5:c:7",
           "u5:c:10",
           "u5:c:11",
+          "u5:c:20",
+          "u5:c:21",
           "u5:b:2",
-          "u5:b:3"
+          "u5:b:3",
+          "u5:b:7",
+          "u5:b:10"
         ],
         "u5-2:listen": [
           "u5:c:4",
@@ -574,18 +756,18 @@
           "u5:c:7",
           "u5:c:10",
           "u5:c:11",
+          "u5:c:20",
+          "u5:c:21",
           "u5:b:2",
-          "u5:b:3"
+          "u5:b:3",
+          "u5:b:7",
+          "u5:b:10"
         ],
         "u5-2:build": [
-          "u5:c:4",
-          "u5:c:5",
-          "u5:c:6",
-          "u5:c:7",
-          "u5:c:10",
-          "u5:c:11",
           "u5:b:2",
-          "u5:b:3"
+          "u5:b:3",
+          "u5:b:7",
+          "u5:b:10"
         ],
         "u5-2:drill": [
           "u5:c:4",
@@ -594,8 +776,12 @@
           "u5:c:7",
           "u5:c:10",
           "u5:c:11",
+          "u5:c:20",
+          "u5:c:21",
           "u5:b:2",
-          "u5:b:3"
+          "u5:b:3",
+          "u5:b:7",
+          "u5:b:10"
         ],
         "u5-2:boss": [
           "u5:c:4",
@@ -604,9 +790,12 @@
           "u5:c:7",
           "u5:c:10",
           "u5:c:11",
+          "u5:c:20",
+          "u5:c:21",
           "u5:b:2",
           "u5:b:3",
-          "u5:b:7"
+          "u5:b:7",
+          "u5:b:10"
         ]
       }
     },
@@ -623,8 +812,12 @@
           "u5:c:15",
           "u5:c:16",
           "u5:c:17",
+          "u5:c:22",
+          "u5:c:23",
           "u5:b:4",
-          "u5:b:5"
+          "u5:b:5",
+          "u5:b:8",
+          "u5:b:11"
         ],
         "u5-3:listen": [
           "u5:c:12",
@@ -633,18 +826,18 @@
           "u5:c:15",
           "u5:c:16",
           "u5:c:17",
+          "u5:c:22",
+          "u5:c:23",
           "u5:b:4",
-          "u5:b:5"
+          "u5:b:5",
+          "u5:b:8",
+          "u5:b:11"
         ],
         "u5-3:build": [
-          "u5:c:12",
-          "u5:c:13",
-          "u5:c:14",
-          "u5:c:15",
-          "u5:c:16",
-          "u5:c:17",
           "u5:b:4",
-          "u5:b:5"
+          "u5:b:5",
+          "u5:b:8",
+          "u5:b:11"
         ],
         "u5-3:drill": [
           "u5:c:12",
@@ -653,8 +846,12 @@
           "u5:c:15",
           "u5:c:16",
           "u5:c:17",
+          "u5:c:22",
+          "u5:c:23",
           "u5:b:4",
-          "u5:b:5"
+          "u5:b:5",
+          "u5:b:8",
+          "u5:b:11"
         ],
         "u5-3:boss": [
           "u5:c:12",
@@ -663,9 +860,12 @@
           "u5:c:15",
           "u5:c:16",
           "u5:c:17",
+          "u5:c:22",
+          "u5:c:23",
           "u5:b:4",
           "u5:b:5",
-          "u5:b:8"
+          "u5:b:8",
+          "u5:b:11"
         ]
       }
     }

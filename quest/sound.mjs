@@ -1,7 +1,7 @@
 // sound.mjs
 // Indonesian speech synthesis (Web Speech API) and pure Web Audio SFX.
 // Supports bilingual smart narration (Indonesian id-ID & Traditional Chinese zh-TW),
-// option pronunciation, slow rate playback, and zero-dependency Web Audio sound cues.
+// option pronunciation, sequential options readout, slow rate playback, and Web Audio SFX cues.
 
 let rate = 0.95, effects = true, generation = 0, current = null, ctx = null;
 
@@ -51,14 +51,24 @@ export function stop() {
   }
 }
 
+// Clean brackets, emojis, and symbols for smooth TTS pronunciation
+export function sanitizeForSpeech(text) {
+  return String(text ?? '')
+    .replace(/[\u{1F300}-\u{1F9FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}]/gu, '') // Remove emojis
+    .replace(/[「」『』《》【】"“”'‘’()（）[\]{}—–_#*`~^]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 // Speaks single-language string
 export function speak(text, { slow = false, lang = 'id' } = {}) {
   stop();
   const g = generation;
+  const clean = sanitizeForSpeech(text);
   return new Promise(resolve => {
-    if (!text || !canSpeak()) return resolve('unavailable');
+    if (!clean || !canSpeak()) return resolve('unavailable');
     const s = synth();
-    const u = new SpeechSynthesisUtterance(text);
+    const u = new SpeechSynthesisUtterance(clean);
     const v = voice(lang);
     if (v) {
       u.voice = v;
@@ -92,6 +102,23 @@ export function pronounceOption(text) {
   return speak(text, { slow: false, lang });
 }
 
+// Read out all choice options sequentially with option indices
+export async function pronounceOptions(options = [], { slow = false } = {}) {
+  stop();
+  if (!options || !options.length) return 'unavailable';
+  const g = generation;
+
+  for (let i = 0; i < options.length; i++) {
+    if (generation !== g) return 'stopped';
+    const opt = options[i];
+    const prefix = `選項 ${i + 1}：`;
+    await narrate(`${prefix} ${opt}`, { slow });
+    if (generation !== g) return 'stopped';
+    await new Promise(r => setTimeout(r, 450));
+  }
+  return 'ok';
+}
+
 // Bilingual narration: splits text into Indonesian and Chinese segments and reads each with its native voice!
 export async function narrate(text, { slow = false } = {}) {
   stop();
@@ -102,7 +129,7 @@ export async function narrate(text, { slow = false } = {}) {
   const chunks = String(text).match(/[\u4e00-\u9fa5]+|[^\u4e00-\u9fa5]+/g) || [];
   for (const chunk of chunks) {
     if (generation !== g) return 'stopped';
-    const trimmed = chunk.trim();
+    const trimmed = sanitizeForSpeech(chunk);
     if (!trimmed || /^[:\-.,!?;:()（）/]+$/.test(trimmed)) continue;
 
     const isZh = /[\u4e00-\u9fa5]/.test(trimmed);
@@ -118,6 +145,8 @@ export async function narrate(text, { slow = false } = {}) {
         u.lang = isZh ? 'zh-TW' : 'id-ID';
       }
       u.rate = slow ? Math.max(0.65, rate - 0.25) : rate;
+      u.pitch = 1.0;
+
       u.onend = () => resolve(generation === g ? 'ok' : 'stopped');
       u.onerror = () => resolve(generation === g ? 'error' : 'stopped');
       try {
