@@ -1,0 +1,375 @@
+/* ==========================================================================
+   Indo Word Instant Translator & Pronunciation Tooltip (Zero-DOM Engine)
+   Ultra-lightweight, GPU-composited, theme-aware (light/paper/forest/dark)
+   ========================================================================== */
+
+:root {
+  --indo-tip-bg: rgba(255, 255, 255, 0.97);
+  --indo-tip-border: rgba(15, 23, 42, 0.12);
+  --indo-tip-text: #0f172a;
+  --indo-tip-muted: #64748b;
+  --indo-tip-accent: #e63946;
+  --indo-tip-accent-soft: rgba(230, 57, 70, 0.1);
+  --indo-tip-phrase-bg: rgba(16, 185, 129, 0.09);
+  --indo-tip-phrase-text: #047857;
+  --indo-tip-shadow: 0 12px 32px -6px rgba(15, 23, 42, 0.18), 0 4px 10px -2px rgba(15, 23, 42, 0.08);
+  --indo-tip-hl-bg: rgba(230, 57, 70, 0.13);
+  --indo-tip-hl-line: rgba(230, 57, 70, 0.65);
+}
+
+[data-theme="paper"] {
+  --indo-tip-bg: rgba(252, 249, 242, 0.98);
+  --indo-tip-border: rgba(120, 88, 52, 0.18);
+  --indo-tip-text: #2c2218;
+  --indo-tip-muted: #786652;
+  --indo-tip-accent: #c0392b;
+  --indo-tip-accent-soft: rgba(192, 57, 43, 0.1);
+}
+
+[data-theme="forest"] {
+  --indo-tip-bg: rgba(247, 252, 248, 0.98);
+  --indo-tip-border: rgba(21, 128, 61, 0.18);
+  --indo-tip-text: #14281d;
+  --indo-tip-muted: #4b6b58;
+  --indo-tip-accent: #15803d;
+  --indo-tip-accent-soft: rgba(21, 128, 61, 0.11);
+  --indo-tip-hl-bg: rgba(21, 128, 61, 0.14);
+  --indo-tip-hl-line: rgba(21, 128, 61, 0.65);
+}
+
+[data-theme="dark"] {
+  --indo-tip-bg: rgba(17, 24, 39, 0.96);
+  --indo-tip-border: rgba(148, 163, 184, 0.22);
+  --indo-tip-text: #f8fafc;
+  --indo-tip-muted: #94a3b8;
+  --indo-tip-accent: #38bdf8;
+  --indo-tip-accent-soft: rgba(56, 189, 248, 0.15);
+  --indo-tip-phrase-bg: rgba(52, 211, 153, 0.13);
+  --indo-tip-phrase-text: #6ee7b7;
+  --indo-tip-shadow: 0 16px 38px -6px rgba(0, 0, 0, 0.55), 0 4px 12px rgba(0, 0, 0, 0.35);
+  --indo-tip-hl-bg: rgba(56, 189, 248, 0.2);
+  --indo-tip-hl-line: rgba(56, 189, 248, 0.8);
+}
+
+/* Auto dark-mode support for pages without explicit data-theme (e.g. Indo Quest) */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --indo-tip-bg: rgba(17, 24, 39, 0.96);
+    --indo-tip-border: rgba(52, 211, 153, 0.35);
+    --indo-tip-text: #f8fafc;
+    --indo-tip-muted: #94a3b8;
+    --indo-tip-accent: #34d399;
+    --indo-tip-accent-soft: rgba(52, 211, 153, 0.18);
+    --indo-tip-phrase-bg: rgba(56, 189, 248, 0.14);
+    --indo-tip-phrase-text: #7dd3fc;
+    --indo-tip-shadow: 0 16px 38px -6px rgba(0, 0, 0, 0.6), 0 4px 12px rgba(0, 0, 0, 0.4);
+    --indo-tip-hl-bg: rgba(52, 211, 153, 0.2);
+    --indo-tip-hl-line: rgba(52, 211, 153, 0.85);
+  }
+}
+
+/* Single reusable word highlight overlay (zero DOM mutation!) */
+#indo-word-highlight {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9998;
+  pointer-events: none;
+  border-radius: 4px;
+  background: var(--indo-tip-hl-bg);
+  border-bottom: 2px solid var(--indo-tip-hl-line);
+  opacity: 0;
+  transform: translate3d(-9999px, -9999px, 0);
+  transition: opacity 0.12s ease;
+  will-change: transform, opacity;
+  box-sizing: border-box;
+}
+
+#indo-word-highlight.visible {
+  opacity: 1;
+}
+
+/* Single reusable floating translator & pronunciation popover */
+#indo-word-tooltip {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  min-width: 196px;
+  max-width: min(310px, calc(100vw - 24px));
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: var(--indo-tip-bg);
+  border: 1px solid var(--indo-tip-border);
+  box-shadow: var(--indo-tip-shadow);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--indo-tip-text);
+  font-family: 'Noto Sans TC', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  line-height: 1.45;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate3d(-9999px, -9999px, 0) scale(0.96);
+  transition: opacity 0.14s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.14s cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: transform, opacity;
+  user-select: none;
+  -webkit-user-select: none;
+  box-sizing: border-box;
+}
+
+#indo-word-tooltip.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#indo-word-tooltip.pinned {
+  border-color: var(--indo-tip-accent);
+}
+
+.indo-tip-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.indo-tip-word-group {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 6px;
+  min-width: 0;
+}
+
+.indo-tip-word {
+  font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--indo-tip-accent);
+  letter-spacing: 0.01em;
+  word-break: break-word;
+}
+
+.indo-tip-pos {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: var(--indo-tip-accent-soft);
+  color: var(--indo-tip-accent);
+  white-space: nowrap;
+}
+
+.indo-tip-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.indo-tip-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+  min-width: 28px;
+  padding: 0 7px;
+  border-radius: 8px;
+  border: 1px solid var(--indo-tip-border);
+  background: transparent;
+  color: var(--indo-tip-text);
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.12s ease, border-color 0.12s ease, transform 0.1s ease;
+  line-height: 1;
+}
+
+.indo-tip-btn:hover {
+  background: var(--indo-tip-accent-soft);
+  border-color: var(--indo-tip-accent);
+  color: var(--indo-tip-accent);
+}
+
+.indo-tip-btn:active {
+  transform: scale(0.92);
+}
+
+.indo-tip-btn.speaking {
+  background: var(--indo-tip-accent);
+  border-color: var(--indo-tip-accent);
+  color: #ffffff;
+  animation: indoTipPulse 0.8s ease-in-out infinite;
+}
+
+@keyframes indoTipPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+.indo-tip-syllable {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  color: var(--indo-tip-muted);
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.indo-tip-syl-text {
+  letter-spacing: 0.03em;
+}
+
+.indo-tip-zh {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--indo-tip-text);
+  line-height: 1.4;
+}
+
+.indo-tip-meta {
+  margin-top: 5px;
+  font-size: 11.5px;
+  color: var(--indo-tip-muted);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.indo-tip-phrase {
+  margin-top: 7px;
+  padding: 6px 8px;
+  border-radius: 9px;
+  background: var(--indo-tip-phrase-bg);
+  color: var(--indo-tip-phrase-text);
+  font-size: 12.5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.indo-tip-phrase-main {
+  min-width: 0;
+}
+
+.indo-tip-phrase-id {
+  font-weight: 700;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.indo-tip-phrase-zh {
+  font-weight: 600;
+  margin-left: 4px;
+}
+
+.indo-tip-phrase-play {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  border: 1px solid currentColor;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font-size: 11px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.85;
+}
+
+.indo-tip-phrase-play:hover {
+  opacity: 1;
+  background: rgba(16, 185, 129, 0.15);
+}
+
+.indo-tip-footer {
+  margin-top: 6px;
+  padding-top: 5px;
+  border-top: 1px dashed var(--indo-tip-border);
+  font-size: 10.5px;
+  color: var(--indo-tip-muted);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+/* Header / Floating Toggle Button */
+.indo-tip-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  height: 34px;
+  padding: 0 11px;
+  border-radius: 999px;
+  border: 1px solid var(--indo-tip-border);
+  background: var(--indo-tip-bg);
+  color: var(--indo-tip-text);
+  font-size: 12.5px;
+  font-weight: 700;
+  font-family: 'Noto Sans TC', sans-serif;
+  cursor: pointer;
+  transition: all 0.16s ease;
+  white-space: nowrap;
+}
+
+.indo-tip-toggle-btn.active {
+  background: var(--indo-tip-accent-soft);
+  border-color: var(--indo-tip-accent);
+  color: var(--indo-tip-accent);
+}
+
+.indo-tip-toggle-btn:hover {
+  transform: translateY(-1px);
+}
+
+/* Floating compact pill for pages without a header slot (e.g. Indo Quest) */
+.indo-tip-fab {
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  z-index: 9990;
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.28);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+@media (max-width: 1100px) {
+  .indo-tip-toggle-btn:not(.indo-tip-fab) {
+    padding: 0 9px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  #indo-word-tooltip {
+    max-width: calc(100vw - 20px);
+    padding: 11px 13px;
+  }
+  .indo-tip-btn {
+    height: 32px;
+    min-width: 32px;
+    font-size: 14px;
+  }
+  .indo-tip-fab {
+    left: auto;
+    right: 12px;
+    bottom: 84px;
+    height: 32px;
+    padding: 0 10px;
+    font-size: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #indo-word-tooltip,
+  #indo-word-highlight,
+  .indo-tip-btn {
+    transition: none;
+    animation: none;
+  }
+}

@@ -34,11 +34,12 @@ jobs:
           node scripts/check_knowledge.cjs
           node scripts/test_quest.cjs
           node scripts/test_quest_regressions.mjs
+          node scripts/test_tooltip.mjs
 
       - name: Prepare public files
         run: |
           mkdir _site
-          cp index.html app.js styles.css knowledge.js knowledge.css data.json data_vocab_10k.json _site/
+          cp index.html app.js styles.css knowledge.js knowledge.css indo-tooltip.js indo-tooltip.css indo-lexicon.json data.json data_vocab_10k.json _site/
           cp -R quest assets _site/
           touch _site/.nojekyll
 
